@@ -3,16 +3,10 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import initDatabase from "@/app/db/database";
 import seedSampleData from "@/app/db/seedData";
-import HomeScreen from "@/app/screens/HomeScreen";
-import DuaListScreen from "@/app/screens/DuaListScreen";
-import DuaDetailScreen from "@/app/screens/DuaDetailScreen";
-import MapScreen from "@/app/screens/MapScreen";
+import AppNavigator from "@/app/(tabs)/AppNavigator";
 
 export default function App() {
   const [db, setDb] = useState<SQLite.WebSQLDatabase | null>(null);
-  const [screen, setScreen] = useState("home");
-  const [duas, setDuas] = useState<any[]>([]);
-  const [selectedDua, setSelectedDua] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   // --- Initialize DB on first launch ---
@@ -33,18 +27,7 @@ export default function App() {
     );
   }
 
-  switch (screen) {
-    case "home":
-      return <HomeScreen setScreen={setScreen} db={db} setDuas={setDuas} />
-    case "duaList":
-      return <DuaListScreen setScreen={setScreen} duas={duas} setSelectedDua={setSelectedDua} />
-    case "duaDetail":
-      return <DuaDetailScreen setScreen={setScreen} selectedDua={selectedDua} />;
-    case "map":
-      return <MapScreen setScreen={setScreen} />;
-    default:
-      return null;
-  }
+  return <AppNavigator db={db} />
 }
 
 // --- STYLES ---

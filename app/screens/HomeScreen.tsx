@@ -18,14 +18,14 @@ export default function HomeScreen({ setScreen, db, setDuas }: HomeScreenType): 
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Hajj & Umrah Companion</Text>
+      <Text style={styles.title}>Halijah&#39;s Manasik App</Text>
 
       <TouchableOpacity style={styles.button} onPress={() => loadDuas('hajj')}>
-        <Text style={styles.buttonText}>🕋 Du'a for Hajj</Text>
+        <Text style={styles.buttonText}>🕋 Du&#39;a for Hajj</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.button} onPress={() => loadDuas('umrah')}>
-        <Text style={styles.buttonText}>🕋 Du'a for Umrah</Text>
+        <Text style={styles.buttonText}>🕋 Du&#39;a for Umrah</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.button} onPress={() => setScreen('map')}>
