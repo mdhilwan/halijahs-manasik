@@ -23,8 +23,9 @@ export default function App() {
   // --- Initialize DB on first launch ---
   useEffect(() => {
     (async () => {
+      // console.log("Purging old DB")
       // Purge old DB
-      await FileSystem.deleteAsync(DB_FILE_PATH, { idempotent: true });
+      // await FileSystem.deleteAsync(DB_FILE_PATH, { idempotent: true });
 
       // Open new database
       const database = await SQLite.openDatabaseAsync("dua.db");
