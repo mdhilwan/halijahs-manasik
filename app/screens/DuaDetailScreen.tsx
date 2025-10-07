@@ -2,11 +2,7 @@ import React, {useState} from 'react';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Audio } from 'expo-av';
-
-type DuaDetailType = {
-  setScreen: React.Dispatch<React.SetStateAction<string>>;
-  selectedDua: any;
-}
+import { DuaDetailType } from "@/app/types";
 
 const audioMap: Record<string, any> = {
   "talbiyah.mp3": require("../../assets/audio/talbiyah.mp3"),

@@ -1,12 +1,7 @@
 import React from 'react';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
-
-type DuaListScreenType = {
-  setScreen: React.Dispatch<React.SetStateAction<string>>;
-  setSelectedDua: React.Dispatch<React.SetStateAction<any>>;
-  duas: any[];
-}
+import { DuaListScreenType } from "@/app/types";
 
 export default function DuaListScreen({ setScreen, duas, setSelectedDua }: DuaListScreenType) {
   return (

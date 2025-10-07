@@ -1,10 +1,7 @@
 import React from 'react';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
-
-type MapScreenType = {
-  setScreen: React.Dispatch<React.SetStateAction<string>>;
-}
+import { MapScreenType } from "@/app/types";
 
 export default function MapScreen({ setScreen }: MapScreenType) {
   return (

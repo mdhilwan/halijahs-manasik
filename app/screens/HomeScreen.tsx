@@ -1,13 +1,7 @@
 import React from 'react';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
-import * as SQLite from "expo-sqlite";
-
-type HomeScreenType = {
-  setScreen: React.Dispatch<React.SetStateAction<string>>;
-  setDuas: React.Dispatch<React.SetStateAction<any[]>>;
-  db:SQLite.WebSQLDatabase | null;
-}
+import { HomeScreenType } from "@/app/types";
 
 export default function HomeScreen({ setScreen, db, setDuas }: HomeScreenType): React.JSX.Element {
   const loadDuas = async (category: string) => {
