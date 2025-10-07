@@ -1,7 +1,7 @@
 import * as SQLite from "expo-sqlite";
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import initDatabase from "@/app/db/database";
+import initDatabase, { loadDatabase } from "@/app/db/database";
 import seedSampleData from "@/app/db/seedData";
 import AppNavigator from "@/app/(tabs)/AppNavigator";
 
@@ -11,8 +11,9 @@ export default function App() {
 
   useEffect(() => {
     (async () => {
-      const db = await initDatabase()
-      await seedSampleData(db)
+      const dbRes = await initDatabase()
+      await seedSampleData(dbRes)
+      const db = await loadDatabase()
       setDb(db)
       setLoading(false)
     })();

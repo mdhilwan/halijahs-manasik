@@ -3,28 +3,41 @@ import { type SQLiteDatabase } from 'expo-sqlite';
 async function seedSampleData(db: SQLiteDatabase) {
   const sampleDuas = [
     {
-      title: 'Dua for Travel',
-      arabic: 'سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا ...',
-      translation: 'Glory to Him Who has subjected this to us...',
+      title: 'Talbiyah',
+      arabic: 'لَبَّيْكَ اللَّهُمَّ لَبَّيْك',
+      translation: "Here I am, O Allah, here I am",
       category: 'Hajj',
-      audio: 'dua_travel.mp3',
-    },
-    {
-      title: 'Dua for Entering Makkah',
-      arabic: 'اللَّهُمَّ هَذِهِ مَكَّةُ...',
-      translation: 'O Allah, this is Makkah...',
-      category: 'Hajj',
-      audio: 'dua_makkah.mp3',
+      audio: 'talbiyah.mp3',
     },
   ];
 
-  for (const dua of sampleDuas) {
-    await db.runAsync(
-      `INSERT INTO duas (title, arabic, translation, category, audio)
-       VALUES (?, ?, ?, ?, ?)`,
-      [dua.title, dua.arabic, dua.translation, dua.category, dua.audio]
-    );
+  const rows = await db.getAllAsync("SELECT * FROM duas;");
+  console.log("Current duas: ", rows);
+
+  if (rows.length === 0) {
+    for (const dua of sampleDuas) {
+      console.log('seeding...', dua.title)
+      await db.runAsync(
+        "INSERT INTO duas (title, arabic, translation, category, audio) VALUES (?, ?, ?, ?, ?);",
+        [
+          "Talbiyah",
+          "لَبَّيْكَ اللَّهُمَّ لَبَّيْك",
+          "Here I am, O Allah, here I am",
+          "hajj",
+          "talbiyah.mp3",
+        ]
+      );
+    }
   }
+
+  // await db.withTransactionAsync(async () => {
+  //   for (const dua of sampleDuas) {
+  //     await db.runAsync(
+  //       `INSERT INTO duas (title, arabic, translation, category, audio) VALUES (?, ?, ?, ?, ?)`,
+  //       [dua.title, dua.arabic, dua.translation, dua.category, dua.audio]
+  //     );
+  //   }
+  // });
 }
 
 export default seedSampleData

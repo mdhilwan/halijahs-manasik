@@ -4,10 +4,11 @@ import { SQLiteDatabase } from "expo-sqlite";
 
 const DB_NAME = 'dua.db';
 
-async function initDinitDatabaseatabase(): Promise<SQLiteDatabase> {
+async function initDatabase(): Promise<SQLiteDatabase> {
   // const dbPath = FileSystem.documentDirectory + 'SQLite/' + DB_NAME;
 
   // Delete the old DB for development
+  // console.log("Purging DB")
   // await FileSystem.deleteAsync(dbPath, { idempotent: true });
 
   const db = await SQLite.openDatabaseAsync(DB_NAME);
@@ -26,4 +27,8 @@ async function initDinitDatabaseatabase(): Promise<SQLiteDatabase> {
   return db;
 }
 
-export default initDinitDatabaseatabase
+export async function loadDatabase(): Promise<SQLiteDatabase> {
+  return await SQLite.openDatabaseAsync(DB_NAME);
+}
+
+export default initDatabase

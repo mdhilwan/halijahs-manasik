@@ -18,6 +18,14 @@ export default function DuaDetailScreen({ setScreen, selectedDua }: DuaDetailTyp
     await newSound.playAsync();
   };
 
+  const stopAudio = async () => {
+    if (sound) {
+      await sound.stopAsync();
+      await sound.unloadAsync();
+      setSound(null);
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={() => setScreen('duaList')}>
@@ -28,12 +36,22 @@ export default function DuaDetailScreen({ setScreen, selectedDua }: DuaDetailTyp
       <Text style={styles.arabic}>{selectedDua.arabic}</Text>
       <Text style={styles.translation}>{selectedDua.translation}</Text>
 
-      <TouchableOpacity
-        style={styles.audioButton}
-        onPress={() => playAudio(selectedDua.audio)}
-      >
-        <Text style={styles.buttonText}>▶️ Play Audio</Text>
-      </TouchableOpacity>
+      {
+        !sound ?
+          <TouchableOpacity
+            style={styles.audioButton}
+            onPress={() => playAudio(selectedDua.audio)}
+          >
+            <Text style={styles.buttonText}>▶️ Play Audio</Text>
+          </TouchableOpacity> :
+          <TouchableOpacity
+            style={styles.audioButton}
+            onPress={stopAudio}
+          >
+            <Text style={styles.buttonText}>⏹️ Stop Audio</Text>
+          </TouchableOpacity>
+      }
+
     </SafeAreaView>
   );
 }
