@@ -1,98 +1,161 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { Audio } from "expo-av";
+import * as FileSystem from "expo-file-system/legacy";
+import * as SQLite from "expo-sqlite";
+import React, { useEffect, useState } from "react";
+import { ScrollView, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+// Map audio filenames to actual imports
+const audioMap: Record<string, any> = {
+  "talbiyah.mp3": require("../../assets/audio/talbiyah.mp3"),
+};
 
-export default function HomeScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
+// Database path for purge
+const DB_FILE_PATH = FileSystem.documentDirectory + "SQLite/dua.db";
 
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
-  );
+export default function App() {
+  const [db, setDb] = useState<SQLite.WebSQLDatabase | null>(null);
+  const [screen, setScreen] = useState("home");
+  const [duas, setDuas] = useState<any[]>([]);
+  const [selectedDua, setSelectedDua] = useState<any>(null);
+  const [sound, setSound] = useState<Audio.Sound | null>(null);
+
+  // --- Initialize DB on first launch ---
+  useEffect(() => {
+    (async () => {
+      // Purge old DB
+      await FileSystem.deleteAsync(DB_FILE_PATH, { idempotent: true });
+
+      // Open new database
+      const database = await SQLite.openDatabaseAsync("dua.db");
+      setDb(database);
+
+      // Create table
+      await database.execAsync(`
+        CREATE TABLE IF NOT EXISTS duas (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          title TEXT,
+          arabic TEXT,
+          translation TEXT,
+          category TEXT,
+          audio TEXT
+        );
+      `);
+
+      // Insert sample data if table is empty
+      const rows = await database.getAllAsync("SELECT * FROM duas;");
+      if (rows.length === 0) {
+        await database.runAsync(
+          "INSERT INTO duas (title, arabic, translation, category, audio) VALUES (?, ?, ?, ?, ?);",
+          [
+            "Talbiyah",
+            "لَبَّيْكَ اللَّهُمَّ لَبَّيْك",
+            "Here I am, O Allah, here I am",
+            "hajj",
+            "talbiyah.mp3",
+          ]
+        );
+      }
+    })();
+  }, []);
+
+  // --- Load Duas by category ---
+  const loadDuas = async (category: string) => {
+    if (!db) return;
+    const rows = await db.getAllAsync("SELECT * FROM duas WHERE category = ?;", [category]);
+    setDuas(rows);
+    setScreen("duaList");
+  };
+
+  // --- Play Audio ---
+  const playAudio = async (audioFileName: string) => {
+    if (sound) await sound.unloadAsync();
+    const { sound: newSound } = await Audio.Sound.createAsync(audioMap[audioFileName]);
+    setSound(newSound);
+    await newSound.playAsync();
+  };
+
+  // --- SCREENS ---
+  if (screen === "home") {
+    return (
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.title}>Hajj & Umrah Companion</Text>
+        <TouchableOpacity style={styles.button} onPress={() => loadDuas("hajj")}>
+          <Text style={styles.buttonText}>🕋 Du'a for Hajj</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => loadDuas("umrah")}>
+          <Text style={styles.buttonText}>🕋 Du'a for Umrah</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => setScreen("map")}>
+          <Text style={styles.buttonText}>🗺️ Map of Makkah & Madinah</Text>
+        </TouchableOpacity>
+      </SafeAreaView>
+    );
+  }
+
+  if (screen === "duaList") {
+    return (
+      <SafeAreaView style={styles.container}>
+        <TouchableOpacity onPress={() => setScreen("home")}><Text style={styles.back}>← Back</Text></TouchableOpacity>
+        <Text style={styles.title}>Du’a List</Text>
+        <ScrollView>
+          {duas.map(dua => (
+            <TouchableOpacity
+              key={dua.id}
+              style={styles.listItem}
+              onPress={() => {
+                setSelectedDua(dua);
+                setScreen("duaDetail");
+              }}
+            >
+              <Text style={styles.listText}>{dua.title}</Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      </SafeAreaView>
+    );
+  }
+
+  if (screen === "duaDetail" && selectedDua) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <TouchableOpacity onPress={() => setScreen("duaList")}><Text style={styles.back}>← Back</Text></TouchableOpacity>
+        <Text style={styles.title}>{selectedDua.title}</Text>
+        <Text style={styles.arabic}>{selectedDua.arabic}</Text>
+        <Text style={styles.translation}>{selectedDua.translation}</Text>
+        <TouchableOpacity
+          style={styles.audioButton}
+          onPress={() => playAudio(selectedDua.audio)}
+        >
+          <Text style={styles.buttonText}>▶️ Play Audio</Text>
+        </TouchableOpacity>
+      </SafeAreaView>
+    );
+  }
+
+  if (screen === "map") {
+    return (
+      <SafeAreaView style={styles.container}>
+        <TouchableOpacity onPress={() => setScreen("home")}><Text style={styles.back}>← Back</Text></TouchableOpacity>
+        <Text style={styles.title}>Map of Makkah & Madinah</Text>
+        <Text style={styles.translation}>[Static image here — to be replaced with interactive map later]</Text>
+      </SafeAreaView>
+    );
+  }
+
+  return null;
 }
 
+// --- STYLES ---
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+  container: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "#fff", padding: 20 },
+  title: { fontSize: 26, fontWeight: "bold", marginBottom: 30, textAlign: "center" },
+  button: { backgroundColor: "#00695c", padding: 20, borderRadius: 16, marginVertical: 10, width: "90%" },
+  buttonText: { color: "#fff", fontSize: 20, textAlign: "center" },
+  listItem: { backgroundColor: "#e0f2f1", padding: 20, marginVertical: 8, borderRadius: 10 },
+  listText: { fontSize: 18 },
+  arabic: { fontSize: 28, textAlign: "center", marginVertical: 20, color: "#333" },
+  translation: { fontSize: 18, textAlign: "center", color: "#555" },
+  audioButton: { backgroundColor: "#00796b", padding: 16, borderRadius: 10, marginTop: 20 },
+  back: { fontSize: 18, color: "#00796b", alignSelf: "flex-start" },
 });
