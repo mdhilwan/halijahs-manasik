@@ -1,150 +1,50 @@
-import { Audio } from "expo-av";
-import * as FileSystem from "expo-file-system/legacy";
 import * as SQLite from "expo-sqlite";
 import React, { useEffect, useState } from "react";
-import { ScrollView, StyleSheet, Text, TouchableOpacity } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-
-// Map audio filenames to actual imports
-const audioMap: Record<string, any> = {
-  "talbiyah.mp3": require("../../assets/audio/talbiyah.mp3"),
-};
-
-// Database path for purge
-const DB_FILE_PATH = FileSystem.documentDirectory + "SQLite/dua.db";
+import { StyleSheet, Text, View } from "react-native";
+import initDatabase from "@/app/db/database";
+import seedSampleData from "@/app/db/seedData";
+import HomeScreen from "@/app/screens/HomeScreen";
+import DuaListScreen from "@/app/screens/DuaListScreen";
+import DuaDetailScreen from "@/app/screens/DuaDetailScreen";
+import MapScreen from "@/app/screens/MapScreen";
 
 export default function App() {
   const [db, setDb] = useState<SQLite.WebSQLDatabase | null>(null);
   const [screen, setScreen] = useState("home");
   const [duas, setDuas] = useState<any[]>([]);
   const [selectedDua, setSelectedDua] = useState<any>(null);
-  const [sound, setSound] = useState<Audio.Sound | null>(null);
+  const [loading, setLoading] = useState(true);
 
   // --- Initialize DB on first launch ---
   useEffect(() => {
     (async () => {
-      // console.log("Purging old DB")
-      // Purge old DB
-      // await FileSystem.deleteAsync(DB_FILE_PATH, { idempotent: true });
-
-      // Open new database
-      const database = await SQLite.openDatabaseAsync("dua.db");
-      setDb(database);
-
-      // Create table
-      await database.execAsync(`
-        CREATE TABLE IF NOT EXISTS duas (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          title TEXT,
-          arabic TEXT,
-          translation TEXT,
-          category TEXT,
-          audio TEXT
-        );
-      `);
-
-      // Insert sample data if table is empty
-      const rows = await database.getAllAsync("SELECT * FROM duas;");
-      if (rows.length === 0) {
-        await database.runAsync(
-          "INSERT INTO duas (title, arabic, translation, category, audio) VALUES (?, ?, ?, ?, ?);",
-          [
-            "Talbiyah",
-            "لَبَّيْكَ اللَّهُمَّ لَبَّيْك",
-            "Here I am, O Allah, here I am",
-            "hajj",
-            "talbiyah.mp3",
-          ]
-        );
-      }
+      const db = await initDatabase()
+      await seedSampleData(db)
+      setDb(db)
+      setLoading(false)
     })();
   }, []);
 
-  // --- Load Duas by category ---
-  const loadDuas = async (category: string) => {
-    if (!db) return;
-    const rows = await db.getAllAsync("SELECT * FROM duas WHERE category = ?;", [category]);
-    setDuas(rows);
-    setScreen("duaList");
-  };
-
-  // --- Play Audio ---
-  const playAudio = async (audioFileName: string) => {
-    if (sound) await sound.unloadAsync();
-    const { sound: newSound } = await Audio.Sound.createAsync(audioMap[audioFileName]);
-    setSound(newSound);
-    await newSound.playAsync();
-  };
-
-  // --- SCREENS ---
-  if (screen === "home") {
+  if (loading) {
     return (
-      <SafeAreaView style={styles.container}>
-        <Text style={styles.title}>Hajj & Umrah Companion</Text>
-        <TouchableOpacity style={styles.button} onPress={() => loadDuas("hajj")}>
-          <Text style={styles.buttonText}>🕋 Du'a for Hajj</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => loadDuas("umrah")}>
-          <Text style={styles.buttonText}>🕋 Du'a for Umrah</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => setScreen("map")}>
-          <Text style={styles.buttonText}>🗺️ Map of Makkah & Madinah</Text>
-        </TouchableOpacity>
-      </SafeAreaView>
+      <View style={styles.container}>
+        <Text>Loading content...</Text>
+      </View>
     );
   }
 
-  if (screen === "duaList") {
-    return (
-      <SafeAreaView style={styles.container}>
-        <TouchableOpacity onPress={() => setScreen("home")}><Text style={styles.back}>← Back</Text></TouchableOpacity>
-        <Text style={styles.title}>Du’a List</Text>
-        <ScrollView>
-          {duas.map(dua => (
-            <TouchableOpacity
-              key={dua.id}
-              style={styles.listItem}
-              onPress={() => {
-                setSelectedDua(dua);
-                setScreen("duaDetail");
-              }}
-            >
-              <Text style={styles.listText}>{dua.title}</Text>
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
-      </SafeAreaView>
-    );
+  switch (screen) {
+    case "home":
+      return <HomeScreen setScreen={setScreen} db={db} setDuas={setDuas} />
+    case "duaList":
+      return <DuaListScreen setScreen={setScreen} duas={duas} setSelectedDua={setSelectedDua} />
+    case "duaDetail":
+      return <DuaDetailScreen setScreen={setScreen} selectedDua={selectedDua} />;
+    case "map":
+      return <MapScreen setScreen={setScreen} />;
+    default:
+      return null;
   }
-
-  if (screen === "duaDetail" && selectedDua) {
-    return (
-      <SafeAreaView style={styles.container}>
-        <TouchableOpacity onPress={() => setScreen("duaList")}><Text style={styles.back}>← Back</Text></TouchableOpacity>
-        <Text style={styles.title}>{selectedDua.title}</Text>
-        <Text style={styles.arabic}>{selectedDua.arabic}</Text>
-        <Text style={styles.translation}>{selectedDua.translation}</Text>
-        <TouchableOpacity
-          style={styles.audioButton}
-          onPress={() => playAudio(selectedDua.audio)}
-        >
-          <Text style={styles.buttonText}>▶️ Play Audio</Text>
-        </TouchableOpacity>
-      </SafeAreaView>
-    );
-  }
-
-  if (screen === "map") {
-    return (
-      <SafeAreaView style={styles.container}>
-        <TouchableOpacity onPress={() => setScreen("home")}><Text style={styles.back}>← Back</Text></TouchableOpacity>
-        <Text style={styles.title}>Map of Makkah & Madinah</Text>
-        <Text style={styles.translation}>[Static image here — to be replaced with interactive map later]</Text>
-      </SafeAreaView>
-    );
-  }
-
-  return null;
 }
 
 // --- STYLES ---
