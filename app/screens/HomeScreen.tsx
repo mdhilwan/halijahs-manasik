@@ -16,10 +16,11 @@ const buttons = [
   {title: 'Madinah'},
 ];
 
-export default function HomeScreen({setScreen, setDuas}: HomeScreenType): React.JSX.Element {
+export default function HomeScreen({setScreen, setDuas, setCategory}: HomeScreenType): React.JSX.Element {
   const loadDuas = async (category: string) => {
     const result = duas.filter(d => d.category.toLowerCase() === category.toLowerCase());
     setDuas(result);
+    setCategory(category);
     setScreen('duaList');
   };
 

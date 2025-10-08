@@ -3,18 +3,21 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { DuaListScreenType } from "@/app/types";
 
-export default function DuaListScreen({ setScreen, duas, setSelectedDua }: DuaListScreenType) {
+export default function DuaListScreen({ setScreen, duas, setSelectedDua, category }: DuaListScreenType) {
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={() => setScreen("home")}><Text style={styles.back}>← Back</Text></TouchableOpacity>
-      <Text style={styles.title}>Du’a List</Text>
+      <Text style={styles.title}>{category} Du’a List</Text>
       <ScrollView>
-        {duas.map(dua => (
+        {duas.map((dua, j) => (
           <TouchableOpacity
-            key={dua.id}
+            key={j}
             style={styles.listItem}
             onPress={() => {
-              setSelectedDua(dua);
+              setSelectedDua({
+                curr: j,
+                duas: duas,
+              });
               setScreen("duaDetail");
             }}
           >
