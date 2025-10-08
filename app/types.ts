@@ -1,10 +1,8 @@
 import React from "react";
-import * as SQLite from "expo-sqlite";
 
 export type HomeScreenType = {
   setScreen: React.Dispatch<React.SetStateAction<string>>;
   setDuas: React.Dispatch<React.SetStateAction<any[]>>;
-  db:SQLite.WebSQLDatabase | null;
 }
 
 export type DuaDetailType = {
