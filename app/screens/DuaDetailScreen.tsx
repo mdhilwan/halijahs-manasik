@@ -8,14 +8,23 @@ const audioMap: Record<string, any> = {
   "talbiyah.mp3": require("../../assets/audio/talbiyah.mp3"),
 };
 
-export default function DuaDetailScreen({ setScreen, selectedDua }: DuaDetailType) {
+type PlayStopButtonType = {
+  selectedDua: any;
+}
+
+function PlayStopButton({selectedDua}: PlayStopButtonType) {
   const [sound, setSound] = useState<Audio.Sound | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const playAudio = async (audioFileName: string) => {
-    if (sound) await sound.unloadAsync();
-    const { sound: newSound } = await Audio.Sound.createAsync(audioMap[audioFileName]);
-    setSound(newSound);
-    await newSound.playAsync();
+    if (!loading) {
+      setLoading(true)
+      if (sound) await sound.unloadAsync();
+      const { sound: newSound } = await Audio.Sound.createAsync(audioMap[audioFileName]);
+      setSound(newSound);
+      await newSound.playAsync();
+      setLoading(false)
+    }
   };
 
   const stopAudio = async () => {
@@ -26,6 +35,30 @@ export default function DuaDetailScreen({ setScreen, selectedDua }: DuaDetailTyp
     }
   };
 
+  if (loading) {
+    return <TouchableOpacity
+      style={styles.audioButton}
+    >
+      <Text style={styles.buttonText}>Loading...</Text>
+    </TouchableOpacity>
+  } else if (sound) {
+    return <TouchableOpacity
+      style={styles.audioButton}
+      onPress={stopAudio}
+    >
+      <Text style={styles.buttonText}>⏹️ Stop Audio</Text>
+    </TouchableOpacity>
+  } else if (!sound) {
+    return <TouchableOpacity
+      style={styles.audioButton}
+      onPress={() => playAudio(selectedDua.audio)}
+    >
+      <Text style={styles.buttonText}>▶️ Play Audio</Text>
+    </TouchableOpacity>
+  }
+}
+
+export default function DuaDetailScreen({ setScreen, selectedDua }: DuaDetailType) {
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={() => setScreen('duaList')}>
@@ -36,21 +69,7 @@ export default function DuaDetailScreen({ setScreen, selectedDua }: DuaDetailTyp
       <Text style={styles.arabic}>{selectedDua.arabic}</Text>
       <Text style={styles.translation}>{selectedDua.translation}</Text>
 
-      {
-        !sound ?
-          <TouchableOpacity
-            style={styles.audioButton}
-            onPress={() => playAudio(selectedDua.audio)}
-          >
-            <Text style={styles.buttonText}>▶️ Play Audio</Text>
-          </TouchableOpacity> :
-          <TouchableOpacity
-            style={styles.audioButton}
-            onPress={stopAudio}
-          >
-            <Text style={styles.buttonText}>⏹️ Stop Audio</Text>
-          </TouchableOpacity>
-      }
+      <PlayStopButton selectedDua={selectedDua}/>
 
     </SafeAreaView>
   );
