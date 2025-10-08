@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Talbiyah",
+    "arabic": "لَبَّيْكَ اللَّهُمَّ لَبَّيْك",
+    "translation": "Here I am, O Allah, here I am",
+    "category": "talbiyah",
+    "audio": "talbiyah.mp3"
+  },
+  {
+    "id": 2,
+    "title": "Dua for Travel",
+    "arabic": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا ...",
+    "translation": "Glory to Him Who has subjected this to us...",
+    "category": "madinah",
+    "audio": "dua_travel.mp3"
+  },
+  {
+    "id": 3,
+    "title": "Intention",
+    "arabic": "اللَّهُمَّ إِنِّي أُرِيدُ طَوَافَ بَيْتِكَ الْحَرَامِ فَيَسِّرْهُ لِي وَتَقَبَّلْهُ مِنِّي",
+    "translation": "O Allah, I intend to perform Tawaf of the Sacred Mosque, so make it easy for me and accept it from me",
+    "category": "tawaf",
+    "audio": ""
+  },
+  {
+    "id": 4,
+    "title": "Round 1",
+    "arabic": "",
+    "translation": "",
+    "category": "tawaf",
+    "audio": ""
+  },
+  {
+    "id": 5,
+    "title": "Round 2",
+    "arabic": "",
+    "translation": "",
+    "category": "tawaf",
+    "audio": ""
+  },
+  {
+    "id": 6,
+    "title": "Round 3",
+    "arabic": "",
+    "translation": "",
+    "category": "tawaf",
+    "audio": ""
+  },
+  {
+    "id": 7,
+    "title": "Round 4",
+    "arabic": "",
+    "translation": "",
+    "category": "tawaf",
+    "audio": ""
+  },
+  {
+    "id": 8,
+    "title": "Round 5",
+    "arabic": "",
+    "translation": "",
+    "category": "tawaf",
+    "audio": ""
+  },
+  {
+    "id": 9,
+    "title": "Round 6",
+    "arabic": "",
+    "translation": "",
+    "category": "tawaf",
+    "audio": ""
+  },
+  {
+    "id": 10,
+    "title": "Round 7",
+    "arabic": "",
+    "translation": "",
+    "category": "tawaf",
+    "audio": ""
+  }
+]
