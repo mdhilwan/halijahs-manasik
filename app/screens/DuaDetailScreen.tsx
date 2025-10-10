@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import {SafeAreaView} from "react-native-safe-area-context";
-import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {Text, TouchableOpacity, StyleSheet, View} from 'react-native';
 import {Audio} from 'expo-av';
 import {DuaDetailType, DuaType, SelectedDuaType} from "@/app/types";
+import {useFonts} from "expo-font";
+import {Colors} from "@/constants/theme";
 
 const audioMap: Record<string, any> = {
-  "talbiyah.mp3": require("../../assets/audio/talbiyah.mp3"),
+  "talbiyah.mp3": require("@/assets/audio/talbiyah.mp3"),
 };
 
 type PlayStopButtonType = {
@@ -15,6 +17,10 @@ type PlayStopButtonType = {
 function PlayStopButton({dua}: PlayStopButtonType) {
   const [sound, setSound] = useState<Audio.Sound | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const [fontsLoaded] = useFonts({
+    'NotoNaskhArabic-Regular': require('@/assets/font/NotoNaskhArabic-Regular.ttf'),
+    'NotoNaskhArabic-Bold': require('@/assets/font/NotoNaskhArabic-Bold.ttf'),
+  });
 
   if (!dua.audio) return <></>
 
@@ -72,38 +78,75 @@ function NavButton({selectedDua, setSelectedDua}: {
     return selectedDua && selectedDua.curr !== undefined && selectedDua.duas[selectedDua.curr - 1] !== undefined
   }
 
-  return <>
-    {
-      hasNext() && <TouchableOpacity
-            style={styles.audioButton}
-            onPress={() => {
-              if (selectedDua?.curr !== undefined) {
-                setSelectedDua({
-                  curr: selectedDua.curr + 1,
-                  duas: selectedDua.duas
-                })
-              }
-            }}
+  const nextAvailable = hasNext();
+  const prevAvailable = hasPrev();
+
+  if (nextAvailable && prevAvailable) {
+    return (
+      <View style={styles.navButtonContainer}>
+        <TouchableOpacity
+          style={[styles.audioButton, {width: '48%'}]}
+          onPress={() => {
+            if (selectedDua?.curr !== undefined) {
+              setSelectedDua({
+                curr: selectedDua.curr - 1,
+                duas: selectedDua.duas
+              })
+            }
+          }}
         >
-            <Text style={styles.buttonText}>Next</Text>
+          <Text style={styles.buttonText}>Prev</Text>
         </TouchableOpacity>
-    }
-    {
-      hasPrev() && <TouchableOpacity
-            style={styles.audioButton}
-            onPress={() => {
-              if (selectedDua?.curr !== undefined) {
-                setSelectedDua({
-                  curr: selectedDua.curr - 1,
-                  duas: selectedDua.duas
-                })
-              }
-            }}
+        <TouchableOpacity
+          style={[styles.audioButton, {width: '48%'}]}
+          onPress={() => {
+            if (selectedDua?.curr !== undefined) {
+              setSelectedDua({
+                curr: selectedDua.curr + 1,
+                duas: selectedDua.duas
+              })
+            }
+          }}
         >
-            <Text style={styles.buttonText}>Prev</Text>
+          <Text style={styles.buttonText}>Next</Text>
         </TouchableOpacity>
-    }
-  </>
+      </View>
+    )
+  } else if (nextAvailable) {
+    return (
+      <TouchableOpacity
+        style={[styles.audioButton, {width: '100%'}]}
+        onPress={() => {
+          if (selectedDua?.curr !== undefined) {
+            setSelectedDua({
+              curr: selectedDua.curr + 1,
+              duas: selectedDua.duas
+            })
+          }
+        }}
+      >
+        <Text style={styles.buttonText}>Next</Text>
+      </TouchableOpacity>
+    )
+  } else if (prevAvailable) {
+    return (
+      <TouchableOpacity
+        style={[styles.audioButton, {width: '100%'}]}
+        onPress={() => {
+          if (selectedDua?.curr !== undefined) {
+            setSelectedDua({
+              curr: selectedDua.curr - 1,
+              duas: selectedDua.duas
+            })
+          }
+        }}
+      >
+        <Text style={styles.buttonText}>Prev</Text>
+      </TouchableOpacity>
+    )
+  } else {
+    return null;
+  }
 }
 
 export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}: DuaDetailType) {
@@ -135,9 +178,10 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
 const styles = StyleSheet.create({
   container: {flex: 1, padding: 20, backgroundColor: '#fff'},
   title: {fontSize: 26, fontWeight: 'bold', textAlign: 'center', marginVertical: 20},
-  arabic: {fontSize: 28, textAlign: 'center', marginVertical: 20, color: '#333'},
+  arabic: {fontSize: 28, fontFamily: "NotoNaskhArabic-Regular", textAlign: 'center', marginVertical: 20, color: '#333'},
   translation: {fontSize: 18, textAlign: 'center', color: '#555'},
-  audioButton: {backgroundColor: '#00796b', padding: 16, borderRadius: 10, marginTop: 20},
-  buttonText: {color: '#fff', fontSize: 20, textAlign: 'center'},
-  back: {fontSize: 18, color: '#00796b', marginBottom: 10},
+  audioButton: {backgroundColor: Colors.light.tint, padding: 16, borderRadius: 10, marginTop: 20},
+  buttonText: {color: '#ffd65c', fontSize: 20, textAlign: 'center'},
+  back: {fontSize: 18, color: '#505050', marginBottom: 10},
+  navButtonContainer: {flexDirection: 'row', justifyContent: 'space-between'},
 });

@@ -4,6 +4,7 @@ import {HomeScreenType} from "@/app/types";
 import duas from '../../assets/data/duas.json';
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import {Image} from "expo-image";
+import {Colors} from "@/constants/theme";
 
 const buttons = [
   {title: 'Intention'},
@@ -66,11 +67,12 @@ const styles = StyleSheet.create({
   title: {fontSize: 26, fontWeight: 'bold', marginBottom: 30, textAlign: 'center'},
   button: {
     width: '48%',
-    height: 100,
-    backgroundColor: '#00796b',
+    height: 75,
+    backgroundColor: Colors.light.tint,
     borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
+
     marginBottom: 16,
     shadowColor: '#000',
     shadowOpacity: 0.2,
@@ -84,5 +86,5 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
   },
-  buttonText: {color: '#fff', fontSize: 20, textAlign: 'center'},
+  buttonText: {color: '#ffd65c', fontSize: 20, textAlign: 'center'},
 });

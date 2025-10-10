@@ -13,39 +13,39 @@
     "arabic": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا ...",
     "translation": "Glory to Him Who has subjected this to us...",
     "category": "madinah",
-    "audio": "dua_travel.mp3"
+    "audio": "talbiyah.mp3"
   },
   {
     "id": 3,
     "title": "Intention",
-    "arabic": "اللَّهُمَّ إِنِّي أُرِيدُ طَوَافَ بَيْتِكَ الْحَرَامِ فَيَسِّرْهُ لِي وَتَقَبَّلْهُ مِنِّي",
-    "translation": "O Allah, I intend to perform Tawaf of the Sacred Mosque, so make it easy for me and accept it from me",
+    "arabic": "اللَّهُمَّ إِنِّي أُرِيدُ الطَّوَافَ بِبَيْتِكَ الْحَرَامِ فَيَسِّرْهُ لِي وَتَقَبَّلْهُ مِنِّي",
+    "translation": "O Allah, I intend to perform Tawaf of your Sacred House, so accept it from me and make it easy for me",
     "category": "tawaf",
-    "audio": ""
+    "audio": "talbiyah.mp3"
   },
   {
     "id": 4,
     "title": "Round 1",
-    "arabic": "",
-    "translation": "",
+    "arabic": "~ doa for round 1 ~",
+    "translation": "~ translation of doa for round 1 ~",
     "category": "tawaf",
-    "audio": ""
+    "audio": "talbiyah.mp3"
   },
   {
     "id": 5,
     "title": "Round 2",
-    "arabic": "",
-    "translation": "",
+    "arabic": "~ doa for round 2 ~",
+    "translation": "~ translation of doa for round 2 ~",
     "category": "tawaf",
-    "audio": ""
+    "audio": "talbiyah.mp3"
   },
   {
     "id": 6,
     "title": "Round 3",
-    "arabic": "",
-    "translation": "",
+    "arabic": "~ doa for round 3 ~",
+    "translation": "~ translation of doa for round 3 ~",
     "category": "tawaf",
-    "audio": ""
+    "audio": "talbiyah.mp3"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "arabic": "",
     "translation": "",
     "category": "tawaf",
-    "audio": ""
+    "audio": "talbiyah.mp3"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "arabic": "",
     "translation": "",
     "category": "tawaf",
-    "audio": ""
+    "audio": "talbiyah.mp3"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "arabic": "",
     "translation": "",
     "category": "tawaf",
-    "audio": ""
+    "audio": "talbiyah.mp3"
   },
   {
     "id": 10,
@@ -77,6 +77,6 @@
     "arabic": "",
     "translation": "",
     "category": "tawaf",
-    "audio": ""
+    "audio": "talbiyah.mp3"
   }
 ]
