@@ -146,7 +146,7 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
     <View style={{alignItems: 'center'}}>
       <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
         <TouchableOpacity
-            style={[styles.audioButton, {marginRight: 10, backgroundColor: "white"}]}
+            style={[styles.audioButton, {marginRight: 20, backgroundColor: "white"}]}
             onPress={() => {
               if (selectedDua?.curr !== undefined && prevAvailable) {
                 setSelectedDua({
@@ -170,7 +170,7 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
                 : <Ionicons name="play" size={28} color="white" />}
         </TouchableOpacity>
         <TouchableOpacity
-            style={[styles.audioButton, {marginLeft: 10, backgroundColor: "white"}]}
+            style={[styles.audioButton, {marginLeft: 20, backgroundColor: "white"}]}
             onPress={() => {
               if (selectedDua?.curr !== undefined && nextAvailable) {
                 setSelectedDua({
@@ -196,7 +196,7 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
           thumbTintColor={Colors.light.tint}
           disabled={loading || !sound}
         />
-        <View style={{flexDirection: 'row', justifyContent: 'space-between', width: 250}}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between', width: "100%"}}>
           <Text style={{fontSize: 14, color: '#555'}}>{formatTime(position)}</Text>
           <Text style={{fontSize: 14, color: '#555'}}>{formatTime(duration)}</Text>
         </View>

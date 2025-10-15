@@ -23,11 +23,11 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
       }}>
         <Text style={styles.back}>← Back</Text>
       </TouchableOpacity>
-      <ScrollView>
-        {
-          duaObj &&
-            <>
-                <Text style={styles.title}>{duaObj.titleEn}</Text>
+      {
+        duaObj &&
+          <>
+              <Text style={styles.title}>{duaObj.titleEn}</Text>
+              <ScrollView>
                 {
                   duaObj.doa.map((dua: DuaEngMalayArabicType) => <Text key={dua.id}>
                     <View style={styles.textWrapper}>
@@ -39,9 +39,9 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
 
                   </Text>)
                 }
-            </>
-        }
-      </ScrollView>
+              </ScrollView>
+          </>
+      }
       <DuaPlayer dua={duaObj as DuaType} selectedDua={selectedDua} setSelectedDua={setSelectedDua}/>
 
     </SafeAreaView>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginVertical: 20
+    marginBottom: 10
   },
   textWrapper: {
     marginRight: 5,
