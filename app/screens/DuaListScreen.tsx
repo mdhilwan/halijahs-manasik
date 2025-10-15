@@ -3,8 +3,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { DuaListScreenType } from "@/app/types";
 import {Colors} from "@/constants/theme";
+import {useLanguage} from "@/app/contexts/LanguageContext";
 
 export default function DuaListScreen({ setScreen, duas, setSelectedDua, category }: DuaListScreenType) {
+  const {language} = useLanguage()
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={() => setScreen("home")}><Text style={styles.back}>← Back</Text></TouchableOpacity>
@@ -22,7 +24,7 @@ export default function DuaListScreen({ setScreen, duas, setSelectedDua, categor
               setScreen("duaDetail");
             }}
           >
-            <Text style={styles.listText}>{dua.titleEn}</Text>
+            <Text style={styles.listText}>{language === 'en' ? dua.titleEn : dua.titleMy}</Text>
           </TouchableOpacity>
         ))}
       </ScrollView>

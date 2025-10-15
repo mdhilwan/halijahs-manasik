@@ -43,7 +43,7 @@ export default function HomeScreen({setScreen, setDuas, setCategory, setSelected
         />
       }
     >
-      <Text style={styles.title}>Halijah&#39;s Manasik App</Text>
+      <Text style={styles.title}>Manasik App by Halijah</Text>
 
       <View style={styles.grid}>
         {buttons.map((btn, index) =>
