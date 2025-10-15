@@ -4,11 +4,13 @@ import {Text, TouchableOpacity, StyleSheet, View, ScrollView} from 'react-native
 import {DuaDetailType, DuaEngMalayArabicType, DuaType} from "@/app/types";
 import {useFonts} from "expo-font";
 import {DuaPlayer} from "@/components/controls/DuaPlayer";
+import {useLanguage} from "@/app/contexts/LanguageContext";
 
 export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}: DuaDetailType) {
 
+  const {language} = useLanguage();
   const duaObj = selectedDua?.duas[selectedDua.curr as number]
-  useFonts({
+  const {fontLoaded} = useFonts({
     'Uthman-Taha-Naskh': require('@/assets/font/KFGQPC-Uthman-Taha-Naskh-Regular.ttf'),
   });
 
@@ -24,7 +26,7 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
         <Text style={styles.back}>← Back</Text>
       </TouchableOpacity>
       {
-        duaObj &&
+        (duaObj) &&
           <>
               <Text style={styles.title}>{duaObj.titleEn}</Text>
               <ScrollView>
@@ -34,9 +36,10 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
                       <Text style={styles.arabic}>{dua.arabic}</Text>
                     </View>
                     <View style={styles.textWrapper}>
-                      <Text style={styles.translation}>{dua.translationEn}</Text>
+                        <Text style={styles.translation}>
+                          {language === 'my' ? dua.translationMy : dua.translationEn}
+                        </Text>
                     </View>
-
                   </Text>)
                 }
               </ScrollView>
@@ -65,6 +68,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
     marginBottom: 5,
     flexShrink: 1,
+    paddingHorizontal: 1
   },
   arabic: {
     fontSize: 34,

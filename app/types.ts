@@ -50,3 +50,5 @@ export type PlayStopButtonType = {
   selectedDua: SelectedDuaType,
   setSelectedDua: React.Dispatch<React.SetStateAction<SelectedDuaType>>
 }
+
+export type Language = 'en' | 'my' | 'none';

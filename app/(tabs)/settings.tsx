@@ -1,13 +1,16 @@
 import { StyleSheet } from 'react-native';
-
+import { Picker } from '@react-native-picker/picker';
 import { Collapsible } from '@/components/ui/collapsible';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
+import { useLanguage } from "@/app/contexts/LanguageContext";
 
 export default function Settings() {
+  const { language, setLanguage } = useLanguage();
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
@@ -30,9 +33,14 @@ export default function Settings() {
       </ThemedView>
       <ThemedText>Set common app settings here.</ThemedText>
       <Collapsible title="Language">
-        <ThemedText>
-          Set your language here
-        </ThemedText>
+        <Picker
+          selectedValue={language}
+          onValueChange={(value) => setLanguage(value)}
+          style={{ width: "100%" }}
+        >
+          <Picker.Item label="English" value="en" />
+          <Picker.Item label="Malay" value="my" />
+        </Picker>
       </Collapsible>
       <Collapsible title="Font Size">
         <ThemedText>
