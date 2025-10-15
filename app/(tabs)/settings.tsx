@@ -34,6 +34,11 @@ export default function Settings() {
           Set your language here
         </ThemedText>
       </Collapsible>
+      <Collapsible title="Font Size">
+        <ThemedText>
+          Set your language here
+        </ThemedText>
+      </Collapsible>
     </ParallaxScrollView>
   );
 }

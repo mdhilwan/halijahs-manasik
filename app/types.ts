@@ -4,14 +4,22 @@ export type HomeScreenType = {
   setScreen: React.Dispatch<React.SetStateAction<string>>;
   setCategory: React.Dispatch<React.SetStateAction<string>>;
   setDuas: React.Dispatch<React.SetStateAction<any[]>>;
+  setSelectedDua: React.Dispatch<React.SetStateAction<SelectedDuaType>>;
+}
+
+export type DuaEngMalayArabicType = {
+  id: number;
+  arabic: string;
+  translationMy: string;
+  translationEn: string;
 }
 
 export type DuaType = {
   id: number;
-  title: string;
-  arabic: string;
-  translation: string;
-  category: string;
+  titleEn: string;
+  titleMy: string;
+  doa: DuaEngMalayArabicType[];
+  category: string[];
   audio: string;
 }
 

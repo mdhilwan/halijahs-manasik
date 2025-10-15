@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, TouchableOpacity, StyleSheet, View} from 'react-native';
 import {HomeScreenType} from "@/app/types";
-import duas from '../../assets/data/duas.json';
+import duas from '@/assets/data/duas.json';
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import {Image} from "expo-image";
 import {Colors} from "@/constants/theme";
@@ -17,12 +17,20 @@ const buttons = [
   {title: 'Madinah'},
 ];
 
-export default function HomeScreen({setScreen, setDuas, setCategory}: HomeScreenType): React.JSX.Element {
+export default function HomeScreen({setScreen, setDuas, setCategory, setSelectedDua}: HomeScreenType): React.JSX.Element {
   const loadDuas = async (category: string) => {
-    const result = duas.filter(d => d.category.toLowerCase() === category.toLowerCase());
-    setDuas(result);
-    setCategory(category);
-    setScreen('duaList');
+    const result = duas.filter(d => d.category.includes(category.toLowerCase()));
+    if (result.length === 1) {
+      setDuas(result);
+      setCategory(category);
+      setScreen('duaDetail');
+      setSelectedDua({curr: 0, duas: result})
+    } else {
+      setDuas(result);
+      setCategory(category);
+      setScreen('duaList');
+    }
+
   };
 
   return (

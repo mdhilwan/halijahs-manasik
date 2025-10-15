@@ -22,7 +22,7 @@ export default function DuaListScreen({ setScreen, duas, setSelectedDua, categor
               setScreen("duaDetail");
             }}
           >
-            <Text style={styles.listText}>{dua.title}</Text>
+            <Text style={styles.listText}>{dua.titleEn}</Text>
           </TouchableOpacity>
         ))}
       </ScrollView>

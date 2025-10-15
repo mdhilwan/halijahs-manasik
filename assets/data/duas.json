@@ -1,82 +1,293 @@
 [
   {
     "id": 1,
-    "title": "Talbiyah",
-    "arabic": "لَبَّيْكَ اللَّهُمَّ لَبَّيْك",
-    "translation": "Here I am, O Allah, here I am",
-    "category": "talbiyah",
+    "titleEn": "Talbiyah",
+    "titleMy": "Talbiyah",
+    "doa": [{
+      "id": 1,
+      "arabic": "لَبَّيْكَ اَللَّهُمَّ لَبَّيْكَ – لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ – إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ – لَا شَرِيكَ لَكَ – ❁َ",
+      "translationEn": "I answer, O my Lord, I answer Your call. There is no ally for You, I answer the call. All praise and goodness to You, and government also to You, There is no ally for You",
+      "translationMy": "Aku menyahut wahai Tuhanku aku menyahut panggilanMu (panggilan Nabi Ibrahim). Tiada sekutu bagiMu, aku menyahut akan panggilan itu. Segala pujian dan kebaikan bagiMu, dan pemerintahan juga bagiMu, Tiada sekutu bagiMu"
+    }, {
+      "id": 2,
+      "arabic": "اَللّٰهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ، وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ،\nكَمَا صَلَّيْتَ عَلَى سَيِّدِنَا إِبْرَاهِيمَ، وَعَلَى آلِ سَيِّدِنَا إِبْرَاهِيمَ،\nكَمَا بَارَكْتَ عَلَى سَيِّدِنَا إِبْرَاهِيمَ، وَعَلَى آلِ سَيِّدِنَا إِبْرَاهِيمَ،\nفِي الْعَالَمِينَ، إِنَّكَ حَمِيدٌ مَجِيدٌ. اَللّٰهُمَّ إِنِّي أَسْئَلُكَ\nرِضَاكَ وَالْجَنَّةَ وَأَعُوْذُبِكَ مِنْ سَخَطِكَ وَالنَّارِ",
+      "translationEn": "I answer, O my Lord, I answer Your call. There is no ally for You, I answer the call. All praise and goodness to You, and government also to You, There is no ally for You.\u2028O Allah, grant additional mercy to our lord Prophet Muhammad and to the family of our lord Prophet Muhammad. As You have bestowed blessings on our lord Prophet Abraham and on the family of our lord Prophet Ibrahim. Bless our lord Prophet Muhammad and the family of our lord Prophet Muhammad. As You have bestowed blessings on our lord Prophet Ibrahim and on the family of our lord Prophet Abraham. In all the realms, indeed You are the Most Praiseworthy and Glorious. O Allah, I ask for Your mercy, and Paradise and I pray with You to be kept away from Your wrath and the fire of Hell",
+      "translationMy": "Aku menyahut wahai Tuhanku aku menyahut panggilanMu (panggilan Nabi Ibrahim). Tiada sekutu bagiMu, aku menyahut akan panggilan itu. Segala pujian dan kebaikan bagiMu, dan pemerintahan juga bagiMu, Tiada sekutu bagiMu. Ya Allah, kurniakanlah tambahan rahmat kepada junjungan kami Nabi Muhammad dan kepada keluarga junjungan kami Nabi Muhammad. Sebagaimana Engkau telah mengurniakan rahmat ke atas junjungan kami Nabi Ibrahim dan kepada keluarga junjungan kami Nabi Ibrahim. Kurniakanlah keberkatan kepada junjungan kami Nabi Muhammad dan kepada keluarga junjungan kami Nabi Muhammad. Sebagaimana Engkau telah mengurniakan keberkatan kepada junjungan kami Nabi Ibrahim dan kepada keluarga junjungan kami Nabi Ibrahim. Di dalam seluruh alam, sesungguhnya Engkau adalah Maha Terpuji lagi Mulia. Ya Allah, aku memohon keredaanMu, dan syurga dan aku memohon dengan Engkau dijauhkan dari kemarahanMu dan api neraka"
+    }],
+    "category": ["talbiyah"],
     "audio": "talbiyah.mp3"
   },
   {
     "id": 2,
-    "title": "Dua for Travel",
-    "arabic": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا ...",
-    "translation": "Glory to Him Who has subjected this to us...",
-    "category": "madinah",
-    "audio": "talbiyah.mp3"
+    "titleEn": "Intention For Ihram Prayer",
+    "titleMy": "Niat Solat Sunat Ihram",
+    "doa": [{
+      "id": 1,
+      "arabic": "اُصَلِّي سُنَّةَ الْاِحْرَامِ رَكْعَتَيْنِ لِلّٰهِ تَعَالٰىَ",
+      "translationEn": "I intend to pray two raka’at of sunnah Ihram for the sake of Allah Most High",
+      "translationMy": "Sahaja aku solat sunat Ihram dua rakaat kerana Allah Taala"
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-ihram-prayer.mp3"
   },
   {
     "id": 3,
-    "title": "Intention",
-    "arabic": "اللَّهُمَّ إِنِّي أُرِيدُ الطَّوَافَ بِبَيْتِكَ الْحَرَامِ فَيَسِّرْهُ لِي وَتَقَبَّلْهُ مِنِّي",
-    "translation": "O Allah, I intend to perform Tawaf of your Sacred House, so accept it from me and make it easy for me",
-    "category": "tawaf",
-    "audio": "talbiyah.mp3"
+    "titleEn": "Intention For Umrah Ihram",
+    "titleMy": "Niat Ihram Umrah",
+    "doa": [{
+      "id": 1,
+      "arabic": "نَوَيْتُ العُمْرَةَ وَأَحْرَمْتُ بِهَا لِلّٰهِ تَعَالَى",
+      "translationEn": "I intend to perform Umrah and perform ihram for it for the sake of Allah",
+      "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah"
+    }],
+    "category": ["intention", "umrah"],
+    "audio": "intention-for-umrah-ihram.mp3"
   },
   {
     "id": 4,
-    "title": "Round 1",
-    "arabic": "~ doa for round 1 ~",
-    "translation": "~ translation of doa for round 1 ~",
-    "category": "tawaf",
-    "audio": "talbiyah.mp3"
+    "titleEn": "Intention For Ihram Umrah On Behalf",
+    "titleMy": "Niat Umrah Badal",
+    "doa": [{
+      "id": 1,
+      "arabic": "نَوَيْتُ العُمْرَةَ عَن ........... وَأَحْرَمْتُ بِهَا لِلّٰهِ تَعَالَى",
+      "translationEn": "I intend to perform Umrah on behalf of ______ and perform ihram for it for the sake of Allah Most High",
+      "translationMy": "Sahaja aku menunaikan Umrah bagi ______ dan aku berihram dengannya kerana Allah Ta’ala"
+    }],
+    "category": ["intention", "umrah"],
+    "audio": "intention-for-ihram-umrah-on-behalf.mp3"
   },
   {
     "id": 5,
-    "title": "Round 2",
-    "arabic": "~ doa for round 2 ~",
-    "translation": "~ translation of doa for round 2 ~",
-    "category": "tawaf",
-    "audio": "talbiyah.mp3"
+    "titleEn": "Intention For Ihram Umrah With Terms",
+    "titleMy": "Niat Umrah Bersyarat",
+    "doa": [{
+      "id": 1,
+      "arabic": "نَوَيْتُ العُمْرَةَ وَأَحْرَمْتُ بِهَا لِلّٰهِ تَعَالَى فَإِنْ حَبَسَنِيْ حَابِسٌ فَمَحِلِّيْ حَيْثُ حَبَسَنِيْ",
+      "translationEn": "I have intended to perform Umrah and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
+      "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah Ta’ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
+    }],
+    "category": ["intention", "umrah"],
+    "audio": "intention-for-ihram-umrah-with-terms.mp3"
   },
   {
     "id": 6,
-    "title": "Round 3",
-    "arabic": "~ doa for round 3 ~",
-    "translation": "~ translation of doa for round 3 ~",
-    "category": "tawaf",
-    "audio": "talbiyah.mp3"
+    "titleEn": "Intention For Haj Ihram",
+    "titleMy": "Niat Ihram Haji",
+    "doa": [{
+      "id": 1,
+      "arabic": "نَوَيْتُ الحَجَّ وَأَحْرَمْتُ بِهِ لِلّٰهِ تَعَالَى",
+      "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High",
+      "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta’ala"
+    }],
+    "category": ["intention", "haji"],
+    "audio": "intention-for-haj-ihram.mp3"
   },
   {
     "id": 7,
-    "title": "Round 4",
-    "arabic": "",
-    "translation": "",
-    "category": "tawaf",
-    "audio": "talbiyah.mp3"
+    "titleEn": "Intention For Haj Ihram On Behalf",
+    "titleMy": "Niat Haji Badal",
+    "doa": [{
+      "id": 1,
+      "arabic": "نَوَيْتُ الحَجَّ عَن ______ وَأَحْرَمْتُ بِهِ لِلّٰهِ تَعَالَى",
+      "translationEn": "I have intended to perform Haj on behalf of ______ and performed ihram for it for the sake of Allah Most High",
+      "translationMy": "Sahaja aku menunaikan Haji bagi ______ dan aku berihram dengannya kerana Allah Ta’ala"
+    }],
+    "category": ["intention", "haji"],
+    "audio": "intention-for-.mp3"
   },
   {
     "id": 8,
-    "title": "Round 5",
-    "arabic": "",
-    "translation": "",
-    "category": "tawaf",
-    "audio": "talbiyah.mp3"
+    "titleEn": "Intention For Haj Ihram With Terms",
+    "titleMy": "Niat Haji Bersyarat",
+    "doa": [{
+      "id": 1,
+      "arabic": "نَوَيْتُ الحَجَّ وَأَحْرَمْتُ بِهِ لِلّٰهِ تَعَالَى فَإِنْ حَبَسَنِيْ حَابِسٌ فَمَحِلِّيْ حَيْثُ حَبَسَنِيْ",
+      "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
+      "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta’ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
+    }],
+    "category": ["intention", "haji"],
+    "audio": "intention-for-.mp3"
   },
   {
     "id": 9,
-    "title": "Round 6",
-    "arabic": "",
-    "translation": "",
-    "category": "tawaf",
-    "audio": "talbiyah.mp3"
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
   },
   {
     "id": 10,
-    "title": "Round 7",
-    "arabic": "",
-    "translation": "",
-    "category": "tawaf",
-    "audio": "talbiyah.mp3"
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 11,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 12,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 13,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 14,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 15,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 16,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 17,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 18,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 19,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 20,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 21,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
+  },
+  {
+    "id": 22,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["intention"],
+    "audio": "intention-for-.mp3"
   }
 ]
