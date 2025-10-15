@@ -44,3 +44,9 @@ export type DuaListScreenType = {
 export type MapScreenType = {
   setScreen: React.Dispatch<React.SetStateAction<string>>;
 }
+
+export type PlayStopButtonType = {
+  dua: DuaType;
+  selectedDua: SelectedDuaType,
+  setSelectedDua: React.Dispatch<React.SetStateAction<SelectedDuaType>>
+}
