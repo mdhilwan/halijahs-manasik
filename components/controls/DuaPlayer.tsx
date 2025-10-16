@@ -62,8 +62,6 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dua?.audio]);
 
-  if (!dua?.audio) return <></>;
-
   const loadAudio = async () => {
     if (!dua?.audio) return;
     try {
@@ -71,9 +69,9 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
         await sound.unloadAsync();
         setSound(null);
       }
-      const { sound: newSound, status } = await Audio.Sound.createAsync(
+      const {sound: newSound, status} = await Audio.Sound.createAsync(
         audioMap[dua.audio],
-        { shouldPlay: false }, // 👈 preloaded but not playing
+        {shouldPlay: false}, // 👈 preloaded but not playing
         onPlaybackStatusUpdate
       );
       setSound(newSound);
@@ -146,66 +144,81 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
     <View style={{alignItems: 'center'}}>
       <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
         <TouchableOpacity
-            style={[styles.audioButton, {marginRight: 20, backgroundColor: "white"}]}
-            onPress={() => {
-              if (selectedDua?.curr !== undefined && prevAvailable) {
-                setSelectedDua({
-                  curr: selectedDua.curr - 1,
-                  duas: selectedDua.duas
-                })
-              }
-            }}
+          style={[styles.audioButton, {marginRight: 20, backgroundColor: "white"}]}
+          onPress={() => {
+            if (selectedDua?.curr !== undefined && prevAvailable) {
+              setSelectedDua({
+                curr: selectedDua.curr - 1,
+                duas: selectedDua.duas
+              })
+            }
+          }}
         >
-            <Ionicons name="play-skip-back" size={28} color={prevAvailable ? "black" : "#989898"} />
+          <Ionicons name="play-skip-back" size={28} color={prevAvailable ? "black" : "#989898"}/>
         </TouchableOpacity>
+        {dua?.audio &&
+            <TouchableOpacity
+                style={[styles.audioButton, {
+                  backgroundColor: "black",
+                  borderRadius: "100%",
+                  borderStyle: "solid",
+                  borderColor: "black"
+                }]}
+                onPress={handlePlayPause}
+                disabled={loading}
+            >
+              {loading
+                ? <Ionicons name="time" size={28} color="white"/>
+                : isPlaying
+                  ? <Ionicons name="pause" size={28} color="white"/>
+                  : <Ionicons name="play" size={28} color="white"/>}
+            </TouchableOpacity>
+        }
         <TouchableOpacity
-          style={[styles.audioButton, {backgroundColor: "black", borderRadius: "100%", borderStyle: "solid", borderColor: "black"}]}
-          onPress={handlePlayPause}
-          disabled={loading}
+          style={[styles.audioButton, {marginLeft: 20, backgroundColor: "white"}]}
+          onPress={() => {
+            if (selectedDua?.curr !== undefined && nextAvailable) {
+              setSelectedDua({
+                curr: selectedDua.curr + 1,
+                duas: selectedDua.duas
+              })
+            }
+          }}
         >
-            {loading
-              ? <Ionicons name="time" size={28} color="white" />
-              : isPlaying
-                ? <Ionicons name="pause" size={28} color="white" />
-                : <Ionicons name="play" size={28} color="white" />}
-        </TouchableOpacity>
-        <TouchableOpacity
-            style={[styles.audioButton, {marginLeft: 20, backgroundColor: "white"}]}
-            onPress={() => {
-              if (selectedDua?.curr !== undefined && nextAvailable) {
-                setSelectedDua({
-                  curr: selectedDua.curr + 1,
-                  duas: selectedDua.duas
-                })
-              }
-            }}
-        >
-            <Ionicons name="play-skip-forward" size={28} color={nextAvailable ? "black" : "#989898"} />
+          <Ionicons name="play-skip-forward" size={28} color={nextAvailable ? "black" : "#989898"}/>
         </TouchableOpacity>
       </View>
-      <View style={{width: '100%', marginTop: 5, alignItems: 'center'}}>
-        <Slider
-          style={{width: "100%", height: 40}}
-          minimumValue={0}
-          maximumValue={duration}
-          value={position}
-          onSlidingStart={() => setIsSeeking(true)}
-          onSlidingComplete={handleSeek}
-          minimumTrackTintColor="#ffd65c"
-          maximumTrackTintColor="#ddd"
-          thumbTintColor={Colors.light.tint}
-          disabled={loading || !sound}
-        />
-        <View style={{flexDirection: 'row', justifyContent: 'space-between', width: "100%"}}>
-          <Text style={{fontSize: 14, color: '#555'}}>{formatTime(position)}</Text>
-          <Text style={{fontSize: 14, color: '#555'}}>{formatTime(duration)}</Text>
-        </View>
-      </View>
+      {dua?.audio &&
+          <View style={{width: '100%', marginTop: 5, alignItems: 'center'}}>
+              <Slider
+                  style={{width: "100%", height: 40}}
+                  minimumValue={0}
+                  maximumValue={duration}
+                  value={position}
+                  onSlidingStart={() => setIsSeeking(true)}
+                  onSlidingComplete={handleSeek}
+                  minimumTrackTintColor="#ffd65c"
+                  maximumTrackTintColor="#ddd"
+                  thumbTintColor={Colors.light.tint}
+                  disabled={loading || !sound}
+              />
+              <View style={{flexDirection: 'row', justifyContent: 'space-between', width: "100%"}}>
+                  <Text style={{fontSize: 14, color: '#555'}}>{formatTime(position)}</Text>
+                  <Text style={{fontSize: 14, color: '#555'}}>{formatTime(duration)}</Text>
+              </View>
+          </View>
+      }
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  audioButton: {backgroundColor: Colors.light.tint, padding: 10, borderRadius: 10, marginTop: 10, color: Colors.light.tint},
+  audioButton: {
+    backgroundColor: Colors.light.tint,
+    padding: 10,
+    borderRadius: 10,
+    marginTop: 10,
+    color: Colors.light.tint
+  },
   buttonText: {color: '#ffd65c', fontSize: 20, textAlign: 'center'},
 });

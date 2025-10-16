@@ -10,7 +10,7 @@
       "translationMy": "Aku menyahut wahai Tuhanku aku menyahut panggilanMu (panggilan Nabi Ibrahim). Tiada sekutu bagiMu, aku menyahut akan panggilan itu. Segala pujian dan kebaikan bagiMu, dan pemerintahan juga bagiMu, Tiada sekutu bagiMu"
     }, {
       "id": 2,
-      "arabic": "اَللّٰهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّد –\nوَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ –\nكَمَا صَلَّيْتَ عَلَى سَيِّدِنَا إِبْرَاهِيمَ – وَعَلَى آلِ سَيِّدِنَا إِبْرَاهِيمَ –\nكَمَا بَارَكْتَ عَلَى سَيِّدِنَا إِبْرَاهِيمَ – وَعَلَى آلِ سَيِّدِنَا إِبْرَاهِيمَ –\nفِي الْعَالَمِينَ – إِنَّكَ حَمِيدٌ مَجِيدٌ ❁ اَللّٰهُمَّ إِنِّي أَسْئَلُكَ\nرِضَاكَ وَالْجَنَّةَ وَأَعُوْذُبِكَ مِنْ سَخَطِكَ وَالنَّارِ – ❁",
+      "arabic": "اَللّٰهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّد –\nوَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ –\nكَمَا صَلَّيْتَ عَلَى سَيِّدِنَا إِبْرَاهِيمَ – وَعَلَى آلِ سَيِّدِنَا إِبْرَاهِيمَ –\nكَمَا بَارَكْتَ عَلَى سَيِّدِنَا إِبْرَاهِيمَ – وَعَلَى آلِ سَيِّدِنَا إِبْرَاهِيمَ –\nفِي الْعَالَمِينَ – إِنَّكَ حَمِيدٌ مَجِيدٌ ❁ اَللّٰهُمَّ إِنِّي أَسْئَلُكَ\nرِضَاكَ وَالْجَنَّةَ وَأَعُوْذُبِكَ \nمِنْ سَخَطِكَ وَالنَّارِ – ❁",
       "translationEn": "I answer, O my Lord, I answer Your call. There is no ally for You, I answer the call. All praise and goodness to You, and government also to You, There is no ally for You.\u2028O Allah, grant additional mercy to our lord Prophet Muhammad and to the family of our lord Prophet Muhammad. As You have bestowed blessings on our lord Prophet Abraham and on the family of our lord Prophet Ibrahim. Bless our lord Prophet Muhammad and the family of our lord Prophet Muhammad. As You have bestowed blessings on our lord Prophet Ibrahim and on the family of our lord Prophet Abraham. In all the realms, indeed You are the Most Praiseworthy and Glorious. O Allah, I ask for Your mercy, and Paradise and I pray with You to be kept away from Your wrath and the fire of Hell",
       "translationMy": "Aku menyahut wahai Tuhanku aku menyahut panggilanMu (panggilan Nabi Ibrahim). Tiada sekutu bagiMu, aku menyahut akan panggilan itu. Segala pujian dan kebaikan bagiMu, dan pemerintahan juga bagiMu, Tiada sekutu bagiMu. Ya Allah, kurniakanlah tambahan rahmat kepada junjungan kami Nabi Muhammad dan kepada keluarga junjungan kami Nabi Muhammad. Sebagaimana Engkau telah mengurniakan rahmat ke atas junjungan kami Nabi Ibrahim dan kepada keluarga junjungan kami Nabi Ibrahim. Kurniakanlah keberkatan kepada junjungan kami Nabi Muhammad dan kepada keluarga junjungan kami Nabi Muhammad. Sebagaimana Engkau telah mengurniakan keberkatan kepada junjungan kami Nabi Ibrahim dan kepada keluarga junjungan kami Nabi Ibrahim. Di dalam seluruh alam, sesungguhnya Engkau adalah Maha Terpuji lagi Mulia. Ya Allah, aku memohon keredaanMu, dan syurga dan aku memohon dengan Engkau dijauhkan dari kemarahanMu dan api neraka"
     }],
@@ -28,7 +28,7 @@
       "translationMy": "Sahaja aku solat sunat Ihram dua rakaat kerana Allah Taala"
     }],
     "category": ["intention"],
-    "audio": "intention-for-ihram-prayer.mp3"
+    "audio": ""
   },
   {
     "id": 3,
@@ -41,7 +41,7 @@
       "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah"
     }],
     "category": ["intention", "umrah"],
-    "audio": "intention-for-umrah-ihram.mp3"
+    "audio": ""
   },
   {
     "id": 4,
@@ -54,7 +54,7 @@
       "translationMy": "Sahaja aku menunaikan Umrah bagi ______ dan aku berihram dengannya kerana Allah Ta’ala"
     }],
     "category": ["intention", "umrah"],
-    "audio": "intention-for-ihram-umrah-on-behalf.mp3"
+    "audio": ""
   },
   {
     "id": 5,
@@ -67,7 +67,7 @@
       "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah Ta’ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
     "category": ["intention", "umrah"],
-    "audio": "intention-for-ihram-umrah-with-terms.mp3"
+    "audio": ""
   },
   {
     "id": 6,
@@ -80,7 +80,7 @@
       "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta’ala"
     }],
     "category": ["intention", "haji"],
-    "audio": "intention-for-haj-ihram.mp3"
+    "audio": ""
   },
   {
     "id": 7,
@@ -93,7 +93,7 @@
       "translationMy": "Sahaja aku menunaikan Haji bagi ______ dan aku berihram dengannya kerana Allah Ta’ala"
     }],
     "category": ["intention", "haji"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 8,
@@ -106,46 +106,46 @@
       "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta’ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
     "category": ["intention", "haji"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 9,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Dua When Entering Masjidil Haram",
+    "titleMy": "Doa Memasuki Masjidil Haram",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَللّٰهُمَّ اغْفِرْلِيْ ذُنُوبِي وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ، وَأَدْخِلْنِي فِيْهَا، وَسَهِّلْ لِي أَبْوَابَ رِزْقِكَ اَللّٰهُمَّ هَذَا حَرَمُكَ، وَمَوْضِعُ أَمْنِكَ فَحَرِّمْ لَحْمِي وَبَشَرِي وَعِظَامِي عَلَى النَّارِ\nاَللّٰهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، وَإِلَيْكَ يَعُوْدُ السَّلَامُ فَحَيِّنَا رَبَّنَا بِالسَّلَامِ\nوَأَدْخِلْنَا الْجَنَّةَ دَارَ السَّلَامِ تَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ\nاَللّٰهُمَّ إِنِّي أَسْأَلُكَ أَنْ تَغْفِرَ لِي، وَتَرْحَمَنِي، وَتُقِيلَ عَثَرَتِيْ، وَتَضَعَ وِزْرِي\nبِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ\nاَللّٰهُمَّ اغْفِرْلِيْ ذُنُوبِي وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ، وَأَدْخِلْنِي فِيْهَا، وَسَهِّلْ لِي أَبْوَابَ رِزْقِكَ اَللّٰهُمَّ هَذَا حَرَمُكَ، وَمَوْضِعُ أَمْنِكَ فَحَرِّمْ لَحْمِي وَبَشَرِي وَعِظَامِي عَلَى النَّارِ\nاَللّٰهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، وَإِلَيْكَ يَعُوْدُ السَّلَامُ فَحَيِّنَا رَبَّنَا بِالسَّلَامِ\nوَأَدْخِلْنَا الْجَنَّةَ دَارَ السَّلَامِ تَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ\nاَللّٰهُمَّ إِنِّي أَسْأَلُكَ أَنْ تَغْفِرَ لِي، وَتَرْحَمَنِي، وَتُقِيلَ عَثَرَتِيْ، وَتَضَعَ وِزْرِي\nبِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ",
+      "translationEn": "O Allah, forgive my sins and open for me the doors of Your mercy, and enter me into Your mercy, and make the door of Your sustenance easy for me. O Allah, verily this place is Your sanctuary, and the place of security that You provide. So forbid my flesh, my skin and my bones from the fire of Hell. O Allah, You are salvation, from You are salvation and enter us in Paradise a place of safety, Your blessings are plentiful, O Lord of Greatness and Glory. O Allah, I beseech Thee to forgive my sins and forgive my faults and lay the burden that burdens me with Thy mercy. O Merciful God.",
+      "translationMy": "Ya Allah, ampunilah dosaku dan bukakanlah bagiku pintu-pintu rahmatMu, dan masukkanlah aku dalam rahmatMu, dan permudahkanlah bagiku pintu rezekiMu. Ya Allah, sesungguhnya tempat ini adalah tempat suciMu, dan tempat keamanan yang Engkau sediakan. Maka haramkanlah dagingku, kulitku dan tulangku dari api neraka. Ya Allah, Engkaulah keselamatan, daripadaMulah keselamatan dan masukkanlah kami di dalam syurga tempat keselamatan, Maha banyak keberkatanMu, Ya Tuhan yang mempunyai Kebesaran dan Kemuliaan. Ya Allah, aku bermohon kepadaMu agar Engkau mengampuni dosaku dan menghapuskan kesalahanku dan meletakkan beban yang memberatiku dengan rahmatMu. Ya Tuhan yang Maha Penyayang."
     }],
-    "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "category": ["masjidil haram"],
+    "audio": ""
   },
   {
     "id": 10,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Intention For I'tikaf At Mosque",
+    "titleMy": "Niat I’tikaf Masjid",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "نَذَرتُ الإِعتِكَافَ فِي هَذَا الْمَسْجِدِ مَا دُمْتُ فِيهِ لِلَّهِ تَعَالَى",
+      "translationEn": "I intend to iktikaf in this blessed mosque because of AIIah Taala.",
+      "translationMy": "Sahaja aku beri'tikaf di masjid ini kerana AIIah Taala."
     }],
-    "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "category": ["intention", "masjidil haram", "madinah"],
+    "audio": ""
   },
   {
     "id": 11,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Dua When Looking At The Ka’abah",
+    "titleMy": "Doa Ketika Melihat Ka’abah",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَللّٰهُمَّ زِدْ هَذَا الْبَيْتَ تَشْرِيْفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً، وَزِدْ مَنْ شَرَّفَهُ وَعَظَّمَهُ\nمِمَّنْ حَجَّهُ أَوِ اعْتَمَرَهُ تَشْرِيْفًا، وَتَكرِيمًا، وَتَعْظِيمًا وَبِرًّا\nاَللّٰهُمَّ زِدْ هَذَا الْبَيْتَ تَشْرِيْفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً، وَزِدْ مَنْ شَرَّفَهُ وَعَظَّمَهُ\nمِمَّنْ حَجَّهُ أَوِ اعْتَمَرَهُ تَشْرِيْفًا، وَتَكرِيمًا، وَتَعْظِيمًا وَبِرًّا",
+      "translationEn": "O Allah, add to the glory of this house, its greatness and greatness. And add glory, greatness and goodness to those who visit it for Hajj and Umrah.",
+      "translationMy": "Ya Allah, tambahkanlah kemuliaan rumah ini, kebesaran dan kehebatannya. Dan tambahkanlah kemuliaan, kebesaran dan kebaikan kepada orang yang mengunjunginya kerana membuat haji dan umrah."
     }],
-    "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "category": ["masjidil haram"],
+    "audio": ""
   },
   {
     "id": 12,
@@ -158,7 +158,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 13,
@@ -171,7 +171,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 14,
@@ -184,7 +184,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 15,
@@ -197,7 +197,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 16,
@@ -210,7 +210,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 17,
@@ -223,7 +223,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 18,
@@ -236,7 +236,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 19,
@@ -249,7 +249,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 20,
@@ -262,7 +262,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 21,
@@ -275,7 +275,7 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   },
   {
     "id": 22,
@@ -288,6 +288,6 @@
       "translationMy": ""
     }],
     "category": ["intention"],
-    "audio": "intention-for-.mp3"
+    "audio": ""
   }
 ]

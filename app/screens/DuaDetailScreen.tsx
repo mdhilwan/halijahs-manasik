@@ -28,7 +28,7 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
       {
         (duaObj) &&
           <>
-              <Text style={styles.title}>{duaObj.titleEn}</Text>
+              <Text style={styles.title}>{language === 'my' ? duaObj.titleMy : duaObj.titleEn}</Text>
               <ScrollView>
                 {
                   duaObj.doa.map((dua: DuaEngMalayArabicType) => <Text key={dua.id}>
