@@ -149,132 +149,132 @@
   },
   {
     "id": 12,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Dua before Tawaf",
+    "titleMy": "Doa Sebelum Memulakan Tawaf",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَللّٰهُمَّ إِنِّي أُرِيدُ طَوَافَ بَيتِكَ الحَرَامِ فَيَسِّرهُ وَ تَقَبَّلهُ مِنِّي",
+      "translationEn": "O Allah, I am about to perform tawaf around Your holy house, so give me ease and accept it from me.",
+      "translationMy": "Ya Allah, sesungguhnya aku hendak mengerjakan tawaf mengelilingi rumahMu yang suci, maka berikanlah aku kemudahan dan terimalah ia daripadaku."
     }],
-    "category": ["intention"],
+    "category": ["tawaf"],
     "audio": ""
   },
   {
     "id": 13,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Arrival Tawaf",
+    "titleMy": "Tawaf Qudum",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ القُدُومِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
+      "translationEn": "I intended to perform arrival tawaf, seven rounds for the sake of Allah Most High",
+      "translationMy": "Sahaja aku berniat mengerjakan tawaf qudum tujuh pusingan kerana Allah Taala."
     }],
-    "category": ["intention"],
+    "category": ["intention", "tawaf"],
     "audio": ""
   },
   {
     "id": 14,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Tawaf Hajj",
+    "titleMy": "Tawaf Haji",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ الحَجِّ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
+      "translationEn": "I intended to perform haj tawaf, seven rounds for the sake of Allah Most High",
+      "translationMy": "Sahaja aku berniat mengerjakan tawaf haji tujuh pusingan kerana Allah Taala"
     }],
-    "category": ["intention"],
+    "category": ["intention", "tawaf"],
     "audio": ""
   },
   {
     "id": 15,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Tawaf Umrah",
+    "titleMy": "Tawaf Umrah",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ العُمرَةِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
+      "translationEn": "Sahaja aku berniat mengerjakan tawaf umrah tujuh pusingan kerana Allah Taala",
+      "translationMy": "I intended to perform umrah tawaf, seven rounds for the sake of Allah Most High"
     }],
-    "category": ["intention"],
+    "category": ["intention", "tawaf"],
     "audio": ""
   },
   {
     "id": 16,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Tawaf Sunnah",
+    "titleMy": "Tawaf Sunnah",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ السُّنَّةِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
+      "translationEn": "I intended to perform sunnah tawaf, seven rounds for the sake of Allah Most High",
+      "translationMy": "Sahaja aku berniat mengerjakan tawaf sunnah tujuh pusingan kerana Allah Taala"
     }],
-    "category": ["intention"],
+    "category": ["intention", "tawaf"],
     "audio": ""
   },
   {
     "id": 17,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Farewell Tawaf",
+    "titleMy": "Tawaf Wada’",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ الوَدَاعِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
+      "translationEn": "I intended to perform farewell tawaf, seven rounds for the sake of Allah Most High",
+      "translationMy": "Sahaja aku berniat mengerjakan tawaf wada’ tujuh pusingan kerana Allah Taala"
     }],
-    "category": ["intention"],
+    "category": ["tawaf"],
     "audio": ""
   },
   {
     "id": 18,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "1st Round Of Tawaf",
+    "titleMy": "Doa Tawaf Pusingan Pertama",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "سُبْحَانَ اللهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلٰهَ إِلَّا اللهُ وَ اللهُ أَكْبَرُ\nوَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيْمِ\nوَالصَّلَاةُ وَالسَّلاَمُ عَلَى رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ\nاَللَّهُمَّ إِيْمَانًا بِكَ وَتَصَدِيْقًا بِكِتَابِكَ وَوَفَاءًا بِعَهدِك وَاتِّبَاعًا لِسُنَّةِ\nنَبِيِّكَ وَ حَبِيبِكَ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ\nاَللَّهُمَّ إِنِّي أَسْئَلُكَ الْعَفْوَى وَالْعَافِيَةَ وَ الُمعَافَاةَ الدَّائِمَةَ\nفِي الدِّيْنِ وَالدُّنْيَا وَالْأَخِرَةِ وَالْفَوْزَ بِالْجَنَّةِ وَالنَّجَاةَ مِنَ النَّارِ\nسُبْحَانَ اللهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلٰهَ إِلَّا اللهُ وَ اللهُ أَكْبَرُ\nوَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيْمِ\nوَالصَّلَاةُ وَالسَّلاَمُ عَلَى رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ\nاَللَّهُمَّ إِيْمَانًا بِكَ وَتَصَدِيْقًا بِكِتَابِكَ وَوَفَاءًا بِعَهدِك وَاتِّبَاعًا لِسُنَّةِ\nنَبِيِّكَ وَ حَبِيبِكَ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ\nاَللَّهُمَّ إِنِّي أَسْئَلُكَ الْعَفْوَى وَالْعَافِيَةَ وَ الُمعَافَاةَ الدَّائِمَةَ\nفِي الدِّيْنِ وَالدُّنْيَا وَالْأَخِرَةِ وَالْفَوْزَ بِالْجَنَّةِ وَالنَّجَاةَ مِنَ النَّارِ",
+      "translationEn": "Glory be to Allah and all praise be to Him. There is no God but Allah. Allah is Great, and there is no power, except by the permission of Allah the Most High and the Exalted. Peace and blessings be upon the Messenger of Allah s.a.w. O Allah, for believing in You, and for believing in Your Book, and being faithful to Your promises, and following the Sunnah of Your Prophet, and Your beloved Muhammad s.a.w. O Allah, I ask for forgiveness, health and well-being in religion, in this world and in the hereafter, to obtain victory and paradise and to be spared from Hellfire.",
+      "translationMy": "Maha Suci Allah dan segala puji bagiNya. Tiada Tuhan kecuali Allah. Allah Maha Besar, dan tidak ada suatu kekuatan, kecuali dengan izin Allah Yang Maha Tinggi dan Maha Agung. Selawat dan salam bagi Rasulullah s.a.w. Ya Allah, kerana iman kepadaMu, dan kerana meyakini kitabMu, serta setia kepada janjiMu, dan mengikuti sunnah NabiMu, dan kekasihMu Muhammad s.a.w. Ya Allah sesungguhnya aku mohon keampunan, kesihatan dan kesejahteraan terus menerus di dalam beragama, di dunia dan di akhirat, memperoleh kemenangan dan syurga serta terhindar dari neraka."
     }],
-    "category": ["intention"],
+    "category": ["tawaf"],
     "audio": ""
   },
   {
     "id": 19,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Doa From Rukun Yamani To Hajar Aswad",
+    "titleMy": "Doa Dari Rukun Yamani Hingga Hajar Aswad",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَللَّهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nوَ أَدخِلنَا الجَنَّةَ مَعَ الأَبرَارِ يَا عَزِيزُ يَا غَفَّارُ يَا رَبَّ العَالَمِين",
+      "translationEn": "O Allah, O our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of Hell, and admit us to Paradise with those who do righteous deeds. O Lord, the Most Forgiving. Oh the Lord of the universe.",
+      "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta."
     }],
-    "category": ["intention"],
+    "category": ["tawaf"],
     "audio": ""
   },
   {
     "id": 20,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "2nd Round Of Tawaf",
+    "titleMy": "Doa Tawaf Pusingan Kedua",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَللَّهُمَّ إِنََ هَذَا الْبَيْتَ بَيْتُكَ وَالْحَرَمَ حَرَمُكَ وَالْأَمْنَ أَمْنُكَ وَالْعَبْدَ عَبْدُكَ\nوَأَنَا عَبْدُكَ وَابْنُ عَبْدِكَ وَهَذَا مَقَامُ العَائِذِ بِكَ مِنَ النَّارِ\nفَحَرِّمْ لُحُومُنَا وَبَشَرَتَنَا عَلَى النَّارِ\nاَللَّهُمَّ حَبِّبْ إِلَيْنَا الْإيْمَانَ وَزَيِّنْهُ فِي قَلُوبِنَا وَكَرِّهْ إِلَيْنَا الْكُفْرَ وَالْفُسُوقَ\nوَالْعِصْيَانَ وَاجْعَلْنَا مِنَ الرَّاشِدِينَ اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ\nاَللَّهُمَّ ارْزُقْنَا الْجَنَّةَ بِغَيْرِ حِسَابٍ",
+      "translationEn": "Allah, this house is Your house, and this forbidden land is Your forbidden land, this land of peace is Yours, this servant is Your servant, and the son of Your servant, and this place is a place where people take refuge in You from the torment of Hell, so keep our flesh and skin away from the fire of Hell. O Allah, make our hearts lovers of faith, adorn our hearts with it (faith), and make us hate with disbelief, wickedness and disobedience, and make us among those who are guided. O Allah, protect us from Your punishment on the day You raise up Your servants. O Allah, grant me paradise without reckoning.",
+      "translationMy": "Ya Allah, sesungguhnya rumah ini adalah rumahMu, dan tanah haram ini adalah tanah haramMu, negeri aman ini adalah negeriMu, hamba ini adalah hambaMu, dan anak dari hambaMu, dan tempat ini adalah tempat orang berlindung padaMu dari seksa neraka, maka jauhkanlah daging dan kulit kami dari api neraka. Ya Allah, jadikanlah hati kami pencinta keimanan, hiasilah hati kami dengannya (iman), dan jadikanlah kami benci dengan kekafiran, kefasikan dan kemaksiatan, serta jadikanlah kami di antara orang yang mendapat petunjuk. Ya Allah, lindungilah kami dari azabMu pada hari Engkau membangkitkan hamba-hambaMu. Ya Allah, anugerahilah aku syurga tanpa perhitungan”"
     }],
-    "category": ["intention"],
+    "category": ["tawaf"],
     "audio": ""
   },
   {
     "id": 21,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Doa From Rukun Yamani To Hajar Aswad",
+    "titleMy": "Doa Dari Rukun Yamani Hingga Hajar Aswad",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَللَّهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nوَ أَدخِلنَا الجَنَّةَ مَعَ الأَبرَارِ يَا عَزِيزُ يَا غَفَّارُ يَا رَبَّ العَالَمِينَ",
+      "translationEn": "O Allah, O our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of Hell, and admit us to Paradise with those who do righteous deeds. O Lord, the Most Forgiving. Oh the Lord of the universe.",
+      "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
-    "category": ["intention"],
+    "category": ["tawaf"],
     "audio": ""
   },
   {
