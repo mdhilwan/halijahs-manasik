@@ -10,8 +10,8 @@ export type HomeScreenType = {
 export type DuaEngMalayArabicType = {
   id: number;
   arabic: string;
-  translationMy: string;
-  translationEn: string;
+  translationMy: string | string[];
+  translationEn: string | string[];
 }
 
 export type DuaType = {
