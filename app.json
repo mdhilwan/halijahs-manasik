@@ -41,7 +41,8 @@
           }
         }
       ],
-      "expo-sqlite"
+      "expo-sqlite",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,
@@ -53,6 +54,12 @@
         "projectId": "85b185a2-d448-46a5-9f76-66e833b2fab9"
       }
     },
-    "owner": "mdhilwan"
+    "owner": "mdhilwan",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/85b185a2-d448-46a5-9f76-66e833b2fab9"
+    }
   }
 }
