@@ -24,7 +24,7 @@
     "doa": [{
       "id": 1,
       "arabic": "اُصَلِّي سُنَّةَ الْاِحْرَامِ رَكْعَتَيْنِ لِلّٰهِ تَعَالٰىَ",
-      "translationEn": "I intend to pray two raka’at of sunnah Ihram for the sake of Allah Most High",
+      "translationEn": "I intend to pray two raka'at of sunnah Ihram for the sake of Allah Most High",
       "translationMy": "Sahaja aku solat sunat Ihram dua rakaat kerana Allah Taala"
     }],
     "category": ["intention"],
@@ -51,7 +51,7 @@
       "id": 1,
       "arabic": "نَوَيْتُ العُمْرَةَ عَن ______ وَأَحْرَمْتُ بِهَا لِلّٰهِ تَعَالَى",
       "translationEn": "I intend to perform Umrah on behalf of ______ and perform ihram for it for the sake of Allah Most High",
-      "translationMy": "Sahaja aku menunaikan Umrah bagi ______ dan aku berihram dengannya kerana Allah Ta’ala"
+      "translationMy": "Sahaja aku menunaikan Umrah bagi ______ dan aku berihram dengannya kerana Allah Ta'ala"
     }],
     "category": ["intention", "umrah"],
     "audio": ""
@@ -64,7 +64,7 @@
       "id": 1,
       "arabic": "نَوَيْتُ العُمْرَةَ وَأَحْرَمْتُ بِهَا لِلّٰهِ تَعَالَى فَإِنْ حَبَسَنِيْ حَابِسٌ فَمَحِلِّيْ حَيْثُ حَبَسَنِيْ",
       "translationEn": "I have intended to perform Umrah and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
-      "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah Ta’ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
+      "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah Ta'ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
     "category": ["intention", "umrah"],
     "audio": ""
@@ -77,7 +77,7 @@
       "id": 1,
       "arabic": "نَوَيْتُ الحَجَّ وَأَحْرَمْتُ بِهِ لِلّٰهِ تَعَالَى",
       "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High",
-      "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta’ala"
+      "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta'ala"
     }],
     "category": ["intention", "haji"],
     "audio": ""
@@ -90,7 +90,7 @@
       "id": 1,
       "arabic": "نَوَيْتُ الحَجَّ عَن ______ وَأَحْرَمْتُ بِهِ لِلّٰهِ تَعَالَى",
       "translationEn": "I have intended to perform Haj on behalf of ______ and performed ihram for it for the sake of Allah Most High",
-      "translationMy": "Sahaja aku menunaikan Haji bagi ______ dan aku berihram dengannya kerana Allah Ta’ala"
+      "translationMy": "Sahaja aku menunaikan Haji bagi ______ dan aku berihram dengannya kerana Allah Ta'ala"
     }],
     "category": ["intention", "haji"],
     "audio": ""
@@ -103,7 +103,7 @@
       "id": 1,
       "arabic": "نَوَيْتُ الحَجَّ وَأَحْرَمْتُ بِهِ لِلّٰهِ تَعَالَى فَإِنْ حَبَسَنِيْ حَابِسٌ فَمَحِلِّيْ حَيْثُ حَبَسَنِيْ",
       "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
-      "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta’ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
+      "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta'ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
     "category": ["intention", "haji"],
     "audio": ""
@@ -124,7 +124,7 @@
   {
     "id": 10,
     "titleEn": "Intention For I'tikaf At Mosque",
-    "titleMy": "Niat I’tikaf Masjid",
+    "titleMy": "Niat I'tikaf Masjid",
     "doa": [{
       "id": 1,
       "arabic": "نَذَرتُ الإِعتِكَافَ فِي هَذَا الْمَسْجِدِ مَا دُمْتُ فِيهِ لِلَّهِ تَعَالَى",
@@ -136,8 +136,8 @@
   },
   {
     "id": 11,
-    "titleEn": "Dua When Looking At The Ka’abah",
-    "titleMy": "Doa Ketika Melihat Ka’abah",
+    "titleEn": "Dua When Looking At The Ka'abah",
+    "titleMy": "Doa Ketika Melihat Ka'abah",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ زِدْ هَذَا الْبَيْتَ تَشْرِيْفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً، وَزِدْ مَنْ شَرَّفَهُ وَعَظَّمَهُ\nمِمَّنْ حَجَّهُ أَوِ اعْتَمَرَهُ تَشْرِيْفًا، وَتَكرِيمًا، وَتَعْظِيمًا وَبِرًّا\nاَللّٰهُمَّ زِدْ هَذَا الْبَيْتَ تَشْرِيْفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً، وَزِدْ مَنْ شَرَّفَهُ وَعَظَّمَهُ\nمِمَّنْ حَجَّهُ أَوِ اعْتَمَرَهُ تَشْرِيْفًا، وَتَكرِيمًا، وَتَعْظِيمًا وَبِرًّا",
@@ -193,8 +193,8 @@
     "doa": [{
       "id": 1,
       "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ العُمرَةِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
-      "translationEn": "Sahaja aku berniat mengerjakan tawaf umrah tujuh pusingan kerana Allah Taala",
-      "translationMy": "I intended to perform umrah tawaf, seven rounds for the sake of Allah Most High"
+      "translationEn": "I intended to perform umrah tawaf, seven rounds for the sake of Allah Most High",
+      "translationMy": "Sahaja aku berniat mengerjakan tawaf umrah tujuh pusingan kerana Allah Taala"
     }],
     "category": ["intention", "tawaf"],
     "audio": ""
@@ -215,12 +215,12 @@
   {
     "id": 17,
     "titleEn": "Farewell Tawaf",
-    "titleMy": "Tawaf Wada’",
+    "titleMy": "Tawaf Wada'",
     "doa": [{
       "id": 1,
       "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ الوَدَاعِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
       "translationEn": "I intended to perform farewell tawaf, seven rounds for the sake of Allah Most High",
-      "translationMy": "Sahaja aku berniat mengerjakan tawaf wada’ tujuh pusingan kerana Allah Taala"
+      "translationMy": "Sahaja aku berniat mengerjakan tawaf wada' tujuh pusingan kerana Allah Taala"
     }],
     "category": ["tawaf"],
     "audio": ""
@@ -414,7 +414,7 @@
     "doa": [{
       "id": 1,
       "arabic": "اُصَلِّي سُنَّةَ الطَّوَافِ رَكْعَتَيْنِ لِلّٰهِ تَعَالٰى",
-      "translationEn": "I intended to pray two raka’at of sunnah Tawaf for the sake of Allah Most High",
+      "translationEn": "I intended to pray two raka'at of sunnah Tawaf for the sake of Allah Most High",
       "translationMy": "Sahaja aku solat Tawaf dua rakaat kerana Allah Taala"
     }],
     "category": ["tawaf", "intention"],
@@ -427,7 +427,7 @@
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ إِنَّ هَذَا بَلَدُكَ الْحَرَمُ، وَمَسْجِدُكَ الْحَرَامُ، وَبَيْتُكَ الْحَرَامُ\nوَأَنَا عَبْدُكَ وَابْنُ عَبْدِكَ وَابْنُ أَمَتِكَ أَتَيْتُكَ بِذُنُوْبٍ كَثِيرَةٍ\nوَخَطَايَا جَمَّةٍ وَأَعْمَالٍ سَيِّئَةٍ، وَهَذَا مَقَامُ الْعَائِذِ بِكَ مِنَ النَّارِ\n\nاَللّٰهُمَّ عَافِنَا وَاعْفُ عَنَّا وَاغْفِرْ لَنَا إِنَّكَ أَنْتَ الْغَفُوْرُ الرَّحِيمُ \nاَللّٰهُمَّ إِنَّكَ دَعَوْتَ عِبَادَكَ إِلَى بَيْتِكَ الْحَرَامِ، وَقَدْ جِئْتُ طَالِبًا مَرْضَاتِكَ\n\nوَأَنْتَ مَنَنْتَ عَلَىَّ فَاغْفِرْ لِي وَارْحَمْنِي وَعَافِنِي وَاعْفُ عَنِّي\nإِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. اَللّٰهُمَّ يَسِّرْلِيَ الْيُسْرَى وَجَنِّبْنِيَ الْعُسْرَى\n\nوَاغْفِرْ لِي فِي الْآخِرَةِ وَالْأَوْلَى، اَللّٰهُمَّ اعْصِمْنِي بِأَلطَافِكَ\nوَاجْعَلْنِي مِمَّنْ يُحِبُّكَ وَيُحِبُّ مَلَائِكَتَكَ وَرُسُلَكَ وَأَنْبِيَائَكَ\n\nوَعِبَادَكَ الصَّالِحِيْنَ وَأَوْلِيَائَكَ الْمُتَّقِينَ. اَللّٰهُمَّ كَمَا هَدَيْتَنِي لِلْإِسْلَامِ\nفَثَبِّتنِي عَلَيْهِ وَاسْتَعْمِلْنِي فِي طَاعَتِكَ وَطَاعَةِ رَسُوْلِكَ\n\nوَأَجِرْنِي مِنْ مُضِلَّاتِ الْفِتَنِ. اَللّٰهُمَّ إِنَّكَ تَعْلَمُ سِرِّي وَعَلَانِيَتِي\nفَاغْفِرْ لِي ذَنْبِي، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ إِيْمَانًا دَائِمًا يُبَاشِرُ قَلْبِي\n\nوَأَسْأَلُكَ يَقِيْنًا صَادِقًا حَتَّى أَعْلَمَ أَنَّهُ لَنْ يُصِيبَنِي إِلَّا مَا كَتَبْتَهُ عَلَيَّ\nوَرَضِّنِي بِمَا قَسَمْتَهُ لِي يَا ذَا الْجَلَالِ وَالْإِكْرَامِ، اَللّٰهُمَّ صَلِّ وَسَلَّمْ\n\nعَلَى حَبِيْبِكَ سَيِّدِنَا مُحَمَّدٍ وَعَلَى جَمِيعِ الْأَنْبِيَاءِ وَالْمُرْسَلِيْنَ\nوَ آلِ كُلِّ مِنهُم وَ مَن تَبِعَهُم بِإِحسَانٍ إِلَى يَومِ الدِّينِ، يَا أَرحَمَ الرَّاحِمِينَ",
-      "translationEn": "",
+      "translationEn": "O Allah, this is Your holy land, Your holy mosque, Your holy house, I am Your servant and the son of Your servant, I have come with sins and many mistakes and bad deeds and this is the place for the servant who takes refuge with You from the fire of Hell.\n\nO Allah, save us, forgive us our mercy, for You are Forgiving and Merciful.\n\nO Allah, Thou hast called Thy servant to Thy holy house, and indeed I have come to ask for Thy favor, and Thou hast given me gifts. So forgive me, have mercy on me, forgive me, and forgive me, for you are in power over all things.\n\nO Allah, give me ease and keep me from poverty, forgive me in the Hereafter and in this world.\n\nO Allah, preserve me with Your meekness, and make me of those who love You, love Your angels, Your apostles, Your prophets, Your righteous servants, and Your saints.\n\nO Allah, as You have shown me to Islam, so establish me in it, direct me to Your obedience, the obedience of Your Messenger, to know what is hidden and clear from me, so accept my obedience. You know my desire, so grant me my desire, and you know what is in me, so forgive my sins.",
       "translationMy": "Ya Allah, sesungguhnya ini negeriMu yang suci, masjidMu yang suci rumahMu yang suci, aku adalah hambaMu dan anak kepada hambaMu, telah datang dengan dosa dan banyak kesalahan dan amalan-amalan yang buruk dan inilah tempatnya bagi hamba yang berlindung denganMu dari api neraka.\n\nYa Allah, selamatkanlah kami, ampunilah kami kasihaniIah kami, sesungguhnya Engkau Maha Pengampun Iagi Maha Penyayang. Ya Allah, bahawasanya Engkau telah memanggil hambahambaMu ke rumah suciMu dan sesungguhnya aku telah datang memohon keredaanMu, dan Engkau telah memberi kurnia kepadaku. Maka ampunilah aku, kasihanilah aku, afiatkan aku dan maafkan aku, sesungguhnya Engkau berkuasa atas segala sesuatu.\n\nYa Allah, berikanlah aku kemudahan dan jauhkan aku dari kepayahan, ampunilah aku di akhirat dan di dunia.\n\nYa Allah, peliharalah aku dengan sifat kelembutanMu, dan jadikanlah aku dari golongan mereka yang cintakanMu, cintakan malaikat-malaikatMu, Rasul-RasulMu, Nabi-NabiMu, hamba-hambaMu yang soleh dan Wali-WaliMu orang yang bertakwa.\n\nYa  Allah, sebagaimana  Engkau telah tunjuki aku kepada Islam, maka tetapkanlah aku di dalamnya, arahkanlah aku kepada ketaatanMu, ketaatan rasulMu, mengetahui perkara yang tersembunyi dan terang dariku, maka terimalah keuzuranku. Engkaulah yang mengetahui hajatku maka berilah keinginanku, dan Engkau mengetahui apa yang di dalam diriku, maka ampunilah dosaku.\n\nYa Allah, aku bermohon mendapat keimanan yang sentiasa hidup dalam hatiku dan keyakinan yang benar hingga aku yakin tidak ada sesuatu yang menimpaku melainkan apa yang telah Engkau tuliskan buatku, maka redakanlah aku dengan apa yang Engkau bahagikan untukku ya Tuhan yang mempunyai Kebesaran dan Kemuliaan.\n\nYa Allah, selawatMu atas kekasihMu Muhammad dan atas sekelian Nabi dan Rasul dan keluarga setiap orang dari mereka dan sesiapa yang mengikutnya hingga ke hari kemudian. Ya Allah, yang Maha Pengasih Iagi Maha Penyayang."
     }],
     "category": ["tawaf"],
@@ -453,66 +453,391 @@
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ إِنِّي أَسأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا واسعًا، وَشِفَاءً مِنْ كُلِّ دَاءٍ",
-      "translationEn": "Ya Allah, sesungguhnya aku bermohon kepada Engkau ilmu yang bermanfaat, dan rezeki yang Iuas (banyak), dan sembuh dari segala penyakit.",
-      "translationMy": "O Allah, verily I ask You for useful knowledge, and abundant sustenance, and healing from all diseases."
+      "translationEn": "O Allah, verily I ask You for useful knowledge, and abundant sustenance, and healing from all diseases.",
+      "translationMy": "Ya Allah, sesungguhnya aku bermohon kepada Engkau ilmu yang bermanfaat, dan rezeki yang Iuas (banyak), dan sembuh dari segala penyakit."
     }],
     "category": ["zam-zam"],
     "audio": ""
   },
   {
     "id": 36,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Haj Sa'i Intention",
+    "titleMy": "Niat Sa'i Haji",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "نَوَيْتُ أَنْ أَسْعَى مَا بَيْنَ الصَّفَا وَالْمَرْوَةِ سَعْيَ الْحَجِّ سَبْعَةَ أَشْوَاطٍ لِلّٰهِ تَعَالَى",
+      "translationEn": "I intend to perform Sai between Safa and Marwah, the Sai of Hajj in seven rounds for Allah the Almighty.",
+      "translationMy": "Sahaja aku berniat sai antara Safa dan Marwah, Sai Haji tujuh perjalanan kerana Allah Taala."
     }],
-    "category": ["tawaf"],
+    "category": ["sa'i"],
     "audio": ""
   },
   {
     "id": 37,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Umrah Sa'i Intention",
+    "titleMy": "Niat Sa'i Umrah",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "نَوَيْتُ أَنْ أَسْعَى مَا بَيْنَ الصَّفَا وَالْمَرْوَةِ سَعْيَ الْعُمرَةِ سَبْعَةَ أَشْوَاطٍ لِلّٰهِ تَعَالَى",
+      "translationEn": "I intend to perform sa'i between Safa and Marwah, the sa'i of Umrahj in seven rounds for Allah the Almighty.",
+      "translationMy": "Sahaja aku berniat sa'i antara Safa dan Marwah, sa'i Umrah tujuh perjalanan kerana Allah Taala."
     }],
-    "category": ["tawaf"],
+    "category": ["tawaf", "intention"],
     "audio": ""
   },
   {
     "id": 38,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "To begin Sa'i, go to Mount Safa and climb to the top, while facing the qibla, recite the following du'a.",
+    "titleMy": "Untuk memulakan Sa'i, pergilah ke Bukit Safa dan naik ke atasnya, sambil menghadap qiblat, bacalah doa berikut.",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ\nأَبْدَأُ بِمَا بَدَأَ اللَّهُ بِهِ وَرَسُولُهُ. إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ فَمَنْ حَجَّ الْبَيْتَ أَوِ اعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ  أَنْ يَطَّوَّفَ بِهِمَا وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ\n\nاَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ لَا إِلٰهَ إِلَّا اللهُ، اَللهُ أَكْبَرُ وَلِلّٰهِ الْحَمْدُ اَلْحَمْدُ لِلَّهِ عَلَى مَا هَدَانَا، اَلْحَمْدُ لِلَّهِ عَلَى مَا أَوْلَانَا لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nلَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيْتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ\n لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ صَدَقَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ وَهَزَمَ الأَحْزَابَ وَحْدَهُ\nلَا إِلٰهَ إِلَّا اللهُ وَلَا نَعْبُدُ إِلَّا إِيَّاهُ مُخْلِصِينَ لَهُ الدِّيْنَ وَلَوْكَرِهَ الْكَافِرُوْنَ\n\nبِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ\nأَبْدَأُ بِمَا بَدَأَ اللَّهُ بِهِ وَرَسُولُهُ. إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ فَمَنْ حَجَّ الْبَيْتَ أَوِ اعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ  أَنْ يَطَّوَّفَ بِهِمَا وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ\n\nاَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ لَا إِلٰهَ إِلَّا اللهُ، اَللهُ أَكْبَرُ وَلِلّٰهِ الْحَمْدُ اَلْحَمْدُ لِلَّهِ عَلَى مَا هَدَانَا، اَلْحَمْدُ لِلَّهِ عَلَى مَا أَوْلَانَا لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nلَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيْتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ\n لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ صَدَقَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ وَهَزَمَ الأَحْزَابَ وَحْدَهُ\nلَا إِلٰهَ إِلَّا اللهُ وَلَا نَعْبُدُ إِلَّا إِيَّاهُ مُخْلِصِينَ لَهُ الدِّيْنَ وَلَوْكَرِهَ الْكَافِرُوْنََ",
+      "translationEn": "In the name of Allah, the Most Gracious, the Most Merciful. I begin with what has been begun by Allah and His Messenger. Indeed, Safa and Marwah are among the signs of Allah's greatness. It is no sin for anyone who performs Hajj or Umrah at the House of Allah to walk (sa'i) between the two (Safa and Marwah). And whoever does good voluntarily, then indeed, Allah accepts it and He is All-Knowing.\nAllah is the Greatest; there is no god but Allah. All praise is due to Allah for guiding us. All praise is for Allah, the One, who has no partner. Power belongs to Him and all praise is due to Him. He is the One who gives life and causes death. All goodness is in His grip. And He is Most Powerful over all things. There is no god but Him, the One. He has fulfilled His promise. He has helped His servant and He has destroyed those evil groups by Himself. There is no god but Allah. We do not worship anything except Him alone. We all devote our religion to Him even though the disbelievers do not like it.",
+      "translationMy": "Dengan nama Allah yang Maha Pengasih, Maha Penyayang. Aku mulai dengan apa yang telah dimulai Allah dan Rasulnya. Sesungguhnya Safa dan Marwah adalah sebahagian dari tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji atau umrah ke Baitullah, maka tiada salahnya berjalan (sai) di antara keduanya (Safa dan Marwah). Dan barangsiapa yang berbuat baik dengan sukarela, maka sesungguhnya Allah menerimanya dan Dia Maha Mengetahui,\n\nAllah yang Maha Besar tiada Tuhan melainkan Allah. Segala puji pada Allah kerana memberi hidayat kepada kami. Segala puji bagi Allah yang Maha Esa tiada sekutu bagiNya. Kekuasaan juga bagiNya dan segala puji bagiNya. Dia yang menghidupkan dan yang mematikan. Segala kebaikan dalam genggamannya. Dan Dia amat berkuasa atas segala sesuatu. Tiada Tuhan melainkan Dia yang Maha Esa. Dia telah menunaikan janjiNya. Dia telah menolong hambaNya dan Dia telah memusnahkan kumpulan-kumpulan jahat itu dengan sendiriNya. Tiada Tuhan melainkan Allah. TidakIah kami menyembah akan sesuatu apa pun juga melainkan hanya akan Dia saja. Kami semua ikhlaskan agama untukNya walaupun orang-orang yang kafir itu tidak menyukainya"
     }],
-    "category": ["tawaf"],
+    "category": ["sa'i"],
     "audio": ""
   },
   {
     "id": 39,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "1st Sa'i Supplication (Safa → Marwah)",
+    "titleMy": "Doa Sa'i Pertama (Safa → Marwah)",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَللهُ أَكْبَرُ كَبِيرًا، وَالْحَمْدُ لِلَّهِ كَثِيرًا، سُبْحَانَ اللهِ الْعَظِيمِ وَبِحَمْدِهِ الْكَرِيمِ بُكْرَةً وَأَصِيلًا\nوَمِنَ اللَّيْلِ فَاسْجُدْ لَهُ وَسَبِّحْهُ لَيْلًا طَوِيلًا، لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ صَدَقَ وَعْدَهُ\nوَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ، لَا شَيْءَ قَبْلَهُ وَلَا بَعْدَهُ، يُحْيِي وَيُمِيتُ \nوَهُوَحَيٌّ دَائِمٌ لَا يَمُوْتُ وَلَا يَفُوْتُ أَبَدًا بِيَدِهِ الْخَيْرُ وَإِلَيْهِ الْمَصِيرُ\nوَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest, Allah is the Greatest with all His greatness. All praise is due to Allah. Glorified is Allah, the Most Exalted, with noble praises every morning, evening, and night. There is no deity except Allah alone. He fulfills His promise, aids His servant, and destroys His enemies. Nothing, whether it precedes Him or comes after Him, gives life or causes death. He is the Ever-Living, never dies, and is eternal forever. In His hands are all good deeds, and to Him is the return, and He is the Almighty over all things.",
+      "translationMy": "Allah Maha Besar Allah Maha Besar Allah Maha Besar Allah Maha Besar dengan segala kebesarannya. Segala puji bagi Allah. Maha Suci Allah, yang Maha Agung, dengan puji-pujian yang mulia setiap pagi, petang dan malam. Tiada Tuhan kecuali Allah semata. Dia memenuhi janjiNya, menolong hambaNya serta menghancurkan sendiri musuh-musuhNya. Tiada sesuatu, baik yang mendahuluiNya, mahupun sesudahNya menghidupkan dan mematikan. Dia yang selalu hidup, tidak mati dan Iuput selama-lamanya. Di tanganNya segala kebajikan dan kepadaNyalah tempat kembali dan Dialah yang Maha Kuasa atas segalanya."
     }],
-    "category": ["tawaf"],
+    "category": ["sa'i"],
     "audio": ""
   },
   {
     "id": 40,
+    "titleEn": "Dua while brisk walking between the green lights",
+    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
+      "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
+      "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 41,
+    "titleEn": "After passing the green lights, recite the following du'a",
+    "titleMy": "Setelah melintasi tiang hijau, baca do'a berikut",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبِّ أَجِرْنَا مِنَ النَّارِ سَالِمِينَ. وَأَدْخِلْنَا الْجَنَّةَ غَانِمِيْنَ فَرِحِيْنَ مُسْتَبْشِرِيْنَ مَعَ عِبَادِكَ الصَّالِحِيْنَ ، مَعَ الَّذِيْنَ أَنْعَمَ اللهُ عَلَيْهِمْ مِنَ النَّبِيِّينَ وَالصَّدِّيقِينَ وَالشُّهَدَاءِ وَالصَّالِحِيْنَ وَحَسُنَ أُولٰئِكَ رَفِيقًا ذَلِكَ الْفَضْلُ مِنَ اللَّهِ وَكَفَى بِاللَّهِ عَلِيْمًا، لَا إِلٰهَ إِلَّا اللهُ حَقًّا حَقًّا لَا إِلٰهَ إِلَّا اللهُ تَعَبُّدًا ورِقًّا لَا إِلٰهَ إِلَّا اللهُ وَلَا نَعْبُدُ إِلَّا إِيَّاهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْكَرِهَ الْكَافِرُوْنَ",
+      "translationEn": "O our Lord, save us from the fire of hell, and let us enter paradise together with Your servants whom You have granted blessings among the prophets, the truthful, the martyrs, and the righteous. And they are the best of companions. All of this is a shower of grace from Allah s.w.t. Indeed, Allah is All-Knowing. There is no god but Allah truly. There is no god but Allah, I declare it as a sign of servitude. There is no god but He. We dedicate our religion sincerely for Him, even though the disbelievers hate it.",
+      "translationMy": "Ya Tuhan kami selamatkanlah kami dari api neraka, dan gembirakanlah kami masuk ke syurga bersama-sama hambaMu yang telah Engkau kurniakan nikmat daripada para Nabi, para sidiqqin, para syuhada dan solehin.Dan mereka itulah sebaik-baik teman. ltu semua Iimpah karunia dari Allah s.w.t. Sesungguhnya Allah Maha Mengetahui. Tiada Tuhan melainkan Allah dengan sebenar. Tiada Tuhan melainkan Allah, aku menyebutnya tanda pengabdian. Tiada Tuhan melainkan Dia. Kami ikhlaskan agama keranaNya walaupun orang-orang yang kafir itu benci."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 42,
+    "titleEn": "Doa when approaching Safa or Marwah hill",
+    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "doa": [{
+      "id": 1,
+      "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
+      "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
+      "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 43,
+    "titleEn": "2nd Sa'i Supplication (Marwah → Safa)",
+    "titleMy": "Doa Sa'i Kedua (Marwah → Safa)",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَلله أَكْبَرُ، اَلله أَكْبَرُ، اَلله أَكْبَرُ، وَلِلّٰهِ الْحَمْدُ لَا إِلٰهَ إِلَّا اللهُ الْوَاحِدُ الْفَرْدُ الصَّمَدُ\nالَّذِي لَمْ يَتَّخِذْ صَاحِبَةً وَلَا وَلَدًا، وَلَمْ يَكُنْ لَهُ شَرِيْكٌ فِي الْمُلْكِ، وَلَمْ يَكُنْ لَهُ وَلِيٌّ مِنَ الذُّلِّ\n وَكَبِّرْهُ تَكْبِيرًا، اَللّٰهُمَّ إِنَّكَ قُلْتَ فِي كِتَابِكَ الْمُنزَلِ، أُدْعُونِي أَسْتَجِبْ لَكُمْ، دَعَوْنَاكَ رَبَّنَا كَمَا أَمَرْتَنَا، فَاسْتَجِبْ لَنَا كَمَا وَعَدْتَنَا إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ، رَبِّنَا إنَّنَا سَمِعْنَا مُنَادِيًا يُنَادِي لِلْإِيْمَانِ أَنْ آمِنُوا بِرَبِّكُمْ فَآمَنَّا رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا\nوَتَوَفَّنَا مَعَ الْأَبْرَارِ، رَبَّنَا وَآتِنَا مَا وَعَدْتَنَا عَلَى رُسُلِكَ وَلَا تُخْزِنَا يَوْمَ الْقِيَامَةِ\nإِنَّكَ لَا تُخْلِفُ الْمِيْعَادَ، رَبَّنَا عَلَيْكَ تَوَكَّلْنَا وَإِلَيْكَ أَنَبنَا، وَإِلَيْكَ الْمَصِيرُ\nرَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِيْنَ سَبَقُونَا بِالْإِيْمَانِ\nوَلَا تَجْعَلْ فِي قُلُوْبِنَا غِلًّا لِلَّذِينَ آمَنُوا رَبَّنَا إنَّكَ رَؤُوفٌ رَحِيمٌ",
+      "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. All praises are due to Allah. There is no God but Allah, the One, the refuge of all things. He does not have a wife nor children. There is no partner for Him in power. No representative for Him from the lowly, and glorified is He with all greatness. O Allah, You commanded in the Holy Book that You revealed: 'Ask of Me, I will grant you.' O Lord, we ask of You, as You have commanded. You do not break promises. O our Lord, indeed we have heard the one who called to believe: 'Believe in your Lord.' So, we believe. Forgive our sins and remove evil from ourselves and let us die with the good ones. O our Lord, grant us what You have promised through Your messengers. And do not disappoint us on the Day of Judgment. Indeed, You do not break promises. O our Lord, we surrender to You and to You we return, and You are our focal point of hope. O our Lord, forgive us and our brothers who have preceded us in faith, and do not let there be in our hearts any envy towards those who believe. O our Lord, You are the Most Merciful and Most Compassionate.",
+      "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Hanya bagi Allah segala puji. Tiada Tuhan kecuali Allah yang Maha Esa, tempat bergantung segala sesuatu. Yang tiada beristeri dan tiada beranak. Tiada sekutu bagiNya dalam kekuasaan. Tiada bagiNya wakil dari yang hina, dan agunglah Dia dengan segenap kebesaran. Ya Allah, Engkau berfirman dalam Kitab Suci yang Engkau turunkan: “Mohonlah kepadaKu, Aku perkenankan bagimu” Ya Tuhan, kami mohon kepadaMu, sebagaimana Kau perintahkan. Engkau tidak memungkiri janji. Ya Tuhan kami, sesungguhnya kami telah mendengar orang yang menyeru supaya beriman: “Berimanlah kamu dengan Tuhanmu.” Maka kami beriman. Ampunilah dosa-dosa kami dan hapuskanlah kejahatan dari diri kami dan wafatkanlah kami bersama orang-orang yang baik. Ya Tuhan kami, anugerahilah kami dengan apa yang telah Engkau janjikan melalui rasul-rasulMu. Dan janganlah Engkau kecewakan kami pada hari kiamat. Sesungguhnya Engkau tidak mungkir janji. Ya Tuhan kami kepadaMu kami menyerah dan kepadaMu kami kembali dan Engkaulah tumpuan harapan kami. Ya Tuhan kami, ampunilah kami serta saudara-saudara kami yang telah mendahului kami dalam beriman, dan janganlah Engkau jadikan dalam hati kami rasa dengki kepada orang-orang yang beriman. Ya Tuhan kami, Engkau Maha Pengasih dan Maha Penyayang."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 44,
+    "titleEn": "Dua while brisk walking between the green lights",
+    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
+      "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
+      "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 45,
+    "titleEn": "Doa when approaching Safa or Marwah hill",
+    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "doa": [{
+      "id": 1,
+      "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
+      "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
+      "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 46,
+    "titleEn": "3rd Sa'i Supplication (Safa → Marwah)",
+    "titleMy": "Doa Sa'i Ketiga (Safa → Marwah)",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَللهُ أَكْبَرُ اَللهُ أَكْبَرُ اَللهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ، رَبَّنَا أَتْمِمْلَنَا نُوْرَنَا وَاغْفِرْلَنَا\nإِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرُ، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ الْخَيْرَ كُلَّهُ عَاجِلَهُ وَآجِلَهُ\nوَأَسْتَغْفِرُكَ لِذَنبِي، وَأَسْأَلُكَ رَحْمَتَكَ يَا أَرْحَمَ الرَّاحِمِينَ",
+      "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. All praise is due to Allah. O Allah, perfect the bright light for us and forgive us. You are All-Powerful over all things. O Allah, indeed I ask You for all that is good, both immediate and delayed. \nAnd I ask You for forgiveness for my sins, and I also seek Your mercy, O Lord of All Compassion and Mercy.",
+      "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Bagi Allah segala puji. Ya Allah, sempurnakanlah cahaya terang bagi kami dan ampunilah kami. Engkau Maha Kuasa atas segala sesuatu. Ya Allah, Sesungguhnya aku mohon kepadaMu kebaikan seluruhnya, yang cepat dan yang lambat. Dan aku mohon kepadaMu ampun atas dosaku, juga aku mohon kepadaMu rahmatMu, wahai Tuhan Yang Maha Pengasih dan Penyayang."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 47,
+    "titleEn": "Dua while brisk walking between the green lights",
+    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
+      "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
+      "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 48,
+    "titleEn": "After passing the green lights, recite the following du'a",
+    "titleMy": "Setelah melintasi tiang hijau, baca do'a berikut",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبِّ زِدْنِي عِلْمًا وَلَا تُزِغْ قَلْبِي بَعْدَ إِذْ هَدَيْتَنِي، وَهَبْ لِي مِنْ لَدُنْكَ رَحْمَةً إِنَّكَ أَنْتَ الْوَهَّابُ اَللّٰهُمَّ عَافِنِي فِي سَمْعِي وَبَصَرِي، لَا إِلٰهَ إِلَّا أَنْتَ، اَللّٰهُمَّ إِنِّي أَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِ\nلَا إِلٰهَ إِلَّا أَنْتَ سُبْحٰنَكَ إِنِّي كُنتُ مِنَ الظَّالِمِيْنَ \n اَللّٰهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، اَللّٰهُمَّ إِنِّي أَعُوْذُ بِرِضَاكَ مِنْ سَخَطِكَ\nوَبِمُعَافَاتِكَ مِنْ عُقُوْبَتِكَ، وَ أَعُوْذُ بِكَ مِنْكَ لَا أُحْصِيْ ثَنَاءً عَلَيْكَ\nأَنْتَ كَمَا أَثْنَيْتَ عَلَى نفْسِكَ، فَلَكَ الْحَمْدُ حَتَّى تَرْضَى\n\nرَبِّ زِدْنِي عِلْمًا وَلَا تُزِغْ قَلْبِي بَعْدَ إِذْ هَدَيْتَنِي، وَهَبْ لِي مِنْ لَدُنْكَ رَحْمَةً إِنَّكَ أَنْتَ الْوَهَّابُ اَللّٰهُمَّ عَافِنِي فِي سَمْعِي وَبَصَرِي، لَا إِلٰهَ إِلَّا أَنْتَ، اَللّٰهُمَّ إِنِّي أَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِ\nلَا إِلٰهَ إِلَّا أَنْتَ سُبْحٰنَكَ إِنِّي كُنتُ مِنَ الظَّالِمِيْنَ \n اَللّٰهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، اَللّٰهُمَّ إِنِّي أَعُوْذُ بِرِضَاكَ مِنْ سَخَطِكَ\nوَبِمُعَافَاتِكَ مِنْ عُقُوْبَتِكَ، وَ أَعُوْذُ بِكَ مِنْكَ لَا أُحْصِيْ ثَنَاءً عَلَيْكَ\nأَنْتَ كَمَا أَثْنَيْتَ عَلَى نفْسِكَ، فَلَكَ الْحَمْدُ حَتَّى تَرْضَى",
+      "translationEn": "O Lord, increase my knowledge, do not turn my heart away after You have guided me, grant me mercy from You, for indeed You are the Most Generous. O Allah, bless me with my hearing and my sight, there is no God but You. O Allah, I seek refuge with You from the punishment of the grave, there is no God but You. Glory be to You, indeed I am among the wrongdoers. O Allah, indeed I seek refuge from disbelief and poverty, O Allah, I seek refuge with Your pleasure from Your wrath, and with Your forgiveness from Your punishment. I cannot praise You, as You praise Yourself, all praise is Yours until You are pleased.",
+      "translationMy": "Ya Tuhan, tambahkan aku ilmu, jangan palingkan hatiku setelah Engkau beri hidayah kepadaku, berilah aku rahmat dariMu, sesungguhnya Engkau Maha Pemberi. Ya Allah, baikilah keadaan aku dengan pendengaran dan penglihatan aku, tiada Tuhan melainkan Engkau. Ya Allah, aku berlindung denganMu dari seksa kubur, tiada Tuhan melainkan Engkau. Maha Suci Engkau, sesungguhnya aku dari golongan zalim. Ya Allah, sesungguhnya aku berlindung dari kekufuran dan kepapaan, Ya Allah, aku berlindung dengan keredaanMu dari kemurkaanMu, dan dengan kemaafanMu dari azabMu. Aku tidak dapat memuji kepadaMu, seperti pujiMu sendiri kepada diriMu, segala puji bagiMu hingga Engkau redhai."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 49,
+    "titleEn": "Doa when approaching Safa or Marwah hill",
+    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "doa": [{
+      "id": 1,
+      "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
+      "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
+      "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 50,
+    "titleEn": "4th Sa'i Supplication (Marwah → Safa)",
+    "titleMy": "Doa Sa'i Keempat (Marwah → Safa)",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَللهُ أَكبَرُ، اَللهُ أَكبَرُ، اَللهُ أَكبَرُ، وَلِلّٰهِ الْحَمْدُ، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ مَا تَعْلَمُ وَأَعُوْذُ بِكَ مِنْ شَرِّ مَا تَعْلَمُ إِنَّكَ أَنْتَ عَلاَّمُ الْغُيُوبِ، لَا إِلٰهَ إِلَّا اللهُ الْمَلِكُ الْحَقُّ الْمُبِيْنَ مُحَمَّدٌ رَسُولُ اللَّهُ، الصَّادِقُ الْوَعْدُ الْأَمِيْنِ، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ كَمَا هَدَيْتَنِي لِلْإِسْلَامِ أَن لَا تَنزِعَهُ مِنِّي حَتَّى تَتَوَفَّانِي وَأَنَا مُسْلِمٌ، اَللّٰهُمَّ اجْعَلْ فِي قَلْبِي نُورًا\nوَفِي سَمْعِي نُورًا، وَفِي بَصَرِي نُوْرًا، اَللّٰهُمَّ اشْرَحْ لِي صَدْرِي، وَيَسِّرْ لِي أَمْرِي\nوَأَعُوْذُ بِكَ مِنْ شَرِّ وَسَاوِسِ الصَّدْرِ، وَشَتَاتِ الْأَمْرِ وَفِتْنَةِ الْقَبْرِ\nاَللّٰهُمَّ إِنِّي أَعُوْذُ بِكَ مِنْ شَرِّ مَا يَلِجُ فِي اللَّيْلِ وَشَرِّ مَا يَلِجُ فِي النَّهَارِ\nوَمِنْ شَرِّ مَا تَهُبُّ بِهِ الرِّيَاحِ يَا أَرْحَمَ الرَّاحِمِيْنَ\nسُبْحَانَكَ مَا عَبَدْنَاكَ حَقَّ عِبَادَتِكَ يَا اَللهُ\nسُبْحَانَكَ مَا ذَكَرْنَاكَ حَقَّ ذِكْرِكَ يَا اَللهُ",
+      "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. And to Allah belongs all praise. O Allah, indeed I ask of You the best of matters that You know, and I seek Your protection from the worst of matters that You know, and I ask for forgiveness for all that You know, indeed You are All-Knowing of the unseen. There is no god except Allah, who possesses the evident truth. Muhammad is the Messenger of Allah, whose promise is true and is trusted. O Allah, I ask of You, just as You have guided me, that I die in Islam. O Allah, grant light in my heart, my ears, and my sight. O Allah, expand my chest, and make my affairs easy, and I seek refuge in You from doubts and confusion in my affairs, and I seek refuge from the torment of the grave. O Allah, I seek refuge in You from the evil that arises in the night and the day, and the evil brought by the wind.\nO Lord, the Most Merciful and Most Compassionate. O Allah, we cannot worship You as we should and we cannot remember You as we ought to.",
+      "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Dan bagi Allah segala puji. Ya Allah, sesungguhnya aku pohon kepadaMu sebaik-baik perkara yang Engkau mengetahuinya, serta mohon perlindunganMu dari seburuk-buruk perkara yang Engkau mengetahuinya dan aku mohon ampun atas segala yang Engkau tahu, sesungguhnya Engkau Maha Mengetahui yang ghaib. Tiada Tuhan kecuali Allah yang memiliki kebenaran yang nyata. Muhammad Rasulullah yang benar janjinya Iagi dipercayai. Ya Allah, aku mohon kepadaMu, sebagaimana Engkau telah memberi petunjuk kepadaku, sehingga aku meninggal dalam Islam. Ya Allah, berilah cahaya dalam hatiku, telingaku dan penglihatanku. Ya Allah, lapangkanlah dadaku, dan mudahkanlah urusanku, dan aku berlindung kepadaMu daripada was-was dan kucar-kacir urusan dan aku berlindung daripada azab kubur. Ya Allah, aku berlindung kepadaMu dari kejahatan yang timbul pada malam dan siang hari, dan kejahatan yang dibawa oleh angin. Wahai Tuhan yang Maha Pengasih Iagi Maha Penyayang. Ya Allah kami tidak dapat menyembahMu sebagaimana yang sepatutnya dan kami tidak dapat mengingatiMu sebagaimana yang sewajarnya."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 51,
+    "titleEn": "Dua while brisk walking between the green lights",
+    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
+      "translationEn": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah.",
+      "translationMy": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 52,
+    "titleEn": "Doa when approaching Safa or Marwah hill",
+    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "doa": [{
+      "id": 1,
+      "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
+      "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
+      "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 53,
+    "titleEn": "5th Sa'i Supplication (Safa → Marwah)",
+    "titleMy": "Doa Sa'i Kelima (Safa → Marwah)",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَللهُ أَكبَرُ اَللهُ أَكبَرُ اَللهُ أَكبَرُ اَللهُ أَكبَرُ كَبِيرًا وَالْحَمْدُ لِلَّهِ كَثِيرًا اَللَّهُمَّ حَبِّبْ\nإِلَيَّ الْإِيْمَانَ وَزَيِّنْهُ فِي قَلْبِي، وَكَرِّهْ إِلَىَّ الْكُفْرَ وَالْفُسُوْقَ وَالْعِصْيَانَ\nوَاجْعَلْنِي مِنَ الرَّاشِدِيْنَ",
+      "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. Allah is the Greatest in all His Greatness, all praise is due to Allah. O Allah, make me love faith and adorn it in my heart. Make me hate disbelief, wickedness, and disobedience. Make me among those who are guided.",
+      "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Allah Maha Besar dengan segala KebesaranNya, segala puji bagi Allah. Ya Allah cintakanlah aku kepada keimanan dan hiaskanlah ia di hati ku. Bencikanlah aku kepada kekafiran, kefasikan dan kedurhakaan. Jadikanlah aku di antara orang-orang yang mendapat petunjuk."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 54,
+    "titleEn": "Dua while brisk walking between the green lights",
+    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
+      "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
+      "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 55,
+    "titleEn": "After passing the green lights, recite the following du'a",
+    "titleMy": "Setelah melintasi tiang hijau, baca do'a berikut",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَللّٰهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ، اَللّٰهُمَّ اهْدِنِي بِالْهُدَى وَنَقِّنِي بِالتَّقْوَى وَاغْفِرْ لِي فِي الْآخِرَةِ وَالأُوْلَى، اَللّٰهُمَّ ابْسُطْ عَلَيْنَا مِنْ بَرَكَاتِكَ وَرَحْمَتِكَ وَفَضْلِكَ وَرِزْقِكَ\nاَللّٰهُمَّ إِنِّي أَسْأَلُكَ النَّعِيمَ الْمُقِيمَ الَّذِي لَا يَحُولُ وَلَا يَزُولُ أَبَدًا\nاَللّٰهُمَّ اجْعَلْ فِي قَلْبِي نُورًا ، وَفِي سَمْعِي نُوْرًا، وَفِي بَصَرِي نُوْرًا، وَفِي لِسَانِي نُوْرًا\nوَعَنْ يَمِينِي نُوْرًا، وَعَنْ شِمَالِي نُورًا وَمِنْ فَوْقِيَ نُوْرًا وَعَنْ يَمِينِي نُوْرًا، وَعَنْ شِمَالِي نُورًا وَمِنْ فَوْقِيَ نُوْرًا، وَاجْعَلْ فِي نَفْسِي نُورًا وَعَظِّمْ لِي نُورًا \nرَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
+      "translationEn": "O Allah, save me from Your punishment, on the day You resurrect Your servants. O Allah, guide me with Your guidance, purify me with righteousness, and forgive me in this world and in the hereafter. O Allah, bestow upon me Your blessings, mercy, grace and sustenance. O Allah, I ask for everlasting blessings that do not change and do not disappear. O Allah, make light in my heart, my hearing, my sight, my tongue, on my right and on my left, above me and within my soul. Expand my chest and ease my affairs.",
+      "translationMy": "Ya Allah, selamatkanlah aku dari azabMu, dihari Engkau membangkitkan hamba-hambaMu. Ya Allah, pimpinlah aku dengan hidayat, dan sucikanlah aku dengan takwa, dan ampunilah aku di dunia dan di akhirat. Ya Allah, Iimpahkanlah atas aku berkatMu, rahmatMu, kurniaMu dan rezekiMu.Ya Allah, aku bermohon nikmat yang berkekalan, tidak berpindah dan tidak hilang. Ya Allah, jadikanlah cahaya di dalam hatiku, pendengaranku, penglihatanku, lidahku, di kanan dan di kiriku, di atasku dan di dalam jiwaku. Lapangkanlah dadaku dan mudahkanlah urusanku"
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 56,
+    "titleEn": "Doa when approaching Safa or Marwah hill",
+    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "doa": [{
+      "id": 1,
+      "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
+      "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
+      "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 57,
+    "titleEn": "6th Sa'i Supplication (Marwah → Safa)",
+    "titleMy": "Doa Sa'i Keenam (Marwah → Safa)",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ اَلله أَكْبَرُ، وَلِلَّهِ الْحَمْدُ، لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ، صَدَقَ وَعْدَهُ\nوَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ، لَا إِلٰهَ إِلَّا اللَّهُ، وَلَا نَعْبُدُ إِلَّا إِيَّاهُ مُخْلِصِينَ لَهُ الدِّيْنَ\nوَلَوْ كَرِهَ الْكَافِرُوْنَ، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى،اَللّٰهُمَّ إِنِّي أَسْأَلُكَ \nرِضَاكَ وَالجَنَّةَ، وَأَعُوْذُ بِكَ مِنْ سَخَطِكَ وَالنَّارِ،وَمَا يُقَرِّبُنِي إِلَيْهَا مِنْ قَوْلٍ أَوْ فِعْلٍ أَوْ عَمَلٍ\nاَللّٰهُمَّ بِنُورِكَ اهْتَدَيْنَا وَبِفَضْلِكَ اسْتَغنَيْنَا وَفِي كَنَفِكَ وَإِنْعَامِكَ وَعَطَائِكَ وَإِحْسَانِكَ\nأَصْبَحْنَا وَأَمْسَيْنَا أَنتَ الْأَوّلُ فَلَا قَبْلَكَ شَيْءٌ، وَالْآخِرُ فَلَا بَعْدَكَ شَيْءٌ\nوَالظَّاهِرُ فَلَا شَيْءَ فَوْقَكَ، وَالْبَاطِنُ فَلَا شَيْءَ دُوْنَكَ\nنَعُوْذُبِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَعَذَابِ الْقَبْرِ وَفِتنَةِ الْغِنَى وَنَسْأَلُكَ الْفَوْزَ بِالْجَنَّةِ",
+      "translationEn": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Dan segala puji bagi Allah. Tiada Tuhan kecuali Allah Yang Maha Esa. JanjiNya benar, Dia menolong hambaNya, Dia menghancurkan musuh-musuhNya. Tiada Tuhan selain Allah, dan kami tidak menyembah selainNya dengan penuh ikhlas. Dialah yang empunya agama ini walaupun orang-orang kafir tidak merasa senang. Ya Allah, aku bermohon hidayah, taqwa, kesucian budi dan kekayaan. Ya Allah, aku mohon keredhaanMu dan syurga, dan aku mohon dilindungi dari kemurkaanMu dan neraka, dan segala yang mendekatkan aku kepadanya, baik berupa kata, perbuatan atau pekerjaan. Ya Allah, dengan cahayaMu kami mendapat hidayah. Kami kaya dengan kurniaanMu berserta pertolongan, nikmat ,anugerah dan ihsanMu pagi dan petang. Engkaulah yang awal,tidak ada sesuatupun yang ada sebelumMu dan Engkau pula paling akhir dan tidak ada sesuatupun yang ada dibelakang (sesudah)Mu. Engkau pula yang zahir maka tidak ada sesuatupun yang melebihi Engkau, Engkau pula yang batin tidak ada sesuatupun yang menyamaiMu. Kami mohon perlindunganMu dari kemiskinan, kemalasan dan azab kubur, serta ujian kekayaan. Kami mohon kepadaMu kemenangan mencapai syurga.",
+      "translationMy": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. And all praise is for Allah. There is no God except Allah the One. His promise is true, He helps His servant, He destroys His enemies. There is no God besides Allah, and we do not worship anyone but Him sincerely. He is the owner of this religion even though the disbelievers do not feel comfortable. O Allah, I ask for guidance, piety, purity of heart, and wealth.O Allah, I seek Your pleasure and paradise, and I seek protection from Your wrath and hell, and everything that brings me closer to it, whether in words, deeds, or actions. O Allah, with Your light we receive guidance. We are rich with Your blessings along with help, grace, bounties, and favors both morning and evening. You are the First, nothing existed before You, and You are the Last, nothing exists after You. You are also the Outwardly Manifest, so there is nothing greater than You, You are the one whose essence is unmatched. We seek Your protection from poverty, laziness, and the torment of the grave, as well as the trials of wealth. We ask You for the victory to attain paradise."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 58,
+    "titleEn": "Dua while brisk walking between the green lights",
+    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
+      "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
+      "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 59,
+    "titleEn": "Doa when approaching Safa or Marwah hill",
+    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "doa": [{
+      "id": 1,
+      "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
+      "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
+      "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 60,
+    "titleEn": "7th Sa'i Supplication Doa (Safa → Marwah)",
+    "titleMy": "Sa'i Ketujuh (Safa → Marwah)",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ سُبْحَانَكَ مَا شَكَرْنَاكَ\nحَقَّ شُكْرِكَ يَا اَللَّهُ، سُبْحَانَكَ مَا أَعْلَى شَأْنَكَ يَا اَللَّهُ، اَللّٰهُمَّ حَبِّبْ\nإِلَيْنَا الْإِيْمَانَ وَزَيِّنْهُ فِي قُلُوْبِنَا، وَكَرِّه إلَيْنَا الْكُفْرَ وَالْفُسُوْقَ وَالْعِصْيَانَ\nوَاجْعَلْنَا مِنَ الرَّاشِدِيْنَ",
+      "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. All praise is due to Allah. Glory be to You, O Allah, indeed we cannot thank You as You deserve, O Allah. Glory be to You, O Allah, there is no comparison at all to Your glory, O Allah. O Allah, make us love faith and adorn it in our hearts. Make us hate disbelief, wickedness, and disobedience, and make us among those who are guided.",
+      "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Segala puji bagi Allah. Maha Suci Engkau Ya Allah, sesungguhnya kami tidak dapat bersyukur kepada Engkau sebagaimana yang sepatutnya, Ya Allah. Maha Suci Engkau Ya Allah, tidak ada tolok banding sama sekali kemuliaanMu Ya Allah. Ya Allah, cintakanlah kami kepada keimanan dan hiaskanlah ia ke dalam hati kami. Bencikanlah kami kepada kekafiran, kefasikan dan kederhakaan dan jadikanlah kami di antara orang-orang yang mendapat petunjuk."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 61,
+    "titleEn": "Dua while brisk walking between the green lights",
+    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
+      "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
+      "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 62,
+    "titleEn": "After passing the green lights, recite the following du'a",
+    "titleMy": "Setelah melintasi tiang hijau, baca do'a berikut",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَللّٰهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ، اَللّٰهُمَّ اهْدِنِي بِالْهُدَى وَنَقِّنِي بِالتَّقْوَى وَاغْفِرْ لِي فِي الْآخِرَةِ وَالأُوْلَى، اَللّٰهُمَّ ابْسُطْ عَلَيْنَا مِنْ بَرَكَاتِكَ وَرَحْمَتِكَ وَفَضْلِكَ وَرِزْقِكَ\nاَللّٰهُمَّ إِنِّي أَسْأَلُكَ النَّعِيمَ الْمُقِيمَ الَّذِي لَا يَحُولُ وَلَا يَزُولُ أَبَدًا\nاَللّٰهُمَّ اجْعَلْ فِي قَلْبِي نُورًا ، وَفِي سَمْعِي نُوْرًا، وَفِي بَصَرِي نُوْرًا، وَفِي لِسَانِي نُوْرًا\nوَعَنْ يَمِينِي نُوْرًا، وَعَنْ شِمَالِي نُورًا وَمِنْ فَوْقِيَ نُوْرًا وَعَنْ يَمِينِي نُوْرًا، وَعَنْ شِمَالِي نُورًا وَمِنْ فَوْقِيَ نُوْرًا، وَاجْعَلْ فِي نَفْسِي نُورًا وَعَظِّمْ لِي نُورًا \nرَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
+      "translationEn": "O Allah, save me from Your punishment, on the day You resurrect Your servants. O Allah, guide me with Your guidance, purify me with righteousness, and forgive me in this world and in the hereafter. O Allah, bestow upon me Your blessings, mercy, grace and sustenance. O Allah, I ask for everlasting blessings that do not change and do not disappear. O Allah, make light in my heart, my hearing, my sight, my tongue, on my right and on my left, above me and within my soul. Expand my chest and ease my affairs.",
+      "translationMy": "Ya Allah, selamatkanlah aku dari azabMu, dihari Engkau membangkitkan hamba-hambaMu. Ya Allah, pimpinlah aku dengan hidayat, dan sucikanlah aku dengan takwa, dan ampunilah aku di dunia dan di akhirat. Ya Allah, Iimpahkanlah atas aku berkatMu, rahmatMu, kurniaMu dan rezekiMu.Ya Allah, aku bermohon nikmat yang berkekalan, tidak berpindah dan tidak hilang. Ya Allah, jadikanlah cahaya di dalam hatiku, pendengaranku, penglihatanku, lidahku, di kanan dan di kiriku, di atasku dan di dalam jiwaku. Lapangkanlah dadaku dan mudahkanlah urusanku"
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 63,
+    "titleEn": "Doa when approaching Safa or Marwah hill",
+    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "doa": [{
+      "id": 1,
+      "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
+      "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
+      "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 64,
+    "titleEn": "Supplication after completing Sa'i at Marwah",
+    "titleMy": "Doa setelah selesai Sa'i di atas bukit Marwah",
+    "doa": [{
+      "id": 1,
+      "arabic": "رَبَّنَا تَقَبَّلْ مِنَّا وَعَافِنَا وَاعْفُ عَنَّا، وَعَلَى طَاعَتِكَ وَشُكْرِكَ أَعِنَّا، وَعَلَى غَيْرِكَ\nلَا تَكِلْنَا وَعَلَى الْإِيْمَانِ وَالْإِسْلَامِ الْكَامِلِ جَمْعًا تَوَفَّنَا وَأَنْتَ رَاضٍ عَنَّا\nاَللّٰهُمَّ ارْحَمْنِيْ بِتَرْكِ الْمَعَاصِي مَا أَبْقَيْتَنِي، وَارْحَمْنِي أَنْ أَتَكَلَّفَ مَا لَا يَعْنِينِي\nوَارْزُقْنِي حُسْنَ النَّظَرِ فِيْمَا يُرْضِيْكَ عَنِّي، يَا أَرْحَمَ الرَّاحمينَ",
+      "translationEn": "O God, we ask that our prayers be accepted. Grant us good health and forgive us. Give us assistance to be obedient and grateful to You. Do not let us depend on anyone else but You. Let us die in perfect faith and Islam, while You are pleased with us. O Allah, O Lord, protect me from all evil throughout my life, and keep me from doing things that are of no benefit, and bestow upon me a good perspective on things that lead to Your pleasure, O Lord who is Most Compassionate.",
+      "translationMy": "Ya Tuhan, kami memohon diterima doa kami. Afiatkanlah dan ampunilah kami. Berilah pertolongan kepada kami untuk taat dan bersyukur kepada Engkau. Janganlah membiarkan kami bergantung kepada yang lain, selain dari Engkau. Matikanlah kami di dalam iman dan islam yang sempurna, sedang Engkau reda kepada kami. Ya Allah, Ya Tuhan, peliharalah diriku dengan meninggalkan segala kejahatan selama hidupku, dan peliharalah aku supaya tidak membuat perkara yang tidak memberi guna, dan kurniakanlah kepadaku elok pandangan pada perkara-perkara yang membawa keredaan Engkau wahai Tuhan yang bersifat Amat Belas Kasihan."
+    }],
+    "category": ["sa'i"],
+    "audio": ""
+  },
+  {
+    "id": 65,
     "titleEn": "",
     "titleMy": "",
     "doa": [{
@@ -521,7 +846,72 @@
       "translationEn": "",
       "translationMy": ""
     }],
-    "category": ["tawaf"],
+    "category": ["tahalul"],
+    "audio": ""
+  },
+  {
+    "id": 66,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["tahalul"],
+    "audio": ""
+  },
+  {
+    "id": 67,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["tahalul"],
+    "audio": ""
+  },
+  {
+    "id": 68,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["tahalul"],
+    "audio": ""
+  },
+  {
+    "id": 69,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["tahalul"],
+    "audio": ""
+  },
+  {
+    "id": 70,
+    "titleEn": "",
+    "titleMy": "",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "category": ["tahalul"],
     "audio": ""
   }
 ]
