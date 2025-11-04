@@ -838,78 +838,26 @@
   },
   {
     "id": 65,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Dua While Shaving/Shortening",
+    "titleMy": "Doa Ketika Bercukur/Bergunting",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَللهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، اَللهُ أَكْبَرُ، اَللّٰهُمَّ هَذِهِ نَاصِيَتِي بِيَدِكَ. فَاجْعَلْ لِي بِكُلِّ شَعْرَةٍ نُوْرًا يَوْمَ الْقِيَامَةِ، وَاغْفِرْلِي ذَنْبِي يَا وَاسِعَ الْمَغْفِرَة. آمِين",
+      "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. O Allah, this crown of my head is in Your power, so make every strand of hair a light on the Day of Judgment. And forgive my sins, O Lord Who is Most Forgiving.",
+      "translationMy": "Allah Maha Besar, Allah Maha besar, Allah Maha Besar. Ya Allah, ubun-ubun kepalaku ini di dalam kekuasaanMu, maka jadikanlah setiap helai rambut suatu cahaya di hari kiamat. Dan ampunkanlah dosaku Ya Tuhan Yang Maha Luas PengampunanNya."
     }],
     "category": ["tahalul"],
     "audio": ""
   },
   {
     "id": 66,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Dua After Shaving/Shortening",
+    "titleMy": "Doa Setelah Bercukur/Bergunting",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
-    }],
-    "category": ["tahalul"],
-    "audio": ""
-  },
-  {
-    "id": 67,
-    "titleEn": "",
-    "titleMy": "",
-    "doa": [{
-      "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
-    }],
-    "category": ["tahalul"],
-    "audio": ""
-  },
-  {
-    "id": 68,
-    "titleEn": "",
-    "titleMy": "",
-    "doa": [{
-      "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
-    }],
-    "category": ["tahalul"],
-    "audio": ""
-  },
-  {
-    "id": 69,
-    "titleEn": "",
-    "titleMy": "",
-    "doa": [{
-      "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
-    }],
-    "category": ["tahalul"],
-    "audio": ""
-  },
-  {
-    "id": 70,
-    "titleEn": "",
-    "titleMy": "",
-    "doa": [{
-      "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَلحَمْدُ لِلَّهِ الَّذِي قَضَى عَنِّيْ نُسُكِي، اَللّٰهُمَّ آتِنِي بِكُلِّ شَعْرَةٍ حَسَنَةً \nوَامْحُ عَنِّي بِهَا سَيِّئَةً، وَارْفَعْ لِي بِهَا دَرَجَةً، وَاغْفِرْ لِي وَلِلْمُحَلِّقِيْنَ وَالْمُقَصِّرِينَ \nوَجَمِيعِ الْمُسْلِمِيْنَ، اَللّٰهُمَّ زِدْنَا إِيْمَانًا وَيَقِيْنًا وَتَوْفِيقًا وَعَوْنًا وَاغْفِرْلَنَا\nوَلِآبَائِنَا وَأُمَّهَاتِنَا وَصَلَّى اللهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلَّمَ",
+      "translationEn": "All praise is due to Allah, who has aided me in fulfilling this worship (Hajj or Umrah). O Allah, grant me a blessing for every strand of hair, and erase an evil with it. And elevate me with it to a rank. Forgive me and all those who shave and cut their hair, and all Muslims. O Allah, increase us in faith, certainty, guidance, and assistance. And forgive us and our parents",
+      "translationMy": "Segala puji bagi Allah, yang telah menolongku menunaikan ibadatku ini (haji atau umrah). Ya Allah berilah aku satu kebaikan dengan setiap helai rambut ini, dan padamkanlah dengannya satu kejahatan. Dan angkatkan aku dengannya satu darjat. Ampunkanlah aku dan sekelian yang bercukur dan yang bergunting dan sekelian muslimin. Ya Allah, tambahkanlah kami dengan keimanan, keyakinan, taufik dan pertolongan. Dan ampunilah kami serta ibu bapa kami."
     }],
     "category": ["tahalul"],
     "audio": ""
