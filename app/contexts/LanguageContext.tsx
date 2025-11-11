@@ -9,8 +9,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType>({
   language: 'en',
-  setLanguage: () => {
-  },
+  setLanguage: () => {},
 });
 
 export const LanguageProvider = ({children}: { children: React.ReactNode }) => {

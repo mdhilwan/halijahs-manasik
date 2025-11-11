@@ -7,6 +7,7 @@ import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import {SettingsView} from "@/components/settings-modal/settings-view";
 
 export default function Settings() {
   const { language, setLanguage } = useLanguage();
@@ -43,9 +44,7 @@ export default function Settings() {
         </Picker>
       </Collapsible>
       <Collapsible title="Font Size">
-        <ThemedText>
-          Set your language here
-        </ThemedText>
+        <SettingsView/>
       </Collapsible>
     </ParallaxScrollView>
   );

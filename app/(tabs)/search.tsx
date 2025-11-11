@@ -11,18 +11,25 @@ import duas from "@/assets/data/duas.json";
 import {DuaDetailType, DuaEngMalayArabicType, DuaType, SelectedDuaType} from "@/app/types";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import DuaDetailScreen from "@/app/screens/DuaDetailScreen";
+import {useFontSize} from "@/app/contexts/FontSettingsContext";
 
 export default function Search() {
   const [query, setQuery] = useState("");
   const [screen, setScreen] = useState("home");
   const [selectedDua, setSelectedDua] = useState<SelectedDuaType>(undefined);
   const {language} = useLanguage();
+  const {translationFontSize} = useFontSize()
 
   const filterDuas = (q: string) => {
     const qLower = q.toLowerCase();
     return duas.filter(
       (duaObj: DuaType) => {
-        const doaList = duaObj.doa.map((d: DuaEngMalayArabicType) => [d.arabic, d.translationEn.toLowerCase(), d.translationMy.toLowerCase()].join(" ")).join("")
+        const doaList = duaObj.doa.map((d: DuaEngMalayArabicType) => {
+          const dTranslationEn = Array.isArray(d.translationEn) ? d.translationEn.map(d => d.toLowerCase()) : d.translationEn.toLowerCase();
+          const dTranslationMy = Array.isArray(d.translationMy) ? d.translationMy.map(d => d.toLowerCase()) : d.translationMy.toLowerCase();
+
+          return [d.arabic, dTranslationEn, dTranslationMy].join(" ");
+        }).join("")
         return duaObj.titleEn?.toLowerCase().includes(qLower) ||
           duaObj.titleMy?.toLowerCase().includes(qLower) ||
           doaList.indexOf(qLower) > -1
@@ -56,8 +63,8 @@ export default function Search() {
                   duas: [item],
                 })
               }}>
-                <Text style={styles.title}>{language === "en" ? item.titleEn : item.titleMy}</Text>
-                <Text style={styles.snippet} numberOfLines={2}>
+                <Text style={[styles.title, { fontSize: translationFontSize }]}>{language === "en" ? item.titleEn : item.titleMy}</Text>
+                <Text style={[styles.snippet, { fontSize: translationFontSize }]} numberOfLines={2}>
                   {language === "en" ? item.doa[0].translationEn : item.doa[0].translationMy}
                 </Text>
               </TouchableOpacity>
