@@ -1020,26 +1020,52 @@
   },
   {
     "id": 79,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Doa at historic mosque around Madinah",
+    "titleMy": "Dua di masjid-masjid bersejarah di sekitar Madinah",
     "doa": [{
       "id": 1,
-      "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "arabic": "اَللّٰهُمَّ رَبَّنَا تَقَبَّلْ مِنَّا وَعَافِنَا وَاعْفُ عَنَّا، اَللّٰهُمَّ تَوَفَّنَا مُسْلِمِينَ\nوَأَحْيِنَا مُسْلِمِيْنَ، وَاَلْحِقْنَا بِالصَّالِحِيْنَ، اَللّٰهُمَّ إِنِّي أَوْدَعْتُ هَذَا الْمَحَلَّ الشَّرِيفَ\nمِنْ يَوْمِنَا هَذَا إِلَى يَوْمِ الْقِيَامَةِ خَالِصًا مُخْلِصًا\n(أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ\nوَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ) اَلْفَاتِحَة",
+      "translationEn": "O Allah, our Lord, accept our prayers, grant us good health, forgive our mistakes, let us die in Islam, let us live in Islam, and gather us with the righteous. O Allah, my Lord, I dedicate this sacred place from today until the Day of Judgment, sincerely and truthfully. I bear witness that there is no god but Allah, and indeed Muhammad is His servant and Messenger (AI-Fatihah)",
+      "translationMy": "Ya Allah. Ya Tuhan kami. Perkenankanlah doa kami, afiatkanlah kami, maafkanlah kesalahan kami, matikanlah kami di dalam Islam, hidupkanlah kami di dalam Islam, himpunkanlah kami dengan orang-orang yang soleh. Ya Allah. Ya Tuhan aku abadikan tempat yang suci ini daripada hari ini sehingga hari kiamat, dengan ikhlas dan jujur. Aku menyaksi tiada tuhan melainkan Allah dan sesungguhnya Nabi Muhammad hambaNya dan PesuruhNya' (AI-Fatihah)"
     }],
     "categoryKey": ["madinah"],
     "audio": ""
   },
   {
     "id": 80,
-    "titleEn": "",
-    "titleMy": "",
+    "titleEn": "Greetings and Prayers at the Martyrs' Cemetery of Uhud",
+    "titleMy": "Salam Dan Doa Di Perkuburan Syuhada’ Uhud",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَلسَّلَامُ عَلَيْكَ يَا حَمْزَةُ عَمَّ رَسُوْلِ اللَّهِ، اَلسَّلَامُ عَلَيْكَ يَا سَيِّدَ الشُّهَدَاءِ\nاَلسَّلَامُ عَلَيْكَ يَا أَسَدَ اللهِ وَأَسَدَ رَسُوْلِهِ\nاَلسَّلَامُ عَلَيْكَ يَا عَبْدَ اللَّهِ بِنْ جَحْشٍ، اَلسَّلَامُ عَلَيْكَ يَا مُصْعَبَ بْنَ عُمَيْرِ\nاَلسَّلَامُ عَلَيْكُمْ يَا شُهَدَاءَ أَحُدٍ، اَلسَّلَامُ عَلَيْكُمْ بِمَا صَبَرْتُمْ فَنِعْمَ عُقْبَى الدَّارِ\nاَللّٰهُمَّ اجْزِهِمْ عَنِ الْإِسْلَامِ وَأَهْلِهِ أَفْضَلَ الْجَزَاءِ\nوَأَجْزِلْ ثَوَابَهُمْ وَأَكْرِمْ مَقَامَهُمْ وَارْفَعْ دَرَجَاتِهِمْ بِمَنِّكَ وَكَرَمِكَ\nيَا أَكْرَمَ الْأَكْرَمِيْنَ",
+      "translationEn": "Peace be upon you, O Saiyidina Hamzah, uncle of the Prophet s.a.w, Peace be upon you, O chief of the martyrs, Peace be upon you, the lion of Allah and the lion of the Messenger of Allah. Peace be upon you, O Saiyidina Abdullah bin Jahsyi, Peace be upon you, O Saiyidina Musab bin Omair, Peace be upon you, O those who died in the battle of Uhud, Peace be upon you, for your patience in facing the enemy to uphold the truth of Islam, which is the best reward you will receive from Allah. O Allah, O my Lord, multiply the reward of their deeds, which they have done for the sanctity of Islam and its adherents. Elevate their rank and rank with Your mercy, O Most Merciful God",
+      "translationMy": "Salam sejahtera atas engkau wahai Saiyidina Hamzah, bapa saudara Rasulullah s.a.w, Salam sejahtera atas engkau wahai penghulu bagi para syahid, Salam sejahtera atas engkau singa Allah dan singa Rasulullah. Salam sejahtera atas engkau wahai Saiyidina Abdullah bin Jahsyi, Salam sejahtera atas engkau wahai Saiyidina Musab bin Omair, Salam sejahtera atas kamu wahai orang-orang yang mati di dalam peperangan Uhud, Salam sejahtera atas kamu, atas kesabaran kamu menghadapi musuh untuk menegakkan kebenaran Islam, iaitu sebaik-baik balasan yang akan kamu terima dari Allah. Ya Allah Ya Tuhanku, gandakanlah pahala amalan mereka, yang telah mereka lakukan untuk kesucian agama Islam dan pemelukpemeluknya. Tinggikan pangkat dan darjat mereka dengan kemurahan Engkau wahai Tuhan Yang Amat Pemurah"
+    }],
+    "categoryKey": ["madinah"],
+    "audio": ""
+  },
+  {
+    "id": 81,
+    "titleEn": "Farewell Ziarah",
+    "titleMy": "Ziarah Wada'",
     "doa": [{
       "id": 1,
       "arabic": "",
-      "translationEn": "",
-      "translationMy": ""
+      "translationEn": "It is recommended to bid farewell (visit) to the Prophet Muhammad PBUH as a form of respect. For women who are unable, it is sufficient to visit outside the mosque at a place near the maqam.",
+      "translationMy": "Disunatkan berziarah wadak (selamat tinggal) kepada baginda Rasulullah SAW. sebagai menghormatinya, bagi wanita yang uzur, memadailah dengan ziarah di luar masjid di tempat yang berhampiran dengan maqam."
+    }],
+    "categoryKey": ["madinah"],
+    "audio": ""
+  },
+  {
+    "id": 82,
+    "titleEn": "Dua After Farewell Ziarah",
+    "titleMy": "Doa Setelah Ziarah Wada'",
+    "doa": [{
+      "id": 1,
+      "arabic": "اَللّٰهُمَّ لَا تَجْعَلْهُ آخِرَ الْعَهْدِ مِنْ هَذَا الْمَكَانِ الشَّرِيفِ\nوَارْزُقْنِيْ إِلَيْهِ الْعَوْدَةَ فِي خَيْرٍ وَعَافِيَةٍ وَصِحَّةٍ وَسَلَامَةٍ\nإِنْ عِشْتُ إِنْ شَاءَ اللهُ جِئْتُ، وَإِنْ مُتُّ أَوْدَعْتُ عِنْدَكَ شَهَادَتِيْ\nوَأَمَانَتِيْ وَعَهْدِيْ وَمِيْثَاقِيْ مِنْ يَوْمِنَا هَذَا إِلَى يَوْمِ الْقِيَامَةِ\nوَهِيَ شَهَادَةُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nوَشَهَادَةُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ\nسُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَ\nوَسَلَامٌ عَلَى الْمُرْسَلِينَ، وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "translationEn": "O Allah, do not let the visit of Your servant to this noble place be the last visit; grant Your servant the opportunity to return to this place in good health, safety, and well-being. If my life is prolonged, God willing, I will come again; if my time comes, then I have committed to You my testimony and covenant from this day until the Day of Judgment. I bear witness that there is no God but Allah, the One God who has no partner, and I bear witness that Muhammad is His servant and messenger. Glory be to the Lord who possesses Majesty and Power, above what they describe. Peace be upon all the Prophets, and all praises are due to Allah, the Lord who preserves and governs the entire universe.",
+      "translationMy": "Ya Allah, janganlah jadikan ziarah hambaMu di tempat yang mulia ini sebagai ziarah yang penghabisan, kurniakanlah kepada hambaMu peluang untuk menziarahi kembali ke tempat ini dalam keadaan baik, sihat dan selamat. Jika panjang umur hamba, insya Allah, hamba akan datang lagi, jika sampai ajal hamba, maka hamba telah mengabadikan kepadaMu syahadat dan perjanjian hamba dari hari ini sehingga hari kiamat. laitu hamba bersaksi tiada Tuhan melainkan Allah, Tuhan Yang Esa yang tidak ada sekutu bagiNya dan hamba naik saksi bahawa Nabi Muhammad hambaNya dan pesuruhNya. Maha suci Tuhan yang mempunyai Keagungan dan Kekuasaan, dari apa yang mereka sifatkan. Dan salam sejahtera ke atas sekelian Rasul, serta segala puji-pujian tertentu bagi Allah, Tuhan yang memelihara dan mentadbir seluruh alam."
     }],
     "categoryKey": ["madinah"],
     "audio": ""
