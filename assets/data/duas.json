@@ -27,8 +27,8 @@
       "translationEn": "I intend to pray two raka'at of sunnah Ihram for the sake of Allah Most High",
       "translationMy": "Sahaja aku solat sunat Ihram dua rakaat kerana Allah Taala"
     }],
-    "categoryKey": ["intention"],
-    "audio": ""
+    "categoryKey": ["intention", "niat"],
+    "audio": "niat_solat_sunat_ihram.mp3"
   },
   {
     "id": 3,
@@ -40,8 +40,8 @@
       "translationEn": "I intend to perform Umrah and perform ihram for it for the sake of Allah",
       "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah"
     }],
-    "categoryKey": ["intention", "umrah"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "umrah"],
+    "audio": "niat_ihram_umrah.mp3"
   },
   {
     "id": 4,
@@ -53,8 +53,8 @@
       "translationEn": "I intend to perform Umrah on behalf of ______ and perform ihram for it for the sake of Allah Most High",
       "translationMy": "Sahaja aku menunaikan Umrah bagi ______ dan aku berihram dengannya kerana Allah Ta'ala"
     }],
-    "categoryKey": ["intention", "umrah"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "umrah"],
+    "audio": "niat_umrah_badal.mp3"
   },
   {
     "id": 5,
@@ -66,8 +66,8 @@
       "translationEn": "I have intended to perform Umrah and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
       "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah Ta'ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
-    "categoryKey": ["intention", "umrah"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "umrah"],
+    "audio": "niat_umrah_bersyarat.mp3"
   },
   {
     "id": 6,
@@ -79,8 +79,8 @@
       "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High",
       "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta'ala"
     }],
-    "categoryKey": ["intention", "haji"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "haji"],
+    "audio": "niat_ihram_haji.mp3"
   },
   {
     "id": 7,
@@ -92,8 +92,8 @@
       "translationEn": "I have intended to perform Haj on behalf of ______ and performed ihram for it for the sake of Allah Most High",
       "translationMy": "Sahaja aku menunaikan Haji bagi ______ dan aku berihram dengannya kerana Allah Ta'ala"
     }],
-    "categoryKey": ["intention", "haji"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "haji"],
+    "audio": "niat_haji_badal.mp3"
   },
   {
     "id": 8,
@@ -105,8 +105,8 @@
       "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
       "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta'ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
-    "categoryKey": ["intention", "haji"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "haji"],
+    "audio": "niat_haji_bersyarat.mp3"
   },
   {
     "id": 9,
@@ -119,7 +119,7 @@
       "translationMy": "Ya Allah, ampunilah dosaku dan bukakanlah bagiku pintu-pintu rahmatMu, dan masukkanlah aku dalam rahmatMu, dan permudahkanlah bagiku pintu rezekiMu. Ya Allah, sesungguhnya tempat ini adalah tempat suciMu, dan tempat keamanan yang Engkau sediakan. Maka haramkanlah dagingku, kulitku dan tulangku dari api neraka. Ya Allah, Engkaulah keselamatan, daripadaMulah keselamatan dan masukkanlah kami di dalam syurga tempat keselamatan, Maha banyak keberkatanMu, Ya Tuhan yang mempunyai Kebesaran dan Kemuliaan. Ya Allah, aku bermohon kepadaMu agar Engkau mengampuni dosaku dan menghapuskan kesalahanku dan meletakkan beban yang memberatiku dengan rahmatMu. Ya Tuhan yang Maha Penyayang."
     }],
     "categoryKey": ["masjidil haram"],
-    "audio": ""
+    "audio": "doa_memasuki_masjidil_haram.mp3"
   },
   {
     "id": 10,
@@ -131,7 +131,7 @@
       "translationEn": "I intend to iktikaf in this blessed mosque because of AIIah Taala.",
       "translationMy": "Sahaja aku beri'tikaf di masjid ini kerana AIIah Taala."
     }],
-    "categoryKey": ["intention", "masjidil haram", "madinah"],
+    "categoryKey": ["intention", "niat", "masjidil haram", "madinah"],
     "audio": ""
   },
   {
@@ -145,7 +145,7 @@
       "translationMy": "Ya Allah, tambahkanlah kemuliaan rumah ini, kebesaran dan kehebatannya. Dan tambahkanlah kemuliaan, kebesaran dan kebaikan kepada orang yang mengunjunginya kerana membuat haji dan umrah."
     }],
     "categoryKey": ["masjidil haram"],
-    "audio": ""
+    "audio": "doa_ketika_melihat_kaabah.mp3"
   },
   {
     "id": 12,
@@ -158,7 +158,7 @@
       "translationMy": "Ya Allah, sesungguhnya aku hendak mengerjakan tawaf mengelilingi rumahMu yang suci, maka berikanlah aku kemudahan dan terimalah ia daripadaku."
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_sebelum_memulakan_tawaf.mp3"
   },
   {
     "id": 13,
@@ -170,8 +170,8 @@
       "translationEn": "I intended to perform arrival tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf qudum tujuh pusingan kerana Allah Taala."
     }],
-    "categoryKey": ["intention", "tawaf"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "tawaf"],
+    "audio": "niat_tawaf_qudum.mp3"
   },
   {
     "id": 14,
@@ -183,8 +183,8 @@
       "translationEn": "I intended to perform haj tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf haji tujuh pusingan kerana Allah Taala"
     }],
-    "categoryKey": ["intention", "tawaf"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "tawaf"],
+    "audio": "niat_tawaf_haji.mp3"
   },
   {
     "id": 15,
@@ -196,8 +196,8 @@
       "translationEn": "I intended to perform umrah tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf umrah tujuh pusingan kerana Allah Taala"
     }],
-    "categoryKey": ["intention", "tawaf"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "tawaf"],
+    "audio": "niat_tawaf_umrah.mp3"
   },
   {
     "id": 16,
@@ -209,8 +209,8 @@
       "translationEn": "I intended to perform sunnah tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf sunnah tujuh pusingan kerana Allah Taala"
     }],
-    "categoryKey": ["intention", "tawaf"],
-    "audio": ""
+    "categoryKey": ["intention", "niat", "tawaf"],
+    "audio": "niat_tawaf_sunnah.mp3"
   },
   {
     "id": 17,
@@ -223,7 +223,7 @@
       "translationMy": "Sahaja aku berniat mengerjakan tawaf wada' tujuh pusingan kerana Allah Taala"
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "niat_tawaf_wada.mp3"
   },
   {
     "id": 18,
@@ -236,7 +236,7 @@
       "translationMy": "Maha Suci Allah dan segala puji bagiNya. Tiada Tuhan kecuali Allah. Allah Maha Besar, dan tidak ada suatu kekuatan, kecuali dengan izin Allah Yang Maha Tinggi dan Maha Agung. Selawat dan salam bagi Rasulullah s.a.w. Ya Allah, kerana iman kepadaMu, dan kerana meyakini kitabMu, serta setia kepada janjiMu, dan mengikuti sunnah NabiMu, dan kekasihMu Muhammad s.a.w. Ya Allah sesungguhnya aku mohon keampunan, kesihatan dan kesejahteraan terus menerus di dalam beragama, di dunia dan di akhirat, memperoleh kemenangan dan syurga serta terhindar dari neraka."
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_tawaf_pusingan_pertama.mp3"
   },
   {
     "id": 19,
@@ -249,7 +249,7 @@
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta."
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
   {
     "id": 20,
@@ -262,7 +262,7 @@
       "translationMy": "Ya Allah, sesungguhnya rumah ini adalah rumahMu, dan tanah haram ini adalah tanah haramMu, negeri aman ini adalah negeriMu, hamba ini adalah hambaMu, dan anak dari hambaMu, dan tempat ini adalah tempat orang berlindung padaMu dari seksa neraka, maka jauhkanlah daging dan kulit kami dari api neraka. Ya Allah, jadikanlah hati kami pencinta keimanan, hiasilah hati kami dengannya (iman), dan jadikanlah kami benci dengan kekafiran, kefasikan dan kemaksiatan, serta jadikanlah kami di antara orang yang mendapat petunjuk. Ya Allah, lindungilah kami dari azabMu pada hari Engkau membangkitkan hamba-hambaMu. Ya Allah, anugerahilah aku syurga tanpa perhitungan”"
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_tawaf_pusingan_kedua.mp3"
   },
   {
     "id": 21,
@@ -275,7 +275,7 @@
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
   {
     "id": 22,
@@ -288,7 +288,7 @@
       "translationMy": "Ya Allah, sesungguhnya aku berlindung kepadaMu dari kebimbangan, kesyirikan, perpecahan, kemunafikan, keburukan akhlak, keburukan pandangan, dan kesalahan urusan dalam harta, keluarga dan anak-anak. Ya Allah, aku mohon redaMu dan syurga serta mohon perlindungan terhadap kemarahanMu dan neraka. Ya Allah, aku mohon dilindungi dari fitnah kubur dan mohon dilindungi dari berbagai godaan kehidupan dan kematian."
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_tawaf_pusingan_ketiga.mp3"
   },
   {
     "id": 23,
@@ -301,7 +301,7 @@
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
   {
     "id": 24,
@@ -314,7 +314,7 @@
       "translationMy": "Ya Allah, jadikanlah hajiku haji yang mabrur, sai yang diterima, dosa yang terampun, amal soleh yang diterima, serta dagangan yang tidak merugikan. Wahai Tuhan Yang Maha Mengetahui apa-apa tersimpan di dalam dada. Ya Allah, keluarkanlah aku dari kegelapan kepada cahaya terang. Ya Allah, aku mohon maaf padaMu segala hal yang mendatangkan rahmatMu, semua yang membawa kepada keampunan, terjauh dari segala dosa, memperoleh segala kebaikan, dan berjaya memasuki syurga serta terlepas dari neraka. Ya Tuhanku tenteramkan hatiku dengan rezeki yang Engkau beri dan berkatilah segala yang Engkau telah kurniakan kepadaku, dan gantilah segala yang terluput dariku dengan kebaikan dari sisiMu"
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_tawaf_pusingan_keempat.mp3"
   },
   {
     "id": 25,
@@ -327,7 +327,7 @@
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
   {
     "id": 26,
@@ -340,7 +340,7 @@
       "translationMy": "Ya Allah, lindungilah aku di bawah naunganMu pada hari yang tiada naungan, kecuali naunganMu, dan tiada yang tinggal kecuali wajahMu, Berilah aku minum dari telaga Nabi Muhammad s.a.w., minuman yang lazat yang menyegarkan, yang sesudahnya aku tidak akan pernah haus Iagi. Ya Allah, aku mohon kepadaMu dari apa yang terbaik yang pernah diminta oleh NabiMu, Muhammad s.a.w.  Dan aku berlindung kepadaMu dari kejahatan sebagaimana perlindungan yang di mohon oleh Nabi Muhammad s.a.w. Ya Allah, aku mohon kepadaMu syurga dengan segala kenikmatannya dan segala yang mendekatkan aku kepadanya, baik perkataan, perbuatan ataupun tindakan. Dan aku mohon perlindungan kepadaMu dari neraka dan segala yang mendekatkan aku kepadanya, baik perkataan, perbuatan dan tindakan."
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_tawaf_pusingan_kelima.mp3"
   },
   {
     "id": 27,
@@ -353,7 +353,7 @@
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
   {
     "id": 28,
@@ -366,7 +366,7 @@
       "translationMy": "Ya Allah, hakMu sungguh banyak padaku, begitu juga yang berkaitan antara aku dan makhlukMu. Segala hakMu terhadapku, ampunilah aku tentang itu, dan mana yang termasuk hak hambaMu padaku, maka bebaskanlah aku daripadanya. Cukupkan aku dengan rezeki yang halal yang Engkau berikan, terbebas dari yang haram. Kurniakanlah aku ketaatan padaMu dan jauhkanlah aku dari kederhakaan terhadapMu. Cukupkan bagiku kurniaanMu, sehingga aku tidak memerlukan selain itu, wahai Tuhan Yang Maha Luas keampunanMu. Ya Allah, sesungguhnya rumahMu Agung, wajahMu Mulia, dan Engkau Ya Allah Maha Penyayang, Pemurah dan Maha Bijaksana. Engkau menyukai keampunan, ampunilah aku."
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_tawaf_pusingan_keenam.mp3"
   },
   {
     "id": 29,
@@ -379,7 +379,7 @@
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
   {
     "id": 30,
@@ -392,7 +392,7 @@
       "translationMy": "Ya Allah ya Tuhanku, sesungguhnya aku memohon dikurniakan iman yang sempurna, keyakinan yang sebenar-benarnya, rezeki yang Iuas, hati yang khusyuk, Iidah yang sentiasa berziki, dan perkara halal yang baik, taubat yang sebenar sebelum mati keampunan dan rahmat sesudah mati kemaafan ketika dihisabkan amalan, kejayaan dengan mendapat syurga dan keselamatan daripada neraka, dengan belas kasihan Engkau ya Tuhan yang Maha Kuasa Iagi Maha Pengampun, ya Tuhan, tambahkan ilmu pengetahuan kepadaku dan masukkan daku ke dalam golongan orang-orang yang soleh."
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_tawaf_pusingan_ketujuh.mp3"
   },
   {
     "id": 31,
@@ -405,11 +405,11 @@
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
   {
     "id": 32,
-    "titleEn": "Sunnah Prayer Intention  After Tawaf",
+    "titleEn": "Sunnah Prayer Intention After Tawaf",
     "titleMy": "Niat Solat Sunnah Tawaf",
     "doa": [{
       "id": 1,
@@ -417,8 +417,8 @@
       "translationEn": "I intended to pray two raka'at of sunnah Tawaf for the sake of Allah Most High",
       "translationMy": "Sahaja aku solat Tawaf dua rakaat kerana Allah Taala"
     }],
-    "categoryKey": ["tawaf", "intention"],
-    "audio": ""
+    "categoryKey": ["tawaf", "intention", "niat"],
+    "audio": "niat_solat_sunnat_tawaf.mp3"
   },
   {
     "id": 33,
@@ -431,7 +431,7 @@
       "translationMy": "Ya Allah, sesungguhnya ini negeriMu yang suci, masjidMu yang suci rumahMu yang suci, aku adalah hambaMu dan anak kepada hambaMu, telah datang dengan dosa dan banyak kesalahan dan amalan-amalan yang buruk dan inilah tempatnya bagi hamba yang berlindung denganMu dari api neraka.\n\nYa Allah, selamatkanlah kami, ampunilah kami kasihaniIah kami, sesungguhnya Engkau Maha Pengampun Iagi Maha Penyayang. Ya Allah, bahawasanya Engkau telah memanggil hambahambaMu ke rumah suciMu dan sesungguhnya aku telah datang memohon keredaanMu, dan Engkau telah memberi kurnia kepadaku. Maka ampunilah aku, kasihanilah aku, afiatkan aku dan maafkan aku, sesungguhnya Engkau berkuasa atas segala sesuatu.\n\nYa Allah, berikanlah aku kemudahan dan jauhkan aku dari kepayahan, ampunilah aku di akhirat dan di dunia.\n\nYa Allah, peliharalah aku dengan sifat kelembutanMu, dan jadikanlah aku dari golongan mereka yang cintakanMu, cintakan malaikat-malaikatMu, Rasul-RasulMu, Nabi-NabiMu, hamba-hambaMu yang soleh dan Wali-WaliMu orang yang bertakwa.\n\nYa  Allah, sebagaimana  Engkau telah tunjuki aku kepada Islam, maka tetapkanlah aku di dalamnya, arahkanlah aku kepada ketaatanMu, ketaatan rasulMu, mengetahui perkara yang tersembunyi dan terang dariku, maka terimalah keuzuranku. Engkaulah yang mengetahui hajatku maka berilah keinginanku, dan Engkau mengetahui apa yang di dalam diriku, maka ampunilah dosaku.\n\nYa Allah, aku bermohon mendapat keimanan yang sentiasa hidup dalam hatiku dan keyakinan yang benar hingga aku yakin tidak ada sesuatu yang menimpaku melainkan apa yang telah Engkau tuliskan buatku, maka redakanlah aku dengan apa yang Engkau bahagikan untukku ya Tuhan yang mempunyai Kebesaran dan Kemuliaan.\n\nYa Allah, selawatMu atas kekasihMu Muhammad dan atas sekelian Nabi dan Rasul dan keluarga setiap orang dari mereka dan sesiapa yang mengikutnya hingga ke hari kemudian. Ya Allah, yang Maha Pengasih Iagi Maha Penyayang."
     }],
     "categoryKey": ["tawaf"],
-    "audio": ""
+    "audio": "doa_setelah_solat_sunat_tawaf.mp3"
   },
   {
     "id": 34,
@@ -457,7 +457,7 @@
       "translationMy": "Ya Allah, sesungguhnya aku bermohon kepada Engkau ilmu yang bermanfaat, dan rezeki yang Iuas (banyak), dan sembuh dari segala penyakit."
     }],
     "categoryKey": ["zam-zam"],
-    "audio": ""
+    "audio": "doa_ketika_minum_air_zamzam.mp3"
   },
   {
     "id": 36,
@@ -470,7 +470,7 @@
       "translationMy": "Sahaja aku berniat sai antara Safa dan Marwah, Sai Haji tujuh perjalanan kerana Allah Taala."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "niat_sai_haji.mp3"
   },
   {
     "id": 37,
@@ -482,8 +482,8 @@
       "translationEn": "I intend to perform sa'i between Safa and Marwah, the sa'i of Umrahj in seven rounds for Allah the Almighty.",
       "translationMy": "Sahaja aku berniat sa'i antara Safa dan Marwah, sa'i Umrah tujuh perjalanan kerana Allah Taala."
     }],
-    "categoryKey": ["tawaf", "intention"],
-    "audio": ""
+    "categoryKey": ["tawaf", "intention", "niat"],
+    "audio": "niat_sai_umrah.mp3"
   },
   {
     "id": 38,
@@ -496,7 +496,7 @@
       "translationMy": "Dengan nama Allah yang Maha Pengasih, Maha Penyayang. Aku mulai dengan apa yang telah dimulai Allah dan Rasulnya. Sesungguhnya Safa dan Marwah adalah sebahagian dari tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji atau umrah ke Baitullah, maka tiada salahnya berjalan (sai) di antara keduanya (Safa dan Marwah). Dan barangsiapa yang berbuat baik dengan sukarela, maka sesungguhnya Allah menerimanya dan Dia Maha Mengetahui,\n\nAllah yang Maha Besar tiada Tuhan melainkan Allah. Segala puji pada Allah kerana memberi hidayat kepada kami. Segala puji bagi Allah yang Maha Esa tiada sekutu bagiNya. Kekuasaan juga bagiNya dan segala puji bagiNya. Dia yang menghidupkan dan yang mematikan. Segala kebaikan dalam genggamannya. Dan Dia amat berkuasa atas segala sesuatu. Tiada Tuhan melainkan Dia yang Maha Esa. Dia telah menunaikan janjiNya. Dia telah menolong hambaNya dan Dia telah memusnahkan kumpulan-kumpulan jahat itu dengan sendiriNya. Tiada Tuhan melainkan Allah. TidakIah kami menyembah akan sesuatu apa pun juga melainkan hanya akan Dia saja. Kami semua ikhlaskan agama untukNya walaupun orang-orang yang kafir itu tidak menyukainya"
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_memulakan_sai.mp3"
   },
   {
     "id": 39,
@@ -509,7 +509,7 @@
       "translationMy": "Allah Maha Besar Allah Maha Besar Allah Maha Besar Allah Maha Besar dengan segala kebesarannya. Segala puji bagi Allah. Maha Suci Allah, yang Maha Agung, dengan puji-pujian yang mulia setiap pagi, petang dan malam. Tiada Tuhan kecuali Allah semata. Dia memenuhi janjiNya, menolong hambaNya serta menghancurkan sendiri musuh-musuhNya. Tiada sesuatu, baik yang mendahuluiNya, mahupun sesudahNya menghidupkan dan mematikan. Dia yang selalu hidup, tidak mati dan Iuput selama-lamanya. Di tanganNya segala kebajikan dan kepadaNyalah tempat kembali dan Dialah yang Maha Kuasa atas segalanya."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_sai_pertama.mp3"
   },
   {
     "id": 40,
@@ -522,7 +522,7 @@
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_antara_tiang_hijau.mp3"
   },
   {
     "id": 41,
@@ -535,7 +535,7 @@
       "translationMy": "Ya Tuhan kami selamatkanlah kami dari api neraka, dan gembirakanlah kami masuk ke syurga bersama-sama hambaMu yang telah Engkau kurniakan nikmat daripada para Nabi, para sidiqqin, para syuhada dan solehin.Dan mereka itulah sebaik-baik teman. ltu semua Iimpah karunia dari Allah s.w.t. Sesungguhnya Allah Maha Mengetahui. Tiada Tuhan melainkan Allah dengan sebenar. Tiada Tuhan melainkan Allah, aku menyebutnya tanda pengabdian. Tiada Tuhan melainkan Dia. Kami ikhlaskan agama keranaNya walaupun orang-orang yang kafir itu benci."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_setelah_melintas_tiang_hijau.mp3"
   },
   {
     "id": 42,
@@ -548,7 +548,7 @@
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
   {
     "id": 43,
@@ -561,7 +561,7 @@
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Hanya bagi Allah segala puji. Tiada Tuhan kecuali Allah yang Maha Esa, tempat bergantung segala sesuatu. Yang tiada beristeri dan tiada beranak. Tiada sekutu bagiNya dalam kekuasaan. Tiada bagiNya wakil dari yang hina, dan agunglah Dia dengan segenap kebesaran. Ya Allah, Engkau berfirman dalam Kitab Suci yang Engkau turunkan: “Mohonlah kepadaKu, Aku perkenankan bagimu” Ya Tuhan, kami mohon kepadaMu, sebagaimana Kau perintahkan. Engkau tidak memungkiri janji. Ya Tuhan kami, sesungguhnya kami telah mendengar orang yang menyeru supaya beriman: “Berimanlah kamu dengan Tuhanmu.” Maka kami beriman. Ampunilah dosa-dosa kami dan hapuskanlah kejahatan dari diri kami dan wafatkanlah kami bersama orang-orang yang baik. Ya Tuhan kami, anugerahilah kami dengan apa yang telah Engkau janjikan melalui rasul-rasulMu. Dan janganlah Engkau kecewakan kami pada hari kiamat. Sesungguhnya Engkau tidak mungkir janji. Ya Tuhan kami kepadaMu kami menyerah dan kepadaMu kami kembali dan Engkaulah tumpuan harapan kami. Ya Tuhan kami, ampunilah kami serta saudara-saudara kami yang telah mendahului kami dalam beriman, dan janganlah Engkau jadikan dalam hati kami rasa dengki kepada orang-orang yang beriman. Ya Tuhan kami, Engkau Maha Pengasih dan Maha Penyayang."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_sai_kedua.mp3"
   },
   {
     "id": 44,
@@ -574,7 +574,7 @@
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_antara_tiang_hijau.mp3"
   },
   {
     "id": 45,
@@ -587,7 +587,7 @@
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
   {
     "id": 46,
@@ -600,7 +600,7 @@
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Bagi Allah segala puji. Ya Allah, sempurnakanlah cahaya terang bagi kami dan ampunilah kami. Engkau Maha Kuasa atas segala sesuatu. Ya Allah, Sesungguhnya aku mohon kepadaMu kebaikan seluruhnya, yang cepat dan yang lambat. Dan aku mohon kepadaMu ampun atas dosaku, juga aku mohon kepadaMu rahmatMu, wahai Tuhan Yang Maha Pengasih dan Penyayang."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_sai_ketiga.mp3"
   },
   {
     "id": 47,
@@ -613,7 +613,7 @@
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_sai_keempat.mp3"
   },
   {
     "id": 48,
@@ -626,7 +626,7 @@
       "translationMy": "Ya Tuhan, tambahkan aku ilmu, jangan palingkan hatiku setelah Engkau beri hidayah kepadaku, berilah aku rahmat dariMu, sesungguhnya Engkau Maha Pemberi. Ya Allah, baikilah keadaan aku dengan pendengaran dan penglihatan aku, tiada Tuhan melainkan Engkau. Ya Allah, aku berlindung denganMu dari seksa kubur, tiada Tuhan melainkan Engkau. Maha Suci Engkau, sesungguhnya aku dari golongan zalim. Ya Allah, sesungguhnya aku berlindung dari kekufuran dan kepapaan, Ya Allah, aku berlindung dengan keredaanMu dari kemurkaanMu, dan dengan kemaafanMu dari azabMu. Aku tidak dapat memuji kepadaMu, seperti pujiMu sendiri kepada diriMu, segala puji bagiMu hingga Engkau redhai."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_setelah_melintas_tiang_hijau.mp3"
   },
   {
     "id": 49,
@@ -639,7 +639,7 @@
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
   {
     "id": 50,
@@ -652,7 +652,7 @@
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Dan bagi Allah segala puji. Ya Allah, sesungguhnya aku pohon kepadaMu sebaik-baik perkara yang Engkau mengetahuinya, serta mohon perlindunganMu dari seburuk-buruk perkara yang Engkau mengetahuinya dan aku mohon ampun atas segala yang Engkau tahu, sesungguhnya Engkau Maha Mengetahui yang ghaib. Tiada Tuhan kecuali Allah yang memiliki kebenaran yang nyata. Muhammad Rasulullah yang benar janjinya Iagi dipercayai. Ya Allah, aku mohon kepadaMu, sebagaimana Engkau telah memberi petunjuk kepadaku, sehingga aku meninggal dalam Islam. Ya Allah, berilah cahaya dalam hatiku, telingaku dan penglihatanku. Ya Allah, lapangkanlah dadaku, dan mudahkanlah urusanku, dan aku berlindung kepadaMu daripada was-was dan kucar-kacir urusan dan aku berlindung daripada azab kubur. Ya Allah, aku berlindung kepadaMu dari kejahatan yang timbul pada malam dan siang hari, dan kejahatan yang dibawa oleh angin. Wahai Tuhan yang Maha Pengasih Iagi Maha Penyayang. Ya Allah kami tidak dapat menyembahMu sebagaimana yang sepatutnya dan kami tidak dapat mengingatiMu sebagaimana yang sewajarnya."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_sai_keempat.mp3"
   },
   {
     "id": 51,
@@ -665,7 +665,7 @@
       "translationMy": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_antara_tiang_hijau.mp3"
   },
   {
     "id": 52,
@@ -678,7 +678,7 @@
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
   {
     "id": 53,
@@ -691,7 +691,7 @@
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Allah Maha Besar dengan segala KebesaranNya, segala puji bagi Allah. Ya Allah cintakanlah aku kepada keimanan dan hiaskanlah ia di hati ku. Bencikanlah aku kepada kekafiran, kefasikan dan kedurhakaan. Jadikanlah aku di antara orang-orang yang mendapat petunjuk."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_sai_kelima.mp3"
   },
   {
     "id": 54,
@@ -704,7 +704,7 @@
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_antara_tiang_hijau.mp3"
   },
   {
     "id": 55,
@@ -717,7 +717,7 @@
       "translationMy": "Ya Allah, selamatkanlah aku dari azabMu, dihari Engkau membangkitkan hamba-hambaMu. Ya Allah, pimpinlah aku dengan hidayat, dan sucikanlah aku dengan takwa, dan ampunilah aku di dunia dan di akhirat. Ya Allah, Iimpahkanlah atas aku berkatMu, rahmatMu, kurniaMu dan rezekiMu.Ya Allah, aku bermohon nikmat yang berkekalan, tidak berpindah dan tidak hilang. Ya Allah, jadikanlah cahaya di dalam hatiku, pendengaranku, penglihatanku, lidahku, di kanan dan di kiriku, di atasku dan di dalam jiwaku. Lapangkanlah dadaku dan mudahkanlah urusanku"
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_setelah_melintas_tiang_hijau"
   },
   {
     "id": 56,
@@ -730,7 +730,7 @@
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
   {
     "id": 57,
@@ -743,7 +743,7 @@
       "translationMy": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. And all praise is for Allah. There is no God except Allah the One. His promise is true, He helps His servant, He destroys His enemies. There is no God besides Allah, and we do not worship anyone but Him sincerely. He is the owner of this religion even though the disbelievers do not feel comfortable. O Allah, I ask for guidance, piety, purity of heart, and wealth.O Allah, I seek Your pleasure and paradise, and I seek protection from Your wrath and hell, and everything that brings me closer to it, whether in words, deeds, or actions. O Allah, with Your light we receive guidance. We are rich with Your blessings along with help, grace, bounties, and favors both morning and evening. You are the First, nothing existed before You, and You are the Last, nothing exists after You. You are also the Outwardly Manifest, so there is nothing greater than You, You are the one whose essence is unmatched. We seek Your protection from poverty, laziness, and the torment of the grave, as well as the trials of wealth. We ask You for the victory to attain paradise."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_sai_keenam.mp3"
   },
   {
     "id": 58,
@@ -756,7 +756,7 @@
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_antara_tiang_hijau.mp3"
   },
   {
     "id": 59,
@@ -769,7 +769,7 @@
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
   {
     "id": 60,
@@ -782,7 +782,7 @@
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Segala puji bagi Allah. Maha Suci Engkau Ya Allah, sesungguhnya kami tidak dapat bersyukur kepada Engkau sebagaimana yang sepatutnya, Ya Allah. Maha Suci Engkau Ya Allah, tidak ada tolok banding sama sekali kemuliaanMu Ya Allah. Ya Allah, cintakanlah kami kepada keimanan dan hiaskanlah ia ke dalam hati kami. Bencikanlah kami kepada kekafiran, kefasikan dan kederhakaan dan jadikanlah kami di antara orang-orang yang mendapat petunjuk."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_sai_ketujuh.mp3"
   },
   {
     "id": 61,
@@ -795,7 +795,7 @@
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_antara_tiang_hijau.mp3"
   },
   {
     "id": 62,
@@ -808,7 +808,7 @@
       "translationMy": "Ya Allah, selamatkanlah aku dari azabMu, dihari Engkau membangkitkan hamba-hambaMu. Ya Allah, pimpinlah aku dengan hidayat, dan sucikanlah aku dengan takwa, dan ampunilah aku di dunia dan di akhirat. Ya Allah, Iimpahkanlah atas aku berkatMu, rahmatMu, kurniaMu dan rezekiMu.Ya Allah, aku bermohon nikmat yang berkekalan, tidak berpindah dan tidak hilang. Ya Allah, jadikanlah cahaya di dalam hatiku, pendengaranku, penglihatanku, lidahku, di kanan dan di kiriku, di atasku dan di dalam jiwaku. Lapangkanlah dadaku dan mudahkanlah urusanku"
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_setelah_melintas_tiang_hijau"
   },
   {
     "id": 63,
@@ -821,7 +821,7 @@
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
   {
     "id": 64,
@@ -834,7 +834,7 @@
       "translationMy": "Ya Tuhan, kami memohon diterima doa kami. Afiatkanlah dan ampunilah kami. Berilah pertolongan kepada kami untuk taat dan bersyukur kepada Engkau. Janganlah membiarkan kami bergantung kepada yang lain, selain dari Engkau. Matikanlah kami di dalam iman dan islam yang sempurna, sedang Engkau reda kepada kami. Ya Allah, Ya Tuhan, peliharalah diriku dengan meninggalkan segala kejahatan selama hidupku, dan peliharalah aku supaya tidak membuat perkara yang tidak memberi guna, dan kurniakanlah kepadaku elok pandangan pada perkara-perkara yang membawa keredaan Engkau wahai Tuhan yang bersifat Amat Belas Kasihan."
     }],
     "categoryKey": ["sa'i"],
-    "audio": ""
+    "audio": "doa_selesai_sai.mp3"
   },
   {
     "id": 65,
@@ -847,7 +847,7 @@
       "translationMy": "Allah Maha Besar, Allah Maha besar, Allah Maha Besar. Ya Allah, ubun-ubun kepalaku ini di dalam kekuasaanMu, maka jadikanlah setiap helai rambut suatu cahaya di hari kiamat. Dan ampunkanlah dosaku Ya Tuhan Yang Maha Luas PengampunanNya."
     }],
     "categoryKey": ["tahalul"],
-    "audio": ""
+    "audio": "doa_ketika_bercukur.mp3"
   },
   {
     "id": 66,
@@ -860,6 +860,6 @@
       "translationMy": "Segala puji bagi Allah, yang telah menolongku menunaikan ibadatku ini (haji atau umrah). Ya Allah berilah aku satu kebaikan dengan setiap helai rambut ini, dan padamkanlah dengannya satu kejahatan. Dan angkatkan aku dengannya satu darjat. Ampunkanlah aku dan sekelian yang bercukur dan yang bergunting dan sekelian muslimin. Ya Allah, tambahkanlah kami dengan keimanan, keyakinan, taufik dan pertolongan. Dan ampunilah kami serta ibu bapa kami."
     }],
     "categoryKey": ["tahalul"],
-    "audio": ""
+    "audio": "doa_setelah_bercukur.mp3"
   }
 ]

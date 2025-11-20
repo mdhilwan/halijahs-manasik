@@ -13,7 +13,49 @@ function formatTime(seconds: number) {
 }
 
 const audioMap: Record<string, any> = {
-  "talbiyah.mp3": require("@/assets/audio/talbiyah.mp3"),
+  "talbiyah.mp3": require("@/assets/audio/talbiyah.mp3"), // doa pendek
+  "niat_solat_sunat_ihram.mp3": require("@/assets/audio/niat_solat_sunat_ihram.mp3"),
+  "niat_ihram_umrah.mp3": require("@/assets/audio/niat_ihram_umrah.mp3"),
+  "niat_umrah_badal.mp3": require("@/assets/audio/niat_umrah_badal.mp3"),
+  "niat_umrah_bersyarat.mp3": require("@/assets/audio/niat_umrah_bersyarat.mp3"),
+  "niat_ihram_haji.mp3": require("@/assets/audio/niat_ihram_haji.mp3"),
+  "niat_haji_badal.mp3": require("@/assets/audio/niat_haji_badal.mp3"),
+  "niat_haji_bersyarat.mp3": require("@/assets/audio/niat_haji_bersyarat.mp3"),
+  "doa_memasuki_masjidil_haram.mp3": require("@/assets/audio/doa_memasuki_masjidil_haram.mp3"),
+  "doa_ketika_melihat_kaabah.mp3": require("@/assets/audio/doa_ketika_melihat_kaabah.mp3"),
+  "doa_sebelum_memulakan_tawaf.mp3": require("@/assets/audio/doa_sebelum_memulakan_tawaf.mp3"),
+  "niat_tawaf_qudum.mp3": require("@/assets/audio/niat_tawaf_qudum.mp3"),
+  "niat_tawaf_haji.mp3": require("@/assets/audio/niat_tawaf_haji.mp3"),
+  "niat_tawaf_umrah.mp3": require("@/assets/audio/niat_tawaf_umrah.mp3"),
+  "niat_tawaf_sunnah.mp3": require("@/assets/audio/niat_tawaf_sunnah.mp3"),
+  "niat_tawaf_wada.mp3": require("@/assets/audio/niat_tawaf_wada.mp3"),
+  "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3": require("@/assets/audio/doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"),
+  "doa_tawaf_pusingan_pertama.mp3": require("@/assets/audio/doa_tawaf_pusingan_pertama.mp3"),
+  "doa_tawaf_pusingan_kedua.mp3": require("@/assets/audio/doa_tawaf_pusingan_kedua.mp3"),
+  "doa_tawaf_pusingan_ketiga.mp3": require("@/assets/audio/doa_tawaf_pusingan_ketiga.mp3"),
+  "doa_tawaf_pusingan_keempat.mp3": require("@/assets/audio/doa_tawaf_pusingan_keempat.mp3"),
+  "doa_tawaf_pusingan_kelima.mp3": require("@/assets/audio/doa_tawaf_pusingan_kelima.mp3"),
+  "doa_tawaf_pusingan_keenam.mp3": require("@/assets/audio/doa_tawaf_pusingan_keenam.mp3"),
+  "doa_tawaf_pusingan_ketujuh.mp3": require("@/assets/audio/doa_tawaf_pusingan_ketujuh.mp3"),
+  "niat_solat_sunnat_tawaf.mp3": require("@/assets/audio/niat_solat_sunnat_tawaf.mp3"),
+  "doa_setelah_solat_sunat_tawaf.mp3": require("@/assets/audio/doa_setelah_solat_sunat_tawaf.mp3"),
+  "doa_ketika_minum_air_zamzam.mp3": require("@/assets/audio/doa_ketika_minum_air_zamzam.mp3"),
+  "niat_sai_haji.mp3": require("@/assets/audio/niat_sai_haji.mp3"),
+  "niat_sai_umrah.mp3": require("@/assets/audio/niat_sai_umrah.mp3"),
+  "doa_memulakan_sai.mp3": require("@/assets/audio/doa_memulakan_sai.mp3"),
+  "doa_antara_tiang_hijau.mp3": require("@/assets/audio/doa_antara_tiang_hijau.mp3"),
+  "doa_setelah_melintas_tiang_hijau.mp3": require("@/assets/audio/doa_setelah_melintas_tiang_hijau.mp3"),
+  "doa_naik_bukit_safa_marwah.mp3": require("@/assets/audio/doa_naik_bukit_safa_marwah.mp3"),
+  "doa_sai_pertama.mp3": require("@/assets/audio/doa_sai_pertama.mp3"),
+  "doa_sai_kedua.mp3": require("@/assets/audio/doa_sai_kedua.mp3"),
+  "doa_sai_ketiga.mp3": require("@/assets/audio/doa_sai_ketiga.mp3"),
+  "doa_sai_keempat.mp3": require("@/assets/audio/doa_sai_keempat.mp3"),
+  "doa_sai_kelima.mp3": require("@/assets/audio/doa_sai_kelima.mp3"),
+  "doa_sai_keenam.mp3": require("@/assets/audio/doa_sai_keenam.mp3"),
+  "doa_sai_ketujuh.mp3": require("@/assets/audio/doa_sai_ketujuh.mp3"),
+  "doa_selesai_sai.mp3": require("@/assets/audio/doa_selesai_sai.mp3"),
+  "doa_ketika_bercukur.mp3": require("@/assets/audio/doa_ketika_bercukur.mp3"),
+  "doa_setelah_bercukur.mp3": require("@/assets/audio/doa_setelah_bercukur.mp3"),
 };
 
 export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType) => {
@@ -37,7 +79,6 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
   const prevAvailable = hasPrev();
 
   useEffect(() => {
-    // Cleanup on unmount
     return () => {
       if (sound) {
         sound.unloadAsync();
@@ -47,7 +88,6 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
   }, []);
 
   useEffect(() => {
-    // Reset progress if dua changes
     setPosition(0);
     setDuration(0);
     setIsPlaying(false);
@@ -71,7 +111,7 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
       }
       const {sound: newSound, status} = await Audio.Sound.createAsync(
         audioMap[dua.audio],
-        {shouldPlay: false}, // 👈 preloaded but not playing
+        {shouldPlay: false},
         onPlaybackStatusUpdate
       );
       setSound(newSound);
