@@ -14,7 +14,7 @@
       "translationEn": "I answer, O my Lord, I answer Your call. There is no ally for You, I answer the call. All praise and goodness to You, and government also to You, There is no ally for You.\u2028O Allah, grant additional mercy to our lord Prophet Muhammad and to the family of our lord Prophet Muhammad. As You have bestowed blessings on our lord Prophet Abraham and on the family of our lord Prophet Ibrahim. Bless our lord Prophet Muhammad and the family of our lord Prophet Muhammad. As You have bestowed blessings on our lord Prophet Ibrahim and on the family of our lord Prophet Abraham. In all the realms, indeed You are the Most Praiseworthy and Glorious. O Allah, I ask for Your mercy, and Paradise and I pray with You to be kept away from Your wrath and the fire of Hell",
       "translationMy": "Aku menyahut wahai Tuhanku aku menyahut panggilanMu (panggilan Nabi Ibrahim). Tiada sekutu bagiMu, aku menyahut akan panggilan itu. Segala pujian dan kebaikan bagiMu, dan pemerintahan juga bagiMu, Tiada sekutu bagiMu. Ya Allah, kurniakanlah tambahan rahmat kepada junjungan kami Nabi Muhammad dan kepada keluarga junjungan kami Nabi Muhammad. Sebagaimana Engkau telah mengurniakan rahmat ke atas junjungan kami Nabi Ibrahim dan kepada keluarga junjungan kami Nabi Ibrahim. Kurniakanlah keberkatan kepada junjungan kami Nabi Muhammad dan kepada keluarga junjungan kami Nabi Muhammad. Sebagaimana Engkau telah mengurniakan keberkatan kepada junjungan kami Nabi Ibrahim dan kepada keluarga junjungan kami Nabi Ibrahim. Di dalam seluruh alam, sesungguhnya Engkau adalah Maha Terpuji lagi Mulia. Ya Allah, aku memohon keredaanMu, dan syurga dan aku memohon dengan Engkau dijauhkan dari kemarahanMu dan api neraka"
     }],
-    "category": ["talbiyah"],
+    "categoryKey": ["talbiyah"],
     "audio": "talbiyah.mp3"
   },
   {
@@ -27,7 +27,7 @@
       "translationEn": "I intend to pray two raka'at of sunnah Ihram for the sake of Allah Most High",
       "translationMy": "Sahaja aku solat sunat Ihram dua rakaat kerana Allah Taala"
     }],
-    "category": ["intention"],
+    "categoryKey": ["intention"],
     "audio": ""
   },
   {
@@ -40,7 +40,7 @@
       "translationEn": "I intend to perform Umrah and perform ihram for it for the sake of Allah",
       "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah"
     }],
-    "category": ["intention", "umrah"],
+    "categoryKey": ["intention", "umrah"],
     "audio": ""
   },
   {
@@ -53,7 +53,7 @@
       "translationEn": "I intend to perform Umrah on behalf of ______ and perform ihram for it for the sake of Allah Most High",
       "translationMy": "Sahaja aku menunaikan Umrah bagi ______ dan aku berihram dengannya kerana Allah Ta'ala"
     }],
-    "category": ["intention", "umrah"],
+    "categoryKey": ["intention", "umrah"],
     "audio": ""
   },
   {
@@ -66,7 +66,7 @@
       "translationEn": "I have intended to perform Umrah and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
       "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah Ta'ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
-    "category": ["intention", "umrah"],
+    "categoryKey": ["intention", "umrah"],
     "audio": ""
   },
   {
@@ -79,7 +79,7 @@
       "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High",
       "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta'ala"
     }],
-    "category": ["intention", "haji"],
+    "categoryKey": ["intention", "haji"],
     "audio": ""
   },
   {
@@ -92,7 +92,7 @@
       "translationEn": "I have intended to perform Haj on behalf of ______ and performed ihram for it for the sake of Allah Most High",
       "translationMy": "Sahaja aku menunaikan Haji bagi ______ dan aku berihram dengannya kerana Allah Ta'ala"
     }],
-    "category": ["intention", "haji"],
+    "categoryKey": ["intention", "haji"],
     "audio": ""
   },
   {
@@ -105,7 +105,7 @@
       "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
       "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta'ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
-    "category": ["intention", "haji"],
+    "categoryKey": ["intention", "haji"],
     "audio": ""
   },
   {
@@ -118,7 +118,7 @@
       "translationEn": "O Allah, forgive my sins and open for me the doors of Your mercy, and enter me into Your mercy, and make the door of Your sustenance easy for me. O Allah, verily this place is Your sanctuary, and the place of security that You provide. So forbid my flesh, my skin and my bones from the fire of Hell. O Allah, You are salvation, from You are salvation and enter us in Paradise a place of safety, Your blessings are plentiful, O Lord of Greatness and Glory. O Allah, I beseech Thee to forgive my sins and forgive my faults and lay the burden that burdens me with Thy mercy. O Merciful God.",
       "translationMy": "Ya Allah, ampunilah dosaku dan bukakanlah bagiku pintu-pintu rahmatMu, dan masukkanlah aku dalam rahmatMu, dan permudahkanlah bagiku pintu rezekiMu. Ya Allah, sesungguhnya tempat ini adalah tempat suciMu, dan tempat keamanan yang Engkau sediakan. Maka haramkanlah dagingku, kulitku dan tulangku dari api neraka. Ya Allah, Engkaulah keselamatan, daripadaMulah keselamatan dan masukkanlah kami di dalam syurga tempat keselamatan, Maha banyak keberkatanMu, Ya Tuhan yang mempunyai Kebesaran dan Kemuliaan. Ya Allah, aku bermohon kepadaMu agar Engkau mengampuni dosaku dan menghapuskan kesalahanku dan meletakkan beban yang memberatiku dengan rahmatMu. Ya Tuhan yang Maha Penyayang."
     }],
-    "category": ["masjidil haram"],
+    "categoryKey": ["masjidil haram"],
     "audio": ""
   },
   {
@@ -131,7 +131,7 @@
       "translationEn": "I intend to iktikaf in this blessed mosque because of AIIah Taala.",
       "translationMy": "Sahaja aku beri'tikaf di masjid ini kerana AIIah Taala."
     }],
-    "category": ["intention", "masjidil haram", "madinah"],
+    "categoryKey": ["intention", "masjidil haram", "madinah"],
     "audio": ""
   },
   {
@@ -144,7 +144,7 @@
       "translationEn": "O Allah, add to the glory of this house, its greatness and greatness. And add glory, greatness and goodness to those who visit it for Hajj and Umrah.",
       "translationMy": "Ya Allah, tambahkanlah kemuliaan rumah ini, kebesaran dan kehebatannya. Dan tambahkanlah kemuliaan, kebesaran dan kebaikan kepada orang yang mengunjunginya kerana membuat haji dan umrah."
     }],
-    "category": ["masjidil haram"],
+    "categoryKey": ["masjidil haram"],
     "audio": ""
   },
   {
@@ -157,7 +157,7 @@
       "translationEn": "O Allah, I am about to perform tawaf around Your holy house, so give me ease and accept it from me.",
       "translationMy": "Ya Allah, sesungguhnya aku hendak mengerjakan tawaf mengelilingi rumahMu yang suci, maka berikanlah aku kemudahan dan terimalah ia daripadaku."
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -170,7 +170,7 @@
       "translationEn": "I intended to perform arrival tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf qudum tujuh pusingan kerana Allah Taala."
     }],
-    "category": ["intention", "tawaf"],
+    "categoryKey": ["intention", "tawaf"],
     "audio": ""
   },
   {
@@ -183,7 +183,7 @@
       "translationEn": "I intended to perform haj tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf haji tujuh pusingan kerana Allah Taala"
     }],
-    "category": ["intention", "tawaf"],
+    "categoryKey": ["intention", "tawaf"],
     "audio": ""
   },
   {
@@ -196,7 +196,7 @@
       "translationEn": "I intended to perform umrah tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf umrah tujuh pusingan kerana Allah Taala"
     }],
-    "category": ["intention", "tawaf"],
+    "categoryKey": ["intention", "tawaf"],
     "audio": ""
   },
   {
@@ -209,7 +209,7 @@
       "translationEn": "I intended to perform sunnah tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf sunnah tujuh pusingan kerana Allah Taala"
     }],
-    "category": ["intention", "tawaf"],
+    "categoryKey": ["intention", "tawaf"],
     "audio": ""
   },
   {
@@ -222,7 +222,7 @@
       "translationEn": "I intended to perform farewell tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf wada' tujuh pusingan kerana Allah Taala"
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -235,7 +235,7 @@
       "translationEn": "Glory be to Allah and all praise be to Him. There is no God but Allah. Allah is Great, and there is no power, except by the permission of Allah the Most High and the Exalted. Peace and blessings be upon the Messenger of Allah s.a.w. O Allah, for believing in You, and for believing in Your Book, and being faithful to Your promises, and following the Sunnah of Your Prophet, and Your beloved Muhammad s.a.w. O Allah, I ask for forgiveness, health and well-being in religion, in this world and in the hereafter, to obtain victory and paradise and to be spared from Hellfire.",
       "translationMy": "Maha Suci Allah dan segala puji bagiNya. Tiada Tuhan kecuali Allah. Allah Maha Besar, dan tidak ada suatu kekuatan, kecuali dengan izin Allah Yang Maha Tinggi dan Maha Agung. Selawat dan salam bagi Rasulullah s.a.w. Ya Allah, kerana iman kepadaMu, dan kerana meyakini kitabMu, serta setia kepada janjiMu, dan mengikuti sunnah NabiMu, dan kekasihMu Muhammad s.a.w. Ya Allah sesungguhnya aku mohon keampunan, kesihatan dan kesejahteraan terus menerus di dalam beragama, di dunia dan di akhirat, memperoleh kemenangan dan syurga serta terhindar dari neraka."
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -248,7 +248,7 @@
       "translationEn": "O Allah, O our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of Hell, and admit us to Paradise with those who do righteous deeds. O Lord, the Most Forgiving. Oh the Lord of the universe.",
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta."
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -261,7 +261,7 @@
       "translationEn": "Allah, this house is Your house, and this forbidden land is Your forbidden land, this land of peace is Yours, this servant is Your servant, and the son of Your servant, and this place is a place where people take refuge in You from the torment of Hell, so keep our flesh and skin away from the fire of Hell. O Allah, make our hearts lovers of faith, adorn our hearts with it (faith), and make us hate with disbelief, wickedness and disobedience, and make us among those who are guided. O Allah, protect us from Your punishment on the day You raise up Your servants. O Allah, grant me paradise without reckoning.",
       "translationMy": "Ya Allah, sesungguhnya rumah ini adalah rumahMu, dan tanah haram ini adalah tanah haramMu, negeri aman ini adalah negeriMu, hamba ini adalah hambaMu, dan anak dari hambaMu, dan tempat ini adalah tempat orang berlindung padaMu dari seksa neraka, maka jauhkanlah daging dan kulit kami dari api neraka. Ya Allah, jadikanlah hati kami pencinta keimanan, hiasilah hati kami dengannya (iman), dan jadikanlah kami benci dengan kekafiran, kefasikan dan kemaksiatan, serta jadikanlah kami di antara orang yang mendapat petunjuk. Ya Allah, lindungilah kami dari azabMu pada hari Engkau membangkitkan hamba-hambaMu. Ya Allah, anugerahilah aku syurga tanpa perhitungan”"
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -274,7 +274,7 @@
       "translationEn": "O Allah, O our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of Hell, and admit us to Paradise with those who do righteous deeds. O Lord, the Most Forgiving. Oh the Lord of the universe.",
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -287,7 +287,7 @@
       "translationEn": "O Allah, I take refuge in You from anxiety, shirk, division, hypocrisy, bad morals, bad outlook, and wrong dealings in property, family and children. O Allah, I ask You and Paradise to be pleased and to protect Your wrath and Hell. O Allah, I beg to be protected from the slander of the grave and to be protected from the temptations of life and death.",
       "translationMy": "Ya Allah, sesungguhnya aku berlindung kepadaMu dari kebimbangan, kesyirikan, perpecahan, kemunafikan, keburukan akhlak, keburukan pandangan, dan kesalahan urusan dalam harta, keluarga dan anak-anak. Ya Allah, aku mohon redaMu dan syurga serta mohon perlindungan terhadap kemarahanMu dan neraka. Ya Allah, aku mohon dilindungi dari fitnah kubur dan mohon dilindungi dari berbagai godaan kehidupan dan kematian."
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -300,7 +300,7 @@
       "translationEn": "O Allah, O our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of Hell, and admit us to Paradise with those who do righteous deeds. O Lord, the Most Forgiving. Oh the Lord of the universe.",
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -313,7 +313,7 @@
       "translationEn": "O Allah, make my Hajj a mabrur, a blessing that is accepted, sins that are forgiven, righteous deeds that are accepted, and merchandise that is not harmful. O God Almighty, there is nothing stored in the chest. O Allah, bring me out of darkness into a bright light. O Allah, I beg forgiveness from You all that brings Your mercy, all that leads to forgiveness, the farthest from all sins, to obtain all goodness, and to enter Paradise and escape from Hell. O my Lord, comfort my heart with the sustenance You have given me and bless all that You have given me, and replace all that I have lost with goodness from Your side.",
       "translationMy": "Ya Allah, jadikanlah hajiku haji yang mabrur, sai yang diterima, dosa yang terampun, amal soleh yang diterima, serta dagangan yang tidak merugikan. Wahai Tuhan Yang Maha Mengetahui apa-apa tersimpan di dalam dada. Ya Allah, keluarkanlah aku dari kegelapan kepada cahaya terang. Ya Allah, aku mohon maaf padaMu segala hal yang mendatangkan rahmatMu, semua yang membawa kepada keampunan, terjauh dari segala dosa, memperoleh segala kebaikan, dan berjaya memasuki syurga serta terlepas dari neraka. Ya Tuhanku tenteramkan hatiku dengan rezeki yang Engkau beri dan berkatilah segala yang Engkau telah kurniakan kepadaku, dan gantilah segala yang terluput dariku dengan kebaikan dari sisiMu"
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -326,7 +326,7 @@
       "translationEn": "O Allah, O our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of Hell, and admit us to Paradise with those who do righteous deeds. O Lord, the Most Forgiving. Oh the Lord of the universe.",
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -339,7 +339,7 @@
       "translationEn": "O Allah, protect me under Your shade on a day when there is no shade except Your shade, and there is nothing left but Your face, Give me a drink from the well of the Prophet Muhammad s.a.w., a delicious and refreshing drink, after which I will never thirst Iagi. O Allah, I ask You for the best that Your Prophet, Muhammad s.a.w. has ever asked for. And I take refuge in You from evil as the protection requested by the Prophet Muhammad s.a.w. O Allah, I ask You for Paradise with all its pleasures and all that brings me closer to it, whether in word, deed or deed. And I ask You for protection from Hell and everything that brings me closer to it, both in word, deed and deed.",
       "translationMy": "Ya Allah, lindungilah aku di bawah naunganMu pada hari yang tiada naungan, kecuali naunganMu, dan tiada yang tinggal kecuali wajahMu, Berilah aku minum dari telaga Nabi Muhammad s.a.w., minuman yang lazat yang menyegarkan, yang sesudahnya aku tidak akan pernah haus Iagi. Ya Allah, aku mohon kepadaMu dari apa yang terbaik yang pernah diminta oleh NabiMu, Muhammad s.a.w.  Dan aku berlindung kepadaMu dari kejahatan sebagaimana perlindungan yang di mohon oleh Nabi Muhammad s.a.w. Ya Allah, aku mohon kepadaMu syurga dengan segala kenikmatannya dan segala yang mendekatkan aku kepadanya, baik perkataan, perbuatan ataupun tindakan. Dan aku mohon perlindungan kepadaMu dari neraka dan segala yang mendekatkan aku kepadanya, baik perkataan, perbuatan dan tindakan."
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -352,7 +352,7 @@
       "translationEn": "O Allah, O our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of Hell, and admit us to Paradise with those who do righteous deeds. O Lord, the Most Forgiving. Oh the Lord of the universe.",
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -365,7 +365,7 @@
       "translationEn": "O Allah, Your rights are great for me, as well as those related to me and Your creatures. All your rights against me, forgive me about them, and what belongs to your servant to me, then set me free from it. Satisfy me with the lawful sustenance that You give, free from what is haram. Give me obedience to You and keep me from being disobedient to You. Suffice Your gift for me, so that I do not need anything else, O Lord of the Most Abundant Your forgiveness. O Allah, verily Thy house is great, Thy face is noble, and You, O Allah, are Most Merciful, Most Merciful, and Most Wise. You love forgiveness, forgive me.",
       "translationMy": "Ya Allah, hakMu sungguh banyak padaku, begitu juga yang berkaitan antara aku dan makhlukMu. Segala hakMu terhadapku, ampunilah aku tentang itu, dan mana yang termasuk hak hambaMu padaku, maka bebaskanlah aku daripadanya. Cukupkan aku dengan rezeki yang halal yang Engkau berikan, terbebas dari yang haram. Kurniakanlah aku ketaatan padaMu dan jauhkanlah aku dari kederhakaan terhadapMu. Cukupkan bagiku kurniaanMu, sehingga aku tidak memerlukan selain itu, wahai Tuhan Yang Maha Luas keampunanMu. Ya Allah, sesungguhnya rumahMu Agung, wajahMu Mulia, dan Engkau Ya Allah Maha Penyayang, Pemurah dan Maha Bijaksana. Engkau menyukai keampunan, ampunilah aku."
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -378,7 +378,7 @@
       "translationEn": "O Allah, O our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of Hell, and admit us to Paradise with those who do righteous deeds. O Lord, the Most Forgiving. Oh the Lord of the universe.",
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -391,7 +391,7 @@
       "translationEn": "O Allah, O my Lord, I ask for the blessing of perfect faith, true confidence, sustenance, a sincere heart, a tongue who always recite zikr, halal good things provided by you, true repentance before death, forgiveness and mercy after death forgiveness when deceived by practice, success in obtaining Paradise and salvation from Hell, with the mercy of You, O Lord Almighty, the Most Forgiving, O Lord, add knowledge to me and put me in the company of the righteous.",
       "translationMy": "Ya Allah ya Tuhanku, sesungguhnya aku memohon dikurniakan iman yang sempurna, keyakinan yang sebenar-benarnya, rezeki yang Iuas, hati yang khusyuk, Iidah yang sentiasa berziki, dan perkara halal yang baik, taubat yang sebenar sebelum mati keampunan dan rahmat sesudah mati kemaafan ketika dihisabkan amalan, kejayaan dengan mendapat syurga dan keselamatan daripada neraka, dengan belas kasihan Engkau ya Tuhan yang Maha Kuasa Iagi Maha Pengampun, ya Tuhan, tambahkan ilmu pengetahuan kepadaku dan masukkan daku ke dalam golongan orang-orang yang soleh."
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -404,7 +404,7 @@
       "translationEn": "O Allah, O our Lord, give us good in this world and good in the Hereafter, and save us from the punishment of Hell, and admit us to Paradise with those who do righteous deeds. O Lord, the Most Forgiving. Oh the Lord of the universe.",
       "translationMy": "Ya Allah Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, serta selamatkanlah kami dari azab neraka, Dan masukkanlah kami ke dalam syurga bersama orang-orang yang berbuat kebajikan. Ya Tuhan yang Maha Mulia Iagi Maha Pengampun. Ya Tuhan alam semesta. "
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -417,7 +417,7 @@
       "translationEn": "I intended to pray two raka'at of sunnah Tawaf for the sake of Allah Most High",
       "translationMy": "Sahaja aku solat Tawaf dua rakaat kerana Allah Taala"
     }],
-    "category": ["tawaf", "intention"],
+    "categoryKey": ["tawaf", "intention"],
     "audio": ""
   },
   {
@@ -430,7 +430,7 @@
       "translationEn": "O Allah, this is Your holy land, Your holy mosque, Your holy house, I am Your servant and the son of Your servant, I have come with sins and many mistakes and bad deeds and this is the place for the servant who takes refuge with You from the fire of Hell.\n\nO Allah, save us, forgive us our mercy, for You are Forgiving and Merciful.\n\nO Allah, Thou hast called Thy servant to Thy holy house, and indeed I have come to ask for Thy favor, and Thou hast given me gifts. So forgive me, have mercy on me, forgive me, and forgive me, for you are in power over all things.\n\nO Allah, give me ease and keep me from poverty, forgive me in the Hereafter and in this world.\n\nO Allah, preserve me with Your meekness, and make me of those who love You, love Your angels, Your apostles, Your prophets, Your righteous servants, and Your saints.\n\nO Allah, as You have shown me to Islam, so establish me in it, direct me to Your obedience, the obedience of Your Messenger, to know what is hidden and clear from me, so accept my obedience. You know my desire, so grant me my desire, and you know what is in me, so forgive my sins.",
       "translationMy": "Ya Allah, sesungguhnya ini negeriMu yang suci, masjidMu yang suci rumahMu yang suci, aku adalah hambaMu dan anak kepada hambaMu, telah datang dengan dosa dan banyak kesalahan dan amalan-amalan yang buruk dan inilah tempatnya bagi hamba yang berlindung denganMu dari api neraka.\n\nYa Allah, selamatkanlah kami, ampunilah kami kasihaniIah kami, sesungguhnya Engkau Maha Pengampun Iagi Maha Penyayang. Ya Allah, bahawasanya Engkau telah memanggil hambahambaMu ke rumah suciMu dan sesungguhnya aku telah datang memohon keredaanMu, dan Engkau telah memberi kurnia kepadaku. Maka ampunilah aku, kasihanilah aku, afiatkan aku dan maafkan aku, sesungguhnya Engkau berkuasa atas segala sesuatu.\n\nYa Allah, berikanlah aku kemudahan dan jauhkan aku dari kepayahan, ampunilah aku di akhirat dan di dunia.\n\nYa Allah, peliharalah aku dengan sifat kelembutanMu, dan jadikanlah aku dari golongan mereka yang cintakanMu, cintakan malaikat-malaikatMu, Rasul-RasulMu, Nabi-NabiMu, hamba-hambaMu yang soleh dan Wali-WaliMu orang yang bertakwa.\n\nYa  Allah, sebagaimana  Engkau telah tunjuki aku kepada Islam, maka tetapkanlah aku di dalamnya, arahkanlah aku kepada ketaatanMu, ketaatan rasulMu, mengetahui perkara yang tersembunyi dan terang dariku, maka terimalah keuzuranku. Engkaulah yang mengetahui hajatku maka berilah keinginanku, dan Engkau mengetahui apa yang di dalam diriku, maka ampunilah dosaku.\n\nYa Allah, aku bermohon mendapat keimanan yang sentiasa hidup dalam hatiku dan keyakinan yang benar hingga aku yakin tidak ada sesuatu yang menimpaku melainkan apa yang telah Engkau tuliskan buatku, maka redakanlah aku dengan apa yang Engkau bahagikan untukku ya Tuhan yang mempunyai Kebesaran dan Kemuliaan.\n\nYa Allah, selawatMu atas kekasihMu Muhammad dan atas sekelian Nabi dan Rasul dan keluarga setiap orang dari mereka dan sesiapa yang mengikutnya hingga ke hari kemudian. Ya Allah, yang Maha Pengasih Iagi Maha Penyayang."
     }],
-    "category": ["tawaf"],
+    "categoryKey": ["tawaf"],
     "audio": ""
   },
   {
@@ -443,7 +443,7 @@
       "translationEn": ["To drink with good intentions. This is in accordance with the meaning of the words of the Prophet s.a.w. \"Zam-zam water is for something that we drink because of it", "To faced the Kaaba", "Mention the name of Allah", "Drink with three sips (breaths)", "Drink untill youˈve had enough", "Praise Allah", "Doa"],
       "translationMy": ["Berniat dengan niat yang baik. Ini sesuai dengan maksud sabda baginda Rasulullah s.a.w. \"Air zamzam adalah untuk sesuatu yang kita minum kerananya\"", "Hadapkan muka ke Kaabah", "Menyebut nama Allah", "Minum dengan tiga tegok(nafas)", "Minum dengan sepuas-puasnya (hingga kenyang)", "Bersyukur kehadrat Allah", "Berdoa"]
     }],
-    "category": ["zam-zam"],
+    "categoryKey": ["zam-zam"],
     "audio": ""
   },
   {
@@ -456,7 +456,7 @@
       "translationEn": "O Allah, verily I ask You for useful knowledge, and abundant sustenance, and healing from all diseases.",
       "translationMy": "Ya Allah, sesungguhnya aku bermohon kepada Engkau ilmu yang bermanfaat, dan rezeki yang Iuas (banyak), dan sembuh dari segala penyakit."
     }],
-    "category": ["zam-zam"],
+    "categoryKey": ["zam-zam"],
     "audio": ""
   },
   {
@@ -469,7 +469,7 @@
       "translationEn": "I intend to perform Sai between Safa and Marwah, the Sai of Hajj in seven rounds for Allah the Almighty.",
       "translationMy": "Sahaja aku berniat sai antara Safa dan Marwah, Sai Haji tujuh perjalanan kerana Allah Taala."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -482,7 +482,7 @@
       "translationEn": "I intend to perform sa'i between Safa and Marwah, the sa'i of Umrahj in seven rounds for Allah the Almighty.",
       "translationMy": "Sahaja aku berniat sa'i antara Safa dan Marwah, sa'i Umrah tujuh perjalanan kerana Allah Taala."
     }],
-    "category": ["tawaf", "intention"],
+    "categoryKey": ["tawaf", "intention"],
     "audio": ""
   },
   {
@@ -495,7 +495,7 @@
       "translationEn": "In the name of Allah, the Most Gracious, the Most Merciful. I begin with what has been begun by Allah and His Messenger. Indeed, Safa and Marwah are among the signs of Allah's greatness. It is no sin for anyone who performs Hajj or Umrah at the House of Allah to walk (sa'i) between the two (Safa and Marwah). And whoever does good voluntarily, then indeed, Allah accepts it and He is All-Knowing.\nAllah is the Greatest; there is no god but Allah. All praise is due to Allah for guiding us. All praise is for Allah, the One, who has no partner. Power belongs to Him and all praise is due to Him. He is the One who gives life and causes death. All goodness is in His grip. And He is Most Powerful over all things. There is no god but Him, the One. He has fulfilled His promise. He has helped His servant and He has destroyed those evil groups by Himself. There is no god but Allah. We do not worship anything except Him alone. We all devote our religion to Him even though the disbelievers do not like it.",
       "translationMy": "Dengan nama Allah yang Maha Pengasih, Maha Penyayang. Aku mulai dengan apa yang telah dimulai Allah dan Rasulnya. Sesungguhnya Safa dan Marwah adalah sebahagian dari tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji atau umrah ke Baitullah, maka tiada salahnya berjalan (sai) di antara keduanya (Safa dan Marwah). Dan barangsiapa yang berbuat baik dengan sukarela, maka sesungguhnya Allah menerimanya dan Dia Maha Mengetahui,\n\nAllah yang Maha Besar tiada Tuhan melainkan Allah. Segala puji pada Allah kerana memberi hidayat kepada kami. Segala puji bagi Allah yang Maha Esa tiada sekutu bagiNya. Kekuasaan juga bagiNya dan segala puji bagiNya. Dia yang menghidupkan dan yang mematikan. Segala kebaikan dalam genggamannya. Dan Dia amat berkuasa atas segala sesuatu. Tiada Tuhan melainkan Dia yang Maha Esa. Dia telah menunaikan janjiNya. Dia telah menolong hambaNya dan Dia telah memusnahkan kumpulan-kumpulan jahat itu dengan sendiriNya. Tiada Tuhan melainkan Allah. TidakIah kami menyembah akan sesuatu apa pun juga melainkan hanya akan Dia saja. Kami semua ikhlaskan agama untukNya walaupun orang-orang yang kafir itu tidak menyukainya"
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -508,7 +508,7 @@
       "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest, Allah is the Greatest with all His greatness. All praise is due to Allah. Glorified is Allah, the Most Exalted, with noble praises every morning, evening, and night. There is no deity except Allah alone. He fulfills His promise, aids His servant, and destroys His enemies. Nothing, whether it precedes Him or comes after Him, gives life or causes death. He is the Ever-Living, never dies, and is eternal forever. In His hands are all good deeds, and to Him is the return, and He is the Almighty over all things.",
       "translationMy": "Allah Maha Besar Allah Maha Besar Allah Maha Besar Allah Maha Besar dengan segala kebesarannya. Segala puji bagi Allah. Maha Suci Allah, yang Maha Agung, dengan puji-pujian yang mulia setiap pagi, petang dan malam. Tiada Tuhan kecuali Allah semata. Dia memenuhi janjiNya, menolong hambaNya serta menghancurkan sendiri musuh-musuhNya. Tiada sesuatu, baik yang mendahuluiNya, mahupun sesudahNya menghidupkan dan mematikan. Dia yang selalu hidup, tidak mati dan Iuput selama-lamanya. Di tanganNya segala kebajikan dan kepadaNyalah tempat kembali dan Dialah yang Maha Kuasa atas segalanya."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -521,7 +521,7 @@
       "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -534,7 +534,7 @@
       "translationEn": "O our Lord, save us from the fire of hell, and let us enter paradise together with Your servants whom You have granted blessings among the prophets, the truthful, the martyrs, and the righteous. And they are the best of companions. All of this is a shower of grace from Allah s.w.t. Indeed, Allah is All-Knowing. There is no god but Allah truly. There is no god but Allah, I declare it as a sign of servitude. There is no god but He. We dedicate our religion sincerely for Him, even though the disbelievers hate it.",
       "translationMy": "Ya Tuhan kami selamatkanlah kami dari api neraka, dan gembirakanlah kami masuk ke syurga bersama-sama hambaMu yang telah Engkau kurniakan nikmat daripada para Nabi, para sidiqqin, para syuhada dan solehin.Dan mereka itulah sebaik-baik teman. ltu semua Iimpah karunia dari Allah s.w.t. Sesungguhnya Allah Maha Mengetahui. Tiada Tuhan melainkan Allah dengan sebenar. Tiada Tuhan melainkan Allah, aku menyebutnya tanda pengabdian. Tiada Tuhan melainkan Dia. Kami ikhlaskan agama keranaNya walaupun orang-orang yang kafir itu benci."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -547,7 +547,7 @@
       "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -560,7 +560,7 @@
       "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. All praises are due to Allah. There is no God but Allah, the One, the refuge of all things. He does not have a wife nor children. There is no partner for Him in power. No representative for Him from the lowly, and glorified is He with all greatness. O Allah, You commanded in the Holy Book that You revealed: 'Ask of Me, I will grant you.' O Lord, we ask of You, as You have commanded. You do not break promises. O our Lord, indeed we have heard the one who called to believe: 'Believe in your Lord.' So, we believe. Forgive our sins and remove evil from ourselves and let us die with the good ones. O our Lord, grant us what You have promised through Your messengers. And do not disappoint us on the Day of Judgment. Indeed, You do not break promises. O our Lord, we surrender to You and to You we return, and You are our focal point of hope. O our Lord, forgive us and our brothers who have preceded us in faith, and do not let there be in our hearts any envy towards those who believe. O our Lord, You are the Most Merciful and Most Compassionate.",
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Hanya bagi Allah segala puji. Tiada Tuhan kecuali Allah yang Maha Esa, tempat bergantung segala sesuatu. Yang tiada beristeri dan tiada beranak. Tiada sekutu bagiNya dalam kekuasaan. Tiada bagiNya wakil dari yang hina, dan agunglah Dia dengan segenap kebesaran. Ya Allah, Engkau berfirman dalam Kitab Suci yang Engkau turunkan: “Mohonlah kepadaKu, Aku perkenankan bagimu” Ya Tuhan, kami mohon kepadaMu, sebagaimana Kau perintahkan. Engkau tidak memungkiri janji. Ya Tuhan kami, sesungguhnya kami telah mendengar orang yang menyeru supaya beriman: “Berimanlah kamu dengan Tuhanmu.” Maka kami beriman. Ampunilah dosa-dosa kami dan hapuskanlah kejahatan dari diri kami dan wafatkanlah kami bersama orang-orang yang baik. Ya Tuhan kami, anugerahilah kami dengan apa yang telah Engkau janjikan melalui rasul-rasulMu. Dan janganlah Engkau kecewakan kami pada hari kiamat. Sesungguhnya Engkau tidak mungkir janji. Ya Tuhan kami kepadaMu kami menyerah dan kepadaMu kami kembali dan Engkaulah tumpuan harapan kami. Ya Tuhan kami, ampunilah kami serta saudara-saudara kami yang telah mendahului kami dalam beriman, dan janganlah Engkau jadikan dalam hati kami rasa dengki kepada orang-orang yang beriman. Ya Tuhan kami, Engkau Maha Pengasih dan Maha Penyayang."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -573,7 +573,7 @@
       "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -586,7 +586,7 @@
       "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -599,7 +599,7 @@
       "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. All praise is due to Allah. O Allah, perfect the bright light for us and forgive us. You are All-Powerful over all things. O Allah, indeed I ask You for all that is good, both immediate and delayed. \nAnd I ask You for forgiveness for my sins, and I also seek Your mercy, O Lord of All Compassion and Mercy.",
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Bagi Allah segala puji. Ya Allah, sempurnakanlah cahaya terang bagi kami dan ampunilah kami. Engkau Maha Kuasa atas segala sesuatu. Ya Allah, Sesungguhnya aku mohon kepadaMu kebaikan seluruhnya, yang cepat dan yang lambat. Dan aku mohon kepadaMu ampun atas dosaku, juga aku mohon kepadaMu rahmatMu, wahai Tuhan Yang Maha Pengasih dan Penyayang."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -612,7 +612,7 @@
       "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -625,7 +625,7 @@
       "translationEn": "O Lord, increase my knowledge, do not turn my heart away after You have guided me, grant me mercy from You, for indeed You are the Most Generous. O Allah, bless me with my hearing and my sight, there is no God but You. O Allah, I seek refuge with You from the punishment of the grave, there is no God but You. Glory be to You, indeed I am among the wrongdoers. O Allah, indeed I seek refuge from disbelief and poverty, O Allah, I seek refuge with Your pleasure from Your wrath, and with Your forgiveness from Your punishment. I cannot praise You, as You praise Yourself, all praise is Yours until You are pleased.",
       "translationMy": "Ya Tuhan, tambahkan aku ilmu, jangan palingkan hatiku setelah Engkau beri hidayah kepadaku, berilah aku rahmat dariMu, sesungguhnya Engkau Maha Pemberi. Ya Allah, baikilah keadaan aku dengan pendengaran dan penglihatan aku, tiada Tuhan melainkan Engkau. Ya Allah, aku berlindung denganMu dari seksa kubur, tiada Tuhan melainkan Engkau. Maha Suci Engkau, sesungguhnya aku dari golongan zalim. Ya Allah, sesungguhnya aku berlindung dari kekufuran dan kepapaan, Ya Allah, aku berlindung dengan keredaanMu dari kemurkaanMu, dan dengan kemaafanMu dari azabMu. Aku tidak dapat memuji kepadaMu, seperti pujiMu sendiri kepada diriMu, segala puji bagiMu hingga Engkau redhai."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -638,7 +638,7 @@
       "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -651,7 +651,7 @@
       "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. And to Allah belongs all praise. O Allah, indeed I ask of You the best of matters that You know, and I seek Your protection from the worst of matters that You know, and I ask for forgiveness for all that You know, indeed You are All-Knowing of the unseen. There is no god except Allah, who possesses the evident truth. Muhammad is the Messenger of Allah, whose promise is true and is trusted. O Allah, I ask of You, just as You have guided me, that I die in Islam. O Allah, grant light in my heart, my ears, and my sight. O Allah, expand my chest, and make my affairs easy, and I seek refuge in You from doubts and confusion in my affairs, and I seek refuge from the torment of the grave. O Allah, I seek refuge in You from the evil that arises in the night and the day, and the evil brought by the wind.\nO Lord, the Most Merciful and Most Compassionate. O Allah, we cannot worship You as we should and we cannot remember You as we ought to.",
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Dan bagi Allah segala puji. Ya Allah, sesungguhnya aku pohon kepadaMu sebaik-baik perkara yang Engkau mengetahuinya, serta mohon perlindunganMu dari seburuk-buruk perkara yang Engkau mengetahuinya dan aku mohon ampun atas segala yang Engkau tahu, sesungguhnya Engkau Maha Mengetahui yang ghaib. Tiada Tuhan kecuali Allah yang memiliki kebenaran yang nyata. Muhammad Rasulullah yang benar janjinya Iagi dipercayai. Ya Allah, aku mohon kepadaMu, sebagaimana Engkau telah memberi petunjuk kepadaku, sehingga aku meninggal dalam Islam. Ya Allah, berilah cahaya dalam hatiku, telingaku dan penglihatanku. Ya Allah, lapangkanlah dadaku, dan mudahkanlah urusanku, dan aku berlindung kepadaMu daripada was-was dan kucar-kacir urusan dan aku berlindung daripada azab kubur. Ya Allah, aku berlindung kepadaMu dari kejahatan yang timbul pada malam dan siang hari, dan kejahatan yang dibawa oleh angin. Wahai Tuhan yang Maha Pengasih Iagi Maha Penyayang. Ya Allah kami tidak dapat menyembahMu sebagaimana yang sepatutnya dan kami tidak dapat mengingatiMu sebagaimana yang sewajarnya."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -664,7 +664,7 @@
       "translationEn": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah.",
       "translationMy": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -677,7 +677,7 @@
       "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -690,7 +690,7 @@
       "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. Allah is the Greatest in all His Greatness, all praise is due to Allah. O Allah, make me love faith and adorn it in my heart. Make me hate disbelief, wickedness, and disobedience. Make me among those who are guided.",
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Allah Maha Besar dengan segala KebesaranNya, segala puji bagi Allah. Ya Allah cintakanlah aku kepada keimanan dan hiaskanlah ia di hati ku. Bencikanlah aku kepada kekafiran, kefasikan dan kedurhakaan. Jadikanlah aku di antara orang-orang yang mendapat petunjuk."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -703,7 +703,7 @@
       "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -716,7 +716,7 @@
       "translationEn": "O Allah, save me from Your punishment, on the day You resurrect Your servants. O Allah, guide me with Your guidance, purify me with righteousness, and forgive me in this world and in the hereafter. O Allah, bestow upon me Your blessings, mercy, grace and sustenance. O Allah, I ask for everlasting blessings that do not change and do not disappear. O Allah, make light in my heart, my hearing, my sight, my tongue, on my right and on my left, above me and within my soul. Expand my chest and ease my affairs.",
       "translationMy": "Ya Allah, selamatkanlah aku dari azabMu, dihari Engkau membangkitkan hamba-hambaMu. Ya Allah, pimpinlah aku dengan hidayat, dan sucikanlah aku dengan takwa, dan ampunilah aku di dunia dan di akhirat. Ya Allah, Iimpahkanlah atas aku berkatMu, rahmatMu, kurniaMu dan rezekiMu.Ya Allah, aku bermohon nikmat yang berkekalan, tidak berpindah dan tidak hilang. Ya Allah, jadikanlah cahaya di dalam hatiku, pendengaranku, penglihatanku, lidahku, di kanan dan di kiriku, di atasku dan di dalam jiwaku. Lapangkanlah dadaku dan mudahkanlah urusanku"
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -729,7 +729,7 @@
       "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -742,7 +742,7 @@
       "translationEn": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Dan segala puji bagi Allah. Tiada Tuhan kecuali Allah Yang Maha Esa. JanjiNya benar, Dia menolong hambaNya, Dia menghancurkan musuh-musuhNya. Tiada Tuhan selain Allah, dan kami tidak menyembah selainNya dengan penuh ikhlas. Dialah yang empunya agama ini walaupun orang-orang kafir tidak merasa senang. Ya Allah, aku bermohon hidayah, taqwa, kesucian budi dan kekayaan. Ya Allah, aku mohon keredhaanMu dan syurga, dan aku mohon dilindungi dari kemurkaanMu dan neraka, dan segala yang mendekatkan aku kepadanya, baik berupa kata, perbuatan atau pekerjaan. Ya Allah, dengan cahayaMu kami mendapat hidayah. Kami kaya dengan kurniaanMu berserta pertolongan, nikmat ,anugerah dan ihsanMu pagi dan petang. Engkaulah yang awal,tidak ada sesuatupun yang ada sebelumMu dan Engkau pula paling akhir dan tidak ada sesuatupun yang ada dibelakang (sesudah)Mu. Engkau pula yang zahir maka tidak ada sesuatupun yang melebihi Engkau, Engkau pula yang batin tidak ada sesuatupun yang menyamaiMu. Kami mohon perlindunganMu dari kemiskinan, kemalasan dan azab kubur, serta ujian kekayaan. Kami mohon kepadaMu kemenangan mencapai syurga.",
       "translationMy": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. And all praise is for Allah. There is no God except Allah the One. His promise is true, He helps His servant, He destroys His enemies. There is no God besides Allah, and we do not worship anyone but Him sincerely. He is the owner of this religion even though the disbelievers do not feel comfortable. O Allah, I ask for guidance, piety, purity of heart, and wealth.O Allah, I seek Your pleasure and paradise, and I seek protection from Your wrath and hell, and everything that brings me closer to it, whether in words, deeds, or actions. O Allah, with Your light we receive guidance. We are rich with Your blessings along with help, grace, bounties, and favors both morning and evening. You are the First, nothing existed before You, and You are the Last, nothing exists after You. You are also the Outwardly Manifest, so there is nothing greater than You, You are the one whose essence is unmatched. We seek Your protection from poverty, laziness, and the torment of the grave, as well as the trials of wealth. We ask You for the victory to attain paradise."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -755,7 +755,7 @@
       "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -768,7 +768,7 @@
       "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -781,7 +781,7 @@
       "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. All praise is due to Allah. Glory be to You, O Allah, indeed we cannot thank You as You deserve, O Allah. Glory be to You, O Allah, there is no comparison at all to Your glory, O Allah. O Allah, make us love faith and adorn it in our hearts. Make us hate disbelief, wickedness, and disobedience, and make us among those who are guided.",
       "translationMy": "Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Segala puji bagi Allah. Maha Suci Engkau Ya Allah, sesungguhnya kami tidak dapat bersyukur kepada Engkau sebagaimana yang sepatutnya, Ya Allah. Maha Suci Engkau Ya Allah, tidak ada tolok banding sama sekali kemuliaanMu Ya Allah. Ya Allah, cintakanlah kami kepada keimanan dan hiaskanlah ia ke dalam hati kami. Bencikanlah kami kepada kekafiran, kefasikan dan kederhakaan dan jadikanlah kami di antara orang-orang yang mendapat petunjuk."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -794,7 +794,7 @@
       "translationEn": "O Allah, forgive, love, and pardon us, and erase what You know about our sins; indeed, You are All-Knowing of what we do not know. Indeed, You are Allah, the Most Glorious and Most Gracious.",
       "translationMy": "Ya Allah, ampunilah, sayangilah dan maafkanlah serta hapuskanlah apa-apa yang Engkau ketahui tentang dosa kami sesungguhnya Engkau Maha Mengetahui apa yang tidak kami ketahui. Sesungguhnya Engkau adalah Allah yang Maha Mulia dan Maha Pemurah."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -807,7 +807,7 @@
       "translationEn": "O Allah, save me from Your punishment, on the day You resurrect Your servants. O Allah, guide me with Your guidance, purify me with righteousness, and forgive me in this world and in the hereafter. O Allah, bestow upon me Your blessings, mercy, grace and sustenance. O Allah, I ask for everlasting blessings that do not change and do not disappear. O Allah, make light in my heart, my hearing, my sight, my tongue, on my right and on my left, above me and within my soul. Expand my chest and ease my affairs.",
       "translationMy": "Ya Allah, selamatkanlah aku dari azabMu, dihari Engkau membangkitkan hamba-hambaMu. Ya Allah, pimpinlah aku dengan hidayat, dan sucikanlah aku dengan takwa, dan ampunilah aku di dunia dan di akhirat. Ya Allah, Iimpahkanlah atas aku berkatMu, rahmatMu, kurniaMu dan rezekiMu.Ya Allah, aku bermohon nikmat yang berkekalan, tidak berpindah dan tidak hilang. Ya Allah, jadikanlah cahaya di dalam hatiku, pendengaranku, penglihatanku, lidahku, di kanan dan di kiriku, di atasku dan di dalam jiwaku. Lapangkanlah dadaku dan mudahkanlah urusanku"
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -820,7 +820,7 @@
       "translationEn": "Indeed, Safa and Marwah are among the signs of Allah's greatness. Whoever performs the pilgrimage (hajj) and umrah to the House of Allah, there is no sin for him to walk between the two, and whoever does good willingly, indeed Allah is Most Accepting and Most Knowing.",
       "translationMy": "Sesungguhnya Safa dan Marwah itu adalah sebagai tanda-tanda kebesaran Allah. Barangsiapa yang menunaikan ibadat haji dan umrah ke Baitullah, maka tiada salahnya untuk berjalan di antara keduanya, dan barang siapa yang berbuat baik dengan suka rela, maka sesungguhnya Allah Maha Menerimanya dan Maha Mengetahui."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -833,7 +833,7 @@
       "translationEn": "O God, we ask that our prayers be accepted. Grant us good health and forgive us. Give us assistance to be obedient and grateful to You. Do not let us depend on anyone else but You. Let us die in perfect faith and Islam, while You are pleased with us. O Allah, O Lord, protect me from all evil throughout my life, and keep me from doing things that are of no benefit, and bestow upon me a good perspective on things that lead to Your pleasure, O Lord who is Most Compassionate.",
       "translationMy": "Ya Tuhan, kami memohon diterima doa kami. Afiatkanlah dan ampunilah kami. Berilah pertolongan kepada kami untuk taat dan bersyukur kepada Engkau. Janganlah membiarkan kami bergantung kepada yang lain, selain dari Engkau. Matikanlah kami di dalam iman dan islam yang sempurna, sedang Engkau reda kepada kami. Ya Allah, Ya Tuhan, peliharalah diriku dengan meninggalkan segala kejahatan selama hidupku, dan peliharalah aku supaya tidak membuat perkara yang tidak memberi guna, dan kurniakanlah kepadaku elok pandangan pada perkara-perkara yang membawa keredaan Engkau wahai Tuhan yang bersifat Amat Belas Kasihan."
     }],
-    "category": ["sa'i"],
+    "categoryKey": ["sa'i"],
     "audio": ""
   },
   {
@@ -846,7 +846,7 @@
       "translationEn": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. O Allah, this crown of my head is in Your power, so make every strand of hair a light on the Day of Judgment. And forgive my sins, O Lord Who is Most Forgiving.",
       "translationMy": "Allah Maha Besar, Allah Maha besar, Allah Maha Besar. Ya Allah, ubun-ubun kepalaku ini di dalam kekuasaanMu, maka jadikanlah setiap helai rambut suatu cahaya di hari kiamat. Dan ampunkanlah dosaku Ya Tuhan Yang Maha Luas PengampunanNya."
     }],
-    "category": ["tahalul"],
+    "categoryKey": ["tahalul"],
     "audio": ""
   },
   {
@@ -859,7 +859,7 @@
       "translationEn": "All praise is due to Allah, who has aided me in fulfilling this worship (Hajj or Umrah). O Allah, grant me a blessing for every strand of hair, and erase an evil with it. And elevate me with it to a rank. Forgive me and all those who shave and cut their hair, and all Muslims. O Allah, increase us in faith, certainty, guidance, and assistance. And forgive us and our parents",
       "translationMy": "Segala puji bagi Allah, yang telah menolongku menunaikan ibadatku ini (haji atau umrah). Ya Allah berilah aku satu kebaikan dengan setiap helai rambut ini, dan padamkanlah dengannya satu kejahatan. Dan angkatkan aku dengannya satu darjat. Ampunkanlah aku dan sekelian yang bercukur dan yang bergunting dan sekelian muslimin. Ya Allah, tambahkanlah kami dengan keimanan, keyakinan, taufik dan pertolongan. Dan ampunilah kami serta ibu bapa kami."
     }],
-    "category": ["tahalul"],
+    "categoryKey": ["tahalul"],
     "audio": ""
   }
 ]

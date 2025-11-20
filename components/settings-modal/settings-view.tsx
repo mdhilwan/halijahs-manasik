@@ -1,4 +1,4 @@
-import {StyleSheet, Switch, Text, TouchableOpacity, View} from "react-native";
+import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import React from "react";
 import {useFontSize} from "@/app/contexts/FontSettingsContext";
 
@@ -7,41 +7,34 @@ const TextSettings = ({children}: { children: React.ReactNode }) => {
 }
 
 export const SettingsView = () => {
-  const { arabicFontSize, translationFontSize, setTranslationFontSize, setArabicFontSize, translationHidden, setHideTranslation, duaHidden, setHideDua } = useFontSize()
+  const { arabicFontSize, translationFontSize, setTranslationFontSize, setArabicFontSize } = useFontSize()
 
   return <>
     <View style={styles.settingRow}>
-      <TextSettings>Arabic Dua size: {arabicFontSize}</TextSettings>
+      <TextSettings>Arabic Dua size: <Text style={{color: "#999"}}>{arabicFontSize}</Text></TextSettings>
       <View style={styles.controls}>
         <TouchableOpacity
+          style={styles.button}
           onPress={() => setArabicFontSize(arabicFontSize + 2)}><TextSettings>+</TextSettings></TouchableOpacity>
-        <TouchableOpacity onPress={() => setArabicFontSize(36)}><TextSettings>Default</TextSettings></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => setArabicFontSize(36)}><TextSettings>Default</TextSettings></TouchableOpacity>
         <TouchableOpacity
+          style={styles.button}
           onPress={() => setArabicFontSize(Math.max(20, arabicFontSize - 2))}><TextSettings>-</TextSettings></TouchableOpacity>
       </View>
     </View>
 
     <View style={styles.settingRow}>
-      <TextSettings>Translation size {translationFontSize}</TextSettings>
+      <TextSettings>Translation size <Text style={{color: "#999"}}>{translationFontSize}</Text></TextSettings>
       <View style={styles.controls}>
-        <TouchableOpacity onPress={() => setTranslationFontSize(translationFontSize + 2)}><TextSettings>+</TextSettings></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => setTranslationFontSize(translationFontSize + 2)}><TextSettings>+</TextSettings></TouchableOpacity>
         <TouchableOpacity
+          style={styles.button}
           onPress={() => setTranslationFontSize(24)}><TextSettings>Default</TextSettings></TouchableOpacity>
         <TouchableOpacity
+          style={styles.button}
           onPress={() => setTranslationFontSize(Math.max(20, translationFontSize - 2))}><TextSettings>-</TextSettings></TouchableOpacity>
       </View>
     </View>
-
-    {/*<View style={styles.toggleRow}>*/}
-    {/*  <TextSettings>Hide Translation</TextSettings>*/}
-    {/*  <Switch value={translationHidden} onValueChange={setHideTranslation}/>*/}
-    {/*</View>*/}
-
-    {/*<View style={styles.toggleRow}>*/}
-    {/*  <TextSettings>Hide Dua</TextSettings>*/}
-    {/*  <Switch value={duaHidden} onValueChange={setHideDua}/>*/}
-    {/*</View>*/}
-
   </>
 }
 
@@ -64,5 +57,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginVertical: 10,
+  },
+  button: {
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: '#ccc',
   },
 });

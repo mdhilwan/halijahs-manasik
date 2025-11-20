@@ -4,12 +4,16 @@ import { Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { DuaListScreenType } from "@/app/types";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
+import {LanguageEnums} from "@/app/contexts/enums";
+import {IconSymbol} from "@/components/ui/icon-symbol";
 
 export default function DuaListScreen({ setScreen, duas, setSelectedDua, category }: DuaListScreenType) {
   const {language} = useLanguage()
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity onPress={() => setScreen("home")}><Text style={styles.back}>← Back</Text></TouchableOpacity>
+      <TouchableOpacity onPress={() => setScreen("home")}>
+        <IconSymbol size={20} name="chevron.backward" color={"black"}/>
+      </TouchableOpacity>
       <Text style={styles.title}>{category} Du’a List</Text>
       <ScrollView>
         {duas.map((dua, j) => (
@@ -24,7 +28,7 @@ export default function DuaListScreen({ setScreen, duas, setSelectedDua, categor
               setScreen("duaDetail");
             }}
           >
-            <Text style={styles.listText}>{language === 'en' ? dua.titleEn : dua.titleMy}</Text>
+            <Text style={styles.listText}>{language === LanguageEnums.EN ? dua.titleEn : dua.titleMy}</Text>
           </TouchableOpacity>
         ))}
       </ScrollView>

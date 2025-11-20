@@ -1,13 +1,28 @@
 import React from 'react';
 import {Text, TouchableOpacity, StyleSheet, View} from 'react-native';
-import {HomeScreenType} from "@/app/types";
+import {DuaType, HomeScreenType} from "@/app/types";
 import duas from '@/assets/data/duas.json';
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import {Image} from "expo-image";
 import {Colors} from "@/constants/theme";
+import {useLanguage} from "@/app/contexts/LanguageContext";
 
-const buttons = [
-  {title: 'Intention'},
+type buttonType = {
+  title: {
+    en: string,
+    my: string
+  }
+} | {
+  title: string
+}
+
+const buttons: buttonType[] = [
+  {
+    title: {
+      en: 'Intention',
+      my: 'Niat'
+    }
+  },
   {title: 'Talbiyah'},
   {title: 'Masjidil Haram'},
   {title: 'Tawaf'},
@@ -17,9 +32,17 @@ const buttons = [
   {title: 'Madinah'},
 ];
 
-export default function HomeScreen({setScreen, setDuas, setCategory, setSelectedDua}: HomeScreenType): React.JSX.Element {
+export default function HomeScreen({
+                                     setScreen,
+                                     setDuas,
+                                     setCategory,
+                                     setSelectedDua
+                                   }: HomeScreenType): React.JSX.Element {
+
+  const {language} = useLanguage();
+
   const loadDuas = async (category: string) => {
-    const result = duas.filter(d => d.category.includes(category.toLowerCase()));
+    const result = duas.filter((d: DuaType) => d.categoryKey.includes(category.toLowerCase()));
     if (result.length === 1) {
       setDuas(result);
       setCategory(category);
@@ -50,9 +73,15 @@ export default function HomeScreen({setScreen, setDuas, setCategory, setSelected
           <TouchableOpacity
             key={index}
             style={styles.button}
-            onPress={() => loadDuas(btn.title)}
+            onPress={() => {
+              if (typeof btn.title === 'string') {
+                loadDuas(btn.title)
+              } else {
+                loadDuas(btn.title[language])
+              }
+            }}
           >
-            <Text style={styles.buttonText}>{btn.title}</Text>
+            <Text style={styles.buttonText}>{typeof btn.title === 'string' ? btn.title : btn.title[language]}</Text>
           </TouchableOpacity>
         )}
       </View>

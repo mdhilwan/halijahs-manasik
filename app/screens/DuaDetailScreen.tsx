@@ -7,6 +7,7 @@ import {DuaPlayer} from "@/components/controls/DuaPlayer";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {useFontSize} from "@/app/contexts/FontSettingsContext";
 import SettingsModal from "@/components/settings-modal";
+import {IconSymbol} from "@/components/ui/icon-symbol";
 
 function ArabicText({dua}: {dua: DuaEngMalayArabicType}) {
   const {arabicFontSize, duaHidden} = useFontSize()
@@ -68,7 +69,7 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
             setScreen('duaList');
           }
         }}>
-          <Text style={styles.back}>← Back</Text>
+          <IconSymbol size={20} name="chevron.backward" color={"black"}/>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => setShowSettings(true)}>

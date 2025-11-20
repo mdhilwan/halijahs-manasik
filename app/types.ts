@@ -1,4 +1,5 @@
 import React from "react";
+import {LanguageEnums} from "@/app/contexts/enums";
 
 export type HomeScreenType = {
   setScreen: React.Dispatch<React.SetStateAction<string>>;
@@ -19,7 +20,7 @@ export type DuaType = {
   titleEn: string;
   titleMy: string;
   doa: DuaEngMalayArabicType[];
-  category: string[];
+  categoryKey: string[];
   audio: string;
 }
 
@@ -51,4 +52,4 @@ export type PlayStopButtonType = {
   setSelectedDua: React.Dispatch<React.SetStateAction<SelectedDuaType>>
 }
 
-export type Language = 'en' | 'my' | 'none';
+export type LanguageType = LanguageEnums.EN | LanguageEnums.MY;
