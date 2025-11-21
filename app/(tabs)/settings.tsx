@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { Collapsible } from '@/components/ui/collapsible';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
@@ -8,9 +8,22 @@ import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import {API_ROOT, BROADCAST, START} from "@/constants/router-path";
 
 export default function Settings() {
   const { language, setLanguage } = useLanguage();
+
+  const startBroadcast = async () => {
+    // mock the google login
+    const res = await fetch(`${API_ROOT}/${BROADCAST}/${START}`, { method: 'POST' });
+    try {
+      const json = await res.json();
+      console.log(json)
+    } catch (e) {
+      console.log(e)
+    }
+  };
 
   return (
     <ParallaxScrollView
@@ -45,6 +58,12 @@ export default function Settings() {
       </Collapsible>
       <Collapsible title="Font Size">
         <SettingsView/>
+      </Collapsible>
+      <Collapsible title={"Host Signin"}>
+        <Text>Sign in with Google First</Text>
+        <FontAwesome.Button name="wifi" backgroundColor="#4285F4" style={{fontFamily: "Roboto"}} onPress={startBroadcast}>
+          Begin Broadcast
+        </FontAwesome.Button>
       </Collapsible>
     </ParallaxScrollView>
   );

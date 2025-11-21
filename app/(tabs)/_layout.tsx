@@ -7,7 +7,7 @@ import {Colors} from '@/constants/theme';
 import {useColorScheme} from '@/hooks/use-color-scheme';
 import {LanguageProvider} from "@/app/contexts/LanguageContext";
 import {FontSettingsProvider} from "@/app/contexts/FontSettingsContext";
-import {WifiProvider} from "@/app/contexts/WifiContext";
+import {BroadcastProvider} from "@/app/contexts/BroadcastContext";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -15,7 +15,7 @@ export default function TabLayout() {
   return (
     <FontSettingsProvider>
       <LanguageProvider>
-        <WifiProvider>
+        <BroadcastProvider>
           <Tabs
             screenOptions={{
               tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -44,7 +44,7 @@ export default function TabLayout() {
               }}
             />
           </Tabs>
-        </WifiProvider>
+        </BroadcastProvider>
       </LanguageProvider>
     </FontSettingsProvider>
   );

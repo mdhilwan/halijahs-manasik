@@ -6,7 +6,7 @@ import ParallaxScrollView from "@/components/parallax-scroll-view";
 import {Image} from "expo-image";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
-import {useWifi} from "@/app/contexts/WifiContext";
+import {useBroadcast} from "@/app/contexts/BroadcastContext";
 
 type buttonType = {
   title: {
@@ -41,7 +41,7 @@ export default function HomeScreen({
                                    }: HomeScreenType): React.JSX.Element {
 
   const {language} = useLanguage();
-  const {ssid} = useWifi()
+  const {ssid} = useBroadcast()
 
   const loadDuas = async (category: string) => {
     const result = duas.filter((d: DuaType) => d.categoryKey.includes(category.toLowerCase()));
