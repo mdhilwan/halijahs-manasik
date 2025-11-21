@@ -10,7 +10,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentier": "com.anonymous.halijahsmanasik",
+      "bundleIdentier": "com.halijahs.manasik",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -24,7 +24,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.anonymous.halijahsmanasik"
+      "package": "com.halijahs.manasik"
     },
     "web": {
       "output": "static",
