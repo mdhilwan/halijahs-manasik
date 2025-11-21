@@ -1,7 +1,6 @@
 import HomeScreen from "@/app/screens/HomeScreen";
 import DuaListScreen from "@/app/screens/DuaListScreen";
 import DuaDetailScreen from "@/app/screens/DuaDetailScreen";
-import MapScreen from "@/app/screens/MapScreen";
 import React, {useState} from "react";
 import {SelectedDuaType} from "@/app/types";
 
@@ -18,8 +17,6 @@ export default function AppNavigator() {
       return <DuaListScreen setScreen={setScreen} duas={duas} category={category} setSelectedDua={setSelectedDua} />
     case "duaDetail":
       return <DuaDetailScreen setScreen={setScreen} selectedDua={selectedDua} setSelectedDua={setSelectedDua} />;
-    case "map":
-      return <MapScreen setScreen={setScreen} />;
     default:
       return null;
   }
