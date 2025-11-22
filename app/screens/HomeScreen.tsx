@@ -67,7 +67,18 @@ export default function HomeScreen({
         />
       }
     >
-      <Text style={styles.title}>Manasik App by Halijah {ssid}</Text>
+      <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={styles.title}>Manasik App by Halijah</Text>
+        {ssid === 'Halijah-LAN' && (
+          <View style={{
+            width: 14,
+            height: 14,
+            borderRadius: 7,
+            backgroundColor: 'green',
+            marginLeft: 8
+          }} />
+        )}
+      </View>
 
       <View style={styles.grid}>
         {buttons.map((btn, index) =>
@@ -102,7 +113,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
-  title: {fontSize: 26, fontWeight: 'bold', marginBottom: 30, textAlign: 'center'},
+  title: {fontSize: 26, fontWeight: 'bold', textAlign: 'center'},
   button: {
     width: '48%',
     height: 75,

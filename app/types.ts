@@ -1,5 +1,5 @@
 import React from "react";
-import {LanguageEnums} from "@/app/contexts/enums";
+import {LanguageEnums} from "@/constants/language-enums";
 
 export type HomeScreenType = {
   setScreen: React.Dispatch<React.SetStateAction<string>>;

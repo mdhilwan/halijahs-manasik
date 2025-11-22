@@ -1,7 +1,5 @@
 import React, {createContext, useContext, useEffect, useState} from 'react';
-import {API_ROOT, BROADCAST, HEALTH, STATUS} from "@/constants/router-path";
-
-const HalijahManasikAppLAN = "Halijah-Manasik-App-LAN"
+import {API_ROOT, BROADCAST, HEALTH, PRIVATE_LAN, STATUS} from "@/constants/router-path";
 
 interface WifiContextType {
   ssid: undefined | string;
@@ -22,8 +20,9 @@ export function BroadcastProvider({children}: { children: React.ReactNode }) {
       const res = await fetch(`${API_ROOT}/${HEALTH}`);
       if (res.ok) {
         const json = await res.json();
-        if (json?.message?.ok === true) {
-          setSsid(HalijahManasikAppLAN);
+        console.log(json)
+        if (json?.OK === true) {
+          setSsid(PRIVATE_LAN);
           return;
         }
       }

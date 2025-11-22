@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, TextInput, View } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { Collapsible } from '@/components/ui/collapsible';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
@@ -8,20 +8,50 @@ import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import {API_ROOT, BROADCAST, START} from "@/constants/router-path";
+import { useState } from 'react';
+import {API_ROOT, BROADCAST, LOGIN, START, STOP} from "@/constants/router-path";
 
 export default function Settings() {
   const { language, setLanguage } = useLanguage();
+  const [otp, setOtp] = useState('');
+  const [hostSignedIn, setHostSignedIn] = useState(false);
+  const [broadcasting, setBroadcasting] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const startBroadcast = async () => {
-    // mock the google login
-    const res = await fetch(`${API_ROOT}/${BROADCAST}/${START}`, { method: 'POST' });
+  const signInHost = async () => {
+    setLoading(true);
     try {
+      const res = await fetch(`${API_ROOT}/${LOGIN}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ otp }),
+      });
       const json = await res.json();
-      console.log(json)
+
+      if (json?.success) {
+        setHostSignedIn(true);
+      }
     } catch (e) {
-      console.log(e)
+      console.log('Sign in error', e);
+    }
+    setLoading(false);
+  };
+
+  const startBroadcastHandler = async () => {
+    try {
+      await fetch(`${API_ROOT}/${BROADCAST}/${START}`, { method: 'POST' });
+      setBroadcasting(true);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const stopBroadcastHandler = async () => {
+    try {
+      await fetch(`${API_ROOT}/${BROADCAST}/${STOP}`, { method: 'POST' });
+      setBroadcasting(false);
+    } catch (e) {
+      console.log(e);
     }
   };
 
@@ -60,10 +90,71 @@ export default function Settings() {
         <SettingsView/>
       </Collapsible>
       <Collapsible title={"Host Signin"}>
-        <Text>Sign in with Google First</Text>
-        <FontAwesome.Button name="wifi" backgroundColor="#4285F4" style={{fontFamily: "Roboto"}} onPress={startBroadcast}>
-          Begin Broadcast
-        </FontAwesome.Button>
+        <View style={{ gap: 12, padding: 10 }}>
+          {!hostSignedIn && (
+            <>
+              <TextInput
+                value={otp}
+                onChangeText={setOtp}
+                placeholder="Enter OTP"
+                keyboardType="numeric"
+                style={{
+                  borderWidth: 1,
+                  borderColor: '#ccc',
+                  padding: 10,
+                  borderRadius: 8,
+                }}
+              />
+
+              <TouchableOpacity
+                onPress={signInHost}
+                disabled={loading}
+                style={{
+                  backgroundColor: loading ? '#999' : '#0085FF',
+                  padding: 12,
+                  borderRadius: 8,
+                }}
+              >
+                <Text style={{ color: 'white', textAlign: 'center', fontFamily: Fonts.rounded }}>
+                  Sign In
+                </Text>
+              </TouchableOpacity>
+            </>
+          )}
+
+          {/* Host Signed In */}
+          {hostSignedIn && !broadcasting && (
+            <TouchableOpacity
+              onPress={startBroadcastHandler}
+              style={{
+                backgroundColor: '#28A745',
+                padding: 12,
+                borderRadius: 8,
+              }}
+            >
+              <Text style={{ color: 'white', textAlign: 'center', fontFamily: Fonts.rounded }}>
+                Begin Broadcast
+              </Text>
+            </TouchableOpacity>
+          )}
+
+          {/* Broadcasting */}
+          {broadcasting && (
+            <TouchableOpacity
+              onPress={stopBroadcastHandler}
+              style={{
+                backgroundColor: '#DC3545',
+                padding: 12,
+                borderRadius: 8,
+              }}
+            >
+              <Text style={{ color: 'white', textAlign: 'center', fontFamily: Fonts.rounded }}>
+                Stop Broadcast
+              </Text>
+            </TouchableOpacity>
+          )}
+
+        </View>
       </Collapsible>
     </ParallaxScrollView>
   );

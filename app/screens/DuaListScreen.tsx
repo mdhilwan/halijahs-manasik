@@ -4,7 +4,7 @@ import { Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { DuaListScreenType } from "@/app/types";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
-import {LanguageEnums} from "@/app/contexts/enums";
+import {LanguageEnums} from "@/constants/language-enums";
 import {IconSymbol} from "@/components/ui/icon-symbol";
 
 export default function DuaListScreen({ setScreen, duas, setSelectedDua, category }: DuaListScreenType) {

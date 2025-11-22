@@ -1,7 +1,7 @@
 import React, {createContext, useContext, useEffect, useState} from 'react';
 import {LanguageType} from "@/app/types";
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {LanguageEnums} from "@/app/contexts/enums";
+import {LanguageEnums} from "@/constants/language-enums";
 
 interface LanguageContextType {
   language: LanguageType;
