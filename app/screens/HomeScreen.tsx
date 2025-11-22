@@ -7,6 +7,8 @@ import {Image} from "expo-image";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {useBroadcast} from "@/app/contexts/BroadcastContext";
+import {LiveIndicator} from "@/components/live-indicator";
+import {BroadcastIndicator} from "@/components/broadcast-indicator";
 
 type buttonType = {
   title: {
@@ -41,7 +43,6 @@ export default function HomeScreen({
                                    }: HomeScreenType): React.JSX.Element {
 
   const {language} = useLanguage();
-  const {ssid} = useBroadcast()
 
   const loadDuas = async (category: string) => {
     const result = duas.filter((d: DuaType) => d.categoryKey.includes(category.toLowerCase()));
@@ -69,16 +70,9 @@ export default function HomeScreen({
     >
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
         <Text style={styles.title}>Manasik App by Halijah</Text>
-        {ssid === 'Halijah-LAN' && (
-          <View style={{
-            width: 14,
-            height: 14,
-            borderRadius: 7,
-            backgroundColor: 'green',
-            marginLeft: 8
-          }} />
-        )}
+        <LiveIndicator/>
       </View>
+      <BroadcastIndicator/>
 
       <View style={styles.grid}>
         {buttons.map((btn, index) =>

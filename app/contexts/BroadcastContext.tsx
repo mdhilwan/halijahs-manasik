@@ -1,26 +1,30 @@
 import React, {createContext, useContext, useEffect, useState} from 'react';
-import {API_ROOT, BROADCAST, HEALTH, PRIVATE_LAN, STATUS} from "@/constants/router-path";
+import {API_ROOT, BROADCAST, HEALTH, PRIVATE_LAN, CURRENT} from "@/constants/router-path";
 
 interface WifiContextType {
   ssid: undefined | string;
-  broadcasting: boolean;
+  broadcastState: 'idle' | 'live' | false;
+  ifIamHost: boolean,
+  setIfIamHost: (iamHost: boolean) => void;
 }
 
 const BroadcastContext = createContext<WifiContextType>({
   ssid: undefined,
-  broadcasting: false,
+  broadcastState: false,
+  ifIamHost: false,
+  setIfIamHost: () => {},
 });
 
 export function BroadcastProvider({children}: { children: React.ReactNode }) {
   const [ssid, setSsid] = useState<string | undefined>(undefined);
-  const [broadcasting, setBroadcasting] = useState<boolean>(false);
+  const [broadcastState, setBroadcastState] = useState<'idle' | 'live' | false>(false);
+  const [ifIamHost, setIfIamHostState] = useState<boolean>(false);
 
   async function updateSSID() {
     try {
       const res = await fetch(`${API_ROOT}/${HEALTH}`);
       if (res.ok) {
         const json = await res.json();
-        console.log(json)
         if (json?.OK === true) {
           setSsid(PRIVATE_LAN);
           return;
@@ -34,17 +38,24 @@ export function BroadcastProvider({children}: { children: React.ReactNode }) {
 
   async function getBroadcastState() {
     try {
-      const res = await fetch(`${API_ROOT}/${BROADCAST}/${STATUS}`);
+      const res = await fetch(`${API_ROOT}/${BROADCAST}/${CURRENT}`);
       if (res.ok) {
         const json = await res.json();
-        if (json?.broadcasting === true) {
-          setBroadcasting(json.broadcasting);
-        }
+        setBroadcastState(json.broadcasting);
       }
-    } catch {
-      setBroadcasting(false)
+    } catch(e: any) {
+      console.log(e)
+      setBroadcastState(false);
     }
   }
+
+  const setIfIamHost = async (iamHost: boolean) => {
+    try {
+      setIfIamHostState(iamHost);
+    } catch (e) {
+      console.warn('Error saving language:', e);
+    }
+  };
 
   useEffect(() => {
     updateSSID();
@@ -56,7 +67,7 @@ export function BroadcastProvider({children}: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <BroadcastContext.Provider value={{ssid, broadcasting}}>
+    <BroadcastContext.Provider value={{ssid, broadcastState, setIfIamHost, ifIamHost}}>
       {children}
     </BroadcastContext.Provider>
   );

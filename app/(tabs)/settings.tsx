@@ -1,21 +1,22 @@
-import {StyleSheet, Text, TouchableOpacity, TextInput, View } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import { Collapsible } from '@/components/ui/collapsible';
+import {StyleSheet, Text, TouchableOpacity, TextInput, View} from 'react-native';
+import {Picker} from '@react-native-picker/picker';
+import {Collapsible} from '@/components/ui/collapsible';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Fonts } from '@/constants/theme';
-import { useLanguage } from "@/app/contexts/LanguageContext";
+import {ThemedText} from '@/components/themed-text';
+import {ThemedView} from '@/components/themed-view';
+import {IconSymbol} from '@/components/ui/icon-symbol';
+import {Fonts} from '@/constants/theme';
+import {useLanguage} from "@/app/contexts/LanguageContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
-import { useState } from 'react';
+import {useState} from 'react';
 import {API_ROOT, BROADCAST, LOGIN, START, STOP} from "@/constants/router-path";
+import {useBroadcast} from "@/app/contexts/BroadcastContext";
 
 export default function Settings() {
-  const { language, setLanguage } = useLanguage();
+  const {broadcastState, setIfIamHost} = useBroadcast()
+  const {language, setLanguage} = useLanguage();
   const [otp, setOtp] = useState('');
   const [hostSignedIn, setHostSignedIn] = useState(false);
-  const [broadcasting, setBroadcasting] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const signInHost = async () => {
@@ -23,13 +24,14 @@ export default function Settings() {
     try {
       const res = await fetch(`${API_ROOT}/${LOGIN}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ otp }),
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({otp}),
       });
       const json = await res.json();
 
       if (json?.success) {
         setHostSignedIn(true);
+        setIfIamHost(true);
       }
     } catch (e) {
       console.log('Sign in error', e);
@@ -39,8 +41,7 @@ export default function Settings() {
 
   const startBroadcastHandler = async () => {
     try {
-      await fetch(`${API_ROOT}/${BROADCAST}/${START}`, { method: 'POST' });
-      setBroadcasting(true);
+      await fetch(`${API_ROOT}/${BROADCAST}/${START}`, {method: 'POST'});
     } catch (e) {
       console.log(e);
     }
@@ -48,8 +49,7 @@ export default function Settings() {
 
   const stopBroadcastHandler = async () => {
     try {
-      await fetch(`${API_ROOT}/${BROADCAST}/${STOP}`, { method: 'POST' });
-      setBroadcasting(false);
+      await fetch(`${API_ROOT}/${BROADCAST}/${STOP}`, {method: 'POST'});
     } catch (e) {
       console.log(e);
     }
@@ -57,7 +57,7 @@ export default function Settings() {
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{light: '#D0D0D0', dark: '#353636'}}
       headerImage={
         <IconSymbol
           size={310}
@@ -80,17 +80,42 @@ export default function Settings() {
         <Picker
           selectedValue={language}
           onValueChange={(value) => setLanguage(value)}
-          style={{ width: "100%" }}
+          style={{width: "100%"}}
         >
-          <Picker.Item label="English" value="en" />
-          <Picker.Item label="Malay" value="my" />
+          <Picker.Item label="English" value="en"/>
+          <Picker.Item label="Malay" value="my"/>
         </Picker>
       </Collapsible>
       <Collapsible title="Font Size">
         <SettingsView/>
       </Collapsible>
-      <Collapsible title={"Host Signin"}>
-        <View style={{ gap: 12, padding: 10 }}>
+      {(hostSignedIn && broadcastState) && <View>
+        {(broadcastState === 'idle') && (
+          <TouchableOpacity
+            onPress={startBroadcastHandler}
+            style={[styles.broadcastBtn, {
+              backgroundColor: '#28A745'
+            }]}
+          >
+            <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
+              Begin Broadcast
+            </Text>
+          </TouchableOpacity>
+        )}
+
+        {(broadcastState === 'live') && (
+          <TouchableOpacity
+            onPress={stopBroadcastHandler}
+            style={styles.broadcastBtn}
+          >
+            <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
+              Stop Broadcast
+            </Text>
+          </TouchableOpacity>
+        )}
+      </View>}
+      {!broadcastState && <Collapsible title={"Host Signin"}>
+        <View style={{gap: 12, padding: 10}}>
           {!hostSignedIn && (
             <>
               <TextInput
@@ -115,47 +140,15 @@ export default function Settings() {
                   borderRadius: 8,
                 }}
               >
-                <Text style={{ color: 'white', textAlign: 'center', fontFamily: Fonts.rounded }}>
+                <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
                   Sign In
                 </Text>
               </TouchableOpacity>
             </>
           )}
 
-          {/* Host Signed In */}
-          {hostSignedIn && !broadcasting && (
-            <TouchableOpacity
-              onPress={startBroadcastHandler}
-              style={{
-                backgroundColor: '#28A745',
-                padding: 12,
-                borderRadius: 8,
-              }}
-            >
-              <Text style={{ color: 'white', textAlign: 'center', fontFamily: Fonts.rounded }}>
-                Begin Broadcast
-              </Text>
-            </TouchableOpacity>
-          )}
-
-          {/* Broadcasting */}
-          {broadcasting && (
-            <TouchableOpacity
-              onPress={stopBroadcastHandler}
-              style={{
-                backgroundColor: '#DC3545',
-                padding: 12,
-                borderRadius: 8,
-              }}
-            >
-              <Text style={{ color: 'white', textAlign: 'center', fontFamily: Fonts.rounded }}>
-                Stop Broadcast
-              </Text>
-            </TouchableOpacity>
-          )}
-
         </View>
-      </Collapsible>
+      </Collapsible>}
     </ParallaxScrollView>
   );
 }
@@ -171,4 +164,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 8,
   },
+  broadcastBtn: {
+    backgroundColor: '#FF3B30',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 30,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+    elevation: 3
+  }
 });
