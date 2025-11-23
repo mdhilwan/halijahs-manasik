@@ -44,7 +44,7 @@ export function BroadcastProvider({children}: { children: React.ReactNode }) {
         setBroadcastState(json.broadcasting);
       }
     } catch(e: any) {
-      console.log(e)
+      console.log("Error: ", e)
       setBroadcastState(false);
     }
   }

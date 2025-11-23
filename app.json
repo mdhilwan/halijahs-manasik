@@ -40,14 +40,14 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#ffffff"
           }
         }
       ],
       "expo-sqlite",
       "expo-web-browser",
       "expo-font",
-      "@react-native-google-signin/google-signin"
+      "@config-plugins/react-native-webrtc"
     ],
     "experiments": {
       "typedRoutes": true,

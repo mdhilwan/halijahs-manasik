@@ -11,6 +11,7 @@ import {SettingsView} from "@/components/settings-modal/settings-view";
 import {useState} from 'react';
 import {API_ROOT, BROADCAST, LOGIN, START, STOP} from "@/constants/router-path";
 import {useBroadcast} from "@/app/contexts/BroadcastContext";
+import {Broadcaster} from "@/components/controls/broadcaster";
 
 export default function Settings() {
   const {broadcastState, setIfIamHost} = useBroadcast()
@@ -37,22 +38,6 @@ export default function Settings() {
       console.log('Sign in error', e);
     }
     setLoading(false);
-  };
-
-  const startBroadcastHandler = async () => {
-    try {
-      await fetch(`${API_ROOT}/${BROADCAST}/${START}`, {method: 'POST'});
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
-  const stopBroadcastHandler = async () => {
-    try {
-      await fetch(`${API_ROOT}/${BROADCAST}/${STOP}`, {method: 'POST'});
-    } catch (e) {
-      console.log(e);
-    }
   };
 
   return (
@@ -90,29 +75,7 @@ export default function Settings() {
         <SettingsView/>
       </Collapsible>
       {(hostSignedIn && broadcastState) && <View>
-        {(broadcastState === 'idle') && (
-          <TouchableOpacity
-            onPress={startBroadcastHandler}
-            style={[styles.broadcastBtn, {
-              backgroundColor: '#28A745'
-            }]}
-          >
-            <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
-              Begin Broadcast
-            </Text>
-          </TouchableOpacity>
-        )}
-
-        {(broadcastState === 'live') && (
-          <TouchableOpacity
-            onPress={stopBroadcastHandler}
-            style={styles.broadcastBtn}
-          >
-            <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
-              Stop Broadcast
-            </Text>
-          </TouchableOpacity>
-        )}
+        <Broadcaster/>
       </View>}
       {!broadcastState && <Collapsible title={"Host Signin"}>
         <View style={{gap: 12, padding: 10}}>

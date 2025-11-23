@@ -3,7 +3,7 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import {Text, TouchableOpacity, StyleSheet, View, ScrollView} from 'react-native';
 import {DuaDetailType, DuaEngMalayArabicType, DuaType} from "@/app/types";
 import {useFonts} from "expo-font";
-import {DuaPlayer} from "@/components/controls/DuaPlayer";
+import {DuaPlayer} from "@/components/controls/dua-player";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {useFontSize} from "@/app/contexts/FontSettingsContext";
 import SettingsModal from "@/components/settings-modal";
