@@ -2,17 +2,15 @@ import React, {useRef, useState} from 'react';
 import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
 import * as FileSystem from 'expo-file-system/legacy';
 import {Audio, InterruptionModeAndroid, InterruptionModeIOS} from 'expo-av';
-import {useBroadcast} from "@/app/contexts/BroadcastContext";
 import {Fonts} from "@/constants/theme";
 import {API_ROOT, BROADCAST, START, STOP} from "@/constants/router-path";
 import {UPLOAD_INTERVAL_MS} from "@/constants/broadcast-time";
 
 export const Broadcaster = () => {
-  const {broadcastState} = useBroadcast()
   const recordingRef = useRef<Audio.Recording | null>(null);
   const [isBroadcasting, setIsBroadcasting] = useState(false);
 
-  let BROADCASTING_FLAG = false
+  const BROADCASTING_FLAG = useRef(false);
 
   async function startRecordingLoop() {
     try {
@@ -27,7 +25,7 @@ export const Broadcaster = () => {
       });
 
       setIsBroadcasting(true);
-      BROADCASTING_FLAG = true;
+      BROADCASTING_FLAG.current = true;
       startChunkCycle(); // start the cycle
     } catch (e) {
       console.error("startRecordingLoop error", e);
@@ -43,7 +41,7 @@ export const Broadcaster = () => {
         const rec = new Audio.Recording();
         recordingRef.current = rec;
 
-        await rec.prepareToRecordAsync(Audio.RecordingOptionsPresets.LOW_QUALITY);
+        await rec.prepareToRecordAsync(Audio.RecordingOptionsPresets.HIGH_QUALITY);
         await rec.startAsync();
 
         // Wait for the chunk duration
@@ -69,21 +67,21 @@ export const Broadcaster = () => {
 
           // Optionally delete the temp file
           try {
-            await FileSystem.deleteAsync(uri, { idempotent: true });
+            await FileSystem.deleteAsync(uri, {idempotent: true});
           } catch (e) {
             console.log("Error:", e)
           }
         }
 
         // If still broadcasting, schedule the next chunk
-        if (BROADCASTING_FLAG) {
+        if (BROADCASTING_FLAG.current) {
           // small delay before starting next chunk to allow system to stabilize (tune if needed)
           recordOnce();
         }
       } catch (err) {
-        console.error("recordOnce error", err);
+        // console.error("recordOnce error", err);
         // If error and still broadcasting, try to restart after short delay
-        if (BROADCASTING_FLAG) setTimeout(recordOnce, 500);
+        if (BROADCASTING_FLAG.current) setTimeout(recordOnce, 500);
       }
     }
 
@@ -91,8 +89,8 @@ export const Broadcaster = () => {
   }
 
   async function stopBroadcasting() {
-    console.log('Func: stopBroadcasting')
     setIsBroadcasting(false);
+    BROADCASTING_FLAG.current = false
     try {
       await fetch(`${API_ROOT}/${BROADCAST}/${STOP}`, {method: 'POST'});
       if (recordingRef.current) {
@@ -102,8 +100,6 @@ export const Broadcaster = () => {
         }
         recordingRef.current = null;
       }
-      // also call router stop endpoint
-      await fetch(`${API_ROOT}/broadcast/stop`, {method: 'POST'});
     } catch (e) {
       console.error('stopBroadcasting error', e);
     }
@@ -112,31 +108,27 @@ export const Broadcaster = () => {
   return (
     <View>
       {!isBroadcasting && (<>
-          {(broadcastState === 'idle') && (
-            <TouchableOpacity
-              onPress={startRecordingLoop}
-              style={[styles.broadcastBtn, {
-                backgroundColor: '#28A745'
-              }]}
-            >
-              <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
-                Begin Broadcast
-              </Text>
-            </TouchableOpacity>
-          )}
+          <TouchableOpacity
+            onPress={startRecordingLoop}
+            style={[styles.broadcastBtn, {
+              backgroundColor: '#28A745'
+            }]}
+          >
+            <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
+              Begin Broadcast
+            </Text>
+          </TouchableOpacity>
         </>
       )}
       {isBroadcasting && (
-        <>{(broadcastState === 'live') && (
-          <TouchableOpacity
-            onPress={stopBroadcasting}
-            style={styles.broadcastBtn}
-          >
-            <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
-              Stop Broadcast
-            </Text>
-          </TouchableOpacity>
-        )}</>
+        <TouchableOpacity
+          onPress={stopBroadcasting}
+          style={styles.broadcastBtn}
+        >
+          <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
+            Stop Broadcast
+          </Text>
+        </TouchableOpacity>
       )}
     </View>
   );

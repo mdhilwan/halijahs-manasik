@@ -6,7 +6,7 @@ import {useLiveListener} from "@/hooks/use-live-listener";
 export const BroadcastIndicator = () => {
   const {broadcastState, ifIamHost} = useBroadcast()
   const [listening, setListening] = useState<boolean>(false)
-  useLiveListener(listening);
+  useLiveListener(listening, broadcastState);
 
   return <>
     {(broadcastState === 'live' && !ifIamHost) &&

@@ -4,7 +4,7 @@ import { Audio } from 'expo-av';
 import {API_ROOT, AUDIO, BROADCAST} from "@/constants/router-path";
 import {POLL_INTERVAL} from "@/constants/broadcast-time";
 
-export function useLiveListener(isEnabled: boolean) {
+export function useLiveListener(isEnabled: boolean, broadcastState: false | "idle" | "live") {
   const lastChunkIdRef = useRef<number>(0);
   const pollRef = useRef<number | null>(null);
   const playingSoundRef = useRef<Audio.Sound | null>(null);
@@ -26,7 +26,7 @@ export function useLiveListener(isEnabled: boolean) {
         lastChunkIdRef.current = chunkId;
 
         // write base64 to temp file
-        const filename = `${FileSystem.cacheDirectory}live_chunk_${chunkId}.3gp`;
+        const filename = `${FileSystem.cacheDirectory}live_chunk_${chunkId}.m4a`;
 
         await FileSystem.writeAsStringAsync(filename, data, { encoding: FileSystem.EncodingType.Base64 });
 
@@ -47,7 +47,7 @@ export function useLiveListener(isEnabled: boolean) {
         // optional: delete after a bit to free storage
         setTimeout(() => {
           FileSystem.deleteAsync(filename, { idempotent: true }).catch(() => {});
-        }, 5000);
+        }, 10000);
       } catch (e) {
         console.log("Poll Once Error: ", e)
       }
@@ -66,7 +66,7 @@ export function useLiveListener(isEnabled: boolean) {
       }
     }
 
-    if (isEnabled) {
+    if (isEnabled && broadcastState === 'live') {
       Audio.setAudioModeAsync({
         allowsRecordingIOS: false,
         playsInSilentModeIOS: true,
@@ -83,5 +83,5 @@ export function useLiveListener(isEnabled: boolean) {
         playingSoundRef.current.unloadAsync().catch(() => {});
       }
     };
-  }, [isEnabled]);
+  }, [isEnabled, broadcastState]);
 }
