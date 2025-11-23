@@ -1,14 +1,32 @@
 import {useBroadcast} from "@/app/contexts/BroadcastContext";
 import {Text, View, TouchableOpacity, StyleSheet} from "react-native";
-import {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useLiveListener} from "@/hooks/use-live-listener";
+import {Fonts} from "@/constants/theme";
 
 export const BroadcastIndicator = () => {
-  const {broadcastState, ifIamHost} = useBroadcast()
+  const {broadcastState, ifIamHost, stopBroadcasting, startBroadcasting} = useBroadcast()
   const [listening, setListening] = useState<boolean>(false)
+  const [wasListening, setWasListening] = useState<boolean>(false)
   useLiveListener(listening, broadcastState);
 
+  useEffect(() => {
+    if (broadcastState !== 'live' && !ifIamHost && listening) {
+      setListening(false)
+    }
+    if (listening) {
+      setWasListening(true)
+    }
+  }, [broadcastState, ifIamHost, listening]);
+
   return <>
+    {(wasListening && broadcastState !== 'live') &&
+        <View style={{alignItems: 'center'}}>
+            <Text style={[styles.broadcastBtn, { backgroundColor: 'grey', color: 'white'}]}>
+                Broadcast stopped
+            </Text>
+        </View>
+    }
     {(broadcastState === 'live' && !ifIamHost) &&
         <View style={{alignItems: 'center'}}>
           {!listening ? (
@@ -26,9 +44,22 @@ export const BroadcastIndicator = () => {
     }
     {(broadcastState === 'live' && ifIamHost) &&
         <View style={{alignItems: 'center'}}>
-            <Text style={{fontSize: 16, color: '#FF3B30'}}>
-                Stop Broadcasting in the Settings
-            </Text>
+            <TouchableOpacity onPress={() => stopBroadcasting()}
+                              style={styles.broadcastBtn}>
+                <Text style={{color: 'white', fontSize: 16, fontWeight: '600'}}>Stop Broadcasting</Text>
+            </TouchableOpacity>
+        </View>
+    }
+    {(broadcastState !== 'live' && ifIamHost) &&
+        <View style={{alignItems: 'center'}}>
+            <TouchableOpacity onPress={() => startBroadcasting()}
+                              style={[styles.broadcastBtn, {
+                                backgroundColor: '#28A745'
+                              }]}>
+                <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
+                    Begin Broadcast
+                </Text>
+            </TouchableOpacity>
         </View>
     }
   </>
