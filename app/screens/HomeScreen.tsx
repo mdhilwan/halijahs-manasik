@@ -6,7 +6,6 @@ import ParallaxScrollView from "@/components/parallax-scroll-view";
 import {Image} from "expo-image";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
-import {useBroadcast} from "@/app/contexts/BroadcastContext";
 import {LiveIndicator} from "@/components/live-indicator";
 import {BroadcastIndicator} from "@/components/broadcast-indicator";
 
@@ -68,7 +67,7 @@ export default function HomeScreen({
         />
       }
     >
-      <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
         <Text style={styles.title}>Manasik App by Halijah</Text>
         <LiveIndicator/>
       </View>

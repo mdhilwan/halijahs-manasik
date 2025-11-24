@@ -5,14 +5,14 @@ import { DuaListScreenType } from "@/app/types";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {LanguageEnums} from "@/constants/language-enums";
-import {IconSymbol} from "@/components/ui/icon-symbol";
+import {Ionicons} from "@expo/vector-icons";
 
 export default function DuaListScreen({ setScreen, duas, setSelectedDua, category }: DuaListScreenType) {
   const {language} = useLanguage()
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={() => setScreen("home")}>
-        <IconSymbol size={20} name="chevron.backward" color={"black"}/>
+        <Ionicons size={28} name={"chevron-back"} color={"black"}/>
       </TouchableOpacity>
       <Text style={styles.title}>{category} Du’a List</Text>
       <ScrollView>

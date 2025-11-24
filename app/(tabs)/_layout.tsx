@@ -8,6 +8,7 @@ import {useColorScheme} from '@/hooks/use-color-scheme';
 import {LanguageProvider} from "@/app/contexts/LanguageContext";
 import {FontSettingsProvider} from "@/app/contexts/FontSettingsContext";
 import {BroadcastProvider} from "@/app/contexts/BroadcastContext";
+import {Ionicons} from "@expo/vector-icons";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -26,21 +27,21 @@ export default function TabLayout() {
               name="search"
               options={{
                 title: 'Search',
-                tabBarIcon: ({color}) => <IconSymbol size={28} name="magnifyingglass" color={color}/>,
+                tabBarIcon: ({color}) => <Ionicons size={28} name={"search"} color={color}/>,
               }}
             />
             <Tabs.Screen
               name="index"
               options={{
                 title: 'Home',
-                tabBarIcon: ({color}) => <IconSymbol size={28} name="house.fill" color={color}/>,
+                tabBarIcon: ({color}) => <Ionicons size={28} name={"home"} color={color}/>,
               }}
             />
             <Tabs.Screen
               name="settings"
               options={{
                 title: 'Settings',
-                tabBarIcon: ({color}) => <IconSymbol size={28} name="gear" color={color}/>,
+                tabBarIcon: ({color}) => <Ionicons size={28} name={"settings"} color={color}/>,
               }}
             />
           </Tabs>
