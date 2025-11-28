@@ -1,5 +1,5 @@
 import React, {createContext, useContext, useEffect, useRef, useState} from 'react';
-import {API_ROOT, BROADCAST, HEALTH, PRIVATE_LAN, CURRENT, START, STOP} from "@/constants/router-path";
+import {API_ROOT, BROADCAST, HEALTH, PRIVATE_LAN, CURRENT, START, STOP, AUDIO} from "@/constants/router-path";
 import {Audio, InterruptionModeAndroid, InterruptionModeIOS} from "expo-av";
 import {UPLOAD_INTERVAL_MS} from "@/constants/broadcast-time";
 import * as FileSystem from "expo-file-system/legacy";
@@ -75,7 +75,7 @@ export function BroadcastProvider({children}: { children: React.ReactNode }) {
           });
 
           // POST the base64 WAV to server
-          await fetch(`${API_ROOT}/broadcast/audio`, {
+          await fetch(`${API_ROOT}/${BROADCAST}/${AUDIO}`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data: base64}),
@@ -111,7 +111,7 @@ export function BroadcastProvider({children}: { children: React.ReactNode }) {
   };
 
   const stopBroadcasting = async () => {
-    setBroadcastState(false);
+    setBroadcastState('idle');
     BROADCASTING_FLAG.current = false
     try {
       await fetch(`${API_ROOT}/${BROADCAST}/${STOP}`, {method: 'POST'});

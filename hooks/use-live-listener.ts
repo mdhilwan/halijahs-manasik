@@ -1,36 +1,42 @@
 import { useEffect, useRef } from 'react';
 import * as FileSystem from 'expo-file-system/legacy';
 import { Audio } from 'expo-av';
-import {API_ROOT, AUDIO, BROADCAST} from "@/constants/router-path";
-import {POLL_INTERVAL} from "@/constants/broadcast-time";
+import {API_ROOT, BROADCAST, STREAM} from "@/constants/router-path";
+import EventSource, {EventType} from "react-native-sse"
 
 export function useLiveListener(isEnabled: boolean, broadcastState: false | "idle" | "live") {
   const lastChunkIdRef = useRef<number>(0);
-  const pollRef = useRef<number | null>(null);
   const playingSoundRef = useRef<Audio.Sound | null>(null);
 
   useEffect(() => {
     let mounted = true;
 
-    async function pollOnce() {
-      try {
-        const res = await fetch(`${API_ROOT}/${BROADCAST}/${AUDIO}`, { cache: 'no-store' });
-        if (!res.ok) return;
-        const json = await res.json();
-        const chunkId = json?.chunkId || 0;
-        const data = json?.data || null;
-        if (!data || chunkId === 0) return;
+    let eventSource: EventSource | null = null;
 
-        // skip if same as last played
+    function startSse() {
+      if (!mounted) return;
+
+      eventSource = new EventSource(`${API_ROOT}/${BROADCAST}/${STREAM}`, { withCredentials: false });
+
+      eventSource.addEventListener("status" as EventType, (e: any) => {
+        const payload = JSON.parse(e.data);
+        // optional: react to status if needed
+        console.log("SSE status:", payload);
+      });
+
+      eventSource.addEventListener("audio" as EventType, async (e: any) => {
+        const payload = JSON.parse(e.data);
+        const chunkId = payload.chunkId;
+        const data = payload.data;
+
+        if (!data || chunkId === 0) return;
         if (chunkId <= lastChunkIdRef.current) return;
+
         lastChunkIdRef.current = chunkId;
 
-        // write base64 to temp file
         const filename = `${FileSystem.cacheDirectory}live_chunk_${chunkId}.m4a`;
-
         await FileSystem.writeAsStringAsync(filename, data, { encoding: FileSystem.EncodingType.Base64 });
 
-        // unload previous sound if any
         if (playingSoundRef.current) {
           try {
             await playingSoundRef.current.unloadAsync();
@@ -38,31 +44,25 @@ export function useLiveListener(isEnabled: boolean, broadcastState: false | "idl
           playingSoundRef.current = null;
         }
 
-        // load and play
         const sound = new Audio.Sound();
         await sound.loadAsync({ uri: filename });
         playingSoundRef.current = sound;
         await sound.playAsync();
 
-        // optional: delete after a bit to free storage
         setTimeout(() => {
           FileSystem.deleteAsync(filename, { idempotent: true }).catch(() => {});
         }, 10000);
-      } catch (e) {
-        console.log("Poll Once Error: ", e)
-      }
+      });
+
+      eventSource.addEventListener("error", (err) => {
+        console.log("SSE error:", err);
+      });
     }
 
-    function startPolling() {
-      if (!mounted) return;
-      pollOnce(); // immediate
-      pollRef.current = setInterval(pollOnce, POLL_INTERVAL) as unknown as number;
-    }
-
-    function stopPolling() {
-      if (pollRef.current) {
-        clearInterval(pollRef.current);
-        pollRef.current = null;
+    function stopSse() {
+      if (eventSource) {
+        eventSource.close();
+        eventSource = null;
       }
     }
 
@@ -71,14 +71,14 @@ export function useLiveListener(isEnabled: boolean, broadcastState: false | "idl
         allowsRecordingIOS: false,
         playsInSilentModeIOS: true,
       });
-      startPolling();
+      startSse();
     } else {
-      stopPolling();
+      stopSse();
     }
 
     return () => {
       mounted = false;
-      stopPolling();
+      stopSse();
       if (playingSoundRef.current) {
         playingSoundRef.current.unloadAsync().catch(() => {});
       }

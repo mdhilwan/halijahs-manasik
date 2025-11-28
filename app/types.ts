@@ -1,5 +1,7 @@
 import React from "react";
 import {LanguageEnums} from "@/constants/language-enums";
+import {EventType} from "react-native-sse";
+import {EventTypes} from "react-native-gesture-handler/lib/typescript/web/interfaces";
 
 export type HomeScreenType = {
   setScreen: React.Dispatch<React.SetStateAction<string>>;

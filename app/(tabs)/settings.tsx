@@ -14,7 +14,7 @@ import {useBroadcast} from "@/app/contexts/BroadcastContext";
 import {Broadcaster} from "@/components/controls/broadcaster";
 
 export default function Settings() {
-  const {broadcastState, setIfIamHost} = useBroadcast()
+  const {broadcastState, stopBroadcasting, setIfIamHost} = useBroadcast()
   const {language, setLanguage} = useLanguage();
   const [otp, setOtp] = useState('');
   const [hostSignedIn, setHostSignedIn] = useState(false);
@@ -33,6 +33,7 @@ export default function Settings() {
       if (json?.success) {
         setHostSignedIn(true);
         setIfIamHost(true);
+        stopBroadcasting() // will set broadcastState to 'idle'
       }
     } catch (e) {
       console.log('Sign in error', e);
