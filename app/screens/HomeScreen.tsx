@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity, StyleSheet, View} from 'react-native';
+import {Text, TouchableOpacity, StyleSheet, View, ImageBackground } from 'react-native';
 import {DuaType, HomeScreenType} from "@/app/types";
 import duas from '@/assets/data/duas.json';
 import ParallaxScrollView from "@/components/parallax-scroll-view";
@@ -9,13 +9,15 @@ import {useLanguage} from "@/app/contexts/LanguageContext";
 import {LiveIndicator} from "@/components/live-indicator";
 import {BroadcastIndicator} from "@/components/broadcast-indicator";
 
-type buttonType = {
+export type buttonType = {
   title: {
     en: string,
     my: string
-  }
+  },
+  bgImg?: any
 } | {
-  title: string
+  title: string,
+  bgImg?: any
 }
 
 const buttons: buttonType[] = [
@@ -23,14 +25,18 @@ const buttons: buttonType[] = [
     title: {
       en: 'Intention',
       my: 'Niat'
-    }
+    },
   },
   {title: 'Talbiyah'},
-  {title: 'Masjidil Haram'},
+  {
+    title: 'Masjidil Haram',
+    bgImg: require('@/assets/images/button-bg/hajj-button-bg.png'),
+  },
   {title: 'Tawaf'},
   {title: 'Zam-zam'},
   {title: "Sa'i"},
   {title: 'Tahalul'},
+  {title: 'Tawaf-Wada'},
   {title: 'Madinah'},
 ];
 
@@ -77,7 +83,6 @@ export default function HomeScreen({
         {buttons.map((btn, index) =>
           <TouchableOpacity
             key={index}
-            style={styles.button}
             onPress={() => {
               if (typeof btn.title === 'string') {
                 loadDuas(btn.title)
@@ -85,8 +90,25 @@ export default function HomeScreen({
                 loadDuas(btn.title[language])
               }
             }}
+            style={styles.button}
           >
-            <Text style={styles.buttonText}>{typeof btn.title === 'string' ? btn.title : btn.title[language]}</Text>
+            {btn.bgImg ? (
+              <ImageBackground
+                source={btn.bgImg}
+                style={styles.bgButtonContainer}
+                imageStyle={{ borderRadius: 15 }}
+              >
+                <Text
+                  style={[styles.buttonText, styles.bgButtonText]}
+                >
+                  {typeof btn.title === 'string' ? btn.title : btn.title[language]}
+                </Text>
+              </ImageBackground>
+            ) : (
+              <Text style={styles.buttonText}>
+                {typeof btn.title === 'string' ? btn.title : btn.title[language]}
+              </Text>
+            )}
           </TouchableOpacity>
         )}
       </View>
@@ -114,12 +136,25 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
-
     marginBottom: 16,
     shadowColor: '#000',
     shadowOpacity: 0.2,
     shadowRadius: 5,
     elevation: 3,
+  },
+  bgButtonContainer: {
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%',
+  },
+  bgButtonText: {
+    color: Colors.light.tint,
+    fontWeight: 'bold',
+    width: '70%',
+    textAlign: 'left',
+    alignSelf: 'flex-start',
+    paddingLeft: 15,
   },
   reactLogo: {
     height: 178,

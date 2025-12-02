@@ -7,7 +7,6 @@ import {DuaPlayer} from "@/components/controls/dua-player";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {useFontSize} from "@/app/contexts/FontSettingsContext";
 import SettingsModal from "@/components/settings-modal";
-import {IconSymbol} from "@/components/ui/icon-symbol";
 import {Ionicons} from "@expo/vector-icons";
 
 function ArabicText({dua}: {dua: DuaEngMalayArabicType}) {
@@ -145,7 +144,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#555'
+    color: '#000'
   },
   back: {
     fontSize: 18,
