@@ -8,6 +8,7 @@ import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {LiveIndicator} from "@/components/live-indicator";
 import {BroadcastIndicator} from "@/components/broadcast-indicator";
+import {useFonts} from "expo-font";
 
 export type buttonType = {
   title: {
@@ -30,9 +31,12 @@ const buttons: buttonType[] = [
   {title: 'Talbiyah'},
   {
     title: 'Masjidil Haram',
+    bgImg: require('@/assets/images/button-bg/masjid-haram-aerial-view.png'),
+  },
+  {
+    title: 'Tawaf',
     bgImg: require('@/assets/images/button-bg/hajj-button-bg.png'),
   },
-  {title: 'Tawaf'},
   {title: 'Zam-zam'},
   {title: "Sa'i"},
   {title: 'Tahalul'},
@@ -48,6 +52,9 @@ export default function HomeScreen({
                                    }: HomeScreenType): React.JSX.Element {
 
   const {language} = useLanguage();
+  const [fontLoaded] = useFonts({
+    'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
+  });
 
   const loadDuas = async (category: string) => {
     const result = duas.filter((d: DuaType) => d.categoryKey.includes(category.toLowerCase()));
@@ -73,45 +80,48 @@ export default function HomeScreen({
         />
       }
     >
-      <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={styles.title}>Manasik App by Halijah</Text>
-        <LiveIndicator/>
-      </View>
-      <BroadcastIndicator/>
+      {fontLoaded ?
+        <>
+          <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+            <Text style={styles.title}>Manasik App by Halijah</Text>
+            <LiveIndicator/>
+          </View>
+          <BroadcastIndicator/>
 
-      <View style={styles.grid}>
-        {buttons.map((btn, index) =>
-          <TouchableOpacity
-            key={index}
-            onPress={() => {
-              if (typeof btn.title === 'string') {
-                loadDuas(btn.title)
-              } else {
-                loadDuas(btn.title[language])
-              }
-            }}
-            style={styles.button}
-          >
-            {btn.bgImg ? (
-              <ImageBackground
-                source={btn.bgImg}
-                style={styles.bgButtonContainer}
-                imageStyle={{ borderRadius: 15 }}
+          <View style={styles.grid}>
+            {buttons.map((btn, index) =>
+              <TouchableOpacity
+                key={index}
+                onPress={() => {
+                  if (typeof btn.title === 'string') {
+                    loadDuas(btn.title)
+                  } else {
+                    loadDuas(btn.title[language])
+                  }
+                }}
+                style={styles.button}
               >
-                <Text
-                  style={[styles.buttonText, styles.bgButtonText]}
-                >
-                  {typeof btn.title === 'string' ? btn.title : btn.title[language]}
-                </Text>
-              </ImageBackground>
-            ) : (
-              <Text style={styles.buttonText}>
-                {typeof btn.title === 'string' ? btn.title : btn.title[language]}
-              </Text>
+                {btn.bgImg ? (
+                  <ImageBackground
+                    source={btn.bgImg}
+                    style={styles.bgButtonContainer}
+                    imageStyle={{ borderRadius: 15 }}
+                  >
+                    <Text
+                      style={[styles.buttonText, styles.bgButtonText]}
+                    >
+                      {typeof btn.title === 'string' ? btn.title : btn.title[language]}
+                    </Text>
+                  </ImageBackground>
+                ) : (
+                  <Text style={styles.buttonText}>
+                    {typeof btn.title === 'string' ? btn.title : btn.title[language]}
+                  </Text>
+                )}
+              </TouchableOpacity>
             )}
-          </TouchableOpacity>
-        )}
-      </View>
+          </View>
+        </> : null}
     </ParallaxScrollView>
   );
 }
@@ -149,7 +159,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   bgButtonText: {
-    color: Colors.light.tint,
+    color: "#315437",
     fontWeight: 'bold',
     width: '70%',
     textAlign: 'left',
@@ -163,5 +173,10 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
   },
-  buttonText: {color: '#ffd65c', fontSize: 20, textAlign: 'center'},
+  buttonText: {
+    color: '#ffd65c',
+    fontSize: 20,
+    textAlign: 'center',
+    fontFamily: 'Mulish-Bold'
+  },
 });
