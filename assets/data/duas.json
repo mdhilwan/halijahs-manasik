@@ -131,7 +131,7 @@
       "translationEn": "I intend to iktikaf in this blessed mosque because of AIIah Taala.",
       "translationMy": "Sahaja aku beri'tikaf di masjid ini kerana AIIah Taala."
     }],
-    "categoryKey": ["intention", "niat", "masjidil haram", "madinah"],
+    "categoryKey": ["masjidil haram"],
     "audio": ""
   },
   {
@@ -170,7 +170,7 @@
       "translationEn": "I intended to perform arrival tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf qudum tujuh pusingan kerana Allah Taala"
     }],
-    "categoryKey": ["intention", "niat", "tawaf"],
+    "categoryKey": ["niat", "tawaf"],
     "audio": "niat_tawaf_qudum.mp3"
   },
   {
@@ -183,7 +183,7 @@
       "translationEn": "I intended to perform haj tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf haji tujuh pusingan kerana Allah Taala"
     }],
-    "categoryKey": ["intention", "niat", "tawaf"],
+    "categoryKey": ["niat", "tawaf"],
     "audio": "niat_tawaf_haji.mp3"
   },
   {
@@ -196,7 +196,7 @@
       "translationEn": "I intended to perform umrah tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf umrah tujuh pusingan kerana Allah Taala"
     }],
-    "categoryKey": ["intention", "niat", "tawaf"],
+    "categoryKey": ["niat", "tawaf"],
     "audio": "niat_tawaf_umrah.mp3"
   },
   {
@@ -209,7 +209,7 @@
       "translationEn": "I intended to perform sunnah tawaf, seven rounds for the sake of Allah Most High",
       "translationMy": "Sahaja aku berniat mengerjakan tawaf sunnah tujuh pusingan kerana Allah Taala"
     }],
-    "categoryKey": ["intention", "niat", "tawaf"],
+    "categoryKey": ["niat", "tawaf"],
     "audio": "niat_tawaf_sunnah.mp3"
   },
   {
@@ -404,7 +404,7 @@
       "translationEn": "I intended to pray two raka'at of sunnah Tawaf for the sake of Allah Most High",
       "translationMy": "Sahaja aku solat Tawaf dua rakaat kerana Allah Taala"
     }],
-    "categoryKey": ["tawaf", "intention", "niat"],
+    "categoryKey": ["tawaf"],
     "audio": "niat_solat_sunnat_tawaf.mp3"
   },
   {
@@ -469,7 +469,7 @@
       "translationEn": "I intend to perform sa'i between Safa and Marwah, the sa'i of Umrah in seven rounds for Allah the Almighty.",
       "translationMy": "Sahaja aku berniat sa'i antara Safa dan Marwah, sa'i Umrah tujuh perjalanan kerana Allah Taala."
     }],
-    "categoryKey": ["tawaf", "intention", "niat"],
+    "categoryKey": ["tawaf"],
     "audio": "niat_sai_umrah.mp3"
   },
   {
