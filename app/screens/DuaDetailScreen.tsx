@@ -46,6 +46,7 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
   const duaObj = selectedDua?.duas[selectedDua.curr as number]
   const [fontLoaded] = useFonts({
     'Uthman-Taha-Naskh': require('@/assets/font/KFGQPC-Uthman-Taha-Naskh-Regular.ttf'),
+    'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
   });
 
   if (!fontLoaded) {
@@ -124,6 +125,7 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: 'bold',
     textAlign: 'center',
+    fontFamily: 'Mulish-Bold',
     marginBottom: 10
   },
   textWrapper: {
@@ -143,6 +145,7 @@ const styles = StyleSheet.create({
   translation: {
     fontSize: 20,
     fontWeight: 'bold',
+    fontFamily: 'Mulish-Bold',
     textAlign: 'center',
     color: '#000'
   },

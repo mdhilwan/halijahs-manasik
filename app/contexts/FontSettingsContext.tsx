@@ -17,7 +17,7 @@ interface FontSettingsType {
 const FontSettingsContext = createContext<FontSettingsType>({
   showSettings: false,
   setShowSettings: (show: boolean) => {},
-  arabicFontSize: 24,
+  arabicFontSize: 36,
   setArabicFontSize: (size: number) => {},
   translationFontSize: 24,
   setTranslationFontSize: (size: number) => {},

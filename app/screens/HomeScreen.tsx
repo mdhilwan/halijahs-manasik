@@ -80,7 +80,7 @@ export default function HomeScreen({
         />
       }
     >
-      {fontLoaded ?
+      {fontLoaded &&
         <>
           <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
             <Text style={styles.title}>Manasik App by Halijah</Text>
@@ -121,7 +121,7 @@ export default function HomeScreen({
               </TouchableOpacity>
             )}
           </View>
-        </> : null}
+        </>}
     </ParallaxScrollView>
   );
 }
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
-  title: {fontSize: 26, fontWeight: 'bold', textAlign: 'center'},
+  title: {fontSize: 26, fontFamily: 'Mulish-Bold', fontWeight: 'bold', textAlign: 'center'},
   button: {
     width: '48%',
     height: 75,
