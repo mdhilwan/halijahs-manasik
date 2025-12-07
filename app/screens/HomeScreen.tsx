@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity, StyleSheet, View, ImageBackground } from 'react-native';
+import {Text, TouchableOpacity, StyleSheet, View, ImageBackground} from 'react-native';
 import {DuaType, HomeScreenType} from "@/app/types";
 import duas from '@/assets/data/duas.json';
 import ParallaxScrollView from "@/components/parallax-scroll-view";
@@ -29,14 +29,8 @@ const buttons: buttonType[] = [
     },
   },
   {title: 'Talbiyah'},
-  {
-    title: 'Masjidil Haram',
-    bgImg: require('@/assets/images/button-bg/masjid-haram-aerial-view.png'),
-  },
-  {
-    title: 'Tawaf',
-    bgImg: require('@/assets/images/button-bg/hajj-button-bg.png'),
-  },
+  {title: 'Masjidil Haram'},
+  {title: 'Tawaf'},
   {title: 'Zam-zam'},
   {title: "Sa'i"},
   {title: 'Tahalul'},
@@ -81,47 +75,47 @@ export default function HomeScreen({
       }
     >
       {fontLoaded &&
-        <>
-          <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-            <Text style={styles.title}>Manasik App by Halijah</Text>
-            <LiveIndicator/>
-          </View>
-          <BroadcastIndicator/>
+          <>
+              <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+                  <Text style={styles.title}>Manasik App by Halijah</Text>
+                  <LiveIndicator/>
+              </View>
+              <BroadcastIndicator/>
 
-          <View style={styles.grid}>
-            {buttons.map((btn, index) =>
-              <TouchableOpacity
-                key={index}
-                onPress={() => {
-                  if (typeof btn.title === 'string') {
-                    loadDuas(btn.title)
-                  } else {
-                    loadDuas(btn.title[language])
-                  }
-                }}
-                style={styles.button}
-              >
-                {btn.bgImg ? (
-                  <ImageBackground
-                    source={btn.bgImg}
-                    style={styles.bgButtonContainer}
-                    imageStyle={{ borderRadius: 15 }}
+              <View style={styles.grid}>
+                {buttons.map((btn, index) =>
+                  <TouchableOpacity
+                    key={index}
+                    onPress={() => {
+                      if (typeof btn.title === 'string') {
+                        loadDuas(btn.title)
+                      } else {
+                        loadDuas(btn.title[language])
+                      }
+                    }}
+                    style={styles.button}
                   >
-                    <Text
-                      style={[styles.buttonText, styles.bgButtonText]}
-                    >
-                      {typeof btn.title === 'string' ? btn.title : btn.title[language]}
-                    </Text>
-                  </ImageBackground>
-                ) : (
-                  <Text style={styles.buttonText}>
-                    {typeof btn.title === 'string' ? btn.title : btn.title[language]}
-                  </Text>
+                    {btn.bgImg ? (
+                      <ImageBackground
+                        source={btn.bgImg}
+                        style={styles.bgButtonContainer}
+                        imageStyle={{borderRadius: 15}}
+                      >
+                        <Text
+                          style={[styles.buttonText, styles.bgButtonText]}
+                        >
+                          {typeof btn.title === 'string' ? btn.title : btn.title[language]}
+                        </Text>
+                      </ImageBackground>
+                    ) : (
+                      <Text style={styles.buttonText}>
+                        {typeof btn.title === 'string' ? btn.title : btn.title[language]}
+                      </Text>
+                    )}
+                  </TouchableOpacity>
                 )}
-              </TouchableOpacity>
-            )}
-          </View>
-        </>}
+              </View>
+          </>}
     </ParallaxScrollView>
   );
 }
