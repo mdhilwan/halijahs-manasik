@@ -22,20 +22,16 @@ export type buttonType = {
 }
 
 const buttons: buttonType[] = [
-  {
-    title: {
-      en: 'Intention',
-      my: 'Niat'
-    },
-  },
+  {title: 'Ihram'},
   {title: 'Talbiyah'},
   {title: 'Masjidil Haram'},
   {title: 'Tawaf'},
   {title: 'Zam-zam'},
   {title: "Sa'i"},
   {title: 'Tahalul'},
-  {title: 'Tawaf-Wada'},
+  {title: 'Tawaf Wadak'},
   {title: 'Madinah'},
+  {title: 'Travel'},
 ];
 
 export default function HomeScreen({

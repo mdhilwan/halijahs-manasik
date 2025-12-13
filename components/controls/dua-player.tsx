@@ -183,19 +183,20 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
   return (
     <View style={{alignItems: 'center'}}>
       <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-        <TouchableOpacity
-          style={[styles.audioButton, {marginRight: 20, backgroundColor: "white"}]}
-          onPress={() => {
-            if (selectedDua?.curr !== undefined && prevAvailable) {
-              setSelectedDua({
-                curr: selectedDua.curr - 1,
-                duas: selectedDua.duas
-              })
-            }
-          }}
-        >
-          <Ionicons name="play-skip-back" size={28} color={prevAvailable ? "black" : "#989898"}/>
-        </TouchableOpacity>
+        {prevAvailable &&
+          <TouchableOpacity
+            style={[styles.audioButton, {marginRight: 20, backgroundColor: "white"}]}
+            onPress={() => {
+              if (selectedDua?.curr !== undefined) {
+                setSelectedDua({
+                  curr: selectedDua.curr - 1,
+                  duas: selectedDua.duas
+                })
+              }
+            }}
+          >
+            <Ionicons name="play-skip-back" size={28} color={"black"}/>
+          </TouchableOpacity>}
         {dua?.audio &&
             <TouchableOpacity
                 style={[styles.audioButton, {
@@ -214,10 +215,10 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
                   : <Ionicons name="play" size={28} color="white"/>}
             </TouchableOpacity>
         }
-        <TouchableOpacity
+        {nextAvailable && <TouchableOpacity
           style={[styles.audioButton, {marginLeft: 20, backgroundColor: "white"}]}
           onPress={() => {
-            if (selectedDua?.curr !== undefined && nextAvailable) {
+            if (selectedDua?.curr !== undefined) {
               setSelectedDua({
                 curr: selectedDua.curr + 1,
                 duas: selectedDua.duas
@@ -225,8 +226,8 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
             }
           }}
         >
-          <Ionicons name="play-skip-forward" size={28} color={nextAvailable ? "black" : "#989898"}/>
-        </TouchableOpacity>
+          <Ionicons name="play-skip-forward" size={28} color={"black"}/>
+        </TouchableOpacity>}
       </View>
       {dua?.audio &&
           <View style={{width: '100%', marginTop: 5, alignItems: 'center'}}>

@@ -20,14 +20,14 @@
   {
     "id": 2,
     "titleEn": "Intention For Ihram Prayer",
-    "titleMy": "Niat Solat Sunat Ihram",
+    "titleMy": "Niat Solat Sunnah Ihram",
     "doa": [{
       "id": 1,
       "arabic": "اُصَلِّي سُنَّةَ الْاِحْرَامِ رَكْعَتَيْنِ لِلّٰهِ تَعَالٰى",
       "translationEn": "I intend to pray two raka'at of sunnah Ihram for the sake of Allah Most High",
-      "translationMy": "Sahaja aku solat sunat Ihram dua rakaat kerana Allah Taala"
+      "translationMy": "Sahaja aku solat sunnah Ihram dua rakaat kerana Allah Taala"
     }],
-    "categoryKey": ["intention", "niat"],
+    "categoryKey": ["ihram"],
     "audio": "niat_solat_sunat_ihram.mp3"
   },
   {
@@ -40,7 +40,7 @@
       "translationEn": "I intend to perform Umrah and perform ihram for it for the sake of Allah",
       "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah"
     }],
-    "categoryKey": ["intention", "niat", "umrah"],
+    "categoryKey": ["ihram", "umrah"],
     "audio": "niat_ihram_umrah.mp3"
   },
   {
@@ -53,12 +53,12 @@
       "translationEn": "I intend to perform Umrah on behalf of ______ and perform ihram for it for the sake of Allah Most High",
       "translationMy": "Sahaja aku menunaikan Umrah bagi ______ dan aku berihram dengannya kerana Allah Ta'ala"
     }],
-    "categoryKey": ["intention", "niat", "umrah"],
+    "categoryKey": ["ihram", "umrah"],
     "audio": "niat_umrah_badal.mp3"
   },
   {
     "id": 5,
-    "titleEn": "Intention For Ihram Umrah With Terms",
+    "titleEn": "Conditional Intention for Ihram Umrah",
     "titleMy": "Niat Umrah Bersyarat",
     "doa": [{
       "id": 1,
@@ -66,7 +66,7 @@
       "translationEn": "I have intended to perform Umrah and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
       "translationMy": "Sahaja aku menunaikan Umrah dan aku berihram dengannya kerana Allah Ta'ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
-    "categoryKey": ["intention", "niat", "umrah"],
+    "categoryKey": ["ihram", "umrah"],
     "audio": "niat_umrah_bersyarat.mp3"
   },
   {
@@ -79,7 +79,7 @@
       "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High",
       "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta'ala"
     }],
-    "categoryKey": ["intention", "niat", "haji"],
+    "categoryKey": ["ihram", "haji"],
     "audio": "niat_ihram_haji.mp3"
   },
   {
@@ -92,12 +92,12 @@
       "translationEn": "I have intended to perform Haj on behalf of ______ and performed ihram for it for the sake of Allah Most High",
       "translationMy": "Sahaja aku menunaikan Haji bagi ______ dan aku berihram dengannya kerana Allah Ta'ala"
     }],
-    "categoryKey": ["intention", "niat", "haji"],
+    "categoryKey": ["ihram", "haji"],
     "audio": "niat_haji_badal.mp3"
   },
   {
     "id": 8,
-    "titleEn": "Intention For Haj Ihram With Terms",
+    "titleEn": "Conditional Intention for Ihram Haj",
     "titleMy": "Niat Haji Bersyarat",
     "doa": [{
       "id": 1,
@@ -105,13 +105,13 @@
       "translationEn": "I have intended to perform Haj and performed ihram for it for the sake of Allah Most High, If I am hindered by any hitch, then I will perform tahallul in that place.",
       "translationMy": "Sahaja aku menunaikan Haji dan aku berihram dengannya kerana Allah Ta'ala, jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat tersebut."
     }],
-    "categoryKey": ["intention", "niat", "haji"],
+    "categoryKey": ["ihram", "haji"],
     "audio": "niat_haji_bersyarat.mp3"
   },
   {
     "id": 9,
     "titleEn": "Dua When Entering Masjidil Haram",
-    "titleMy": "Doa Memasuki Masjidil Haram",
+    "titleMy": "Dua Memasuki Masjidil Haram",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ اغْفِرْلِيْ ذُنُوبِي وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ، وَأَدْخِلْنِي فِيْهَا، وَسَهِّلْ لِي أَبْوَابَ رِزْقِكَ اَللّٰهُمَّ هَذَا حَرَمُكَ، وَمَوْضِعُ أَمْنِكَ فَحَرِّمْ لَحْمِي وَبَشَرِي وَعِظَامِي عَلَى النَّارِ\nاَللّٰهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، وَإِلَيْكَ يَعُوْدُ السَّلَامُ فَحَيِّنَا رَبَّنَا بِالسَّلَامِ\nوَأَدْخِلْنَا الْجَنَّةَ دَارَ السَّلَامِ تَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ\nاَللّٰهُمَّ إِنِّي أَسْأَلُكَ أَنْ تَغْفِرَ لِي، وَتَرْحَمَنِي، وَتُقِيلَ عَثَرَتِيْ، وَتَضَعَ وِزْرِي\nبِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ",
@@ -123,7 +123,7 @@
   },
   {
     "id": 10,
-    "titleEn": "Intention For I'tikaf At Mosque",
+    "titleEn": "Intention For I'tikaf",
     "titleMy": "Niat I'tikaf Masjid",
     "doa": [{
       "id": 1,
@@ -136,8 +136,8 @@
   },
   {
     "id": 11,
-    "titleEn": "Dua When Looking At The Ka'abah",
-    "titleMy": "Doa Ketika Melihat Ka'abah",
+    "titleEn": "Dua upon seeing the Ka'abah",
+    "titleMy": "Dua Ketika Melihat Ka'abah",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ زِدْ هَذَا الْبَيْتَ تَشْرِيْفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً، وَزِدْ مَنْ شَرَّفَهُ وَعَظَّمَهُ\nمِمَّنْ حَجَّهُ أَوِ اعْتَمَرَهُ تَشْرِيْفًا، وَتَكرِيمًا، وَتَعْظِيمًا وَبِرًّا",
@@ -150,7 +150,7 @@
   {
     "id": 12,
     "titleEn": "Dua before Tawaf",
-    "titleMy": "Doa Sebelum Memulakan Tawaf",
+    "titleMy": "Dua Sebelum Memulakan Tawaf",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ إِنِّي أُرِيدُ طَوَافَ بَيتِكَ الحَرَامِ فَيَسِّرهُ لِي وَ تَقَبَّلهُ مِنِّي",
@@ -162,8 +162,8 @@
   },
   {
     "id": 13,
-    "titleEn": "Arrival Tawaf",
-    "titleMy": "Tawaf Qudum",
+    "titleEn": "Tawaf Qudum Intention",
+    "titleMy": "Niat Tawaf Qudum",
     "doa": [{
       "id": 1,
       "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ القُدُومِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
@@ -175,8 +175,8 @@
   },
   {
     "id": 14,
-    "titleEn": "Tawaf Hajj",
-    "titleMy": "Tawaf Haji",
+    "titleEn": "Intention Tawaf Hajj",
+    "titleMy": "Niat Tawaf Haji",
     "doa": [{
       "id": 1,
       "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ الحَجِّ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
@@ -188,8 +188,8 @@
   },
   {
     "id": 15,
-    "titleEn": "Tawaf Umrah",
-    "titleMy": "Tawaf Umrah",
+    "titleEn": "Intention Tawaf Umrah",
+    "titleMy": "Niat Tawaf Umrah",
     "doa": [{
       "id": 1,
       "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ العُمرَةِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
@@ -201,8 +201,8 @@
   },
   {
     "id": 16,
-    "titleEn": "Tawaf Sunnah",
-    "titleMy": "Tawaf Sunnah",
+    "titleEn": "Intention Tawaf Sunnah",
+    "titleMy": "Niat Tawaf Sunnah",
     "doa": [{
       "id": 1,
       "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ السُّنَّةِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
@@ -214,8 +214,8 @@
   },
   {
     "id": 18,
-    "titleEn": "1st Round Of Tawaf",
-    "titleMy": "Doa Tawaf Pusingan Pertama",
+    "titleEn": "(1st) Round Of Tawaf",
+    "titleMy": "(Ke-1) Dua Tawaf Pusingan Pertama",
     "doa": [{
       "id": 1,
       "arabic": "سُبْحَانَ اللهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلٰهَ إِلَّا اللهُ وَ اللهُ أَكْبَرُ\nوَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيْمِ\nوَالصَّلَاةُ وَالسَّلاَمُ عَلَى رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ\nاَللَّهُمَّ إِيْمَانًا بِكَ وَتَصدِيْقًا بِكِتَابِكَ وَوَفَاءًا بِعَهدِك وَاتِّبَاعًا لِسُنَّةِ\nنَبِيِّكَ وَ حَبِيبِكَ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ\nاَللَّهُمَّ إِنِّي أَسْئَلُكَ الْعَفْوَى وَالْعَافِيَةَ وَ الُمعَافَاةَ الدَّائِمَةَ\nفِي الدِّيْنِ وَالدُّنْيَا وَالْأَخِرَةِ وَالْفَوْزَ بِالْجَنَّةِ وَالنَّجَاةَ مِنَ النَّارِ",
@@ -227,8 +227,8 @@
   },
   {
     "id": 19,
-    "titleEn": "Doa From Rukun Yamani To Hajar Aswad",
-    "titleMy": "Doa Dari Rukun Yamani Hingga Hajar Aswad",
+    "titleEn": "Dua From Rukun Yamani To Hajar Aswad",
+    "titleMy": "Dua Dari Rukun Yamani Hingga Hajar Aswad",
     "doa": [{
       "id": 1,
       "arabic": "اَللَّهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nوَ أَدخِلنَا الجَنَّةَ مَعَ الأَبرَارِ يَا عَزِيزُ يَا غَفَّارُ يَا رَبَّ العَالَمِينَ",
@@ -240,8 +240,8 @@
   },
   {
     "id": 20,
-    "titleEn": "2nd Round Of Tawaf",
-    "titleMy": "Doa Tawaf Pusingan Kedua",
+    "titleEn": "(2nd) Round Of Tawaf",
+    "titleMy": "(Ke-2) Dua Tawaf Pusingan Kedua",
     "doa": [{
       "id": 1,
       "arabic": "اَللَّهُمَّ إِنَّ هَذَا الْبَيْتَ بَيْتُكَ وَالْحَرَمَ حَرَمُكَ وَالْأَمْنَ أَمْنُكَ وَالْعَبْدَ عَبْدُكَ\nوَأَنَا عَبْدُكَ وَابْنُ عَبْدِكَ وَهَذَا مَقَامُ العَائِذِ بِكَ مِنَ النَّارِ\nفَحَرِّمْ لُحُومَنَا وَبَشَرَتَنَا عَلَى النَّارِ\nاَللَّهُمَّ حَبِّبْ إِلَيْنَا الْإيْمَانَ وَزَيِّنْهُ فِي قَلُوبِنَا وَكَرِّهْ إِلَيْنَا الْكُفْرَ وَالْفُسُوقَ\nوَالْعِصْيَانَ وَاجْعَلْنَا مِنَ الرَّاشِدِينَ اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ\nاَللَّهُمَّ ارْزُقْنَا الْجَنَّةَ بِغَيْرِ حِسَابٍِ",
@@ -253,8 +253,8 @@
   },
   {
     "id": 21,
-    "titleEn": "Doa From Rukun Yamani To Hajar Aswad",
-    "titleMy": "Doa Dari Rukun Yamani Hingga Hajar Aswad",
+    "titleEn": "Dua From Rukun Yamani To Hajar Aswad",
+    "titleMy": "Dua Dari Rukun Yamani Hingga Hajar Aswad",
     "doa": [{
       "id": 1,
       "arabic": "اَللَّهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nوَ أَدخِلنَا الجَنَّةَ مَعَ الأَبرَارِ يَا عَزِيزُ يَا غَفَّارُ يَا رَبَّ العَالَمِينََ",
@@ -266,8 +266,8 @@
   },
   {
     "id": 22,
-    "titleEn": "3rd Round Of Tawaf",
-    "titleMy": "Doa Tawaf Pusingan Ketiga",
+    "titleEn": "(3rd) Round Of Tawaf",
+    "titleMy": "(Ke-3) Dua Tawaf Pusingan Ketiga",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ إِنِّي أَعُوذُ بِكَ مِن الشَّكِّ وَالشِرْكِ والشِّقَاقِ والنِّفَاقِ\nوسُوءِ الأَخْلاَقِ وَسُوءِ المَنْظَرِ وَالمُنقَلَبِ فِي المَالِ والأَهْلِ والوَلَدِ\nاَللَّهُمَّ إِنِّي أَسْأَلُكَ رِضَاكَ وَالجَنَّةَ وأَعُوذُبِكَ مِن سَخَطِكَ والنَّارِ\nاَللَّهُمَّ إِنِّي أَعُوذُبِكَ مِنْ فِتْنَةِ القَبرِ وأَعُوذُ بِكَ مِن فِتْنَةِ المَحْيَا وَالمَمَاتِ",
@@ -279,8 +279,8 @@
   },
   {
     "id": 23,
-    "titleEn": "Doa From Rukun Yamani To Hajar Aswad",
-    "titleMy": "Doa Dari Rukun Yamani Hingga Hajar Aswad",
+    "titleEn": "Dua From Rukun Yamani To Hajar Aswad",
+    "titleMy": "Dua Dari Rukun Yamani Hingga Hajar Aswad",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nوَ أَدخِلنَا الجَنَّةَ مَعَ الأَبرَارِ يَا عَزِيزُ يَا غَفَّارُ يَا رَبَّ العَالَمِينَ",
@@ -292,8 +292,8 @@
   },
   {
     "id": 24,
-    "titleEn": "4th Round Of Tawaf",
-    "titleMy": "Doa Tawaf Pusingan Keempat",
+    "titleEn": "(4th) Round Of Tawaf",
+    "titleMy": "(Ke-4) Dua Tawaf Pusingan Keempat",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ اجْعَلْنِي حَجًّا مَبْرُورًا وَسَعْياً مَشْكُورًا وَذَنباً مَغْفُورًا وَعَمَلًا صَالِحًا مَقْبُولًا\nوَتِجَارَةً لَنْ تَبُورَ، يَا عَالِمَ مَا فِي الصُّدُورِ أَخْرِجْنِي  يَا اَللهُ مِنَ الظُّلُمَاتِ\n إِلَى النُّورِ، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ مُوجِبَاتِ رَحْمَتِكَ وَعَزَائِمَ مَغْفِرَتِكَ\nوَالسَّلاَمَةَ مِن كُلِّ إِثْمٍ والغَنِيمَةَ مِن كُلِّ بِرٍّ والفَوْزَ بِالجَنَّةِ وَ النَّجَاةَ مِنَ النَّارِ\nرَبِّي قَنِّعْنِي بِمَا رَزَقتَنِي وَبَارِكْ لِي فِيمَا أَعْطَيْتَنِي\nوَاخْلُفْ عَلَيَّ كُلَّ غَائِبَةٍ لِي مِنْكَ بِخَيْرٍ",
@@ -305,8 +305,8 @@
   },
   {
     "id": 25,
-    "titleEn": "Doa From Rukun Yamani To Hajar Aswad",
-    "titleMy": "Doa Dari Rukun Yamani Hingga Hajar Aswad",
+    "titleEn": "Dua From Rukun Yamani To Hajar Aswad",
+    "titleMy": "Dua Dari Rukun Yamani Hingga Hajar Aswad",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nوَ أَدخِلنَا الجَنَّةَ مَعَ الأَبرَارِ يَا عَزِيزُ يَا غَفَّارُ يَا رَبَّ العَالَمِينََ",
@@ -318,8 +318,8 @@
   },
   {
     "id": 26,
-    "titleEn": "5th Round Of Tawaf",
-    "titleMy": "Doa Tawaf Pusingan Kelima",
+    "titleEn": "(5th) Round Of Tawaf",
+    "titleMy": "(Ke-5) Dua Tawaf Pusingan Kelima",
     "doa": [{
       "id": 1,
       "arabic": "اَللَّهُمَّ أَظِلَّنِي تَحْتَ ظِلِّ عَرْشِكَ يَوْمَ لَا ظِلَّ إِلَّا ظِلُّكَ وَلَا بَاقِيَ إِلَّا وَجْهُكَ\nوَاسْقِنِي مِنْ حَوْضِ نَبِيِّكَ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ شَرْبَةً هَنِيئَةً مَرِيئَةً\nلَا أَظمَؤُ بَعْدَهَا أَبَدًا، اَللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ مَا سَأَلَكَ مِنهُ\nنَبِيُّكَ مُحَمَّدٌ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ \nوَأَعُوذُبِكَ مِنْ شَرِّ مَا استَعَاذَكَ مِنْهُ نَبِيُّكَ مُحَمَّدٌ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ\nاَللّٰهُمَّ إِنِّي أَسْأَلُكَ الجَنَّةَ وَنَعِيمَهَا وَمَا يُقَرِّبُنِي إِلَيْهَا مِنْ قَوْلٍ أَوْ فِعْلٍ أَوْ عَمَلٍ\nوَأَعُوذُبِكَ مِنَ النَّارِ وَمَا يُقَرِّبُنِي إِلَيْهَا مِنْ قَوْلٍ أَوْ فِعْلٍ أَوْ عَمَلٍ",
@@ -331,8 +331,8 @@
   },
   {
     "id": 27,
-    "titleEn": "Doa From Rukun Yamani To Hajar Aswad",
-    "titleMy": "Doa Dari Rukun Yamani Hingga Hajar Aswad",
+    "titleEn": "Dua From Rukun Yamani To Hajar Aswad",
+    "titleMy": "Dua Dari Rukun Yamani Hingga Hajar Aswad",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nوَ أَدخِلنَا الجَنَّةَ مَعَ الأَبرَارِ يَا عَزِيزُ يَا غَفَّارُ يَا رَبَّ العَالَمِينََ",
@@ -344,8 +344,8 @@
   },
   {
     "id": 28,
-    "titleEn": "6th Round Of Tawaf",
-    "titleMy": "Doa Tawaf Pusingan Keenam",
+    "titleEn": "(6th) Round Of Tawaf",
+    "titleMy": "(Ke-6) Dua Tawaf Pusingan Keenam",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ إِنَّ لَكَ عَلَيَّ حُقُوقًا كَثِيرَةً فِيمَا بَيْنِي وَبَيْنَكَ وَحُقُوقًا كَثِيرَةً فِيمَا بَيْنِي\nوَبَيْنَ خَلْقِكَ ، اَللّٰهُمَّ مَا كَانَ لَكَ مِنْهُ فَاغْفِرْهُ لِي وَمَا كَانَ لِخَلْقِكَ\nفَتَحَمَّلهُ عَنِّي وَأَغْنِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَبِطَاعَتِكَ عنْ مَعْصِيَتِكَ\n\nوَبِفَضْلِكَ عَمَّنْ سِوَاكَ يَا وَاسِعَ المَغْفِرَةِ، اَللّٰهُمَّ إِنَّ بَيْتَكَ عَظِيمٌ\n وَوَجْهَكَ كَرِيْمٌ، وَأَنْتَ يَا اللَّهُ، حَلِيمٌ كَرِيمٌ عَظِيمٌ تُحِبُّ العَفْوَ فَاعْفُ عَنِّي",
@@ -357,8 +357,8 @@
   },
   {
     "id": 29,
-    "titleEn": "Doa From Rukun Yamani To Hajar Aswad",
-    "titleMy": "Doa Dari Rukun Yamani Hingga Hajar Aswad",
+    "titleEn": "Dua From Rukun Yamani To Hajar Aswad",
+    "titleMy": "Dua Dari Rukun Yamani Hingga Hajar Aswad",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nوَ أَدخِلنَا الجَنَّةَ مَعَ الأَبرَارِ يَا عَزِيزُ يَا غَفَّارُ يَا رَبَّ العَالَمِينََ",
@@ -370,8 +370,8 @@
   },
   {
     "id": 30,
-    "titleEn": "7th Round Of Tawaf",
-    "titleMy": "Doa Tawaf Pusingan Ketujuh",
+    "titleEn": "(7th) Round Of Tawaf",
+    "titleMy": "(Ke-7) Dua Tawaf Pusingan Ketujuh",
     "doa": [{
       "id": 1,
       "arabic": "اَللَّهُمَّ إِنِّي أَسْأَلُكَ إِيْمَاناً كَامِلًا وَيَقِينًا صَادِقًا وَرِزْقًا وَاسِعًا\nوَقَلْبًا خَاشِعًا ولِسَانًا ذَاكِرًا وَحَلَالًا طَيِّبًا وَتَوْبَةً نَصُوحًا\nوَتَوْبَةً قَبْلَ المَوْتِ وَرَاحَةً عِنْدَ المَوتِ وَمَغْفِرَةً وَرَحْمَةً\nبَعْدَ المَوْتِ وَالْعَفْوَ عِنْدَ الحِساَبِ وَالفَوْزَ بِالْجَنَّةِ وَالنَّجَاةَ مِنَ النَّارِ\nبِرَحْمَتِكَ يَا عَزِيْزُ يَا غَفَّارُ رَبِّ زِدنِي عِلمًا وَ اَلحِقنِي بِاْلصَّالِحِينَ",
@@ -383,8 +383,8 @@
   },
   {
     "id": 31,
-    "titleEn": "Doa From Rukun Yamani To Hajar Aswad",
-    "titleMy": "Doa Dari Rukun Yamani Hingga Hajar Aswad",
+    "titleEn": "Dua From Rukun Yamani To Hajar Aswad",
+    "titleMy": "Dua Dari Rukun Yamani Hingga Hajar Aswad",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nوَ أَدخِلنَا الجَنَّةَ مَعَ الأَبرَارِ يَا عَزِيزُ يَا غَفَّارُ يَا رَبَّ العَالَمِينََ",
@@ -410,7 +410,7 @@
   {
     "id": 33,
     "titleEn": "Dua After Tawaf Prayer",
-    "titleMy": "Doa Setelah Solat Sunat Tawaf",
+    "titleMy": "Dua Setelah Solat Sunnah Tawaf",
     "doa": [{
       "id": 1,
       "arabic": "وَابْنُ عَبْدِكَ وَابْنُ أَمَتِكَ أَتَيْتُكَ بِذُنُوْبٍ كَثِيرَةٍ وَخَطَايَا جَمَّةٍ وَأَعْمَالٍ سَيِّئَةٍ\nوَهَذَا مَقَامُ الْعَائِذِ بِكَ مِنَ النَّارِ، اَللّٰهُمَّ عَافِنَا وَاعْفُ عَنَّا وَاغْفِرْ لَنَا\nإِنَّكَ أَنْتَ الْغَفُوْرُ الرَّحِيمُ، اَللّٰهُمَّ إِنَّكَ دَعَوْتَ عِبَادَكَ إِلَى بَيْتِكَ الْحَرَامِ\nوَقَدْ جِئْتُ طَالِبًا مَرْضَاتِكَ وَأَنْتَ مَنَنْتَ عَلَىَّ فَاغْفِرْ لِي وَارْحَمْنِي\nوَعَافِنِي وَاعْفُ عَنِّي إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، اَللّٰهُمَّ يَسِّرْلِيَ الْيُسْرَى\nوَجَنِّبْنِيَ الْعُسْرَى، وَاغْفِرْ لِي فِي الْآخِرَةِ وَالأُولَى، اَللّٰهُمَّ اعْصِمْنِي بِأَلطَافِكَ وَاجْعَلْنِي مِمَّنْ يُحِبُّكَ وَيُحِبُّ مَلَائِكَتَكَ وَرُسُلَكَ وَأَنْبِيَائَكَ وَعِبَادَكَ الصَّالِحِيْنَ\nوَأَوْلِيَائَكَ الْمُتَّقِينَ، اَللّٰهُمَّ كَمَا هَدَيْتَنِي لِلْإِسْلَامِ فَثَبِّتنِي عَلَيْهِ \nوَاسْتَعْمِلْنِي فِي طَاعَتِكَ وَطَاعَةِ رَسُوْلِكَ وَأَجِرْنِي مِنْ مُضِلَّاتِ الْفِتَنِ  اَللّٰهُمَّ إِنَّكَ تَعْلَمُ سِرِّي وَعَلَانِيَتِي فَاقْبَلَ مَعْذِرَتِي وَتَعْلَمُ حَاجَتِي \nفَأَعْطِنِي سُؤْلِي وَتَعْلَمُ مَا فِي نَفْسِي فَاغْفِرْ لِي ذَنْبِي\nاَللّٰهُمَّ إِنِّي أَسْأَلُكَ إِيْمَانًا دَائِمًا يُبَاشِرُ قَلْبِي وَأَسْأَلُكَ يَقِيْنًا صَادِقًا \nحَتَّى أَعْلَمَ أَنَّهُ لَنْ يُصِيبَنِي إِلَّا مَا كَتَبْتَهُ عَلَيَّ، وَرَضِّنِي بِمَا قَسَمْتَهُ لِي\nيَا ذَا الْجَلَالِ وَالْإِكْرَامِ، اَللّٰهُمَّ صَلِّ وَسَلَّمْ عَلَى حَبِيْبِكَ سَيِّدِنَا مُحَمَّدٍ\nوَعَلَى جَمِيعِ الْأَنْبِيَاءِ وَالْمُرْسَلِيْنَ، وَ آلِ كُلِّ مِنهُم وَ مَن تَبِعَهُم\nبِإِحسَانٍ إِلَى يَومِ الدِّينِ، يَا أَرحَمَ الرَّاحِمِينََ",
@@ -427,7 +427,7 @@
     "doa": [{
       "id": 1,
       "arabic": "",
-      "translationEn": ["To drink with good intentions. This is in accordance with the meaning of the words of the Prophet s.a.w. \"Zam-zam water is for something that we drink because of it", "To faced the Kaaba", "Mention the name of Allah", "Drink with three sips (breaths)", "Drink until you've had enough", "Praise Allah", "Doa"],
+      "translationEn": ["To drink with good intentions. This is in accordance with the meaning of the words of the Prophet s.a.w. \"Zam-zam water is for something that we drink because of it", "To faced the Kaaba", "Mention the name of Allah", "Drink with three sips (breaths)", "Drink until you've had enough", "Praise Allah", "Dua"],
       "translationMy": ["Berniat dengan niat yang baik. Ini sesuai dengan maksud sabda baginda Rasulullah s.a.w. \"Air zamzam adalah untuk sesuatu yang kita minum kerananya\"", "Hadapkan muka ke Kaabah", "Menyebut nama Allah", "Minum dengan tiga tegok(nafas)", "Minum dengan sepuas-puasnya (hingga kenyang)", "Bersyukur ke hadrat Allah", "Berdoa"]
     }],
     "categoryKey": ["zam-zam"],
@@ -435,8 +435,8 @@
   },
   {
     "id": 35,
-    "titleEn": "Doa Before Drinking Zam-Zam",
-    "titleMy": "Doa Ketika Minum Air Zam-Zam",
+    "titleEn": "Dua Before Drinking Zam-Zam",
+    "titleMy": "Dua Ketika Minum Air Zam-Zam",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ إِنِّي أَسأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا وَاسِعًا، وَشِفَاءً مِنْ كُلِّ دَاءٍ",
@@ -469,7 +469,7 @@
       "translationEn": "I intend to perform sa'i between Safa and Marwah, the sa'i of Umrah in seven rounds for Allah the Almighty.",
       "translationMy": "Sahaja aku berniat sa'i antara Safa dan Marwah, sa'i Umrah tujuh perjalanan kerana Allah Taala."
     }],
-    "categoryKey": ["tawaf"],
+    "categoryKey": ["sa'i"],
     "audio": "niat_sai_umrah.mp3"
   },
   {
@@ -487,8 +487,8 @@
   },
   {
     "id": 39,
-    "titleEn": "1st Sa'i Supplication (Safa → Marwah)",
-    "titleMy": "Doa Sa'i Pertama (Safa → Marwah)",
+    "titleEn": "(1st) Sa'i Supplication (Safa → Marwah)",
+    "titleMy": "(Ke-1) Dua Sa'i Pertama (Safa → Marwah)",
     "doa": [{
       "id": 1,
       "arabic": "اَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ كَبِيرًا، وَالْحَمْدُ لِلَّهِ كَثِيرًا، سُبْحَانَ اللهِ الْعَظِيمِ\nوَبِحَمْدِهِ الْكَرِيمِ بُكْرَةً وَأَصِيلًا، وَمِنَ اللَّيْلِ فَاسْجُدْ لَهُ وَسَبِّحْهُ لَيْلًا طَوِيلًا\nلَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ صَدَقَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ\nلَا شَيْءَ قَبْلَهُ وَلَا بَعْدَهُ، يُحْيِي وَيُمِيتُ، وَهُوَحَيٌّ دَائِمًا لَا يَمُوْتُ\nوَلَا يَفُوْتُ أَبَدًا بِيَدِهِ الْخَيْرُ وَإِلَيْهِ الْمَصِيرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
@@ -501,7 +501,7 @@
   {
     "id": 40,
     "titleEn": "Dua while brisk walking between the green lights",
-    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "titleMy": "Dua ketika berlari anak diantara tiang hijau",
     "doa": [{
       "id": 1,
       "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
@@ -514,7 +514,7 @@
   {
     "id": 41,
     "titleEn": "After passing the green lights, recite the following du'a",
-    "titleMy": "Setelah melintasi tiang hijau, baca do'a berikut",
+    "titleMy": "Setelah melintasi tiang hijau, baca dua berikut",
     "doa": [{
       "id": 1,
       "arabic": "رَبِّ أَجِرْنَا مِنَ النَّارِ سَالِمِينَ، وَأَدْخِلْنَا الْجَنَّةَ غَانِمِيْنَ فَرِحِيْنَ مُسْتَبْشِرِيْنَ\nمَعَ عِبَادِكَ الصَّالِحِيْنَ، مَعَ الَّذِيْنَ أَنْعَمَ اللهُ عَلَيْهِمْ مِنَ النَّبِيِّينَ وَالصِّدِّيقِينَ\nوَالشُّهَدَاءِ وَالصّٰلِحِيْنَ وَحَسُنَ أُولٰئِكَ رَفِيقًا، ذٰلِكَ الْفَضْلُ مِنَ اللَّهِ\nوَكَفَى بِاللَّهِ عَلِيْمًا، لَا إِلٰهَ إِلَّا اللهُ حَقًّا حَقًّا، لَا إِلٰهَ إِلَّا اللهُ تَعَبُّدًا ورِقًّا\nلَا إِلٰهَ إِلَّا اللهُ وَلَا نَعْبُدُ إِلَّا إِيَّاهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْكَرِهَ الْكَافِرُوْنَ",
@@ -526,8 +526,8 @@
   },
   {
     "id": 42,
-    "titleEn": "Doa when approaching Safa or Marwah hill",
-    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "titleEn": "Dua when approaching Safa or Marwah hill",
+    "titleMy": "Dua setiap kali menaiki bukit Safa atau Marwah",
     "doa": [{
       "id": 1,
       "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَوِاعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
@@ -539,8 +539,8 @@
   },
   {
     "id": 43,
-    "titleEn": "2nd Sa'i Supplication (Marwah → Safa)",
-    "titleMy": "Doa Sa'i Kedua (Marwah → Safa)",
+    "titleEn": "(2nd) Sa'i Supplication (Marwah → Safa)",
+    "titleMy": "(Ke-2) Dua Sa'i Kedua (Marwah → Safa)",
     "doa": [{
       "id": 1,
       "arabic": "اَلله أَكْبَرُ، اَلله أَكْبَرُ، اَلله أَكْبَرُ، وَلِلّٰهِ الْحَمْدُ لَا إِلٰهَ إِلَّا اللهُ الْوَاحِدُ الْفَرْدُ الصَّمَدُ\nالَّذِي لَمْ يَتَّخِذْ صَاحِبَةً وَلَا وَلَدًا، وَلَمْ يَكُنْ لَهُ شَرِيْكٌ فِي الْمُلْكِ، وَلَمْ يَكُنْ لَهُ وَلِيٌّ مِنَ الذُّلِّ\n وَكَبِّرْهُ تَكْبِيرًا، اَللّٰهُمَّ إِنَّكَ قُلْتَ فِي كِتَابِكَ الْمُنزَلِ، أُدْعُونِي أَسْتَجِبْ لَكُمْ، دَعَوْنَاكَ رَبَّنَا \nكَمَا أَمَرْتَنَا، فَاسْتَجِبْ لَنَا كَمَا وَعَدْتَنَا إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ، رَبَّنَا إنَّنَا سَمِعْنَا مُنَادِيًا يُنَادِي لِلْإِيْمَانِ أَنْ آمِنُوا بِرَبِّكُمْ فَآمَنَّا رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا\nوَتَوَفَّنَا مَعَ الْأَبْرَارِ، رَبَّنَا وَآتِنَا مَا وَعَدْتَنَا عَلَى رُسُلِكَ وَلَا تُخْزِنَا يَوْمَ الْقِيَامَةِ\nإِنَّكَ لَا تُخْلِفُ الْمِيْعَادَ، رَبَّنَا عَلَيْكَ تَوَكَّلْنَا وَإِلَيْكَ أَنَبنَا، وَإِلَيْكَ الْمَصِيرُ\nرَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِيْنَ سَبَقُونَا بِالْإِيْمَانِ\nوَلَا تَجْعَلْ فِي قُلُوْبِنَا غِلًّا لِلَّذِينَ آمَنُوا رَبَّنَا إنَّكَ رَؤُوفٌ رَحِيمٌ",
@@ -553,7 +553,7 @@
   {
     "id": 44,
     "titleEn": "Dua while brisk walking between the green lights",
-    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "titleMy": "Dua ketika berlari anak diantara tiang hijau",
     "doa": [{
       "id": 1,
       "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
@@ -565,8 +565,8 @@
   },
   {
     "id": 45,
-    "titleEn": "Doa when approaching Safa or Marwah hill",
-    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "titleEn": "Dua when approaching Safa or Marwah hill",
+    "titleMy": "Dua setiap kali menaiki bukit Safa atau Marwah",
     "doa": [{
       "id": 1,
       "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَوِاعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ\nأَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
@@ -578,8 +578,8 @@
   },
   {
     "id": 46,
-    "titleEn": "3rd Sa'i Supplication (Safa → Marwah)",
-    "titleMy": "Doa Sa'i Ketiga (Safa → Marwah)",
+    "titleEn": "(3rd) Sa'i Supplication (Safa → Marwah)",
+    "titleMy": "(Ke-3) Dua Sa'i Ketiga (Safa → Marwah)",
     "doa": [{
       "id": 1,
       "arabic": "اَللهُ أَكْبَرُ اَللهُ أَكْبَرُ اَللهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ، رَبَّنَا أَتْمِمْ نُوْرَنَا وَاغْفِرْلَنَا\nإِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ ، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ الْخَيْرَ كُلَّهُ عَاجِلَهُ وَآجِلَهُ\nوَأَسْتَغْفِرُكَ لِذَنبِي، وَأَسْأَلُكَ رَحْمَتَكَ يَا أَرْحَمَ الرَّاحِمِينَ",
@@ -592,7 +592,7 @@
   {
     "id": 47,
     "titleEn": "Dua while brisk walking between the green lights",
-    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "titleMy": "Dua ketika berlari anak diantara tiang hijau",
     "doa": [{
       "id": 1,
       "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
@@ -605,7 +605,7 @@
   {
     "id": 48,
     "titleEn": "After passing the green lights, recite the following du'a",
-    "titleMy": "Setelah melintasi tiang hijau, baca do'a berikut",
+    "titleMy": "Setelah melintasi tiang hijau, baca dua berikut",
     "doa": [{
       "id": 1,
       "arabic": "رَبِّ أَجِرْنَا مِنَ النَّارِ سَالِمِينَ، وَأَدْخِلْنَا الْجَنَّةَ غَانِمِيْنَ فَرِحِيْنَ مُسْتَبْشِرِيْنَ\nمَعَ عِبَادِكَ الصَّالِحِيْنَ، مَعَ الَّذِيْنَ أَنْعَمَ اللهُ عَلَيْهِمْ مِنَ النَّبِيِّينَ وَالصِّدِّيقِينَ\nوَالشُّهَدَاءِ وَالصّٰلِحِيْنَ وَحَسُنَ أُولٰئِكَ رَفِيقًا، ذٰلِكَ الْفَضْلُ مِنَ اللَّهِ\nوَكَفَى بِاللَّهِ عَلِيْمًا، لَا إِلٰهَ إِلَّا اللهُ حَقًّا حَقًّا، لَا إِلٰهَ إِلَّا اللهُ تَعَبُّدًا ورِقًّا\nلَا إِلٰهَ إِلَّا اللهُ وَلَا نَعْبُدُ إِلَّا إِيَّاهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْكَرِهَ الْكَافِرُوْنَ",
@@ -617,8 +617,8 @@
   },
   {
     "id": 49,
-    "titleEn": "Doa when approaching Safa or Marwah hill",
-    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "titleEn": "Dua when approaching Safa or Marwah hill",
+    "titleMy": "Dua setiap kali menaiki bukit Safa atau Marwah",
     "doa": [{
       "id": 1,
       "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَوِاعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ\nأَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
@@ -630,8 +630,8 @@
   },
   {
     "id": 50,
-    "titleEn": "4th Sa'i Supplication (Marwah → Safa)",
-    "titleMy": "Doa Sa'i Keempat (Marwah → Safa)",
+    "titleEn": "(4th) Sa'i Supplication (Marwah → Safa)",
+    "titleMy": "(Ke-4) Dua Sa'i Keempat (Marwah → Safa)",
     "doa": [{
       "id": 1,
       "arabic": "اَللهُ أَكبَرُ، اَللهُ أَكبَرُ، اَللهُ أَكبَرُ، وَلِلّٰهِ الْحَمْدُ، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ مَا تَعْلَمُ\nوَأَعُوْذُ بِكَ مِنْ شَرِّ مَا تَعْلَمُ إِنَّكَ أَنْتَ عَلاَّمُ الْغُيُوبِ، لَا إِلٰهَ إِلَّا اللهُ الْمَلِكُ الْحَقُّ الْمُبِيْنَ مُحَمَّدٌ رَسُولُ اللَّهُ، الصَّادِقُ الْوَعْدُ الْأَمِيْنِ، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ كَمَا هَدَيْتَنِي لِلْإِسْلَامِ\nأَن لَا تَنزِعَهُ مِنِّي حَتَّى تَتَوَفَّانِي وَأَنَا مُسْلِمٌ، اَللّٰهُمَّ اجْعَلْ فِي قَلْبِي نُورًا\nوَفِي سَمْعِي نُورًا، وَفِي بَصَرِي نُوْرًا، اَللّٰهُمَّ اشْرَحْ لِي صَدْرِي، وَيَسِّرْ لِي أَمْرِي\nوَأَعُوْذُ بِكَ مِنْ شَرِّ وَسَاوِسِ الصَّدْرِ، وَشَتَاتِ الْأَمْرِ وَفِتْنَةِ الْقَبْرِ\nاَللّٰهُمَّ إِنِّي أَعُوْذُ بِكَ مِنْ شَرِّ مَا يَلِجُ فِي اللَّيْلِ وَشَرِّ مَا يَلِجُ فِي النَّهَارِ\nوَمِنْ شَرِّ مَا تَهُبُّ بِهِ الرِّيَاحِ يَا أَرْحَمَ الرَّاحِمِيْنَ\nسُبْحَانَكَ مَا عَبَدْنَاكَ حَقَّ عِبَادَتِكَ يَا اَللهُ\nسُبْحَانَكَ مَا ذَكَرْنَاكَ حَقَّ ذِكْرِكَ يَا اَللهُ",
@@ -644,7 +644,7 @@
   {
     "id": 51,
     "titleEn": "Dua while brisk walking between the green lights",
-    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "titleMy": "Dua ketika berlari anak diantara tiang hijau",
     "doa": [{
       "id": 1,
       "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
@@ -656,8 +656,8 @@
   },
   {
     "id": 52,
-    "titleEn": "Doa when approaching Safa or Marwah hill",
-    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "titleEn": "Dua when approaching Safa or Marwah hill",
+    "titleMy": "Dua setiap kali menaiki bukit Safa atau Marwah",
     "doa": [{
       "id": 1,
       "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِاللهِ فَمَنْ حَجَّ البَيتَ اَوِاعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ\nأَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
@@ -669,8 +669,8 @@
   },
   {
     "id": 53,
-    "titleEn": "5th Sa'i Supplication (Safa → Marwah)",
-    "titleMy": "Doa Sa'i Kelima (Safa → Marwah)",
+    "titleEn": "(5th) Sa'i Supplication (Safa → Marwah)",
+    "titleMy": "(Ke-5) Dua Sa'i Kelima (Safa → Marwah)",
     "doa": [{
       "id": 1,
       "arabic": "اَللهُ أَكبَرُ، اَللهُ أَكبَرُ، اَللهُ أَكبَرُ، اَللهُ أَكبَرُ كَبِيرًا وَالْحَمْدُ لِلَّهِ كَثِيرًا\nاَللَّهُمَّ حَبِّبْ إِلَيَّ الْإِيْمَانَ وَزَيِّنْهُ فِي قَلْبِي، وَكَرِّهْ إِلَىَّ الْكُفْرَ\nوَالْفُسُوْقَ وَالْعِصْيَانَ، وَاجْعَلْنِي مِنَ الرَّاشِدِيْنَ",
@@ -683,7 +683,7 @@
   {
     "id": 54,
     "titleEn": "Dua while brisk walking between the green lights",
-    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "titleMy": "Dua ketika berlari anak diantara tiang hijau",
     "doa": [{
       "id": 1,
       "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
@@ -696,7 +696,7 @@
   {
     "id": 55,
     "titleEn": "After passing the green lights, recite the following du'a",
-    "titleMy": "Setelah melintasi tiang hijau, baca do'a berikut",
+    "titleMy": "Setelah melintasi tiang hijau, baca dua berikut",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، اَللّٰهُمَّ إِنِّي أَعُوْذُ بِرِضَاكَ مِنْ سَخَطِكَ\nوَبِمُعَافَاتِكَ مِنْ عُقُوْبَتِكَ، وَ أَعُوْذُ بِكَ مِنْكَ لَا أُحْصِيْ ثَنَاءً عَلَيْكَ\nأَنْتَ كَمَا أَثْنَيْتَ عَلَى نفْسِكَ، فَلَكَ الْحَمْدُ حَتَّى تَرْضَى",
@@ -708,8 +708,8 @@
   },
   {
     "id": 56,
-    "titleEn": "Doa when approaching Safa or Marwah hill",
-    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "titleEn": "Dua when approaching Safa or Marwah hill",
+    "titleMy": "Dua setiap kali menaiki bukit Safa atau Marwah",
     "doa": [{
       "id": 1,
       "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
@@ -721,8 +721,8 @@
   },
   {
     "id": 57,
-    "titleEn": "6th Sa'i Supplication (Marwah → Safa)",
-    "titleMy": "Doa Sa'i Keenam (Marwah → Safa)",
+    "titleEn": "(6th) Sa'i Supplication (Marwah → Safa)",
+    "titleMy": "(Ke-6) Dua Sa'i Keenam (Marwah → Safa)",
     "doa": [{
       "id": 1,
       "arabic": "اَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ، اَلله أَكْبَرُ، وَلِلَّهِ الْحَمْدُ، لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ، صَدَقَ وَعْدَهُ\nوَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ، لَا إِلٰهَ إِلَّا اللَّهُ، وَلَا نَعْبُدُ إِلَّا إِيَّاهُ مُخْلِصِينَ لَهُ الدِّيْنَ\nوَلَوْ كَرِهَ الْكَافِرُوْنَ، اَللّٰهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى،اَللّٰهُمَّ إِنِّي أَسْأَلُكَ \nرِضَاكَ وَالجَنَّةَ، وَأَعُوْذُ بِكَ مِنْ سَخَطِكَ وَالنَّارِ،وَمَا يُقَرِّبُنِي إِلَيْهَا مِنْ قَوْلٍ أَوْ فِعْلٍ أَوْ عَمَلٍ\nاَللّٰهُمَّ بِنُورِكَ اهْتَدَيْنَا وَبِفَضْلِكَ اسْتَغنَيْنَا وَفِي كَنَفِكَ وَإِنْعَامِكَ وَعَطَائِكَ وَإِحْسَانِكَ\nأَصْبَحْنَا وَأَمْسَيْنَا أَنتَ الْأَوّلُ فَلَا قَبْلَكَ شَيْءٌ، وَالْآخِرُ فَلَا بَعْدَكَ شَيْءٌ\nوَالظَّاهِرُ فَلَا شَيْءَ فَوْقَكَ، وَالْبَاطِنُ فَلَا شَيْءَ دُوْنَكَ\nنَعُوْذُبِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَعَذَابِ الْقَبْرِ وَفِتنَةِ الْغِنَى وَنَسْأَلُكَ الْفَوْزَ بِالْجَنَّةِ",
@@ -735,7 +735,7 @@
   {
     "id": 58,
     "titleEn": "Dua while brisk walking between the green lights",
-    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "titleMy": "Dua ketika berlari anak diantara tiang hijau",
     "doa": [{
       "id": 1,
       "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
@@ -747,8 +747,8 @@
   },
   {
     "id": 59,
-    "titleEn": "Doa when approaching Safa or Marwah hill",
-    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "titleEn": "Dua when approaching Safa or Marwah hill",
+    "titleMy": "Dua setiap kali menaiki bukit Safa atau Marwah",
     "doa": [{
       "id": 1,
       "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
@@ -760,8 +760,8 @@
   },
   {
     "id": 60,
-    "titleEn": "7th Sa'i Supplication Doa (Safa → Marwah)",
-    "titleMy": "Sa'i Ketujuh (Safa → Marwah)",
+    "titleEn": "(7th) Sa'i Supplication Dua (Safa → Marwah)",
+    "titleMy": "(Ke-7) Sa'i Ketujuh (Safa → Marwah)",
     "doa": [{
       "id": 1,
       "arabic": "اَللهُ أَكْبَرُ، اَللهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ سُبْحَانَكَ مَا شَكَرْنَاكَ\nحَقَّ شُكْرِكَ يَا اَللَّهُ، سُبْحَانَكَ مَا أَعْلَى شَأْنَكَ يَا اَللَّهُ، اَللّٰهُمَّ حَبِّبْ\nإِلَيْنَا الْإِيْمَانَ وَزَيِّنْهُ فِي قُلُوْبِنَا، وَكَرِّه إلَيْنَا الْكُفْرَ وَالْفُسُوْقَ وَالْعِصْيَانَ\nوَاجْعَلْنَا مِنَ الرَّاشِدِيْنَ",
@@ -774,7 +774,7 @@
   {
     "id": 61,
     "titleEn": "Dua while brisk walking between the green lights",
-    "titleMy": "Doa ketika berlari anak diantara tiang hijau",
+    "titleMy": "Dua ketika berlari anak diantara tiang hijau",
     "doa": [{
       "id": 1,
       "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَاعْفُ وَتَكَرَّمْ، وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ تَعْلَمُ مَا لَا نَعْلَمُ إِنَّكَ أَنْتَ اللهُ الْأَعَزُّ الْأَكْرَمُ",
@@ -787,7 +787,7 @@
   {
     "id": 62,
     "titleEn": "After passing the green lights, recite the following du'a",
-    "titleMy": "Setelah melintasi tiang hijau, baca do'a berikut",
+    "titleMy": "Setelah melintasi tiang hijau, baca dua berikut",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ، اَللّٰهُمَّ اهْدِنِي بِالْهُدَى وَنَقِّنِي بِالتَّقْوَى وَاغْفِرْ لِي فِي الْآخِرَةِ وَالأُوْلَى، اَللّٰهُمَّ ابْسُطْ عَلَيْنَا مِنْ بَرَكَاتِكَ وَرَحْمَتِكَ وَفَضْلِكَ وَرِزْقِكَ\nاَللّٰهُمَّ إِنِّي أَسْأَلُكَ النَّعِيمَ الْمُقِيمَ الَّذِي لَا يَحُولُ وَلَا يَزُولُ أَبَدًا\nاَللّٰهُمَّ اجْعَلْ فِي قَلْبِي نُورًا ، وَفِي سَمْعِي نُوْرًا، وَفِي بَصَرِي نُوْرًا، وَفِي لِسَانِي نُوْرًا\nوَعَنْ يَمِينِي نُوْرًا، وَعَنْ شِمَالِي نُورًا وَمِنْ فَوْقِيَ نُوْرًا وَعَنْ يَمِينِي نُوْرًا، وَعَنْ شِمَالِي نُورًا وَمِنْ فَوْقِيَ نُوْرًا، وَاجْعَلْ فِي نَفْسِي نُورًا وَعَظِّمْ لِي نُورًا \nرَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
@@ -799,8 +799,8 @@
   },
   {
     "id": 63,
-    "titleEn": "Doa when approaching Safa or Marwah hill",
-    "titleMy": "Doa setiap kali menaiki bukit Safa atau Marwah",
+    "titleEn": "Dua when approaching Safa or Marwah hill",
+    "titleMy": "Dua setiap kali menaiki bukit Safa atau Marwah",
     "doa": [{
       "id": 1,
       "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ البَيتَ اَواعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا، وَمَنْ تَطَوَّعَ خَيْرًا فَإِنَّ اللَّهَ شَاكِرٌ عَلَيْمٌ",
@@ -813,12 +813,12 @@
   {
     "id": 64,
     "titleEn": "Supplication after completing Sa'i at Marwah",
-    "titleMy": "Doa setelah selesai Sa'i di atas bukit Marwah",
+    "titleMy": "Dua setelah selesai Sa'i di atas bukit Marwah",
     "doa": [{
       "id": 1,
       "arabic": "رَبَّنَا تَقَبَّلْ مِنَّا وَعَافِنَا وَاعْفُ عَنَّا، وَعَلَى طَاعَتِكَ وَشُكْرِكَ أَعِنَّا، وَعَلَى غَيْرِكَ\nلَا تَكِلْنَا وَعَلَى الْإِيْمَانِ وَالْإِسْلَامِ الْكَامِلِ جَمْعًا تَوَفَّنَا وَأَنْتَ رَاضٍ عَنَّا\nاَللّٰهُمَّ ارْحَمْنِيْ بِتَرْكِ الْمَعَاصِي مَا أَبْقَيْتَنِي، وَارْحَمْنِي أَنْ أَتَكَلَّفَ مَا لَا يَعْنِينِي\nوَارْزُقْنِي حُسْنَ النَّظَرِ فِيْمَا يُرْضِيْكَ عَنِّي، يَا أَرْحَمَ الرَّاحِمِيْنَ",
       "translationEn": "O God, we ask that our prayers be accepted. Grant us good health and forgive us. Give us assistance to be obedient and grateful to You. Do not let us depend on anyone else but You. Let us die in perfect faith and Islam, while You are pleased with us. O Allah, O Lord, protect me from all evil throughout my life, and keep me from doing things that are of no benefit, and bestow upon me a good perspective on things that lead to Your pleasure, O Lord who is Most Compassionate.",
-      "translationMy": "Ya Tuhan, kami memohon diterima doa kami. Afiatkanlah dan ampunilah kami. Berilah pertolongan kepada kami untuk taat dan bersyukur kepada Engkau. Janganlah membiarkan kami bergantung kepada yang lain, selain dari Engkau. Matikanlah kami di dalam iman dan islam yang sempurna, sedang Engkau reda kepada kami. Ya Allah, Ya Tuhan, peliharalah diriku dengan meninggalkan segala kejahatan selama hidupku, dan peliharalah aku supaya tidak membuat perkara yang tidak memberi guna, dan kurniakanlah kepadaku elok pandangan pada perkara-perkara yang membawa keredaan Engkau wahai Tuhan yang bersifat Amat Belas Kasihan."
+      "translationMy": "Ya Tuhan, kami memohon diterima dua kami. Afiatkanlah dan ampunilah kami. Berilah pertolongan kepada kami untuk taat dan bersyukur kepada Engkau. Janganlah membiarkan kami bergantung kepada yang lain, selain dari Engkau. Matikanlah kami di dalam iman dan islam yang sempurna, sedang Engkau reda kepada kami. Ya Allah, Ya Tuhan, peliharalah diriku dengan meninggalkan segala kejahatan selama hidupku, dan peliharalah aku supaya tidak membuat perkara yang tidak memberi guna, dan kurniakanlah kepadaku elok pandangan pada perkara-perkara yang membawa keredaan Engkau wahai Tuhan yang bersifat Amat Belas Kasihan."
     }],
     "categoryKey": ["sa'i"],
     "audio": "doa_selesai_sai.mp3"
@@ -826,7 +826,7 @@
   {
     "id": 65,
     "titleEn": "Dua While Shaving/Shortening",
-    "titleMy": "Doa Ketika Bercukur/Bergunting",
+    "titleMy": "Dua Ketika Bercukur/Bergunting",
     "doa": [{
       "id": 1,
       "arabic": "اَللهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، اَللهُ أَكْبَرُ، اَللّٰهُمَّ هَذِهِ نَاصِيَتِي بِيَدِكَ. فَاجْعَلْ لِي بِكُلِّ شَعْرَةٍ نُوْرًا يَوْمَ الْقِيَامَةِ، وَاغْفِرْلِي ذَنْبِي يَا وَاسِعَ الْمَغْفِرَةِ. آمِين",
@@ -839,7 +839,7 @@
   {
     "id": 66,
     "titleEn": "Dua After Shaving/Shortening",
-    "titleMy": "Doa Setelah Bercukur/Bergunting",
+    "titleMy": "Dua Setelah Bercukur/Bergunting",
     "doa": [{
       "id": 1,
       "arabic": "اَلحَمْدُ لِلَّهِ الَّذِي قَضَى عَنِّيْ نُسُكِي، اَللّٰهُمَّ آتِنِي بِكُلِّ شَعْرَةٍ حَسَنَةً \nوَامْحُ عَنِّي بِهَا سَيِّئَةً، وَارْفَعْ لِي بِهَا دَرَجَةً، وَاغْفِرْ لِي وَلِلْمُحَلِّقِيْنَ وَالْمُقَصِّرِينَ \nوَجَمِيعِ الْمُسْلِمِيْنَ، اَللّٰهُمَّ زِدْنَا إِيْمَانًا وَيَقِيْنًا وَتَوْفِيقًا وَعَوْنًا وَاغْفِرْلَنَا\nوَلِآبَائِنَا وَأُمَّهَاتِنَا وَصَلَّى اللهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلَّمَ",
@@ -851,28 +851,41 @@
   },
   {
     "id": 17,
-    "titleEn": "Farewell Tawaf",
-    "titleMy": "Tawaf Wada'",
+    "titleEn": "Tawaf Wadak Intention",
+    "titleMy": "Niat Tawaf Wadak",
     "doa": [{
       "id": 1,
       "arabic": "نَوَيْتُ أَن أَطُوفَ طَوَافَ الوَدَاعِ سَبعَةَ أَشوَاطٍ لِلّٰهِ تَعَالَى",
-      "translationEn": "I intended to perform farewell tawaf, seven rounds for the sake of Allah Most High",
-      "translationMy": "Sahaja aku berniat mengerjakan tawaf wada' tujuh pusingan kerana Allah Ta’ala"
+      "translationEn": "I intended to perform tawaf wadak, seven rounds for the sake of Allah Most High",
+      "translationMy": "Sahaja aku berniat mengerjakan tawaf wadak tujuh pusingan kerana Allah Ta’ala"
     }],
-    "categoryKey": ["tawaf-wada"],
+    "categoryKey": ["tawaf wadak"],
     "audio": "niat_tawaf_wada.mp3"
   },
   {
-    "id": 67,
-    "titleEn": "Dua During Farewell Tawaf At All Rounds",
-    "titleMy": "Doa Tawaf Wada’ Di Semua Pusingan",
+    "id": 86,
+    "titleEn": "Dua before Tawaf Wadak",
+    "titleMy": "Dua sebelum Tawaf Wadak",
     "doa": [{
       "id": 1,
       "arabic": "بِسْمِ اللَّهِ، اَللَّهُ أَكْبَرُ، سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ\n وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ العَلِيِّ الْعَظِيمِ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ\nصَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، اَللَّهُمَّ إِيمَانًا بِكَ وَتَصْدِيْقًا بِكِتَابِكَ، وَوَفَاءً بِعَهْدِكَ\nوَاتِّبَاعًا لِسُنَّةِ نَبِيِّكَ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، إِنَّ الَّذِي فَرَضَ عَلَيْكَ القُرْآنَ\nلَرَآدُّكَ إِلَى مَعَادٍ، يَا مُعِيدُ أَعِدنِي، وَيَا سَمِيعُ اِسْمَعنِي، يَا جَبَّارُ اجْبُرْنِي",
       "translationEn": "In the name of Allah, Allah is the Greatest. Allah is Pure, and all praise is due to Allah. There is no deity except Allah, and Allah is the Greatest. There is no power and no strength except by the permission of Allah, the Most High and Most Great. Blessings and peace be upon the Messenger of Allah, peace be upon him. O Allah, I come here because I believe in You and trust in Your book, fulfilling Your covenant and following the Sunnah of Your Prophet, Muhammad, peace be upon him. Indeed, the Lord who revealed the Quran to you will return me to Your presence. O Lord, the Most Returning, return me. O Lord, the All-Hearing, hear me. O Lord, the Almighty, strengthen me. O Lord, the Concealer, cover my faults. O Lord, the Most Compassionate, have mercy on me. O Lord, the Most Returning, return me to this Kaabah of Yours and grant me the opportunity to return repeatedly, repent, worship, and journey in a state of praising You. Allah fulfills promises and helps His servants.' and destroy the enemy, alone. O God, keep me from the right, and from the left, and from the front, and from the back, and from above, and from below, that You may deliver me to my family and my country. O Allah, make this journey easy for us, and fold for us this earth. O Allah, join us on our journey, and nourish our families, O Most Merciful God, O God of the Universe.",
       "translationMy": "Dengan nama Allah, Allah Maha Besar. Allah Maha Suci, dan segala puji bagi Allah. Tiada Tuhan kecuali Allah dan Allah Maha Besar. Tiada upaya dan tiada kekuatan kecuali dengan izin Allah Yang Maha Tinggi dan Maha Agong. Selawat dan salam bagi Rasulullah s.a.w. Ya Allah, aku datang ke sini kerana beriman kepadaMu dan mempercayai kitabMu, memenuhi janjimu dan kerana mengikut sunnah NabiMu, Muhammad s.a.w. Sesungguhnya Tuhan yang menurunkan kepadamu Al-Quran akan mengembalikan ke tempatmu. Ya Tuhan Yang Maha Mengembalikan, kembalikanlah aku. Ya Tuhan Yang Maha Mendengar, dengarkanlah aku. Ya Tuhan Yang Maha Perkasa, kuatkanlah aku. Wahai Tuhan Yang Maha Menutup, tutuplah aibku. Wahai Tuhan Yang Maha Pengasih, kasihilah aku. Wahai Tuhan Yang Maha Mengembalikan, kembalikanlah aku ke KaabahMu ini dan anugerahilah aku kesempatan untuk kembali, dan Kembali berulang-ulang kembali, bertaubat, beribadat, mengembara dalam keadaan memujiMu. Allah Maha Menepati janji dan membantu hambaNya, dan menghancurkan musuh, sendiri sahaja. Ya Allah, peliharalah aku dari kanan, dan kiri, dan dari hadapan, dan dari belakang, dan dari atas, dan dari bawah, sehingga Engkau sampaikan aku kepada keluargaku dan negeriku. Ya Allah, ringankanlah bagi kami perjalanan ini, dan lipatkanlah bagi kami bumi ini. Ya Allah, sertailah kami dalam perjalanan kami, dan peliharalah keluarga kami, wahai Tuhan Yang Maha Penyayang, Ya Tuhan Pemelihara alam semesta."
     }],
-    "categoryKey": ["tawaf-wada"],
+    "categoryKey": ["tawaf wadak"],
+    "audio": ""
+  },
+  {
+    "id": 67,
+    "titleEn": "Dua During tawaf wadak At All Rounds",
+    "titleMy": "Dua Tawaf Wadak Di Semua Pusingan",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "categoryKey": ["tawaf wadak"],
     "audio": ""
   },
   {
@@ -885,26 +898,26 @@
       "translationEn": "I intended to pray two raka’at of sunnah Tawaf for the sake of Allah Most High",
       "translationMy": "Sahaja aku solat Tawaf dua rakaat kerana Allah Taala"
     }],
-    "categoryKey": ["tawaf-wada"],
+    "categoryKey": ["tawaf wadak"],
     "audio": ""
   },
   {
     "id": 69,
-    "titleEn": "Dua After Tawaf Wada' Prayer",
-    "titleMy": "Doa Setelah Solat Sunat Tawaf Wada'",
+    "titleEn": "Dua After Tawaf Wadak Prayer",
+    "titleMy": "Dua Setelah Solat Sunnah Tawaf Wadak",
     "doa": [{
       "id": 1,
       "arabic": "اَللَّهُمَّ إِنَّ البَيْتَ بَيْتُكَ وَالْعَبْدَ عَبْدُكَ وَابْنُ عَبْدِكَ وَابْنُ أَمَتِكَ\nحَمَلْتَنِي عَلَى مَا سَخَّرْتَنِيْ لِيْ مِنْ خَلْقِكَ حَتَّى سَيَّرْتَنِيْ فِيْ بِلَادِكَ\nوَبَلَغْتَنِيْ بِنِعْمَتِكَ حَتَّى أَعَنْتَنِيْ عَلَى قَضَاءِ مَنَاسِكِكَ\nفَإِنْ كُنْتَ رَضِيْتَ عَنِّيْ فَازْدَدْ عَنِّيْ رِضَا\nوَإِلَّا فَمُنَّ الْآنَ قَبْلَ تَبَاعُدِيْ عَنْ بَيْتِكَ هٰذَا أَوَانُ انْصِرَافِيْ\nإِنْ أَذِنْتَ لِيْ غَيْرَ مُسْتَبْدِلٍ بِكَ وَلَا بِبَيْتِكَ وَلَا رَاغِبٍ عَنْكَ\nوَلَا عَنْ بَيْتِكَ، اَللّٰهُمَّ أَصْحِبْنِيَ الْعَافِيَةَ فِي بَدَنِيْ وَالْعِصْمَةَ فِيْ دِيْنِيْ\nوَأَحْسِنْ مُنْقَلَبِيْ وَارْزُقْنِيْ طَاعَتَكَ مَا أَبْقَيْتَنِيْ\nوَاجْمَعْ لِيْ خَيْرَيِ الدُّنْيَا وَالْآخِرَةِ، إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ\nاَللّٰهُمَّ لَا تَجْعَلْ هَذَا آخِرَ الْعَهْدِ بِبَيْتِكَ الْحَرَامِ\nوَإِنْ جَعَلْتَهُ آخِرَ عَهْدِيْ فَعَوِّضْنِيْ عَنْهُ الْجَنَّةَ\nبِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ، آمِيْنَ يَا رَبِّ الْعَالَمِيْنَ",
       "translationEn": "O Allah, this house is Your house, and I am Your servant, my male and female children are Your servants, You brought me by the means of transportation that You made easy for me, until You brought me to this land of Yours, and You granted me Your blessings, so that You aid me in performing Hajj (Umrah). If You are pleased with me, grant me Your pleasure. If not, then from now, accept me before I am far from Your house, Now it is my time to return, if You allow me, without changing anything for You and not with Your house, and without displeasing Your house. O Allah, accompany my body with health, protect my faith, and make my return good. Grant me obedience to You forever. As long as You allow me to live, gather for me goodness in this world and the Hereafter. O Allah, truly You are All-Powerful over all things. O Allah, do not let this be the last chance for me to do good in this world and the hereafter. O Allah, indeed You are All-Powerful over everything. O Allah, do not let this be the end for me in Your noble house. If You make this my final opportunity, then replace it with Your paradise and mercy, O Most Compassionate and Most Merciful. Grant it, O Lord, the call of all creation.",
       "translationMy": "Ya Allah, rumah ini rumahMu, dan hamba Adalah hambaMu, anak hambaMu yang lelaki dan hambaMu yang perempuan, Engkau bawa aku dengan kenderaan yang Engkau mudahkan bagiku, sehingga Engkau jalankan aku di negeriMu ini, dan Engkau sampaikan aku dengan nikmatMu, sehingga Engkau tolong aku untuk melaksanakan ibadah Haji (Umrah). Jika Engkau Redha kepadaku, maka tambahilah bagiku redhaMu. Jika tidak, maka sejak dari sekarang, redakanlah aku sebelum aku jauh dari rumahMu, Sekarang waktuku untuk pulang jika Engkau izinkan bagiku, tanpa menukar sesuatu untuk Engkau dan juga tidak dengan rumahMu, serta tidak benci kepada rumahMu. Ya Allah, dampingilah tubuhku dengan kesihatan, dan bentengi agamaku, dan baikkan kepulanganku. Kurniailah aku ketaatan kepadaMu selama-lamanya. Selama Engkau biarkan aku hidup, maka kumpulkanlah bagiku kebaikan di dunia dan di akhirat. Ya Allah, sesungguhnya Engkau Maha Kuasa atas segala-galanya. Ya Allah, janganlah jadikan ini akhir kesempatan bagiku kebaikan di dunia dan di akhirat. Ya Allah, sesungguhnya Engkau Maha Kuasa atas segala-galanya. Ya Allah, janganlah jadikan ini akhir bagiku di rumahMu yang mulia ini. Bila Engkau jadikan kesempatan yang terakhir bagiku, maka gantilah ia dengan syurga dan rahmatMu, wahai Yang Maha Pengasih dan Penyayang. Perkenankanlah ya Tuhan seru sekelian alam."
     }],
-    "categoryKey": ["tawaf-wada"],
+    "categoryKey": ["tawaf wadak"],
     "audio": ""
   },
   {
     "id": 70,
-    "titleEn": "Dua When Entering Madinah",
-    "titleMy": "Doa Apabila Tiba Di Madinah",
+    "titleEn": "Dua Upon Entering Madinah",
+    "titleMy": "Dua Apabila Tiba Di Madinah",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ إِنَّ هٰذَا حَرَمُ نَبِيِّكَ، وَقَدْ حَرَّمْتَهُ عَلَى لِسَانِهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ\nفَاجْعَلْهُ وِقَايَةً لِيْ مِنَ النَّارِ، وَأَمَانًا مِنْ سُوْءِ الْحِسَابِ",
@@ -917,7 +930,7 @@
   {
     "id": 71,
     "titleEn": "Dua When Entering Nabawi Mosque",
-    "titleMy": "Doa Ketika Masuk Masjid Nabawi",
+    "titleMy": "Dua Ketika Masuk Masjid Nabawi",
     "doa": [{
       "id": 1,
       "arabic": "بِسْمِ اللَّهِ وَعَلَى مِلَّةِ رَسُوْلِ الله رَبِّ أَدْخِلْنِي مُدْخَلَ صِدْقٍ\nوَأَخْرِجْنِي مُخْرَجَ صِدْقٍ، وَاجْعَلْ لِي مِنْ لَدُنْكَ سُلْطَانًا نَصِيرًا\nاَللّٰهُمَّ صَلِّ وَسَلَّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ\nوَاغْفِرْ لِي ذُنُوبِي، وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ وَأَدْخِلْنِي فِيْهَا، يَا أَرْحَمَ الرَّاحِمِينَ",
@@ -929,8 +942,8 @@
   },
   {
     "id": 72,
-    "titleEn": "Dua While In Noble Raudhah",
-    "titleMy": "Doa Ketika Di Raudhah",
+    "titleEn": "Dua At Raudah",
+    "titleMy": "Dua Ketika Di Raudhah",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ إِنَّ هَذِهِ رَوْضَةٌ مِنْ رِيَاضِ الْجَنَّةِ شَرَّفْتَهَا وَكَرَّمْتَهَا وَنَوَّرْتَهَا\nبِنُوْرِ نَبِيِّكَ وَحَبِيْبِكَ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ\nفَاحْشُرْنِي فِي زُمْرَتِهِ وَأَمِتْنِي عَلَى مَحَبَّتِهِ وَسُنَّتِهِ، وَاسْقِنِي مِنْ حَوْضِهِ\nوَبِيَدِهِ الشَّرِيفَةِ شَرْبَةً هَنِيئَةً لَا أَظْمَأُ بَعْدَهَا أَبَدًا، إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ\nوَصَلَّى اللَّهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلَّمَ وَالْحَمْدُ للهِ رَبِّ الْعَالَمِينَ",
@@ -955,7 +968,7 @@
   },
   {
     "id": 74,
-    "titleEn": "Greetings To Saidina Abu Bakar",
+    "titleEn": "Greeting Saidina Abu Bakar  ",
     "titleMy": "Memberi Salam Kepada Saidina Abu Bakar",
     "doa": [{
       "id": 1,
@@ -968,7 +981,7 @@
   },
   {
     "id": 75,
-    "titleEn": "Greetings To Saidina Umar",
+    "titleEn": "Greetings Saidina Umar",
     "titleMy": "Memberi Salam Kepada Saidina Umar",
     "doa": [{
       "id": 1,
@@ -981,8 +994,8 @@
   },
   {
     "id": 76,
-    "titleEn": "Dua at Beloved Prophets PBUH Tomb",
-    "titleMy": "Doa Di Maqam Nabi SAW",
+    "titleEn": "Dua at The Prophet PBUH's Tomb",
+    "titleMy": "Dua di Makam Nabi SAW",
     "doa": [{
       "id": 1,
       "arabic": "اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ، اَللّٰهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ\nوَعَلَى آلِهِ وَصَحْبِهِ، اَلسَّلَامُ عَلَيْكَ يَا سَيِّدِي يَا رَسُولَ اللَّهِ\nإِنَّ اللَّهَ أَنْزَلَ إِلَيْكَ كِتَابًا صَادِقًا قَالَ فِيْهِ\nوَلَوْ أَنَّهُمْ إِذْ ظَلَمُوا أَنْفُسَهُمْ جَآءُوكَ فَاسْتَغْفَرُوا اللَّهَ\nوَاسْتَغْفَرَلَهُمُ الرَّسُوْلُ لَوَجَدُوا اللَّهَ تَوَّابًا رَحِيمًا\nوَقَدْ جِئْتُكَ مُسْتَغْفِرًا مِنْ ذَنْبِي مُسْتَشْفِعًا بِكَ إِلَى رَبِّي\nفَاشْفَعْ لِيْ يَا شَفِيْعَ الْأُمَّةِ وَأَجِرْنِي مِنَ النَّارِ يَا نَبِيَّ الرَّحْمَةِ\nاَلصَّلَاةُ وَالسَّلَامُ عَلَيْكَ وَعَلَى سَائِرِ الْأَنْبِيَاءِ وَالْمُرْسَلِيْنَ\nوَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
@@ -994,7 +1007,7 @@
   },
   {
     "id": 77,
-    "titleEn": "Conveying Greetings to Beloved Prophet PBUH",
+    "titleEn": "Conveying Greetings to the Prophet PBUH",
     "titleMy": "Menyampaikan Salam Kepada Baginda SAW",
     "doa": [{
       "id": 1,
@@ -1008,7 +1021,7 @@
   {
     "id": 78,
     "titleEn": "Greetings And Dua At Baqi' Cemetery",
-    "titleMy": "Salam Dan Doa Di Perkuburan Baqi'",
+    "titleMy": "Salam Dan Dua Di Perkuburan Baqi'",
     "doa": [{
       "id": 1,
       "arabic": "اَلسَّلَامُ عَلَيْكُمْ دَارَ قَوْمٍ مُؤْمِنِيْنَ، وَإِنَّا إِنْ شَاءَ اللهُ بِكُمْ لَاحِقُوْنَ\nأَنْتُمْ سَلَفُنَا وَنَحْنُ بِالْأَثَرِ، يَغْفِرُ اللهُ لَنَا وَلَكُمْ\nوَيَرْحَمُ اللَّهُ الْمُسْتَقْدِمِيْنَ مِنْكُمْ وَالْمُسْتَأْخِرِيْنَ\nاَللّٰهُمَّ لَا تَحْرِمْنَا أَجْرَهُمْ وَلَا تَفْتِنَا بَعْدَهُمْ وَاغْفِرْلَنَا وَلَهُمْ\nاَللّٰهُمَّ اغْفِرْ لِأَهْلِ الْبَقِيْعِ الْغَرْقَدِ",
@@ -1020,13 +1033,13 @@
   },
   {
     "id": 79,
-    "titleEn": "Doa at historic mosque around Madinah",
+    "titleEn": "Dua at historic mosques around Madinah",
     "titleMy": "Dua di masjid-masjid bersejarah di sekitar Madinah",
     "doa": [{
       "id": 1,
       "arabic": "اَللّٰهُمَّ رَبَّنَا تَقَبَّلْ مِنَّا وَعَافِنَا وَاعْفُ عَنَّا، اَللّٰهُمَّ تَوَفَّنَا مُسْلِمِينَ\nوَأَحْيِنَا مُسْلِمِيْنَ، وَاَلْحِقْنَا بِالصَّالِحِيْنَ، اَللّٰهُمَّ إِنِّي أَوْدَعْتُ هَذَا الْمَحَلَّ الشَّرِيفَ\nمِنْ يَوْمِنَا هَذَا إِلَى يَوْمِ الْقِيَامَةِ خَالِصًا مُخْلِصًا\n(أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ\nوَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ) اَلْفَاتِحَة",
       "translationEn": "O Allah, our Lord, accept our prayers, grant us good health, forgive our mistakes, let us die in Islam, let us live in Islam, and gather us with the righteous. O Allah, my Lord, I dedicate this sacred place from today until the Day of Judgment, sincerely and truthfully. I bear witness that there is no god but Allah, and indeed Muhammad is His servant and Messenger (AI-Fatihah)",
-      "translationMy": "Ya Allah. Ya Tuhan kami. Perkenankanlah doa kami, afiatkanlah kami, maafkanlah kesalahan kami, matikanlah kami di dalam Islam, hidupkanlah kami di dalam Islam, himpunkanlah kami dengan orang-orang yang soleh. Ya Allah. Ya Tuhan aku abadikan tempat yang suci ini daripada hari ini sehingga hari kiamat, dengan ikhlas dan jujur. Aku menyaksi tiada tuhan melainkan Allah dan sesungguhnya Nabi Muhammad hambaNya dan PesuruhNya' (AI-Fatihah)"
+      "translationMy": "Ya Allah. Ya Tuhan kami. Perkenankanlah dua kami, afiatkanlah kami, maafkanlah kesalahan kami, matikanlah kami di dalam Islam, hidupkanlah kami di dalam Islam, himpunkanlah kami dengan orang-orang yang soleh. Ya Allah. Ya Tuhan aku abadikan tempat yang suci ini daripada hari ini sehingga hari kiamat, dengan ikhlas dan jujur. Aku menyaksi tiada tuhan melainkan Allah dan sesungguhnya Nabi Muhammad hambaNya dan PesuruhNya' (AI-Fatihah)"
     }],
     "categoryKey": ["madinah"],
     "audio": ""
@@ -1034,7 +1047,7 @@
   {
     "id": 80,
     "titleEn": "Greetings and Prayers at the Martyrs' Cemetery of Uhud",
-    "titleMy": "Salam Dan Doa Di Perkuburan Syuhada’ Uhud",
+    "titleMy": "Salam Dan Dua Di Perkuburan Syuhada’ Uhud",
     "doa": [{
       "id": 1,
       "arabic": "اَلسَّلَامُ عَلَيْكَ يَا حَمْزَةُ عَمَّ رَسُوْلِ اللَّهِ، اَلسَّلَامُ عَلَيْكَ يَا سَيِّدَ الشُّهَدَاءِ\nاَلسَّلَامُ عَلَيْكَ يَا أَسَدَ اللهِ وَأَسَدَ رَسُوْلِهِ\nاَلسَّلَامُ عَلَيْكَ يَا عَبْدَ اللَّهِ بِنْ جَحْشٍ، اَلسَّلَامُ عَلَيْكَ يَا مُصْعَبَ بْنَ عُمَيْرِ\nاَلسَّلَامُ عَلَيْكُمْ يَا شُهَدَاءَ أَحُدٍ، اَلسَّلَامُ عَلَيْكُمْ بِمَا صَبَرْتُمْ فَنِعْمَ عُقْبَى الدَّارِ\nاَللّٰهُمَّ اجْزِهِمْ عَنِ الْإِسْلَامِ وَأَهْلِهِ أَفْضَلَ الْجَزَاءِ\nوَأَجْزِلْ ثَوَابَهُمْ وَأَكْرِمْ مَقَامَهُمْ وَارْفَعْ دَرَجَاتِهِمْ بِمَنِّكَ وَكَرَمِكَ\nيَا أَكْرَمَ الْأَكْرَمِيْنَ",
@@ -1046,28 +1059,59 @@
   },
   {
     "id": 81,
-    "titleEn": "Farewell Ziarah",
-    "titleMy": "Ziarah Wada'",
+    "titleEn": "Farewell Ziarah Dua",
+    "titleMy": "Dua Ziarah Wadak",
     "doa": [{
       "id": 1,
       "arabic": "",
       "translationEn": "It is recommended to bid farewell (visit) to the Prophet Muhammad PBUH as a form of respect. For women who are unable, it is sufficient to visit outside the mosque at a place near the maqam.",
       "translationMy": "Disunatkan berziarah wadak (selamat tinggal) kepada baginda Rasulullah SAW. sebagai menghormatinya, bagi wanita yang uzur, memadailah dengan ziarah di luar masjid di tempat yang berhampiran dengan maqam."
-    }],
-    "categoryKey": ["madinah"],
-    "audio": ""
-  },
-  {
-    "id": 82,
-    "titleEn": "Dua After Farewell Ziarah",
-    "titleMy": "Doa Setelah Ziarah Wada'",
-    "doa": [{
+    }, {
       "id": 1,
       "arabic": "اَللّٰهُمَّ لَا تَجْعَلْهُ آخِرَ الْعَهْدِ مِنْ هَذَا الْمَكَانِ الشَّرِيفِ\nوَارْزُقْنِيْ إِلَيْهِ الْعَوْدَةَ فِي خَيْرٍ وَعَافِيَةٍ وَصِحَّةٍ وَسَلَامَةٍ\nإِنْ عِشْتُ إِنْ شَاءَ اللهُ جِئْتُ، وَإِنْ مُتُّ أَوْدَعْتُ عِنْدَكَ شَهَادَتِيْ\nوَأَمَانَتِيْ وَعَهْدِيْ وَمِيْثَاقِيْ مِنْ يَوْمِنَا هَذَا إِلَى يَوْمِ الْقِيَامَةِ\nوَهِيَ شَهَادَةُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nوَشَهَادَةُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ\nسُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَ\nوَسَلَامٌ عَلَى الْمُرْسَلِينَ، وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
       "translationEn": "O Allah, do not let the visit of Your servant to this noble place be the last visit; grant Your servant the opportunity to return to this place in good health, safety, and well-being. If my life is prolonged, God willing, I will come again; if my time comes, then I have committed to You my testimony and covenant from this day until the Day of Judgment. I bear witness that there is no God but Allah, the One God who has no partner, and I bear witness that Muhammad is His servant and messenger. Glory be to the Lord who possesses Majesty and Power, above what they describe. Peace be upon all the Prophets, and all praises are due to Allah, the Lord who preserves and governs the entire universe.",
       "translationMy": "Ya Allah, janganlah jadikan ziarah hambaMu di tempat yang mulia ini sebagai ziarah yang penghabisan, kurniakanlah kepada hambaMu peluang untuk menziarahi kembali ke tempat ini dalam keadaan baik, sihat dan selamat. Jika panjang umur hamba, insya Allah, hamba akan datang lagi, jika sampai ajal hamba, maka hamba telah mengabadikan kepadaMu syahadat dan perjanjian hamba dari hari ini sehingga hari kiamat. laitu hamba bersaksi tiada Tuhan melainkan Allah, Tuhan Yang Esa yang tidak ada sekutu bagiNya dan hamba naik saksi bahawa Nabi Muhammad hambaNya dan pesuruhNya. Maha suci Tuhan yang mempunyai Keagungan dan Kekuasaan, dari apa yang mereka sifatkan. Dan salam sejahtera ke atas sekelian Rasul, serta segala puji-pujian tertentu bagi Allah, Tuhan yang memelihara dan mentadbir seluruh alam."
     }],
     "categoryKey": ["madinah"],
+    "audio": ""
+  },
+  {
+    "id": 83,
+    "titleEn": "Dua upon embarking a vehicle",
+    "titleMy": "Dua naik kenderaan",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "categoryKey": ["travel"],
+    "audio": ""
+  },
+  {
+    "id": 84,
+    "titleEn": "Dua upon entering a new country",
+    "titleMy": "Dua masuk negeri baru",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "categoryKey": ["travel"],
+    "audio": ""
+  },
+  {
+    "id": 85,
+    "titleEn": "Dua upon entering the sacred precinct",
+    "titleMy": "Dua masuk tanah haram",
+    "doa": [{
+      "id": 1,
+      "arabic": "",
+      "translationEn": "",
+      "translationMy": ""
+    }],
+    "categoryKey": ["travel"],
     "audio": ""
   }
 ]

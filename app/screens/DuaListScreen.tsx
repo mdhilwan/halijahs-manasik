@@ -18,7 +18,7 @@ export default function DuaListScreen({setScreen, duas, setSelectedDua, category
         <TouchableOpacity onPress={() => setScreen("home")}>
             <Ionicons size={28} name={"chevron-back"} color={"black"}/>
         </TouchableOpacity>
-        <Text style={styles.title}>{category} Du’a List</Text>
+        <Text style={styles.title}>{category} Du&#39;a List</Text>
         <ScrollView>
           {duas.map((dua, j) => (
             <TouchableOpacity
@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
   container: {flex: 1, backgroundColor: '#fff', padding: 20},
   title: {fontSize: 26, fontFamily: 'Mulish-Bold', textAlign: 'center', marginVertical: 20},
   listItem: {backgroundColor: Colors.light.tint, padding: 20, marginVertical: 8, borderRadius: 10},
-  listText: {fontSize: 18, fontFamily: 'Mulish-Bold', color: '#ffd65c'},
+  listText: {fontSize: 18, fontFamily: 'Mulish-Bold', color: '#ffd65c', textTransform: 'capitalize'},
   back: {fontSize: 18, color: '#505050', marginBottom: 10},
 });
