@@ -5,6 +5,7 @@ import {ThemedView} from '@/components/themed-view';
 import {IconSymbol} from '@/components/ui/icon-symbol';
 import {useFonts} from "expo-font";
 import {ReactNode} from "react";
+import {Link} from "expo-router";
 
 const Contributor = ({name, description}: {name: ReactNode, description: ReactNode}) => {
   return <>
@@ -66,6 +67,34 @@ export default function About() {
 
         <ThemedText style={{fontFamily: "Mulish-Regular"}}>We also extend our gratitude to all others who supported this effort. May Allah bless and reward
             everyone who contributed in any way to the development of this app.</ThemedText>
+
+        <ThemedText style={{fontFamily: "Mulish-Regular", marginBottom: 12}}>
+          To checkout more tours by Halijah Travels, please visit our website here:
+        </ThemedText>
+
+        <Link href="https://halijah.com.sg/group-tours">
+          <ThemedView style={styles.ctaBtn}>
+            <ThemedText style={{fontFamily: 'Mulish-Bold', color: '#FFFFFF'}}>
+              Halijah Travels Website
+            </ThemedText>
+          </ThemedView>
+        </Link>
+
+        <Link href="https://www.instagram.com/halijahtravels">
+          <ThemedView style={styles.ctaBtn}>
+            <ThemedText style={{fontFamily: 'Mulish-Bold', color: '#FFFFFF'}}>
+              Instagram
+            </ThemedText>
+          </ThemedView>
+        </Link>
+
+        <Link href="https://www.facebook.com/HalijahTravels">
+          <ThemedView style={styles.ctaBtn}>
+            <ThemedText style={{fontFamily: 'Mulish-Bold', color: '#FFFFFF'}}>
+              Facebook
+            </ThemedText>
+          </ThemedView>
+        </Link>
     </ParallaxScrollView>
   );
 }
@@ -81,7 +110,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 8,
   },
-  broadcastBtn: {
+  ctaBtn: {
     backgroundColor: '#FF3B30',
     paddingVertical: 12,
     paddingHorizontal: 20,

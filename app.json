@@ -12,10 +12,12 @@
       "userInterfaceStyle": "light",
       "bundleIdentifier": "com.halijahs.manasik",
       "infoPlist": {
+        "UIBackgroundModes": ["audio"],
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
+      "permissions": ["FOREGROUND_SERVICE"],
       "userInterfaceStyle": "light",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
