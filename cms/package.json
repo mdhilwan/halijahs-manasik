@@ -1,0 +1,28 @@
+{
+  "name": "hello-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:${PORT:-8080} -n",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "eslint-config-next": "^15.4.8",
+    "next": "^15.4.8",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "serve": "^14.2.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19"
+  }
+}
