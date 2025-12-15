@@ -8,10 +8,11 @@ import {
   StyleSheet,
 } from "react-native";
 import duas from "@/assets/data/duas.json";
-import {DuaDetailType, DuaEngMalayArabicType, DuaType, SelectedDuaType} from "@/app/types";
+import {DuaEngMalayArabicType, DuaType, SelectedDuaType} from "@/app/types";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import DuaDetailScreen from "@/app/screens/DuaDetailScreen";
 import {useFontSize} from "@/app/contexts/FontSettingsContext";
+import {ThemedText} from "@/components/themed-text";
 
 export default function Search() {
   const [query, setQuery] = useState("");
@@ -63,10 +64,10 @@ export default function Search() {
                   duas: [item],
                 })
               }}>
-                <Text style={[styles.title, { fontSize: translationFontSize }]}>{language === "en" ? item.titleEn : item.titleMy}</Text>
-                <Text style={[styles.snippet, { fontSize: translationFontSize }]} numberOfLines={2}>
+                <ThemedText type={"defaultBold"} style={[styles.title, { fontSize: translationFontSize }]}>{language === "en" ? item.titleEn : item.titleMy}</ThemedText>
+                <ThemedText style={[styles.snippet, { fontSize: translationFontSize }]} numberOfLines={2}>
                   {language === "en" ? item.doa[0].translationEn : item.doa[0].translationMy}
-                </Text>
+                </ThemedText>
               </TouchableOpacity>
             )}
             keyboardShouldPersistTaps="handled"

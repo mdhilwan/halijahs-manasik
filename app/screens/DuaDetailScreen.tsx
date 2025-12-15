@@ -8,6 +8,7 @@ import {useLanguage} from "@/app/contexts/LanguageContext";
 import {useFontSize} from "@/app/contexts/FontSettingsContext";
 import SettingsModal from "@/components/settings-modal";
 import {Ionicons} from "@expo/vector-icons";
+import {ThemedText} from "@/components/themed-text";
 
 function ArabicText({dua}: {dua: DuaEngMalayArabicType}) {
   const {arabicFontSize, duaHidden} = useFontSize()
@@ -15,7 +16,7 @@ function ArabicText({dua}: {dua: DuaEngMalayArabicType}) {
     return null
   }
   return <View style={styles.textWrapper}>
-    <Text style={[styles.arabic, { fontSize: arabicFontSize }]}>{dua.arabic}</Text>
+    <ThemedText type={"arabic"} style={{fontSize: arabicFontSize}}>{dua.arabic}</ThemedText>
   </View>
 }
 
@@ -45,7 +46,7 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
   const {setShowSettings} = useFontSize()
   const duaObj = selectedDua?.duas[selectedDua.curr as number]
   const [fontLoaded] = useFonts({
-    'Uthman-Taha-Naskh': require('@/assets/font/KFGQPC-Uthman-Taha-Naskh-Regular.ttf'),
+    'ScheherazadeNew-Regular': require('@/assets/font/ScheherazadeNew-Regular.ttf'),
     'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
   });
 
@@ -134,13 +135,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     flexShrink: 1,
     paddingHorizontal: 1
-  },
-  arabic: {
-    fontSize: 34,
-    writingDirection: "rtl",
-    fontFamily: "Uthman-Taha-Naskh",
-    textAlign: 'center',
-    color: '#333'
   },
   translation: {
     fontSize: 20,

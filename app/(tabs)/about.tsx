@@ -7,23 +7,19 @@ import {useFonts} from "expo-font";
 import {ReactNode} from "react";
 import {Link} from "expo-router";
 
-const Contributor = ({name, description}: {name: ReactNode, description: ReactNode}) => {
+const Contributor = ({name, description}: { name: ReactNode, description: ReactNode }) => {
   return <>
-    <ThemedText style={{
-      fontFamily: 'Lora-Regular',
+    <ThemedText type={"serif"} style={{
       fontSize: 18,
-      marginBottom: 0,
     }}>{name}</ThemedText>
     <ThemedText style={{
       color: "#727272",
-      fontFamily: 'Mulish-Regular',
     }}>{description}</ThemedText>
   </>
 }
 
 export default function About() {
   const [fontLoaded] = useFonts({
-    'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
     'Mulish-Regular': require('@/assets/font/Mulish-Regular.ttf'),
     'Lora-Regular': require('@/assets/font/Lora-Regular.ttf'),
   });
@@ -40,11 +36,7 @@ export default function About() {
           />
         }>
         <ThemedView style={styles.titleContainer}>
-            <ThemedText
-                type="title"
-                style={{
-                  fontFamily: 'Mulish-Bold'
-                }}>
+            <ThemedText type="title">
                 About
             </ThemedText>
         </ThemedView>
@@ -65,35 +57,34 @@ export default function About() {
             description={"Software Engineer responsible for the development, and technical implementation and maintenance of the application."}
         />
 
-        <ThemedText style={{fontFamily: "Mulish-Regular"}}>We also extend our gratitude to all others who supported this effort. May Allah bless and reward
-            everyone who contributed in any way to the development of this app.</ThemedText>
+        <ThemedText>We also extend our gratitude to all others who supported this effort. May Allah bless and reward everyone who contributed in any way to the development of this app.</ThemedText>
 
-        <ThemedText style={{fontFamily: "Mulish-Regular", marginBottom: 12}}>
-          To checkout more tours by Halijah Travels, please visit our website here:
+        <ThemedText style={{marginBottom: 12}}>
+            To checkout more tours by Halijah Travels, please visit our website here:
         </ThemedText>
 
         <Link href="https://halijah.com.sg/group-tours">
-          <ThemedView style={styles.ctaBtn}>
-            <ThemedText style={{fontFamily: 'Mulish-Bold', color: '#FFFFFF'}}>
-              Halijah Travels Website
-            </ThemedText>
-          </ThemedView>
+            <ThemedView style={styles.ctaBtn}>
+                <ThemedText type={'defaultBold'} style={{color: '#FFFFFF'}}>
+                    Halijah Travels Website
+                </ThemedText>
+            </ThemedView>
         </Link>
 
         <Link href="https://www.instagram.com/halijahtravels">
-          <ThemedView style={styles.ctaBtn}>
-            <ThemedText style={{fontFamily: 'Mulish-Bold', color: '#FFFFFF'}}>
-              Instagram
-            </ThemedText>
-          </ThemedView>
+            <ThemedView style={styles.ctaBtn}>
+                <ThemedText type={'defaultBold'} style={{color: '#FFFFFF'}}>
+                    Instagram
+                </ThemedText>
+            </ThemedView>
         </Link>
 
         <Link href="https://www.facebook.com/HalijahTravels">
-          <ThemedView style={styles.ctaBtn}>
-            <ThemedText style={{fontFamily: 'Mulish-Bold', color: '#FFFFFF'}}>
-              Facebook
-            </ThemedText>
-          </ThemedView>
+            <ThemedView style={styles.ctaBtn}>
+                <ThemedText type={'defaultBold'} style={{color: '#FFFFFF'}}>
+                    Facebook
+                </ThemedText>
+            </ThemedView>
         </Link>
     </ParallaxScrollView>
   );

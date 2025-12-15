@@ -238,7 +238,7 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
                   value={position}
                   onSlidingStart={() => setIsSeeking(true)}
                   onSlidingComplete={handleSeek}
-                  minimumTrackTintColor="#ffd65c"
+                  minimumTrackTintColor={Colors.base.tint}
                   maximumTrackTintColor="#ddd"
                   thumbTintColor={Colors.light.tint}
                   disabled={loading || !sound}
@@ -261,5 +261,5 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: Colors.light.tint
   },
-  buttonText: {color: '#ffd65c', fontSize: 20, textAlign: 'center'},
+  buttonText: {color: Colors.base.tint, fontSize: 20, textAlign: 'center'},
 });
