@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:${PORT:-8080} -n",
+    "start": "pwd && ls -a && node sammy.js; serve -s _static -l tcp://0.0.0.0:${PORT:-8080} -n",
     "lint": "next lint"
   },
   "keywords": [],
