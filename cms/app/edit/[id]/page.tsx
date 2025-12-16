@@ -9,14 +9,21 @@ const scheherazadeNew = Scheherazade_New({
   subsets: ["arabic"]
 })
 
+const categoryOptions = [
+  "talbiyah", "ihram", "umrah", "haji", "masjidil haram", "tawaf", "niat", "zam-zam", "sa'i", "tahalul", "tawaf wadak", "madinah", "travel"
+];
+
 export default function EditPage() {
   const { id } = useParams();
   const router = useRouter();
   const [dua, setDua] = useState<any>(null);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then((data) => {
-      setDua(data.find((d: any) => String(d.id) === id));
+      const foundDua = data.find((d: any) => String(d.id) === id);
+      setDua(foundDua);
+      setSelectedCategories(foundDua?.categoryKey ?? []);
     });
   }, [id]);
 
@@ -36,6 +43,17 @@ export default function EditPage() {
       body: JSON.stringify({ id: dua.id })
     });
     router.push("/");
+  }
+
+  function toggleCategory(category: string) {
+    let newSelectedCategories: string[];
+    if (selectedCategories.includes(category)) {
+      newSelectedCategories = selectedCategories.filter(c => c !== category);
+    } else {
+      newSelectedCategories = [...selectedCategories, category];
+    }
+    setSelectedCategories(newSelectedCategories);
+    setDua({...dua, categoryKey: newSelectedCategories});
   }
 
   return (
@@ -61,22 +79,22 @@ export default function EditPage() {
           />
         </label>
 
-        <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
-          <span>Category Keys (comma separated)</span>
-          <input
-            className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-            value={dua.categoryKey?.join(", ") ?? ""}
-            onChange={e =>
-              setDua({
-                ...dua,
-                categoryKey: e.target.value
-                .split(",")
-                .map(v => v.trim())
-                .filter(Boolean)
-              })
-            }
-          />
-        </label>
+        <fieldset className="flex flex-col gap-2 text-sm font-medium text-gray-700">
+          <legend>Category Keys</legend>
+          <div className="flex flex-wrap gap-3">
+            {categoryOptions.map(category => (
+              <label key={category} className="inline-flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={selectedCategories.includes(category)}
+                  onChange={() => toggleCategory(category)}
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                />
+                <span className="capitalize">{category}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
 
         <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
           <span>Audio Filename</span>

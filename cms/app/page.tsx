@@ -18,6 +18,18 @@ export default function Home() {
     location.reload();
   }
 
+  function downloadDuas() {
+    const blob = new Blob([JSON.stringify(duas, null, 2)], {
+      type: "application/json"
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "duas.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <main className="min-h-screen bg-gray-50 p-6">
       <h1 className="text-2xl font-semibold mb-6">Dua Admin</h1>
@@ -53,6 +65,15 @@ export default function Home() {
           </li>
         ))}
       </ul>
+
+      <div className="mt-6">
+        <button
+          onClick={downloadDuas}
+          className="rounded-md bg-green-600 px-4 py-2 text-white hover:bg-green-700 transition"
+        >
+          Download duas.json
+        </button>
+      </div>
     </main>
   );
 }
