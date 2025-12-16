@@ -1,10 +1,12 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef, useState, useCallback} from "react";
 import {Audio} from "expo-av";
 import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Slider from "@react-native-community/slider";
 import {Colors} from "@/constants/theme";
 import {PlayStopButtonType} from "@/app/types";
 import Ionicons from '@expo/vector-icons/Ionicons';
+
+import { useFocusEffect } from "@react-navigation/native";
 
 function formatTime(seconds: number) {
   const mins = Math.floor(seconds / 60);
@@ -81,11 +83,24 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
   useEffect(() => {
     return () => {
       if (sound) {
+        sound.stopAsync();
         sound.unloadAsync();
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      return () => {
+        if (sound) {
+          sound.stopAsync();
+          setIsPlaying(false);
+          setPosition(0);
+        }
+      };
+    }, [sound])
+  );
 
   useEffect(() => {
     setPosition(0);
