@@ -48,7 +48,7 @@ export default function EditPage() {
           <input
             className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             value={dua.titleEn}
-            onChange={e => setDua({ ...dua, titleEn: e.target.value })}
+            onChange={e => setDua({...dua, titleEn: e.target.value})}
           />
         </label>
 
@@ -57,7 +57,7 @@ export default function EditPage() {
           <input
             className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             value={dua.titleMy}
-            onChange={e => setDua({ ...dua, titleMy: e.target.value })}
+            onChange={e => setDua({...dua, titleMy: e.target.value})}
           />
         </label>
 
@@ -70,9 +70,9 @@ export default function EditPage() {
               setDua({
                 ...dua,
                 categoryKey: e.target.value
-                  .split(",")
-                  .map(v => v.trim())
-                  .filter(Boolean)
+                .split(",")
+                .map(v => v.trim())
+                .filter(Boolean)
               })
             }
           />
@@ -83,18 +83,50 @@ export default function EditPage() {
           <input
             className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             value={dua.audio ?? ""}
-            onChange={e => setDua({ ...dua, audio: e.target.value })}
+            onChange={e => setDua({...dua, audio: e.target.value})}
           />
         </label>
 
         <h3 className="pt-4 text-lg font-semibold text-gray-800">Doa Entries</h3>
+
+        <button
+          type="button"
+          onClick={() => {
+            const doa = [
+              ...dua.doa,
+              {
+                id: Date.now(),
+                arabic: "",
+                translationEn: "",
+                translationMy: ""
+              }
+            ];
+            setDua({...dua, doa});
+          }}
+          className="rounded-md bg-green-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-green-700"
+        >
+          + Add Doa
+        </button>
+
 
         {dua.doa.map((d: any, index: number) => (
           <div
             key={d.id}
             className="rounded-lg border border-gray-300 bg-white p-4 space-y-3"
           >
-            <strong>Doa #{index + 1}</strong>
+            <div className="flex items-center justify-between">
+              <strong>Doa #{index + 1}</strong>
+              <button
+                type="button"
+                onClick={() => {
+                  const doa = dua.doa.filter((_: any, i: number) => i !== index);
+                  setDua({...dua, doa});
+                }}
+                className="text-sm text-red-600 hover:underline"
+              >
+                Remove
+              </button>
+            </div>
 
             <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
               <span>Arabic</span>
@@ -104,8 +136,8 @@ export default function EditPage() {
                 value={d.arabic}
                 onChange={e => {
                   const doa = [...dua.doa];
-                  doa[index] = { ...doa[index], arabic: e.target.value };
-                  setDua({ ...dua, doa });
+                  doa[index] = {...doa[index], arabic: e.target.value};
+                  setDua({...dua, doa});
                 }}
               />
             </label>
@@ -118,8 +150,8 @@ export default function EditPage() {
                 value={d.translationEn}
                 onChange={e => {
                   const doa = [...dua.doa];
-                  doa[index] = { ...doa[index], translationEn: e.target.value };
-                  setDua({ ...dua, doa });
+                  doa[index] = {...doa[index], translationEn: e.target.value};
+                  setDua({...dua, doa});
                 }}
               />
             </label>
@@ -132,8 +164,8 @@ export default function EditPage() {
                 value={d.translationMy}
                 onChange={e => {
                   const doa = [...dua.doa];
-                  doa[index] = { ...doa[index], translationMy: e.target.value };
-                  setDua({ ...dua, doa });
+                  doa[index] = {...doa[index], translationMy: e.target.value};
+                  setDua({...dua, doa});
                 }}
               />
             </label>
