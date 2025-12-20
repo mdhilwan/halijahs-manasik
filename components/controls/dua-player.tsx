@@ -31,6 +31,7 @@ const audioMap: Record<string, any> = {
   "niat_tawaf_umrah.mp3": require("@/assets/audio/niat_tawaf_umrah.mp3"),
   "niat_tawaf_sunnah.mp3": require("@/assets/audio/niat_tawaf_sunnah.mp3"),
   "niat_tawaf_wada.mp3": require("@/assets/audio/niat_tawaf_wada.mp3"),
+  "doa_selepas_selesai_tawaf_wadak.mp3": require("@/assets/audio/doa_selepas_selesai_tawaf_wadak.mp3"),
   "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3": require("@/assets/audio/doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"),
   "doa_tawaf_pusingan_pertama.mp3": require("@/assets/audio/doa_tawaf_pusingan_pertama.mp3"),
   "doa_tawaf_pusingan_kedua.mp3": require("@/assets/audio/doa_tawaf_pusingan_kedua.mp3"),
@@ -58,6 +59,11 @@ const audioMap: Record<string, any> = {
   "doa_selesai_sai.mp3": require("@/assets/audio/doa_selesai_sai.mp3"),
   "doa_ketika_bercukur.mp3": require("@/assets/audio/doa_ketika_bercukur.mp3"),
   "doa_setelah_bercukur.mp3": require("@/assets/audio/doa_setelah_bercukur.mp3"),
+  "doa_dalam_perjalanan.mp3": require("@/assets/audio/doa_dalam_perjalanan.mp3"),
+  "doa_naik_kenderaan.mp3": require("@/assets/audio/doa_naik_kenderaan.mp3"),
+  "doa_ketika_masuk_negeri_baru.mp3": require("@/assets/audio/doa_ketika_masuk_negeri_baru.mp3"),
+  "doa_ketika_melihat_kota_madinah.mp3": require("@/assets/audio/doa_ketika_melihat_kota_madinah.mp3"),
+  "doa_ketika_nampak_kota_makkah.mp3": require("@/assets/audio/doa_ketika_nampak_kota_makkah.mp3"),
 };
 
 export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType) => {
