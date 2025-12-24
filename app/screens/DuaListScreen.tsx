@@ -1,23 +1,32 @@
 import React from 'react';
 import {SafeAreaView} from "react-native-safe-area-context";
-import {Text, TouchableOpacity, ScrollView, StyleSheet} from 'react-native';
+import {Text, TouchableOpacity, ScrollView, View, StyleSheet} from 'react-native';
 import {DuaListScreenType} from "@/app/types";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {LanguageEnums} from "@/constants/language-enums";
 import {Ionicons} from "@expo/vector-icons";
 import {useFonts} from "expo-font";
+import {BroadcastIndicator} from "@/components/broadcast-indicator";
+import {useFontSize} from "@/app/contexts/FontSettingsContext";
 
 export default function DuaListScreen({setScreen, duas, setSelectedDua, category}: DuaListScreenType) {
   const {language} = useLanguage()
+  const {setShowSettings} = useFontSize()
   const [fontLoaded] = useFonts({
     'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
   });
   return (
     fontLoaded && <SafeAreaView style={styles.container}>
-        <TouchableOpacity onPress={() => setScreen("home")}>
-            <Ionicons size={28} name={"chevron-back"} color={"black"}/>
-        </TouchableOpacity>
+        <View style={styles.header}>
+            <TouchableOpacity onPress={() => setScreen("home")}>
+                <Ionicons size={28} name={"chevron-back"} color={"black"}/>
+            </TouchableOpacity>
+            <BroadcastIndicator/>
+            <TouchableOpacity onPress={() => setShowSettings(true)}>
+                <Text style={styles.fontSettings}>Aa</Text>
+            </TouchableOpacity>
+        </View>
         <Text style={styles.title}>{category} Du&#39;a List</Text>
         <ScrollView>
           {duas.map((dua, j) => (
@@ -41,6 +50,15 @@ export default function DuaListScreen({setScreen, duas, setSelectedDua, category
 }
 
 const styles = StyleSheet.create({
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  fontSettings: {
+    fontSize: 20,
+    color: '#505050',
+  },
   container: {flex: 1, backgroundColor: '#fff', padding: 20},
   title: {fontSize: 26, fontFamily: 'Mulish-Bold', textAlign: 'center', marginVertical: 20},
   listItem: {backgroundColor: Colors.light.tint, padding: 20, marginVertical: 8, borderRadius: 10},

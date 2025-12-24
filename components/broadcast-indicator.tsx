@@ -21,14 +21,14 @@ export const BroadcastIndicator = () => {
 
   return <>
     {(wasListening && broadcastState !== 'live') &&
-        <View style={{alignItems: 'center'}}>
+        <View style={{alignItems: 'center', marginBottom: 10}}>
             <Text style={[styles.broadcastBtn, { backgroundColor: 'grey', color: 'white'}]}>
                 Broadcast stopped
             </Text>
         </View>
     }
     {(broadcastState === 'live' && !ifIamHost) &&
-        <View style={{alignItems: 'center'}}>
+        <View style={{alignItems: 'center', marginBottom: 10}}>
           {!listening ? (
             <TouchableOpacity onPress={() => setListening(true)}
                               style={styles.broadcastBtn}>
@@ -43,7 +43,7 @@ export const BroadcastIndicator = () => {
         </View>
     }
     {(broadcastState === 'live' && ifIamHost) &&
-        <View style={{alignItems: 'center'}}>
+        <View style={{alignItems: 'center', marginBottom: 10}}>
             <TouchableOpacity onPress={() => stopBroadcasting()}
                               style={styles.broadcastBtn}>
                 <Text style={{color: 'white', fontSize: 16, fontWeight: '600'}}>Stop Broadcasting</Text>
@@ -51,7 +51,7 @@ export const BroadcastIndicator = () => {
         </View>
     }
     {(broadcastState !== 'live' && ifIamHost) &&
-        <View style={{alignItems: 'center'}}>
+        <View style={{alignItems: 'center', marginBottom: 10}}>
             <TouchableOpacity onPress={() => startBroadcasting()}
                               style={[styles.broadcastBtn, {
                                 backgroundColor: '#28A745'
