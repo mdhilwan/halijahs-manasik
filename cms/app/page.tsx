@@ -78,13 +78,6 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="flex grow justify-center">
-          <div className="relative">
-            <div className="sticky top-4">
-              <DoaPreview titleEn={'hello'} titleMy={'selamat'}/>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
   );

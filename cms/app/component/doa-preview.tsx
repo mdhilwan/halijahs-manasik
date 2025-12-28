@@ -1,22 +1,29 @@
 // Example in home page or edit page
 import IphoneFrame from "./iphone-frame";
+import {DuaEngMalayArabicType, DuaType} from "../../../app/types";
+import {Scheherazade_New} from "next/font/google";
 
-type DoaPreviewType = {
-  titleEn: string;
-  titleMy: string;
-}
+const scheherazadeNew = Scheherazade_New({
+  weight: "400",
+  subsets: ["arabic"]
+})
 
-const DoaPreview = (props: DoaPreviewType) => {
+const DoaPreview = (props: DuaType) => {
 
-  const {titleEn} = props
+  const {titleEn, doa} = props
 
+  console.log(props)
   return (
     <IphoneFrame>
       <div className="text-center">
         <h2 className="text-xl font-bold">{titleEn}</h2>
-        <p className="mt-2 text-gray-700">
-          In the name of Allah, the Most Gracious, the Most Merciful...
-        </p>
+        {doa && <>
+          {doa.map((d: DuaEngMalayArabicType) => <>
+            <p className={scheherazadeNew.className + " text-3xl leading-relaxed"}>
+              {d.arabic}
+            </p>
+          </>)}
+        </>}
       </div>
     </IphoneFrame>
   );

@@ -4,6 +4,7 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { Scheherazade_New } from 'next/font/google';
 import DoaPreview from "../../component/doa-preview";
+import {DuaType} from "../../../../app/types";
 
 const scheherazadeNew = Scheherazade_New({
   weight: "400",
@@ -17,12 +18,12 @@ const categoryOptions = [
 export default function EditPage() {
   const { id } = useParams();
   const router = useRouter();
-  const [dua, setDua] = useState<any>(null);
+  const [dua, setDua] = useState<DuaType | null>(null);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then((data) => {
-      const foundDua = data.find((d: any) => String(d.id) === id);
+      const foundDua = data.find((d: any) => String(d.id) === id) as DuaType;
       setDua(foundDua);
       setSelectedCategories(foundDua?.categoryKey ?? []);
     });
@@ -216,13 +217,13 @@ export default function EditPage() {
           </div>
         </div>
 
-        <div className="flex grow justify-center">
-          <div className="relative">
-            <div className="sticky top-4">
-              <DoaPreview titleEn={'hello'} titleMy={'selamat'}/>
-            </div>
-          </div>
-        </div>
+        {/*<div className="flex grow justify-center">*/}
+        {/*  <div className="relative">*/}
+        {/*    <div className="sticky top-4">*/}
+        {/*      <DoaPreview {...dua}/>*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </main>
   );
