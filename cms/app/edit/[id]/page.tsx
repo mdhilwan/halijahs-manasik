@@ -217,13 +217,13 @@ export default function EditPage() {
           </div>
         </div>
 
-        {/*<div className="flex grow justify-center">*/}
-        {/*  <div className="relative">*/}
-        {/*    <div className="sticky top-4">*/}
-        {/*      <DoaPreview {...dua}/>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
+        <div className="flex grow justify-center">
+          <div className="relative">
+            <div className="sticky top-4">
+              <DoaPreview {...dua}/>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );

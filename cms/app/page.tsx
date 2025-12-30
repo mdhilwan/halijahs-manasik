@@ -1,7 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Link from "next/link";
-import DoaPreview from "./component/doa-preview";
 
 export default function Home() {
   const [duas, setDuas] = useState<any[]>([]);
@@ -14,7 +13,7 @@ export default function Home() {
   async function create() {
     await fetch("/api/duas", {
       method: "POST",
-      body: JSON.stringify({ id: Date.now(), titleEn, doa: [] })
+      body: JSON.stringify({id: Date.now(), titleEn, doa: []})
     });
     location.reload();
   }
@@ -35,48 +34,48 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50 p-6">
       <h1 className="text-2xl font-semibold mb-6">Dua Admin</h1>
 
-      <div className="flex gap-3">
-        <div className="max-w-xl">
-          <div className="flex gap-3 mb-8">
-            <input
-              placeholder="Title (English)"
-              value={titleEn}
-              onChange={e => setTitleEn(e.target.value)}
-              className="flex-1 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button
-              onClick={create}
-              className="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition"
-            >
-              Add
-            </button>
-          </div>
+      <div className="max-w-xl">
+        <div className="flex gap-3 mb-8">
+          <input
+            placeholder="Title (English)"
+            value={titleEn}
+            onChange={e => setTitleEn(e.target.value)}
+            className="flex-1 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            onClick={create}
+            className="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition"
+          >
+            Add
+          </button>
+        </div>
+      </div>
 
-          <ul className="space-y-3">
-            {duas.map(d => (
-              <li
-                key={d.id}
-                className="flex items-center justify-between rounded-md border border-gray-200 bg-white px-4 py-3 shadow-sm"
+      <div className="w-full">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {duas.map(d => (
+            <li
+              key={d.id}
+              className="flex items-center justify-between rounded-md border border-gray-200 bg-white px-4 py-3 shadow-sm"
+            >
+              <span className="font-medium text-gray-800">{d.titleEn}</span>
+              <Link
+                href={`/edit/${d.id}`}
+                className="text-sm text-blue-600 hover:underline"
               >
-                <span className="font-medium text-gray-800">{d.titleEn}</span>
-                <Link
-                  href={`/edit/${d.id}`}
-                  className="text-sm text-blue-600 hover:underline"
-                >
-                  Edit
-                </Link>
-              </li>
-            ))}
-          </ul>
+                Edit
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-          <div className="mt-6">
-            <button
-              onClick={downloadDuas}
-              className="rounded-md bg-green-600 px-4 py-2 text-white hover:bg-green-700 transition"
-            >
-              Download duas.json
-            </button>
-          </div>
+        <div className="mt-6">
+          <button
+            onClick={downloadDuas}
+            className="rounded-md bg-green-600 px-4 py-2 text-white hover:bg-green-700 transition"
+          >
+            Download duas.json
+          </button>
         </div>
       </div>
     </main>
