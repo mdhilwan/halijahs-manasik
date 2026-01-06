@@ -28,6 +28,7 @@ export function ThemedText({
     fontLoaded && <Text
       style={[
         {color},
+        {flexShrink: 1},
         {fontFamily: "Mulish-Regular"},
         type === 'default' ? styles.default : undefined,
         type === 'title' ? styles.title : undefined,
