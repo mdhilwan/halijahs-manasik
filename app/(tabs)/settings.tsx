@@ -4,14 +4,14 @@ import {Collapsible} from '@/components/ui/collapsible';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import {ThemedText} from '@/components/themed-text';
 import {ThemedView} from '@/components/themed-view';
-import {IconSymbol} from '@/components/ui/icon-symbol';
 import {Fonts} from '@/constants/theme';
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
-import {useState} from 'react';
-import {API_ROOT, BROADCAST, LOGIN, START, STOP} from "@/constants/router-path";
+import React, {useState} from 'react';
+import {API_ROOT, LOGIN} from "@/constants/router-path";
 import {useBroadcast} from "@/app/contexts/BroadcastContext";
 import {Broadcaster} from "@/components/controls/broadcaster";
+import {Image} from "expo-image";
 
 export default function Settings() {
   const {broadcastState, stopBroadcasting, setIfIamHost} = useBroadcast()
@@ -45,19 +45,13 @@ export default function Settings() {
     <ParallaxScrollView
       headerBackgroundColor={{light: '#D0D0D0', dark: '#353636'}}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="gear"
-          style={styles.headerImage}
+        <Image
+          source={require('@/assets/images/settings-hero-image.png')}
+          style={styles.heroImage}
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText
-          type="title"
-          style={{
-            fontFamily: Fonts.rounded,
-          }}>
+        <ThemedText type="title">
           Settings
         </ThemedText>
       </ThemedView>
@@ -127,6 +121,13 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  heroImage: {
+    height: 178,
+    width: '100%',
+    bottom: 0,
+    left: 0,
+    position: 'absolute',
   },
   broadcastBtn: {
     backgroundColor: '#FF3B30',

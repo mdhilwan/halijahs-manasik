@@ -8,11 +8,9 @@ import {LanguageEnums} from "@/constants/language-enums";
 import {Ionicons} from "@expo/vector-icons";
 import {useFonts} from "expo-font";
 import {BroadcastIndicator} from "@/components/broadcast-indicator";
-import {useFontSize} from "@/app/contexts/FontSettingsContext";
 
 export default function DuaListScreen({setScreen, duas, setSelectedDua, category}: DuaListScreenType) {
   const {language} = useLanguage()
-  const {setShowSettings} = useFontSize()
   const [fontLoaded] = useFonts({
     'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
   });
@@ -23,9 +21,6 @@ export default function DuaListScreen({setScreen, duas, setSelectedDua, category
                 <Ionicons size={28} name={"chevron-back"} color={"black"}/>
             </TouchableOpacity>
             <BroadcastIndicator/>
-            <TouchableOpacity onPress={() => setShowSettings(true)}>
-                <Text style={styles.fontSettings}>Aa</Text>
-            </TouchableOpacity>
         </View>
         <Text style={styles.title}>{category} Du&#39;a List</Text>
         <ScrollView>

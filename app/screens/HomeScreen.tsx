@@ -65,15 +65,14 @@ export default function HomeScreen({
       headerBackgroundColor={{light: '#D0D0D0', dark: '#353636'}}
       headerImage={
         <Image
-          source={require('@/assets/images/hajj-hero-image.jpg')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/hajj-hero-image.png')}
+          style={styles.heroImage}
         />
       }
     >
       {fontLoaded &&
           <>
-              <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                  <Text style={styles.title}>Manasik App by Halijah</Text>
+              <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
                   <LiveIndicator/>
               </View>
               <BroadcastIndicator/>
@@ -128,7 +127,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
-  title: {fontSize: 26, fontFamily: 'Mulish-Bold', fontWeight: 'bold', textAlign: 'center'},
+  title: {fontSize: 20, fontFamily: 'Mulish-Bold', fontWeight: 'bold', textAlign: 'center'},
   button: {
     width: '48%',
     height: 75,
@@ -156,7 +155,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     paddingLeft: 15,
   },
-  reactLogo: {
+  heroImage: {
     height: 178,
     width: '100%',
     bottom: 0,

@@ -4,7 +4,7 @@ import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Slider from "@react-native-community/slider";
 import {Colors} from "@/constants/theme";
 import {PlayStopButtonType} from "@/app/types";
-import Ionicons from '@expo/vector-icons/Ionicons';
+import {Ionicons} from '@expo/vector-icons';
 
 import { useFocusEffect } from "@react-navigation/native";
 
