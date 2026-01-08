@@ -3,9 +3,10 @@ import {Text, View, TouchableOpacity, StyleSheet} from "react-native";
 import React, {useEffect, useState} from "react";
 import {useLiveListener} from "@/hooks/use-live-listener";
 import {Fonts} from "@/constants/theme";
+import {PRIVATE_LAN} from "@/constants/router-path";
 
 export const BroadcastIndicator = () => {
-  const {broadcastState, ifIamHost, stopBroadcasting, startBroadcasting} = useBroadcast()
+  const {broadcastState, ifIamHost, stopBroadcasting, startBroadcasting, ssid} = useBroadcast()
   const [listening, setListening] = useState<boolean>(false)
   const [wasListening, setWasListening] = useState<boolean>(false)
   useLiveListener(listening, broadcastState);
@@ -17,7 +18,11 @@ export const BroadcastIndicator = () => {
     if (listening) {
       setWasListening(true)
     }
-  }, [broadcastState, ifIamHost, listening]);
+  }, [broadcastState, ifIamHost, listening, ssid]);
+
+  if (ssid !== PRIVATE_LAN) {
+    return <></>
+  }
 
   return <>
     {(wasListening && broadcastState !== 'live') &&

@@ -7,7 +7,6 @@ export const Broadcaster = () => {
   const {startBroadcasting, stopBroadcasting} = useBroadcast()
 
   const [isBroadcasting, setIsBroadcasting] = useState(false);
-
   const BROADCASTING_FLAG = useRef(false);
 
   return (

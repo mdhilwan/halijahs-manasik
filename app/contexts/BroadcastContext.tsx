@@ -3,6 +3,7 @@ import {API_ROOT, BROADCAST, HEALTH, PRIVATE_LAN, CURRENT, START, STOP, AUDIO} f
 import {Audio, InterruptionModeAndroid, InterruptionModeIOS} from "expo-av";
 import {UPLOAD_INTERVAL_MS} from "@/constants/broadcast-time";
 import * as FileSystem from "expo-file-system/legacy";
+import {fetchWithTimeout} from "@/app/utils";
 
 interface WifiContextType {
   ssid: undefined | string;
@@ -129,7 +130,7 @@ export function BroadcastProvider({children}: { children: React.ReactNode }) {
 
   async function updateSSID() {
     try {
-      const res = await fetch(`${API_ROOT}/${HEALTH}`);
+      const res = await fetchWithTimeout(`${API_ROOT}/${HEALTH}`);
       if (res.ok) {
         const json = await res.json();
         if (json?.OK === true) {
@@ -150,9 +151,12 @@ export function BroadcastProvider({children}: { children: React.ReactNode }) {
         const json = await res.json();
         setBroadcastState(json.broadcasting);
       }
-    } catch(e: any) {
-      console.log("Error: ", e)
-      setBroadcastState(false);
+    } catch {
+      if (ssid) {
+        setBroadcastState("idle");
+      } else {
+        setBroadcastState(false);
+      }
     }
   }
 
@@ -166,11 +170,10 @@ export function BroadcastProvider({children}: { children: React.ReactNode }) {
 
   useEffect(() => {
     updateSSID();
-    const interval = setInterval(() => {
+    setInterval(() => {
       updateSSID();
       getBroadcastState();
-    }, 5000);
-    return () => clearInterval(interval);
+    }, 1000);
   }, []);
 
   return (

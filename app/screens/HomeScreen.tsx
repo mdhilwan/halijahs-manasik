@@ -22,16 +22,46 @@ export type buttonType = {
 }
 
 const buttons: buttonType[] = [
-  {title: 'Ihram'},
-  {title: 'Talbiyah'},
-  {title: 'Travel'},
-  {title: 'Masjidil Haram'},
-  {title: 'Tawaf'},
-  {title: 'Zam-zam'},
-  {title: "Sa'i"},
-  {title: 'Tahalul'},
-  {title: 'Tawaf Wadak'},
-  {title: 'Madinah'},
+  {
+    title: 'Ihram',
+    bgImg: require('@/assets/images/button-bg/ihram.png'),
+  },
+  {
+    title: 'Talbiyah',
+    bgImg: require('@/assets/images/button-bg/talbiyah.png'),
+  },
+  {
+    title: 'Travel',
+    bgImg: require('@/assets/images/button-bg/travel.png'),
+  },
+  {
+    title: 'Masjidil\nHaram',
+    bgImg: require('@/assets/images/button-bg/masjidil-haram.png')
+  },
+  {
+    title: 'Tawaf',
+    bgImg: require('@/assets/images/button-bg/tawaf.png')
+  },
+  {
+    title: 'Zamzam',
+    bgImg: require('@/assets/images/button-bg/zamzam.png')
+  },
+  {
+    title: "Sa'i",
+    bgImg: require('@/assets/images/button-bg/saie.png')
+  },
+  {
+    title: 'Tahalul',
+    bgImg: require('@/assets/images/button-bg/tahalul.png')
+  },
+  {
+    title: 'Tawaf\nWadak',
+    bgImg: require('@/assets/images/button-bg/tawaf-wada.png')
+  },
+  {
+    title: 'Madinah',
+    bgImg: require('@/assets/images/button-bg/madinah.png')
+  },
 ];
 
 export default function HomeScreen({
@@ -72,9 +102,7 @@ export default function HomeScreen({
     >
       {fontLoaded &&
           <>
-              <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
-                  <LiveIndicator/>
-              </View>
+              <LiveIndicator text={"Router"}/>
               <BroadcastIndicator/>
 
               <View style={styles.grid}>
@@ -97,7 +125,7 @@ export default function HomeScreen({
                         imageStyle={{borderRadius: 15}}
                       >
                         <Text
-                          style={[styles.buttonText, styles.bgButtonText]}
+                          style={styles.buttonText}
                         >
                           {typeof btn.title === 'string' ? btn.title : btn.title[language]}
                         </Text>
@@ -130,7 +158,7 @@ const styles = StyleSheet.create({
   title: {fontSize: 20, fontFamily: 'Mulish-Bold', fontWeight: 'bold', textAlign: 'center'},
   button: {
     width: '48%',
-    height: 75,
+    height: 60,
     backgroundColor: Colors.light.tint,
     borderRadius: 16,
     alignItems: 'center',
@@ -142,7 +170,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   bgButtonContainer: {
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
     height: '100%',
@@ -151,8 +179,8 @@ const styles = StyleSheet.create({
     color: "#315437",
     fontWeight: 'bold',
     width: '70%',
-    textAlign: 'left',
-    alignSelf: 'flex-start',
+    textAlign: 'center',
+    alignSelf: 'center',
     paddingLeft: 15,
   },
   heroImage: {
@@ -166,6 +194,6 @@ const styles = StyleSheet.create({
     color: '#ffd65c',
     fontSize: 20,
     textAlign: 'center',
-    fontFamily: 'Mulish-Bold'
+    fontFamily: 'Mulish-Bold',
   },
 });

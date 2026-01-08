@@ -1,4 +1,4 @@
-export const API_ROOT = "http://192.168.8.1:4321"
+export const API_ROOT = "http://192.168.8.1/cgi-bin/manasik.lua"
 export const LOGIN = "login"
 export const HEALTH = "health"
 export const BROADCAST = "broadcast"

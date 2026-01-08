@@ -12,6 +12,7 @@ import {API_ROOT, LOGIN} from "@/constants/router-path";
 import {useBroadcast} from "@/app/contexts/BroadcastContext";
 import {Broadcaster} from "@/components/controls/broadcaster";
 import {Image} from "expo-image";
+import {LiveIndicator} from "@/components/live-indicator";
 
 export default function Settings() {
   const {broadcastState, stopBroadcasting, setIfIamHost} = useBroadcast()
@@ -69,10 +70,11 @@ export default function Settings() {
       <Collapsible title="Font Size">
         <SettingsView/>
       </Collapsible>
+      <LiveIndicator text={"Connected"}/>
       {(hostSignedIn && broadcastState) && <View>
         <Broadcaster/>
       </View>}
-      {!broadcastState && <Collapsible title={"Host Signin"}>
+      {!hostSignedIn && <Collapsible title={"Host Signin"}>
         <View style={{gap: 12, padding: 10}}>
           {!hostSignedIn && (
             <>
