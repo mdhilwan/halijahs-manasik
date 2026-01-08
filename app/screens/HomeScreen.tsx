@@ -22,46 +22,16 @@ export type buttonType = {
 }
 
 const buttons: buttonType[] = [
-  {
-    title: 'Ihram',
-    bgImg: require('@/assets/images/button-bg/ihram.png'),
-  },
-  {
-    title: 'Talbiyah',
-    bgImg: require('@/assets/images/button-bg/talbiyah.png'),
-  },
-  {
-    title: 'Travel',
-    bgImg: require('@/assets/images/button-bg/travel.png'),
-  },
-  {
-    title: 'Masjidil\nHaram',
-    bgImg: require('@/assets/images/button-bg/masjidil-haram.png')
-  },
-  {
-    title: 'Tawaf',
-    bgImg: require('@/assets/images/button-bg/tawaf.png')
-  },
-  {
-    title: 'Zamzam',
-    bgImg: require('@/assets/images/button-bg/zamzam.png')
-  },
-  {
-    title: "Sa'i",
-    bgImg: require('@/assets/images/button-bg/saie.png')
-  },
-  {
-    title: 'Tahalul',
-    bgImg: require('@/assets/images/button-bg/tahalul.png')
-  },
-  {
-    title: 'Tawaf\nWadak',
-    bgImg: require('@/assets/images/button-bg/tawaf-wada.png')
-  },
-  {
-    title: 'Madinah',
-    bgImg: require('@/assets/images/button-bg/madinah.png')
-  },
+  { title: 'Ihram' },
+  { title: 'Talbiyah' },
+  { title: 'Travel' },
+  { title: 'Masjidil Haram' },
+  { title: 'Tawaf' },
+  { title: 'Zamzam' },
+  { title: "Sa'i" },
+  { title: 'Tahalul' },
+  { title: 'Tawaf Wadak' },
+  { title: 'Madinah' },
 ];
 
 export default function HomeScreen({
@@ -157,8 +127,8 @@ const styles = StyleSheet.create({
   },
   title: {fontSize: 20, fontFamily: 'Mulish-Bold', fontWeight: 'bold', textAlign: 'center'},
   button: {
-    width: '48%',
-    height: 60,
+    width: 162, //'48%',
+    height: 75,
     backgroundColor: Colors.light.tint,
     borderRadius: 16,
     alignItems: 'center',
