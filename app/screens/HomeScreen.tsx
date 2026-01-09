@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
   },
   imageOverlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(255,255,255,0.3)', // tweak strength
+    backgroundColor: 'rgba(255,255,255,0.1)',
     borderRadius: 15,
   },
   bgButtonText: {
