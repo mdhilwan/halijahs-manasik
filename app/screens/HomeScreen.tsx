@@ -20,16 +20,44 @@ export type buttonType = {
 }
 
 const buttons: buttonType[] = [
-  { title: 'Ihram' },
-  { title: 'Talbiyah' },
-  { title: 'Travel' },
-  { title: 'Masjidil Haram' },
-  { title: 'Tawaf' },
-  { title: 'Zamzam' },
-  { title: "Sa'i" },
-  { title: 'Tahalul' },
-  { title: 'Tawaf Wadak' },
-  { title: 'Madinah' },
+  {
+    title: 'Ihram',
+    bgImg: require('@/assets/images/button-bg/ihram-illustration.png')
+  },
+  {
+    title: 'Talbiyah',
+    bgImg: require('@/assets/images/button-bg/talbiyah-illustration.png') },
+  {
+    title: 'Travel',
+    bgImg: require('@/assets/images/button-bg/travel-illustration.png') },
+  {
+    title: 'Masjidil\nHaram',
+    bgImg: require('@/assets/images/button-bg/hajj-button-bg.png')
+  },
+  {
+    title: 'Tawaf',
+    bgImg: require('@/assets/images/button-bg/masjid-haram-aerial-view.png')
+  },
+  {
+    title: 'Zamzam' ,
+    bgImg: require('@/assets/images/button-bg/zamzam-illustration.png')
+  },
+  {
+    title: "Sa'i" ,
+    bgImg: require('@/assets/images/button-bg/sai-illustration.png')
+  },
+  {
+    title: 'Tahalul' ,
+    bgImg: require('@/assets/images/button-bg/tahalul-illustration.png')
+  },
+  {
+    title: 'Tawaf Wadak' ,
+    bgImg: require('@/assets/images/button-bg/tawaf-wadak-illustration.png')
+  },
+  {
+    title: 'Madinah' ,
+    bgImg: require('@/assets/images/button-bg/madinah-illustration.png')
+  },
 ];
 
 export default function HomeScreen({
@@ -89,8 +117,9 @@ export default function HomeScreen({
                         style={styles.bgButtonContainer}
                         imageStyle={{borderRadius: 15}}
                       >
+                        <View style={styles.imageOverlay} />
                         <Text
-                          style={styles.buttonText}
+                          style={[styles.buttonText, styles.bgButtonText]}
                         >
                           {typeof btn.title === 'string' ? btn.title : btn.title[language]}
                         </Text>
@@ -140,12 +169,17 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  imageOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(255,255,255,0.3)', // tweak strength
+    borderRadius: 15,
+  },
   bgButtonText: {
-    color: "#315437",
+    color: "#233125",
     fontWeight: 'bold',
     width: '70%',
-    textAlign: 'center',
-    alignSelf: 'center',
+    textAlign: 'left',
+    alignSelf: 'flex-start',
     paddingLeft: 15,
   },
   heroImage: {
