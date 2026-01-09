@@ -6,8 +6,6 @@ import ParallaxScrollView from "@/components/parallax-scroll-view";
 import {Image} from "expo-image";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
-import {LiveIndicator} from "@/components/live-indicator";
-import {BroadcastIndicator} from "@/components/broadcast-indicator";
 import {useFonts} from "expo-font";
 
 export type buttonType = {
@@ -72,9 +70,6 @@ export default function HomeScreen({
     >
       {fontLoaded &&
           <>
-              <LiveIndicator text={"Router"}/>
-              <BroadcastIndicator/>
-
               <View style={styles.grid}>
                 {buttons.map((btn, index) =>
                   <TouchableOpacity

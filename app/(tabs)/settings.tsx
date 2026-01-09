@@ -1,46 +1,16 @@
-import {StyleSheet, Text, TouchableOpacity, TextInput, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import {Collapsible} from '@/components/ui/collapsible';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import {ThemedText} from '@/components/themed-text';
 import {ThemedView} from '@/components/themed-view';
-import {Fonts} from '@/constants/theme';
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
-import React, {useState} from 'react';
-import {API_ROOT, LOGIN} from "@/constants/router-path";
-import {useBroadcast} from "@/app/contexts/BroadcastContext";
-import {Broadcaster} from "@/components/controls/broadcaster";
+import React from 'react';
 import {Image} from "expo-image";
-import {LiveIndicator} from "@/components/live-indicator";
 
 export default function Settings() {
-  const {broadcastState, stopBroadcasting, setIfIamHost} = useBroadcast()
   const {language, setLanguage} = useLanguage();
-  const [otp, setOtp] = useState('');
-  const [hostSignedIn, setHostSignedIn] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const signInHost = async () => {
-    setLoading(true);
-    try {
-      const res = await fetch(`${API_ROOT}/${LOGIN}`, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({otp}),
-      });
-      const json = await res.json();
-
-      if (json?.success) {
-        setHostSignedIn(true);
-        setIfIamHost(true);
-        stopBroadcasting() // will set broadcastState to 'idle'
-      }
-    } catch (e) {
-      console.log('Sign in error', e);
-    }
-    setLoading(false);
-  };
 
   return (
     <ParallaxScrollView
@@ -70,45 +40,6 @@ export default function Settings() {
       <Collapsible title="Font Size">
         <SettingsView/>
       </Collapsible>
-      <LiveIndicator text={"Connected"}/>
-      {(hostSignedIn && broadcastState) && <View>
-        <Broadcaster/>
-      </View>}
-      {!hostSignedIn && <Collapsible title={"Host Signin"}>
-        <View style={{gap: 12, padding: 10}}>
-          {!hostSignedIn && (
-            <>
-              <TextInput
-                value={otp}
-                onChangeText={setOtp}
-                placeholder="Enter OTP"
-                keyboardType="numeric"
-                style={{
-                  borderWidth: 1,
-                  borderColor: '#ccc',
-                  padding: 10,
-                  borderRadius: 8,
-                }}
-              />
-
-              <TouchableOpacity
-                onPress={signInHost}
-                disabled={loading}
-                style={{
-                  backgroundColor: loading ? '#999' : '#0085FF',
-                  padding: 12,
-                  borderRadius: 8,
-                }}
-              >
-                <Text style={{color: 'white', textAlign: 'center', fontFamily: Fonts.rounded}}>
-                  Sign In
-                </Text>
-              </TouchableOpacity>
-            </>
-          )}
-
-        </View>
-      </Collapsible>}
     </ParallaxScrollView>
   );
 }
