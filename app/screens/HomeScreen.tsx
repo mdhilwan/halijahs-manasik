@@ -25,7 +25,7 @@ const buttons: buttonType[] = [
   { title: 'Travel' },
   { title: 'Masjidil Haram' },
   { title: 'Tawaf' },
-  { title: 'Zamzam' },
+  { title: 'Zam-zam' },
   { title: "Sa'i" },
   { title: 'Tahalul' },
   { title: 'Tawaf Wadak' },
