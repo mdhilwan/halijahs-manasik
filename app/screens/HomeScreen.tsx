@@ -26,12 +26,14 @@ const buttons: buttonType[] = [
   },
   {
     title: 'Talbiyah',
-    bgImg: require('@/assets/images/button-bg/talbiyah-illustration.png') },
+    bgImg: require('@/assets/images/button-bg/talbiyah-illustration.png')
+  },
   {
     title: 'Travel',
-    bgImg: require('@/assets/images/button-bg/travel-illustration.png') },
+    bgImg: require('@/assets/images/button-bg/travel-illustration.png')
+  },
   {
-    title: 'Masjidil\nHaram',
+    title: 'Masjidil Haram',
     bgImg: require('@/assets/images/button-bg/hajj-button-bg.png')
   },
   {
