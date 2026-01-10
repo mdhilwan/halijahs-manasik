@@ -41,7 +41,7 @@ const buttons: buttonType[] = [
     bgImg: require('@/assets/images/button-bg/masjid-haram-aerial-view.png')
   },
   {
-    title: 'Zamzam' ,
+    title: 'Zam-zam' ,
     bgImg: require('@/assets/images/button-bg/zamzam-illustration.png')
   },
   {
