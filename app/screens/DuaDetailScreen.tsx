@@ -9,7 +9,6 @@ import {useFontSize} from "@/app/contexts/FontSettingsContext";
 import SettingsModal from "@/components/settings-modal";
 import {Ionicons} from "@expo/vector-icons";
 import {ThemedText} from "@/components/themed-text";
-import {BroadcastIndicator} from "@/components/broadcast-indicator";
 
 function ArabicText({dua}: {dua: DuaEngMalayArabicType}) {
   const {arabicFontSize, duaHidden} = useFontSize()
@@ -74,8 +73,6 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
         }}>
           <Ionicons size={28} name={"chevron-back"} color={"black"}/>
         </TouchableOpacity>
-
-        <BroadcastIndicator/>
 
         <TouchableOpacity onPress={() => setShowSettings(true)}>
           <Text style={styles.fontSettings}>Aa</Text>

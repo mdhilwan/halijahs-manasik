@@ -7,7 +7,6 @@ import {useLanguage} from "@/app/contexts/LanguageContext";
 import {LanguageEnums} from "@/constants/language-enums";
 import {Ionicons} from "@expo/vector-icons";
 import {useFonts} from "expo-font";
-import {BroadcastIndicator} from "@/components/broadcast-indicator";
 
 export default function DuaListScreen({setScreen, duas, setSelectedDua, category}: DuaListScreenType) {
   const {language} = useLanguage()
@@ -20,7 +19,6 @@ export default function DuaListScreen({setScreen, duas, setSelectedDua, category
             <TouchableOpacity onPress={() => setScreen("home")}>
                 <Ionicons size={28} name={"chevron-back"} color={"black"}/>
             </TouchableOpacity>
-            <BroadcastIndicator/>
         </View>
         <Text style={styles.title}>{category} Du&#39;a List</Text>
         <ScrollView>
