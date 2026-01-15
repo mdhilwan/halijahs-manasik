@@ -75,7 +75,7 @@ export default function About() {
             />
             <Contributor
                 name={"Ustaz Haji Muhammad Syarafuddeen Bin Mazlan"}
-                description={"Structured and organised the app’s content and recorded and produced all in-app audio."}
+                description={"Structured and organised the app’s content and recorded and produced majority of the in-app audio."}
             />
             <Contributor
                 name={"Ustaz Haji Mohammed Iqbal Bin Abdullah"}
