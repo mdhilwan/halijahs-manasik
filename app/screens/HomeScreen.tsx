@@ -20,16 +20,46 @@ export type buttonType = {
 }
 
 const buttons: buttonType[] = [
-  { title: 'Ihram' },
-  { title: 'Talbiyah' },
-  { title: 'Travel' },
-  { title: 'Masjidil Haram' },
-  { title: 'Tawaf' },
-  { title: 'Zam-zam' },
-  { title: "Sa'i" },
-  { title: 'Tahalul' },
-  { title: 'Tawaf Wadak' },
-  { title: 'Madinah' },
+  {
+    title: 'Ihram',
+    bgImg: require('@/assets/images/button-bg/ihram.png')
+  },
+  {
+    title: 'Talbiyah',
+    bgImg: require('@/assets/images/button-bg/talbiyah.png')
+  },
+  {
+    title: 'Travel',
+    bgImg: require('@/assets/images/button-bg/travel.png')
+  },
+  {
+    title: 'Masjidil Haram',
+    bgImg: require('@/assets/images/button-bg/masjidil-haram.png')
+  },
+  {
+    title: 'Tawaf',
+    bgImg: require('@/assets/images/button-bg/tawaf.png')
+  },
+  {
+    title: 'Zam-zam' ,
+    bgImg: require('@/assets/images/button-bg/zamzam.png')
+  },
+  {
+    title: "Sa'i" ,
+    bgImg: require('@/assets/images/button-bg/sai.png')
+  },
+  {
+    title: 'Tahalul' ,
+    bgImg: require('@/assets/images/button-bg/tahallul.png')
+  },
+  {
+    title: 'Tawaf Wadak' ,
+    bgImg: require('@/assets/images/button-bg/tawaf-wada.png')
+  },
+  {
+    title: 'Madinah' ,
+    bgImg: require('@/assets/images/button-bg/madinah.png')
+  },
 ];
 
 export default function HomeScreen({
@@ -88,9 +118,10 @@ export default function HomeScreen({
                         source={btn.bgImg}
                         style={styles.bgButtonContainer}
                         imageStyle={{borderRadius: 15}}
+                        resizeMode={"cover"}
                       >
                         <Text
-                          style={styles.buttonText}
+                          style={[styles.buttonText, styles.bgButtonText]}
                         >
                           {typeof btn.title === 'string' ? btn.title : btn.title[language]}
                         </Text>
@@ -126,6 +157,9 @@ const styles = StyleSheet.create({
     height: 75,
     backgroundColor: Colors.light.tint,
     borderRadius: 16,
+    borderStyle: 'solid',
+    borderWidth: 3,
+    borderColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 16,
@@ -141,12 +175,12 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   bgButtonText: {
-    color: "#315437",
+    color: "#233125",
     fontWeight: 'bold',
     width: '70%',
-    textAlign: 'center',
-    alignSelf: 'center',
-    paddingLeft: 15,
+    textAlign: 'right',
+    alignSelf: 'flex-end',
+    paddingRight: 15,
   },
   heroImage: {
     height: 178,

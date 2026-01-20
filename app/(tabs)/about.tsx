@@ -61,7 +61,7 @@ export default function About() {
                 Halijah Manasik is a digital Umrah and Hajj guide developed based on the guidebook Menyahut Seruan Ilahi. It is designed to accompany pilgrims through the main rituals of Umrah, whether they are following a mutawwif or performing Umrah on their own.
             </ThemedText>
             <ThemedText type="default" style={{marginVertical: 10}}>
-                With Allah’s permission, we hope this app will serve as a source of ease and guidance in fulfilling the rites of Hajj and Umrah. May Allah envelop every pilgrim with His Mercy and Pleasure, and bless all who strive and serve along this noble and sacred journey.
+                Our aim is to provide authentic and reliable guidance and to make this app accessible to all pilgrims performing Hajj and Umrah, so that they may carry out their manasik (rites) with greater clarity, confidence and peace of mind. With Allah’s permission, we hope this app becomes a means of ease and guidance throughout this noble and sacred journey.
             </ThemedText>
             <ThemedText type="default" style={{marginVertical: 10}}>
                 May this app also be a lasting source of reward and ongoing charity for everyone who has contributed their efforts to it in any way, and especially for the late founder, Allahyarhamah Halijah Binte Abdul Hamid Almunawwarah, the founder of Halijah Travels, whose love for innovation and dedication to finding new ways to support pilgrims continue to inspire this work.
