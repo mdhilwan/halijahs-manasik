@@ -78,8 +78,8 @@ export default function About() {
                 description={"Structured and organised the app’s content and recorded and produced majority of the in-app audio."}
             />
             <Contributor
-                name={"Ustaz Haji Mohammed Iqbal Bin Abdullah"}
-                description={"Provided verification and review to ensure the accuracy and reliability of the app content."}
+                name={"Ustaz Haji Mohammed Iqbal Bin Abdullah, Ustaz Haji Wahyudin Arsad Ilham and Ustaz Haji Miseran Bin Rasidi"}
+                description={"Provided inputs that contributed to the improvement and correction of the applications' core content."}
             />
             <Contributor
                 name={"Muhammad Hilwan Bin Mohamed Idrus"}
@@ -90,7 +90,7 @@ export default function About() {
 
 
         <ThemedText style={{marginVertical: 10}}>
-            To checkout more tours by Halijah Travels, please visit our website and our socials here:
+            To explore more tours by Halijah Travels, please visit our website or follow us on our social media here:
         </ThemedText>
 
         <View style={{ flexDirection: 'row', gap: 20 }}>
@@ -111,6 +111,16 @@ export default function About() {
             icon={<Ionicons name={"logo-youtube"} size={25} />}
           />
         </View>
+
+        <Collapsible title="Get In Touch" open={true}>
+            <ThemedText>Have a question or feedback? We&#39;d love to hear from you.</ThemedText>
+            <Link href="mailto:corporate@halijah.com.sg" style={{ marginTop: 10 }}>
+              <ThemedText type="defaultBold" style={{ color: '#d38827' }}>
+                Email us at corporate@halijah.com.sg
+              </ThemedText>
+            </Link>
+        </Collapsible>
+
     </ParallaxScrollView>
   );
 }
@@ -135,7 +145,7 @@ const styles = StyleSheet.create({
   },
   ctaBtn: {
     alignSelf: 'flex-start',
-    backgroundColor: '#FF3B30',
+    backgroundColor: '#d38827',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 30,

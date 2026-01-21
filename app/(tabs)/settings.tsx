@@ -26,7 +26,6 @@ export default function Settings() {
           Settings
         </ThemedText>
       </ThemedView>
-      <ThemedText>Set common app settings here.</ThemedText>
       <Collapsible title="Language">
         <Picker
           selectedValue={language}
