@@ -1,1 +1,0 @@
-export const UPLOAD_INTERVAL_MS = 8000
