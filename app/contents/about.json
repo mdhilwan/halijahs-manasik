@@ -46,5 +46,10 @@
         "icon": "logo-youtube"
       }
     ]
+  },
+  "getInTouch": {
+    "intro": "Have a question or feedback? We'd love to hear from you.",
+    "emailAddress": "mailto:app@halijah.com.sg",
+    "emailText": "Email us at app@halijah.com.sg"
   }
 }

@@ -4,7 +4,7 @@ import {ThemedText} from '@/components/themed-text';
 import {ThemedView} from '@/components/themed-view';
 import {useFonts} from "expo-font";
 import React, {ReactNode, memo} from "react";
-import {Link} from "expo-router";
+import {ExternalPathString, Link} from "expo-router";
 import {Image} from "expo-image";
 import {Collapsible} from "@/components/ui/collapsible";
 import {Ionicons} from "@expo/vector-icons";
@@ -90,14 +90,14 @@ export default function About() {
           )}
         </View>
 
-        <Collapsible title="Get In Touch" open={true}>
-            <ThemedText>Have a question or feedback? We&#39;d love to hear from you.</ThemedText>
-            <Link href="mailto:corporate@halijah.com.sg" style={{ marginTop: 10 }}>
-              <ThemedText type="defaultBold" style={{ color: '#d38827' }}>
-                Email us at corporate@halijah.com.sg
-              </ThemedText>
+        {AboutContent.getInTouch && <Collapsible title="Get In Touch" open={true}>
+            <ThemedText>{AboutContent.getInTouch.intro}</ThemedText>
+            <Link href={AboutContent.getInTouch.emailAddress as ExternalPathString} style={{ marginTop: 10 }}>
+                <ThemedText type="defaultBold" style={{ color: '#d38827' }}>
+                  {AboutContent.getInTouch.emailText}
+                </ThemedText>
             </Link>
-        </Collapsible>
+        </Collapsible>}
 
     </ParallaxScrollView>
   );
