@@ -15,7 +15,7 @@ function ArabicText({dua}: {dua: DuaEngMalayArabicType}) {
   if (dua.arabic === "" || duaHidden) {
     return null
   }
-  return <View style={styles.textWrapper}>
+  return <View style={[styles.textWrapper, {paddingVertical: 10}]}>
     <ThemedText type={"arabic"} style={{fontSize: arabicFontSize}}>{dua.arabic}</ThemedText>
   </View>
 }
@@ -25,7 +25,7 @@ function TranslationText({dua, translationKey}: {dua: DuaEngMalayArabicType, tra
   if (dua[translationKey].length === 0 || translationHidden) {
     return null
   }
-  return <View style={styles.textWrapper}>
+  return <View style={[styles.textWrapper, {paddingVertical: 10}]}>
     {typeof dua[translationKey] === "string" ?
       <Text style={[styles.translation, {fontSize: translationFontSize}]}>
         {dua[translationKey]}
