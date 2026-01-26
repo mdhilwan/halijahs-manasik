@@ -12,11 +12,13 @@
       "bundleIdentifier": "com.halijah.manasik",
       "infoPlist": {
         "UIBackgroundModes": ["audio"],
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleDisplayName": "Manasik"
       }
     },
     "android": {
       "permissions": ["FOREGROUND_SERVICE"],
+      "app_name": "Manasik",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -37,18 +39,16 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "imageWidth": 100,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#BCA469",
           "dark": {
-            "backgroundColor": "#ffffff"
+            "backgroundColor": "#BCA469"
           }
         }
       ],
-      "expo-sqlite",
       "expo-web-browser",
-      "expo-font",
-      "@config-plugins/react-native-webrtc"
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,
