@@ -13,7 +13,7 @@ export default function RootLayout() {
   useEffect(() => {
     Audio.setAudioModeAsync({
       allowsRecordingIOS: false,
-      staysActiveInBackground: false,
+      staysActiveInBackground: true,
       interruptionModeIOS: InterruptionModeIOS.DoNotMix,
       playsInSilentModeIOS: true,
       shouldDuckAndroid: true,
