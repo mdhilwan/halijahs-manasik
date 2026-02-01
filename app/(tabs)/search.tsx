@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  View,
   TextInput,
   FlatList,
   Text,
@@ -13,6 +12,7 @@ import {useLanguage} from "@/app/contexts/LanguageContext";
 import DuaDetailScreen from "@/app/screens/DuaDetailScreen";
 import {useFontSize} from "@/app/contexts/FontSettingsContext";
 import {ThemedText} from "@/components/themed-text";
+import {ThemedView} from "@/components/themed-view";
 
 export default function Search() {
   const [query, setQuery] = useState("");
@@ -45,7 +45,7 @@ export default function Search() {
       return <DuaDetailScreen setScreen={setScreen} selectedDua={selectedDua} setSelectedDua={setSelectedDua} />;
     case "home":
       return (
-        <View style={[styles.container, {paddingTop: 75}]}>
+        <ThemedView style={[styles.container, {paddingTop: 75}]}>
           <TextInput
             style={styles.input}
             placeholder="Search duas..."
@@ -75,7 +75,7 @@ export default function Search() {
               <Text style={styles.empty}>No duas found.</Text>
             }
           />
-        </View>
+        </ThemedView>
       );
   }
 }
@@ -83,7 +83,6 @@ export default function Search() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     padding: 16,
   },
   input: {
