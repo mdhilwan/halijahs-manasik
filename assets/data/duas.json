@@ -567,7 +567,14 @@
       {
         "id": 1,
         "arabic": "",
-        "translationEn": "To drink with good intentions. This is in accordance with the meaning of the words of the Prophet s.a.w. \"The water of Zamzam is for whatever it is drunk for.\",To face the Ka'abah,Mention the name of Allah,Drink with three sips (breaths),Drink to your fill,Praise Allah,Dua",
+        "translationEn": [
+          "To drink with good intentions. This is in accordance with the meaning of the words of the Prophet s.a.w. \"The water of Zamzam is for whatever it is drunk for.\"",
+          "To face the Ka'abah",
+          "Mention the name of Allah",
+          "Drink with three sips (breaths)",
+          "Drink to your fill",
+          "Praise Allah",
+          "Dua"],
         "translationMy": [
           "Berniat dengan niat yang baik. Ini sesuai dengan maksud sabda baginda Rasulullah s.a.w. \"Air zamzam adalah untuk sesuatu yang kita minum kerananya\"",
           "Hadapkan muka ke Kaabah",

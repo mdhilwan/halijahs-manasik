@@ -9,36 +9,39 @@ import {useFontSize} from "@/app/contexts/FontSettingsContext";
 import SettingsModal from "@/components/settings-modal";
 import {Ionicons} from "@expo/vector-icons";
 import {ThemedText} from "@/components/themed-text";
-import {BroadcastIndicator} from "@/components/broadcast-indicator";
+import {ThemedView} from "@/components/themed-view";
 
-function ArabicText({dua}: {dua: DuaEngMalayArabicType}) {
+function ArabicText({dua}: { dua: DuaEngMalayArabicType }) {
   const {arabicFontSize, duaHidden} = useFontSize()
   if (dua.arabic === "" || duaHidden) {
     return null
   }
-  return <View style={styles.textWrapper}>
+  return <View style={[styles.textWrapper, {marginVertical: 10}]}>
     <ThemedText type={"arabic"} style={{fontSize: arabicFontSize}}>{dua.arabic}</ThemedText>
   </View>
 }
 
-function TranslationText({dua, translationKey}: {dua: DuaEngMalayArabicType, translationKey: "translationMy" | "translationEn"}) {
+function TranslationText({dua, translationKey}: {
+  dua: DuaEngMalayArabicType,
+  translationKey: "translationMy" | "translationEn"
+}) {
   const {translationFontSize, translationHidden} = useFontSize()
   if (dua[translationKey].length === 0 || translationHidden) {
     return null
   }
-  return <View style={styles.textWrapper}>
+  return <ThemedView style={[styles.textWrapper, {marginVertical: 10}]}>
     {typeof dua[translationKey] === "string" ?
-      <Text style={[styles.translation, {fontSize: translationFontSize}]}>
+      <ThemedText style={[styles.translation, {fontSize: translationFontSize}]}>
         {dua[translationKey]}
-      </Text> :
-      <Text style={styles.textWrapper}>
+      </ThemedText> :
+      <ThemedText style={styles.textWrapper}>
         {dua[translationKey].map((duaLine: string, index: number) =>
-          <Text key={index} style={[styles.translation, {textAlign: "left", fontSize: translationFontSize}]}>
+          <ThemedText key={index} style={[styles.translation, {textAlign: "left", fontSize: translationFontSize}]}>
             • {duaLine + '\n'}
-          </Text>
+          </ThemedText>
         )}
-      </Text>}
-  </View>
+      </ThemedText>}
+  </ThemedView>
 }
 
 export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}: DuaDetailType) {
@@ -59,49 +62,52 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
     );
   }
 
-  const titleKey= language === 'my' ? "titleMy" : "titleEn"
+  const titleKey = language === 'my' ? "titleMy" : "titleEn"
   const translationKey = language === 'my' ? "translationMy" : "translationEn"
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => {
-          if (selectedDua?.duas.length === 1) {
-            setScreen('home');
-          } else {
-            setScreen('duaList');
-          }
-        }}>
-          <Ionicons size={28} name={"chevron-back"} color={"black"}/>
-        </TouchableOpacity>
+    <ThemedView style={styles.container}>
+      <SafeAreaView style={{flex: 1}}>
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => {
+            if (selectedDua?.duas.length === 1) {
+              setScreen('home');
+            } else {
+              setScreen('duaList');
+            }
+          }}>
+            <ThemedText>
+              <Ionicons size={28} name={"chevron-back"}/>
+            </ThemedText>
+          </TouchableOpacity>
 
-        <BroadcastIndicator/>
+          <TouchableOpacity onPress={() => setShowSettings(true)}>
+            <ThemedText style={styles.fontSettings}>Aa</ThemedText>
+          </TouchableOpacity>
+        </View>
+        {
+          (duaObj) &&
+            <>
+                <ThemedText style={styles.title}>{duaObj[titleKey]}</ThemedText>
+                <ThemedView style={{ flex: 1 }}>
+                  <ScrollView>
+                    {
+                      duaObj.doa.map((dua: DuaEngMalayArabicType) => {
+                        return <ThemedView key={dua.id}>
+                          <ArabicText dua={dua}/>
+                          <TranslationText dua={dua} translationKey={translationKey}/>
+                        </ThemedView>
+                      })
+                    }
+                  </ScrollView>
+                </ThemedView>
+            </>
+        }
+        <DuaPlayer dua={duaObj as DuaType} selectedDua={selectedDua} setSelectedDua={setSelectedDua}/>
 
-        <TouchableOpacity onPress={() => setShowSettings(true)}>
-          <Text style={styles.fontSettings}>Aa</Text>
-        </TouchableOpacity>
-      </View>
-      {
-        (duaObj) &&
-          <>
-
-              <Text style={styles.title}>{duaObj[titleKey]}</Text>
-              <ScrollView>
-                {
-                  duaObj.doa.map((dua: DuaEngMalayArabicType) => {
-                    return <Text key={dua.id}>
-                      <ArabicText dua={dua}/>
-                      <TranslationText dua={dua} translationKey={translationKey}/>
-                    </Text>
-                  })
-                }
-              </ScrollView>
-          </>
-      }
-      <DuaPlayer dua={duaObj as DuaType} selectedDua={selectedDua} setSelectedDua={setSelectedDua}/>
-
-      <SettingsModal/>
-    </SafeAreaView>
+        <SettingsModal/>
+      </SafeAreaView>
+    </ThemedView>
   );
 }
 
@@ -113,7 +119,6 @@ const styles = StyleSheet.create({
   },
   fontSettings: {
     fontSize: 20,
-    color: '#505050',
   },
   drawerContainer: {
     flex: 1,
@@ -123,33 +128,33 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    marginBottom: 0,
     paddingBottom: 0,
-    backgroundColor: '#fff'
+    height: '100%'
   },
   title: {
     fontSize: 26,
     fontWeight: 'bold',
     textAlign: 'center',
     fontFamily: 'Mulish-Bold',
-    marginBottom: 10
+    paddingVertical: 20,
+    flexShrink: 1
   },
   textWrapper: {
     width: "100%",
     marginRight: 5,
     marginBottom: 5,
     flexShrink: 1,
-    paddingHorizontal: 1
+    paddingBottom: 10
   },
   translation: {
     fontSize: 20,
     fontWeight: 'bold',
     fontFamily: 'Mulish-Bold',
     textAlign: 'center',
-    color: '#000'
   },
   back: {
     fontSize: 18,
-    color: '#505050',
     marginBottom: 10
   },
   drawerTitle: {

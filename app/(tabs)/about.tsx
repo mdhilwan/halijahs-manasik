@@ -4,7 +4,7 @@ import {ThemedText} from '@/components/themed-text';
 import {ThemedView} from '@/components/themed-view';
 import {useFonts} from "expo-font";
 import React, {ReactNode, memo} from "react";
-import {Link} from "expo-router";
+import {ExternalPathString, Link} from "expo-router";
 import {Image} from "expo-image";
 import {Collapsible} from "@/components/ui/collapsible";
 import {Ionicons} from "@expo/vector-icons";
@@ -46,6 +46,12 @@ export default function About() {
   return (
     fontLoaded && <ParallaxScrollView
         headerBackgroundColor={{light: '#D0D0D0', dark: '#353636'}}
+        headerImageIpad={
+          <Image
+            source={require('@/assets/images/about-hero-image-tablet.png')}
+            style={styles.heroImage}
+          />
+        }
         headerImage={
           <Image
             source={require('@/assets/images/about-hero-image.png')}
@@ -89,6 +95,16 @@ export default function About() {
             />
           )}
         </View>
+
+        {AboutContent.getInTouch && <Collapsible title="Get In Touch" open={true}>
+            <ThemedText>{AboutContent.getInTouch.intro}</ThemedText>
+            <Link href={AboutContent.getInTouch.emailAddress as ExternalPathString} style={{ marginTop: 10 }}>
+                <ThemedText type="defaultBold" style={{ color: '#d38827' }}>
+                  {AboutContent.getInTouch.emailText}
+                </ThemedText>
+            </Link>
+        </Collapsible>}
+
     </ParallaxScrollView>
   );
 }
@@ -113,7 +129,7 @@ const styles = StyleSheet.create({
   },
   ctaBtn: {
     alignSelf: 'flex-start',
-    backgroundColor: '#FF3B30',
+    backgroundColor: '#d38827',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 30,

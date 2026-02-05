@@ -7,17 +7,13 @@ import {useColorScheme} from '@/hooks/use-color-scheme';
 import {useEffect} from 'react';
 import {Audio, InterruptionModeAndroid, InterruptionModeIOS} from 'expo-av';
 
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
-
 export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   useEffect(() => {
     Audio.setAudioModeAsync({
       allowsRecordingIOS: false,
-      staysActiveInBackground: false,
+      staysActiveInBackground: true,
       interruptionModeIOS: InterruptionModeIOS.DoNotMix,
       playsInSilentModeIOS: true,
       shouldDuckAndroid: true,

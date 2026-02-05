@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import { StyleSheet } from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -10,17 +10,21 @@ import Animated, {
 import { ThemedView } from '@/components/themed-view';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useThemeColor } from '@/hooks/use-theme-color';
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
 const HEADER_HEIGHT = 250;
+const isTablet = SCREEN_WIDTH >= 768; // iPad threshold
 
 type Props = PropsWithChildren<{
   headerImage: ReactElement;
+  headerImageIpad?: ReactElement;
   headerBackgroundColor: { dark: string; light: string };
 }>;
 
 export default function ParallaxScrollView({
   children,
   headerImage,
+  headerImageIpad,
   headerBackgroundColor,
 }: Props) {
   const backgroundColor = useThemeColor({}, 'background');
@@ -55,7 +59,7 @@ export default function ParallaxScrollView({
           { backgroundColor: headerBackgroundColor[colorScheme] },
           headerAnimatedStyle,
         ]}>
-        {headerImage}
+        {isTablet && headerImageIpad ? headerImageIpad : headerImage}
       </Animated.View>
       <ThemedView style={styles.content}>{children}</ThemedView>
     </Animated.ScrollView>

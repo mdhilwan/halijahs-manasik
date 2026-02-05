@@ -6,7 +6,10 @@ import {Colors} from "@/constants/theme";
 import {PlayStopButtonType} from "@/app/types";
 import {Ionicons} from '@expo/vector-icons';
 
-import { useFocusEffect } from "@react-navigation/native";
+import {useFocusEffect} from "@react-navigation/native";
+import {ThemedView} from "@/components/themed-view";
+import {ThemedText} from "@/components/themed-text";
+import {useColorScheme} from "@/hooks/use-color-scheme";
 
 function formatTime(seconds: number) {
   const mins = Math.floor(seconds / 60);
@@ -80,9 +83,11 @@ const audioMap: Record<string, any> = {
   "ziarah_wadak.mp3": require("@/assets/audio/ziarah_wadak.mp3"),
   "sampaikan_salam.mp3": require("@/assets/audio/sampaikan_salam.mp3"),
   "salam_to_rasulullah.mp3": require("@/assets/audio/salam_to_rasulullah.mp3"),
+  "doa_iktikaf.mp3": require("@/assets/audio/doa_iktikaf.mp3"),
 };
 
 export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType) => {
+  const color = useColorScheme()
   const [sound, setSound] = useState<Audio.Sound | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -219,21 +224,23 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
 
   return (
     <View style={{alignItems: 'center'}}>
-      <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+      <ThemedView style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
         {prevAvailable &&
-          <TouchableOpacity
-            style={[styles.audioButton, {marginRight: 20, backgroundColor: "white"}]}
-            onPress={() => {
-              if (selectedDua?.curr !== undefined) {
-                setSelectedDua({
-                  curr: selectedDua.curr - 1,
-                  duas: selectedDua.duas
-                })
-              }
-            }}
-          >
-            <Ionicons name="play-skip-back" size={28} color={"black"}/>
-          </TouchableOpacity>}
+            <TouchableOpacity
+                style={[styles.audioButton, {marginRight: 20}]}
+                onPress={() => {
+                  if (selectedDua?.curr !== undefined) {
+                    setSelectedDua({
+                      curr: selectedDua.curr - 1,
+                      duas: selectedDua.duas
+                    })
+                  }
+                }}
+            >
+                <ThemedText>
+                    <Ionicons name="play-skip-back" size={28}/>
+                </ThemedText>
+            </TouchableOpacity>}
         {dua?.audio &&
             <TouchableOpacity
                 style={[styles.audioButton, {
@@ -253,19 +260,21 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
             </TouchableOpacity>
         }
         {nextAvailable && <TouchableOpacity
-          style={[styles.audioButton, {marginLeft: 20, backgroundColor: "white"}]}
-          onPress={() => {
-            if (selectedDua?.curr !== undefined) {
-              setSelectedDua({
-                curr: selectedDua.curr + 1,
-                duas: selectedDua.duas
-              })
-            }
-          }}
+            style={[styles.audioButton, {marginLeft: 20}]}
+            onPress={() => {
+              if (selectedDua?.curr !== undefined) {
+                setSelectedDua({
+                  curr: selectedDua.curr + 1,
+                  duas: selectedDua.duas
+                })
+              }
+            }}
         >
-          <Ionicons name="play-skip-forward" size={28} color={"black"}/>
+            <ThemedText>
+                <Ionicons name="play-skip-forward" size={28}/>
+            </ThemedText>
         </TouchableOpacity>}
-      </View>
+      </ThemedView>
       {dua?.audio &&
           <View style={{width: '100%', marginTop: 5, alignItems: 'center'}}>
               <Slider
@@ -277,7 +286,7 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
                   onSlidingComplete={handleSeek}
                   minimumTrackTintColor={Colors.base.tint}
                   maximumTrackTintColor="#ddd"
-                  thumbTintColor={Colors.light.tint}
+                  thumbTintColor={color === 'dark' ? Colors.dark.tint : Colors.light.tint}
                   disabled={loading || !sound}
               />
               <View style={{flexDirection: 'row', justifyContent: 'space-between', width: "100%"}}>
@@ -292,7 +301,6 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
 
 const styles = StyleSheet.create({
   audioButton: {
-    backgroundColor: Colors.light.tint,
     padding: 10,
     borderRadius: 10,
     marginTop: 10,

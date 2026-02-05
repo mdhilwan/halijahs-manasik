@@ -1,22 +1,25 @@
 {
   "expo": {
-    "name": "halijahs-manasik",
+    "name": "Manasik by Halijah",
     "slug": "halijahs-manasik-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "halijahsmanasik",
+    "scheme": "halijahmanasik",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.halijahs.manasik",
+      "bundleIdentifier": "com.halijah.manasik",
+      "buildNumber": "5",
       "infoPlist": {
         "UIBackgroundModes": ["audio"],
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleDisplayName": "Manasik"
       }
     },
     "android": {
       "permissions": ["FOREGROUND_SERVICE"],
+      "app_name": "Manasik",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -25,7 +28,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.halijahs.manasik"
+      "package": "com.halijah.manasik"
     },
     "web": {
       "output": "static",
@@ -37,18 +40,16 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "imageWidth": 100,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#BCA469",
           "dark": {
-            "backgroundColor": "#ffffff"
+            "backgroundColor": "#BCA469"
           }
         }
       ],
-      "expo-sqlite",
       "expo-web-browser",
-      "expo-font",
-      "@config-plugins/react-native-webrtc"
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,

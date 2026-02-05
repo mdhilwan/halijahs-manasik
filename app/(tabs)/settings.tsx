@@ -15,6 +15,12 @@ export default function Settings() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{light: '#D0D0D0', dark: '#353636'}}
+      headerImageIpad={
+        <Image
+          source={require('@/assets/images/settings-hero-image-tablet.png')}
+          style={styles.heroImage}
+        />
+      }
       headerImage={
         <Image
           source={require('@/assets/images/settings-hero-image.png')}
@@ -26,7 +32,6 @@ export default function Settings() {
           Settings
         </ThemedText>
       </ThemedView>
-      <ThemedText>Set common app settings here.</ThemedText>
       <Collapsible title="Language">
         <Picker
           selectedValue={language}
@@ -61,16 +66,5 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: 'absolute',
-  },
-  broadcastBtn: {
-    backgroundColor: '#FF3B30',
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    borderRadius: 30,
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.15,
-    shadowRadius: 4,
-    elevation: 3
   }
 });
