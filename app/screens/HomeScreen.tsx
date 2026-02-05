@@ -22,43 +22,43 @@ export type buttonType = {
 const buttons: buttonType[] = [
   {
     title: 'Ihram',
-    bgImg: require('@/assets/images/button-bg/ihram.png')
+    bgImg: require('@/assets/images/button-bg/ihram-illustration.png')
   },
   {
     title: 'Talbiyah',
-    bgImg: require('@/assets/images/button-bg/talbiyah.png')
+    bgImg: require('@/assets/images/button-bg/talbiyah-illustration.png')
   },
   {
     title: 'Travel',
-    bgImg: require('@/assets/images/button-bg/travel.png')
+    bgImg: require('@/assets/images/button-bg/travel-illustration.png')
   },
   {
     title: 'Masjidil Haram',
-    bgImg: require('@/assets/images/button-bg/masjidil-haram.png')
+    bgImg: require('@/assets/images/button-bg/hajj-button-bg.png')
   },
   {
     title: 'Tawaf',
-    bgImg: require('@/assets/images/button-bg/tawaf.png')
+    bgImg: require('@/assets/images/button-bg/masjid-haram-aerial-view.png')
   },
   {
-    title: 'Zam-zam' ,
-    bgImg: require('@/assets/images/button-bg/zamzam.png')
+    title: 'Zamzam' ,
+    bgImg: require('@/assets/images/button-bg/zamzam-illustration.png')
   },
   {
     title: "Sa'i" ,
-    bgImg: require('@/assets/images/button-bg/sai.png')
+    bgImg: require('@/assets/images/button-bg/sai-illustration.png')
   },
   {
     title: 'Tahalul' ,
-    bgImg: require('@/assets/images/button-bg/tahallul.png')
+    bgImg: require('@/assets/images/button-bg/tahalul-illustration.png')
   },
   {
     title: 'Tawaf Wadak' ,
-    bgImg: require('@/assets/images/button-bg/tawaf-wada.png')
+    bgImg: require('@/assets/images/button-bg/tawaf-wadak-illustration.png')
   },
   {
     title: 'Madinah' ,
-    bgImg: require('@/assets/images/button-bg/madinah.png')
+    bgImg: require('@/assets/images/button-bg/madinah-illustration.png')
   },
 ];
 
@@ -91,12 +91,6 @@ export default function HomeScreen({
   return (
     <ParallaxScrollView
       headerBackgroundColor={{light: '#D0D0D0', dark: '#353636'}}
-      headerImageIpad={
-        <Image
-          source={require('@/assets/images/hajj-hero-image-tablet.png')}
-          style={styles.heroImage}
-        />
-      }
       headerImage={
         <Image
           source={require('@/assets/images/hajj-hero-image.png')}
@@ -124,8 +118,8 @@ export default function HomeScreen({
                         source={btn.bgImg}
                         style={styles.bgButtonContainer}
                         imageStyle={{borderRadius: 15}}
-                        resizeMode={"cover"}
                       >
+                        <View style={styles.imageOverlay} />
                         <Text
                           style={[styles.buttonText, styles.bgButtonText]}
                         >
@@ -164,9 +158,6 @@ const styles = StyleSheet.create({
     height: 75,
     backgroundColor: Colors.light.tint,
     borderRadius: 16,
-    borderStyle: 'solid',
-    borderWidth: 3,
-    borderColor: '#3d3d3d',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 16,
@@ -181,13 +172,18 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  imageOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 15,
+  },
   bgButtonText: {
     color: "#233125",
     fontWeight: 'bold',
     width: '70%',
-    textAlign: 'right',
-    alignSelf: 'flex-end',
-    paddingRight: 15,
+    textAlign: 'left',
+    alignSelf: 'flex-start',
+    paddingLeft: 15,
   },
   heroImage: {
     height: 178,
