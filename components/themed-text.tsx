@@ -26,6 +26,7 @@ export function ThemedText({
 
   return (
     fontLoaded && <Text
+      allowFontScaling={false}
       style={[
         {color},
         {flexShrink: 1},

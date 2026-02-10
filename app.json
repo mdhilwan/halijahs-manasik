@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Manasik by Halijah",
+    "name": "Manasik",
     "slug": "halijahs-manasik-app",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "halijahmanasik",

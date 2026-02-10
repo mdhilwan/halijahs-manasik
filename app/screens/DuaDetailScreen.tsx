@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView} from "react-native-safe-area-context";
-import {Text, TouchableOpacity, StyleSheet, View, ScrollView} from 'react-native';
+import {TouchableOpacity, StyleSheet, View, ScrollView} from 'react-native';
 import {DuaDetailType, DuaEngMalayArabicType, DuaType} from "@/app/types";
 import {useFonts} from "expo-font";
 import {DuaPlayer} from "@/components/controls/dua-player";
@@ -57,7 +57,7 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
   if (!fontLoaded) {
     return (
       <SafeAreaView style={styles.container}>
-        <Text>Loading fonts...</Text>
+        <ThemedText>Loading fonts...</ThemedText>
       </SafeAreaView>
     );
   }

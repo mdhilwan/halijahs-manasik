@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState, useCallback} from "react";
 import {Audio} from "expo-av";
-import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {StyleSheet, TouchableOpacity, View} from "react-native";
 import Slider from "@react-native-community/slider";
 import {Colors} from "@/constants/theme";
 import {PlayStopButtonType} from "@/app/types";
@@ -290,8 +290,8 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
                   disabled={loading || !sound}
               />
               <View style={{flexDirection: 'row', justifyContent: 'space-between', width: "100%"}}>
-                  <Text style={{fontSize: 14, color: '#555'}}>{formatTime(position)}</Text>
-                  <Text style={{fontSize: 14, color: '#555'}}>{formatTime(duration)}</Text>
+                  <ThemedText style={{fontSize: 14, color: '#555'}}>{formatTime(position)}</ThemedText>
+                  <ThemedText style={{fontSize: 14, color: '#555'}}>{formatTime(duration)}</ThemedText>
               </View>
           </View>
       }

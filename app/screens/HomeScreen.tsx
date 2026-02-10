@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity, StyleSheet, View, ImageBackground} from 'react-native';
+import {TouchableOpacity, StyleSheet, View, ImageBackground} from 'react-native';
 import {DuaType, HomeScreenType} from "@/app/types";
 import duas from '@/assets/data/duas.json';
 import ParallaxScrollView from "@/components/parallax-scroll-view";
@@ -7,6 +7,7 @@ import {Image} from "expo-image";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
 import {useFonts} from "expo-font";
+import {ThemedText} from "@/components/themed-text";
 
 export type buttonType = {
   title: {
@@ -126,16 +127,16 @@ export default function HomeScreen({
                         imageStyle={{borderRadius: 15}}
                         resizeMode={"cover"}
                       >
-                        <Text
+                        <ThemedText
                           style={[styles.buttonText, styles.bgButtonText]}
                         >
                           {typeof btn.title === 'string' ? btn.title : btn.title[language]}
-                        </Text>
+                        </ThemedText>
                       </ImageBackground>
                     ) : (
-                      <Text style={styles.buttonText}>
+                      <ThemedText style={styles.buttonText}>
                         {typeof btn.title === 'string' ? btn.title : btn.title[language]}
-                      </Text>
+                      </ThemedText>
                     )}
                   </TouchableOpacity>
                 )}

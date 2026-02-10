@@ -29,7 +29,7 @@ const FontSettingsContext = createContext<FontSettingsType>({
 
 export const FontSettingsProvider = ({children}: {children: React.ReactNode}) => {
   const [translationFontSize, setTranslationFontSizeState] = useState<number>(24);
-  const [arabicFontSize, setArabicFontSizeState] = useState<number>(24);
+  const [arabicFontSize, setArabicFontSizeState] = useState<number>(36);
   const [showSettings, setShowSettingsState] = useState<boolean>(false);
   const [duaHidden, setHideDuaState] = useState<boolean>(false);
   const [translationHidden, setHideTranslationState] = useState<boolean>(false);

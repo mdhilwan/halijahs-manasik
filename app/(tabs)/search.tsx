@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   TextInput,
   FlatList,
-  Text,
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
@@ -72,7 +71,7 @@ export default function Search() {
             )}
             keyboardShouldPersistTaps="handled"
             ListEmptyComponent={
-              <Text style={styles.empty}>No duas found.</Text>
+              <ThemedText style={styles.empty}>No duas found.</ThemedText>
             }
           />
         </ThemedView>

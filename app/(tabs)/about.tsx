@@ -86,7 +86,7 @@ export default function About() {
           {AboutContent.footer.socialsIntro}
         </ThemedText>
 
-        <View style={{flexDirection: 'row', gap: 20}}>
+        <View style={{flexDirection: 'row', flexWrap: 'wrap', gap: 20}}>
           {AboutContent.footer.socialLinks.map(({href, icon}, index) =>
             <SocialLink
               key={index}
@@ -98,7 +98,7 @@ export default function About() {
 
         {AboutContent.getInTouch && <Collapsible title="Get In Touch" open={true}>
             <ThemedText>{AboutContent.getInTouch.intro}</ThemedText>
-            <Link href={AboutContent.getInTouch.emailAddress as ExternalPathString} style={{ marginTop: 10 }}>
+            <Link allowFontScaling={false} href={AboutContent.getInTouch.emailAddress as ExternalPathString} style={{ marginTop: 10 }}>
                 <ThemedText type="defaultBold" style={{ color: '#d38827' }}>
                   {AboutContent.getInTouch.emailText}
                 </ThemedText>

@@ -1,18 +1,20 @@
-import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {StyleSheet, TouchableOpacity} from "react-native";
 import React from "react";
 import {useFontSize} from "@/app/contexts/FontSettingsContext";
+import {ThemedView} from "@/components/themed-view";
+import {ThemedText} from "@/components/themed-text";
 
 const TextSettings = ({children}: { children: React.ReactNode }) => {
-  return <Text style={styles.settingsText}>{children}</Text>
+  return <ThemedText style={styles.settingsText}>{children}</ThemedText>;
 }
 
 export const SettingsView = () => {
   const { arabicFontSize, translationFontSize, setTranslationFontSize, setArabicFontSize } = useFontSize()
 
   return <>
-    <View style={styles.settingRow}>
-      <TextSettings>Arabic Dua size: <Text style={{color: "#999"}}>{arabicFontSize}</Text></TextSettings>
-      <View style={styles.controls}>
+    <ThemedView style={styles.settingRow}>
+      <TextSettings>Arabic Dua size: <ThemedText style={{color: "#999"}}>{arabicFontSize}</ThemedText></TextSettings>
+      <ThemedView style={styles.controls}>
         <TouchableOpacity
           style={styles.button}
           onPress={() => setArabicFontSize(arabicFontSize + 2)}><TextSettings>+</TextSettings></TouchableOpacity>
@@ -20,12 +22,12 @@ export const SettingsView = () => {
         <TouchableOpacity
           style={styles.button}
           onPress={() => setArabicFontSize(Math.max(20, arabicFontSize - 2))}><TextSettings>-</TextSettings></TouchableOpacity>
-      </View>
-    </View>
+      </ThemedView>
+    </ThemedView>
 
-    <View style={styles.settingRow}>
-      <TextSettings>Translation size <Text style={{color: "#999"}}>{translationFontSize}</Text></TextSettings>
-      <View style={styles.controls}>
+    <ThemedView style={styles.settingRow}>
+      <TextSettings>Translation size <ThemedText style={{color: "#999"}}>{translationFontSize}</ThemedText></TextSettings>
+      <ThemedView style={styles.controls}>
         <TouchableOpacity style={styles.button} onPress={() => setTranslationFontSize(translationFontSize + 2)}><TextSettings>+</TextSettings></TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
@@ -33,8 +35,8 @@ export const SettingsView = () => {
         <TouchableOpacity
           style={styles.button}
           onPress={() => setTranslationFontSize(Math.max(20, translationFontSize - 2))}><TextSettings>-</TextSettings></TouchableOpacity>
-      </View>
-    </View>
+      </ThemedView>
+    </ThemedView>
   </>
 }
 

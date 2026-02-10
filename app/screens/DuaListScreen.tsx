@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView} from "react-native-safe-area-context";
-import {Text, TouchableOpacity, ScrollView, StyleSheet, useWindowDimensions} from 'react-native';
+import {TouchableOpacity, ScrollView, StyleSheet, useWindowDimensions} from 'react-native';
 import {DuaListScreenType} from "@/app/types";
 import {Colors} from "@/constants/theme";
 import {useLanguage} from "@/app/contexts/LanguageContext";
@@ -21,7 +21,7 @@ export default function DuaListScreen({setScreen, duas, setSelectedDua, category
   if (!fontLoaded) {
     return (
       <SafeAreaView style={styles.container}>
-        <Text>Loading fonts...</Text>
+        <ThemedText>Loading fonts...</ThemedText>
       </SafeAreaView>
     );
   }

@@ -1,7 +1,8 @@
-import {Modal, StyleSheet, View, TouchableWithoutFeedback, Text} from "react-native";
+import {Modal, StyleSheet, View, TouchableWithoutFeedback} from "react-native";
 import React from "react";
 import {useFontSize} from "@/app/contexts/FontSettingsContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
+import {ThemedText} from "@/components/themed-text";
 
 const SettingsModal = () => {
   const { showSettings, setShowSettings } = useFontSize()
@@ -15,7 +16,7 @@ const SettingsModal = () => {
       <View style={styles.drawerContainer}>
         <TouchableWithoutFeedback>
           <View style={styles.drawer}>
-            <Text style={styles.drawerTitle}>Text Settings</Text>
+            <ThemedText style={styles.drawerTitle}>Text Settings</ThemedText>
             <SettingsView/>
           </View>
         </TouchableWithoutFeedback>
