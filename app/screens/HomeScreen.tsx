@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
   title: {fontSize: 20, fontFamily: 'Mulish-Bold', fontWeight: 'bold', textAlign: 'center'},
   button: {
     width: '48%',
-    maxWidth: 180,
+    maxWidth: 190,
     height: 75,
     backgroundColor: Colors.light.tint,
     borderRadius: 16,
