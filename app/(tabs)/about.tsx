@@ -86,7 +86,7 @@ export default function About() {
           {AboutContent.footer.socialsIntro}
         </ThemedText>
 
-        <View style={{flexDirection: 'row', flexWrap: 'wrap', gap: 20}}>
+        <View style={{flexDirection: 'row', flexWrap: 'wrap', gap: 15}}>
           {AboutContent.footer.socialLinks.map(({href, icon}, index) =>
             <SocialLink
               key={index}
