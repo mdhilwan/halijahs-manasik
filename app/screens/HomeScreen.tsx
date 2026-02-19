@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity, StyleSheet, View, ImageBackground} from 'react-native';
+import {TouchableOpacity, StyleSheet, View, ImageBackground, useWindowDimensions} from 'react-native';
 import {DuaType, HomeScreenType} from "@/app/types";
 import duas from '@/assets/data/duas.json';
 import ParallaxScrollView from "@/components/parallax-scroll-view";
@@ -89,6 +89,9 @@ export default function HomeScreen({
     }
   };
 
+  const {width} = useWindowDimensions();
+  const smScreens = width < 390;
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{light: '#D0D0D0', dark: '#353636'}}
@@ -128,7 +131,11 @@ export default function HomeScreen({
                         resizeMode={"cover"}
                       >
                         <ThemedText
-                          style={[styles.buttonText, styles.bgButtonText]}
+                          style={[
+                            styles.buttonText,
+                            styles.bgButtonText,
+                            smScreens && {width: '80%'}
+                          ]}
                         >
                           {typeof btn.title === 'string' ? btn.title : btn.title[language]}
                         </ThemedText>

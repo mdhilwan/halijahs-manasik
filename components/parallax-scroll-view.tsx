@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import {Dimensions, StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet, useWindowDimensions} from 'react-native';
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -48,6 +48,9 @@ export default function ParallaxScrollView({
     };
   });
 
+  const {width} = useWindowDimensions();
+  const smScreens = width < 390;
+
   return (
     <Animated.ScrollView
       ref={scrollRef}
@@ -61,7 +64,10 @@ export default function ParallaxScrollView({
         ]}>
         {isTablet && headerImageIpad ? headerImageIpad : headerImage}
       </Animated.View>
-      <ThemedView style={styles.content}>{children}</ThemedView>
+      <ThemedView style={[
+        styles.content,
+        smScreens && { padding: 12 }
+      ]}>{children}</ThemedView>
     </Animated.ScrollView>
   );
 }
