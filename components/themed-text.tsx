@@ -48,7 +48,6 @@ export function ThemedText({
 const styles = StyleSheet.create({
   default: {
     fontSize: 16,
-    lineHeight: 24,
   },
   defaultBold: {
     fontFamily: 'Mulish-Bold',

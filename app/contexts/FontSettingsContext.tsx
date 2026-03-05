@@ -14,6 +14,11 @@ interface FontSettingsType {
   setHideTranslation: (hide: boolean) => void;
 }
 
+export const MAX_ARABIC_FONT_SIZE = 60;
+export const MAX_TRANSLATION_FONT_SIZE = 36;
+export const MIN_ARABIC_FONT_SIZE = 24;
+export const MIN_TRANSLATION_FONT_SIZE = 16;
+
 const FontSettingsContext = createContext<FontSettingsType>({
   showSettings: false,
   setShowSettings: (show: boolean) => {},
@@ -43,10 +48,12 @@ export const FontSettingsProvider = ({children}: {children: React.ReactNode}) =>
         if (savedFontSizes) {
           const { translationFontSize, arabicFontSize } = JSON.parse(savedFontSizes)
           if (translationFontSize) {
-            setTranslationFontSizeState(translationFontSize);
+            const clampedTranslation = Math.max(MIN_TRANSLATION_FONT_SIZE, Math.min(translationFontSize, MAX_TRANSLATION_FONT_SIZE));
+            setTranslationFontSizeState(clampedTranslation);
           }
           if (arabicFontSize) {
-            setArabicFontSizeState(arabicFontSize);
+            const clampedArabic = Math.max(MIN_ARABIC_FONT_SIZE, Math.min(arabicFontSize, MAX_ARABIC_FONT_SIZE));
+            setArabicFontSizeState(clampedArabic);
           }
         }
       } catch (e) {
@@ -58,9 +65,10 @@ export const FontSettingsProvider = ({children}: {children: React.ReactNode}) =>
 
   const setTranslationFontSize = async (fontSize: number) => {
     try {
-      setTranslationFontSizeState(fontSize);
+      const clampedSize = Math.max(MIN_TRANSLATION_FONT_SIZE, Math.min(fontSize, MAX_TRANSLATION_FONT_SIZE));
+      setTranslationFontSizeState(clampedSize);
       const savedFontSizes = {
-        translationFontSize: fontSize,
+        translationFontSize: clampedSize,
         arabicFontSize: arabicFontSize
       }
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(savedFontSizes));
@@ -71,10 +79,11 @@ export const FontSettingsProvider = ({children}: {children: React.ReactNode}) =>
 
   const setArabicFontSize = async (fontSize: number) => {
     try {
-      setArabicFontSizeState(fontSize);
+      const clampedSize = Math.max(MIN_ARABIC_FONT_SIZE, Math.min(fontSize, MAX_ARABIC_FONT_SIZE));
+      setArabicFontSizeState(clampedSize);
       const savedFontSizes = {
         translationFontSize: translationFontSize,
-        arabicFontSize: fontSize
+        arabicFontSize: clampedSize
       }
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(savedFontSizes));
     } catch (e) {
