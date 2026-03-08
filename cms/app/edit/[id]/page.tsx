@@ -12,7 +12,7 @@ const scheherazadeNew = Scheherazade_New({
 })
 
 const categoryOptions = [
-  "talbiyah", "ihram", "umrah", "haji", "masjidil haram", "tawaf", "niat", "zam-zam", "sa'i", "tahalul", "tawaf wadak", "madinah", "travel"
+  "arafah", "mina", "muzdalifah", "stoning", "talbiyah", "ihram", "umrah", "haji", "masjidil haram", "tawaf", "niat", "zam-zam", "sa'i", "tahalul", "tawaf wadak", "madinah", "travel"
 ];
 
 export default function EditPage() {

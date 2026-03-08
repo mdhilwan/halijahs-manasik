@@ -12,6 +12,12 @@
       },
       {
         "id": 2,
+        "arabic": "",
+        "translationEn": "After reciting the Talbiyah above 3 times, you may add the additional Selawat Ibrahimiyyah:",
+        "translationMy": "Selepas membaca Talbiyah di atas sebanyak 3 kali, boleh menambah dengan Selawat Ibrahimiyyah:"
+      },
+      {
+        "id": 1772938001400,
         "arabic": "اَللّٰهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ، وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ،\nكَمَا صَلَّيْتَ عَلَى سَيِّدِنَا إِبْرَاهِيمَ، وَعَلَى آلِ سَيِّدِنَا إِبْرَاهِيمَ،\nوَبَارِكْ عَلَى سَيِّدِنَا مُحَمَّدٍ، وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ،\nكَمَا بَارَكْتَ عَلَى سَيِّدِنَا إِبْرَاهِيمَ، وَعَلَى آلِ سَيِّدِنَا إِبْرَاهِيمَ،\nفِي الْعَالَمِينَ، إِنَّكَ حَمِيدٌ مَجِيدٌ. اَللّٰهُمَّ إِنِّي أَسْئَلُكَ\nرِضَاكَ وَالْجَنَّةَ وَأَعُوْذُبِكَ مِنْ سَخَطِكَ وَالنَّارِ",
         "translationEn": "O Allah, send blessings upon our master Muhammad and upon the family of our master Muhammad, as You sent blessings upon our master Ibrahim and upon the family of our master Ibrahim. And bless our master Muhammad and the family of our master Muhammad, as You blessed our master Ibrahim and the family of our master Ibrahim, among all the worlds. Indeed, You are the Most Praiseworthy, the Most Glorious. O Allah, I ask You for Your Pleasure and for Paradise, and I seek refuge in You from Your displeasure and from the Fire.",
         "translationMy": "Aku menyahut wahai Tuhanku aku menyahut panggilanMu (panggilan Nabi Ibrahim). Tiada sekutu bagiMu, aku menyahut akan panggilan itu. Segala pujian dan kebaikan bagiMu, dan pemerintahan juga bagiMu, Tiada sekutu bagiMu. Ya Allah, kurniakanlah tambahan rahmat kepada junjungan kami Nabi Muhammad dan kepada keluarga junjungan kami Nabi Muhammad. Sebagaimana Engkau telah mengurniakan rahmat ke atas junjungan kami Nabi Ibrahim dan kepada keluarga junjungan kami Nabi Ibrahim. Kurniakanlah keberkatan kepada junjungan kami Nabi Muhammad dan kepada keluarga junjungan kami Nabi Muhammad. Sebagaimana Engkau telah mengurniakan keberkatan kepada junjungan kami Nabi Ibrahim dan kepada keluarga junjungan kami Nabi Ibrahim. Di dalam seluruh alam, sesungguhnya Engkau adalah Maha Terpuji lagi Mulia. Ya Allah, aku memohon keredaanMu, dan syurga dan aku memohon dengan Engkau dijauhkan dari kemarahanMu dan api neraka"
@@ -567,14 +573,7 @@
       {
         "id": 1,
         "arabic": "",
-        "translationEn": [
-          "To drink with good intentions. This is in accordance with the meaning of the words of the Prophet s.a.w. \"The water of Zamzam is for whatever it is drunk for.\"",
-          "To face the Ka'abah",
-          "Mention the name of Allah",
-          "Drink with three sips (breaths)",
-          "Drink to your fill",
-          "Praise Allah",
-          "Dua"],
+        "translationEn": "To drink with good intentions. This is in accordance with the meaning of the words of the Prophet s.a.w. \"The water of Zamzam is for whatever it is drunk for.\",To face the Ka'abah,Mention the name of Allah,Drink with three sips (breaths),Drink to your fill,Praise Allah,Dua",
         "translationMy": [
           "Berniat dengan niat yang baik. Ini sesuai dengan maksud sabda baginda Rasulullah s.a.w. \"Air zamzam adalah untuk sesuatu yang kita minum kerananya\"",
           "Hadapkan muka ke Kaabah",
@@ -1431,9 +1430,9 @@
     "doa": [
       {
         "id": 1,
-        "arabic": "بِسْمِ اللَّهِ مَجْر۪ يهَا وَمُرْسَاهَا، إِنَّ رَبِّي لَغَفُورٌ رَحِيمٌ سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيم",
-        "translationEn": "In the name of Allah it will sail and cast anchor. Surely my Lord is All-Forgiving, Most Merciful. Glory be to Him who has subjected this to us and we would not have been able to subjugate it to ourselves and we would indeed return to Allah. And there is no power and no strength except with Allah, the Most High, the Most Great.",
-        "translationMy": "Dengan nama Allah ketika pelayarannya dan berlabuhnya. Sesungguhnya Tuhanku Maha Pengampun lagi Maha Penyayang. Maha Suci Allah yang memudahkan bagi kami kenderaan ini dan tiadalah kami berkuasa menggunakannya kalau tidak dengan kurniaan Allah. Sesungguhnya kami akan kembali kepada Tuhan kami. Tiada daya dan upaya melainkan dengan Allah yang Maha Besar."
+        "arabic": "أَسْتَغْفِرُ اللهَ, أَسْتَغْفِرُ اللهَ, أَسْتَغْفِرُ اللهَ.\nبِسْمِ اللَّهِ مَجْر۪ يهَا وَمُرْسَاهَا، إِنَّ رَبِّي لَغَفُورٌ رَحِيمٌ سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيم",
+        "translationEn": "I seek the forgiveness of Allah, I seek the forgiveness of Allah, I seek the forgiveness of Allah. In the name of Allah it will sail and cast anchor. Surely my Lord is All-Forgiving, Most Merciful. Glory be to Him who has subjected this to us and we would not have been able to subjugate it to ourselves and we would indeed return to Allah. And there is no power and no strength except with Allah, the Most High, the Most Great.",
+        "translationMy": "Aku memohon ampun kepada Allah, Aku memohon ampun kepada Allah, Aku memohon ampun kepada Allah. Dengan nama Allah ketika pelayarannya dan berlabuhnya. Sesungguhnya Tuhanku Maha Pengampun lagi Maha Penyayang. Maha Suci Allah yang memudahkan bagi kami kenderaan ini dan tiadalah kami berkuasa menggunakannya kalau tidak dengan kurniaan Allah. Sesungguhnya kami akan kembali kepada Tuhan kami. Tiada daya dan upaya melainkan dengan Allah yang Maha Besar."
       }
     ],
     "categoryKey": [
@@ -1508,5 +1507,850 @@
       "travel"
     ],
     "audio": "doa_ketika_nampak_kota_makkah.mp3"
+  },
+  {
+    "id": 1772935895303,
+    "titleEn": "At Muzdalifah ",
+    "doa": [
+      {
+        "id": 1772935914155,
+        "arabic": "",
+        "translationEn": "The pilgrim should do dzikrs (talbiyyah, ‘Eid Takbeers) and doa when they enter al Muzdalifah:",
+        "translationMy": "Hendaklah jemaah Haji berzikir (talbiyyah, takbir Hari Raya) dan berdoa pada masa apabila memasuki kawasan al Muzdalifah:"
+      },
+      {
+        "id": 1772935965558,
+        "arabic": "اَللَّهُمَّ إِنَّكَ قُلْتَ وَ قَوْلُكَ الْحَـقُّ، \"فَإِذَا أَفَضْتُمْ مِنْ عَرَفَاتٍ، فَاذْكُرُوا اللهَ عِنْدَ الْمَشْعَرِ الْحَرَامِ، وَ اذْكُرُوهُ كَمَا هَدَاكُمْ\". اَللَّهُمَّ وَ كَمَا أَوْقَفْتَنَا فِيهِ وَ أَرَيْتَنَا إِيَّاهُ، فَوَفِّقْنَا لِذِكْرِكَ وَ شُكْرِكَ كَمَا هَدَيْتَنَا، وَ اغْفِرْ لَنَا وَ ارْحَمْنَا كَمَا وَعَدْتَنَا، اَللَّهُمَّ لَكَ الْحَمْدُ كُلُّهُ، وَ لَكَ الشُّكْرُ كُلُّهُ، وَ لَكَ الْجَلاَلُ كُلُّهُ، وَ لَكَ الْخَلْقُ كُلُّهُ، وَ لَكَ اْلأَمْرُ كُلُّهُ، اَللَّهُمَّ إِنَّا نَسْأَلُكَ أَنْ تَغْفِرَ لَنَا مَا سَلَفَ مِنْ ذُنُوبِنَا، وَ أَنْ تَعْصِمَنَا فِيمَا بَقِيَ مِنْ أَعْمَارِنَا، وَ أَنْ تَرْزُقَنَا أَعْمَالاً صَالِحَةً تَرْضَى بِـهَا عَنَّا، فَإِنَّ الْخَيْرَ كُلَّهُ بِيَدِكَ، وَ أَنْتَ ذُو الْفَضْلِ الْعَظِيمِ، وَ أَنْتَ بِنَا رَؤُوفٌ رَحِيمٌ. رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَ فِي اْلآخِرَةِ حَسَنَةً وَ قِنَا عَذَابَ النَّارِ",
+        "translationEn": "O Allah, you have said, and your Word is the truth, “…And when you surge downward in multitudes from ‘Arafah (to Muzdalifah), remember Allah at Masy’aril Haraam and remember Him (do dzikrs) as He has directed you.” O Allah, as You have brought us to stand here and showed it to us, assist us in Your remembrance, and Your thanks as You have guided us, and forgive us, and bestow Your mercy upon us as You have promised. O Allah, to You belong all praise, to You belong all thanks, to You belong all glory, to You belong all of creation and to You belong all affairs. O Allah, we ask that You forgive all our past sins, protect us from sin in the remaining days of our lives, bestow upon us good deeds by which You would be pleased with us. All goodness is in Your possession, and You are the Possessor of immense bounties and You are Most Kind and Merciful to us. Our Lord, give us goodness in this world and goodness in the hereafter and protect us from the torment of hell.",
+        "translationMy": "Ya Allah, Engkau telah berfirman, dan firmanMu adalah benar, “…Dan apabila kamu bergerak turun beramai-ramai dari Arafah (ke Muzdalifah), ingatlah Allah di Masy’aril Haram dan berzikirlah kepadaNya seperti yang telah Dia arahkan kepada kamu.” Ya Allah, sebagaimana Engkau telah membawa kami untuk wukuf di sini dan menunjukkannya kepada kami, bantu kami dalam mengingatiMu, dan bersyukur kepadaMu seperti hidayat yang telah Engkau beri kepada kami, dan ampunilah kami, serta curahkan rahmatMu kepada kami seperti yang telah Engkau janjikan. Ya Allah, hanya bagiMu segala pujian, hanya bagiMu segala kesyukuran, hanya bagi Engkau segala kemuliaan, hanya kepunyaan Engkau segala ciptaan dan hanya kepada Engkau kembali segala urusan. Ya Allah, kami memohon agar Engkau mengampuni segala dosa kami yang lalu, lindungilah kami dari dosa-dosa di sisa hidup kami, kurniakanlah kami amal soleh yang Engkau redhai. Segala kebaikan adalah milikMu, dan Engkau Pemilik nikmat yang amat besar dan Engkau Maha Penyayang serta Maha Mengasihani kami. Ya Tuhan kami, kurniakanlah kami kebaikan di dunia dan kebaikan di akhirat dan lindungilah kami dari azab neraka."
+      }
+    ],
+    "titleMy": "Di Muzdalifah"
+  },
+  {
+    "id": 1772936087340,
+    "titleEn": "After Stoning",
+    "doa": [
+      {
+        "id": 1772936106831,
+        "arabic": "",
+        "translationEn": "After stoning the Jamrat ul ‘Aqabah on 10 Dzulhijjah and the Jamrat ul Uulaa and Jamrat ul Wustha on 11,12 and/or 13 Dzulhijjah, the pilgrim should move aside to an empty space to supplicate to Allah as did the Prophet (s.a.w.). He can do so by saying: ",
+        "translationMy": "Selepas melontar Jamrat al-‘Aqabah pada 10 Dzulhijjah dan Jamrat al-Ulaa serta Jamrat al-Wustha pada 11, 12 dan/atau 13 Dzulhijjah, jemaah haji hendaklah bergerak ke tepi ke ruang kosong untuk berdoa kepada Allah seperti yang dilakukan oleh Nabi (s.a.w.). Dia boleh berdoa dengan mengatakan:"
+      },
+      {
+        "id": 1772936165917,
+        "arabic": "اَلْحَمْدُ لِلَّهِ كَثِيراً طَيِّباً مُبَارَكاً فِيهِ. اَللَّهُمَّ لاَ أُحْصِي ثَنَاءً عَلَيْكَ، أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ. اَللَّهُمَّ إِلَيْكَ أَفَضْتُ، وَ مِنْ عَذَابِكَ أَشْفَقْتُ، وَ إِلَيْكَ رَغِبْتُ، وَ مِنْكَ رَهِبْتُ، فَاقْبَلْ نُسُكِي، وَ أَعْظِمْ أَجْرِي، وَ ارْحَمْ تَضَرُّعِي، وَ اقْبَلْ تَوْبَتِي، وَ أَقِلْ عَثْرَتِي، وَ اسْتَجِبْ دَعْوَتِي، وَ أَعْطِنِي سُؤْلِي      ",
+        "translationEn": "Plentiful, pleasant and blessed praises belong to Allah. O Allah, I cannot enumerate praise upon You. You are as You praise Yourself. O Allah, I have come forth to You fearing Your punishment and I have come seeking from You, holding You in awe and so accept my rites of pilgrimage and make my reward great and bless my submission to You and accept my repentance and bear the burden of my faults and answer my prayers and fulfil my needs. ",
+        "translationMy": "Segala pujian yang tidak terhingga lagi terbaik dan diberkati adalah milik Allah. Ya Allah, aku tidak mampu menghitung pujian kepadaMu. Engkau adalah seperti yang Engkau memuji diriMu sendiri. Ya Allah, aku datang kepadaMu dengan rasa takut akan azabMu dan aku datang memohon dariMu, dengan rasa kagum kepadaMu, maka terimalah amalan hajiku dan jadikanlah pahalaku besar, berkatilah penyerahanku kepadaMu, terimalah taubatku, pikullah beban kesalahanku, makbulkan doaku dan penuhi segala keperluanku."
+      },
+      {
+        "id": 1772936225699,
+        "arabic": "اَللَّهُمَّ رَبَّنَا تَقَبَّلْ مِنَّا وَ عَافِنَا وَ اعْفُ عَنَّا. اَللَّهُمَّ تَوَفَّنَا مُسْلِمِينَ، وَ أَحْيِنَا مُسْلِمِينَ، وَ أَلْحِقْنَا بِالصَّالِحِينَ، غَيْرَ خَزَايَا وَ لاَ مَفْتُونِينَ",
+        "translationEn": "O Allah, Our Lord, accept from us and give us good health and forgive us. O Allah, take our souls as believers and keep us alive as believers and join us with the pious without being subjected to disgrace and trial.",
+        "translationMy": "Ya Allah, Tuhan kami, terimalah amalan kami dan berikanlah kami kesihatan yang baik serta ampunilah kami. Ya Allah, cabutlah nyawa kami dalam keadaan beriman dan hidupkanlah kami dalam keadaan beriman dan masukkanlah kami dalam golongan orang-orang yang soleh tanpa tertimpa kehinaan dan ujian."
+      },
+      {
+        "id": 1772936253513,
+        "arabic": "اَللَّهُمَّ رَبَّنَا تَقَبَّلْ مِنَّا وَ لاَ تَجْعَلْنَا مِنَ الْمَحْرُومِينَ، وَ أَدْخِلْنَا فِي عِبَادِكَ الصَّالِحِينَ،\n يَا أَرْحَمَ الرَّاحِمِينَ\n",
+        "translationEn": "O Allah, Our Lord, accept from us and do not make us from the deprived ones and admit us into the company of Your pious servants, O Most Merciful. ",
+        "translationMy": "Ya Allah, Tuhan kami, terimalah amalan kami dan janganlah jadikan kami dari kalangan orang yang terhalang dari rahmatMu dan masukkanlah kami ke dalam golongan hamba-hambaMu yang soleh, Wahai Tuhan yang Maha Penyayang."
+      },
+      {
+        "id": 1772936285880,
+        "arabic": "اَللَّهُمَّ إِنِّي أَوْدَعْتُ هَذَا الْمَحَلَّ الشَّرِيفَ، مِنْ يَوْمِنَا هَذَا إِلَى يَوْمِ الْقِيَامَةِ، خَالِصاً مُخْلِصاً، شَهَادَةَ أَنْ لاَ إِلَهَ إِلاَّ اللهُ، وَ أَنَّ مُحَمَّداً عَبْدُهُ وَ رَسُولُهُ، وَ صَلَّى اللهُ عَلَى نَبِيِّنَا مُحَمَّدٍ وَ آلِهِ وَ صَحْبِهِ وَ سَلَّمَ    ",
+        "translationEn": "O Allah, I have deposited in this noble place from this day till the Day of Resurrection, purely and sincerely the testimony that there is no god besides Allah and that Muhammad is His servant and Messenger and blessings and peace from Allah be upon our Prophet Muhammad and his family and companions.",
+        "translationMy": "Ya Allah, aku telah meletakkan dalam jagaanMu di tempat yang mulia ini dari hari ini hingga Hari Kiamat, dengan tulus dan ikhlas, kesaksian bahawa tiada Tuhan selain Allah dan bahawa Muhammad adalah hamba dan RasulNya, serta salam dan kesejahteraan dari Allah kepada Nabi kami Muhammad, keluarga dan sahabat-sahabatnya."
+      },
+      {
+        "id": 1772936318835,
+        "arabic": "اللَّهُمَّ اجْعَلْهُ حَجًّا مَبْرُورًا وَ ذَنْبًا مَغْفُورًا وَ سَعْيًا مَشْكُورًا وَ عَمَلًا صَالِحًا مَقْبُولًا، وَ تِجَارَةً لَنْ تَبُورَ",
+        "translationEn": "O Allah. O my Lord, grant me an accepted Hajj, forgiven sins, appreciated efforts, accepted righteous deeds, and a trade that will never perish.",
+        "translationMy": "Ya Allah. Ya Tuhanku, kurniakanlah haji yang mabrur, dosa yang diampun, usaha yang dipuji, amalan soleh yang diterima dan perniagaan yang tidak rugi."
+      }
+    ],
+    "titleMy": "Selepas Melontar"
+  },
+  {
+    "id": 1772936377891,
+    "titleEn": "Upon Entering Mina",
+    "doa": [
+      {
+        "id": 1772936388709,
+        "arabic": "اللَّهُمَّ هَذِهِ مِنًى فَامْنُنْ عَلَيَّ بِمَا مَنَنْتَ بِهِ عَلَى أَوْلِيَائِكَ وَأَهْلِ طَاعَتِكَ سُبْحَانَ الَّذِي فِي السَّمَاءِ عَرْشُهُ سُبْحَانَ الَّذِي فِي الْأَرْضِ سَطْوَتُهُ سُبْحَانَ الَّذِي فِي الْبَحْرِ سَبِيلُهُ سُبْحَانَ الَّذِي فِي النَّارِ سُلْطَانُهُ سُبْحَانَ الَّذِي فِي الْجَنَّةِ رَحْمَتُهُ، سُبْحَانَ الَّذِي رَفَعَ السَّمَاءَ وَوَضَعَ الْأَرْضَ بِقُدْرَتِهِ سُبْحَانَ الَّذِي لَا مَنْجَا وَلَا مَلْجَأَ مِنْهُ إِلَّا إِلَيْهِ",
+        "translationEn": "O Allah, this is Mina. So grant me the blessings that You have granted to Your beloved servants and those devoted in obedience to You. Glory be to the One whose Throne is in the heavens. Glory be to the One whose authority is in the earth. Glory be to the One who charts the paths through the seas. Glory be to the One whose authority is over the Fire. Glory be to the One whose mercy fills Paradise. Glory be to the One who raised the heavens and set the earth in place by His power. Glory be to the One from whom there is no refuge nor shelter except with Him.",
+        "translationMy": "Ya Allah, aku memohon dengan berkat Mina ini, Engkau anugerahkan daku dengan apa yang telah Engkau anugerahkan kepada wali-wali Engkau dan hamba-hamba Engkau yang taat kepada Engkau, Maha Suci Allah yang ArasyNya terletak di langit, Maha Suci Allah yang memperlihatkan kekuatanNya di bumi, Maha Suci Allah yang menjalankan lautan, Maha Suci Allah yang melihatkan kekuasaan dan pemerintahan di api neraka, Maha Suci Allah yang melihatkan rahmatNya di dalam syurga, Maha Suci Allah yang telah mengangkat tujuh petala langit dan menetapkan tujuh petala bumi dengan kudratNya, Maha Suci Allah yang tidak ada tempat untuk meminta pertolongan melainkan kepadaNya semata-mata."
+      }
+    ],
+    "titleMy": "Ketika Memasuki Mina"
+  },
+  {
+    "id": 1772936447336,
+    "titleEn": "Dzikrs On The Days of Tasyrik",
+    "doa": [
+      {
+        "id": 1772936464187,
+        "arabic": "سُبْحَانَ اللَّهِ، وَ الْحَمْدُ لِلَّهِ، وَ لاَ إِلَهَ إِلاَّ اللَّهُ، وَ اللَّهُ أَكْبَرُ (100x)",
+        "translationEn": "I declare the absolute perfection of Allah, and all praise is for Allah alone, and there is no god except Allah, and Allah is the Greatest.",
+        "translationMy": "Maha sempurna Allah, segala puji hanya bagi Allah, tiada tuhan melainkan Allah, dan Allah Maha Besar."
+      },
+      {
+        "id": 1772936510832,
+        "arabic": "سُبْحَانَ اللَّهِ وَ بِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ، أَسْتَغْفِرُ اللهَ (100x)",
+        "translationEn": "I declare the absolute perfection of Allah and I glorify Him with His praise. I declare the absolute perfection of Allah, the Most Great. I seek Allah’s forgiveness.",
+        "translationMy": "Maha sempurna Allah dan aku bertasbih dengan memujiNya, Maha Suci Allah Yang Maha Agung. Aku memohon keampunan daripada Allah."
+      },
+      {
+        "id": 1772936510994,
+        "arabic": "وَ لاَ حَوْلَ وَ لاَ قُوَّةَ إِلاَّ بِاللَّهِ الْعَلِيِّ الْعَظِيمِ \n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772936895102,
+        "arabic": "(100x)",
+        "translationEn": "There is no power and no strength except with Allah, the Most High, the Most Great.",
+        "translationMy": "Segala kuasa, keupayaan, dan kekuatan hanyalah datang daripada Allah, yang Maha Tinggi dan Maha Agung."
+      },
+      {
+        "id": 1772936920140,
+        "arabic": "لاَ إِلَـهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَ لَهُ الْحَمْدُ، يُحْيِي وَ يُمِيتُ، وَ هُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772936952358,
+        "arabic": "(100x)",
+        "translationEn": "There is no god but Allah, alone without partner. To Him belongs the dominion and to Him belongs all praise. He gives life and causes death, and He has power over all things.",
+        "translationMy": "Tiada tuhan melainkan Allah, Yang Maha Esa, tiada sekutu bagiNya. BagiNya kerajaan dan bagiNya segala pujian. Dia menghidupkan dan mematikan, dan Dia Maha Berkuasa atas segala sesuatu."
+      },
+      {
+        "id": 1772936998197,
+        "arabic": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ (100x)",
+        "translationEn": "In the name of Allah, the Most Gracious, the Most Merciful.",
+        "translationMy": "Dengan nama Allah, Yang Maha Pemurah, lagi Maha Penyayang.\n\n"
+      },
+      {
+        "id": 1772936998542,
+        "arabic": "اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِيْنَ\n(100x)",
+        "translationEn": "All praise is due to Allah alone, Lord of all the worlds.",
+        "translationMy": "Segala puji hanya bagi Allah, Tuhan sekalian alam."
+      },
+      {
+        "id": 1772936998750,
+        "arabic": "اَللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَ آلِهِ وَ سَلِّمْ ",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772936999361,
+        "arabic": "(100x)",
+        "translationEn": "O Allah, send blessings and peace upon our master Muhammad and his family.",
+        "translationMy": "Ya Allah, limpahkan selawat dan salam ke atas penghulu kami Nabi Muhammad serta keluarganya."
+      },
+      {
+        "id": 1772936999584,
+        "arabic": "لاَ إِلَهَ إِلاَّ اللَّهُ، مُحَمَّدٌ رَسُوْلُ اللَّهُ, اَلصَّادِقُ الْوَعْدِ الْأَمِينُ (100x)",
+        "translationEn": "There is no god but Allah, Muhammad is the Messenger of Allah, the truthful in promise and the trustworthy.",
+        "translationMy": "Tiada Tuhan melainkan Allah, Muhammad ialah Rasul Allah, yang benar dalam janji dan yang amanah."
+      },
+      {
+        "id": 1772936999805,
+        "arabic": "سُبْحَانَ اللَّهِ وَ بِحَمْدِهِ \n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772937242136,
+        "arabic": "(100x)",
+        "translationEn": "I declare the absolute perfection of Allah and I glorify Him with His praise. ",
+        "translationMy": "Maha sempurna Allah dan aku bertasbih dengan memujiNya."
+      },
+      {
+        "id": 1772937242220,
+        "arabic": "أَسْتَغْفِرُ اللَّهَ الْعَظِيْمَ، وَ أَسْأَلُهُ التَّوْبَةَ ",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772937242574,
+        "arabic": "(100x)",
+        "translationEn": "I seek forgiveness from Allah the Almighty, and I seek repentance.",
+        "translationMy": "Aku mohon ampun kepada Allah Yang Maha Agung dan memohon taubat kepadaNya."
+      },
+      {
+        "id": 1772937242743,
+        "arabic": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ فِعْلَ الْخَيْرَاتِ، وَ تَرْكَ الْمُنْكَرَاتِ وَ حُبَّ الْمَسَاكِيْنِ، وَ أَنْ تَغْفِرَ لِيْ وَ تَرْحَمَنِيْ \n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772937242911,
+        "arabic": "(100x)",
+        "translationEn": "O Allah, I ask You to enable me to do good deeds, avoid evil deeds, love the poor, and that You forgive me and have mercy on me.",
+        "translationMy": "Ya Allah, aku memohon kepadaMu agar aku dapat beramal soleh, meninggalkan kemungkaran, cinta kepada orang miskin, dan agar Engkau mengampuniku serta merahmatiku."
+      },
+      {
+        "id": 1772937243079,
+        "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ. اَللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَ لَمْ يُوْلَدْ. وَ لَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ\n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772937243264,
+        "arabic": "(100x)",
+        "translationEn": "Say: He is Allah, the One and Only. Allah, Allah upon Whom all depend on and turn to in time of need. Allah, the eternally Besought of all! He begets not, and neither is He begotten, And there is none comparable to Him.",
+        "translationMy": "Katakanlah: Dialah Allah Yang Maha Esa. Allah tempat bergantung segala sesuatu.\nDia tidak beranak dan tidak diperanakkan. Dan tidak ada sesuatu yang setara denganNya.\n"
+      },
+      {
+        "id": 1772937426702,
+        "arabic": "حَسْبُنَا اللَّهُ وَ نِعْمَ الْوَكِيْلُ \n(100x)",
+        "translationEn": "Allah is sufficient for us, and He is the best disposer of affairs.",
+        "translationMy": "Cukuplah Allah bagi kami, dan Dia sebaik-baik pengurus urusan. "
+      },
+      {
+        "id": 1772937427255,
+        "arabic": "اَللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدِنِ النَّبِيِّ اْلأُمِّيِّ وَ آلِهِ وَ صَحْبِهِ وَ سَلِّمْ\n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772937427471,
+        "arabic": "(3x)",
+        "translationEn": "O Allah, send blessings and peace upon our master Muhammad, the unlettered Prophet, and upon his family and companions.",
+        "translationMy": "Ya Allah, limpahkanlah selawat dan salam ke atas penghulu kami Nabi Muhammad, Nabi yang ummi, serta ke atas keluarga dan sahabat-sahabatnya."
+      }
+    ],
+    "titleMy": "Zikir-Zikir Pada Hari-Hari Tasyrik"
+  },
+  {
+    "id": 1772938290130,
+    "titleEn": "Intentions For Solat Jama' and Qasar Taqdim",
+    "doa": [
+      {
+        "id": 1772938311632,
+        "arabic": "",
+        "translationEn": "These intentions are for prayers combined (jama') and shortened (qasar) and brought forward (done during Zuhur and Maghrib time):",
+        "translationMy": "Niat-niat ini adalah bagi solat-solat yang dihimpunkan (jamak), dipendekkan (qasar) dan didahulukan (dikerjakan pada waktu Zuhur dan Maghrib):"
+      },
+      {
+        "id": 1772938455482,
+        "arabic": "Solat Zuhur",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772938497286,
+        "arabic": "أُصَلِّي فَرْضَ الظُّهْرِ رَكْعَتَيْنِ قَصْرًا مَجْمُوْعًا إِلَيْهِ الْعَصْرُ أَدَاءً لِلَّهِ تَعَالَىٰ ",
+        "translationEn": "I intend to perform the obligatory Zuhur prayer, two rak‘ahs shortened (qasar), combined with Asar, for the sake of Allah Most High.",
+        "translationMy": "Sahaja aku solat fardu Zuhur dua rakaat qasar dihimpunkan kepadanya Asar tunai kerana Allah Taala."
+      },
+      {
+        "id": 1772938530633,
+        "arabic": "Solat Asar",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772938624024,
+        "arabic": "أُصَلِّي فَرْضَ الْعَصْرِ رَكْعَتَيْنِ قَصْرًا لِلَّهِ تَعَالَىٰ ",
+        "translationEn": "I intend to perform the obligatory Asar prayer, two rak‘ahs shortened (qasar), for the sake of Allah Most High.",
+        "translationMy": "Sahaja aku solat fardu Asar dua rakaat qasar kerana Allah Taala."
+      },
+      {
+        "id": 1772938624176,
+        "arabic": "Solat Maghrib",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772938624336,
+        "arabic": "أُصَلِّي فَرْضَ الْمَغْرِبِ ثَلَاثَ رَكَعَاتٍ مَجْمُوْعًا إِلَيْهِ الْعِشَاءُ أَدَاءً لِلَّهِ تَعَالَىٰ ",
+        "translationEn": "I intend to perform the obligatory Maghrib prayer of three rak‘ahs, combined with Ishak, for the sake of Allah Most High.",
+        "translationMy": "Sahaja aku solat fardu Maghrib tiga rakaat dihimpunkan kepadanya Isyak tunai kerana Allah Taala."
+      },
+      {
+        "id": 1772938827118,
+        "arabic": "Solat Ishak",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772938827303,
+        "arabic": "أُصَلِّي فَرْضَ الْعِشَاءِ رَكْعَتَيْنِ قَصْرًا لِلَّهِ تَعَالَىٰ",
+        "translationEn": "I intend to perform the obligatory Ishak prayer of two rak‘ahs shortened (qasar), for the sake of Allah Most High.”",
+        "translationMy": "Sahaja aku solat fardu isyak dua rakaat qasar kerana Allah Taala."
+      }
+    ],
+    "titleMy": "Niat-Niat Solat Jamak Dan Qasar Takhir",
+    "categoryKey": [
+      "travel"
+    ]
+  },
+  {
+    "id": 1772939063166,
+    "titleEn": " Intentions For Solat Jama' and Qasar Takhir",
+    "doa": [
+      {
+        "id": 1772939126943,
+        "arabic": "",
+        "translationEn": "These intentions are for prayers combined (jama') and shortened (qasar) and delayed (done during Asar and Ishak time):",
+        "translationMy": "Niat-niat ini adalah untuk solat yang dihimpunkan (jamak), dipendekkan (qasar) dan dilewatkan (dikerjakan pada waktu Asar dan Isyak):"
+      },
+      {
+        "id": 1772939257095,
+        "arabic": "Solat Zuhur",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772939422039,
+        "arabic": "أُصَلِّي فَرْضَ الظُّهْرِ رَكْعَتَيْنِ قَصْرًا مَجْمُوْعًا إِلَى الْعَصْرِ لِلَّهِ تَعَالَىٰ",
+        "translationEn": "I intend to perform the obligatory Zuhur prayer of two rak‘ahs in shortened form (qasar), combined with Asar, for the sake of Allah Most High.",
+        "translationMy": "Sahaja aku solat fardu Zuhur dua rakaat qasar dihimpunkan kepada Asar kerana Allah Taala."
+      },
+      {
+        "id": 1772939422176,
+        "arabic": "Solat Asar",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772939422310,
+        "arabic": "أُصَلِّي فَرْضَ الْعَصْرِ رَكْعَتَيْنِ قَصْرًا أَدَاءً لِلَّهِ تَعَالَىٰ",
+        "translationEn": "I intend to perform the obligatory Asar prayer of two rak‘ahs in shortened form (qasar), for the sake of Allah Most High.",
+        "translationMy": "Sahaja aku solat fardu Asar dua rakaat qasar tunai kerana Allah Taala."
+      },
+      {
+        "id": 1772939422471,
+        "arabic": "Solat Maghrib",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772939422640,
+        "arabic": "أُصَلِّي فَرْضَ الْمَغْرِبِ ثَلَاثَ رَكَعَاتٍ مَجْمُوْعًا إِلَى الْعِشَاءِ لِلَّهِ تَعَالَىٰ",
+        "translationEn": "I intend to perform the obligatory Maghrib prayer of three rak‘ahs, combined with Ishak, for the sake of Allah Most High.",
+        "translationMy": "Sahaja aku solat fardu Maghrib tiga rakaat dihimpunkan kepada Isyak kerana Allah Taala."
+      },
+      {
+        "id": 1772979310292,
+        "arabic": "Solat Ishak",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772979310685,
+        "arabic": "أُصَلِّي فَرْضَ الْعِشَاءِ رَكْعَتَيْنِ قَصْرًا أَدَاءً لِلَّهِ تَعَالَىٰ",
+        "translationEn": "I intend to perform the obligatory Ishak prayer of two rak‘ahs in shortened form (qasar), for the sake of Allah Most High.",
+        "translationMy": "Sahaja aku solat fardu Isyak dua rakaat qasar tunai kerana Allah Taala."
+      }
+    ],
+    "titleMy": "Niat-Niat Solat Jamak Dan Qasar Takhir",
+    "categoryKey": [
+      "travel"
+    ]
+  },
+  {
+    "id": 1772979712967,
+    "titleEn": "When Proceeding to Arafah",
+    "doa": [
+      {
+        "id": 1772979929536,
+        "arabic": "اَللَّهُمَّ إِلَيْكَ تَوَجَّهْتُ وَ وَجْهَكَ الْكَرِيمَ أَرَدْتُ فَاجْعَلْ ذَنْبِي مَغْفُورًا وَ حَجِّي مَبْرُورًا، اِرْحَمْنِي وَ لَا تُخَيِّبْنِي إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَ النِّعْمَةَ لَكَ وَ الْمُلْكَ، لَا شَرِيكَ لَكَ. اللَّهُمَّ صَلِّ عَلَى نَبِيِّنَا مُحَمَّدٍ وَ عَلَى آلِهِ وَ صَحْبِهِ وَ أُمَّتِهِ وَ سَلَّمْ",
+        "translationEn": "O Allah, to You I betake myself, seeking Your noble countenance. Forgive my sins, make my hajj a righteous one (acceptable to You), have mercy upon me and do not disappoint me. “Ever at Your Service, O Allah, ever at Your service. Ever at Your service, You have no partner, ever at Your service. Indeed all praise, blessings, and dominion are Yours. You have no partner” You indeed have power over all things. O Allah send Your salutations and blessings upon our Prophet Muhammad, his companions and community.",
+        "translationMy": "Ya Allah, kepadaMu aku berpaling, dan pada wajahMu yang mulia aku kembali. Maka jadikan dosaku dosa yang diampunkan, dan hajiku haji yang mabrur. Rahmatilah aku dan jangan Engkau hampakan aku, sesungguhnya Engkau berkuasa di atas setiap sesuatu.\nAku menyahut panggilanMu ya Allah, aku menyahut panggilanMu. Aku menyahut panggilanMu, tiada sekutu bagiMu, aku menyahut panggilanMu. Sesungguhnya segala pujian, nikmat dan kerajaan adalah milikMu, tiada sekutu bagiMu.\n\nYa Allah, limpahkanlah selawat dan kesejahteraan ke atas Nabi kami Muhammad, serta ke atas keluarga, para sahabat dan umat baginda."
+      }
+    ],
+    "titleMy": "Dalam Perjalanan Ke Arafah"
+  },
+  {
+    "id": 1772980658876,
+    "titleEn": "Activities on Arafah Day",
+    "doa": [
+      {
+        "id": 1772980673438,
+        "arabic": "",
+        "translationEn": "1) Perform the Dhuha prayer.",
+        "translationMy": "(1) Lakukan solat Dhuha."
+      },
+      {
+        "id": 1772980693523,
+        "arabic": "",
+        "translationEn": "(2) Recite surah al-Ikhlaas 1000 times if possible. ",
+        "translationMy": "(2) Baca surah al-Ikhlaas, kalau dapat sehingga seribu kali. "
+      },
+      {
+        "id": 1772980734647,
+        "arabic": "",
+        "translationEn": "(3) Recite al Istigfaar al Jaami’ by Imam al Haddad. ",
+        "translationMy": "(3) Baca al istigfar al Jami’ susunan imam al Haddad. "
+      },
+      {
+        "id": 1772980776455,
+        "arabic": "",
+        "translationEn": "(4) Recite of surah al-Hasyr (surah no.59).",
+        "translationMy": "(4) Baca surah al-Hasyr (surah no.59)."
+      },
+      {
+        "id": 1772980836123,
+        "arabic": "",
+        "translationEn": "(5) Listen to the ‘Arafah sermon followed by performance of Zuhur and Asar prayers combined and brought forward [for those in Arafah].",
+        "translationMy": "(5) Mendengar Khutbah ‘Arafah dan melakukan solat Zuhur dan Asar secara jamak taqdim [untuk yang berada di Arafah]."
+      },
+      {
+        "id": 1772980935067,
+        "arabic": "",
+        "translationEn": "(6) Reading of dzikrs.",
+        "translationMy": "(6)Membaca zikir-zikir. "
+      },
+      {
+        "id": 1772980990847,
+        "arabic": "",
+        "translationEn": "(7) Supplications in congregation and individually. ",
+        "translationMy": "(7) Berdoa ramai-ramai dan bersendirian. "
+      }
+    ],
+    "titleMy": "Amalan-Alaman Hari Arafah"
+  },
+  {
+    "id": 1772981178600,
+    "titleEn": "Istigfaar al Jaami'",
+    "doa": [
+      {
+        "id": 1772981186687,
+        "arabic": "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ وَ صَلَّى اللهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَ عَلَى آلِهِ وَ صَحْبِهِ وَ سَلَّمَ",
+        "translationEn": "In the Name of Allah, the Most Compassionate, the Most Merciful. O Allah bestow blessings and salutations upon our Master Muhammad and upon his family and companions. ",
+        "translationMy": "\nDengan Nama Allah Yang Maha Pengasih Lagi Maha Penyayang. Ya Allah limpahkanlah selawat dan salam ke atas junjungan kami Muhammad dan kepada keluarga dan para sahabatnya.\n"
+      },
+      {
+        "id": 1772981188284,
+        "arabic": "(3x) أَسْتَغْفِرُ اللهَ   \n\n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772981188477,
+        "arabic": "وَ أَتُوبُ إِلَيْهِ مِمَّا يَكْرَهُ اللهُ قَوْلًا وَ فِعْلًا وَ خَاطِرًا وَ نَاظِرًا وَ بَاطِنًا وَ ظَاهِرًا ",
+        "translationEn": "I seek the forgiveness of Allah (3x) and repent to Him for every word, act, thought, sighting and every inward and outward action of mine which Allah dislikes.\n",
+        "translationMy": "Aku memohon ampun kepada Allah (3x) dan bertaubat kepadaNya atas setiap perkataan, perbuatan, pemikiran, penglihatan dan setiap perbuatanku yang zahir dan batin yang tidak disukai oleh Allah.\n"
+      },
+      {
+        "id": 1772981188653,
+        "arabic": "وَ أَسْتَغْفِرُ اللهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَ أَتُوبُ إِلَيْهِ",
+        "translationEn": "I seek the forgiveness of Allah, the Most Great besides Whom there is no god; the Ever Living, the Self Subsistent, and I repent to Him.",
+        "translationMy": "Aku memohon ampun kepada Allah Yang Maha Besar yang tiada Tuhan selain Dia; Yang Hidup, Yang Berdiri Sendiri, dan aku bertaubat kepadaNya."
+      },
+      {
+        "id": 1772981188846,
+        "arabic": "اللَّهُمَّ إِنِّي أَسْتَغْفِرُكَ لِمَا قَدَّمْتُ وَ مَا أَخَّرْتُ وَ مَا أَسْرَرْتُ وَ مَا أَعْلَنْتُ وَ مَا أَنْتَ أَعْلَمُ بِهِ مِنِّي أَنْتَ الْمُقَدِّمُ وَ أَنْتَ الْمُؤَخِّرُ وَ أَنْتَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+        "translationEn": "O Allah, I seek Your forgiveness for what I have done, for what I have yet to do, for what I have done in secret and what I have done openly, and for that about which You have more knowledge than I. You are the Advancer (One who puts people ahead) and the Retarder (puts people behind) and You have power over all things.",
+        "translationMy": "Ya Allah, sesungguhnya aku memohon ampun kepadaMu atas apa yang telah aku lakukan, atas apa yang belum aku kerjakan, atas apa yang aku lakukan secara sembunyi-sembunyi dan apa yang aku lakukan secara terang-terangan, dan atas apa yang Engkau lebih mengetahui tentangnya daripadaku. Engkaulah yang Yang Mendahulukan (manusia) dan Yang Mengundurkan dan Engkau Maha Kuasa atas segala sesuatu."
+      },
+      {
+        "id": 1772981189038,
+        "arabic": "سْتَغْفِرُ اللهَ ذَا الْجَلَالِ وَ الْإِكْرَامِ مِنْ جَمِيعِ الذُّنُوبِ وَ الْآثَامِ ، أَسْتَغْفِرُ اللهَ لِذُنُوبِي كُلِّهَا، سِرِّهَا وَ جَهْرِهَا وَ صَغِيرِهَا وَ كَبِيرِهَا وَ قَدِيمِهَا وَ جَدِيدِهَا وَ أَوَّلِهَا وَ آخِرِهَا وَ ظَاهِرِهَا وَ بَاطِنِهَا وَ أَتُوبُ إِلَيْهِ",
+        "translationEn": "I seek the forgiveness of Allah, the Possessor of Majesty and Honour, for all sins and wrongdoings. I seek the forgiveness of Allah for all my sins, those committed in private, those committed openly, the minor sins and the major sins, the old sins, and the recent sins, the first and the last of them, the outward and inward sins, and I repent to Him.",
+        "translationMy": "Aku memohon ampun kepada Allah Yang Memiliki Keagungan dan Kemuliaan, atas segala dosa dan kesalahan. Aku memohon ampun kepada Allah atas semua dosa ku yang dilakukan secara sembunyi, yang dilakukan secara terang-terangan, dosa-dosa kecil dan dosa-dosa besar, dosa-dosa lama, dan dosa-dosa yang baru, yang pertama dan yang terakhir, dosa zahir dan batin, dan aku bertaubat kepadaNya."
+      },
+      {
+        "id": 1772981189230,
+        "arabic": "اللَّهُمَّ إِنِّي أَسْتَغْفِرُكَ مِنْ كُلِّ ذَنْبٍ تُبْتُ إِلَيْكَ مِنْهُ ثُمَّ عُدْتُ فِيهِ",
+        "translationEn": "O Allah I seek Your forgiveness for every sin from which I repented and then committed it again.",
+        "translationMy": "Ya Allah, aku memohon ampun kepadaMu atas setiap dosa yang aku telah bertaubat darinya dan kemudian melakukannya lagi."
+      },
+      {
+        "id": 1772981189447,
+        "arabic": "وَ أَسْتَغْفِرُكَ لِمَا أَرَدْتُ بِهِ وَجْهَكَ الْكَرِيمَ وَ خَالَطَهُ مَا لَيْسَ لَكَ فِيهِ رِضًا",
+        "translationEn": "I seek Your forgiveness for any action which I performed initially seeking Your noble countenance (divine pleasure) and was adulterated by that which is displeasing to You (detracted from my sincerity).",
+        "translationMy": "Aku memohon ampun kepadaMu atas apa-apa perbuatan yang aku lakukan pada mulanya kerana mencari keredhaanMu dan kemudian telah dicemari oleh perkara-perkara yang tidak diredhaiMu (merosot dari keikhlasanku)."
+      },
+      {
+        "id": 1772981189648,
+        "arabic": "وَ أَسْتَغْفِرُكَ لِمَا وَعَدْتُكَ بِهِ مِنْ نَفْسِي ثُمَّ أَخْلَفْتُكَ فِيهِ",
+        "translationEn": "I seek Your forgiveness for anything that I have promised to do for Your sake and then broken my promise to You.",
+        "translationMy": "Aku memohon ampun kepadaMu atas apa-apa yang aku telah berjanji untuk melakukan keranaMu dan kemudian aku mengingkari janjiku kepadaMu."
+      },
+      {
+        "id": 1772981501052,
+        "arabic": "وَ أَسْتَغْفِرُكَ لِمَا دَعَانِي إِلَيْهِ الْهَوَى مِنْ قَبْلِ الرُّخَصِ مِمَّا اشْتَبَهَ عَلَيَّ وَ هُوَ عِنْدَكَ حَرَامٌ",
+        "translationEn": "I seek Your forgiveness for anything that my desires and passions have called me to do by taking dispensations in affairs which I was in doubt of, while they were in Your presence forbidden.",
+        "translationMy": "Aku memohon ampun kepadaMu atas apa-apa yang telah aku lakukan atas seruan hawa nafsu ku dengan mengambil kelonggaran dalam urusan-urusan yang tidak jelas hukumnya disisiku, sedangkan ia adalah haram disisiMu."
+      },
+      {
+        "id": 1772981993466,
+        "arabic": "وَ أَسْتَغْفِرُكَ يَا مَنْ لَا إِلَهَ إِلَّا أَنْتَ يَا عَالِمَ الْغَيْبِ وَ الشَّهَادَةِ مِنْ كُلِّ سَيِّئَةٍ عَمِلْتُهَا فِي بَيَاضِ النَّهَارِ وَ سَوَادِ اللَّيْلِ فِي مَلَإٍ وَ خَلَاءٍ وَ سِرٍّ وَ عَلَانِيَةٍ وَ أَنْتَ نَاظِرٌ إِلَيَّ إِذَا ارْتَكَبْتُهَا وَ أَتَيْتُ بِهَا مِنَ الْعِصْيَانِ فَأَتُوبُ إِلَيْكَ يَا حَلِيمُ يَا كَرِيمُ يَا رَحِيمُ",
+        "translationEn": "I seek Your forgiveness, O He there is no god but You, O Knower of the unseen and the seen, for every evil act that I have committed in broad daylight or in the darkness of the night, in the company of people or whilst alone, in secret and openly while You were gazing upon me when I embarked upon it and committed from disobedience and so I repent to You, O Forbearing One, O Most Generous, O Most Merciful.",
+        "translationMy": "Aku memohon ampun kepadaMu, wahai Yang tiada Tuhan selain Engkau, wahai yang mengetahui yang ghaib dan yang nyata, atas setiap kejahatan yang aku lakukan pada siang hari atau dalam kegelapan malam, dikhalayak manusia atau bersendirian, secara rahsia dan terang-terangan sedangkan Engkau memandang kepadaku ketika aku melakukannya dari kemaksiatan itu, maka aku bertaubat kepada-Mu, wahai Yang Maha Penyabar, wahai Yang Maha Pemurah, wahai Yang Maha Penyayang."
+      },
+      {
+        "id": 1772982034034,
+        "arabic": "وَ أَسْتَغْفِرُكَ مِنَ النِّعَمِ الَّتِي أَنْعَمْتَ بِهَا عَلَيَّ فَتَقَوَّيْتُ بِهَا عَلَى مَعْصِيَتِكَ",
+        "translationEn": "I seek Your forgiveness for the strength I derived from the blessings You have bestowed upon me which I used to disobey You.",
+        "translationMy": "Aku memohon ampun kepada-Mu atas kekuatan yang aku peroleh dari nikmat-Mu yang telah Engkau anugerahkan kepadaku yang dengannya aku telah memperolehi kekuatan untuk menderhaka kepada-Mu."
+      },
+      {
+        "id": 1772982067719,
+        "arabic": "وَ أَسْتَغْفِرُكَ مِنَ الذُّنُوبِ الَّتِي لَا يَعْرِفُهَا أَحَدٌ غَيْرُكَ وَ لَا يَطَّلِعُ عَلَيْهَا أَحَدٌ سِوَاكَ وَ لَا يَسَعُهَا إِلَّا حِلْمُكَ وَ لَا يُنْجِينِي مِنْهَا إِلَّا عَفْوُكَ",
+        "translationEn": "I seek Your forgiveness for sins which no one else knows but You and which only You can see, sins which only Your forbearance can encompass and from which only Your pardon can save me.",
+        "translationMy": "Aku memohon ampun kepadaMu atas dosa-dosa yang tidak diketahui oleh orang lain selain daripadaMu dan yang hanya Engkau yang dapat melihatnya, dosa-dosa yang hanya dapat ditanggung oleh kesabaranMu dan yang hanya ampunanMu dapat menyelamatkanku darinya."
+      },
+      {
+        "id": 1772982067903,
+        "arabic": "وَ أَسْتَغْفِرُكَ مِنْ كُلِّ يَمِينٍ سَلَفَتْ مِنِّي فَحَنِثْتُ فِيهَا وَ أَنَا عِنْدَكَ مُؤَاخَذٌ بِهَا",
+        "translationEn": "I seek Your forgiveness for every oath I have taken and then broken, for which I stand to be taken to account for.",
+        "translationMy": "Aku memohon ampun kepadaMu untuk setiap sumpah yang aku buat dan kemudian aku langgarnya, yang mana aku harus dipertanggungjawabkan di sisiMu."
+      },
+      {
+        "id": 1772982068095,
+        "arabic": "وَ أَسْتَغْفِرُكَ يَا مَنْ لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ فَاسْتَجَبْنَا لَهُ وَ نَجَّيْنَاهُ مِنَ الْغَمِّ وَ كَذَلِكَ نُنْجِي الْمُؤْمِنِينَ ، وَ زَكَرِيَّا إِذْ نَادَى رَبَّهُ رَبِّ لَا تَذَرْنِي فَرْدًا وَ أَنْتَ خَيْرُ الْوَارِثِينَ",
+        "translationEn": "I seek Your forgiveness, there is no god but You, transcendent are You, truly I am amongst the wrongdoers and so We responded to him (Yunus a.s.) and delivered him from distress; thus do We deliver those who have faith. And remember Zakariyyā (a.s.) when he cried to his Lord, “O my Lord! Leave me not without offspring, and You are the best of inheritors (to preserve Your religion).”",
+        "translationMy": "Aku memohon ampun kepadaMu, tiada Tuhan selain Engkau, Maha Suci Engkau, sesungguhnya aku termasuk orang-orang yang zalim, lalu Kami (Allah) perkenankan doanya (Yunus a.s.) dan Kami (Allah) selamatkan dia dari kesusahan; demikianlah Kami (Allah) selamatkan orang-orang yang beriman. Dan ingatlah Zakariyya (a.s.) ketika dia berseru kepada Tuhannya, “Wahai Tuhanku! Janganlah Engkau tinggalkan aku tanpa zuriat, dan Engkaulah sebaik-baik pewaris (untuk memelihara agamaMu).”"
+      },
+      {
+        "id": 1772982068280,
+        "arabic": "رَبِّ اغْفِرْ وَ ارْحَمْ وَ أَنْتَ خَيْرُ الرَّاحِمِينَ",
+        "translationEn": "My Lord! Forgive and have mercy, for You are the Best of those who bestow mercy.",
+        "translationMy": " Tuhanku! Ampunilah dan berilah rahmat, sesungguhnya Engkau adalah sebaik-baik pemberi rahmat."
+      },
+      {
+        "id": 1772982068464,
+        "arabic": "وَ أَسْتَغْفِرُكَ مِنْ كُلِّ فَرِيضَةٍ أَوْجَبْتَهَا عَلَيَّ فِي آنَاءِ اللَّيْلِ وَ النَّهَارِ فَتَرَكْتُهَا خَطَأً أَوْ عَمْدًا أَوْ نِسْيَانًا أَوْ جَهْلًا وَ أَنَا مُعَاقَبٌ بِهَا",
+        "translationEn": "I seek Your forgiveness for every obligation which You have made obligatory upon me to fulfil in the hours of the night and day which I have neglected mistakenly or intentionally or due to forgetfulness or ignorance, while I stand to be punished for it.",
+        "translationMy": "Aku memohon ampun kepadaMu atas setiap kewajipan yang Engkau wajibkan ke atasku pada waktu malam dan siang yang aku lalai secara salah atau sengaja atau kerana kealpaan atau kejahilan, sedangkan aku akan dihukum kerananya."
+      },
+      {
+        "id": 1772982068665,
+        "arabic": "وَ أَسْتَغْفِرُكَ مِنْ كُلِّ سُنَّةٍ مِنْ سُنَنِ سَيِّدِ الْمُرْسَلِينَ وَ خَاتِمِ النَّبِيِّينَ نَبِيِّكَ سَيِّدِنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ فَتَرَكْتُهَا غَفْلَةً أَوْ سَهْوًا أَوْ نِسْيَانًا أَوْ تَهَاوُنًا أَوْ جَهْلًا أَوْ قِلَّةَ مُبَالَاةٍ بِهَا",
+        "translationEn": "I seek Your forgiveness for every sunnah of the Master of the Messengers, the Seal of the Prophets, Your Prophet our Master Muhammad (s.a.w.) which I have neglected due to heedlessness, absent-mindedness, forgetfulness, laxity, ignorance, or a lack of concern for it.",
+        "translationMy": "Aku memohon ampun kepadaMu atas setiap sunnah Penghulu para Rasul, Penutup Nabi-Nabi, NabiMu, Penghulu kami Muhammad (s.a.w.) yang telah aku abaikan kerana kealpaan atau kelalaian atau kerana lupa atau ambil ringan atau kejahilan atau kekurangan prihatin terhadapnya."
+      },
+      {
+        "id": 1772982068849,
+        "arabic": "وَ أَسْتَغْفِرُكَ يَا مَنْ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ وَ أَنَّ مُحَمَّدًا عَبْدُكَ وَ رَسُولُكَ سُبْحَانَكَ يَا رَبَّ الْعَالَمِينَ لَكَ الْمُلْكُ وَ لَكَ الْحَمْدُ وَ أَنْتَ حَسْبُنَا وَ نِعْمَ الْوَكِيلُ وَ نِعْمَ الْمَوْلَى وَ نِعْمَ النَّصِيرُ وَ لَا حَوْلَ وَ لَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيمِ",
+        "translationEn": "I seek Your forgiveness, O Who there is no god but You alone, You have no partner, and Muhammad is Your slave and messenger. Transcendent are You, O Lord of all creation. To You belongs the dominion and all praise. You are sufficient for us, and the best disposer of our affairs and the best protector and the best helper. There is no strength nor might except in Allah, the Exalted, the Most Great.",
+        "translationMy": "Aku memohon ampun kepadaMu, wahai yang tiada Tuhan selain Engkau, tiada sekutu bagiMu, dan Muhammad adalah hamba dan utusanMu. Maha Suci Engkau, wahai Tuhan segala ciptaan. Segala kerajaan adalah milik Mu dan bagiMu segala pujian. Cukuplah Engkau bagi kami, dan Engkau adalah sebaik-baik pengurus urusan kami dan sebaik-baik pelindung dan sebaik-baik penolong. Tiada daya dan kekuatan melainkan dengan pertolongan Allah Yang Maha Tinggi lagi Maha Besar."
+      },
+      {
+        "id": 1772982069042,
+        "arabic": "يَا جَابِرَ كُلِّ كَسِيرٍ وَ يَا مُؤْنِسَ كُلِّ وَحِيدٍ وَ يَا صَاحِبَ كُلِّ غَرِيبٍ وَ يَا مُيَسِّرَ كُلِّ عَسِيرٍ وَ يَا مَنْ لَا يَحْتَاجُ إِلَى الْبَيَانِ وَ التَّفْسِيرِ وَ أَنْتَ عَلَى مَا تَشَاءُ قَدِيرٌ",
+        "translationEn": "O Comforter of every broken hearted one (Repairer of all things broken), the Companion of every lonely one, the companion of every stranger, the One who brings ease to every difficulty, the One who is not in need of clarification or explanation and You have the power to do what You will.",
+        "translationMy": "Wahai Penghibur bagi setiap orang yang patah hati (Pembaik segala yang patah), sahabat bagi setiap orang yang kesepian, teman bagi setiap orang asing, Yang memudahkan setiap kesulitan, Yang tidak memerlukan penjelasan atau keterangan dan Engkau mempunyai kuasa untuk melakukan apa yang Engkau kehendaki."
+      },
+      {
+        "id": 1772982069266,
+        "arabic": "صَلَّى اللهُ تَعَالَى عَلَى سَيِّدِنَا مُحَمَّدٍ بِعَدَدِ مَنْ صَلَّى عَلَيْهِ وَ بِعَدَدِ مَنْ لَّمْ يُصَلِّ عَلَيْهِ اللَّهُمَّ صَلِّ عَلَى رُوْحِ سَيِّدِنَا مُحَمَّدٍ فِي الْأَرْوَاحِ",
+        "translationEn": "O Allah, bestow blessings upon our Master Muhammad to the number of those who invoke blessings upon him, and to the number of those who do not. O Allah bestow prayers upon the spirit of our Master Muhammad among the souls.",
+        "translationMy": "Ya Allah, limpahkan selawat ke atas junjungan kami Muhammad sebanyak bilangan orang yang berselawat ke atasnya, dan bilangan orang yang tidak. Ya Allah limpahkanlah selawat ke atas roh junjungan kami Muhammad di kalangan roh."
+      },
+      {
+        "id": 1772982348924,
+        "arabic": "اللَّهُمَّ صَلِّ عَلَى تُرْبَةِ سَيِّدِنَا مُحَمَّدٍ فِي التُّرَبِ ، اللَّهُمَّ صَلِّ عَلَى قَبْرِ سَيِّدِنَا مُحَمَّدٍ فِي الْقُبُوْرِ اللَّهُمَّ صَلِّ عَلَى صُوْرَةِ سَيِّدِنَا مُحَمَّدٍ فِي الصُّوَرِ ، اللَّهُمَّ صَلِّ عَلَى اسْمِ سَيِّدِنَا مُحَمَّدٍ فِي الْأَسْمَاءِ ",
+        "translationEn": "O Allah, bestow blessings upon the tomb of our Master Muhammad among the tombs. O Allah, bestow blessings upon the grave of our Master Muhammad among the graves. O Allah, bestow blessings upon the physical form of our Master Muhammad among the physical forms. O Allah, bestow blessings upon the name of our Master Muhammad among names.",
+        "translationMy": "Ya Allah, limpahkanlah rahmat ke atas makam junjungan kami Muhammad di antara makam. Ya Allah, limpahkanlah rahmat ke atas kubur junjungan kami Muhammad di antara kubur. Ya Allah, limpahkan rahmat ke atas bentuk fizikal junjungan kami Muhammad di antara bentuk fizikal. Ya Allah, limpahkanlah selawat ke atas nama junjungan kami Muhammad di antara nama-nama."
+      },
+      {
+        "id": 1772982349082,
+        "arabic": "لَقَدْ جَاءَكُمْ رَسُولٌ مِّنْ أَنفُسِكُمْ عَزِيزٌ عَلَيْهِ مَا عَنِتُّمْ حَرِيصٌ عَلَيْكُم بِالْمُؤْمِنِينَ رَءُوفٌ رَّحِيمٌ (١٢٨)\n\nفَإِن تَوَلَّوْا فَقُلْ حَسْبِيَ اللهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ \nتَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ (١٢٩)\n\n (7 مرات)",
+        "translationEn": "There has come to you a Messenger from among yourselves, grievous to whom is your burden, concerned (is he) for you; for the believers (he is) full of compassion, merciful. If they turn away then say: Allah is sufficient for me; there is no god but He. On Him do I rely; He is the Lord of the Awesome Throne. (7 times: At-Taubah: 128-129)",
+        "translationMy": "Sesungguhnya telah datang kepada kamu seorang Rasul dari golongan kamu sendiri (iaitu Nabi Muhammad s.a.w), yang menjadi sangat berat kepadanya sebarang kesusahan yang ditanggung oleh kamu, yang sangat inginkan kebaikan bagi kamu, dan menumpahkan perasaan belas serta kasih sayangnya kepada orang-orang yang beriman. Kemudian jika mereka berpaling ingkar, maka katakanlah (wahai Muhammad): \"Cukuplah bagiku Allah (yang menolong dan memeliharaku), tiada Tuhan (yang berhak disembah) melainkan Dia; kepadaNya aku berserah diri, dan Dia lah yang mempunyai Arasy yang besar. (7 kali: At-Taubah: 128-129)"
+      },
+      {
+        "id": 1772982349235,
+        "arabic": "وَإِن يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ (٥١) \n\nوَمَا هُوَ إِلَّا ذِكْرٌ لِّلْعَالَمِينَ (٥٢)\n\n",
+        "translationEn": "The unbelievers would almost trip you up with their eyes when they hear the recitation of the Qur’an and say: \"He (Muhammad) is surely a madman.\" It is nothing but a Reminder to all creation. (Al-Qalam: 51-52)",
+        "translationMy": "Dan sesungguhnya orang-orang yang kafir itu, hampir-hampir menggelincir dan menjatuhkanmu dengan pandangan mereka (yang tajam dan penuh dengan permusuhan dan kebencian), semasa mereka mendengar Al-Quran sambil berkata: \"Sebenarnya (Muhammad) itu, sungguh-sungguh orang gila\". Padahal Al-Quran itu tidak lain hanyalah peringatan bagi umat manusia seluruhnya. (Al-Qalam: 51-52)"
+      },
+      {
+        "id": 1772982349404,
+        "arabic": "وَ صَلَّى اللهُ تَعَالَى عَلَى سَيِّدِنَا مُحَمَّدٍ وَ عَلَى آلِهِ وَ صَحْبِهِ وَ سَلَّمَ",
+        "translationEn": "May the blessings and salutations of Allah be upon our Master and leader Muhammad and upon his Family and Companions.",
+        "translationMy": "Semoga selawat dan salam Allah dicurahkan atas junjungan dan pemimpin kita Muhammad dan ke atas keluarga dan para sahabatnya."
+      },
+      {
+        "id": 1772982349580,
+        "arabic": "",
+        "translationEn": "Recite surah Al-Ikhlaas (chapter 112) and surah Al-Hasyr (chapter 59) of the holy Qur’an.",
+        "translationMy": "Baca surah Al Ikhlaas (surah 112) dan surah Al Hasyr (surah 59) dari kitab suci al Quran."
+      },
+      {
+        "id": 1772982349749,
+        "arabic": "",
+        "translationEn": "In a narration recorded on the authority of Ibn ‘Abbas (r.a.):",
+        "translationMy": "Dalam sebuah hadith yang diriwayatkan oleh ibn ‘Abbas (r.a.):"
+      },
+      {
+        "id": 1772982349941,
+        "arabic": "مَنْ قَرَأَ – قُلْ هُوَ اللهُ أَحَدٌ – أَلْفَ مَرَّةٍ يَوْمَ عَرَفَةَ أُعْطِيَ مَا سَأَلَ. (الجامع الصغير للسيوطي و مغني المحتاج للخطيب الشربيني)",
+        "translationEn": "“Whoever reads ‘Qul Huwallahu Ahad’ a thousand times on the Day of ‘Arafah, he would be granted that which he asks for (his prayers would be answered).”",
+        "translationMy": "“Barangsiapa membaca Qul Huwallahu Ahad pada hari Arafah sebanyak seribu kali, nescaya akan diperkenankan segala permintaannya (doanya dikabulkan).”"
+      }
+    ],
+    "titleMy": "Istigfaar al Jaami'"
+  },
+  {
+    "id": 1772983110350,
+    "titleEn": "Dzikrs",
+    "doa": [
+      {
+        "id": 1772983119529,
+        "arabic": "أَسْتَغْفِرُ اللهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ\n(100x)",
+        "translationEn": "I seek forgiveness from Allah the Almighty, Who there is no God but He, the Ever-Living, the Self-Subsistent and i turn to Him in repentance (100x).",
+        "translationMy": "Aku mohon ampun kepada Allah yang Maha Agung yang tiada Tuhan melainkan Dia, yang Maha Hidup lagi Berdiri (di atas ZatNya sendiri) dan aku bertaubat kepada-Nya (100x)."
+      },
+      {
+        "id": 1772983120073,
+        "arabic": " لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ. إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772983120250,
+        "arabic": "(100x)",
+        "translationEn": "Ever at Your Service, O Allah. Ever at Your Service. Ever at Your Service. You have no partner. Ever at Your Service. Verily, all Praises, blessings and the dominion belong to You. You have no partner (3x).",
+        "translationMy": "Aku menyahut wahai Tuhanku aku menyahut (panggilan Nabi Ibrahim). Tiada sekutu bagiMu, aku menyahut akan panggilan itu. Segala pujian dan kebaikan bagiMu, dan pemerintahan juga bagiMu, tiada sekutu bagiMu (3x)."
+      },
+      {
+        "id": 1772983120418,
+        "arabic": " اللهُ أَكْبَرُ، اللهُ أَكْبَرُ، اللهُ أَكْبَرُ لَا إِلَهَ إِلَّا اللهُ واللهُ أَكْبَرُ، اللهُ أَكْبَرُ وَ لِلهِ الْحَمْدُ \n\n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772983120586,
+        "arabic": "(3x)",
+        "translationEn": "God is Great. God is Great. God is Great. There is no God but Allah. God is Great and to Allah belong all praise (3x).",
+        "translationMy": "Allah Maha Besar. Allah Maha Besar. Allah Maha Besar. Tiada Tuhan melainkan Allah dan Allah Maha Besar. Allah Maha Besar dan bagi Allah segala puji (3x)."
+      },
+      {
+        "id": 1772983120763,
+        "arabic": "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَ يُمِيتُ بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ\n\n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772983120939,
+        "arabic": "(100x)",
+        "translationEn": "There is no God but Allah Alone, He has no partner. To Him Belongs the Sovereignty and to Him belongs all praise, He gives life and He gives death, all good is in His Possession and He has Power over all things (100x).",
+        "translationMy": "Tiada Tuhan selain Allah Yang Esa, tiada sekutu bagiNya. KepunyaanNyalah kerajaan dan bagiNya segala pujian, Dia menghidupkan dan mematikan, semua kebaikan adalah milikNya dan Dia Maha Kuasa atas segala sesuatu (100x)."
+      },
+      {
+        "id": 1772983121124,
+        "arabic": " لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ. أَشْهَدُ أَنَّ اللَّهَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، وَأَنَّ اللَّهَ قَدْ أَحَاطَ بِكُلِّ شَيْءٍ عِلْمًا\n\n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772983121292,
+        "arabic": "(100x)",
+        "translationEn": "There is no power and no strength except with the help of God the Most High and the Most Great. I testify that God has power over all things, and God encompasses all things with His knowledge (100x).",
+        "translationMy": "Tiada daya dan tiada kekuatan melainkan dengan pertolongan Allah Yang Maha Tinggi lagi Maha Besar. Aku bersaksi bahawa Allah berkuasa atas segala sesuatu, dan Allah meliputi segala sesuatu dengan ilmu Nya (100x)."
+      },
+      {
+        "id": 1772983494636,
+        "arabic": " أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. إِنَّ اللهَ هُوَ السَّمِيعُ الْعَلِيمُ\n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772983494843,
+        "arabic": "(3x)",
+        "translationEn": "I seek refuge with Allah from the accursed Satan. God is the All-Hearing, All-Knowing (3x).",
+        "translationMy": "Aku berlindung kepada Allah dari syaitan yang terkutuk. Sesungguhnya Allah, Dialah Yang Maha Mendengar dan Maha Mengetahui (3x)."
+      },
+      {
+        "id": 1772983495012,
+        "arabic": "",
+        "translationEn": "Recite Surah Al-Fatihah 3 Times. ",
+        "translationMy": "Baca Surah Al-Fatihah 3 Kali."
+      },
+      {
+        "id": 1772983495196,
+        "arabic": "",
+        "translationEn": "Read Surah Al-Ikhlas 100 Times. ",
+        "translationMy": "Baca Surah Al-Ikhlas 100 Kali."
+      },
+      {
+        "id": 1772983495397,
+        "arabic": "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى النَّبِيِّ الْأُمِّيِّ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينَ\n\n",
+        "translationEn": "",
+        "translationMy": ""
+      },
+      {
+        "id": 1772983776959,
+        "arabic": "(10x)",
+        "translationEn": "Oh Allah, bestow Your salawats and salams and blessings upon the unlettered Prophet and upon his family and all his companions.",
+        "translationMy": "Ya Allah, curahkan selawat dan salam dan berkat ke atas Nabi yang tidak tahu membaca dan menulis dan ke atas keluarga dan sahabat baginda sekalian."
+      }
+    ],
+    "titleMy": "Zikir-Zikir"
+  },
+  {
+    "id": 1772984183605,
+    "titleEn": "Supplications",
+    "doa": [
+      {
+        "id": 1772984258730,
+        "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ بِوَجْهِكَ الْكَرِيمِ وَ جُودِكَ الْقَدِيمِ وَ بِاسْمِكَ الْأَعْظَمِ وَ بِجَاهِ نَبِيِّكَ سَيِّدِنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ وَ إِخْوَانِهِ مِنَ النَّبِيِّينَ وَ الْمُرْسَلِينَ وَ عَلَى آلِهِ وَ صَحْبِهِ وَ التَّابِعِينَ لَهُمْ مِنَ الْعُلَمَاءِ الْعَامِلِينَ وَ الْأَوْلِيَاءِ وَ الصَّالِحِينَ وَ بِحُرْمَةِ هَذَا الْيَوْمِ أَنْ تُصَلِّيَ وَ تُسَلِّمَ عَلَى سَيِّدِنَا مُحَمَّدٍ وَ أَنْ تَغْفِرَ لَنَا وَ لِوَالِدِينَا وَ أَوْلَادِنَا وَ إِخْوَانِنَا وَ أَقْرِبَائِنَا وَ مَشَايِخِنَا وَ أَصْحَابِنَا وَ أَصْدِقَائِنَا وَ لِمَنْ أَوْصَانَا بِالدُّعَاءِ وَ لِمَنْ أَحْسَنَ إِلَيْنَا وَ لِمَنْ لَهُ حَقٌّ عَلَيْنَا وَ لِمَنْ ظَلَمْنَاهُ أَوْ أَسَأْنَا إِلَيْهِ وَ لِجَمِيعِ الْمُسْلِمِينَ وَ الْمُسْلِمَاتِ، الْأَحْيَاءِ مِنْهُمْ وَ الْأَمْوَاتِ وَ أَنْ تَرْزُقَنَا وَ إِيَّاهُمْ خَيْرَاتِ الدُّنْيَا وَ الْآخِرَةِ، وَ أَنْ تَحْفَظَنَا وَ إِيَّاهُمْ مِنْ جَمِيعِ بَلَاءِ الدُّنْيَا وَ أَهْوَالِ يَوْمِ الْقِيَامَةِ، وَ أَنْ تَرْزُقَنَا الْعُلُومَ النَّافِعَةَ وَ الْأَعْمَالَ الصَّالِحَةَ وَ أَنْ تَعْصِمَنَا مِنْ جَمِيعِ الْمَعَاصِي الظَّاهِرَةِ وَ الْبَاطِنَةِ وَ أَنْ تُسَهِّلَ لَنَا رِزْقاً حَلَالاً وَاسِعاً وَ أَنْ تَحْفَظَنَا مِنْ شَرِّ الْأَشْرَارِ مِنَ الْإِنْسِ وَ الْجِنِّ وَ الدَّوَابِّ وَ غَيْرِهَا وَ أَنْ تَخْتِمَ لَنَا وَ لَهُمْ بِحُسْنِ الْخَاتِمَةِ. آمِينْ، وَ صَلَّى اللهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَ آلِهِ وَ صَحْبِهِ وَ سَلَّمَ",
+        "translationEn": "O Allah, I ask You by the glory of your essence and your eternal generosity and your greatest Name and the honor of your prophet and our leader Muhammad, may Allah’s salutations and blessings be upon him and his brothers from among the prophets and messengers and his family and his companions and their followers from among the practicing scholars and saints and the pious ones, and by the honour of this Day, that You send blessings and salutations on our leader Muhammad, and that You forgive us, our parents, our children, our brothers, our relatives, our teachers, our companions, our friends, and those who requested that we pray for them, and those who have done good to us, and those who have a right over us, and those whom we have wronged or hurt them and for all the believers, male and female, the living and the deceased, and that You grant us and them from the good of this world and the hereafter, and that you protect us and them from all worldly trials and all the horrors of the Day of Resurrection, and that You bestow upon us useful knowledge and righteous deeds, and protect us from all outward and inward sins, and that You make the obtainment of wholesome and plentiful sustenance easy for us, and that You protect us from the evil of wicked ones among humans, genies, animals and others, and that You make the end of our lives and theirs a good end. O Allah, accept our prayers. May Allah’s shower His mercy and salutations upon our master Muhammad and his family and companions.",
+        "translationMy": "Ya Allah, sesungguhnya aku pohon akan dikau dengan kemuliaan zatMu dan kemurahanMu yang kekal abadi dan namaMu yang paling agung dan kehormataan nabiMu dan penghulu kami Muhammad (s.a.w.) dan saudara-saudaranya dari para nabi-nabi dan rasul-rasul serta keluarga dan keluarganya dan sekalian pengikut-pengikut mereka daripada golongan para ulama-ulama yang mengamalkan ilmu mereka dan para wali-wali dan orang yang salih dan kehormatan hari ini, agar Engkau curahkan selawat dan salam atas junjungan kami Muhammad, dan memaafkan kami dan ibu bapa kami, anak-anak kami, dan saudara kami, dan saudara mara kami, dan guru-guru kami dan sahabat-sahabat kami, kawan-kawan kami, dan mereka yang berpesan kami berdoa untuk mereka, dan untuk mereka yang telah buat baik kepada kami, dan untuk mereka yang berhak atas kami, dan untuk mereka yang telah kami menzalimi atau menyakiti mereka dan untuk semua orang beriman, lelaki dan perempuan, yang hidup antara mereka dan yang sudah mati, dan bahawa Engkau mengkurniakan kami dan mereka daripada kebaikan dunia dan akhirat, dan supaya Engkau memelihara kami dan mereka dari segala macam ujian dunia dan segala yang mengerikan pada hari kiamat, dan kurniakanlah kami ilmu yang bermanfaat dan amal soleh, dan lindungilah kami dari segala dosa yang zahir dan batin, dan agar Engkau memudahkan untuk kami rezeki yang halal lagi luas, dan agar Engkau melindungi kami dari kejahatan orang-orang yang fasik, dari manusia, jin, binatang dan selainnya, dan jadikanlah penghujung kehidupan kami dan mereka pengakhiran yang baik. Terimalah doa kami ya Allah dan semoga rahmat dan kesejahteraan Allah tercurah keatas junjungan kami Muhammad dan keluarga dan para sahabatnya."
+      },
+      {
+        "id": 1772984260249,
+        "arabic": "اللَّهُمَّ إِنَّكَ وَفَّقْتَنَا، وَ حَمَلْتَنَا عَلَى مَا سَخَّرْتَ لَنَا، حَتَّى بَلَّغْتَنَا بِإِحْسَانِكَ إِلَى زِيَارَةِ بَيْتِكَ، وَ الْوُقُوفِ عِنْدَ هَذَا الْمَشْعَرِ الْعَظِيمِ اِقْتِدَاءً بِسُنَّةِ خَلِيلِكَ، وَ اقْتِفَاءً بِآثَارِ خِيَرَتِكَ مِنْ خَلْقِكَ سَيِّدِنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ، وَ إِنَّ لِكُلِّ ضَيْفٍ قِرَى، وَ لِكُلِّ وَفْدٍ جَائِزَةً، وَ لِكُلِّ زَائِرٍ كَرَامَةً، وَ لِكُلِّ سَائِلٍ عَطِيَّةً، وَ لِكُلِّ رَاجٍ ثَوَاباً، وَ لِكُلِّ مُلْتَمِسٍ لِمَا عِنْدَكَ جَزَاءً، وَ لِكُلِّ رَاغِبٍ إِلَيْكَ زُلْفَى، وَ لِكُلِّ مُتَوَجِّهٍ إِلَيْكَ إِحْسَاناً، وَ قَدْ وَقَفْنَا بِهَذَا الْمَشْعَرِ الْعَظِيمِ رَجَاءً لِمَا عِنْدَكَ، فَلَا تُخَيِّبْ إِلَهَنَا رَجَاءَنَا فِيكَ، يَا سَيِّدَنَا يَا مَوْلَانَا يَا مَنْ خَضَعَتْ كُلُّ الْأَشْيَاءِ لِعِزَّتِهِ وَ عَنَتِ الْوُجُوهُ لِعَظَمَتِهِ",
+        "translationEn": "O Allah, You have granted us success, brought us upon that which You have subjected to us and through Your favour made us reach and visit Your House and stand at this great place for rites (‘Arafah), in compliance with the way of Your intimate companion (Prophet Ibrahim) and in following the footsteps of Your ‘Chosen One’ (Prophet Muhammad) among Your creation, our leader Muhammad (s.a.w.). A reception is accorded to every guest, a gift for every deputation, honour for every visitor, a gift for every asker, a reward for everyone who places his hopes in You, recompense for every seeker of that which is in Your presence, proximity for everyone who beseeches You and a favour for everyone who turns to You. We have stood at this great place (‘Arafah) for the performance of rites, hoping for that which is in Your presence and so do not disappoint us in our hopes in You, O our God. O our Master, O our Protector, O to Whose power all things have humbled themselves and to Whose greatness all beings have subjected themselves.",
+        "translationMy": "Ya Allah, Engkau telah memberikan kejayaan kepada kami, Engkau telah membawa kami ke atas kenderaan yang telah Engkau tundukkan kepada karuniaMu membuat kami sampai dan mengunjungi Baitullah dan berdiri di tempat yang agung ini untuk beribadah ('Arafah), sesuai dengan jalan Sahabat intimMu (Nabi Ibrahim) dan dalam mengikuti jejak 'Yang Terpilih'-Mu di antara ciptaanMu, penghulu kami Muhammad (s.a.w.). Sambutan diberikan kepada setiap tetamu, hadiah untuk setiap rombongan, kehormatan untuk setiap pengunjung, pemberian untuk setiap yang bertanya, ganjaran untuk setiap orang yang menaruh harapan kepadaMu, balasan untuk setiap yang memohon apa yang ada di sisi-Mu, kedekatan untuk setiap orang yang memohon kepadaMu dan rahmat bagi setiap orang yang kembali kepadaMu. Kami telah berdiri di tempat yang agung ini (‘Arafah) untuk melaksanakan ibadat wukuf, mengharapkan apa yang ada di sisiMu, maka jangan mengecewakan kami dalam harapan kami kepadaMu, ya Tuhan kami. Wahai Tuhan kami, wahai Pelindung kami, wahai yang kepada kekuasaanNya segala sesuatu telah merendahkan diri dan kepada kebesaranNya semua makhluk telah menundukkan diri."
+      },
+      {
+        "id": 1772984260401,
+        "arabic": "اللَّهُمَّ إِلَيْكَ خَرَجْنَا، وَ بِفِنَائِكَ أَنَخْنَا، وَ إِيَّاكَ أَمَّلْنَا وَ مَا عِنْدَكَ طَلَبْنَا وَ لِإِحْسَانِكَ تَعَرَّضْنَا وَ لِرَحْمَتِكَ رَجَوْنَا وَ مِنْ عَذَابِكَ أَشْفَقْنَا وَ لِبَيْتِكَ الْحَرَامِ حَجَجْنَا، يَا مَنْ يَمْلِكُ حَوَائِجَ السَّائِلِينَ وَ يَعْلَمُ ضَمَائِرَ الصَّامِتِينَ، يَا مَنْ لَيْسَ مَعَهُ رَبٌّ يُدْعَى، وَ لَا إِلَهٌ يُرْجَى.",
+        "translationEn": "O Allah, we had set forth to meet You, and in Your courtyard, we have alighted and We have placed our hopes in You. We seek that which is in Your presence. We have come to receive Your favours. We have placed our hopes in Your mercy. We fear Your punishment and we have performed the pilgrimage to Your House (Ka’bah). O He in Whose possession are the needs of the beseechers and Who knows that which is in the bosoms of those remain silent. O He Who there is no Sustainer besides Him who can be called upon, and no god besides Him who one can place his hopes in.",
+        "translationMy": "Ya Allah, kami telah berangkat menemuiMu, dan di halamanMu kami singgah dan kepadaMu kami berharap. Kami mencari apa yang ada di sisiMu. Kami datang untuk menerima nikmatMu. Kami telah meletakkan harapan kami pada rahmatMu. Kami takut akan azabMu dan kami telah menunaikan haji ke Baitullah (Ka’bah). Wahai Dzat yang mempunyai keperluan orang-orang yang meminta dan yang mengetahui apa yang ada di dalam dada orang-orang yang berdiam diri. Wahai Yang tidak ada pemberi rezeki selain Dia yang dapat diseru, dan tidak ada Tuhan selain Dia yang dapat kita berharap kepadaNya."
+      },
+      {
+        "id": 1772984260570,
+        "arabic": "يَا مَنْ لَا يَزْدَادُ عَلَى السُّؤَالِ إِلَّا كَرَماً وَ جُوداً، وَ عَلَى كَثْرَةِ الْحَوَائِجِ إِلَّا تَفَضُّلاً وَ إِحْسَاناً",
+        "translationEn": "O He Who Only increases in generosity when asked and in bounties and favours when plentiful needs are laid before Him.",
+        "translationMy": "Wahai Dzat yang hanya bertambah kemurahan dan dermawan apabila diminta, dan tambah limpah kurnia dan nikmat apabila dipohonkan kepadaNya keperluan yang banyak."
+      },
+      {
+        "id": 1772984260746,
+        "arabic": "يَا مَنْ ضَجَّتْ بَيْنَ يَدَيْهِ الْأَصْوَاتُ بِلُغَاتٍ مُخْتَلِفَاتٍ يَسْأَلُونَكَ الْحَاجَاتِ وَ سَكَبُوا الدُّمُوعَ بِالْعَبَرَاتِ وَ الزَّفَرَاتِ مُلِحِّينَ بِالدَّعَوَاتِ فَحَاجَتُنَا إِلَيْكَ رَبَّنَا مَغْفِرَتُكَ وَ رِضًى مِنْكَ عَنَّا لَا سُخْطَ بَعْدَهُ، وَ هُدًى لَا ضَلَالَ بَعْدَهُ، وَ عِلْمٌ لَا جَهْلَ بَعْدَهُ، وَ حُسْنُ الْخَاتِمَةِ وَ الْعِتْقُ مِنَ النَّارِ وَ الْفَوْزُ بِالْجَنَّةِ، وَ أَنْ تَذْكُرَنَا عِنْدَ الْبِلَى إِذَا نَسِيَنَا أَهْلُ الدُّنْيَا وَ وَارَانَا التُّرَابُ وَ انْقَطَعَ عَنَّا الْأَحْبَابُ وَ تَقَطَّعَتْ بِنَا الْأَسْبَابُ، يَا عَزِيزُ يَا وَهَّابُ يَا أَرْحَمَ الرَّاحِمِينَ",
+        "translationEn": "O He Whom before Him a clamour of voices has been raised in different languages asking You for their needs with tears and sighs and persistent supplications. Our request to You, Our Lord, is Your forgiveness and pleasure upon us that will never be followed by anger towards us, guidance after which there would be no misguidance, knowledge after which there would be no ignorance, a blessed ending to our life upon death, salvation from hellfire and attainment of paradise, and that You remember us when we are subject to decay (in our graves), when the people of the world forget us, and we are covered by earth, and our loved ones and reasons and means are cut off from us, O Most Powerful, O Bestower, O Most Merciful.",
+        "translationMy": "Wahai Dia yang di hadapanNya terdengar suara-suara dalam berbagai bahasa yang meminta kepadaMu keperluan mereka dengan air mata dan desahan dan doa yang berterusan. Permintaan kami kepadaMu ya Tuhan kami, adalah ampunan dan keridhaanMu atas kami yang tidak akan diikuti oleh kemurkaan kepada kami, petunjuk yang tidak ada kesesatan setelah itu, ilmu yang tidak ada kejahilan setelahnya, Husn ul Khatimah waktu mati, kebebasan dari api neraka dan mencapai kejayaan dengan masuk syurga, dan bahawa Engkau ingat kepada kami ketika kami mengalami kehancuran dalam alam, apabila penduduk dunia melupakan kami, dan kami ditutupi oleh tanah, dan orang-orang yang kami cintai putus hubungan dengan kami dan terputus segala sebab dari kami, wahai Yang Maha Kuasa, wahai Yang Maha Pemberi, wahai Yang Maha Penyayang."
+      },
+      {
+        "id": 1772984548541,
+        "arabic": "اللَّهُمَّ إِنَّكَ تَرَى مَكَانَنَا وَ تَسْمَعُ كَلَامَنَا وَ تَعْلَمُ أَسْرَارَنَا وَ عَلَانِيَتَنَا وَ لَا يَخْفَى عَلَيْكَ شَيْءٌ مِنْ أُمُورِنَا، نَحْنُ الْبَائِسُونَ الْفُقَرَاءُ الْمُسْتَغِيثُونَ الْوَجِلُونَ، الْمُشْفِقُونَ الْمُقِرُّونَ الْمُعْتَرِفُونَ بِذُنُوبِهِمْ",
+        "translationEn": "O Allah, You see our place and hear our speech and know that which is hidden and manifest from us and nothing from our affairs is obscure to You. We are the indigent and poor, appealing for Your help, beset by fear and anxiety, confessing and admitting to our sins.",
+        "translationMy": "Ya Allah, Engkau melihat tempat kami dan mendengar ucapan kami dan mengetahui apa yang tersembunyi dan nyata dari kami dan tidak ada sesuatu pun dari urusan kami yang samar bagiMu. Kami adalah orang-orang fakir dan miskin, memohon pertolonganMu, dilanda ketakutan dan kebimbangan, iktiraf dan mengakui dosa-dosa kami."
+      },
+      {
+        "id": 1772984548617,
+        "arabic": "سْأَلُكَ مَسْأَلَةَ الْمِسْكِينِ وَ نَبْتَهِلُ إِلَيْكَ ابْتِهَالَ الْمُذْنِبِ الذَّلِيلِ، وَ نَدْعُوكَ دُعَاءَ الْخَائِفِ الضَّرِيرِ دُعَاءَ مَنْ خَضَعَ لَكَ عُنُقُهُ وَ ذَلَّ لَكَ جَسَدُهُ وَ فَاضَتْ لَكَ عَيْنَاهُ وَ رَغِمَ لَكَ أَنْفُهُ، لَا تَجْعَلْنَا رَبَّنَا أَشْقِيَاءَ، وَ كُنْ بِنَا رَؤُوفاً رَحِيماً، يَا خَيْرَ الْمَسْؤُولِينَ وَ يَا خَيْرَ الْمُعْطِينَ، رَبَّنَا اهْدِنَا بِالْهُدَى وَ زَيِّنَّا بِالتَّقْوَى وَ اغْفِرْ لَنَا فِي الْآخِرَةِ وَ الْأُولَى",
+        "translationEn": "We ask You as one who is poor, beseech You with the prayers of a despised sinner, call upon You as does one who is afflicted and is in fear, the prayer of one whose neck has bowed to You (in submission), his body in humility, his eyes overflowing with tears and has submitted himself to You in humility. Our Lord, do not cause us to be from the wretched ones and be compassionate and merciful to us, O Best of those who are asked, O Best of Givers. Our Lord, guide us, adorn us with piety, and forgive us in the hereafter and in this world.",
+        "translationMy": "Kami memohon kepadaMu sebagai seorang yang fakir, memohon kepadaMu dengan doa orang yang berdosa yang hina, memohon kepada-Mu seperti orang yang ditimpa musibah lagi dalam ketakutan, doa orang yang leher dan tubuhnya tunduk kepadaMu dalam kerendahan hati, berlinang air mata nya dan telah menyerahkan dirinya kepadaMu dengan rendah hati. Ya Tuhan kami, janganlah Engkau jadikan kami termasuk orang-orang yang celaka, kasihanilah kami, wahai sebaik-baik Yang diminta, wahai sebaik-baik Pemberi. Ya Tuhan kami, bimbinglah kami, hiasilah kami dengan takwa, dan ampunilah kami di akhirat dan di dunia."
+      },
+      {
+        "id": 1772984548987,
+        "arabic": "اللَّهُمَّ اجْعَلْ فِي قُلُوبِنَا نُوراً، وَ فِي أَسْمَاعِنَا نُوراً، وَ فِي أَبْصَارِنَا نُوراً، وَ فِي أَلْسِنَتِنَا نُوراً، وَ عَنْ أَيْمَانِنَا نُوراً، وَ عَنْ أَيْسَارِنَا نُوراً، وَ مِنْ فَوْقِنَا نُوراً، وَ مِنْ خَلْفِنَا نُوراً، وَ اجْعَلْ فِي أَنْفُسِنَا نُوراً، وَ أَعْظِمْ لَنَا نُوراً",
+        "translationEn": "O Allah put light in our hearts, ears, eyes, tongues, on our right sides, left sides, above us, behind us, give us light in our selves, and make our light great.",
+        "translationMy": "Ya Allah jadikanlah cahaya dalam hati kami, telinga, mata, lidah, sebelah kanan kami, sisi kiri kami, di atas kami, di belakang kami, berikanlah cahaya dalam diri kami, dan besarkanlah cahaya kami."
+      },
+      {
+        "id": 1772984549147,
+        "arabic": "رَبَّنَا اشْرَحْ لَنَا صُدُورَنَا وَ يَسِّرْ لَنَا أُمُورَنَا. اللَّهُمَّ إِنَّا نَسْأَلُكَ الْهُدَى وَ التَّقْوَى وَ الْعَفَافَ وَ الْغِنَى. اللَّهُمَّ لَكَ الْحَمْدُ كَالَّذِي تَقُولُ وَ خَيْراً مِمَّا نَقُولُ",
+        "translationEn": "Our Lord, expand our breast and make easy our affairs. O Allah, we ask You for guidance, piety, chastity, virtuousness and contentment. O Allah, praise belongs to You as You say and better than that which we say.",
+        "translationMy": "Ya Tuhan kami, lapangkanlah dada kami dan mudahkanlah urusan kami. Ya Allah, kami memohon kepadaMu petunjuk, ketakwaan, kesucian, kebajikan dan keredhaan. Ya Allah, bagiMu segala puji sebagaimana yang Engkau ucapkan dan lebih baik dari apa yang kami ucapkan."
+      },
+      {
+        "id": 1772984549315,
+        "arabic": "للَّهُمَّ إِنَّا نَسْأَلُكَ رِضَاكَ وَ الْجَنَّةَ وَ نَعُوذُ بِكَ مِنْ سَخَطِكَ وَ النَّارِ، وَ مَا يُقَرِّبُنَا إِلَيْهَا مِنْ قَوْلٍ وَ فِعْلٍ وَ عَمَلٍ. اللَّهُمَّ اجْعَلْهُ حَجّاً مَبْرُوراً وَ ذَنْباً مَغْفُوراً وَ عَمَلاً صَالِحاً مَقْبُولاً. رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَ فِي الْآخِرَةِ حَسَنَةً وَ قِنَا عَذَابَ النَّارِ",
+        "translationEn": "O Allah, we seek Your pleasure and paradise and seek protection with You from Your wrath and the fire and seek that which brings us close to paradise from word, action and deed. O Allah, make our pilgrimage virtuous and accepted, with our sins forgiven and our deeds pious and accepted by You. Our Lord, grant us goodness in the world and goodness in the hereafter and protect us from the torment of hell.",
+        "translationMy": "Ya Allah, kami memohon keredhaanMu dan syurgaMu serta berlindung denganMu dari kemurkaanMu dan api neraka dan memohon segala yang mendekatkan kami kepada syurga dari perkataan, perbuatan dan tindakan. Ya Allah, jadikanlah haji kami haji yang mabrur, diampuni dosa-dosa kami dan jadikanlah nya amal yang soleh yang diterima olehMu. Wahai Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat dan peliharalah kami dari siksa neraka."
+      },
+      {
+        "id": 1772984549492,
+        "arabic": "إِلَهَنَا لَا قُوَّةَ لَنَا عَلَى سَخَطِكَ وَ لَا صَبْرَ لَنَا عَلَى عَذَابِكَ وَ لَا غِنَى لَنَا عَنْ رَحْمَتِكَ وَ لَا قُوَّةَ لَنَا عَلَى الْبَلَاءِ، وَ لَا طَاقَةَ لَنَا عَلَى الْجُهْدِ، نَعُوذُ بِرِضَاكَ مِنْ سَخَطِكَ وَ مِنْ فُجَاءَةِ نِقْمَتِكَ، يَا أَمَلَنَا وَ يَا رَجَاءَنَا يَا خَيْرَ مُسْتَغَاثٍ وَ يَا أَجْوَدَ الْمُعْطِينَ يَا مَنْ سَبَقَتْ رَحْمَتُهُ غَضَبَهُ، يَا سَيِّدَنَا وَ مَوْلَانَا يَا ثِقَتَنَا وَ رَجَاءَنَا وَ يَا مُعْتَمَدَنَا",
+        "translationEn": "O our God, we have no strength to bear Your wrath nor patience to bear Your punishment. We cannot do without Your mercy, have no strength to bear trials and no power to bear difficulties. We seek protection with Your pleasure from Your wrath and sudden retribution. O our Aspiration and Hope, O Best of Succours, O Most Generous of Givers, O Whose mercy precedes His anger, O our Master and Protector, O our Place of Trust and Hope, O our Source of Dependence.",
+        "translationMy": "Ya Tuhan kami, kami tidak mempunyai kekuatan untuk menanggung kemurkaanMu dan tidak ada kesabaran untuk menanggung azabMu. Kami amat perlu belas kasihanMu, dan kami tidak mempunyai kekuatan untuk menanggung ujian dan tidak mempunyai kekuatan untuk menanggung kesukaran. Kami memohon perlindungan dengan keredhaanMu daripada kemurkaanMu dan dari azab yang datang serta merta. Wahai Aspirasi dan Harapan kami, Wahai Pemberi Bantuan, Wahai Pemberi yang Maha Pemurah, Wahai Yang RahmatNya mendahului kemurkaanNya, Wahai Penghulu dan Pelindung kami, Wahai Tempat Amanah dan Harapan kami, Wahai Sumber Pergantungan kami."
+      },
+      {
+        "id": 1772984549668,
+        "arabic": "اللَّهُمَّ إِنَّا قَدْ وَفَدْنَا إِلَيْكَ وَ وَقَفْنَا بَيْنَ يَدَيْكَ فِي هَذَا الْمَوْضِعِ الشَّرِيفِ رَجَاءً لِمَا عِنْدَكَ، فَلَا تَجْعَلْنَا الْيَوْمَ أَخْيَبَ وَفْدِكَ فَأَكْرِمْنَا بِالْجَنَّةِ وَ مُنَّ عَلَيْنَا بِالْمَغْفِرَةِ وَ الْعَافِيَةِ وَ أَجِرْنَا مِنَ النَّارِ وَ ادْرَأْ عَنَّا شَرَّ خَلْقِكَ",
+        "translationEn": "O Allah, we have come to You and stood before You in this noble place out of hope in that which is in Your presence, and so do not make us the most unfortunate of Your visitors. Honour us with paradise, bless us with forgiveness, good health and well-being, protect us from the fire and ward off from us the evil ones from Your creation.",
+        "translationMy": "Ya Allah, kami telah datang kepadaMu dan berdiri di hadapanMu di tempat yang mulia ini dengan mengharap apa yang ada di sisiMu, maka janganlah Engkau jadikan kami orang yang paling malang dari rombonganMu (para haji). Maka muliakanlah kami dengan syurga, berkatilah kami dengan keampunan, kesihatan yang baik dan kesejahteraan, peliharalah kami dari api neraka dan jauhkanlah dari kami kejahatan segala makhlukMu."
+      },
+      {
+        "id": 1772984549845,
+        "arabic": "إِنْقَطَعَ الرَّجَاءُ إِلَّا مِنْكَ وَ أُغْلِقَتِ الْأَبْوَابُ إِلَّا بَابَكَ، فَلَا تَكِلْنَا إِلَى أَحَدٍ سِوَاكَ فِي أُمُورِ دِينِنَا وَ دُنْيَانَا طَرْفَةَ عَيْنٍ وَ لَا أَقَلَّ مِنْ ذَلِكَ وَ انْقُلْنَا مِن ذُلِّ الْمَعْصِيَةِ إِلَى عِزِّ الطَّاعَةِ، وَ نَوِّرْ قُلُوبَنَا وَ قُبُورَنَا وَ أَعِذْنَا مِنَ الشَّرِّ كُلِّهِ وَ اجْمَعْ لَنَا الْخَيْرَ كُلَّهُ يَا أَكْرَمَ مَنْ سُئِلَ وَ أَجْوَدَ مَنْ أَعْطَى",
+        "translationEn": "All hope has been cut off except in You, all doors have been shut except Your door, and so do not entrust us to anyone besides You in our religious and worldly affairs even for the wink of an eye nor for less than it. Remove us from the disgrace of disobedience to the honour of (Your) obedience, and enlighten our hearts and graves and protect us from evil and amass for us all forms of good. O The Most Generous among those who are asked, O Most Generous Giver.",
+        "translationMy": "Terputuslah segala harapan kecuali kepadaMu, telah tertutup segala pintu kecuali pintuMu, maka janganlah Engkau serahkan kami kepada selainMu dalam urusan agama dan dunia kami walau sekelip mata dan tidak pula yang kurang daripadanya. Pindahkanlah kami dari kehinaan kemaksiatan kepada kemuliaan ketaatan kepadaMu, dan terangilah hati dan kubur kami dan lindungilah kami dari segala kejahatan dan kumpulkanlah untuk kami segala bentuk kebaikan. Wahai Yang Maha Pemurah di antara yang diminta, wahai Yang paling Pemurah antara yang memberi."
+      },
+      {
+        "id": 1772984550037,
+        "arabic": " اللَّهُمَّ بِنُورِكَ اهْتَدَيْنَا وَ بِفَضْلِكَ اسْتَغْنَيْنَا وَ فِي كَنَفِكَ وَ إِنْعَامِكَ وَ عَطَائِكَ وَ إِحْسَانِكَ أَصْبَحْنَا وَ أَمْسَيْنَا",
+        "translationEn": "O Allah, by Your light we have attained guidance, and through Your bounties we have attained sufficiency, and we find ourselves in the morning and evening under the wing of Your protection, blessings, gifts and favours.",
+        "translationMy": "Ya Allah, dengan cahayaMu kami memperoleh petunjuk, dan dengan karuniaMu kami memperoleh kecukupan, dan kami mendapati diri kami di pagi dan petang di bawah perlindungan, keberkatan, karunia dan nikmatMu."
+      },
+      {
+        "id": 1772984854001,
+        "arabic": " أَنْتَ الْأَوَّلُ فَلَا شَيْءَ قَبْلَكَ، وَ الْآخِرُ فَلَا شَيْءَ بَعْدَكَ، نَعُوذُ بِكَ مِنَ الْفَلَسِ وَ الْكَسَلِ وَ عَذَابِ الْقَبْرِ وَ فِتْنَةِ الْغِنَى",
+        "translationEn": "You are The First and so there was nothing before You, and The Last and so there can be nothing after You. We seek protection with You from bankruptcy and laziness and the punishment of the grave and the trials of wealth.",
+        "translationMy": "Engkaulah Yang Awal dan tidak ada sesuatu pun sebelum Engkau, dan Yang Akhir, maka tidak ada sesuatu pun setelah Engkau. Kami memohon perlindungan kepadaMu dari kebangkrutan dan kemalasan dan azab kubur dan fitnah harta."
+      },
+      {
+        "id": 1772984854145,
+        "arabic": "للَّهُمَّ إِنَّا نَسْأَلُكَ مُوجِبَاتِ رَحْمَتِكَ، وَ عَزَائِمَ مَغْفِرَتِكَ، وَ الْغَنِيمَةَ مِنْ كُلِّ بِرٍّ، وَ السَّلَامَةَ مِنْ كُلِّ إِثْمٍ، وَ الْفَوْزَ بِالْجَنَّةِ، وَ النَّجَاةَ مِنَ النَّارِ",
+        "translationEn": "O Allah, we ask You for that which would surely bring (upon us) Your mercy and the most complete of Your forgiveness and benefit from every good deed and protection from every sin and success with the attainment of paradise and salvation from hellfire.",
+        "translationMy": "Ya Allah, sesungguhnya kami memohon kepadaMu untuk segala yang pasti akan mendatangkan kepada kami rahmatMu dan keampunanMu yang paling sempurna dan manfaat dari setiap kebaikan dan perlindungan dari setiap dosa dan kejayaan dengan mencapai syurga dan keselamatan dari api neraka."
+      },
+      {
+        "id": 1772984854305,
+        "arabic": "اللَّهُمَّ يَا عَالِمَ الْخَفَايَاتِ وَ يَا سَامِعَ الْأَصْوَاتِ وَ يَا بَاعِثَ الْأَمْوَاتِ، يَا مُجِيبَ الدَّعَواتِ يَا قَاضِيَ الْحَاجَاتِ يَا خَالِقَ الْأَرْضِ وَ السَّمَاوَاتِ أَنْتَ اللهُ الَّذِي لَا إِلَهَ إِلَّا أَنْتَ الْوَاحِدُ الْأَحَدُ، الْفَرْدُ الصَّمَدُ، الْوَهَّابُ الَّذِي لَا يَبْخَلُ، وَ الْحَلِيمُ الَّذِي لَا يَعْجَلُ",
+        "translationEn": "O Allah, Knower of All Things Hidden, O Hearer of Voices, O Resurrector of the Dead, O Answerer of Supplications, O Fulfiller of Needs, O Creator of the Earth and the Skies, You are Allah and there is no god besides You, The One and Only, The Source and Place of Fulfillment of all Needs, The Bestower, Who does not act miserly and The Forbearing Who does not hasten (in retribution).",
+        "translationMy": "Ya Allah, Yang Maha Mengetahui Segala Yang Tersembunyi, Wahai Yang Mendengar segala suara, Wahai Yang Membangkitkan Orang Mati, Wahai Yang Mengabulkan Doa, Wahai Yang Memenuhi segala hajat, Wahai Pencipta Bumi dan Langit, Engkaulah Allah dan tiada Tuhan selain Engkau, Yang Maha Esa, Sumber dan Tempat Memenuhi segala keperluan, Maha Pemberi, Yang tidak kikir dan Maha Penyantun yang tidak segera menyegerakan pembalasan."
+      },
+      {
+        "id": 1772984854466,
+        "arabic": "لَا رَادَّ لِأَمْرِكَ وَ لَا مُعَقِّبَ لِحُكْمِكَ، رَبُّ كُلِّ شَيْءٍ، وَ مَلِيكُ كُلِّ شَيْءٍ، وَ مُقَدِّرُ كُلِّ شَيْءٍ، نَسْأَلُكَ أَنْ تَرْزُقَنَا عِلْماً نَافِعاً وَ رِزْقاً وَاسِعاً وَ قَلْباً خَاشِعاً وَ لِسَاناً ذَاكِراً وَ عَمَلًا زَكِيّاً وَ إِيمَاناً خَالِصاً وَ إِنَابَةَ الْمُخْلِصِينَ وَ خُشُوعَ الْمُخْبِتِينَ وَ أَعْمَالَ الصَّالِحِينَ وَ يَقِينَ الصَّادِقِينَ وَ سَعَادَةَ الْمُتَّقِينَ وَ دَرَجَاتِ الْفَائِزِينَ",
+        "translationEn": "None can oppose Your command nor review or criticise Your judgment. You are the Sustainer, Possessor and Ordainer of all things. We ask You that You bestow upon us knowledge that brings benefit, plentiful sustenance, a devout heart, a tongue that remembers You, righteous deeds, sincere faith, repentance of the sincere servants, reverence of the humble servants, deeds of the pious, conviction of the truthful ones, felicity of the God-fearing and the degrees of those who attain success (in Your presence).",
+        "translationMy": "Tiada siapa yang boleh menentang perintahMu atau menyemak atau mengkritik penghakimanMu. Engkaulah Pemelihara, Pemilik dan Penyusun segala sesuatu. Kami memohon kepadaMu agar Engkau kurniakan kepada kami ilmu yang membawa manfaat, rezeki yang melimpah, hati yang khusyuk, lidah yang mengingatiMu, amal yang suci, iman yang ikhlas, taubat hamba yang ikhlas, khusyuk hamba yang tawaduk, amal orang yang soleh, bertakwa, keyakinan orang-orang yang benar, kebahagiaan orang-orang yang bertakwa dan darjat orang-orang yang berjaya di sisiMu."
+      },
+      {
+        "id": 1772984854642,
+        "arabic": "ا أَفْضَلَ مَنْ قَصَدَ وَ أَكْرَمَ مَنْ سُئِلَ وَ أَجْوَدَ مَنْ أَعْطَى. مَا أَحْلَمَكَ عَلَى مَنْ عَصَاكَ، وَ أَقْرَبَكَ إِلَى مَنْ دَعَاكَ، وَ أَعْطَفَكَ عَلَى مَنْ سَأَلَكَ، لَا مَهْدِيَّ إِلَّا مَنْ هَدَيْتَ، وَ لَا ضَالَّ إِلَّا مَنْ أَضْلَلْتَ، وَ لَا غَنِيَّ إِلَّا مَنْ أَغْنَيْتَ، وَ لَا فَقِيرَ إِلَّا مَنْ أَفْقَرْتَ، وَ لَا مَعْصُومَ إِلَّا مَنْ عَصَمْتَ، وَ لَا مَسْتُورَ إِلَّا مَنْ سَتَرْتَ",
+        "translationEn": "O The Best Who is sought, The Most Generous Who is asked and The Most Generous Giver. How great Your Forebearace towards those who disobey You! How close Your proximity to those who call upon You. How great Your compassion towards those who ask You. Only those whom You guide are guided and none is deluded except he whom You do not guide. None is rich except whom You have enriched. None is poor except whom You have deprived. None is protected (from harm and sin) except whom You protect. No one’s faults are covered except whose faults You cover.",
+        "translationMy": "Wahai Yang Terbaik Yang boleh dituju, Yang paling Pemurah Yang Diminta dan Yang Maha Pemurah Yang memberi. Betapa besarnya KesabaranMu terhadap mereka yang menderhaka kepadaMu! Betapa dekatnya kedekatanMu dengan mereka yang berdoa kepadaMu. Betapa besar belas kasihanMu terhadap mereka yang meminta kepadaMu. Tiada yang menerima petunjuk kecuali orang yang Engkau beri petunjuk. Tiada yang sesat kecuali yang Engkau sesatkan. Tiada seorangpun yang kaya melainkan yang telah Engkau kayakan. Tidak ada seorang pun yang miskin kecuali yang Engkau timpakan dengan kemiskinan. Tiada yang terpelihara (dari bahaya dan dosa) melainkan yang Engkau lindungi. Tidak ada kesalahan seseorang pun yang tertutup kecuali yang Engkau tutupi."
+      },
+      {
+        "id": 1772984854819,
+        "arabic": "نَسْأَلُكَ أَنْ تَهَبَ لَنَا جَزِيلَ عَطَائِكَ، وَ السَّعَادَةَ بِلِقَائِكَ، وَ الْمَزِيدَ مِنْ نِعَمِكَ وَ آلَائِكَ، وَ أَنْ تَجْعَلَ لَنَا نُوراً فِي حَيَاتِنَا وَ نُوراً فِي حَشْرِنَا وَ نُوراً فِي مَمَاتِنَا وَ نُوراً فِي قُبُورِنَا وَ نُوراً نَتَوَسَّلُ بِهِ إِلَيْكَ وَ نُوراً نَفُوزُ بِهِ لَدَيْكَ فَإِنَّا بِبَابِكَ سَائِلُونَ وَ بِنَوَالِكَ مُعْتَرِفُونَ وَ لِلِقَائِكَ رَاجُونَ",
+        "translationEn": "We ask You that You bestow upon us Your plentiful gifts, happiness through meeting You, increase in Your blessings and favours and that You provide us with light (guidance) in our lives, at the time of our resurrection, at the time of our death, in our graves, light which is a means to You and light by which we would attain felicity in Your presence. We are at Your door asking, acknowledging Your gifts and looking forward to the meeting with You.",
+        "translationMy": "Kami memohon kepadaMu agar Engkau limpahkan kepada kami karuniaMu yang luas, kebahagiaan melalui pertemuan denganMu, tambahan keberkatan dan nikmatMu dan agar Engkau memberikan cahaya (petunjuk) dalam hidup kami, pada saat kami dibangkitkan, pada saat kami mati, di dalam kubur kami, cahaya yang dengannya kami bertawassul kepadaMu dan cahaya yang dengannya kami akan mencapai kebahagiaan di sisiMu. Sesungguhnya kami berada di pintuMu bermohon, mengakui pemberianMu dan mengharap pertemuan denganMu."
+      },
+      {
+        "id": 1772984854987,
+        "arabic": "اللَّهُمَّ اجْعَلْ خَيْرَ أَعْمَارِنَا آخِرَهَا، وَ خَيْرَ أَعْمَالِنَا خَوَاتِمَهَا، وَ خَيْرَ أَيَّامِنَا يَوْمَ لِقَائِكَ. اللَّهُمَّ ثَبِّتْنَا بِأَمْرِكَ وَ أَيِّدْنَا بِنَصْرِكَ وَ ارْزُقْنَا مِنْ فَضْلِكَ وَ نَجِّنَا مِنْ عَذَابِكَ يَوْمَ تَبْعَثُ عِبَادَكَ",
+        "translationEn": "O Allah, make the last years of our life the best years of our life, the best of our deeds, the last deeds, the best of our days, the day of our meeting with You. O Allah, give us constancy through Your decree, and strengthen us with Your assistance and bestow upon us sustenance from Your bounties and save us from Your punishment on the Day You shall raise Your servants.",
+        "translationMy": "Ya Allah, jadikanlah tahun-tahun terakhir kami sebagai tahun terbaik dalam hidup kami, sebaik-baik amalan kami, amalan terakhir kami, sebaik-baik hari kami, hari pertemuan kami denganMu. Ya Allah, berikanlah keteguhan kepada kami dengan ketetapanMu, dan kuatkanlah kami dengan pertolonganMu dan berilah kami rezeki dari karuniaMu dan selamatkanlah kami dari seksaMu pada hari Engkau membangkitkan hamba-hambaMu."
+      },
+      {
+        "id": 1772984855163,
+        "arabic": "اللَّهُمَّ فَقَدْ أَتَيْنَاكَ لِرَحْمَتِكَ رَاجِينَ، وَ عَنْ أَوْطَانِنَا نَائِينَ وَ لِنُسُكِنَا مُؤَدِّینَ وَ لِفَرَائِضِكَ قَاضِینَ وَ لِكِتَابِكَ تَالِينَ وَ لَكَ دَاعِينَ وَ لِقَسْوَةِ قُلُوبِنَا شَاكِينَ وَ مِنْ ذُنُوبِنَا خَاشِينَ وَ لِأَنْفُسِنَا ظَالِمِينَ وَ بِجَرَائِمِنَا عَالِمِينَ دُعَاءَ مَنْ جُمِعَتْ عُيُوبُهُ وَ كَثُرَتْ ذُنُوبُهُ وَ تَصَرَّمَتْ آمَالُهُ وَ بَقِيَتْ آثَامُهُ وَ انْسَلَبَتْ دَمْعَتُهُ وَ انْقَطَعَتْ مُدَّتُهُ دُعَاءَ مَنْ لَا يَجِدُ لِنَفْسِهِ غَافِراً غَيْرَكَ، وَ لَا لِمَأْمُولِهِ مِنَ الْخَيْرَاتِ مُعْطِیاً سِوَاكَ وَ لِكَسْرِهِ جَابِراً إِلَّا أَنْتَ يَا أَرْحَمَ الرَّاحِمِينَ وَ لَا حَوْلَ وَ لَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ",
+        "translationEn": "O Allah, we have come to You hoping for Your mercy, at a distance from our homelands, performing our rites of pilgrimage and fulfilling our obligations, reciting Your Book (Holy Quran), supplicating to You, complaining of the hardness of our hearts, fearful of our sins having harmed ourselves, having full knowledge of our wrongdoings. We supplicate to You with the supplication of one whose faults are gathered before him, has committed lots of sins, whose hopes have been cut off and only his sins remain, whose tears are flowing, whose time is up, the supplication of one who has no forgiver besides You, no fulfiller of his hopes besides You, no mender of his faults besides You. O Most Merciful and there is neither might nor strength except with Allah, The Most High and Most Great.",
+        "translationMy": "Ya Allah, kami datang kepadaMu mengharap rahmatMu, jauh dari tanah air kami, menunaikan ibadah haji dan menunaikan kewajipan kami, membaca kitab-Mu (Al-Quran), memohon kepadaMu, mengadu keras hati kami, takut akan dosa-dosa kami, telah menzalimi diri kami, dan mengetahui sepenuhnya kesalahan-kesalahan kami. Kami memohon kepadaMu dengan doa orang yang terhimpun keaibannya di hadapannya, banyak dosanya, putus harapannya dan hanya tinggal dosanya, air matanya mengalir, sudah habis waktunya, doa orang yang tiada pengampun bagiya selain Engkau, tiada yang memenuhi harapannya selain Engkau, tiada yang dapat memperbaiki kekurangannya selain Engkau. Wahai Yang Maha Pengasih dan tiada daya dan tiada kekuatan melainkan dengan pertolongan Allah Yang Maha Tinggi lagi Maha Besar."
+      },
+      {
+        "id": 1772984855348,
+        "arabic": "اللَّهُمَّ لَا تُقَدِّمْنَا لِعَذَابِكَ وَ لَا تُؤَخِّرْنَا لِشَيْءٍ مِنَ الْفِتَنِ. مَوْلَانَا هَا نَحْنُ نَدْعُوكَ رَاغِبِينَ وَ نَنْصِبُ إِلَيْكَ وُجُوهَنَا طَالِبِينَ رَاهِبِينَ فَتَقَبَّلْ دُعَاءَنَا وَ أَصْلِحِ الْفَاسِدَ مِنْ أُمُورِنَا وَ اقْطَعْ مِنَ الدُّنْيَا هُمُومَنَا وَ حَاجَاتِنَا وَ اجْعَلْ فِيمَا عِنْدَكَ رَغْبَاتِنَا وَ اقْلِبْنَا مُنْقَلَبَ الْمَذْكُورِينَ عِنْدَكَ، الْمَقْبُولِينَ دُعَاؤُهُمْ، الْمَغْفُورِينَ ذُنُوبُهُمْ، الْمَبْرُورِينَ حَجُّهُمْ، الْمَمْحُوَّةِ سَيِّئَاتُهُمْ، الرَّاشِدِينَ أَمْرُهُمْ، مُنْقَلَبَ مَنْ لَا يَعْصِي لَكَ أَمْراً وَ لَا يَأْتِي بَعْدَهُ مَأْثَمًا وَ لَا يَحْمِلُ بَعْدَهُ وِزْرًا مُنْقَلَبَ مَنْ عَزَّزْتَ بِذِكْرِكَ لِسَانَهُ، وَ طَهَّرْتَ مِنَ الْأَدْنَاِس بَدَنَهُ، وَ اسْتَوْدَعْتَ الْهُدَى قَلْبَهُ، وَ شَرَحْتَ بِالْإِسْلَامِ صَدْرَهُ، وَ أَقْرَرْتَ بِرِضَاكَ وَ عَفْوِكَ قَبْلَ الْمَمَاتِ عَيْنَهُ، وَ عَفَفْتَ عَنِ الْمَثَامِ بَصَرَهُ، وَ اسْتَعْمَلْتَ فِي سَبِيلِكَ نَفْسَهُ",
+        "translationEn": "O Allah, do not send us forth to Your punishment and do not keep us back (prolong our lives) to face trials. O our Protector, we are here supplicating to You in hope, with faces directed towards You, seeking in fear, and so accept our supplications, make good our affairs that are bad, cut off our concerns and needs for the world, make us desire for that which is in Your presence and return us (to our homelands) with the return of those who are mentioned in Your presence, whose supplications are accepted, whose sins are forgiven, whose hajj is accepted, whose bad deeds are erased, whose affairs are guided, the return of he who would not disobey You in any affair and commit any sin after it, nor carry the burden of sin, the return of he whom You have honoured his tongue with Your remembrance, and purified his body from all impurities, placed guidance in his heart, opened his heart to Islam, delighted his eyes with Your pleasure and forgiveness before death, protected his eyes from sins and subjected him to Your service.",
+        "translationMy": "Ya Allah, janganlah Engkau hantarkan kami kepada azabMu dan janganlah Engkau tahankan kami (panjangkan umur kami) untuk menghadapi ujian. Wahai Pelindung kami, kami di sini memohon kepada-Mu dengan penuh harapan, dengan muka menghadap kepadaMu, meminta dalam keadaan ketakutan, maka terimalah permohonan kami, perbaikilah urusan kami yang buruk, putuskan kekhawatiran kami terhadap urusan dunia dan keperluan kami, jadikan keinginan kami untuk apa yang ada di sisiMu dan kembalikanlah kami (ke tanah air kami) dengan kembalinya orang-orang yang disebut di sisiMu, yang doanya dimakbulkan, yang diampuni dosanya, yang hajinya diterima, yang terpadam kejahatannya, yang urusannya mendapat petunjuk, kembalinya orang yang tidak mendurhakaiMu dalam suatu urusan pun dan tidak melakukan dosa sesudahnya, dan tidak pula memikul dosa, kembalinya orang yang telah Engkau muliakan lidahnya dengan zikir kepadaMu, dan membersihkan tubuhnya dari segala kotoran, meletakkan hidayah di dalam hatinya, membuka hatinya untuk Islam, menggembirakannya dengan keredhaan dan keampunanMu sebelum mati, memelihara matanya dari maksiat dan tundukkan dirinya kepada perkhidmatanMu."
+      },
+      {
+        "id": 1772985204056,
+        "arabic": "اللَّهُمَّ وَ قَدْ دَعَوْنَاكَ بِالدُّعَاءِ الَّذِي عَلَّمْتَنَاهُ فَلَا تَحْرِمْنَا مِنَ الرَّجَاءِ الَّذِي عَرَّفْتَنَاهُ، يَا مَنْ لَا تَنْفَعُهُ الطَّاعَةُ وَ لَا تَضُرُّهُ الْمَعْصِيَةُ وَ مَا أَعْطَيْتَنَا مِمَّا نُحِبُّ فَاجْعَلْهُ لَنَا عَوْناً فِيمَا تُحِبُّ وَاجْعَلْهُ لَنَا خَيْراً، وَ حَبِّبْ طَاعَتَكَ إِلَيْنَا وَ الْعَمَلَ بِهَا كَمَا حَبَّبْتَهَا إِلَى أَوْلِيَائِكَ حَتَّى رَأَوْا ثَوَابَهَا، وَ كَمَا هَدَيْتَنَا لِلْإِسْلَامِ فَلَا تَنْزِعْهُ مِنَّا حَتَّى تَقْبِضَنَا إِلَيْكَ وَ نَحْنُ عَلَيْهِ",
+        "translationEn": "O Allah, we have supplicated to You with the supplications that You have taught us and so do not deprive us of the realisation of the hopes that You have informed us of. O He Who gains no benefit from obedience and is not harmed by disobedience, make that which You bestow upon us from that which we love a source of assistance in doing that which You love and make it a source of goodness for us and make us love Your obedience and acts that constitute obedience just as You made Your close servants love them till they realised their reward and just as You have guided us to Islam, do not take it away from us until the time You take our souls in faith.",
+        "translationMy": "Ya Allah, kami telah memohon kepadaMu dengan doa-doa yang telah Engkau ajarkan kepada kami, maka janganlah Engkau singkirkan kami dari merealisasikan harapan-harapan yang telah Engkau memberitahu kepada kami. Wahai yang tidak mendapat manfaat dari ketaatan dan tidak dirugikan dengan kemaksiatan, jadikanlah apa yang Engkau anugerahkan kepada kami dari apa yang kami cintai sebagai penolong dalam melaksanakan apa yang Engkau cintai dan jadikanlah ia sumber kebaikan bagi kami dan jadikanlah kami cinta melakukan segala amal yang merupakan ketaatan kepadaMu sebagaimana Engkau telah menjadikannya (ketaatan) dicintai oleh wali-waliMu mereka sehingga mereka melihat pahalanya dan sebagaimana Engkau telah membimbing kami kepada Islam, janganlah Engkau cabutnya dari kami sehingga Engkau mengambil jiwa kami dalam keimanan."
+      },
+      {
+        "id": 1772985204265,
+        "arabic": "اللَّهُمَّ بِعِلْمِكَ الْغَيْبَ وَ قُدْرَتِكَ عَلَى الْخَلْقِ أَحْيِنَا مَا عَلِمْتَ الْحَيَاةَ خَيْراً لَنَا، وَ تَوَفَّنَا إِذَا عَلِمْتَ الْوَفَاةَ خَيْراً لَنَا. اللَّهُمَّ إِنَّا نَسْأَلُكَ خَشْيَتَكَ فِي الْغَيْبِ وَ الشَّهَادَةِ، وَ نَسْأَلُكَ كَلِمَةَ الْحَقِّ فِي الرِّضَا وَ الْغَضَبِ، وَ نَسْأَلُكَ الْقَصْدَ فِي الْفَقْرِ وَ الْغِنَى، وَ نَسْأَلُكَ نَعِيماً لَا يَنْفَدُ، وَ نَسْأَلُكَ قُرَّةَ عَيْنٍ لَا تَنْقَطِعُ، وَ نَسْأَلُكَ الرِّضَاءَ بَعْدَ الْقَضَاءِ، وَ نَسْأَلُكَ بَرْدَ الْعَيْشِ بَعْدَ الْمَوْتِ وَ نَسْأَلُكَ لَذَّةَ النَّظَرِ إِلَى وَجْهِكَ وَ الشَّوقَ إِلَى لِقَائِكَ فِي غَيْرِ ضَرَّاءَ مُضِرَّةٍ وَ لَا فِتْنَةٍ مُضِلَّةٍ",
+        "translationEn": "O Allah, by Your knowledge of the unseen and Your power over creation, keep us alive for as long as You know that life is good for us and take our souls when You know that death is good for us. O Allah, we ask that we fear You when alone (hidden) and when observed by others (in the open) and we ask You that we are able to say a word of truth when pleased and when angry and the ability to exercise moderation in poverty and wealth and we ask You for blessings that would never perish and permanent happiness and we ask You that we show pleasure upon the onset of Your decrees and we ask You for a happy life after death and we seek the delight of a vision of Your countenance and longing to meet You without facing afflictions that harm and trials that can lead one astray.",
+        "translationMy": "Ya Allah, dengan ilmuMu tentang yang ghaib dan kekuasaanMu atas segala makhluk, hidupkan kami selama Engkau mengetahui bahawa kehidupan itu baik untuk kami dan ambillah jiwa kami apabila Engkau mengetahui kematian itu baik untuk kami. Ya Allah, kami memohon kepadaMu agar kami takut kepadaMu ketika bersendirian (tersembunyi) dan apabila diperhatikan oleh orang lain (di tempat terbuka) dan kami memohon kepadaMu agar kami dapat mengucapkan kata-kata yang benar ketika redha dan ketika marah dan kemampuan untuk bersederhana dalam kemiskinan dan kekayaan dan kami memohon kepadaMu nikmat yang tidak akan binasa dan kebahagiaan yang kekal dan kami memohon kepadaMu agar kami dapat menunjukkan keredhaan pada waktu kami meghadap takdirMu dan kami memohon kepadaMu kehidupan yang bahagia selepas mati dan kami memohon agar mencapai kelazatan memandang wajahMu dan kerinduan untuk bertemu denganMu tanpa menghadap kesusahan yang membahayakan atau cubaan yang menyesatkan."
+      },
+      {
+        "id": 1772985204465,
+        "arabic": "اللَّهُمَّ حَبِّبْ إِلَيْنَا الْإِيمَانَ وَ زَيِّنْهُ فِي قُلُوبِنَا وَ كَرِّهْ إِلَيْنَا الْكُفْرَ وَ الْفُسُوقَ وَ الْعِصْيَانَ وَ اجْعَلْنَا مِنَ الرَّاشِدِينَ",
+        "translationEn": "O Allah, make us love faith and beautify it in our hearts and make us hate disbelief, sin and disobedience and make us from those who are rightly guided.",
+        "translationMy": "Ya Allah, jadikanlah kami mencintai iman dan hiasilah ia dalam hati kami dan jadikanlah kami benci kepada kekufuran, dosa dan kemaksiatan dan jadikanlah kami dari orang-orang yang mendapat petunjuk."
+      },
+      {
+        "id": 1772985321376,
+        "arabic": "هُمَّ اخْتِمْ بِالْخَيْرَاتِ آجَالَنَا، وَ حَقِّقْ بِفَضْلِكَ آمَالَنَا، وَ سَهِّلْ لِبُلُوغِ رِضَاكَ سُبُلَنَا، وَ حَسِّنْ فِي جَمِيعِ الْأَحْوَالِ أَعْمَالَنَا، يَا مُنْقِذَ الْغَرْقَى، يَا مُنْجِيَ الْهَلْكَى، يَا شَاهِدَ كُلِّ نَجْوَى، يَا مُنْتَهَى كُلِّ شَكْوَى، يَا قَدِيمَ الْإِحْسَانِ، يَا دَائِمَ الْمَعْرُوفِ، يَا مَنْ لَا غَنِيَّ بِشَيْءٍ عَنْهُ وَ لَا بُدَّ لِكُلِّ شَيْءٍ مِنْهُ، يَا مَنْ رِزْقُ كُلِّ شَيْءٍ عَلَيْهِ وَ مَصِيرُ كُلِّ شَيْءٍ إِلَيْهِ، نَسْأَلُكَ أَنْ تَجْعَلَنَا فِي كَنَفِكَ وَ جُودِكَ وَ حِرْزِكَ وَ عِيَاذِكَ وَ سِتْرِكَ وَ أَمَانِكَ",
+        "translationEn": "Ya Allah, akhirkanlah hidup kami dengan amal yang soleh dan penuhilah harapan kami dengan limpah kurniaMu, dan permudahkanlah untuk kami mencapai keredhaanMu, dan perbaikilah amalan kami dalam semua keadaan. Wahai Penyelamat orang yang tenggelam, wahai Penyelamat mereka yang hampir binasa, wahai saksi setiap perundingan rahsia, wahai destinasi setiap keluhan, wahai yang nikmatNya sejak dahulu kala, yang perbuatan-perbuatan baiknya kekal, wahai yang tanpaNya tidak ada kecukupan bagi sesuatu apapun, Wahai yang bergantung kepadanya segala sesuatu, wahai yang rezeki segala sesuatu bergantung kepadaNya, dan kepadaNya kembali segala sesuatu, kami memohon agar Engkau menempatkan kami di bawah sayap naungan, kemurahan, jagaan, perlindungan dan keamananMu.",
+        "translationMy": "O Allah, make our lives end upon good deeds and fulfill our hopes through Your bounties, and make it easy for us to attain Your pleasure, and make good our deeds in all states. O Saviour of the drowning, O Saviour of those on the verge of perishment, O Witness to every secret consultation, O destination of every complaint, O Whose favours are from time immemorial, whose kind acts are perpetual, O He without Whom nothing suffices, O upon Whom all things are dependent, O upon Whom all are dependent for their sustenance, and to Whom all things return, we ask that You put us under the wing of Your shelter, generosity, guard, protection, cover and security."
+      }
+    ],
+    "titleMy": "Doa-Doa"
   }
 ]
