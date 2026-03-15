@@ -3,9 +3,23 @@ import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { DuaType } from "../../app/types";
 
+interface Subcategory {
+  key: string;
+  nameEn: string;
+  nameMy: string;
+}
+
+interface Category {
+  key: string;
+  nameEn: string;
+  nameMy: string;
+  global?: boolean;
+  subcategories: Subcategory[];
+}
+
 export default function Home() {
   const [duas, setDuas] = useState<DuaType[]>([]);
-  const [categoryOptions, setCategoryOptions] = useState<string[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [language, setLanguage] = useState<"en" | "my">("en");
@@ -15,7 +29,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then(setDuas);
-    fetch("/api/categories/keys").then(r => r.json()).then(setCategoryOptions);
+    fetch("/api/categories").then(r => r.json()).then(setCategories);
   }, []);
 
   const filteredDuas = useMemo(() => {
@@ -36,12 +50,22 @@ export default function Home() {
     });
   }, [duas, searchQuery, selectedCategories, language, filterNoAudio]);
 
-  function toggleCategory(category: string) {
-    setSelectedCategories(prev => 
-      prev.includes(category) 
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
-    );
+  function toggleCategory(categoryKey: string, isSubcategory: boolean = false, parentKey?: string) {
+    setSelectedCategories(prev => {
+      if (prev.includes(categoryKey)) {
+        // Deselecting
+        if (!isSubcategory) {
+          // Deselecting parent: also deselect all its subcategories
+          const parent = categories.find(c => c.key === categoryKey);
+          const subcatKeys = parent?.subcategories.map(s => s.key) || [];
+          return prev.filter(c => c !== categoryKey && !subcatKeys.includes(c));
+        }
+        return prev.filter(c => c !== categoryKey);
+      } else {
+        // Selecting - just add the category
+        return [...prev, categoryKey];
+      }
+    });
   }
 
   function clearAllFilters() {
@@ -177,7 +201,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Category Filter - Multi Select */}
+          {/* Category Filter - Multi Select with Subcategories */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-foreground">Filter by Categories</span>
@@ -190,22 +214,46 @@ export default function Home() {
                 </button>
               )}
             </div>
-            <div className="flex flex-wrap gap-2">
-              {categoryOptions.map(category => (
-                <button
-                  key={category}
-                  onClick={() => toggleCategory(category)}
-                  className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-colors ${
-                    selectedCategories.includes(category)
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  }`}
-                >
-                  {category}
-                  {selectedCategories.includes(category) && (
-                    <span className="ml-1.5">×</span>
+            <div className="space-y-3">
+              {categories.map(category => (
+                <div key={category.key} className="space-y-1.5">
+                  {/* Parent Category */}
+                  <button
+                    onClick={() => toggleCategory(category.key, false)}
+                    className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
+                      selectedCategories.includes(category.key)
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    }`}
+                  >
+                    {language === "en" ? category.nameEn : category.nameMy}
+                    {selectedCategories.includes(category.key) && (
+                      <span className="ml-1.5">×</span>
+                    )}
+                  </button>
+                  
+                  {/* Subcategories */}
+                  {category.subcategories.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 pl-4 border-l-2 border-border ml-2">
+                      {category.subcategories.map(sub => (
+                        <button
+                          key={sub.key}
+                          onClick={() => toggleCategory(sub.key, true, category.key)}
+                          className={`rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors ${
+                            selectedCategories.includes(sub.key)
+                              ? "bg-primary/80 text-primary-foreground"
+                              : "bg-muted text-muted-foreground hover:bg-muted/80"
+                          }`}
+                        >
+                          {language === "en" ? sub.nameEn : sub.nameMy}
+                          {selectedCategories.includes(sub.key) && (
+                            <span className="ml-1">×</span>
+                          )}
+                        </button>
+                      ))}
+                    </div>
                   )}
-                </button>
+                </div>
               ))}
             </div>
             {selectedCategories.length > 0 && (

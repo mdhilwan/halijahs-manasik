@@ -6,6 +6,20 @@ import { Scheherazade_New } from 'next/font/google';
 import DoaPreview from "../../component/doa-preview";
 import { DuaType } from "../../../../app/types";
 
+interface Subcategory {
+  key: string;
+  nameEn: string;
+  nameMy: string;
+}
+
+interface Category {
+  key: string;
+  nameEn: string;
+  nameMy: string;
+  global?: boolean;
+  subcategories: Subcategory[];
+}
+
 const scheherazadeNew = Scheherazade_New({
   weight: "400",
   subsets: ["arabic"]
@@ -15,9 +29,10 @@ export default function EditPage() {
   const { id } = useParams();
   const router = useRouter();
   const [dua, setDua] = useState<DuaType | null>(null);
-  const [categoryOptions, setCategoryOptions] = useState<string[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [isSaving, setIsSaving] = useState(false);
+  const [language, setLanguage] = useState<"en" | "my">("en");
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then((data) => {
@@ -25,7 +40,7 @@ export default function EditPage() {
       setDua(foundDua);
       setSelectedCategories(foundDua?.categoryKey ?? []);
     });
-    fetch("/api/categories/keys").then(r => r.json()).then(setCategoryOptions);
+    fetch("/api/categories").then(r => r.json()).then(setCategories);
   }, [id]);
 
   const canSave = selectedCategories.length > 0;
@@ -58,13 +73,33 @@ export default function EditPage() {
     router.push("/");
   }
 
-  function toggleCategory(category: string) {
+  function toggleCategory(categoryKey: string, isSubcategory: boolean = false, parentKey?: string) {
     let newSelectedCategories: string[];
-    if (selectedCategories.includes(category)) {
-      newSelectedCategories = selectedCategories.filter(c => c !== category);
+    
+    if (selectedCategories.includes(categoryKey)) {
+      // Deselecting
+      if (!isSubcategory) {
+        // Deselecting parent: also deselect all its subcategories
+        const parent = categories.find(c => c.key === categoryKey);
+        const subcatKeys = parent?.subcategories.map(s => s.key) || [];
+        newSelectedCategories = selectedCategories.filter(c => c !== categoryKey && !subcatKeys.includes(c));
+      } else {
+        newSelectedCategories = selectedCategories.filter(c => c !== categoryKey);
+      }
     } else {
-      newSelectedCategories = [...selectedCategories, category];
+      // Selecting
+      if (isSubcategory && parentKey) {
+        // Selecting subcategory: auto-add parent if not already selected
+        if (!selectedCategories.includes(parentKey)) {
+          newSelectedCategories = [...selectedCategories, parentKey, categoryKey];
+        } else {
+          newSelectedCategories = [...selectedCategories, categoryKey];
+        }
+      } else {
+        newSelectedCategories = [...selectedCategories, categoryKey];
+      }
     }
+    
     setSelectedCategories(newSelectedCategories);
     setDua({ ...dua, categoryKey: newSelectedCategories });
   }
@@ -167,28 +202,73 @@ export default function EditPage() {
 
             {/* Categories Card */}
             <div className={`rounded-xl border bg-card p-6 ${!canSave ? 'border-destructive/50' : 'border-border'}`}>
-              <h2 className="text-lg font-semibold text-foreground mb-1 flex items-center gap-2">
-                <TagIcon className="h-5 w-5 text-muted-foreground" />
-                Categories
-                <span className="text-destructive text-sm">*</span>
-              </h2>
+              <div className="flex items-center justify-between mb-1">
+                <h2 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                  <TagIcon className="h-5 w-5 text-muted-foreground" />
+                  Categories
+                  <span className="text-destructive text-sm">*</span>
+                </h2>
+                <div className="flex rounded-lg border border-border overflow-hidden">
+                  <button
+                    onClick={() => setLanguage("en")}
+                    className={`px-3 py-1 text-xs font-medium transition-colors ${
+                      language === "en" 
+                        ? "bg-primary text-primary-foreground" 
+                        : "bg-card text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => setLanguage("my")}
+                    className={`px-3 py-1 text-xs font-medium transition-colors ${
+                      language === "my" 
+                        ? "bg-primary text-primary-foreground" 
+                        : "bg-card text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    MY
+                  </button>
+                </div>
+              </div>
               {!canSave && (
                 <p className="text-xs text-destructive mb-3">At least one category is required</p>
               )}
               
-              <div className="flex flex-wrap gap-2">
-                {categoryOptions.map(category => (
-                  <button
-                    key={category}
-                    onClick={() => toggleCategory(category)}
-                    className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-colors ${
-                      selectedCategories.includes(category)
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                    }`}
-                  >
-                    {category}
-                  </button>
+              <div className="space-y-3">
+                {categories.map(category => (
+                  <div key={category.key} className="space-y-1.5">
+                    {/* Parent Category */}
+                    <button
+                      onClick={() => toggleCategory(category.key, false)}
+                      className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
+                        selectedCategories.includes(category.key)
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                      }`}
+                    >
+                      {language === "en" ? category.nameEn : category.nameMy}
+                    </button>
+                    
+                    {/* Subcategories */}
+                    {category.subcategories.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 pl-4 border-l-2 border-border ml-2">
+                        {category.subcategories.map(sub => (
+                          <button
+                            key={sub.key}
+                            onClick={() => toggleCategory(sub.key, true, category.key)}
+                            className={`rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors ${
+                              selectedCategories.includes(sub.key)
+                                ? "bg-primary/80 text-primary-foreground"
+                                : "bg-muted text-muted-foreground hover:bg-muted/80"
+                            }`}
+                          >
+                            {language === "en" ? sub.nameEn : sub.nameMy}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
               
