@@ -24,7 +24,9 @@
       }
     ],
     "categoryKey": [
-      "talbiyah"
+      "talbiyah",
+      "umrah",
+      "haji"
     ],
     "audio": "talbiyah.mp3"
   },
@@ -41,7 +43,9 @@
       }
     ],
     "categoryKey": [
-      "ihram"
+      "ihram",
+      "umrah",
+      "haji"
     ],
     "audio": "niat_solat_sunat_ihram.mp3"
   },
@@ -59,7 +63,8 @@
     ],
     "categoryKey": [
       "ihram",
-      "umrah"
+      "umrah",
+      "haji"
     ],
     "audio": "niat_ihram_umrah.mp3"
   },
@@ -77,7 +82,8 @@
     ],
     "categoryKey": [
       "ihram",
-      "umrah"
+      "umrah",
+      "haji"
     ],
     "audio": "niat_umrah_badal.mp3"
   },
@@ -95,7 +101,8 @@
     ],
     "categoryKey": [
       "ihram",
-      "umrah"
+      "umrah",
+      "haji"
     ],
     "audio": "niat_umrah_bersyarat.mp3"
   },
@@ -166,7 +173,9 @@
       }
     ],
     "categoryKey": [
-      "masjidil haram"
+      "masjidil haram",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_memasuki_masjidil_haram.mp3"
   },
@@ -183,7 +192,9 @@
       }
     ],
     "categoryKey": [
-      "masjidil haram"
+      "masjidil haram",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_iktikaf.mp3"
   },
@@ -200,7 +211,9 @@
       }
     ],
     "categoryKey": [
-      "masjidil haram"
+      "masjidil haram",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_ketika_melihat_kaabah.mp3"
   },
@@ -217,7 +230,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sebelum_memulakan_tawaf.mp3"
   },
@@ -235,7 +250,8 @@
     ],
     "categoryKey": [
       "niat",
-      "tawaf"
+      "tawaf",
+      "haji"
     ],
     "audio": "niat_tawaf_qudum.mp3"
   },
@@ -253,7 +269,8 @@
     ],
     "categoryKey": [
       "niat",
-      "tawaf"
+      "tawaf",
+      "haji"
     ],
     "audio": "niat_tawaf_haji.mp3"
   },
@@ -271,7 +288,9 @@
     ],
     "categoryKey": [
       "niat",
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "niat_tawaf_umrah.mp3"
   },
@@ -289,7 +308,9 @@
     ],
     "categoryKey": [
       "niat",
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "niat_tawaf_sunnah.mp3"
   },
@@ -306,7 +327,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_tawaf_pusingan_pertama.mp3"
   },
@@ -323,7 +346,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -340,7 +365,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_tawaf_pusingan_kedua.mp3"
   },
@@ -357,7 +384,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -374,7 +403,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_tawaf_pusingan_ketiga.mp3"
   },
@@ -391,7 +422,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -408,7 +441,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_tawaf_pusingan_keempat.mp3"
   },
@@ -425,7 +460,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -442,7 +479,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_tawaf_pusingan_kelima.mp3"
   },
@@ -459,7 +498,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -476,7 +517,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_tawaf_pusingan_keenam.mp3"
   },
@@ -493,7 +536,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -510,7 +555,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_tawaf_pusingan_ketujuh.mp3"
   },
@@ -527,7 +574,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -544,7 +593,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "niat_solat_sunnat_tawaf.mp3"
   },
@@ -561,7 +612,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf"
+      "tawaf",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_setelah_solat_sunat_tawaf.mp3"
   },
@@ -586,7 +639,9 @@
       }
     ],
     "categoryKey": [
-      "zam-zam"
+      "zam-zam",
+      "umrah",
+      "haji"
     ],
     "audio": ""
   },
@@ -603,7 +658,9 @@
       }
     ],
     "categoryKey": [
-      "zam-zam"
+      "zam-zam",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_ketika_minum_air_zamzam.mp3"
   },
@@ -620,7 +677,8 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "haji"
     ],
     "audio": "niat_sai_haji.mp3"
   },
@@ -637,7 +695,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "niat_sai_umrah.mp3"
   },
@@ -654,7 +714,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_memulakan_sai.mp3"
   },
@@ -671,7 +733,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sai_pertama.mp3"
   },
@@ -688,7 +752,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_antara_tiang_hijau.mp3"
   },
@@ -705,7 +771,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_setelah_melintas_tiang_hijau.mp3"
   },
@@ -722,7 +790,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
@@ -739,7 +809,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sai_kedua.mp3"
   },
@@ -756,7 +828,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_antara_tiang_hijau.mp3"
   },
@@ -773,7 +847,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
@@ -790,7 +866,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sai_ketiga.mp3"
   },
@@ -807,7 +885,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sai_keempat.mp3"
   },
@@ -824,7 +904,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_setelah_melepasi_tiang_hijau_3.mp3"
   },
@@ -841,7 +923,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
@@ -858,7 +942,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sai_keempat.mp3"
   },
@@ -875,7 +961,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_antara_tiang_hijau.mp3"
   },
@@ -892,7 +980,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
@@ -909,7 +999,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sai_kelima.mp3"
   },
@@ -926,7 +1018,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_antara_tiang_hijau.mp3"
   },
@@ -943,7 +1037,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_setelah_melepasi_tiang_hijau_5.mp3"
   },
@@ -960,7 +1056,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
@@ -977,7 +1075,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sai_keenam.mp3"
   },
@@ -994,7 +1094,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_antara_tiang_hijau.mp3"
   },
@@ -1011,7 +1113,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
@@ -1028,7 +1132,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sai_ketujuh.mp3"
   },
@@ -1045,7 +1151,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_antara_tiang_hijau.mp3"
   },
@@ -1062,7 +1170,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_setelah_melepasi_tiang_hijau_7.mp3"
   },
@@ -1079,7 +1189,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_naik_bukit_safa_marwah.mp3"
   },
@@ -1096,7 +1208,9 @@
       }
     ],
     "categoryKey": [
-      "sa'i"
+      "sa'i",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_selesai_sai.mp3"
   },
@@ -1113,7 +1227,9 @@
       }
     ],
     "categoryKey": [
-      "tahalul"
+      "tahalul",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_ketika_bercukur.mp3"
   },
@@ -1130,7 +1246,9 @@
       }
     ],
     "categoryKey": [
-      "tahalul"
+      "tahalul",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_setelah_bercukur.mp3"
   },
@@ -1147,7 +1265,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf wadak"
+      "tawaf wadak",
+      "umrah",
+      "haji"
     ],
     "audio": "niat_tawaf_wada.mp3"
   },
@@ -1164,7 +1284,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf wadak"
+      "tawaf wadak",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_sebelum_memulakan_tawaf.mp3"
   },
@@ -1181,7 +1303,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf wadak"
+      "tawaf wadak",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_tawaf_wadak.mp3"
   },
@@ -1198,7 +1322,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf wadak"
+      "tawaf wadak",
+      "umrah",
+      "haji"
     ],
     "audio": "niat_solat_sunnat_tawaf.mp3"
   },
@@ -1215,7 +1341,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf wadak"
+      "tawaf wadak",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_selepas_selesai_tawaf_wadak.mp3"
   },
@@ -1232,7 +1360,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_ketika_melihat_kota_madinah.mp3"
   },
@@ -1249,7 +1379,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "upon_entering_masjid_nabawi.mp3"
   },
@@ -1266,7 +1398,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_khas_di_raudah.mp3"
   },
@@ -1283,7 +1417,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "salam_to_rasulullah.mp3"
   },
@@ -1300,7 +1436,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "salam_to_abu_bakar.mp3"
   },
@@ -1317,7 +1455,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "salam_to_umar.mp3"
   },
@@ -1334,7 +1474,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_di_makam_nabi.mp3"
   },
@@ -1351,7 +1493,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "sampaikan_salam.mp3"
   },
@@ -1368,7 +1512,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "di_baqi.mp3"
   },
@@ -1385,7 +1531,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_kpd_Rasulullah_saw_ketika_ziarahi_masjid_masjid_d_madinah.mp3"
   },
@@ -1402,7 +1550,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "salam_dan_doa_d_perkuburan_syuhada_uhud.mp3"
   },
@@ -1419,7 +1569,9 @@
       }
     ],
     "categoryKey": [
-      "madinah"
+      "madinah",
+      "umrah",
+      "haji"
     ],
     "audio": "ziarah_wadak.mp3"
   },
@@ -1436,7 +1588,9 @@
       }
     ],
     "categoryKey": [
-      "travel"
+      "travel",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_naik_kenderaan.mp3"
   },
@@ -1453,7 +1607,9 @@
       }
     ],
     "categoryKey": [
-      "travel"
+      "travel",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_dalam_perjalanan.mp3"
   },
@@ -1470,7 +1626,9 @@
       }
     ],
     "categoryKey": [
-      "travel"
+      "travel",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_ketika_masuk_negeri_baru.mp3"
   },
@@ -1487,7 +1645,9 @@
       }
     ],
     "categoryKey": [
-      "travel"
+      "travel",
+      "umrah",
+      "haji"
     ],
     "audio": "masuk_tanah_haram.mp3"
   },
@@ -1504,7 +1664,9 @@
       }
     ],
     "categoryKey": [
-      "travel"
+      "travel",
+      "umrah",
+      "haji"
     ],
     "audio": "doa_ketika_nampak_kota_makkah.mp3"
   },
@@ -1527,12 +1689,13 @@
     ],
     "titleMy": "Di Muzdalifah",
     "categoryKey": [
-      "muzdalifah"
+      "muzdalifah",
+      "haji"
     ]
   },
   {
     "id": 1772936087340,
-    "titleEn": "After Jamrah",
+    "titleEn": "After Stoning",
     "doa": [
       {
         "id": 1772936106831,
@@ -1573,7 +1736,8 @@
     ],
     "titleMy": "Selepas Melontar",
     "categoryKey": [
-      "jamrah"
+      "stoning",
+      "haji"
     ]
   },
   {
@@ -1589,7 +1753,8 @@
     ],
     "titleMy": "Ketika Memasuki Mina",
     "categoryKey": [
-      "mina"
+      "mina",
+      "haji"
     ]
   },
   {
@@ -1731,7 +1896,8 @@
     ],
     "titleMy": "Zikir-Zikir Pada Hari-Hari Tasyrik",
     "categoryKey": [
-      "mina"
+      "mina",
+      "haji"
     ]
   },
   {
@@ -1795,7 +1961,9 @@
     ],
     "titleMy": "Niat-Niat Solat Jamak Dan Qasar Takhir",
     "categoryKey": [
-      "travel"
+      "travel",
+      "umrah",
+      "haji"
     ]
   },
   {
@@ -1805,8 +1973,8 @@
       {
         "id": 1772939126943,
         "arabic": "",
-        "translationEn": "These intentions are for prayers combined (jama') and shortened (qasar) and delayed (done during Asar and Ishak time):",
-        "translationMy": "Niat-niat ini adalah untuk solat yang dihimpunkan (jamak), dipendekkan (qasar) dan dilewatkan (dikerjakan pada waktu Asar dan Isyak):"
+        "translationEn": "These intentions are for prayers combined (jama') and shortened (qasar) and delayed (done during Asar and Ishak time).\nThe intention to delay the prayer must be made in the heart while the time of the first prayer is still ongoing, i.e., during the time of Zuhur and Maghrib.",
+        "translationMy": "Niat-niat ini adalah untuk solat yang dihimpunkan (jamak), dipendekkan (qasar) dan dilewatkan (dikerjakan pada waktu Asar dan Isyak). Niat untuk melewatkan solat hendaklah dibuat di dalam hati ketika masih dalam waktu solat yang pertama, iaitu dalam waktu Zuhur and Maghrib. "
       },
       {
         "id": 1772939257095,
@@ -1859,7 +2027,9 @@
     ],
     "titleMy": "Niat-Niat Solat Jamak Dan Qasar Takhir",
     "categoryKey": [
-      "travel"
+      "travel",
+      "umrah",
+      "haji"
     ]
   },
   {
@@ -1875,7 +2045,8 @@
     ],
     "titleMy": "Dalam Perjalanan Ke Arafah",
     "categoryKey": [
-      "arafah"
+      "arafah",
+      "haji"
     ]
   },
   {
@@ -1927,7 +2098,8 @@
     ],
     "titleMy": "Amalan-Alaman Hari Arafah",
     "categoryKey": [
-      "arafah"
+      "arafah",
+      "haji"
     ]
   },
   {
@@ -2105,7 +2277,8 @@
     ],
     "titleMy": "Istigfaar al Jaami'",
     "categoryKey": [
-      "arafah"
+      "arafah",
+      "haji"
     ]
   },
   {
@@ -2205,7 +2378,8 @@
     ],
     "titleMy": "Zikir-Zikir",
     "categoryKey": [
-      "arafah"
+      "arafah",
+      "haji"
     ]
   },
   {
@@ -2377,7 +2551,8 @@
     ],
     "titleMy": "Doa-Doa",
     "categoryKey": [
-      "arafah"
+      "arafah",
+      "haji"
     ]
   }
 ]

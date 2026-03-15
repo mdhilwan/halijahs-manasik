@@ -5,7 +5,20 @@ import Link from "next/link";
 import { Scheherazade_New } from 'next/font/google';
 import DoaPreview from "../../component/doa-preview";
 import { DuaType } from "../../../../app/types";
-import { CategoryOptions } from "../../page";
+
+interface Subcategory {
+  key: string;
+  nameEn: string;
+  nameMy: string;
+}
+
+interface Category {
+  key: string;
+  nameEn: string;
+  nameMy: string;
+  global?: boolean;
+  subcategories: Subcategory[];
+}
 
 const scheherazadeNew = Scheherazade_New({
   weight: "400",
@@ -16,8 +29,11 @@ export default function EditPage() {
   const { id } = useParams();
   const router = useRouter();
   const [dua, setDua] = useState<DuaType | null>(null);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [isSaving, setIsSaving] = useState(false);
+  const [language, setLanguage] = useState<"en" | "my">("en");
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then((data) => {
@@ -25,6 +41,7 @@ export default function EditPage() {
       setDua(foundDua);
       setSelectedCategories(foundDua?.categoryKey ?? []);
     });
+    fetch("/api/categories").then(r => r.json()).then(setCategories);
   }, [id]);
 
   const canSave = selectedCategories.length > 0;
@@ -57,15 +74,43 @@ export default function EditPage() {
     router.push("/");
   }
 
-  function toggleCategory(category: string) {
+  function toggleCategory(categoryKey: string, isSubcategory: boolean = false, parentKey?: string) {
     let newSelectedCategories: string[];
-    if (selectedCategories.includes(category)) {
-      newSelectedCategories = selectedCategories.filter(c => c !== category);
+    
+    if (selectedCategories.includes(categoryKey)) {
+      // Deselecting
+      if (!isSubcategory) {
+        // Deselecting parent: also deselect all its subcategories
+        const parent = categories.find(c => c.key === categoryKey);
+        const subcatKeys = parent?.subcategories.map(s => s.key) || [];
+        newSelectedCategories = selectedCategories.filter(c => c !== categoryKey && !subcatKeys.includes(c));
+      } else {
+        newSelectedCategories = selectedCategories.filter(c => c !== categoryKey);
+      }
     } else {
-      newSelectedCategories = [...selectedCategories, category];
+      // Selecting
+      if (isSubcategory && parentKey) {
+        // Selecting subcategory: auto-add parent if not already selected
+        if (!selectedCategories.includes(parentKey)) {
+          newSelectedCategories = [...selectedCategories, parentKey, categoryKey];
+        } else {
+          newSelectedCategories = [...selectedCategories, categoryKey];
+        }
+      } else {
+        newSelectedCategories = [...selectedCategories, categoryKey];
+      }
     }
+    
     setSelectedCategories(newSelectedCategories);
     setDua({ ...dua, categoryKey: newSelectedCategories });
+  }
+
+  function toggleExpanded(categoryKey: string) {
+    setExpandedCategories(prev =>
+      prev.includes(categoryKey)
+        ? prev.filter(k => k !== categoryKey)
+        : [...prev, categoryKey]
+    );
   }
 
   return (
@@ -166,28 +211,88 @@ export default function EditPage() {
 
             {/* Categories Card */}
             <div className={`rounded-xl border bg-card p-6 ${!canSave ? 'border-destructive/50' : 'border-border'}`}>
-              <h2 className="text-lg font-semibold text-foreground mb-1 flex items-center gap-2">
-                <TagIcon className="h-5 w-5 text-muted-foreground" />
-                Categories
-                <span className="text-destructive text-sm">*</span>
-              </h2>
+              <div className="flex items-center justify-between mb-1">
+                <h2 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                  <TagIcon className="h-5 w-5 text-muted-foreground" />
+                  Categories
+                  <span className="text-destructive text-sm">*</span>
+                </h2>
+                <div className="flex rounded-lg border border-border overflow-hidden">
+                  <button
+                    onClick={() => setLanguage("en")}
+                    className={`px-3 py-1 text-xs font-medium transition-colors ${
+                      language === "en" 
+                        ? "bg-primary text-primary-foreground" 
+                        : "bg-card text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => setLanguage("my")}
+                    className={`px-3 py-1 text-xs font-medium transition-colors ${
+                      language === "my" 
+                        ? "bg-primary text-primary-foreground" 
+                        : "bg-card text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    MY
+                  </button>
+                </div>
+              </div>
               {!canSave && (
                 <p className="text-xs text-destructive mb-3">At least one category is required</p>
               )}
               
-              <div className="flex flex-wrap gap-2">
-                {CategoryOptions.map(category => (
-                  <button
-                    key={category}
-                    onClick={() => toggleCategory(category)}
-                    className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-colors ${
-                      selectedCategories.includes(category)
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                    }`}
-                  >
-                    {category}
-                  </button>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                {categories.map(category => (
+                  <div key={category.key} className="space-y-1.5 p-2 rounded-lg border border-border bg-card/50">
+                    {/* Parent Category */}
+                    <div className="flex items-center gap-1">
+                      <button
+                        onClick={() => toggleCategory(category.key, false)}
+                        className={`flex-1 rounded-md px-2 py-1.5 text-xs font-medium transition-colors text-left ${
+                          selectedCategories.includes(category.key)
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                        }`}
+                      >
+                        {language === "en" ? category.nameEn : category.nameMy}
+                      </button>
+                      {category.subcategories.length > 0 && (
+                        <button
+                          onClick={() => toggleExpanded(category.key)}
+                          className="shrink-0 p-1 rounded hover:bg-secondary transition-colors"
+                          aria-label={expandedCategories.includes(category.key) ? "Collapse subcategories" : "Expand subcategories"}
+                        >
+                          <ChevronIcon 
+                            className={`h-4 w-4 text-muted-foreground transition-transform ${
+                              expandedCategories.includes(category.key) ? "rotate-180" : ""
+                            }`} 
+                          />
+                        </button>
+                      )}
+                    </div>
+                    
+                    {/* Subcategories - Collapsible */}
+                    {category.subcategories.length > 0 && expandedCategories.includes(category.key) && (
+                      <div className="flex flex-col gap-1 pl-2 border-l-2 border-border">
+                        {category.subcategories.map(sub => (
+                          <button
+                            key={sub.key}
+                            onClick={() => toggleCategory(sub.key, true, category.key)}
+                            className={`w-full rounded-md px-2 py-1 text-[11px] font-medium transition-colors text-left ${
+                              selectedCategories.includes(sub.key)
+                                ? "bg-primary/80 text-primary-foreground"
+                                : "bg-muted text-muted-foreground hover:bg-muted/80"
+                            }`}
+                          >
+                            {language === "en" ? sub.nameEn : sub.nameMy}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
               
@@ -382,6 +487,14 @@ function PlusIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+    </svg>
+  );
+}
+
+function ChevronIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
   );
 }

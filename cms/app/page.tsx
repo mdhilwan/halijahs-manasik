@@ -3,25 +3,35 @@ import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { DuaType } from "../../app/types";
 
-export const CategoryOptions = [
-  "arafah", "mina", "muzdalifah", "jamrah", "talbiyah", "ihram", "umrah", "haji",
-  "masjidil haram", "tawaf", "niat", "zam-zam", "sa'i", "tahalul", "tawaf wadak", "madinah", "travel"
-];
+interface Subcategory {
+  key: string;
+  nameEn: string;
+  nameMy: string;
+}
+
+interface Category {
+  key: string;
+  nameEn: string;
+  nameMy: string;
+  global?: boolean;
+  subcategories: Subcategory[];
+}
 
 export default function Home() {
   const [duas, setDuas] = useState<DuaType[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [language, setLanguage] = useState<"en" | "my">("en");
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [newDuaTitle, setNewDuaTitle] = useState({ en: "", my: "" });
   const [filterNoAudio, setFilterNoAudio] = useState(false);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [isFilterExpanded, setIsFilterExpanded] = useState(false);
 
   useEffect(() => {
-    fetch("/api/duas").then(r => r.json()).then((res) => {
-      console.log(res)
-      setDuas(res)
-    });
+    fetch("/api/duas").then(r => r.json()).then(setDuas);
+    fetch("/api/categories").then(r => r.json()).then(setCategories);
   }, []);
 
   const filteredDuas = useMemo(() => {
@@ -42,18 +52,36 @@ export default function Home() {
     });
   }, [duas, searchQuery, selectedCategories, language, filterNoAudio]);
 
-  function toggleCategory(category: string) {
-    setSelectedCategories(prev => 
-      prev.includes(category) 
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
-    );
+  function toggleCategory(categoryKey: string, isSubcategory: boolean = false, parentKey?: string) {
+    setSelectedCategories(prev => {
+      if (prev.includes(categoryKey)) {
+        // Deselecting
+        if (!isSubcategory) {
+          // Deselecting parent: also deselect all its subcategories
+          const parent = categories.find(c => c.key === categoryKey);
+          const subcatKeys = parent?.subcategories.map(s => s.key) || [];
+          return prev.filter(c => c !== categoryKey && !subcatKeys.includes(c));
+        }
+        return prev.filter(c => c !== categoryKey);
+      } else {
+        // Selecting - just add the category
+        return [...prev, categoryKey];
+      }
+    });
   }
 
   function clearAllFilters() {
     setSelectedCategories([]);
     setFilterNoAudio(false);
     setSearchQuery("");
+  }
+
+  function toggleExpanded(categoryKey: string) {
+    setExpandedCategories(prev =>
+      prev.includes(categoryKey)
+        ? prev.filter(k => k !== categoryKey)
+        : [...prev, categoryKey]
+    );
   }
 
   async function createDua() {
@@ -99,6 +127,13 @@ export default function Home() {
             <p className="text-sm text-muted-foreground">Manage duas for Haji and Umrah Manasik App</p>
           </div>
           <div className="flex items-center gap-3">
+            <Link
+              href="/categories"
+              className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
+            >
+              <TagIcon className="h-4 w-4" />
+              Categories
+            </Link>
             <button
               onClick={downloadDuas}
               className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
@@ -176,10 +211,23 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Category Filter - Multi Select */}
+          {/* Category Filter - Multi Select with Subcategories */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-foreground">Filter by Categories</span>
+              <button
+                onClick={() => setIsFilterExpanded(!isFilterExpanded)}
+                className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-foreground/80 transition-colors"
+              >
+                <ChevronIcon 
+                  className={`h-4 w-4 transition-transform ${isFilterExpanded ? "rotate-180" : ""}`} 
+                />
+                Filter by Categories
+                {selectedCategories.length > 0 && (
+                  <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full">
+                    {selectedCategories.length}
+                  </span>
+                )}
+              </button>
               {hasActiveFilters && (
                 <button
                   onClick={clearAllFilters}
@@ -189,24 +237,65 @@ export default function Home() {
                 </button>
               )}
             </div>
-            <div className="flex flex-wrap gap-2">
-              {CategoryOptions.map(category => (
-                <button
-                  key={category}
-                  onClick={() => toggleCategory(category)}
-                  className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-colors ${
-                    selectedCategories.includes(category)
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  }`}
-                >
-                  {category}
-                  {selectedCategories.includes(category) && (
-                    <span className="ml-1.5">×</span>
+            {isFilterExpanded && (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+              {categories.map(category => (
+                <div key={category.key} className="space-y-1.5 p-2 rounded-lg border border-border bg-card/50">
+                  {/* Parent Category */}
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={() => toggleCategory(category.key, false)}
+                      className={`flex-1 rounded-md px-2 py-1.5 text-xs font-medium transition-colors text-left ${
+                        selectedCategories.includes(category.key)
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                      }`}
+                    >
+                      {language === "en" ? category.nameEn : category.nameMy}
+                      {selectedCategories.includes(category.key) && (
+                        <span className="ml-1 float-right">×</span>
+                      )}
+                    </button>
+                    {category.subcategories.length > 0 && (
+                      <button
+                        onClick={() => toggleExpanded(category.key)}
+                        className="shrink-0 p-1 rounded hover:bg-secondary transition-colors"
+                        aria-label={expandedCategories.includes(category.key) ? "Collapse subcategories" : "Expand subcategories"}
+                      >
+                        <ChevronIcon 
+                          className={`h-4 w-4 text-muted-foreground transition-transform ${
+                            expandedCategories.includes(category.key) ? "rotate-180" : ""
+                          }`} 
+                        />
+                      </button>
+                    )}
+                  </div>
+                  
+                  {/* Subcategories - Collapsible */}
+                  {category.subcategories.length > 0 && expandedCategories.includes(category.key) && (
+                    <div className="flex flex-col gap-1 pl-2 border-l-2 border-border">
+                      {category.subcategories.map(sub => (
+                        <button
+                          key={sub.key}
+                          onClick={() => toggleCategory(sub.key, true, category.key)}
+                          className={`w-full rounded-md px-2 py-1 text-[11px] font-medium transition-colors text-left ${
+                            selectedCategories.includes(sub.key)
+                              ? "bg-primary/80 text-primary-foreground"
+                              : "bg-muted text-muted-foreground hover:bg-muted/80"
+                          }`}
+                        >
+                          {language === "en" ? sub.nameEn : sub.nameMy}
+                          {selectedCategories.includes(sub.key) && (
+                            <span className="ml-1 float-right">×</span>
+                          )}
+                        </button>
+                      ))}
+                    </div>
                   )}
-                </button>
+                </div>
               ))}
             </div>
+            )}
             {selectedCategories.length > 0 && (
               <p className="text-xs text-muted-foreground">
                 Showing duas that include ALL selected categories: {selectedCategories.join(", ")}
@@ -400,6 +489,22 @@ function NoAudioIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zm12-6l-6 6m0-6l6 6" />
+    </svg>
+  );
+}
+
+function TagIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+    </svg>
+  );
+}
+
+function ChevronIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
   );
 }
