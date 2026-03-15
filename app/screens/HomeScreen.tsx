@@ -2,6 +2,7 @@ import React from 'react';
 import {TouchableOpacity, StyleSheet, View, ImageBackground, useWindowDimensions} from 'react-native';
 import {DuaType, HomeScreenType} from "@/app/types";
 import duas from '@/assets/data/duas.json';
+import categoriesData from '@/assets/data/categories.json'
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import {Image} from "expo-image";
 import {Colors} from "@/constants/theme";
@@ -10,73 +11,25 @@ import {useFonts} from "expo-font";
 import {ThemedText} from "@/components/themed-text";
 
 export type buttonType = {
-  title: {
-    en: string,
-    my: string
-  },
-  bgImg?: any
-} | {
-  title: string,
+  key: string,
   bgImg?: any
 }
 
 const buttons: buttonType[] = [
-  {
-    title: 'Ihram',
-    bgImg: require('@/assets/images/button-bg/ihram.png')
-  },
-  {
-    title: 'Talbiyah',
-    bgImg: require('@/assets/images/button-bg/talbiyah.png')
-  },
-  {
-    title: 'Travel',
-    bgImg: require('@/assets/images/button-bg/travel.png')
-  },
-  {
-    title: 'Masjidil Haram',
-    bgImg: require('@/assets/images/button-bg/masjidil-haram.png')
-  },
-  {
-    title: 'Tawaf',
-    bgImg: require('@/assets/images/button-bg/tawaf.png')
-  },
-  {
-    title: 'Zam-zam' ,
-    bgImg: require('@/assets/images/button-bg/zamzam.png')
-  },
-  {
-    title: "Sa'i" ,
-    bgImg: require('@/assets/images/button-bg/sai.png')
-  },
-  {
-    title: 'Tahalul' ,
-    bgImg: require('@/assets/images/button-bg/tahallul.png')
-  },
-  {
-    title: 'Tawaf Wadak' ,
-    bgImg: require('@/assets/images/button-bg/tawaf-wada.png')
-  },
-  {
-    title: 'Madinah',
-    bgImg: require('@/assets/images/button-bg/madinah.png')
-  },
-  {
-    title: 'Arafah',
-    bgImg: require('@/assets/images/button-bg/arafah.png')
-  },
-  {
-    title: 'Mina',
-    bgImg: require('@/assets/images/button-bg/mina.png')
-  },
-  {
-    title: 'Muzdalifah',
-    bgImg: require('@/assets/images/button-bg/muzdalifah.png')
-  },
-  {
-    title: 'Jamrah',
-    bgImg: require('@/assets/images/button-bg/jamrah.png')
-  },
+  { key: 'ihram', bgImg: require('@/assets/images/button-bg/ihram.png') },
+  { key: 'talbiyah', bgImg: require('@/assets/images/button-bg/talbiyah.png') },
+  { key: 'travel', bgImg: require('@/assets/images/button-bg/travel.png') },
+  { key: 'masjidil haram', bgImg: require('@/assets/images/button-bg/masjidil-haram.png') },
+  { key: 'tawaf', bgImg: require('@/assets/images/button-bg/tawaf.png') },
+  { key: 'zam-zam', bgImg: require('@/assets/images/button-bg/zamzam.png') },
+  { key: "sa'i", bgImg: require('@/assets/images/button-bg/sai.png') },
+  { key: 'tahalul', bgImg: require('@/assets/images/button-bg/tahallul.png') },
+  { key: 'tawaf wadak', bgImg: require('@/assets/images/button-bg/tawaf-wada.png') },
+  { key: 'madinah', bgImg: require('@/assets/images/button-bg/madinah.png') },
+  { key: 'arafah', bgImg: require('@/assets/images/button-bg/arafah.png') },
+  { key: 'mina', bgImg: require('@/assets/images/button-bg/mina.png') },
+  { key: 'muzdalifah', bgImg: require('@/assets/images/button-bg/muzdalifah.png') },
+  { key: 'stoning', bgImg: require('@/assets/images/button-bg/jamrah.png') }
 ];
 
 export default function HomeScreen({
@@ -114,6 +67,12 @@ export default function HomeScreen({
 
   const {width} = useWindowDimensions();
   const smScreens = width < 390;
+  const getCategoryName = (key: string) => {
+    const cat = categoriesData.categories.find(c => c.key === key)
+    if (!cat) return key
+
+    return language === 'my' ? cat.nameMy : cat.nameEn
+  }
 
   return (
     <ParallaxScrollView
@@ -138,11 +97,7 @@ export default function HomeScreen({
                   <TouchableOpacity
                     key={index}
                     onPress={() => {
-                      if (typeof btn.title === 'string') {
-                        loadDuas(btn.title)
-                      } else {
-                        loadDuas(btn.title[language])
-                      }
+                      loadDuas(btn.key)
                     }}
                     style={styles.button}
                   >
@@ -160,12 +115,12 @@ export default function HomeScreen({
                             smScreens && {width: '80%'}
                           ]}
                         >
-                          {typeof btn.title === 'string' ? btn.title : btn.title[language]}
+                          {getCategoryName(btn.key)}
                         </ThemedText>
                       </ImageBackground>
                     ) : (
                       <ThemedText style={styles.buttonText}>
-                        {typeof btn.title === 'string' ? btn.title : btn.title[language]}
+                        {getCategoryName(btn.key)}
                       </ThemedText>
                     )}
                   </TouchableOpacity>

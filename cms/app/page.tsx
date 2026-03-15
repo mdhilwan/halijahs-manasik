@@ -14,10 +14,7 @@ export default function Home() {
   const [filterNoAudio, setFilterNoAudio] = useState(false);
 
   useEffect(() => {
-    fetch("/api/duas").then(r => r.json()).then((res) => {
-      console.log(res)
-      setDuas(res)
-    });
+    fetch("/api/duas").then(r => r.json()).then(setDuas);
     fetch("/api/categories").then(r => r.json()).then(setCategoryOptions);
   }, []);
 

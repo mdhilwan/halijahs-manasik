@@ -1,0 +1,108 @@
+{
+  "categories": [
+    {
+      "key": "arafah",
+      "nameEn": "Arafah",
+      "nameMy": "Arafah",
+      "subcategories": []
+    },
+    {
+      "key": "haji",
+      "nameEn": "Hajj",
+      "nameMy": "Haji",
+      "global": true,
+      "subcategories": []
+    },
+    {
+      "key": "ihram",
+      "nameEn": "Ihram",
+      "nameMy": "Ihram",
+      "subcategories": []
+    },
+    {
+      "key": "madinah",
+      "nameEn": "Madinah",
+      "nameMy": "Madinah",
+      "subcategories": []
+    },
+    {
+      "key": "masjidil haram",
+      "nameEn": "Masjidil Haram",
+      "nameMy": "Masjidil Haram",
+      "subcategories": []
+    },
+    {
+      "key": "mina",
+      "nameEn": "Mina",
+      "nameMy": "Mina",
+      "subcategories": []
+    },
+    {
+      "key": "muzdalifah",
+      "nameEn": "Muzdalifah",
+      "nameMy": "Muzdalifah",
+      "subcategories": []
+    },
+    {
+      "key": "niat",
+      "nameEn": "Intention",
+      "nameMy": "Niat",
+      "subcategories": []
+    },
+    {
+      "key": "sa'i",
+      "nameEn": "Sa'i",
+      "nameMy": "Sa'i",
+      "subcategories": []
+    },
+    {
+      "key": "stoning",
+      "nameEn": "Stoning of the Jamarat",
+      "nameMy": "Melontar Jamrah",
+      "subcategories": []
+    },
+    {
+      "key": "tahalul",
+      "nameEn": "Tahalul",
+      "nameMy": "Tahallul",
+      "subcategories": []
+    },
+    {
+      "key": "talbiyah",
+      "nameEn": "Talbiyah",
+      "nameMy": "Talbiyah",
+      "subcategories": []
+    },
+    {
+      "key": "tawaf",
+      "nameEn": "Tawaf",
+      "nameMy": "Tawaf",
+      "subcategories": []
+    },
+    {
+      "key": "tawaf wadak",
+      "nameEn": "Farewell Tawaf",
+      "nameMy": "Tawaf Wada'",
+      "subcategories": []
+    },
+    {
+      "key": "travel",
+      "nameEn": "Travel",
+      "nameMy": "Perjalanan",
+      "subcategories": []
+    },
+    {
+      "key": "umrah",
+      "nameEn": "Umrah",
+      "nameMy": "Umrah",
+      "global": true,
+      "subcategories": []
+    },
+    {
+      "key": "zam-zam",
+      "nameEn": "Zam-zam",
+      "nameMy": "Zam-zam",
+      "subcategories": []
+    }
+  ]
+}
