@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
   bgButtonText: {
     color: "#233125",
     fontWeight: 'bold',
-    width: '70%',
+    width: '90%',
     textAlign: 'right',
     alignSelf: 'flex-end',
     paddingRight: 15,

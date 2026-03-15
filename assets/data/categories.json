@@ -73,8 +73,8 @@
     },
     {
       "key": "stoning",
-      "nameEn": "Stoning of the Jamarat",
-      "nameMy": "Melontar Jamrah",
+      "nameEn": "Jamrah",
+      "nameMy": "Jamrah",
       "subcategories": []
     },
     {
@@ -97,7 +97,7 @@
     },
     {
       "key": "tawaf wadak",
-      "nameEn": "Farewell Tawaf",
+      "nameEn": "Tawaf Wada'",
       "nameMy": "Tawaf Wada'",
       "subcategories": []
     },
