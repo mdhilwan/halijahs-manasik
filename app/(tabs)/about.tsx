@@ -96,6 +96,37 @@ export default function About() {
           )}
         </View>
 
+        <Collapsible title="Enjoying the App?">
+          <ThemedText style={{marginBottom: 12}}>
+            If this app has helped you during your Umrah or Hajj journey, please consider leaving a review.
+            Your feedback helps more jemaah discover and benefit from the app.
+          </ThemedText>
+
+          <View style={{flexDirection: 'row', flexWrap: 'wrap', gap: 15}}>
+            <Link
+              href={"https://apps.apple.com/us/app/manasik-by-halijah/id6758285616?action=write-review" as ExternalPathString}
+              style={{alignSelf: 'flex-start'}}
+            >
+              <ThemedView style={styles.ctaBtn}>
+                <ThemedText type={'defaultBold'} style={{color: '#FFFFFF'}}>
+                  Review on App Store
+                </ThemedText>
+              </ThemedView>
+            </Link>
+
+            <Link
+              href={"https://play.google.com/store/apps/details?id=com.halijah.manasik&hl=en_US" as ExternalPathString}
+              style={{alignSelf: 'flex-start'}}
+            >
+              <ThemedView style={styles.ctaBtn}>
+                <ThemedText type={'defaultBold'} style={{color: '#FFFFFF'}}>
+                  Review on Google Play
+                </ThemedText>
+              </ThemedView>
+            </Link>
+          </View>
+        </Collapsible>
+
         {AboutContent.getInTouch && <Collapsible title="Get In Touch" open={true}>
             <ThemedText>{AboutContent.getInTouch.intro}</ThemedText>
             <Link allowFontScaling={false} href={AboutContent.getInTouch.emailAddress as ExternalPathString} style={{ marginTop: 10 }}>

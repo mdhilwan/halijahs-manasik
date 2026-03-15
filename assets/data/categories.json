@@ -17,7 +17,23 @@
       "key": "ihram",
       "nameEn": "Ihram",
       "nameMy": "Ihram",
-      "subcategories": []
+      "subcategories": [
+        {
+          "key": "intention_for_ihram_prayer",
+          "nameEn": "Intention for Ihram Prayer",
+          "nameMy": "Niat Solat Sunnat Ihram"
+        },
+        {
+          "key": "umrah_ihram_intentions",
+          "nameEn": "Umrah Ihram Intentions",
+          "nameMy": "Niat-Niat Ihram Umrah"
+        },
+        {
+          "key": "haj_ihram_intentions",
+          "nameEn": "Haj Ihram Intentions",
+          "nameMy": "Niat-Niat Ihram Haji"
+        }
+      ]
     },
     {
       "key": "madinah",
