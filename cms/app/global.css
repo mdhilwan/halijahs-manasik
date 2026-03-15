@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Greenish earthly tone color palette */
+    --background: 140 20% 96%; /* soft sage white */
+    --foreground: 150 15% 15%; /* dark forest */
+    
+    --card: 140 15% 94%;
+    --card-foreground: 150 15% 15%;
+    
+    --popover: 140 15% 94%;
+    --popover-foreground: 150 15% 15%;
+    
+    --primary: 152 35% 35%; /* forest green */
+    --primary-foreground: 140 20% 98%;
+    
+    --secondary: 145 18% 88%; /* light sage */
+    --secondary-foreground: 150 15% 20%;
+    
+    --muted: 145 15% 91%;
+    --muted-foreground: 150 10% 45%;
+    
+    --accent: 160 30% 40%; /* teal green */
+    --accent-foreground: 140 20% 98%;
+    
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 145 15% 82%;
+    --input: 145 15% 82%;
+    --ring: 152 35% 35%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar for greenish earthly theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(145 15% 91%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(145 15% 70%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(150 20% 55%);
+}
