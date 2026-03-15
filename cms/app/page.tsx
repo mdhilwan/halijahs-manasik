@@ -27,6 +27,7 @@ export default function Home() {
   const [newDuaTitle, setNewDuaTitle] = useState({ en: "", my: "" });
   const [filterNoAudio, setFilterNoAudio] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [isFilterExpanded, setIsFilterExpanded] = useState(false);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then(setDuas);
@@ -213,7 +214,20 @@ export default function Home() {
           {/* Category Filter - Multi Select with Subcategories */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-foreground">Filter by Categories</span>
+              <button
+                onClick={() => setIsFilterExpanded(!isFilterExpanded)}
+                className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-foreground/80 transition-colors"
+              >
+                <ChevronIcon 
+                  className={`h-4 w-4 transition-transform ${isFilterExpanded ? "rotate-180" : ""}`} 
+                />
+                Filter by Categories
+                {selectedCategories.length > 0 && (
+                  <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full">
+                    {selectedCategories.length}
+                  </span>
+                )}
+              </button>
               {hasActiveFilters && (
                 <button
                   onClick={clearAllFilters}
@@ -223,6 +237,7 @@ export default function Home() {
                 </button>
               )}
             </div>
+            {isFilterExpanded && (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
               {categories.map(category => (
                 <div key={category.key} className="space-y-1.5 p-2 rounded-lg border border-border bg-card/50">
@@ -280,6 +295,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            )}
             {selectedCategories.length > 0 && (
               <p className="text-xs text-muted-foreground">
                 Showing duas that include ALL selected categories: {selectedCategories.join(", ")}
