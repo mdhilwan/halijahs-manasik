@@ -25,7 +25,7 @@ export default function EditPage() {
       setDua(foundDua);
       setSelectedCategories(foundDua?.categoryKey ?? []);
     });
-    fetch("/api/categories").then(r => r.json()).then(setCategoryOptions);
+    fetch("/api/categories/keys").then(r => r.json()).then(setCategoryOptions);
   }, [id]);
 
   const canSave = selectedCategories.length > 0;

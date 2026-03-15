@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then(setDuas);
-    fetch("/api/categories").then(r => r.json()).then(setCategoryOptions);
+    fetch("/api/categories/keys").then(r => r.json()).then(setCategoryOptions);
   }, []);
 
   const filteredDuas = useMemo(() => {
@@ -93,6 +93,13 @@ export default function Home() {
             <p className="text-sm text-muted-foreground">Manage duas for Haji and Umrah Manasik App</p>
           </div>
           <div className="flex items-center gap-3">
+            <Link
+              href="/categories"
+              className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
+            >
+              <TagIcon className="h-4 w-4" />
+              Categories
+            </Link>
             <button
               onClick={downloadDuas}
               className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
@@ -394,6 +401,14 @@ function NoAudioIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zm12-6l-6 6m0-6l6 6" />
+    </svg>
+  );
+}
+
+function TagIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
     </svg>
   );
 }
