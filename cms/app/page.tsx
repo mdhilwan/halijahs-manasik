@@ -3,13 +3,9 @@ import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { DuaType } from "../../app/types";
 
-export const CategoryOptions = [
-  "arafah", "mina", "muzdalifah", "jamrah", "talbiyah", "ihram", "umrah", "haji",
-  "masjidil haram", "tawaf", "niat", "zam-zam", "sa'i", "tahalul", "tawaf wadak", "madinah", "travel"
-];
-
 export default function Home() {
   const [duas, setDuas] = useState<DuaType[]>([]);
+  const [categoryOptions, setCategoryOptions] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [language, setLanguage] = useState<"en" | "my">("en");
@@ -22,6 +18,7 @@ export default function Home() {
       console.log(res)
       setDuas(res)
     });
+    fetch("/api/categories").then(r => r.json()).then(setCategoryOptions);
   }, []);
 
   const filteredDuas = useMemo(() => {
@@ -190,7 +187,7 @@ export default function Home() {
               )}
             </div>
             <div className="flex flex-wrap gap-2">
-              {CategoryOptions.map(category => (
+              {categoryOptions.map(category => (
                 <button
                   key={category}
                   onClick={() => toggleCategory(category)}

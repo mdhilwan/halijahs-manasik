@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Scheherazade_New } from 'next/font/google';
 import DoaPreview from "../../component/doa-preview";
 import { DuaType } from "../../../../app/types";
-import { CategoryOptions } from "../../page";
 
 const scheherazadeNew = Scheherazade_New({
   weight: "400",
@@ -16,6 +15,7 @@ export default function EditPage() {
   const { id } = useParams();
   const router = useRouter();
   const [dua, setDua] = useState<DuaType | null>(null);
+  const [categoryOptions, setCategoryOptions] = useState<string[]>([]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -25,6 +25,7 @@ export default function EditPage() {
       setDua(foundDua);
       setSelectedCategories(foundDua?.categoryKey ?? []);
     });
+    fetch("/api/categories").then(r => r.json()).then(setCategoryOptions);
   }, [id]);
 
   const canSave = selectedCategories.length > 0;
@@ -176,7 +177,7 @@ export default function EditPage() {
               )}
               
               <div className="flex flex-wrap gap-2">
-                {CategoryOptions.map(category => (
+                {categoryOptions.map(category => (
                   <button
                     key={category}
                     onClick={() => toggleCategory(category)}
