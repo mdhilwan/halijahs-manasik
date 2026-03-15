@@ -58,8 +58,24 @@ const buttons: buttonType[] = [
     bgImg: require('@/assets/images/button-bg/tawaf-wada.png')
   },
   {
-    title: 'Madinah' ,
+    title: 'Madinah',
     bgImg: require('@/assets/images/button-bg/madinah.png')
+  },
+  {
+    title: 'Arafah',
+    bgImg: require('@/assets/images/button-bg/arafah.png')
+  },
+  {
+    title: 'Mina',
+    bgImg: require('@/assets/images/button-bg/mina.png')
+  },
+  {
+    title: 'Muzdalifah',
+    bgImg: require('@/assets/images/button-bg/muzdalifah.png')
+  },
+  {
+    title: 'Stoning',
+    bgImg: require('@/assets/images/button-bg/jamrah.png')
   },
 ];
 
@@ -76,7 +92,14 @@ export default function HomeScreen({
   });
 
   const loadDuas = async (category: string) => {
-    const result = duas.filter((d: DuaType) => d.categoryKey.includes(category.toLowerCase()));
+    // @ts-ignore
+    const result = duas.filter((d: DuaType) => {
+      if (d.categoryKey) {
+        return d.categoryKey.includes(category.toLowerCase())
+      } else {
+        console.log(d)
+      }
+    });
     if (result.length === 1) {
       setDuas(result);
       setCategory(category);

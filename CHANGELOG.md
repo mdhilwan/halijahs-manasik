@@ -1,3 +1,7 @@
+## 1.1.0 - Mar 14, 2026
+- New Feature:
+  - Haji specific duas (Mina, Arafah, Mudzalifah, Jamrah)
+
 ## 1.0.5 - Mar 4, 2026
 - Bug fixes:
   - Set a min/max for the translation and arabic font size scaling

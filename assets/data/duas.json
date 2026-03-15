@@ -1525,7 +1525,10 @@
         "translationMy": "Ya Allah, Engkau telah berfirman, dan firmanMu adalah benar, “…Dan apabila kamu bergerak turun beramai-ramai dari Arafah (ke Muzdalifah), ingatlah Allah di Masy’aril Haram dan berzikirlah kepadaNya seperti yang telah Dia arahkan kepada kamu.” Ya Allah, sebagaimana Engkau telah membawa kami untuk wukuf di sini dan menunjukkannya kepada kami, bantu kami dalam mengingatiMu, dan bersyukur kepadaMu seperti hidayat yang telah Engkau beri kepada kami, dan ampunilah kami, serta curahkan rahmatMu kepada kami seperti yang telah Engkau janjikan. Ya Allah, hanya bagiMu segala pujian, hanya bagiMu segala kesyukuran, hanya bagi Engkau segala kemuliaan, hanya kepunyaan Engkau segala ciptaan dan hanya kepada Engkau kembali segala urusan. Ya Allah, kami memohon agar Engkau mengampuni segala dosa kami yang lalu, lindungilah kami dari dosa-dosa di sisa hidup kami, kurniakanlah kami amal soleh yang Engkau redhai. Segala kebaikan adalah milikMu, dan Engkau Pemilik nikmat yang amat besar dan Engkau Maha Penyayang serta Maha Mengasihani kami. Ya Tuhan kami, kurniakanlah kami kebaikan di dunia dan kebaikan di akhirat dan lindungilah kami dari azab neraka."
       }
     ],
-    "titleMy": "Di Muzdalifah"
+    "titleMy": "Di Muzdalifah",
+    "categoryKey": [
+      "muzdalifah"
+    ]
   },
   {
     "id": 1772936087340,
@@ -1568,7 +1571,10 @@
         "translationMy": "Ya Allah. Ya Tuhanku, kurniakanlah haji yang mabrur, dosa yang diampun, usaha yang dipuji, amalan soleh yang diterima dan perniagaan yang tidak rugi."
       }
     ],
-    "titleMy": "Selepas Melontar"
+    "titleMy": "Selepas Melontar",
+    "categoryKey": [
+      "stoning"
+    ]
   },
   {
     "id": 1772936377891,
@@ -1581,7 +1587,10 @@
         "translationMy": "Ya Allah, aku memohon dengan berkat Mina ini, Engkau anugerahkan daku dengan apa yang telah Engkau anugerahkan kepada wali-wali Engkau dan hamba-hamba Engkau yang taat kepada Engkau, Maha Suci Allah yang ArasyNya terletak di langit, Maha Suci Allah yang memperlihatkan kekuatanNya di bumi, Maha Suci Allah yang menjalankan lautan, Maha Suci Allah yang melihatkan kekuasaan dan pemerintahan di api neraka, Maha Suci Allah yang melihatkan rahmatNya di dalam syurga, Maha Suci Allah yang telah mengangkat tujuh petala langit dan menetapkan tujuh petala bumi dengan kudratNya, Maha Suci Allah yang tidak ada tempat untuk meminta pertolongan melainkan kepadaNya semata-mata."
       }
     ],
-    "titleMy": "Ketika Memasuki Mina"
+    "titleMy": "Ketika Memasuki Mina",
+    "categoryKey": [
+      "mina"
+    ]
   },
   {
     "id": 1772936447336,
@@ -1720,7 +1729,10 @@
         "translationMy": "Ya Allah, limpahkanlah selawat dan salam ke atas penghulu kami Nabi Muhammad, Nabi yang ummi, serta ke atas keluarga dan sahabat-sahabatnya."
       }
     ],
-    "titleMy": "Zikir-Zikir Pada Hari-Hari Tasyrik"
+    "titleMy": "Zikir-Zikir Pada Hari-Hari Tasyrik",
+    "categoryKey": [
+      "mina"
+    ]
   },
   {
     "id": 1772938290130,
@@ -1861,7 +1873,10 @@
         "translationMy": "Ya Allah, kepadaMu aku berpaling, dan pada wajahMu yang mulia aku kembali. Maka jadikan dosaku dosa yang diampunkan, dan hajiku haji yang mabrur. Rahmatilah aku dan jangan Engkau hampakan aku, sesungguhnya Engkau berkuasa di atas setiap sesuatu.\nAku menyahut panggilanMu ya Allah, aku menyahut panggilanMu. Aku menyahut panggilanMu, tiada sekutu bagiMu, aku menyahut panggilanMu. Sesungguhnya segala pujian, nikmat dan kerajaan adalah milikMu, tiada sekutu bagiMu.\n\nYa Allah, limpahkanlah selawat dan kesejahteraan ke atas Nabi kami Muhammad, serta ke atas keluarga, para sahabat dan umat baginda."
       }
     ],
-    "titleMy": "Dalam Perjalanan Ke Arafah"
+    "titleMy": "Dalam Perjalanan Ke Arafah",
+    "categoryKey": [
+      "arafah"
+    ]
   },
   {
     "id": 1772980658876,
@@ -1910,7 +1925,10 @@
         "translationMy": "(7) Berdoa ramai-ramai dan bersendirian. "
       }
     ],
-    "titleMy": "Amalan-Alaman Hari Arafah"
+    "titleMy": "Amalan-Alaman Hari Arafah",
+    "categoryKey": [
+      "arafah"
+    ]
   },
   {
     "id": 1772981178600,
@@ -2085,7 +2103,10 @@
         "translationMy": "“Barangsiapa membaca Qul Huwallahu Ahad pada hari Arafah sebanyak seribu kali, nescaya akan diperkenankan segala permintaannya (doanya dikabulkan).”"
       }
     ],
-    "titleMy": "Istigfaar al Jaami'"
+    "titleMy": "Istigfaar al Jaami'",
+    "categoryKey": [
+      "arafah"
+    ]
   },
   {
     "id": 1772983110350,
@@ -2182,7 +2203,10 @@
         "translationMy": "Ya Allah, curahkan selawat dan salam dan berkat ke atas Nabi yang tidak tahu membaca dan menulis dan ke atas keluarga dan sahabat baginda sekalian."
       }
     ],
-    "titleMy": "Zikir-Zikir"
+    "titleMy": "Zikir-Zikir",
+    "categoryKey": [
+      "arafah"
+    ]
   },
   {
     "id": 1772984183605,
@@ -2351,6 +2375,9 @@
         "translationMy": "O Allah, make our lives end upon good deeds and fulfill our hopes through Your bounties, and make it easy for us to attain Your pleasure, and make good our deeds in all states. O Saviour of the drowning, O Saviour of those on the verge of perishment, O Witness to every secret consultation, O destination of every complaint, O Whose favours are from time immemorial, whose kind acts are perpetual, O He without Whom nothing suffices, O upon Whom all things are dependent, O upon Whom all are dependent for their sustenance, and to Whom all things return, we ask that You put us under the wing of Your shelter, generosity, guard, protection, cover and security."
       }
     ],
-    "titleMy": "Doa-Doa"
+    "titleMy": "Doa-Doa",
+    "categoryKey": [
+      "arafah"
+    ]
   }
 ]
