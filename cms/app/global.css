@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Earthly tone color palette */
+    --background: 40 33% 97%; /* warm off-white */
+    --foreground: 30 10% 15%; /* dark brown */
+    
+    --card: 40 30% 95%;
+    --card-foreground: 30 10% 15%;
+    
+    --popover: 40 30% 95%;
+    --popover-foreground: 30 10% 15%;
+    
+    --primary: 30 45% 35%; /* earthy brown */
+    --primary-foreground: 40 33% 97%;
+    
+    --secondary: 35 25% 85%; /* light tan */
+    --secondary-foreground: 30 10% 20%;
+    
+    --muted: 35 20% 90%;
+    --muted-foreground: 30 10% 45%;
+    
+    --accent: 25 50% 45%; /* warm terracotta */
+    --accent-foreground: 40 33% 97%;
+    
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 30 20% 82%;
+    --input: 30 20% 82%;
+    --ring: 30 45% 35%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar for earthly theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(35 20% 90%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(30 20% 70%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(30 25% 60%);
+}

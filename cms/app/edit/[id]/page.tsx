@@ -4,7 +4,7 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { Scheherazade_New } from 'next/font/google';
 import DoaPreview from "../../component/doa-preview";
-import {DuaType} from "../../../../app/types";
+import { DuaType } from "../../../../app/types";
 
 const scheherazadeNew = Scheherazade_New({
   weight: "400",
@@ -12,7 +12,8 @@ const scheherazadeNew = Scheherazade_New({
 })
 
 const categoryOptions = [
-  "arafah", "mina", "muzdalifah", "stoning", "talbiyah", "ihram", "umrah", "haji", "masjidil haram", "tawaf", "niat", "zam-zam", "sa'i", "tahalul", "tawaf wadak", "madinah", "travel"
+  "arafah", "mina", "muzdalifah", "stoning", "talbiyah", "ihram", "umrah", "haji", 
+  "masjidil haram", "tawaf", "niat", "zam-zam", "sa'i", "tahalul", "tawaf wadak", "madinah", "travel"
 ];
 
 export default function EditPage() {
@@ -20,6 +21,7 @@ export default function EditPage() {
   const router = useRouter();
   const [dua, setDua] = useState<DuaType | null>(null);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then((data) => {
@@ -29,17 +31,26 @@ export default function EditPage() {
     });
   }, [id]);
 
-  if (!dua) return null;
+  if (!dua) {
+    return (
+      <main className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-muted-foreground">Loading...</div>
+      </main>
+    );
+  }
 
   async function save() {
+    setIsSaving(true);
     await fetch("/api/duas", {
       method: "PUT",
       body: JSON.stringify(dua)
     });
+    setIsSaving(false);
     router.push("/");
   }
 
   async function remove() {
+    if (!confirm("Are you sure you want to delete this dua?")) return;
     await fetch("/api/duas", {
       method: "DELETE",
       body: JSON.stringify({ id: dua.id })
@@ -55,176 +66,312 @@ export default function EditPage() {
       newSelectedCategories = [...selectedCategories, category];
     }
     setSelectedCategories(newSelectedCategories);
-    setDua({...dua, categoryKey: newSelectedCategories});
+    setDua({ ...dua, categoryKey: newSelectedCategories });
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-6 sm:px-8">
-      <h1 className="mb-6 text-2xl font-semibold text-gray-800">Edit Dua</h1>
-
-      <div className="flex gap-3">
-        <div className="space-y-6 max-w-xl">
-          <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
-            <span>Title (English)</span>
-            <input
-              className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              value={dua.titleEn}
-              onChange={e => setDua({...dua, titleEn: e.target.value})}
-            />
-          </label>
-
-          <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
-            <span>Title (Malay)</span>
-            <input
-              className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              value={dua.titleMy}
-              onChange={e => setDua({...dua, titleMy: e.target.value})}
-            />
-          </label>
-
-          <fieldset className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-            <legend>Category Keys</legend>
-            <div className="flex flex-wrap gap-3">
-              {categoryOptions.map(category => (
-                <label key={category} className="inline-flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={selectedCategories.includes(category)}
-                    onChange={() => toggleCategory(category)}
-                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                  />
-                  <span className="capitalize">{category}</span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
-
-          <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
-            <span>Audio Filename</span>
-            <input
-              className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              value={dua.audio ?? ""}
-              onChange={e => setDua({...dua, audio: e.target.value})}
-            />
-          </label>
-
-          <h3 className="pt-4 text-lg font-semibold text-gray-800">Doa Entries</h3>
-
-          <button
-            type="button"
-            onClick={() => {
-              const doa = [
-                ...dua.doa,
-                {
-                  id: Date.now(),
-                  arabic: "",
-                  translationEn: "",
-                  translationMy: ""
-                }
-              ];
-              setDua({...dua, doa});
-            }}
-            className="rounded-md bg-green-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-green-700"
-          >
-            + Add Doa
-          </button>
-
-
-          {dua.doa.map((d: any, index: number) => (
-            <div
-              key={d.id}
-              className="rounded-lg border border-gray-300 bg-white p-4 space-y-3"
+    <main className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="border-b border-border bg-card px-6 py-4 sticky top-0 z-10">
+        <div className="mx-auto max-w-7xl flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
-              <div className="flex items-center justify-between">
-                <strong>Doa #{index + 1}</strong>
+              <ArrowLeftIcon className="h-4 w-4" />
+              <span className="text-sm font-medium">Back</span>
+            </Link>
+            <div className="h-6 w-px bg-border" />
+            <div>
+              <h1 className="text-xl font-semibold text-foreground">Edit Dua</h1>
+              <p className="text-xs text-muted-foreground">ID: {dua.id}</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={remove}
+              className="flex items-center gap-2 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2 text-sm font-medium text-destructive hover:bg-destructive/20 transition-colors"
+            >
+              <TrashIcon className="h-4 w-4" />
+              Delete
+            </button>
+            <button
+              onClick={save}
+              disabled={isSaving}
+              className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
+            >
+              <SaveIcon className="h-4 w-4" />
+              {isSaving ? "Saving..." : "Save Changes"}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-7xl px-6 py-6">
+        <div className="flex gap-8">
+          {/* Form Section */}
+          <div className="flex-1 space-y-6 max-w-2xl">
+            {/* Basic Info Card */}
+            <div className="rounded-xl border border-border bg-card p-6">
+              <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                <InfoIcon className="h-5 w-5 text-muted-foreground" />
+                Basic Information
+              </h2>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-1.5">
+                    Title (English)
+                  </label>
+                  <input
+                    className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                    value={dua.titleEn}
+                    onChange={e => setDua({ ...dua, titleEn: e.target.value })}
+                    placeholder="Enter English title"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-1.5">
+                    Title (Malay)
+                  </label>
+                  <input
+                    className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                    value={dua.titleMy}
+                    onChange={e => setDua({ ...dua, titleMy: e.target.value })}
+                    placeholder="Enter Malay title"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-1.5">
+                    Audio Filename
+                  </label>
+                  <input
+                    className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                    value={dua.audio ?? ""}
+                    onChange={e => setDua({ ...dua, audio: e.target.value })}
+                    placeholder="e.g., dua-01.mp3"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Categories Card */}
+            <div className="rounded-xl border border-border bg-card p-6">
+              <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                <TagIcon className="h-5 w-5 text-muted-foreground" />
+                Categories
+              </h2>
+              
+              <div className="flex flex-wrap gap-2">
+                {categoryOptions.map(category => (
+                  <button
+                    key={category}
+                    onClick={() => toggleCategory(category)}
+                    className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-colors ${
+                      selectedCategories.includes(category)
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+              
+              {selectedCategories.length > 0 && (
+                <p className="mt-3 text-xs text-muted-foreground">
+                  {selectedCategories.length} {selectedCategories.length === 1 ? "category" : "categories"} selected
+                </p>
+              )}
+            </div>
+
+            {/* Doa Entries Card */}
+            <div className="rounded-xl border border-border bg-card p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                  <BookIcon className="h-5 w-5 text-muted-foreground" />
+                  Doa Entries
+                </h2>
                 <button
                   type="button"
                   onClick={() => {
-                    const doa = dua.doa.filter((_: any, i: number) => i !== index);
-                    setDua({...dua, doa});
+                    const doaList = [
+                      ...dua.doa,
+                      {
+                        id: Date.now(),
+                        arabic: "",
+                        translationEn: "",
+                        translationMy: ""
+                      }
+                    ];
+                    setDua({ ...dua, doa: doaList });
                   }}
-                  className="text-sm text-red-600 hover:underline"
+                  className="flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 text-xs font-medium text-accent-foreground hover:bg-accent/90 transition-colors"
                 >
-                  Remove
+                  <PlusIcon className="h-3.5 w-3.5" />
+                  Add Entry
                 </button>
               </div>
 
-              <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
-                <span>Arabic</span>
-                <textarea
-                  className={scheherazadeNew.className + " rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"}
-                  rows={5}
-                  value={d.arabic}
-                  onChange={e => {
-                    const doa = [...dua.doa];
-                    doa[index] = {...doa[index], arabic: e.target.value};
-                    setDua({...dua, doa});
-                  }}
-                />
-              </label>
+              {dua.doa.length === 0 ? (
+                <div className="text-center py-8 text-muted-foreground">
+                  <BookIcon className="h-10 w-10 mx-auto mb-2 opacity-50" />
+                  <p className="text-sm">No doa entries yet</p>
+                  <p className="text-xs mt-1">Click "Add Entry" to create one</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {dua.doa.map((d: any, index: number) => (
+                    <div
+                      key={d.id}
+                      className="rounded-lg border border-border bg-background p-4 space-y-3"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-medium text-foreground">
+                          Entry #{index + 1}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const doaList = dua.doa.filter((_: any, i: number) => i !== index);
+                            setDua({ ...dua, doa: doaList });
+                          }}
+                          className="text-xs text-destructive hover:text-destructive/80 font-medium transition-colors"
+                        >
+                          Remove
+                        </button>
+                      </div>
 
-              <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
-                <span>Translation (English)</span>
-                <textarea
-                  className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  rows={4}
-                  value={d.translationEn}
-                  onChange={e => {
-                    const doa = [...dua.doa];
-                    doa[index] = {...doa[index], translationEn: e.target.value};
-                    setDua({...dua, doa});
-                  }}
-                />
-              </label>
+                      <div>
+                        <label className="block text-xs font-medium text-muted-foreground mb-1">
+                          Arabic Text
+                        </label>
+                        <textarea
+                          className={`${scheherazadeNew.className} w-full rounded-lg border border-input bg-card px-3 py-2.5 text-lg leading-relaxed text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring text-right`}
+                          dir="rtl"
+                          rows={4}
+                          value={d.arabic}
+                          onChange={e => {
+                            const doaList = [...dua.doa];
+                            doaList[index] = { ...doaList[index], arabic: e.target.value };
+                            setDua({ ...dua, doa: doaList });
+                          }}
+                          placeholder="Enter Arabic text..."
+                        />
+                      </div>
 
-              <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
-                <span>Translation (Malay)</span>
-                <textarea
-                  className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  rows={4}
-                  value={d.translationMy}
-                  onChange={e => {
-                    const doa = [...dua.doa];
-                    doa[index] = {...doa[index], translationMy: e.target.value};
-                    setDua({...dua, doa});
-                  }}
-                />
-              </label>
+                      <div>
+                        <label className="block text-xs font-medium text-muted-foreground mb-1">
+                          Translation (English)
+                        </label>
+                        <textarea
+                          className="w-full rounded-lg border border-input bg-card px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          rows={3}
+                          value={d.translationEn}
+                          onChange={e => {
+                            const doaList = [...dua.doa];
+                            doaList[index] = { ...doaList[index], translationEn: e.target.value };
+                            setDua({ ...dua, doa: doaList });
+                          }}
+                          placeholder="Enter English translation..."
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-medium text-muted-foreground mb-1">
+                          Translation (Malay)
+                        </label>
+                        <textarea
+                          className="w-full rounded-lg border border-input bg-card px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          rows={3}
+                          value={d.translationMy}
+                          onChange={e => {
+                            const doaList = [...dua.doa];
+                            doaList[index] = { ...doaList[index], translationMy: e.target.value };
+                            setDua({ ...dua, doa: doaList });
+                          }}
+                          placeholder="Enter Malay translation..."
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-          ))}
-
-          <div className="mt-8 flex gap-3">
-            <button
-              onClick={save}
-              className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-            >
-              Save
-            </button>
-
-            <button
-              onClick={remove}
-              className="rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
-            >
-              Delete
-            </button>
-
-            <Link
-              href={"/"}
-              className="rounded-md bg-gray-600 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700"
-            >
-              Back
-            </Link>
           </div>
-        </div>
 
-        <div className="flex grow justify-center">
-          <div className="relative">
-            <div className="sticky top-4">
-              <DoaPreview {...dua}/>
+          {/* Preview Section */}
+          <div className="hidden lg:block">
+            <div className="sticky top-24">
+              <div className="mb-4 text-center">
+                <h3 className="text-sm font-medium text-foreground">App Preview</h3>
+                <p className="text-xs text-muted-foreground">See how it looks in the app</p>
+              </div>
+              <DoaPreview {...dua} />
             </div>
           </div>
         </div>
       </div>
     </main>
+  );
+}
+
+// Icons
+function ArrowLeftIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+    </svg>
+  );
+}
+
+function SaveIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
+function TrashIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+    </svg>
+  );
+}
+
+function InfoIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  );
+}
+
+function TagIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+    </svg>
+  );
+}
+
+function BookIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+  );
+}
+
+function PlusIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+    </svg>
   );
 }
