@@ -29,7 +29,6 @@ function TranslationText({dua, translationKey}: {
   if (dua[translationKey].length === 0 || translationHidden) {
     return null
   }
-  console.log({translationFontSize}, dua[translationKey])
   return <ThemedView style={[styles.textWrapper, {marginVertical: 10}]}>
     {typeof dua[translationKey] === "string" ?
       <ThemedText style={[styles.translation, {fontSize: translationFontSize}]}>

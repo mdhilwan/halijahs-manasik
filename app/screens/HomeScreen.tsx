@@ -97,7 +97,7 @@ export default function HomeScreen({
       if (d.categoryKey) {
         return d.categoryKey.includes(category.toLowerCase())
       } else {
-        console.log(d)
+        console.log(d, ": has no category")
       }
     });
     if (result.length === 1) {
