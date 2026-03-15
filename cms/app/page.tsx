@@ -11,10 +11,11 @@ const categoryOptions = [
 export default function Home() {
   const [duas, setDuas] = useState<DuaType[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [language, setLanguage] = useState<"en" | "my">("en");
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [newDuaTitle, setNewDuaTitle] = useState({ en: "", my: "" });
+  const [filterNoAudio, setFilterNoAudio] = useState(false);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then(setDuas);
@@ -26,10 +27,31 @@ export default function Home() {
       const matchesSearch = title?.toLowerCase().includes(searchQuery.toLowerCase()) || 
                            dua.titleEn?.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            dua.titleMy?.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = !selectedCategory || dua.categoryKey?.includes(selectedCategory);
-      return matchesSearch && matchesCategory;
+      
+      // Multi-select: dua must have ALL selected categories
+      const matchesCategory = selectedCategories.length === 0 || 
+                             selectedCategories.every(cat => dua.categoryKey?.includes(cat));
+      
+      // No audio filter
+      const matchesNoAudio = !filterNoAudio || !dua.audio;
+      
+      return matchesSearch && matchesCategory && matchesNoAudio;
     });
-  }, [duas, searchQuery, selectedCategory, language]);
+  }, [duas, searchQuery, selectedCategories, language, filterNoAudio]);
+
+  function toggleCategory(category: string) {
+    setSelectedCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  }
+
+  function clearAllFilters() {
+    setSelectedCategories([]);
+    setFilterNoAudio(false);
+    setSearchQuery("");
+  }
 
   async function createDua() {
     if (!newDuaTitle.en.trim()) return;
@@ -62,10 +84,12 @@ export default function Home() {
     URL.revokeObjectURL(url);
   }
 
+  const hasActiveFilters = selectedCategories.length > 0 || filterNoAudio || searchQuery;
+
   return (
     <main className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card px-6 py-4">
+      {/* Sticky Header */}
+      <header className="border-b border-border bg-card px-6 py-4 sticky top-0 z-20 shadow-sm">
         <div className="mx-auto max-w-7xl flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-semibold text-foreground">Dua Management</h1>
@@ -106,65 +130,95 @@ export default function Home() {
               />
             </div>
             
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground">Display:</span>
-              <div className="flex rounded-lg border border-border overflow-hidden">
-                <button
-                  onClick={() => setLanguage("en")}
-                  className={`px-4 py-2 text-sm font-medium transition-colors ${
-                    language === "en" 
-                      ? "bg-primary text-primary-foreground" 
-                      : "bg-card text-foreground hover:bg-secondary"
-                  }`}
-                >
-                  English
-                </button>
-                <button
-                  onClick={() => setLanguage("my")}
-                  className={`px-4 py-2 text-sm font-medium transition-colors ${
-                    language === "my" 
-                      ? "bg-primary text-primary-foreground" 
-                      : "bg-card text-foreground hover:bg-secondary"
-                  }`}
-                >
-                  Malay
-                </button>
+            <div className="flex items-center gap-4">
+              {/* No Audio Filter */}
+              <button
+                onClick={() => setFilterNoAudio(!filterNoAudio)}
+                className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                  filterNoAudio 
+                    ? "bg-primary text-primary-foreground" 
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                }`}
+              >
+                <NoAudioIcon className="h-4 w-4" />
+                No Audio
+              </button>
+
+              {/* Language Toggle */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground">Display:</span>
+                <div className="flex rounded-lg border border-border overflow-hidden">
+                  <button
+                    onClick={() => setLanguage("en")}
+                    className={`px-4 py-2 text-sm font-medium transition-colors ${
+                      language === "en" 
+                        ? "bg-primary text-primary-foreground" 
+                        : "bg-card text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => setLanguage("my")}
+                    className={`px-4 py-2 text-sm font-medium transition-colors ${
+                      language === "my" 
+                        ? "bg-primary text-primary-foreground" 
+                        : "bg-card text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    Malay
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={() => setSelectedCategory(null)}
-              className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
-                selectedCategory === null
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
-            >
-              All Categories
-            </button>
-            {categoryOptions.map(category => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-colors ${
-                  selectedCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+          {/* Category Filter - Multi Select */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium text-foreground">Filter by Categories</span>
+              {hasActiveFilters && (
+                <button
+                  onClick={clearAllFilters}
+                  className="text-xs text-primary hover:text-primary/80 font-medium transition-colors"
+                >
+                  Clear all filters
+                </button>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {categoryOptions.map(category => (
+                <button
+                  key={category}
+                  onClick={() => toggleCategory(category)}
+                  className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-colors ${
+                    selectedCategories.includes(category)
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  }`}
+                >
+                  {category}
+                  {selectedCategories.includes(category) && (
+                    <span className="ml-1.5">×</span>
+                  )}
+                </button>
+              ))}
+            </div>
+            {selectedCategories.length > 0 && (
+              <p className="text-xs text-muted-foreground">
+                Showing duas that include ALL selected categories: {selectedCategories.join(", ")}
+              </p>
+            )}
           </div>
         </div>
 
         {/* Results Count */}
         <div className="mb-4 text-sm text-muted-foreground">
           Showing {filteredDuas.length} of {duas.length} duas
-          {selectedCategory && <span> in <span className="font-medium capitalize text-foreground">{selectedCategory}</span></span>}
+          {selectedCategories.length > 0 && (
+            <span> with categories: <span className="font-medium capitalize text-foreground">{selectedCategories.join(", ")}</span></span>
+          )}
+          {filterNoAudio && <span className="font-medium text-foreground"> (No audio only)</span>}
         </div>
 
         {/* Duas List */}
@@ -214,12 +268,20 @@ export default function Home() {
               
               <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
                 <span>{dua.doa?.length || 0} entries</span>
-                {dua.audio && (
+                {dua.audio ? (
                   <>
                     <span className="text-border">|</span>
                     <span className="flex items-center gap-1">
                       <AudioIcon className="h-3 w-3" />
                       Has audio
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-border">|</span>
+                    <span className="flex items-center gap-1 text-destructive/70">
+                      <NoAudioIcon className="h-3 w-3" />
+                      No audio
                     </span>
                   </>
                 )}
@@ -327,6 +389,14 @@ function AudioIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+    </svg>
+  );
+}
+
+function NoAudioIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zm12-6l-6 6m0-6l6 6" />
     </svg>
   );
 }

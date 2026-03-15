@@ -31,6 +31,8 @@ export default function EditPage() {
     });
   }, [id]);
 
+  const canSave = selectedCategories.length > 0;
+
   if (!dua) {
     return (
       <main className="min-h-screen bg-background flex items-center justify-center">
@@ -40,6 +42,7 @@ export default function EditPage() {
   }
 
   async function save() {
+    if (!canSave) return;
     setIsSaving(true);
     await fetch("/api/duas", {
       method: "PUT",
@@ -72,7 +75,7 @@ export default function EditPage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-border bg-card px-6 py-4 sticky top-0 z-10">
+      <header className="border-b border-border bg-card px-6 py-4 sticky top-0 z-10 shadow-sm">
         <div className="mx-auto max-w-7xl flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
@@ -96,14 +99,21 @@ export default function EditPage() {
               <TrashIcon className="h-4 w-4" />
               Delete
             </button>
-            <button
-              onClick={save}
-              disabled={isSaving}
-              className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
-            >
-              <SaveIcon className="h-4 w-4" />
-              {isSaving ? "Saving..." : "Save Changes"}
-            </button>
+            <div className="relative group">
+              <button
+                onClick={save}
+                disabled={isSaving || !canSave}
+                className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <SaveIcon className="h-4 w-4" />
+                {isSaving ? "Saving..." : "Save Changes"}
+              </button>
+              {!canSave && (
+                <div className="absolute right-0 top-full mt-2 w-48 p-2 bg-foreground text-background text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
+                  Please select at least one category to save
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </header>
@@ -159,11 +169,15 @@ export default function EditPage() {
             </div>
 
             {/* Categories Card */}
-            <div className="rounded-xl border border-border bg-card p-6">
-              <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+            <div className={`rounded-xl border bg-card p-6 ${!canSave ? 'border-destructive/50' : 'border-border'}`}>
+              <h2 className="text-lg font-semibold text-foreground mb-1 flex items-center gap-2">
                 <TagIcon className="h-5 w-5 text-muted-foreground" />
                 Categories
+                <span className="text-destructive text-sm">*</span>
               </h2>
+              {!canSave && (
+                <p className="text-xs text-destructive mb-3">At least one category is required</p>
+              )}
               
               <div className="flex flex-wrap gap-2">
                 {categoryOptions.map(category => (

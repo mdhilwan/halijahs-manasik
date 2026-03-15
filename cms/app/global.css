@@ -4,34 +4,34 @@
 
 @layer base {
   :root {
-    /* Earthly tone color palette */
-    --background: 40 33% 97%; /* warm off-white */
-    --foreground: 30 10% 15%; /* dark brown */
+    /* Greenish earthly tone color palette */
+    --background: 140 20% 96%; /* soft sage white */
+    --foreground: 150 15% 15%; /* dark forest */
     
-    --card: 40 30% 95%;
-    --card-foreground: 30 10% 15%;
+    --card: 140 15% 94%;
+    --card-foreground: 150 15% 15%;
     
-    --popover: 40 30% 95%;
-    --popover-foreground: 30 10% 15%;
+    --popover: 140 15% 94%;
+    --popover-foreground: 150 15% 15%;
     
-    --primary: 30 45% 35%; /* earthy brown */
-    --primary-foreground: 40 33% 97%;
+    --primary: 152 35% 35%; /* forest green */
+    --primary-foreground: 140 20% 98%;
     
-    --secondary: 35 25% 85%; /* light tan */
-    --secondary-foreground: 30 10% 20%;
+    --secondary: 145 18% 88%; /* light sage */
+    --secondary-foreground: 150 15% 20%;
     
-    --muted: 35 20% 90%;
-    --muted-foreground: 30 10% 45%;
+    --muted: 145 15% 91%;
+    --muted-foreground: 150 10% 45%;
     
-    --accent: 25 50% 45%; /* warm terracotta */
-    --accent-foreground: 40 33% 97%;
+    --accent: 160 30% 40%; /* teal green */
+    --accent-foreground: 140 20% 98%;
     
     --destructive: 0 60% 50%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 30 20% 82%;
-    --input: 30 20% 82%;
-    --ring: 30 45% 35%;
+    --border: 145 15% 82%;
+    --input: 145 15% 82%;
+    --ring: 152 35% 35%;
     
     --radius: 0.5rem;
   }
@@ -46,22 +46,22 @@
   }
 }
 
-/* Custom scrollbar for earthly theme */
+/* Custom scrollbar for greenish earthly theme */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(35 20% 90%);
+  background: hsl(145 15% 91%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(30 20% 70%);
+  background: hsl(145 15% 70%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(30 25% 60%);
+  background: hsl(150 20% 55%);
 }
