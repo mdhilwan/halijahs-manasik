@@ -33,6 +33,7 @@ export default function EditPage() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [isSaving, setIsSaving] = useState(false);
   const [language, setLanguage] = useState<"en" | "my">("en");
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then((data) => {
@@ -102,6 +103,14 @@ export default function EditPage() {
     
     setSelectedCategories(newSelectedCategories);
     setDua({ ...dua, categoryKey: newSelectedCategories });
+  }
+
+  function toggleExpanded(categoryKey: string) {
+    setExpandedCategories(prev =>
+      prev.includes(categoryKey)
+        ? prev.filter(k => k !== categoryKey)
+        : [...prev, categoryKey]
+    );
   }
 
   return (
@@ -239,19 +248,34 @@ export default function EditPage() {
                 {categories.map(category => (
                   <div key={category.key} className="space-y-1.5 p-2 rounded-lg border border-border bg-card/50">
                     {/* Parent Category */}
-                    <button
-                      onClick={() => toggleCategory(category.key, false)}
-                      className={`w-full rounded-md px-2 py-1.5 text-xs font-medium transition-colors text-left ${
-                        selectedCategories.includes(category.key)
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                      }`}
-                    >
-                      {language === "en" ? category.nameEn : category.nameMy}
-                    </button>
+                    <div className="flex items-center gap-1">
+                      <button
+                        onClick={() => toggleCategory(category.key, false)}
+                        className={`flex-1 rounded-md px-2 py-1.5 text-xs font-medium transition-colors text-left ${
+                          selectedCategories.includes(category.key)
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                        }`}
+                      >
+                        {language === "en" ? category.nameEn : category.nameMy}
+                      </button>
+                      {category.subcategories.length > 0 && (
+                        <button
+                          onClick={() => toggleExpanded(category.key)}
+                          className="shrink-0 p-1 rounded hover:bg-secondary transition-colors"
+                          aria-label={expandedCategories.includes(category.key) ? "Collapse subcategories" : "Expand subcategories"}
+                        >
+                          <ChevronIcon 
+                            className={`h-4 w-4 text-muted-foreground transition-transform ${
+                              expandedCategories.includes(category.key) ? "rotate-180" : ""
+                            }`} 
+                          />
+                        </button>
+                      )}
+                    </div>
                     
-                    {/* Subcategories */}
-                    {category.subcategories.length > 0 && (
+                    {/* Subcategories - Collapsible */}
+                    {category.subcategories.length > 0 && expandedCategories.includes(category.key) && (
                       <div className="flex flex-col gap-1 pl-2 border-l-2 border-border">
                         {category.subcategories.map(sub => (
                           <button
@@ -463,6 +487,14 @@ function PlusIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+    </svg>
+  );
+}
+
+function ChevronIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
   );
 }

@@ -26,6 +26,7 @@ export default function Home() {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [newDuaTitle, setNewDuaTitle] = useState({ en: "", my: "" });
   const [filterNoAudio, setFilterNoAudio] = useState(false);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then(setDuas);
@@ -72,6 +73,14 @@ export default function Home() {
     setSelectedCategories([]);
     setFilterNoAudio(false);
     setSearchQuery("");
+  }
+
+  function toggleExpanded(categoryKey: string) {
+    setExpandedCategories(prev =>
+      prev.includes(categoryKey)
+        ? prev.filter(k => k !== categoryKey)
+        : [...prev, categoryKey]
+    );
   }
 
   async function createDua() {
@@ -218,22 +227,37 @@ export default function Home() {
               {categories.map(category => (
                 <div key={category.key} className="space-y-1.5 p-2 rounded-lg border border-border bg-card/50">
                   {/* Parent Category */}
-                  <button
-                    onClick={() => toggleCategory(category.key, false)}
-                    className={`w-full rounded-md px-2 py-1.5 text-xs font-medium transition-colors text-left ${
-                      selectedCategories.includes(category.key)
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                    }`}
-                  >
-                    {language === "en" ? category.nameEn : category.nameMy}
-                    {selectedCategories.includes(category.key) && (
-                      <span className="ml-1 float-right">×</span>
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={() => toggleCategory(category.key, false)}
+                      className={`flex-1 rounded-md px-2 py-1.5 text-xs font-medium transition-colors text-left ${
+                        selectedCategories.includes(category.key)
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                      }`}
+                    >
+                      {language === "en" ? category.nameEn : category.nameMy}
+                      {selectedCategories.includes(category.key) && (
+                        <span className="ml-1 float-right">×</span>
+                      )}
+                    </button>
+                    {category.subcategories.length > 0 && (
+                      <button
+                        onClick={() => toggleExpanded(category.key)}
+                        className="shrink-0 p-1 rounded hover:bg-secondary transition-colors"
+                        aria-label={expandedCategories.includes(category.key) ? "Collapse subcategories" : "Expand subcategories"}
+                      >
+                        <ChevronIcon 
+                          className={`h-4 w-4 text-muted-foreground transition-transform ${
+                            expandedCategories.includes(category.key) ? "rotate-180" : ""
+                          }`} 
+                        />
+                      </button>
                     )}
-                  </button>
+                  </div>
                   
-                  {/* Subcategories */}
-                  {category.subcategories.length > 0 && (
+                  {/* Subcategories - Collapsible */}
+                  {category.subcategories.length > 0 && expandedCategories.includes(category.key) && (
                     <div className="flex flex-col gap-1 pl-2 border-l-2 border-border">
                       {category.subcategories.map(sub => (
                         <button
@@ -457,6 +481,14 @@ function TagIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+    </svg>
+  );
+}
+
+function ChevronIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
   );
 }
