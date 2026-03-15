@@ -28,7 +28,7 @@ export default function DuaListScreen({setScreen, duas, setSelectedDua, category
 
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView>
+      <SafeAreaView style={{ flex: 1 }}>
         <ThemedText style={styles.header}>
           <TouchableOpacity onPress={() => setScreen("home")}>
             <ThemedText>
