@@ -74,7 +74,7 @@ const buttons: buttonType[] = [
     bgImg: require('@/assets/images/button-bg/muzdalifah.png')
   },
   {
-    title: 'Stoning',
+    title: 'Jamrah',
     bgImg: require('@/assets/images/button-bg/jamrah.png')
   },
 ];

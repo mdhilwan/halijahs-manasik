@@ -3,8 +3,8 @@ import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { DuaType } from "../../app/types";
 
-const categoryOptions = [
-  "arafah", "mina", "muzdalifah", "stoning", "talbiyah", "ihram", "umrah", "haji", 
+export const CategoryOptions = [
+  "arafah", "mina", "muzdalifah", "jamrah", "talbiyah", "ihram", "umrah", "haji",
   "masjidil haram", "tawaf", "niat", "zam-zam", "sa'i", "tahalul", "tawaf wadak", "madinah", "travel"
 ];
 
@@ -18,7 +18,10 @@ export default function Home() {
   const [filterNoAudio, setFilterNoAudio] = useState(false);
 
   useEffect(() => {
-    fetch("/api/duas").then(r => r.json()).then(setDuas);
+    fetch("/api/duas").then(r => r.json()).then((res) => {
+      console.log(res)
+      setDuas(res)
+    });
   }, []);
 
   const filteredDuas = useMemo(() => {
@@ -187,7 +190,7 @@ export default function Home() {
               )}
             </div>
             <div className="flex flex-wrap gap-2">
-              {categoryOptions.map(category => (
+              {CategoryOptions.map(category => (
                 <button
                   key={category}
                   onClick={() => toggleCategory(category)}

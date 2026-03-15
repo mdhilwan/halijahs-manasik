@@ -5,16 +5,12 @@ import Link from "next/link";
 import { Scheherazade_New } from 'next/font/google';
 import DoaPreview from "../../component/doa-preview";
 import { DuaType } from "../../../../app/types";
+import { CategoryOptions } from "../../page";
 
 const scheherazadeNew = Scheherazade_New({
   weight: "400",
   subsets: ["arabic"]
 })
-
-const categoryOptions = [
-  "arafah", "mina", "muzdalifah", "stoning", "talbiyah", "ihram", "umrah", "haji", 
-  "masjidil haram", "tawaf", "niat", "zam-zam", "sa'i", "tahalul", "tawaf wadak", "madinah", "travel"
-];
 
 export default function EditPage() {
   const { id } = useParams();
@@ -180,7 +176,7 @@ export default function EditPage() {
               )}
               
               <div className="flex flex-wrap gap-2">
-                {categoryOptions.map(category => (
+                {CategoryOptions.map(category => (
                   <button
                     key={category}
                     onClick={() => toggleCategory(category)}
@@ -234,7 +230,7 @@ export default function EditPage() {
                 <div className="text-center py-8 text-muted-foreground">
                   <BookIcon className="h-10 w-10 mx-auto mb-2 opacity-50" />
                   <p className="text-sm">No doa entries yet</p>
-                  <p className="text-xs mt-1">Click "Add Entry" to create one</p>
+                  <p className="text-xs mt-1">Click &#34;Add Entry&#34; to create one</p>
                 </div>
               ) : (
                 <div className="space-y-4">
