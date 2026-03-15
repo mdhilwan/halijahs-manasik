@@ -235,13 +235,13 @@ export default function EditPage() {
                 <p className="text-xs text-destructive mb-3">At least one category is required</p>
               )}
               
-              <div className="space-y-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                 {categories.map(category => (
-                  <div key={category.key} className="space-y-1.5">
+                  <div key={category.key} className="space-y-1.5 p-2 rounded-lg border border-border bg-card/50">
                     {/* Parent Category */}
                     <button
                       onClick={() => toggleCategory(category.key, false)}
-                      className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
+                      className={`w-full rounded-md px-2 py-1.5 text-xs font-medium transition-colors text-left ${
                         selectedCategories.includes(category.key)
                           ? "bg-primary text-primary-foreground"
                           : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
@@ -252,12 +252,12 @@ export default function EditPage() {
                     
                     {/* Subcategories */}
                     {category.subcategories.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 pl-4 border-l-2 border-border ml-2">
+                      <div className="flex flex-col gap-1 pl-2 border-l-2 border-border">
                         {category.subcategories.map(sub => (
                           <button
                             key={sub.key}
                             onClick={() => toggleCategory(sub.key, true, category.key)}
-                            className={`rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors ${
+                            className={`w-full rounded-md px-2 py-1 text-[11px] font-medium transition-colors text-left ${
                               selectedCategories.includes(sub.key)
                                 ? "bg-primary/80 text-primary-foreground"
                                 : "bg-muted text-muted-foreground hover:bg-muted/80"
