@@ -4,7 +4,23 @@
       "key": "arafah",
       "nameEn": "Arafah",
       "nameMy": "Arafah",
-      "subcategories": []
+      "subcategories": [
+        {
+          "key": "istigfaar_al_jaami",
+          "nameEn": "Istigfaar al Jaami'",
+          "nameMy": "Istigfaar al Jaami'"
+        },
+        {
+          "key": "dzikrs",
+          "nameEn": "Dzikrs",
+          "nameMy": "Zikir-Zikir"
+        },
+        {
+          "key": "supplications",
+          "nameEn": "Supplications",
+          "nameMy": "Doa-Doa"
+        }
+      ]
     },
     {
       "key": "haji",
@@ -18,11 +34,6 @@
       "nameEn": "Ihram",
       "nameMy": "Ihram",
       "subcategories": [
-        {
-          "key": "intention_for_ihram_prayer",
-          "nameEn": "Intention for Ihram Prayer",
-          "nameMy": "Niat Solat Sunnat Ihram"
-        },
         {
           "key": "umrah_ihram_intentions",
           "nameEn": "Umrah Ihram Intentions",
@@ -69,7 +80,48 @@
       "key": "sa'i",
       "nameEn": "Sa'i",
       "nameMy": "Sa'i",
-      "subcategories": []
+      "subcategories": [
+        {
+          "key": "sai_intentions",
+          "nameEn": "Sa'i Intentions",
+          "nameMy": "Niat-Niat Sa'i"
+        },
+        {
+          "key": "sai_round_1",
+          "nameEn": "Round 1",
+          "nameMy": "Pusingan 1"
+        },
+        {
+          "key": "sai_round_2",
+          "nameEn": "Round 2",
+          "nameMy": "Pusingan 2"
+        },
+        {
+          "key": "sai_round_3",
+          "nameEn": "Round 3",
+          "nameMy": "Pusingan 3"
+        },
+        {
+          "key": "sai_round_4",
+          "nameEn": "Round 4",
+          "nameMy": "Pusingan 4"
+        },
+        {
+          "key": "sai_round_5",
+          "nameEn": "Round 5",
+          "nameMy": "Pusingan 5"
+        },
+        {
+          "key": "sai_round_6",
+          "nameEn": "Round 6",
+          "nameMy": "Pusingan 6"
+        },
+        {
+          "key": "sai_round_7",
+          "nameEn": "Round 7",
+          "nameMy": "Pusingan 7"
+        }
+      ]
     },
     {
       "key": "stoning",
@@ -93,7 +145,53 @@
       "key": "tawaf",
       "nameEn": "Tawaf",
       "nameMy": "Tawaf",
-      "subcategories": []
+      "subcategories": [
+        {
+          "key": "tawaf_intentions",
+          "nameEn": "Tawaf Intentions",
+          "nameMy": "Niat-Niat Tawaf"
+        },
+        {
+          "key": "tawaf_round_1",
+          "nameEn": "Round 1",
+          "nameMy": "Pusingan 1"
+        },
+        {
+          "key": "tawaf_round_2",
+          "nameEn": "Round 2",
+          "nameMy": "Pusingan 2"
+        },
+        {
+          "key": "tawaf_round_3",
+          "nameEn": "Round 3",
+          "nameMy": "Pusingan 3"
+        },
+        {
+          "key": "tawaf_round_4",
+          "nameEn": "Round 4",
+          "nameMy": "Pusingan 4"
+        },
+        {
+          "key": "tawaf_round_5",
+          "nameEn": "Round 5",
+          "nameMy": "Pusingan 5"
+        },
+        {
+          "key": "tawaf_round_6",
+          "nameEn": "Round 6",
+          "nameMy": "Pusingan 6"
+        },
+        {
+          "key": "tawaf_round_7",
+          "nameEn": "Round 7",
+          "nameMy": "Pusingan 7"
+        },
+        {
+          "key": "sunnah_tawaf_prayer",
+          "nameEn": "Sunnah Tawaf Prayer",
+          "nameMy": "Solat Sunat Tawaf"
+        }
+      ]
     },
     {
       "key": "tawaf wadak",
@@ -105,7 +203,13 @@
       "key": "travel",
       "nameEn": "Travel",
       "nameMy": "Perjalanan",
-      "subcategories": []
+      "subcategories": [
+        {
+          "key": "solat_jama_and_qasar_intentions",
+          "nameEn": "Solat Jama’ and Qasar Intentions",
+          "nameMy": "Niat-Niat Solat Jamak dan Qasar"
+        }
+      ]
     },
     {
       "key": "umrah",
