@@ -250,8 +250,8 @@
     ],
     "categoryKey": [
       "niat",
-      "tawaf",
-      "haji"
+      "haji",
+      "tawaf_intentions"
     ],
     "audio": "niat_tawaf_qudum.mp3"
   },
@@ -269,8 +269,8 @@
     ],
     "categoryKey": [
       "niat",
-      "tawaf",
-      "haji"
+      "haji",
+      "tawaf_intentions"
     ],
     "audio": "niat_tawaf_haji.mp3"
   },
@@ -288,9 +288,9 @@
     ],
     "categoryKey": [
       "niat",
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_intentions"
     ],
     "audio": "niat_tawaf_umrah.mp3"
   },
@@ -308,9 +308,9 @@
     ],
     "categoryKey": [
       "niat",
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_intentions"
     ],
     "audio": "niat_tawaf_sunnah.mp3"
   },
@@ -327,9 +327,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_1"
     ],
     "audio": "doa_tawaf_pusingan_pertama.mp3"
   },
@@ -346,9 +346,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_1"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -365,9 +365,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_2"
     ],
     "audio": "doa_tawaf_pusingan_kedua.mp3"
   },
@@ -384,9 +384,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_2"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -403,9 +403,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_3"
     ],
     "audio": "doa_tawaf_pusingan_ketiga.mp3"
   },
@@ -422,9 +422,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_3"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -441,9 +441,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_4"
     ],
     "audio": "doa_tawaf_pusingan_keempat.mp3"
   },
@@ -460,9 +460,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_4"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -479,9 +479,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_5"
     ],
     "audio": "doa_tawaf_pusingan_kelima.mp3"
   },
@@ -498,9 +498,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_5"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -517,9 +517,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_6"
     ],
     "audio": "doa_tawaf_pusingan_keenam.mp3"
   },
@@ -536,9 +536,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_6"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -555,9 +555,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_7"
     ],
     "audio": "doa_tawaf_pusingan_ketujuh.mp3"
   },
@@ -574,9 +574,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "tawaf_round_7"
     ],
     "audio": "doa_dari_rukun_yamani_hingga_hajar_aswad.mp3"
   },
@@ -593,9 +593,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "sunnah_tawaf_prayer"
     ],
     "audio": "niat_solat_sunnat_tawaf.mp3"
   },
@@ -612,9 +612,9 @@
       }
     ],
     "categoryKey": [
-      "tawaf",
       "umrah",
-      "haji"
+      "haji",
+      "sunnah_tawaf_prayer"
     ],
     "audio": "doa_setelah_solat_sunat_tawaf.mp3"
   },
