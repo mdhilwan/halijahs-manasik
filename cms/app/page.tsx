@@ -28,6 +28,14 @@ export default function Home() {
   const [filterNoAudio, setFilterNoAudio] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
   const [isFilterExpanded, setIsFilterExpanded] = useState(false);
+  
+  // Bulk edit state
+  const [selectedDuaIds, setSelectedDuaIds] = useState<number[]>([]);
+  const [isBatchModalOpen, setIsBatchModalOpen] = useState(false);
+  const [batchMode, setBatchMode] = useState<"add" | "remove">("add");
+  const [batchCategorySelections, setBatchCategorySelections] = useState<string[]>([]);
+  const [batchExpandedCategories, setBatchExpandedCategories] = useState<string[]>([]);
+  const [isBatchLoading, setIsBatchLoading] = useState(false);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then(setDuas);
@@ -116,6 +124,86 @@ export default function Home() {
   }
 
   const hasActiveFilters = selectedCategories.length > 0 || filterNoAudio || searchQuery;
+
+  // Bulk edit functions
+  function toggleDuaSelection(duaId: number) {
+    setSelectedDuaIds(prev => 
+      prev.includes(duaId) 
+        ? prev.filter(id => id !== duaId)
+        : [...prev, duaId]
+    );
+  }
+
+  function clearDuaSelection() {
+    setSelectedDuaIds([]);
+  }
+
+  function openBatchModal(mode: "add" | "remove") {
+    setBatchMode(mode);
+    setBatchCategorySelections([]);
+    setBatchExpandedCategories([]);
+    setIsBatchModalOpen(true);
+  }
+
+  function toggleBatchCategory(categoryKey: string) {
+    setBatchCategorySelections(prev =>
+      prev.includes(categoryKey)
+        ? prev.filter(k => k !== categoryKey)
+        : [...prev, categoryKey]
+    );
+  }
+
+  function toggleBatchExpanded(categoryKey: string) {
+    setBatchExpandedCategories(prev =>
+      prev.includes(categoryKey)
+        ? prev.filter(k => k !== categoryKey)
+        : [...prev, categoryKey]
+    );
+  }
+
+  async function applyBatchUpdate() {
+    if (selectedDuaIds.length === 0 || batchCategorySelections.length === 0) return;
+    
+    setIsBatchLoading(true);
+    try {
+      await fetch("/api/duas", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ids: selectedDuaIds,
+          categoryKeys: batchCategorySelections,
+          mode: batchMode
+        })
+      });
+      
+      // Refresh data
+      const updatedDuas = await fetch("/api/duas").then(r => r.json());
+      setDuas(updatedDuas);
+      
+      // Reset state
+      setIsBatchModalOpen(false);
+      setBatchCategorySelections([]);
+      setSelectedDuaIds([]);
+    } finally {
+      setIsBatchLoading(false);
+    }
+  }
+
+  function selectAllVisible() {
+    const visibleIds = filteredDuas.map(d => d.id);
+    setSelectedDuaIds(prev => {
+      const allSelected = visibleIds.every(id => prev.includes(id));
+      if (allSelected) {
+        // Deselect all visible
+        return prev.filter(id => !visibleIds.includes(id));
+      } else {
+        // Select all visible
+        return [...new Set([...prev, ...visibleIds])];
+      }
+    });
+  }
+
+  const allVisibleSelected = filteredDuas.length > 0 && filteredDuas.every(d => selectedDuaIds.includes(d.id));
 
   return (
     <main className="min-h-screen bg-background">
@@ -305,81 +393,111 @@ export default function Home() {
         </div>
 
         {/* Results Count */}
-        <div className="mb-4 text-sm text-muted-foreground">
-          Showing {filteredDuas.length} of {duas.length} duas
-          {selectedCategories.length > 0 && (
-            <span> with categories: <span className="font-medium capitalize text-foreground">{selectedCategories.join(", ")}</span></span>
-          )}
-          {filterNoAudio && <span className="font-medium text-foreground"> (No audio only)</span>}
+        <div className="mb-4 flex items-center justify-between">
+          <div className="text-sm text-muted-foreground">
+            Showing {filteredDuas.length} of {duas.length} duas
+            {selectedCategories.length > 0 && (
+              <span> with categories: <span className="font-medium capitalize text-foreground">{selectedCategories.join(", ")}</span></span>
+            )}
+            {filterNoAudio && <span className="font-medium text-foreground"> (No audio only)</span>}
+          </div>
+          <button
+            onClick={selectAllVisible}
+            className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors bg-secondary text-secondary-foreground hover:bg-secondary/80"
+          >
+            <CheckboxIcon checked={allVisibleSelected} />
+            {allVisibleSelected ? "Deselect All" : "Select All"}
+          </button>
         </div>
 
         {/* Duas List */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredDuas.map(dua => (
-            <div
-              key={dua.id}
-              className="group rounded-xl border border-border bg-card p-4 hover:shadow-md hover:border-primary/30 transition-all"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-medium text-foreground truncate">
-                    {language === "en" ? dua.titleEn : dua.titleMy}
-                  </h3>
-                  {language === "en" && dua.titleMy && (
-                    <p className="text-xs text-muted-foreground truncate mt-0.5">{dua.titleMy}</p>
-                  )}
-                  {language === "my" && dua.titleEn && (
-                    <p className="text-xs text-muted-foreground truncate mt-0.5">{dua.titleEn}</p>
-                  )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-20">
+          {filteredDuas.map(dua => {
+            const isSelected = selectedDuaIds.includes(dua.id);
+            return (
+              <div
+                key={dua.id}
+                onClick={() => toggleDuaSelection(dua.id)}
+                className={`group rounded-xl border p-4 transition-all cursor-pointer ${
+                  isSelected 
+                    ? "border-primary bg-primary/5 shadow-md ring-2 ring-primary/20" 
+                    : "border-border bg-card hover:shadow-md hover:border-primary/30"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-start gap-3 flex-1 min-w-0">
+                    {/* Selection indicator */}
+                    <div className={`shrink-0 mt-0.5 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                      isSelected 
+                        ? "bg-primary border-primary" 
+                        : "border-muted-foreground/30"
+                    }`}>
+                      {isSelected && (
+                        <CheckIcon className="h-3 w-3 text-primary-foreground" />
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-medium text-foreground truncate">
+                        {language === "en" ? dua.titleEn : dua.titleMy}
+                      </h3>
+                      {language === "en" && dua.titleMy && (
+                        <p className="text-xs text-muted-foreground truncate mt-0.5">{dua.titleMy}</p>
+                      )}
+                      {language === "my" && dua.titleEn && (
+                        <p className="text-xs text-muted-foreground truncate mt-0.5">{dua.titleEn}</p>
+                      )}
+                    </div>
+                  </div>
+                  <Link
+                    href={`/edit/${dua.id}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="shrink-0 rounded-lg bg-secondary px-3 py-1.5 text-xs font-medium text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    Edit
+                  </Link>
                 </div>
-                <Link
-                  href={`/edit/${dua.id}`}
-                  className="shrink-0 rounded-lg bg-secondary px-3 py-1.5 text-xs font-medium text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  Edit
-                </Link>
-              </div>
-              
-              {dua.categoryKey && dua.categoryKey.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {dua.categoryKey.slice(0, 3).map(cat => (
-                    <span
-                      key={cat}
-                      className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground capitalize"
-                    >
-                      {cat}
-                    </span>
-                  ))}
-                  {dua.categoryKey.length > 3 && (
-                    <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
-                      +{dua.categoryKey.length - 3}
-                    </span>
-                  )}
-                </div>
-              )}
-              
-              <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
-                <span>{dua.doa?.length || 0} entries</span>
-                {dua.audio ? (
-                  <>
-                    <span className="text-border">|</span>
-                    <span className="flex items-center gap-1">
-                      <AudioIcon className="h-3 w-3" />
-                      Has audio
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    <span className="text-border">|</span>
-                    <span className="flex items-center gap-1 text-destructive/70">
-                      <NoAudioIcon className="h-3 w-3" />
-                      No audio
-                    </span>
-                  </>
+                
+                {dua.categoryKey && dua.categoryKey.length > 0 && (
+                  <div className="mt-3 flex flex-wrap gap-1.5 ml-8">
+                    {dua.categoryKey.slice(0, 3).map(cat => (
+                      <span
+                        key={cat}
+                        className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground capitalize"
+                      >
+                        {cat}
+                      </span>
+                    ))}
+                    {dua.categoryKey.length > 3 && (
+                      <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
+                        +{dua.categoryKey.length - 3}
+                      </span>
+                    )}
+                  </div>
                 )}
+                
+                <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground ml-8">
+                  <span>{dua.doa?.length || 0} entries</span>
+                  {dua.audio ? (
+                    <>
+                      <span className="text-border">|</span>
+                      <span className="flex items-center gap-1">
+                        <AudioIcon className="h-3 w-3" />
+                        Has audio
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-border">|</span>
+                      <span className="flex items-center gap-1 text-destructive/70">
+                        <NoAudioIcon className="h-3 w-3" />
+                        No audio
+                      </span>
+                    </>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {filteredDuas.length === 0 && (
@@ -448,6 +566,173 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {/* Batch Edit Sticky Toolbar */}
+      {selectedDuaIds.length > 0 && (
+        <div className="fixed bottom-0 left-0 right-0 z-40 bg-card border-t border-border shadow-lg">
+          <div className="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-medium text-foreground">
+                {selectedDuaIds.length} selected
+              </span>
+              <button
+                onClick={clearDuaSelection}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Clear
+              </button>
+            </div>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => openBatchModal("add")}
+                className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              >
+                <PlusIcon className="h-4 w-4" />
+                Add Categories
+              </button>
+              <button
+                onClick={() => openBatchModal("remove")}
+                className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
+              >
+                <MinusIcon className="h-4 w-4" />
+                Remove Categories
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Batch Category Modal */}
+      {isBatchModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/50">
+          <div className="bg-card rounded-xl border border-border p-6 w-full max-w-2xl mx-4 shadow-xl max-h-[80vh] overflow-hidden flex flex-col">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-semibold text-foreground">
+                {batchMode === "add" ? "Add Categories" : "Remove Categories"} 
+                <span className="text-muted-foreground font-normal ml-2">
+                  ({selectedDuaIds.length} duas)
+                </span>
+              </h2>
+              <div className="flex rounded-lg border border-border overflow-hidden">
+                <button
+                  onClick={() => setLanguage("en")}
+                  className={`px-3 py-1 text-xs font-medium transition-colors ${
+                    language === "en" 
+                      ? "bg-primary text-primary-foreground" 
+                      : "bg-card text-foreground hover:bg-secondary"
+                  }`}
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => setLanguage("my")}
+                  className={`px-3 py-1 text-xs font-medium transition-colors ${
+                    language === "my" 
+                      ? "bg-primary text-primary-foreground" 
+                      : "bg-card text-foreground hover:bg-secondary"
+                  }`}
+                >
+                  MY
+                </button>
+              </div>
+            </div>
+            
+            <p className="text-sm text-muted-foreground mb-4">
+              {batchMode === "add" 
+                ? "Select categories to add to the selected duas. Existing categories will be preserved."
+                : "Select categories to remove from the selected duas."}
+            </p>
+            
+            <div className="flex-1 overflow-y-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {categories.map(category => (
+                  <div key={category.key} className="space-y-1.5 p-2 rounded-lg border border-border bg-card/50">
+                    {/* Parent Category */}
+                    <div className="flex items-center gap-1">
+                      <button
+                        onClick={() => toggleBatchCategory(category.key)}
+                        className={`flex-1 rounded-md px-2 py-1.5 text-xs font-medium transition-colors text-left flex items-center gap-2 ${
+                          batchCategorySelections.includes(category.key)
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                        }`}
+                      >
+                        <CheckboxIcon checked={batchCategorySelections.includes(category.key)} small />
+                        {language === "en" ? category.nameEn : category.nameMy}
+                      </button>
+                      {category.subcategories.length > 0 && (
+                        <button
+                          onClick={() => toggleBatchExpanded(category.key)}
+                          className="shrink-0 p-1 rounded hover:bg-secondary transition-colors"
+                        >
+                          <ChevronIcon 
+                            className={`h-4 w-4 text-muted-foreground transition-transform ${
+                              batchExpandedCategories.includes(category.key) ? "rotate-180" : ""
+                            }`} 
+                          />
+                        </button>
+                      )}
+                    </div>
+                    
+                    {/* Subcategories */}
+                    {category.subcategories.length > 0 && batchExpandedCategories.includes(category.key) && (
+                      <div className="flex flex-col gap-1 pl-2 border-l-2 border-border">
+                        {category.subcategories.map(sub => (
+                          <button
+                            key={sub.key}
+                            onClick={() => toggleBatchCategory(sub.key)}
+                            className={`w-full rounded-md px-2 py-1 text-[11px] font-medium transition-colors text-left flex items-center gap-2 ${
+                              batchCategorySelections.includes(sub.key)
+                                ? "bg-primary/80 text-primary-foreground"
+                                : "bg-muted text-muted-foreground hover:bg-muted/80"
+                            }`}
+                          >
+                            <CheckboxIcon checked={batchCategorySelections.includes(sub.key)} small />
+                            {language === "en" ? sub.nameEn : sub.nameMy}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {batchCategorySelections.length > 0 && (
+              <div className="mt-4 pt-3 border-t border-border">
+                <p className="text-xs text-muted-foreground">
+                  Selected: {batchCategorySelections.join(", ")}
+                </p>
+              </div>
+            )}
+            
+            <div className="flex justify-end gap-3 mt-4 pt-4 border-t border-border">
+              <button
+                onClick={() => {
+                  setIsBatchModalOpen(false);
+                  setBatchCategorySelections([]);
+                }}
+                className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={applyBatchUpdate}
+                disabled={batchCategorySelections.length === 0 || isBatchLoading}
+                className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
+                  batchMode === "add"
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                }`}
+              >
+                {isBatchLoading 
+                  ? "Applying..." 
+                  : `${batchMode === "add" ? "Add" : "Remove"} to ${selectedDuaIds.length} duas`}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
@@ -505,6 +790,39 @@ function ChevronIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  );
+}
+
+function CheckIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
+function CheckboxIcon({ checked, small }: { checked: boolean; small?: boolean }) {
+  const size = small ? "h-3 w-3" : "h-4 w-4";
+  return (
+    <div className={`${size} rounded border flex items-center justify-center shrink-0 ${
+      checked 
+        ? "bg-primary border-primary" 
+        : "border-muted-foreground/40"
+    }`}>
+      {checked && (
+        <svg className={small ? "h-2 w-2" : "h-3 w-3"} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" className="text-primary-foreground" />
+        </svg>
+      )}
+    </div>
+  );
+}
+
+function MinusIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
     </svg>
   );
 }
