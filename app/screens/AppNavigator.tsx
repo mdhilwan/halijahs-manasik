@@ -14,7 +14,7 @@ export default function AppNavigator() {
     case "home":
       return <HomeScreen setScreen={setScreen} setDuas={setDuas} setCategory={setCategory} setSelectedDua={setSelectedDua} />
     case "duaList":
-      return <DuaListScreen setScreen={setScreen} duas={duas} category={category} setSelectedDua={setSelectedDua} />
+      return <DuaListScreen setScreen={setScreen} duas={duas} setCategory={setCategory} category={category} setSelectedDua={setSelectedDua} />
     case "duaDetail":
       return <DuaDetailScreen setScreen={setScreen} selectedDua={selectedDua} setSelectedDua={setSelectedDua} />;
     default:

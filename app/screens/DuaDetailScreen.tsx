@@ -48,7 +48,9 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
 
   const {language} = useLanguage();
   const {setShowSettings} = useFontSize()
-  const duaObj = selectedDua?.duas[selectedDua.curr as number]
+  const duaObj = selectedDua?.duas.find((dua: DuaType) => {
+    return dua.id === selectedDua?.curr
+  })
   const [fontLoaded] = useFonts({
     'ScheherazadeNew-Regular': require('@/assets/font/ScheherazadeNew-Regular.ttf'),
     'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),

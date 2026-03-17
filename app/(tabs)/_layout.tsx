@@ -33,6 +33,14 @@ export default function TabLayout() {
               title: 'Home',
               tabBarIcon: ({color}) => <Ionicons size={28} name={"home"} color={color}/>,
             }}
+            listeners={({ navigation }) => ({
+              tabPress: (e) => {
+                navigation.reset({
+                  index: 0,
+                  routes: [{ name: 'index' }],
+                });
+              },
+            })}
           />
           <Tabs.Screen
             name="settings"

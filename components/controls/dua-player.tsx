@@ -119,9 +119,12 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
 
   useFocusEffect(
     useCallback(() => {
-      return () => {
+      return async () => {
         if (sound) {
-          sound.stopAsync();
+          const {isLoaded} = await sound.getStatusAsync();
+          if (isLoaded) {
+            sound.stopAsync();
+          }
           setIsPlaying(false);
           setPosition(0);
         }

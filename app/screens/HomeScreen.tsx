@@ -46,13 +46,25 @@ export default function HomeScreen({
 
   const loadDuas = async (category: string) => {
     // @ts-ignore
-    const result = duas.filter((d: DuaType) => {
+    let result = duas.filter((d: DuaType) => {
       if (d.categoryKey) {
         return d.categoryKey.includes(category.toLowerCase())
       } else {
         console.log(d, ": has no category")
       }
     });
+    const subCategories = categoriesData.categories.find((cat) => cat.key === category.toLowerCase())?.subcategories
+    
+    if (subCategories) {
+      const subCategoriesKey = (subCategories.map(cat => cat.key))
+      const subCategoriesResult = (duas.filter((d: DuaType) => {
+        if (d.categoryKey) {
+          return subCategoriesKey.some((sub) => d.categoryKey.includes(sub))
+        }
+      }))
+      result = [...result, ...subCategoriesResult]
+    }
+    
     if (result.length === 1) {
       setDuas(result);
       setCategory(category);

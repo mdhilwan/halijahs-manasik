@@ -38,6 +38,7 @@ export type DuaDetailType = {
 export type DuaListScreenType = {
   setScreen: React.Dispatch<React.SetStateAction<string>>;
   setSelectedDua: React.Dispatch<React.SetStateAction<SelectedDuaType>>;
+  setCategory: React.Dispatch<React.SetStateAction<string>>;
   duas: DuaType[];
   category: string;
 }
