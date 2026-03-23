@@ -51,7 +51,7 @@ export default function Home() {
       
       // Multi-select: dua must have ALL selected categories
       const matchesCategory = selectedCategories.length === 0 || 
-                             selectedCategories.every(cat => dua.categoryKey?.includes(cat));
+                             selectedCategories.some(cat => dua.categoryKey?.includes(cat));
       
       // No audio filter
       const matchesNoAudio = !filterNoAudio || !dua.audio;
