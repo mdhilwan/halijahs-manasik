@@ -1,6 +1,6 @@
 import {Modal, StyleSheet, View, TouchableWithoutFeedback} from "react-native";
 import React from "react";
-import {useFontSize} from "@/app/contexts/FontSettingsContext";
+import {useFontSize} from "@/contexts/FontSettingsContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
 import {ThemedText} from "@/components/themed-text";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {LanguageEnums} from "../constants/language-enums";
+import {LanguageEnums} from "@/constants/language-enums";
 
 export type HomeScreenType = {
   setScreen: React.Dispatch<React.SetStateAction<string>>;
@@ -54,3 +54,21 @@ export type PlayStopButtonType = {
 }
 
 export type LanguageType = LanguageEnums.EN | LanguageEnums.MY;
+
+export type HomeStackParamList = {
+  index: undefined;
+  duaList: {
+    category: string;
+    duas: DuaType[];
+  };
+  duaDetail: {
+    selectedDua: SelectedDuaType;
+  };
+};
+
+export type SearchStackParamList = {
+  index: undefined;
+  duaDetail: {
+    selectedDua: SelectedDuaType;
+  };
+};

@@ -4,7 +4,7 @@ import {Collapsible} from '@/components/ui/collapsible';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import {ThemedText} from '@/components/themed-text';
 import {ThemedView} from '@/components/themed-view';
-import {useLanguage} from "@/app/contexts/LanguageContext";
+import {useLanguage} from "@/contexts/LanguageContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
 import React from 'react';
 import {Image} from "expo-image";

@@ -4,8 +4,8 @@ import React from 'react';
 import {HapticTab} from '@/components/haptic-tab';
 import {Colors} from '@/constants/theme';
 import {useColorScheme} from '@/hooks/use-color-scheme';
-import {LanguageProvider} from "@/app/contexts/LanguageContext";
-import {FontSettingsProvider} from "@/app/contexts/FontSettingsContext";
+import {LanguageProvider} from "@/contexts/LanguageContext";
+import {FontSettingsProvider} from "@/contexts/FontSettingsContext";
 import {Ionicons} from "@expo/vector-icons";
 
 export default function TabLayout() {
@@ -19,7 +19,14 @@ export default function TabLayout() {
             tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
             headerShown: false,
             tabBarButton: HapticTab,
-          }}>
+          }}
+          initialRouteName={"home"}>
+          <Tabs.Screen
+            name="index"
+            options={{
+              href: null
+            }}
+          />
           <Tabs.Screen
             name="search"
             options={{
@@ -28,19 +35,11 @@ export default function TabLayout() {
             }}
           />
           <Tabs.Screen
-            name="index"
+            name="home"
             options={{
               title: 'Home',
               tabBarIcon: ({color}) => <Ionicons size={28} name={"home"} color={color}/>,
             }}
-            listeners={({ navigation }) => ({
-              tabPress: (e) => {
-                navigation.reset({
-                  index: 0,
-                  routes: [{ name: 'index' }],
-                });
-              },
-            })}
           />
           <Tabs.Screen
             name="settings"

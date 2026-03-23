@@ -1,6 +1,4 @@
-import React from "react";
-import AppNavigator from "@/app/screens/AppNavigator";
-
-export default function App() {
-  return <AppNavigator />
+import { Redirect } from 'expo-router';
+export default function Index() {
+  return <Redirect href="/home" />;
 }

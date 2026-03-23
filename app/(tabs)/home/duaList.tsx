@@ -1,24 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {SafeAreaView} from "react-native-safe-area-context";
 import {TouchableOpacity, ScrollView, StyleSheet, useWindowDimensions} from 'react-native';
-import {DuaListScreenType, DuaType} from "@/app/types";
-import {Colors} from "@/constants/theme";
-import {useLanguage} from "@/app/contexts/LanguageContext";
+import {DuaType, HomeStackParamList } from "@/config/types";
+import {useLanguage} from "@/contexts/LanguageContext";
 import {LanguageEnums} from "@/constants/language-enums";
 import {Ionicons} from "@expo/vector-icons";
 import {useFonts} from "expo-font";
 import {ThemedView} from "@/components/themed-view";
 import {ThemedText} from "@/components/themed-text";
 import categoriesData from '@/assets/data/categories.json'
+import { useNavigation } from 'expo-router';
+import { useRoute } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import {Colors} from "@/constants/theme";
 
-export default function DuaListScreen({setScreen, duas, setSelectedDua, category, setCategory}: DuaListScreenType) {
+type DuaListScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList, 'duaList'>;
+
+export default function DuaListScreen() {
+  const navigation = useNavigation<DuaListScreenNavigationProp>();
+  const route = useRoute();
+  const { category, duas: initialDuas } = route.params as { category: string; duas: DuaType[] };
+  
+  const [category_state, setCategory] = useState(category);
   const {language} = useLanguage()
   const [fontLoaded] = useFonts({
     'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
   });
   const {width} = useWindowDimensions();
   const isTablet = width >= 768;
-  let parentCategory: React.SetStateAction<string> | undefined;
+  let parentCategory: string | undefined;
 
   if (!fontLoaded) {
     return (
@@ -28,34 +38,47 @@ export default function DuaListScreen({setScreen, duas, setSelectedDua, category
     );
   }
 
-  let subcategoriesObj: any = categoriesData.categories.find(cat => cat.key === category);
+  let subcategoriesObj: any = categoriesData.categories.find(cat => cat.key === category_state);
 
   if (!subcategoriesObj) {
     subcategoriesObj = categoriesData.categories
       .map(cat => cat.subcategories)
       .flat()
-      .find((cat) => cat.key === category);
+      .find((cat) => cat.key === category_state);
   }
-
 
   const isSubcategory = !Object.hasOwn(subcategoriesObj, "subcategories")
 
   if (isSubcategory) {
-    parentCategory = categoriesData.categories.find((cat) => cat.subcategories.find(sub => sub.key === category))?.key;
+    parentCategory = categoriesData.categories.find((cat) => cat.subcategories.find(sub => sub.key === category_state))?.key;
   }
+
+  const handleBack = () => {
+    if (!isSubcategory) {
+      navigation.goBack();
+    } else if (isSubcategory && parentCategory) {
+      setCategory(parentCategory);
+      navigation.navigate('duaList', {
+        category: parentCategory,
+        duas: initialDuas,
+      });
+    }
+  };
+
+  const handleSelectDua = (dua: DuaType) => {
+    navigation.navigate('duaDetail', {
+      selectedDua: {
+        curr: dua.id,
+        duas: initialDuas,
+      }
+    });
+  };
 
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView style={{ flex: 1 }}>
         <ThemedText style={styles.header}>
-          <TouchableOpacity onPress={() => {
-            if (!isSubcategory) {
-              setScreen("home")
-            } else if (isSubcategory && parentCategory) {
-              setCategory(parentCategory);
-              setScreen("duaList")
-            }
-          }}>
+          <TouchableOpacity onPress={handleBack}>
             <ThemedText>
               <Ionicons size={28} name={"chevron-back"}/>
             </ThemedText>
@@ -63,26 +86,20 @@ export default function DuaListScreen({setScreen, duas, setSelectedDua, category
         </ThemedText>
         <ThemedText style={styles.title}>{language === LanguageEnums.EN ? subcategoriesObj?.nameEn : subcategoriesObj?.nameMy} Du&#39;a List</ThemedText>
         <ScrollView contentContainerStyle={styles.listContainer}>
-          {duas.filter((dua) => dua.categoryKey.includes(category)).map((dua, j) => (
+          {initialDuas.filter((dua) => dua.categoryKey.includes(category_state)).map((dua, j) => (
             <TouchableOpacity
               key={j}
               style={[
                 styles.listItem,
                 isTablet && styles.listItemTablet
               ]}
-              onPress={() => {
-                setSelectedDua({
-                  curr: dua.id,
-                  duas: duas,
-                });
-                setScreen("duaDetail");
-              }}
+              onPress={() => handleSelectDua(dua)}
             >
               <ThemedText
                 style={styles.listText}>{language === LanguageEnums.EN ? dua.titleEn : dua.titleMy}</ThemedText>
             </TouchableOpacity>
           ))}
-          {subcategoriesObj?.subcategories?.map((sub: { key: React.SetStateAction<string>; nameEn: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined; nameMy: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined; }, k: React.Key | null | undefined) => (
+          {subcategoriesObj?.subcategories?.map((sub: { key: string; nameEn: string; nameMy: string }, k: React.Key | null | undefined) => (
             <TouchableOpacity
               key={k}
               style={[
@@ -91,7 +108,10 @@ export default function DuaListScreen({setScreen, duas, setSelectedDua, category
               ]}
               onPress={() => {
                 setCategory(sub.key);
-                setScreen('duaList');
+                navigation.navigate('duaList', {
+                  category: sub.key,
+                  duas: initialDuas,
+                });
               }}
             >
               <ThemedText

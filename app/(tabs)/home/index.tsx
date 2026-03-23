@@ -1,14 +1,16 @@
 import React from 'react';
 import {TouchableOpacity, StyleSheet, View, ImageBackground, useWindowDimensions} from 'react-native';
-import {DuaType, HomeScreenType} from "@/app/types";
 import duas from '@/assets/data/duas.json';
 import categoriesData from '@/assets/data/categories.json'
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import {Image} from "expo-image";
-import {Colors} from "@/constants/theme";
-import {useLanguage} from "@/app/contexts/LanguageContext";
+import {useLanguage} from "@/contexts/LanguageContext";
 import {useFonts} from "expo-font";
 import {ThemedText} from "@/components/themed-text";
+import { useNavigation } from 'expo-router';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import {DuaType, HomeStackParamList} from '@/config/types';
+import {Colors} from "@/constants/theme";
 
 export type buttonType = {
   key: string,
@@ -32,13 +34,10 @@ const buttons: buttonType[] = [
   { key: 'stoning', bgImg: require('@/assets/images/button-bg/jamrah.png') }
 ];
 
-export default function HomeScreen({
-                                     setScreen,
-                                     setDuas,
-                                     setCategory,
-                                     setSelectedDua
-                                   }: HomeScreenType): React.JSX.Element {
+type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList, 'index'>;
 
+export default function HomeScreen(): React.JSX.Element {
+  const navigation = useNavigation<HomeScreenNavigationProp>();
   const {language} = useLanguage();
   const [fontLoaded] = useFonts({
     'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
@@ -66,14 +65,14 @@ export default function HomeScreen({
     }
     
     if (result.length === 1) {
-      setDuas(result);
-      setCategory(category);
-      setScreen('duaDetail');
-      setSelectedDua({curr: 0, duas: result})
+      navigation.navigate('duaDetail', {
+        selectedDua: { curr: 0, duas: result }
+      });
     } else {
-      setDuas(result);
-      setCategory(category);
-      setScreen('duaList');
+      navigation.navigate('duaList', {
+        category,
+        duas: result
+      });
     }
   };
 

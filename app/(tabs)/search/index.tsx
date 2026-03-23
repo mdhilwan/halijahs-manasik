@@ -7,16 +7,19 @@ import {
 } from "react-native";
 import duas from "@/assets/data/duas.json";
 import {DuaEngMalayArabicType, DuaType, SelectedDuaType} from "@/app/types";
-import {useLanguage} from "@/app/contexts/LanguageContext";
-import DuaDetailScreen from "@/app/screens/DuaDetailScreen";
-import {useFontSize} from "@/app/contexts/FontSettingsContext";
+import {useLanguage} from "@/contexts/LanguageContext";
+import {useFontSize} from "@/contexts/FontSettingsContext";
 import {ThemedText} from "@/components/themed-text";
 import {ThemedView} from "@/components/themed-view";
+import { useNavigation } from 'expo-router';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { SearchStackParamList } from './_types';
+
+type SearchScreenNavigationProp = NativeStackNavigationProp<SearchStackParamList, 'index'>;
 
 export default function Search() {
+  const navigation = useNavigation<SearchScreenNavigationProp>();
   const [query, setQuery] = useState("");
-  const [screen, setScreen] = useState("home");
-  const [selectedDua, setSelectedDua] = useState<SelectedDuaType>(undefined);
   const {language} = useLanguage();
   const {translationFontSize} = useFontSize()
 
@@ -39,44 +42,43 @@ export default function Search() {
 
   const filtered = query ? filterDuas(query) : duas;
 
-  switch (screen) {
-    case "duaDetail":
-      return <DuaDetailScreen setScreen={setScreen} selectedDua={selectedDua} setSelectedDua={setSelectedDua} />;
-    case "home":
-      return (
-        <ThemedView style={[styles.container, {paddingTop: 75}]}>
-          <TextInput
-            style={styles.input}
-            placeholder="Search duas..."
-            value={query}
-            onChangeText={setQuery}
-            clearButtonMode="while-editing"
-          />
-          <FlatList
-            data={filtered}
-            keyExtractor={(item) => String(item?.id)}
-            renderItem={({ item }) => (
-              <TouchableOpacity style={styles.item} onPress={() => {
-                setScreen("duaDetail");
-                setSelectedDua({
-                  curr: 0,
-                  duas: [item],
-                })
-              }}>
-                <ThemedText type={"defaultBold"} style={[styles.title, { fontSize: translationFontSize }]}>{language === "en" ? item.titleEn : item.titleMy}</ThemedText>
-                <ThemedText style={[styles.snippet, { fontSize: translationFontSize }]} numberOfLines={2}>
-                  {language === "en" ? item.doa[0].translationEn : item.doa[0].translationMy}
-                </ThemedText>
-              </TouchableOpacity>
-            )}
-            keyboardShouldPersistTaps="handled"
-            ListEmptyComponent={
-              <ThemedText style={styles.empty}>No duas found.</ThemedText>
-            }
-          />
-        </ThemedView>
-      );
-  }
+  const handleSelectDua = (item: DuaType) => {
+    const selectedDuaData: SelectedDuaType = {
+      curr: 0,
+      duas: [item],
+    };
+    navigation.navigate('duaDetail', {
+      selectedDua: selectedDuaData,
+    });
+  };
+
+  return (
+    <ThemedView style={[styles.container, {paddingTop: 75}]}>
+      <TextInput
+        style={styles.input}
+        placeholder="Search duas..."
+        value={query}
+        onChangeText={setQuery}
+        clearButtonMode="while-editing"
+      />
+      <FlatList
+        data={filtered}
+        keyExtractor={(item) => String(item?.id)}
+        renderItem={({ item }) => (
+          <TouchableOpacity style={styles.item} onPress={() => handleSelectDua(item)}>
+            <ThemedText type={"defaultBold"} style={[styles.title, { fontSize: translationFontSize }]}>{language === "en" ? item.titleEn : item.titleMy}</ThemedText>
+            <ThemedText style={[styles.snippet, { fontSize: translationFontSize }]} numberOfLines={2}>
+              {language === "en" ? item.doa[0].translationEn : item.doa[0].translationMy}
+            </ThemedText>
+          </TouchableOpacity>
+        )}
+        keyboardShouldPersistTaps="handled"
+        ListEmptyComponent={
+          <ThemedText style={styles.empty}>No duas found.</ThemedText>
+        }
+      />
+    </ThemedView>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -115,3 +117,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
+

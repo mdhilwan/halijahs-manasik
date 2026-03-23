@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {SafeAreaView} from "react-native-safe-area-context";
 import {TouchableOpacity, StyleSheet, View, ScrollView} from 'react-native';
-import {DuaDetailType, DuaEngMalayArabicType, DuaType} from "@/app/types";
+import {DuaEngMalayArabicType, DuaType, SearchStackParamList, SelectedDuaType} from "@/config/types";
 import {useFonts} from "expo-font";
 import {DuaPlayer} from "@/components/controls/dua-player";
-import {useLanguage} from "@/app/contexts/LanguageContext";
-import {useFontSize} from "@/app/contexts/FontSettingsContext";
+import {useLanguage} from "@/contexts/LanguageContext";
+import {useFontSize} from "@/contexts/FontSettingsContext";
 import SettingsModal from "@/components/settings-modal";
 import {Ionicons} from "@expo/vector-icons";
 import {ThemedText} from "@/components/themed-text";
 import {ThemedView} from "@/components/themed-view";
+import { useNavigation } from 'expo-router';
+import { useRoute } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 function ArabicText({dua}: { dua: DuaEngMalayArabicType }) {
   const {arabicFontSize, duaHidden} = useFontSize()
@@ -44,7 +47,13 @@ function TranslationText({dua, translationKey}: {
   </ThemedView>
 }
 
-export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}: DuaDetailType) {
+type DuaDetailScreenNavigationProp = NativeStackNavigationProp<SearchStackParamList, 'duaDetail'>;
+
+export default function DuaDetailScreen() {
+  const navigation = useNavigation<DuaDetailScreenNavigationProp>();
+  const route = useRoute();
+  const { selectedDua: initialSelectedDua } = route.params as { selectedDua: SelectedDuaType };
+  const [selectedDua, setSelectedDua] = useState<SelectedDuaType>(initialSelectedDua);
 
   const {language} = useLanguage();
   const {setShowSettings} = useFontSize()
@@ -71,13 +80,7 @@ export default function DuaDetailScreen({setScreen, selectedDua, setSelectedDua}
     <ThemedView style={styles.container}>
       <SafeAreaView style={{flex: 1}}>
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => {
-            if (selectedDua?.duas.length === 1) {
-              setScreen('home');
-            } else {
-              setScreen('duaList');
-            }
-          }}>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <ThemedText>
               <Ionicons size={28} name={"chevron-back"}/>
             </ThemedText>
@@ -195,3 +198,4 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
 });
+
