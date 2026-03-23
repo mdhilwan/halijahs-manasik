@@ -1,7 +1,7 @@
 import IphoneFrame from "./iphone-frame";
 import { useState } from "react";
-import { DuaEngMalayArabicType, DuaType } from "../../../app/types";
 import { Scheherazade_New } from "next/font/google";
+import {DuaEngMalayArabicType, DuaType} from "../../../config/types";
 
 const scheherazadeNew = Scheherazade_New({
   weight: "400",

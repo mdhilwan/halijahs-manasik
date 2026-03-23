@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
-import { DuaType } from "../../app/types";
+import {DuaType} from "../../config/types";
 
 interface Subcategory {
   key: string;
