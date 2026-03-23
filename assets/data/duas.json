@@ -2277,7 +2277,6 @@
     ],
     "titleMy": "Istigfaar al Jaami'",
     "categoryKey": [
-      "arafah",
       "haji",
       "istigfaar_al_jaami"
     ]
@@ -2379,7 +2378,6 @@
     ],
     "titleMy": "Zikir-Zikir",
     "categoryKey": [
-      "arafah",
       "haji",
       "dzikrs"
     ]
@@ -2553,7 +2551,6 @@
     ],
     "titleMy": "Doa-Doa",
     "categoryKey": [
-      "arafah",
       "haji",
       "supplications"
     ]

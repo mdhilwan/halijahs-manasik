@@ -63,10 +63,10 @@ export default function HomeScreen(): React.JSX.Element {
       }))
       result = [...result, ...subCategoriesResult]
     }
-    
+
     if (result.length === 1) {
       navigation.navigate('duaDetail', {
-        selectedDua: { curr: 0, duas: result }
+        selectedDua: { curr: result[0].id, duas: result }
       });
     } else {
       navigation.navigate('duaList', {
@@ -102,42 +102,40 @@ export default function HomeScreen(): React.JSX.Element {
       }
     >
       {fontLoaded &&
-          <>
-              <View style={styles.grid}>
-                {buttons.map((btn, index) =>
-                  <TouchableOpacity
-                    key={index}
-                    onPress={() => {
-                      loadDuas(btn.key)
-                    }}
-                    style={styles.button}
+        <View style={styles.grid}>
+          {buttons.map((btn, index) =>
+            <TouchableOpacity
+              key={index}
+              onPress={() => {
+                loadDuas(btn.key)
+              }}
+              style={styles.button}
+            >
+              {btn.bgImg ? (
+                <ImageBackground
+                  source={btn.bgImg}
+                  style={styles.bgButtonContainer}
+                  imageStyle={{borderRadius: 15}}
+                  resizeMode={"cover"}
+                >
+                  <ThemedText
+                    style={[
+                      styles.buttonText,
+                      styles.bgButtonText,
+                      smScreens && {width: '80%'}
+                    ]}
                   >
-                    {btn.bgImg ? (
-                      <ImageBackground
-                        source={btn.bgImg}
-                        style={styles.bgButtonContainer}
-                        imageStyle={{borderRadius: 15}}
-                        resizeMode={"cover"}
-                      >
-                        <ThemedText
-                          style={[
-                            styles.buttonText,
-                            styles.bgButtonText,
-                            smScreens && {width: '80%'}
-                          ]}
-                        >
-                          {getCategoryName(btn.key)}
-                        </ThemedText>
-                      </ImageBackground>
-                    ) : (
-                      <ThemedText style={styles.buttonText}>
-                        {getCategoryName(btn.key)}
-                      </ThemedText>
-                    )}
-                  </TouchableOpacity>
-                )}
-              </View>
-          </>}
+                    {getCategoryName(btn.key)}
+                  </ThemedText>
+                </ImageBackground>
+              ) : (
+                <ThemedText style={styles.buttonText}>
+                  {getCategoryName(btn.key)}
+                </ThemedText>
+              )}
+            </TouchableOpacity>
+          )}
+        </View>}
     </ParallaxScrollView>
   );
 }
