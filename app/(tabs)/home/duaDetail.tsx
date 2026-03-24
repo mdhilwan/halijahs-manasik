@@ -90,7 +90,7 @@ export default function DuaDetailScreen() {
         <View style={styles.header}>
           <TouchableOpacity onPress={handleBack}>
             <ThemedText>
-              <Ionicons size={28} name={"chevron-back"}/>
+              <Ionicons size={36} name={"chevron-back"}/>
             </ThemedText>
           </TouchableOpacity>
 
