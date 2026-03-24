@@ -1,5 +1,5 @@
 import React, {createContext, useContext, useEffect, useState} from 'react';
-import {LanguageType} from "@/app/types";
+import {LanguageType} from "@/config/types";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {LanguageEnums} from "@/constants/language-enums";
 
