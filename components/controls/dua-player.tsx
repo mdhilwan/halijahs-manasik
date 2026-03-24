@@ -3,7 +3,7 @@ import {Audio} from "expo-av";
 import {StyleSheet, TouchableOpacity, View} from "react-native";
 import Slider from "@react-native-community/slider";
 import {Colors} from "@/constants/theme";
-import {PlayStopButtonType} from "@/app/types";
+import {PlayStopButtonType} from "@/config/types";
 import {Ionicons} from '@expo/vector-icons';
 
 import {useFocusEffect} from "@react-navigation/native";
@@ -95,17 +95,6 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
   const [position, setPosition] = useState<number>(0);
   const [isSeeking, setIsSeeking] = useState<boolean>(false);
   const positionRef = useRef<number>(0);
-
-  const hasNext = () => {
-    return selectedDua && selectedDua.curr !== undefined && selectedDua.duas[selectedDua.curr + 1] !== undefined
-  }
-
-  const hasPrev = () => {
-    return selectedDua && selectedDua.curr !== undefined && selectedDua.duas[selectedDua.curr - 1] !== undefined
-  }
-
-  const nextAvailable = hasNext();
-  const prevAvailable = hasPrev();
 
   useEffect(() => {
     return () => {
@@ -225,19 +214,29 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
     setIsSeeking(false);
   };
 
+  if (!selectedDua) {
+    return <></>
+  }
+
+  const {duas, curr} = selectedDua;
+  const currIndex = curr !== undefined ? duas.findIndex(d => d.id === curr) : -1;
+
+  const hasNext = () => currIndex !== -1 && duas[currIndex + 1] !== undefined;
+  const hasPrev = () => currIndex > 0 && duas[currIndex - 1] !== undefined;
+  const getNext = () => hasNext() ? duas[currIndex + 1] : undefined;
+  const getPrev = () => hasPrev() ? duas[currIndex - 1] : undefined;
+
   return (
     <View style={{alignItems: 'center'}}>
       <ThemedView style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-        {prevAvailable &&
+        {hasPrev() &&
             <TouchableOpacity
                 style={[styles.audioButton, {marginRight: 20}]}
                 onPress={() => {
-                  if (selectedDua?.curr !== undefined) {
-                    setSelectedDua({
-                      curr: selectedDua.curr - 1,
-                      duas: selectedDua.duas
-                    })
-                  }
+                  setSelectedDua({
+                    curr: getPrev()?.id,
+                    duas: duas
+                  })
                 }}
             >
                 <ThemedText>
@@ -262,15 +261,13 @@ export const DuaPlayer = ({dua, setSelectedDua, selectedDua}: PlayStopButtonType
                   : <Ionicons name="play" size={28} color="white"/>}
             </TouchableOpacity>
         }
-        {nextAvailable && <TouchableOpacity
+        {hasNext() && <TouchableOpacity
             style={[styles.audioButton, {marginLeft: 20}]}
             onPress={() => {
-              if (selectedDua?.curr !== undefined) {
-                setSelectedDua({
-                  curr: selectedDua.curr + 1,
-                  duas: selectedDua.duas
-                })
-              }
+              setSelectedDua({
+                curr: getNext()?.id,
+                duas: duas
+              })
             }}
         >
             <ThemedText>
