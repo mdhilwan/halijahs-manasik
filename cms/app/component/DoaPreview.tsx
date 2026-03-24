@@ -1,4 +1,4 @@
-import IphoneFrame from "./iphone-frame";
+import IphoneFrame from "./IphoneFrame";
 import { useState } from "react";
 import { Scheherazade_New } from "next/font/google";
 import {DuaEngMalayArabicType, DuaType} from "../../../config/types";
