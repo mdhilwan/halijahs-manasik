@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getCategories, readCategoriesData, writeCategoriesData, Category } from "../../../lib/data";
+import { getCategories, readCategoriesData, writeCategoriesData, Category } from "../../lib/data";
 
 export async function GET() {
   return NextResponse.json(getCategories());

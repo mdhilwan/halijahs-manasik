@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getCategoryKeys } from "../../../../lib/data";
+import { getCategoryKeys } from "../../../lib/data";
 
 export async function GET() {
   return NextResponse.json(getCategoryKeys());

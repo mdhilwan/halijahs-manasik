@@ -5,7 +5,7 @@ import {
   readDuas,
   writeDuas,
   type Dua,
-} from "@/lib/data";
+} from "../../../../lib/data";
 
 interface OrderItem {
   type: "dua" | "subcategory";
@@ -123,13 +123,13 @@ export async function GET(
     );
 
     // Build combined list
-    const items: Array<{
+    const items: {
       type: "dua" | "subcategory";
       id: string;
       nameEn: string;
       nameMy: string;
       order: number;
-    }> = [];
+    }[] = [];
 
     category.subcategories.forEach((sub, index) => {
       items.push({

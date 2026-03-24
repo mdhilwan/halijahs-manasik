@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { readDuas, writeDuas } from "../../../lib/data";
+import { readDuas, writeDuas } from "../../lib/data";
 
 export async function GET() {
   return NextResponse.json(readDuas());
