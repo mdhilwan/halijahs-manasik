@@ -8,6 +8,22 @@ export interface Subcategory {
   key: string;
   nameEn: string;
   nameMy: string;
+  order?: number;
+}
+
+export interface Dua {
+  id: number;
+  titleEn: string;
+  titleMy: string;
+  doa: {
+    id: number;
+    arabic: string;
+    translationEn: string;
+    translationMy: string;
+  }[];
+  categoryKey: string[];
+  audio?: string;
+  order?: Record<string, number>;
 }
 
 export interface Category {
@@ -22,9 +38,19 @@ export interface CategoriesData {
   categories: Category[];
 }
 
-export function readDuas() {
+export function readDuas(): Dua[] {
   const raw = fs.readFileSync(duasPath, "utf-8");
   return JSON.parse(raw);
+}
+
+export function getCategoryByKey(key: string): Category | undefined {
+  const data = readCategoriesData();
+  return data.categories.find(c => c.key === key);
+}
+
+export function getDuasByCategory(categoryKey: string): Dua[] {
+  const duas = readDuas();
+  return duas.filter((d: Dua) => d.categoryKey.includes(categoryKey));
 }
 
 export function writeDuas(data: any) {
