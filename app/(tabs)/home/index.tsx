@@ -169,7 +169,7 @@ export default function HomeScreen(): React.JSX.Element {
                       style={[
                         styles.buttonText,
                         styles.bgButtonText,
-                        smScreens && {width: '70%'}
+                        smScreens && {width: '74.2%'}
                       ]}
                     >
                       {getCategoryName(btn.key)}
