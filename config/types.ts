@@ -26,6 +26,8 @@ export type PlayStopButtonType = {
   dua: DuaType;
   selectedDua: SelectedDuaType,
   setSelectedDua: React.Dispatch<React.SetStateAction<SelectedDuaType>>
+  isFavourited?: boolean;
+  toggleFavourite?: () => void;
 }
 
 export type LanguageType = LanguageEnums.EN | LanguageEnums.MY;

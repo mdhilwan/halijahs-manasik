@@ -1,3 +1,9 @@
+## 1.2.0 - Mar 31, 2026
+- Hajj / Umrah filter. 
+- New Favourite page. 
+- Large duas in Arafah section broken into smaller subcategories. 
+- Language picker added into Font Size modal.
+
 ## 1.1.0 - Mar 14, 2026
 - New Feature:
   - Haji specific duas (Mina, Arafah, Mudzalifah, Jamrah)

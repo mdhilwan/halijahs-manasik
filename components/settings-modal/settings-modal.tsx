@@ -3,6 +3,7 @@ import React from "react";
 import {useFontSize} from "@/contexts/FontSettingsContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
 import {ThemedText} from "@/components/themed-text";
+import {LanguagePicker} from "@/components/settings-modal/language-picker";
 
 const SettingsModal = () => {
   const { showSettings, setShowSettings } = useFontSize()
@@ -17,6 +18,7 @@ const SettingsModal = () => {
         <TouchableWithoutFeedback>
           <View style={styles.drawer}>
             <ThemedText style={styles.drawerTitle}>Text Settings</ThemedText>
+            <LanguagePicker/>
             <SettingsView/>
           </View>
         </TouchableWithoutFeedback>

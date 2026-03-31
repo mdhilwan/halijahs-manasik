@@ -8,17 +8,20 @@
         {
           "key": "istigfaar_al_jaami",
           "nameEn": "Istigfaar al Jaami'",
-          "nameMy": "Istigfaar al Jaami'"
+          "nameMy": "Istighfar al Jaami'",
+          "order": 2
         },
         {
           "key": "dzikrs",
           "nameEn": "Dzikrs",
-          "nameMy": "Zikir-Zikir"
+          "nameMy": "Zikir-Zikir",
+          "order": 3
         },
         {
           "key": "supplications",
           "nameEn": "Supplications",
-          "nameMy": "Doa-Doa"
+          "nameMy": "Doa-Doa",
+          "order": 4
         }
       ]
     },
@@ -37,12 +40,14 @@
         {
           "key": "umrah_ihram_intentions",
           "nameEn": "Umrah Ihram Intentions",
-          "nameMy": "Niat-Niat Ihram Umrah"
+          "nameMy": "Niat-Niat Ihram Umrah",
+          "order": 1
         },
         {
           "key": "haj_ihram_intentions",
           "nameEn": "Haj Ihram Intentions",
-          "nameMy": "Niat-Niat Ihram Haji"
+          "nameMy": "Niat-Niat Ihram Haji",
+          "order": 2
         }
       ]
     },
@@ -62,7 +67,13 @@
       "key": "mina",
       "nameEn": "Mina",
       "nameMy": "Mina",
-      "subcategories": []
+      "subcategories": [
+        {
+          "key": "tasyrik",
+          "nameEn": "Dzikrs On The Days Of Tasyrik",
+          "nameMy": "Zikir-Zikir Pada Hari Tasyrik"
+        }
+      ]
     },
     {
       "key": "muzdalifah",
@@ -84,42 +95,50 @@
         {
           "key": "sai_intentions",
           "nameEn": "Sa'i Intentions",
-          "nameMy": "Niat-Niat Sa'i"
+          "nameMy": "Niat-Niat Sa'i",
+          "order": 0
         },
         {
           "key": "sai_round_1",
           "nameEn": "Round 1",
-          "nameMy": "Pusingan 1"
+          "nameMy": "Pusingan 1",
+          "order": 2
         },
         {
           "key": "sai_round_2",
           "nameEn": "Round 2",
-          "nameMy": "Pusingan 2"
+          "nameMy": "Pusingan 2",
+          "order": 3
         },
         {
           "key": "sai_round_3",
           "nameEn": "Round 3",
-          "nameMy": "Pusingan 3"
+          "nameMy": "Pusingan 3",
+          "order": 4
         },
         {
           "key": "sai_round_4",
           "nameEn": "Round 4",
-          "nameMy": "Pusingan 4"
+          "nameMy": "Pusingan 4",
+          "order": 5
         },
         {
           "key": "sai_round_5",
           "nameEn": "Round 5",
-          "nameMy": "Pusingan 5"
+          "nameMy": "Pusingan 5",
+          "order": 6
         },
         {
           "key": "sai_round_6",
           "nameEn": "Round 6",
-          "nameMy": "Pusingan 6"
+          "nameMy": "Pusingan 6",
+          "order": 7
         },
         {
           "key": "sai_round_7",
           "nameEn": "Round 7",
-          "nameMy": "Pusingan 7"
+          "nameMy": "Pusingan 7",
+          "order": 8
         }
       ]
     },
@@ -149,47 +168,56 @@
         {
           "key": "tawaf_intentions",
           "nameEn": "Tawaf Intentions",
-          "nameMy": "Niat-Niat Tawaf"
+          "nameMy": "Niat-Niat Tawaf",
+          "order": 0
         },
         {
           "key": "tawaf_round_1",
           "nameEn": "Round 1",
-          "nameMy": "Pusingan 1"
+          "nameMy": "Pusingan 1",
+          "order": 2
         },
         {
           "key": "tawaf_round_2",
           "nameEn": "Round 2",
-          "nameMy": "Pusingan 2"
+          "nameMy": "Pusingan 2",
+          "order": 3
         },
         {
           "key": "tawaf_round_3",
           "nameEn": "Round 3",
-          "nameMy": "Pusingan 3"
+          "nameMy": "Pusingan 3",
+          "order": 4
         },
         {
           "key": "tawaf_round_4",
           "nameEn": "Round 4",
-          "nameMy": "Pusingan 4"
+          "nameMy": "Pusingan 4",
+          "order": 5
         },
         {
           "key": "tawaf_round_5",
           "nameEn": "Round 5",
-          "nameMy": "Pusingan 5"
+          "nameMy": "Pusingan 5",
+          "order": 6
         },
         {
           "key": "tawaf_round_6",
           "nameEn": "Round 6",
-          "nameMy": "Pusingan 6"
+          "nameMy": "Pusingan 6",
+          "order": 7
         },
         {
           "key": "tawaf_round_7",
           "nameEn": "Round 7",
-          "nameMy": "Pusingan 7"
+          "nameMy": "Pusingan 7",
+          "order": 8
         },
         {
           "key": "sunnah_tawaf_prayer",
           "nameEn": "Sunnah Tawaf Prayer",
-          "nameMy": "Solat Sunat Tawaf"
+          "nameMy": "Solat Sunat Tawaf",
+          "order": 9
         }
       ]
     },
@@ -207,7 +235,8 @@
         {
           "key": "solat_jama_and_qasar_intentions",
           "nameEn": "Solat Jama’ and Qasar Intentions",
-          "nameMy": "Niat-Niat Solat Jamak dan Qasar"
+          "nameMy": "Niat-Niat Solat Jamak dan Qasar",
+          "order": 5
         }
       ]
     },

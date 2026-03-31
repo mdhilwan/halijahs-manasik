@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {SafeAreaView} from "react-native-safe-area-context";
 import {TouchableOpacity, StyleSheet, View, ScrollView} from 'react-native';
 import {DuaEngMalayArabicType, DuaType, SelectedDuaType, HomeStackParamList } from "@/config/types";
-import {useFonts} from "expo-font";
 import {DuaPlayer} from "@/components/controls/dua-player";
 import {useLanguage} from "@/contexts/LanguageContext";
 import {useFontSize} from "@/contexts/FontSettingsContext";
@@ -13,6 +12,7 @@ import {ThemedView} from "@/components/themed-view";
 import { useNavigation } from 'expo-router';
 import { useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function ArabicText({dua}: { dua: DuaEngMalayArabicType }) {
   const {arabicFontSize, duaHidden} = useFontSize()
@@ -52,26 +52,66 @@ type DuaDetailScreenNavigationProp = NativeStackNavigationProp<HomeStackParamLis
 export default function DuaDetailScreen() {
   const navigation = useNavigation<DuaDetailScreenNavigationProp>();
   const route = useRoute();
-  const { selectedDua: initialSelectedDua } = route.params as { selectedDua: SelectedDuaType };
+  const params = route.params as { selectedDua: SelectedDuaType | string };
+  
+  // Handle both direct object and serialized string params
+  const initialSelectedDua: SelectedDuaType = typeof params.selectedDua === 'string' 
+    ? JSON.parse(params.selectedDua) 
+    : params.selectedDua;
+
   const [selectedDua, setSelectedDua] = useState<SelectedDuaType>(initialSelectedDua);
 
   const {language} = useLanguage();
   const {setShowSettings} = useFontSize()
-  const duaObj = selectedDua?.duas.find((dua: DuaType) => {
+  const duaObj = selectedDua?.duas?.find((dua: DuaType) => {
     return dua.id === selectedDua?.curr
   })
-  const [fontLoaded] = useFonts({
-    'ScheherazadeNew-Regular': require('@/assets/font/ScheherazadeNew-Regular.ttf'),
-    'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
-  });
+  const [isFavourited, setIsFavourited] = useState(false);
 
-  if (!fontLoaded) {
-    return (
-      <SafeAreaView style={styles.container}>
-        <ThemedText>Loading fonts...</ThemedText>
-      </SafeAreaView>
-    );
-  }
+  // Check if current dua is favourited
+  React.useEffect(() => {
+    if (duaObj) {
+      checkIfFavourited(duaObj.id);
+    }
+  }, [duaObj]);
+
+  const checkIfFavourited = async (duaId: number) => {
+    try {
+      const storedFavourites = await AsyncStorage.getItem('favourited_duas');
+      if (storedFavourites) {
+        const favouritedIds = JSON.parse(storedFavourites) as number[];
+        setIsFavourited(favouritedIds.includes(duaId));
+      }
+    } catch (error) {
+      console.error('Error checking favourite status:', error);
+    }
+  };
+
+  const toggleFavourite = async () => {
+    if (!duaObj) return;
+
+    try {
+      const storedFavourites = await AsyncStorage.getItem('favourited_duas');
+      let favouritedIds: number[] = [];
+
+      if (storedFavourites) {
+        favouritedIds = JSON.parse(storedFavourites);
+      }
+
+      if (isFavourited) {
+        // Remove from favourites
+        favouritedIds = favouritedIds.filter(id => id !== duaObj.id);
+      } else {
+        // Add to favourites
+        favouritedIds.push(duaObj.id);
+      }
+
+      await AsyncStorage.setItem('favourited_duas', JSON.stringify(favouritedIds));
+      setIsFavourited(!isFavourited);
+    } catch (error) {
+      console.error('Error toggling favourite:', error);
+    }
+  };
 
   const titleKey = language === 'my' ? "titleMy" : "titleEn"
   const translationKey = language === 'my' ? "translationMy" : "translationEn"
@@ -94,9 +134,19 @@ export default function DuaDetailScreen() {
             </ThemedText>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => setShowSettings(true)}>
-            <ThemedText style={styles.fontSettings}>Aa</ThemedText>
-          </TouchableOpacity>
+          <View style={styles.headerActions}>
+            <TouchableOpacity onPress={toggleFavourite} style={styles.starButton}>
+              <Ionicons
+                size={28}
+                name={isFavourited ? "star" : "star-outline"}
+                color={isFavourited ? "#ffd65c" : "#666"}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => setShowSettings(true)}>
+              <ThemedText style={styles.fontSettings}>Aa</ThemedText>
+            </TouchableOpacity>
+          </View>
         </View>
         {
           (duaObj) &&
@@ -116,7 +166,7 @@ export default function DuaDetailScreen() {
                 </ThemedView>
             </>
         }
-        <DuaPlayer dua={duaObj as DuaType} selectedDua={selectedDua} setSelectedDua={setSelectedDua}/>
+        <DuaPlayer dua={duaObj as DuaType} selectedDua={selectedDua} setSelectedDua={setSelectedDua} isFavourited={isFavourited} toggleFavourite={toggleFavourite}/>
 
         <SettingsModal/>
       </SafeAreaView>
@@ -205,5 +255,11 @@ const styles = StyleSheet.create({
     color: '#007AFF',
     fontSize: 18,
   },
+  headerActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  starButton: {
+    marginRight: 15,
+  },
 });
-

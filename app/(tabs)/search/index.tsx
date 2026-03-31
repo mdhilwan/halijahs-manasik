@@ -6,19 +6,15 @@ import {
   StyleSheet,
 } from "react-native";
 import duas from "@/assets/data/duas.json";
-import {DuaEngMalayArabicType, DuaType, SelectedDuaType} from "@/app/types";
+import {DuaEngMalayArabicType, DuaType} from "@/config/types";
 import {useLanguage} from "@/contexts/LanguageContext";
 import {useFontSize} from "@/contexts/FontSettingsContext";
 import {ThemedText} from "@/components/themed-text";
 import {ThemedView} from "@/components/themed-view";
-import { useNavigation } from 'expo-router';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { SearchStackParamList } from './_types';
-
-type SearchScreenNavigationProp = NativeStackNavigationProp<SearchStackParamList, 'index'>;
+import {useRouter} from "expo-router";
 
 export default function Search() {
-  const navigation = useNavigation<SearchScreenNavigationProp>();
+  const router = useRouter();
   const [query, setQuery] = useState("");
   const {language} = useLanguage();
   const {translationFontSize} = useFontSize()
@@ -43,12 +39,11 @@ export default function Search() {
   const filtered = query ? filterDuas(query) : duas;
 
   const handleSelectDua = (item: DuaType) => {
-    const selectedDuaData: SelectedDuaType = {
-      curr: 0,
-      duas: [item],
-    };
-    navigation.navigate('duaDetail', {
-      selectedDua: selectedDuaData,
+    router.push({
+      pathname: '/home/duaDetail',
+      params: {
+        selectedDua: JSON.stringify({curr: item.id, duas: duas})
+      }
     });
   };
 
@@ -117,4 +112,3 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
-

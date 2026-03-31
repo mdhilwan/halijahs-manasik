@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {TouchableOpacity, StyleSheet, View, ImageBackground, useWindowDimensions} from 'react-native';
 import duas from '@/assets/data/duas.json';
 import categoriesData from '@/assets/data/categories.json'
@@ -42,6 +42,7 @@ export default function HomeScreen(): React.JSX.Element {
   const [fontLoaded] = useFonts({
     'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
   });
+  const [mode, setMode] = useState<'hajj' | 'umrah'>('hajj');
 
   const loadDuas = async (category: string) => {
     // @ts-ignore
@@ -66,7 +67,7 @@ export default function HomeScreen(): React.JSX.Element {
 
     if (result.length === 1) {
       navigation.navigate('duaDetail', {
-        selectedDua: { curr: result[0].id, duas: result }
+        selectedDua: { curr: result[0].id, duas: result}
       });
     } else {
       navigation.navigate('duaList', {
@@ -77,13 +78,25 @@ export default function HomeScreen(): React.JSX.Element {
   };
 
   const {width} = useWindowDimensions();
-  const smScreens = width < 390;
+  const smScreens = width < 445;
+  
   const getCategoryName = (key: string) => {
     const cat = categoriesData.categories.find(c => c.key === key)
     if (!cat) return key
 
     return language === 'my' ? cat.nameMy : cat.nameEn
   }
+
+  // Filter buttons based on mode
+  const getFilteredButtons = () => {
+    if (mode === 'hajj') {
+      return buttons; // Show all buttons for hajj
+    } else {
+      // For umrah, filter out hajj-only sections
+      const hajjOnlySections = ['arafah', 'mina', 'muzdalifah', 'stoning'];
+      return buttons.filter(btn => !hajjOnlySections.includes(btn.key));
+    }
+  };
 
   return (
     <ParallaxScrollView
@@ -101,41 +114,77 @@ export default function HomeScreen(): React.JSX.Element {
         />
       }
     >
-      {fontLoaded &&
-        <View style={styles.grid}>
-          {buttons.map((btn, index) =>
-            <TouchableOpacity
-              key={index}
-              onPress={() => {
-                loadDuas(btn.key)
-              }}
-              style={styles.button}
-            >
-              {btn.bgImg ? (
-                <ImageBackground
-                  source={btn.bgImg}
-                  style={styles.bgButtonContainer}
-                  imageStyle={{borderRadius: 15}}
-                  resizeMode={"cover"}
-                >
-                  <ThemedText
-                    style={[
-                      styles.buttonText,
-                      styles.bgButtonText,
-                      smScreens && {width: '80%'}
-                    ]}
+      {fontLoaded && (
+        <>
+          <TouchableOpacity
+            style={styles.switchToggleContainer}
+            onPress={() => setMode(mode === 'hajj' ? 'umrah' : 'hajj')}
+            activeOpacity={0.8}
+          >
+            <View
+              style={[
+                styles.switchToggleSlider,
+                mode === 'umrah' && styles.switchToggleSliderUmrah,
+              ]}
+            />
+            <View style={styles.switchToggleLabelContainer}>
+              <ThemedText
+                type={"defaultBold"}
+                style={[
+                  styles.switchToggleLabel,
+                  mode === 'hajj' && styles.switchToggleLabelActive,
+                ]}
+              >
+                {language === 'my' ? 'Haji' : 'Hajj'}
+              </ThemedText>
+              <ThemedText
+                type={"defaultBold"}
+                style={[
+                  styles.switchToggleLabel,
+                  mode === 'umrah' && styles.switchToggleLabelActive,
+                ]}
+              >
+                {language === 'my' ? 'Umrah' : 'Umrah'}
+              </ThemedText>
+            </View>
+          </TouchableOpacity>
+
+          <View style={styles.grid}>
+            {getFilteredButtons().map((btn, index) =>
+              <TouchableOpacity
+                key={index}
+                onPress={() => {
+                  loadDuas(btn.key)
+                }}
+                style={styles.button}
+              >
+                {btn.bgImg ? (
+                  <ImageBackground
+                    source={btn.bgImg}
+                    style={styles.bgButtonContainer}
+                    imageStyle={{borderRadius: 15}}
+                    resizeMode={"cover"}
                   >
+                    <ThemedText
+                      style={[
+                        styles.buttonText,
+                        styles.bgButtonText,
+                        smScreens && {width: '70%'}
+                      ]}
+                    >
+                      {getCategoryName(btn.key)}
+                    </ThemedText>
+                  </ImageBackground>
+                ) : (
+                  <ThemedText style={styles.buttonText}>
                     {getCategoryName(btn.key)}
                   </ThemedText>
-                </ImageBackground>
-              ) : (
-                <ThemedText style={styles.buttonText}>
-                  {getCategoryName(btn.key)}
-                </ThemedText>
-              )}
-            </TouchableOpacity>
-          )}
-        </View>}
+                )}
+              </TouchableOpacity>
+            )}
+          </View>
+        </>
+      )}
     </ParallaxScrollView>
   );
 }
@@ -146,6 +195,81 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingHorizontal: 20,
     paddingTop: 40,
+  },
+  toggleContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 16,
+    paddingHorizontal: 16,
+  },
+  switchToggleContainer: {
+    height: 50,
+    maxWidth: 400,
+    minWidth: 400,
+    marginHorizontal: 'auto',
+    backgroundColor: '#e0e0e0',
+    borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 16,
+    flexDirection: 'row',
+    position: 'relative',
+    paddingHorizontal: 4,
+  },
+  switchToggleSlider: {
+    position: 'absolute',
+    width: '50%',
+    height: 42,
+    backgroundColor: Colors.light.tint,
+    borderRadius: 21,
+    left: 4,
+    zIndex: 1,
+  },
+  switchToggleSliderUmrah: {
+    left: 'auto',
+    right: 4,
+  },
+  switchToggleLabelContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    zIndex: 2,
+  },
+  switchToggleLabel: {
+    flex: 1,
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#666',
+  },
+  switchToggleLabelActive: {
+    color: '#ffd65c',
+  },
+  toggleButton: {
+    flex: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    borderWidth: 2,
+    borderColor: '#3d3d3d',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+  },
+  toggleButtonActive: {
+    backgroundColor: Colors.light.tint,
+    borderColor: Colors.light.tint,
+  },
+  toggleButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#3d3d3d',
+  },
+  toggleButtonTextActive: {
+    color: '#ffd65c',
   },
   grid: {
     flexDirection: 'row',
