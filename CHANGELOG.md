@@ -1,4 +1,7 @@
 ## 1.2.0 - Mar 31, 2026
+- Fix width issue in Hajj / Umrah toggle
+
+## 1.2.0 - Mar 31, 2026
 - Hajj / Umrah filter. 
 - New Favourite page. 
 - Large duas in Arafah section broken into smaller subcategories. 

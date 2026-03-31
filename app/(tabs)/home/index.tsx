@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
   switchToggleContainer: {
     height: 50,
     maxWidth: 400,
-    minWidth: 400,
+    width: '100%',
     marginHorizontal: 'auto',
     backgroundColor: '#e0e0e0',
     borderRadius: 25,
