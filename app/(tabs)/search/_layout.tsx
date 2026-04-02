@@ -14,12 +14,6 @@ export default function SearchStackLayout() {
           title: 'Search',
         }}
       />
-      <Stack.Screen
-        name="dua-detail"
-        options={{
-          title: 'Dua Detail',
-        }}
-      />
     </Stack>
   );
 }

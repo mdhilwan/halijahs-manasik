@@ -14,8 +14,24 @@ export type DuaType = {
   titleMy: string;
   doa: DuaEngMalayArabicType[];
   categoryKey: string[];
-  audio?: string;
+  order: Record<string, number>;
+  audio?: string | null;
 }
+
+export type CategoryType = {
+  key: string;
+  nameEn: string;
+  nameMy: string;
+  subcategories?: {
+    key: string;
+    nameEn: string;
+    nameMy: string;
+  }[];
+  order: number;
+  global?: boolean;
+}
+
+export type DuaOrCategoryType = DuaType | CategoryType
 
 export type SelectedDuaType = undefined | {
   curr: number | undefined;

@@ -13,6 +13,7 @@ import { useNavigation } from 'expo-router';
 import { useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import duasJson from '@/assets/data/duas.json';
 
 function ArabicText({dua}: { dua: DuaEngMalayArabicType }) {
   const {arabicFontSize, duaHidden} = useFontSize()
@@ -59,6 +60,10 @@ export default function DuaDetailScreen() {
     ? JSON.parse(params.selectedDua) 
     : params.selectedDua;
 
+  if (initialSelectedDua && !initialSelectedDua.duas) {
+    initialSelectedDua.duas = duasJson
+  }
+
   const [selectedDua, setSelectedDua] = useState<SelectedDuaType>(initialSelectedDua);
 
   const {language} = useLanguage();
@@ -68,7 +73,10 @@ export default function DuaDetailScreen() {
   })
   const [isFavourited, setIsFavourited] = useState(false);
 
-  // Check if current dua is favourited
+  React.useEffect(() => {
+    setSelectedDua(initialSelectedDua)
+  }, [initialSelectedDua?.curr]);
+
   React.useEffect(() => {
     if (duaObj) {
       checkIfFavourited(duaObj.id);

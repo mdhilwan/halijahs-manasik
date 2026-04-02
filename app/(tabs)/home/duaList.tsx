@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView} from "react-native-safe-area-context";
 import {TouchableOpacity, ScrollView, StyleSheet, useWindowDimensions} from 'react-native';
-import {DuaType, HomeStackParamList } from "@/config/types";
+import {CategoryType, DuaOrCategoryType, DuaType, HomeStackParamList} from "@/config/types";
 import {useLanguage} from "@/contexts/LanguageContext";
 import {LanguageEnums} from "@/constants/language-enums";
 import {Ionicons} from "@expo/vector-icons";
@@ -36,7 +36,7 @@ export default function DuaListScreen() {
     );
   }
 
-  let subcategoriesObj: any = categoriesData.categories.find(cat => cat.key === category);
+  let subcategoriesObj: CategoryType[] | any = categoriesData.categories.find(cat => cat.key === category);
 
   if (!subcategoriesObj) {
     subcategoriesObj = categoriesData.categories
@@ -58,6 +58,28 @@ export default function DuaListScreen() {
     });
   };
 
+  const filteredInitialDuas = initialDuas.filter((dua) => dua.categoryKey.includes(category));
+
+  const combinedDuasAndSubcategories: DuaOrCategoryType[] = [
+    ...filteredInitialDuas,
+    ...(subcategoriesObj?.subcategories || [])
+  ];
+
+  combinedDuasAndSubcategories.sort((a: DuaOrCategoryType, b: DuaOrCategoryType) => {
+    if (a.order !== undefined && b.order !== undefined) {
+      if (typeof a.order === "number" && typeof b.order === "number") {
+        return a.order - b.order;
+      } else if (typeof a.order !== "number" && typeof b.order === "number") {
+        return a.order[category] - b.order;
+      } else if (typeof a.order === "number" && typeof b.order !== "number") {
+        return a.order - b.order[category];
+      } else if (typeof a.order !== "number" && typeof b.order !== "number") {
+        return a.order[category] - b.order[category];
+      }
+    }
+    return 0;
+  })
+
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView style={{ flex: 1 }}>
@@ -70,37 +92,44 @@ export default function DuaListScreen() {
         </ThemedText>
         <ThemedText style={styles.title}>{language === LanguageEnums.EN ? subcategoriesObj?.nameEn : subcategoriesObj?.nameMy} Du&#39;a List</ThemedText>
         <ScrollView contentContainerStyle={styles.listContainer}>
-          {initialDuas.filter((dua) => dua.categoryKey.includes(category)).map((dua, j) => (
-            <TouchableOpacity
-              key={j}
-              style={[
-                styles.listItem,
-                isTablet && styles.listItemTablet
-              ]}
-              onPress={() => handleSelectDua(dua)}
-            >
-              <ThemedText
-                style={styles.listText}>{language === LanguageEnums.EN ? dua.titleEn : dua.titleMy}</ThemedText>
-            </TouchableOpacity>
-          ))}
-          {subcategoriesObj?.subcategories?.map((sub: { key: string; nameEn: string; nameMy: string }, k: React.Key | null | undefined) => (
-            <TouchableOpacity
-              key={k}
-              style={[
-                styles.listItem,
-                isTablet && styles.listItemTablet
-              ]}
-              onPress={() => {
-                navigation.push('duaList', {
-                  category: sub.key,
-                  duas: initialDuas,
-                });
-              }}
-            >
-              <ThemedText
-                style={styles.listText}>{language === LanguageEnums.EN ? sub.nameEn : sub.nameMy}</ThemedText>
-            </TouchableOpacity>
-          ))}
+          {
+            combinedDuasAndSubcategories.map((item: DuaOrCategoryType, index) => {
+              if ('doa' in item) {
+                return (
+                  <TouchableOpacity
+                    key={index}
+                    style={[
+                      styles.listItem,
+                      isTablet && styles.listItemTablet
+                    ]}
+                    onPress={() => handleSelectDua(item)}
+                  >
+                    <ThemedText
+                      style={styles.listText}>{language === LanguageEnums.EN ? item.titleEn : item.titleMy}</ThemedText>
+                  </TouchableOpacity>
+                );
+              } else {
+                 return (
+                   <TouchableOpacity
+                     key={index}
+                     style={[
+                       styles.listItem,
+                       isTablet && styles.listItemTablet
+                     ]}
+                     onPress={() => {
+                       navigation.push('duaList', {
+                         category: item.key,
+                         duas: initialDuas,
+                       });
+                     }}
+                   >
+                     <ThemedText
+                       style={styles.listText}>{language === LanguageEnums.EN ? item.nameEn : item.nameMy}</ThemedText>
+                   </TouchableOpacity>
+                 );
+              }
+            })
+          }
         </ScrollView>
       </SafeAreaView>
     </ThemedView>

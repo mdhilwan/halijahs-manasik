@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
   TextInput,
   FlatList,
   TouchableOpacity,
-  StyleSheet,
+  StyleSheet, TouchableWithoutFeedback, Keyboard,
 } from "react-native";
 import duas from "@/assets/data/duas.json";
 import {DuaEngMalayArabicType, DuaType} from "@/config/types";
@@ -42,37 +42,43 @@ export default function Search() {
     router.push({
       pathname: '/home/duaDetail',
       params: {
-        selectedDua: JSON.stringify({curr: item.id, duas: duas})
+        selectedDua: JSON.stringify({curr: item.id})
       }
     });
   };
 
   return (
-    <ThemedView style={[styles.container, {paddingTop: 75}]}>
-      <TextInput
-        style={styles.input}
-        placeholder="Search duas..."
-        value={query}
-        onChangeText={setQuery}
-        clearButtonMode="while-editing"
-      />
-      <FlatList
-        data={filtered}
-        keyExtractor={(item) => String(item?.id)}
-        renderItem={({ item }) => (
-          <TouchableOpacity style={styles.item} onPress={() => handleSelectDua(item)}>
-            <ThemedText type={"defaultBold"} style={[styles.title, { fontSize: translationFontSize }]}>{language === "en" ? item.titleEn : item.titleMy}</ThemedText>
-            <ThemedText style={[styles.snippet, { fontSize: translationFontSize }]} numberOfLines={2}>
-              {language === "en" ? item.doa[0].translationEn : item.doa[0].translationMy}
-            </ThemedText>
-          </TouchableOpacity>
-        )}
-        keyboardShouldPersistTaps="handled"
-        ListEmptyComponent={
-          <ThemedText style={styles.empty}>No duas found.</ThemedText>
-        }
-      />
-    </ThemedView>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <ThemedView style={[styles.container, {paddingTop: 75}]}>
+        <TextInput
+          style={styles.input}
+          placeholder="Search duas..."
+          value={query}
+          onChangeText={setQuery}
+          clearButtonMode="while-editing"
+        />
+        <FlatList
+          onScrollBeginDrag={Keyboard.dismiss}
+          data={filtered}
+          keyExtractor={(item) => String(item?.id)}
+          renderItem={({item}) => (
+            <TouchableOpacity style={styles.item} onPress={() => handleSelectDua(item)}>
+              <ThemedText type={"defaultBold"} style={[
+                styles.title,
+                {fontSize: translationFontSize}
+              ]}>{language === "en" ? item.titleEn : item.titleMy}</ThemedText>
+              <ThemedText style={[styles.snippet, {fontSize: translationFontSize}]} numberOfLines={2}>
+                {language === "en" ? item.doa[0].translationEn : item.doa[0].translationMy}
+              </ThemedText>
+            </TouchableOpacity>
+          )}
+          keyboardShouldPersistTaps="handled"
+          ListEmptyComponent={
+            <ThemedText style={styles.empty}>No duas found.</ThemedText>
+          }
+        />
+      </ThemedView>
+    </TouchableWithoutFeedback>
   );
 }
 
