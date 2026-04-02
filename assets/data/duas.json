@@ -8,7 +8,7 @@
         "id": 907680692233,
         "arabic": "لَبَّيْكَ اللّٰهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ\nإِنَّ الْحَمْدَ، وَالنِّعْمَةَ، لَكَ وَالْمُلْكَ، لَا شَرِيْكَ لَكَ",
         "translationEn": "Ever at Your service, O Allah, ever at Your service. Ever at Your service, You have no partner, ever at Your service. Verily, all praise, blessings and dominion are Yours. You have no partner. ",
-        "translationMy": "Aku menyahut wahai Tuhanku aku menyahut panggilanMu (panggilan Nabi Ibrahim). Tiada sekutu bagiMu, aku menyahut akan panggilan itu. Segala pujian dan kebaikan bagiMu, dan pemerintahan juga bagiMu, Tiada sekutu bagiMu."
+        "translationMy": "Aku menyahut wahai Tuhanku aku menyahut panggilanMu (panggilan Nabi Ibrahim). Tiada sekutu bagiMu, aku menyahut akan panggilan itu. Segala pujian dan kebaikan bagiMu, dan pemerintahan juga bagiMu, tiada sekutu bagiMu."
       },
       {
         "id": 855448843613,
@@ -262,8 +262,8 @@
   },
   {
     "id": 879821503369,
-    "titleEn": "Tawaf Qudum Intention",
-    "titleMy": "Niat Tawaf Qudum",
+    "titleEn": "Tawaf Qudum ",
+    "titleMy": "Tawaf Qudum",
     "doa": [
       {
         "id": 801348143135,
@@ -280,8 +280,8 @@
   },
   {
     "id": 707270574322,
-    "titleEn": "Tawaf Haj Intention",
-    "titleMy": "Niat Tawaf Haji",
+    "titleEn": "Tawaf Haj ",
+    "titleMy": "Tawaf Haji",
     "doa": [
       {
         "id": 898011996322,
@@ -299,8 +299,8 @@
   },
   {
     "id": 175049124395,
-    "titleEn": "Tawaf Umrah Intention",
-    "titleMy": "Niat Tawaf Umrah",
+    "titleEn": "Tawaf Umrah ",
+    "titleMy": "Tawaf Umrah",
     "doa": [
       {
         "id": 265783256499,
@@ -319,8 +319,8 @@
   },
   {
     "id": 919292392000,
-    "titleEn": "Tawaf Sunnah Intention ",
-    "titleMy": "Niat Tawaf Sunnah",
+    "titleEn": "Tawaf Sunnah",
+    "titleMy": "Tawaf Sunnah",
     "doa": [
       {
         "id": 806468055191,
@@ -604,8 +604,8 @@
   },
   {
     "id": 194260319645,
-    "titleEn": "Sunnah Prayer After Tawaf Intention",
-    "titleMy": "Niat Solat Sunnah Tawaf",
+    "titleEn": "Prayer Intention",
+    "titleMy": "Niat Solat ",
     "doa": [
       {
         "id": 792475317903,
@@ -648,8 +648,44 @@
       {
         "id": 655813280788,
         "arabic": "",
-        "translationEn": "To drink with good intentions. This is in accordance with the meaning of the words of the Prophet s.a.w. \"The water of Zamzam is for whatever it is drunk for.\",To face the Ka'abah,Mention the name of Allah,Drink with three sips (breaths),Drink to your fill,Praise Allah,Dua.",
-        "translationMy": "Berniat dengan niat yang baik. Ini sesuai dengan maksud sabda baginda Rasulullah s.a.w. \"Air zamzam adalah untuk sesuatu yang kita minum kerananya\",Hadapkan muka ke Kaabah,Menyebut nama Allah,Minum dengan tiga tegok(nafas),Minum dengan sepuas-puasnya (hingga kenyang),Bersyukur ke hadrat Allah,Berdoa."
+        "translationEn": "1) To drink with good intentions. This is in accordance with the meaning of the words of the Prophet s.a.w. \"The water of Zamzam is for whatever it is drunk for.\"",
+        "translationMy": "1) Berniat dengan niat yang baik. Ini sesuai dengan maksud sabda baginda Rasulullah s.a.w. \"Air zamzam adalah untuk sesuatu yang kita minum kerananya\"."
+      },
+      {
+        "id": 1774970119658,
+        "arabic": "",
+        "translationEn": "2) To face the Ka'abah.",
+        "translationMy": "2) Hadapkan muka ke Kaabah."
+      },
+      {
+        "id": 1774970158813,
+        "arabic": "",
+        "translationEn": "3) Mention the name of Allah.",
+        "translationMy": "3) Menyebut nama Allah."
+      },
+      {
+        "id": 1774970187855,
+        "arabic": "",
+        "translationEn": "4) Drink with three sips (breaths).",
+        "translationMy": "4) Minum dengan tiga tegok(nafas)."
+      },
+      {
+        "id": 1774970215657,
+        "arabic": "",
+        "translationEn": "5) Drink to your fill.",
+        "translationMy": "5) Minum dengan sepuas-puasnya (hingga kenyang)."
+      },
+      {
+        "id": 1774970216089,
+        "arabic": "",
+        "translationEn": "6) Praise Allah.",
+        "translationMy": "6) Bersyukur ke hadrat Allah."
+      },
+      {
+        "id": 1774970216386,
+        "arabic": "",
+        "translationEn": "7) Make dua (click next for an example of a dua that can be made).",
+        "translationMy": "7) Berdoa (contoh doa boleh dilihat pada skrin seterusnya)."
       }
     ],
     "categoryKey": [
@@ -680,8 +716,8 @@
   },
   {
     "id": 220827304092,
-    "titleEn": "Haj Sa'i Intention",
-    "titleMy": "Niat Sa'i Haji",
+    "titleEn": "Haj Sa'i ",
+    "titleMy": "Sa'i Haji",
     "doa": [
       {
         "id": 149327382447,
@@ -698,8 +734,8 @@
   },
   {
     "id": 8909954205,
-    "titleEn": "Umrah Sa'i Intention",
-    "titleMy": "Niat Sa'i Umrah",
+    "titleEn": "Umrah Sa'i ",
+    "titleMy": "Sa'i Umrah",
     "doa": [
       {
         "id": 887707922254,
@@ -1788,7 +1824,7 @@
       },
       {
         "id": 788870170796,
-        "arabic": "اَللَّهُمَّ رَبَّنَا تَقَبَّلْ مِنَّا وَ لاَ تَجْعَلْنَا مِنَ الْمَحْرُومِينَ، وَ أَدْخِلْنَا فِي عِبَادِكَ الصَّالِحِينَ،\n يَا أَرْحَمَ الرَّاحِمِينَ\n",
+        "arabic": "اَللَّهُمَّ رَبَّنَا تَقَبَّلْ مِنَّا وَ لاَ تَجْعَلْنَا مِنَ الْمَحْرُومِينَ، وَ أَدْخِلْنَا فِي عِبَادِكَ الصَّالِحِينَ،\n يَا أَرْحَمَ الرَّاحِمِينَ",
         "translationEn": "O Allah, Our Lord, accept from us and do not make us from the deprived ones and admit us into the company of Your pious servants, O Most Merciful. ",
         "translationMy": "Ya Allah, Tuhan kami, terimalah amalan kami dan janganlah jadikan kami dari kalangan orang yang terhalang dari rahmatMu dan masukkanlah kami ke dalam golongan hamba-hambaMu yang soleh, Wahai Tuhan yang Maha Penyayang."
       },
@@ -1858,8 +1894,8 @@
       {
         "id": 990854312851,
         "arabic": "",
-        "translationEn": "These intentions are for prayers combined (jama') and shortened (qasar) and brought forward (done during Zuhur and Maghrib time):",
-        "translationMy": "Niat-niat ini adalah bagi solat-solat yang dihimpunkan (jamak), dipendekkan (qasar) dan didahulukan (dikerjakan pada waktu Zuhur dan Maghrib):"
+        "translationEn": "These intentions are for prayers combined (jama') and shortened (qasar) and brought forward (done during Zuhur or Maghrib time).",
+        "translationMy": "Niat-niat ini adalah bagi solat-solat yang dihimpunkan (jamak), dipendekkan (qasar) dan didahulukan (dikerjakan pada waktu Zuhur atau Maghrib)."
       },
       {
         "id": 977198438475,
@@ -1919,13 +1955,13 @@
   },
   {
     "id": 186137407758,
-    "titleEn": " Intentions For Solat Jama' and Qasar Takhir",
+    "titleEn": "Intentions For Solat Jama' and Qasar Takhir",
     "doa": [
       {
         "id": 209602316711,
         "arabic": "",
-        "translationEn": "These intentions are for prayers combined (jama') and shortened (qasar) and delayed (done during Asar and Ishak time).\nThe intention to delay the prayer must be made in the heart while the time of the first prayer is still ongoing, i.e., during the time of Zuhur and Maghrib.",
-        "translationMy": "Niat-niat ini adalah untuk solat yang dihimpunkan (jamak), dipendekkan (qasar) dan dilewatkan (dikerjakan pada waktu Asar dan Isyak). Niat untuk melewatkan solat hendaklah dibuat di dalam hati ketika masih dalam waktu solat yang pertama, iaitu dalam waktu Zuhur and Maghrib. "
+        "translationEn": "These intentions are for prayers combined (jama') and shortened (qasar) and delayed (done during Asar or Ishak time). The intention to delay the prayer must be made in the heart while the time of the first prayer is still ongoing, i.e., during the time of Zuhur or Maghrib.",
+        "translationMy": "Niat-niat ini adalah untuk solat yang dihimpunkan (jamak), dipendekkan (qasar) dan dilewatkan (dikerjakan pada waktu Asar atau Isyak). Niat untuk melewatkan solat hendaklah dibuat di dalam hati ketika masih dalam waktu solat yang pertama, iaitu dalam waktu Zuhur atau Maghrib. "
       },
       {
         "id": 435708219892,
@@ -2346,8 +2382,8 @@
   },
   {
     "id": 990950476396,
-    "titleEn": "HasbiyaAllah",
-    "titleMy": "HasbiyaAllah",
+    "titleEn": "HasbunAllah",
+    "titleMy": "HasbunAllah",
     "categoryKey": [
       "haji",
       "tasyrik"
@@ -2840,8 +2876,8 @@
       {
         "id": 879803755151,
         "arabic": "وَإِن يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ (٥١) \n\nوَمَا هُوَ إِلَّا ذِكْرٌ لِّلْعَالَمِينَ (٥٢)",
-        "translationEn": "The unbelievers would almost trip you up with their eyes when they hear the recitation of the Qur’an and say: \"He (Muhammad) is surely a madman.\" It is nothing but a Reminder to all creation. (Al-Qalam: 51-52)",
-        "translationMy": "Dan sesungguhnya orang-orang yang kafir itu, hampir-hampir menggelincir dan menjatuhkanmu dengan pandangan mereka (yang tajam dan penuh dengan permusuhan dan kebencian), semasa mereka mendengar Al-Quran sambil berkata: \"Sebenarnya (Muhammad) itu, sungguh-sungguh orang gila\". Padahal Al-Quran itu tidak lain hanyalah peringatan bagi umat manusia seluruhnya. (Al-Qalam: 51-52)"
+        "translationEn": "The unbelievers would almost trip you up with their eyes when they hear the recitation of the Qur’an and say: \"He (Muhammad) is surely a madman.\" It is nothing but a Reminder to all creation. \nSurah Al-Qalam: 51-52",
+        "translationMy": "Dan sesungguhnya orang-orang yang kafir itu, hampir-hampir menggelincir dan menjatuhkanmu dengan pandangan mereka (yang tajam dan penuh dengan permusuhan dan kebencian), semasa mereka mendengar Al-Quran sambil berkata: \"Sebenarnya (Muhammad) itu, sungguh-sungguh orang gila\". Padahal Al-Quran itu tidak lain hanyalah peringatan bagi umat manusia seluruhnya. \nSurah Al-Qalam: 51-52"
       }
     ],
     "order": {
@@ -3004,9 +3040,9 @@
     "doa": [
       {
         "id": 167798503879,
-        "arabic": "",
-        "translationEn": "Recite Surah Al-Fatihah 3 Times. ",
-        "translationMy": "Baca Surah Al-Fatihah 3 Kali."
+        "arabic": "\n\nبِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ. ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ. ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ. مَـٰلِكِ يَوْمِ ٱلدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ. صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ. (3x)\n\n",
+        "translationEn": "In the Name of Allah—the Most Compassionate, Most Merciful. All praise is for Allah, Lord of all worlds, the Most Compassionate, Most Merciful, Master of the Day of Judgment. You ˹alone˺ we worship and You ˹alone˺ we ask for help. Guide us along the Straight Path, the Path of those You have blessed, not those You are displeased with, or those who are astray.",
+        "translationMy": "Dengan nama Allah, Yang Maha Pemurah, lagi Maha Mengasihani. Segala puji tertentu bagi Allah, Tuhan yang memelihara dan mentadbirkan sekalian alam, Yang Maha Pemurah, lagi Maha Mengasihani, Yang Menguasai pemerintahan hari Pembalasan (hari Akhirat). Engkaulah sahaja (Ya Allah) Yang Kami sembah, dan kepada Engkaulah sahaja kami memohon pertolongan. Tunjukilah kami jalan yang lurus. Iaitu jalan orang-orang yang Engkau telah kurniakan nikmat kepada mereka, bukan (jalan) orang-orang yang Engkau telah murkai, dan bukan pula (jalan) orang-orang yang sesat."
       }
     ]
   },
@@ -3022,9 +3058,9 @@
     "doa": [
       {
         "id": 375842596645,
-        "arabic": "",
-        "translationEn": "Recite Surah Al-Ikhlas 100 Times. ",
-        "translationMy": "Baca Surah Al-Ikhlas 100 Kali."
+        "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ. اَللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَ لَمْ يُوْلَدْ. وَ لَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ (100x)",
+        "translationEn": "Say: He is Allah, the One and Only. Allah, Allah upon Whom all depend on and turn to in time of need. Allah, the eternally Besought of all! He begets not, and neither is He begotten, And there is none comparable to Him.",
+        "translationMy": "Katakanlah: Dialah Allah Yang Maha Esa. Allah tempat bergantung segala sesuatu.\nDia tidak beranak dan tidak diperanakkan. Dan tidak ada sesuatu yang setara denganNya."
       }
     ]
   },
@@ -3513,5 +3549,43 @@
         "translationMy": "O Allah, make our lives end upon good deeds and fulfill our hopes through Your bounties, and make it easy for us to attain Your pleasure, and make good our deeds in all states. O Saviour of the drowning, O Saviour of those on the verge of perishment, O Witness to every secret consultation, O destination of every complaint, O Whose favours are from time immemorial, whose kind acts are perpetual, O He without Whom nothing suffices, O upon Whom all things are dependent, O upon Whom all are dependent for their sustenance, and to Whom all things return, we ask that You put us under the wing of Your shelter, generosity, guard, protection, cover and security."
       }
     ]
+  },
+  {
+    "id": 1774972753277,
+    "titleEn": "When At Hijr Ismail",
+    "titleMy": "Ketika Di Hijir Ismail",
+    "doa": [
+      {
+        "id": 1774972775627,
+        "arabic": "اَللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.\n\n اَللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ مَا سَأَلَكَ بِهِ عِبَادُكَ الصَّالِحُونَ. وَأَعُوذُ بِكَ مِنْ شَرِّ مَا اسْتَعَاذَكَ مِنْهُ عِبَادُكَ الصَّالِحُونَ. اَللَّهُمَّ بِأَسْمَائِكَ الْحُسْنَى، وَصِفَاتِكَ الْعُلْيَا، طَهِّرْ قُلُوبَنَا مِنْ كُلِّ وَصْفٍ يُبَاعِدُنَا عَنْ مُشَاهَدَتِكَ وَمَحَبَّتِكَ، وَأَمِتْنَا عَلَى السُّنَّةِ وَالْجَمَاعَةِ وَالشَّوْقِ إِلَى لِقَائِكَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ. اَللَّهُمَّ نَوِّرْ بِالْعِلْمِ قَلْبِي وَاسْتَعْمِلْ بِطَاعَتِكَ بَدَنِي وَخَلِّصْ مِنَ الْفِتَنِ سِرِّي وَاشْغَلْ بِالْإِعْتِبَارِ فِكْرِي وَقِنِي شَرَّ وَسَاوِسِ الشَّيْطَانِ، وَأَجِرْنِي مِنْهُ يَا رَحْمَنُ حَتَّى لَا يَكُوْنَ لَهُ عَلَيَّ سُلْطَانٌ، رَبَّنَا إِنَّنَا آمَنَّا فَاغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ النَّارِ.",
+        "translationEn": "O Allah, You are my Sustainer. There is no god besides You. You created me and I am Your servant and I abide by Your covenant and Your promise as far as I am able. I seek protection with You from the evil that I have committed and I acknowledge Your blessings upon me and admit to my sins and so forgive me for there is none who can forgive sins besides You. \n\nO Allah, I ask You from the good that Your pious servants asked You for and I seek protection from the evil that Your pious servants sought protection with You from. O Allah, by the grace of Your Beautiful Names and Your lofty attributes, purify our hearts from all traits that would distance us from the observance of Your presence and Your love, and take our lives as those who observe the sunnah and are with the main body of Muslims, in a state of longing to meet You, O Possessor of Glory and Honour. O Allah, enlighten my heart with knowledge and subject my body to Your obedience and absolve my spirit from trials and preoccupy my thoughts with reflection and protect me from the evil whispers of Satan and shield me from him, O Most Gracious, until he (Satan) has no power over me. O Allah, we have believed and so forgive our sins and protect us from the fire. ",
+        "translationMy": "Ya Allah, Engkaulah Tuhanku, tiada Tuhan melainkan Engkau, Engkau telah menjadikan aku, aku hambaMu dan aku patuh kepada janjiMu sedaya upayaku, aku berlindung denganMu dari kejahatan diriku sendiri. Aku berserah kepadaMu akan dosa-dosaku. Maka ampunilah aku kerana tiada siapa yang dapat mengampuni dosaku melainkan Engkau. \n\nYa Allah, aku bermohon segala kebaikan yang diminta oleh hamba-hamba yang soleh, dan aku berlindung denganMu dari segala apa yang diminta perlindunganMu daripadanya oleh hamba-hambaMu yang soleh. Ya Allah, dengan kemuliaan namaMu yang banyak dan sifat-sifatMu yang tinggi, bersihkanlah hati kami, matikanlah kami atas dasar ahli sunnah wal jemaah serta rindukan pertemuan denganMu. Ya Allah, terangkanlah hatiku dengan cahaya ilmu, arahkan badanku supaya digunakan untuk taat kepadaMu. Bersihkanlah batinku, selamatkanlah aku dari was-was syaitan, jangan sampai ia dapat menguasai aku. Ya Tuhan kami, kami telah beriman kepadaMu, maka ampunilah kami dan selamatkanlah kami dari api neraka."
+      }
+    ],
+    "categoryKey": [
+      "haji",
+      "umrah",
+      "masjidil haram"
+    ],
+    "audio": ""
+  },
+  {
+    "id": 1774973058811,
+    "titleEn": "When At Al-Multazam",
+    "titleMy": "Ketika Di Al-Multazam",
+    "doa": [
+      {
+        "id": 1774973111901,
+        "arabic": "اَللَّهُمَّ يَا رَبَّ الْبَيْتِ الْعَتِيقِ. أَعْتِقْ رِقَابَنَا وَرِقَابَ آبَائِنَا وَأُمَّهَاتِنَا وَإِخْوَانِنَا وَأَوْلَادِنَا مِنَ النَّارِ، يَا ذَا الْجُودِ وَالْكَرَمِ وَالْفَضْلِ وَالْمَنِّ وَالْعَطَاءِ وَالْإِحْسَانِ. اَللَّهُمَّ أَحْسِنْ عَاقِبَتَنَا فِي الْأُمُورِ كُلِّهَا وَأَجِرْنَا مِنْ خِزْيِ الدُّنْيَا وَعَذَابِ الْآخِرَةِ.\n\nاَللَّهُمَّ إِنِّي عَبْدُكَ وَابْنُ عَبْدِكَ وَاقِفٌ تَحْتَ بَابِكَ، مُلْتَزِمٌ بِأَعْتَابِكَ، مُتَذَلِّلٌ بَيْنَ يَدَيْكَ، أَرْجُو رَحْمَتَكَ وَأَخْشَى عَذَابَكَ، يَا قَدِيمَ الْإِحْسَانِ. اَللَّهُمَّ إِنِّي أَسْأَلُكَ أَنْ تَرْفَعَ ذِكْرِي، وَتَضَعَ وِزْرِي، وَتُصْلِحَ أَمْرِي، وَتُطَهِّرَ قَلْبِي، وَتُنَوِّرَ لِي فِي قَبْرِي، وَتَغْفِرَ لِي ذَنْبِي، وَأَسْأَلُكَ الدَّرَجَاتِ الْعُلَى مِنَ الْجَنَّةِ، آمِينَ.",
+        "translationEn": "O Allah, Lord of the Ancient House (Ka'bah), free us, our fathers, our mothers, our brethren and our children from the fire, O Possessor of generosity, benevolence, bounties, favours and gifts and goodnesses. O Allah, make good the outcome of all our affairs and protect us from disgrace in this world and chastisement in the hereafter. O Allah, I am Your servant and the son of Your servant, standing below your door, grasping its threshold, in a state of humility before You. I seek Your mercy and I fear Your punishment. O Whose goodness is eternal. O Allah, I ask You that You raise my stature and remove my sins and make good my affairs and purify my heart and give me light in my grave and forgive my sins and I ask You for high degrees in paradise. O Allah, accept my prayer. Amin.",
+        "translationMy": "Ya Allah Tuhan yang empunya rumah yang unggul ini, merdekakanlah kami, ibu bapa kami, saudara-mara kami dan anak-anak kami daripada neraka. Ya Allah yang mempunyai kemurahan kurniaan dan pemberian ihsan, perbaikilah kesudahan urusan kami dan selamatkanlah kami daripada kehinaan dunia dan azab di akhirat. Ya Allah sesungguhnya aku ini hambaMu dan anak dari hambaMu, berdiri di bawah pintuMu, merendahkan diri di hadapanMu dengan mengharapkan rahmatmu dan takutkan azabMu. Ya Allah, Engkau muliakan namaku, ringankan bebanku, perbaiki urusanku, sucikan hatiku, terangi kuburku dan ampunilah dosaku. Dan aku bermohon mendapat tempat yang tinggi di dalam syurgamu. Amin."
+      }
+    ],
+    "categoryKey": [
+      "haji",
+      "umrah",
+      "masjidil haram"
+    ],
+    "audio": ""
   }
 ]

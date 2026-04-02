@@ -1,106 +1,61 @@
-import React, { useState } from 'react';
-import {TouchableOpacity, StyleSheet, View, ImageBackground, useWindowDimensions} from 'react-native';
-import duas from '@/assets/data/duas.json';
-import categoriesData from '@/assets/data/categories.json'
-import ParallaxScrollView from "@/components/parallax-scroll-view";
-import {Image} from "expo-image";
-import {useLanguage} from "@/contexts/LanguageContext";
-import {useFonts} from "expo-font";
-import {ThemedText} from "@/components/themed-text";
+import React, { useCallback } from 'react';
+import { TouchableOpacity, StyleSheet, View, ImageBackground, useWindowDimensions } from 'react-native';
+import categoriesData from '@/assets/data/categories.json';
+import ParallaxScrollView from '@/components/parallax-scroll-view';
+import { Image } from 'expo-image';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useHajiUmrahFilter } from '@/contexts/HajiUmrahFilterContext';
+import { ThemedText } from '@/components/themed-text';
 import { useNavigation } from 'expo-router';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import {DuaType, HomeStackParamList} from '@/config/types';
-import {Colors} from "@/constants/theme";
-
-export type buttonType = {
-  key: string,
-  bgImg?: any
-}
-
-const buttons: buttonType[] = [
-  { key: 'ihram', bgImg: require('@/assets/images/button-bg/ihram.png') },
-  { key: 'talbiyah', bgImg: require('@/assets/images/button-bg/talbiyah.png') },
-  { key: 'travel', bgImg: require('@/assets/images/button-bg/travel.png') },
-  { key: 'masjidil haram', bgImg: require('@/assets/images/button-bg/masjidil-haram.png') },
-  { key: 'tawaf', bgImg: require('@/assets/images/button-bg/tawaf.png') },
-  { key: 'zam-zam', bgImg: require('@/assets/images/button-bg/zamzam.png') },
-  { key: "sa'i", bgImg: require('@/assets/images/button-bg/sai.png') },
-  { key: 'tahalul', bgImg: require('@/assets/images/button-bg/tahallul.png') },
-  { key: 'tawaf wadak', bgImg: require('@/assets/images/button-bg/tawaf-wada.png') },
-  { key: 'madinah', bgImg: require('@/assets/images/button-bg/madinah.png') },
-  { key: 'arafah', bgImg: require('@/assets/images/button-bg/arafah.png') },
-  { key: 'mina', bgImg: require('@/assets/images/button-bg/mina.png') },
-  { key: 'muzdalifah', bgImg: require('@/assets/images/button-bg/muzdalifah.png') },
-  { key: 'stoning', bgImg: require('@/assets/images/button-bg/jamrah.png') }
-];
+import { HomeStackParamList } from '@/config/types';
+import { Colors } from '@/constants/theme';
+import { useFontLoader } from '@/hooks/useFontLoader';
+import { useDuaLoader } from '@/hooks/useDuaLoader';
+import { useFilteredButtons } from '@/constants/home-screen';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList, 'index'>;
 
 export default function HomeScreen(): React.JSX.Element {
   const navigation = useNavigation<HomeScreenNavigationProp>();
-  const {language} = useLanguage();
-  const [fontLoaded] = useFonts({
-    'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
-  });
-  const [mode, setMode] = useState<'hajj' | 'umrah'>('hajj');
+  const { language } = useLanguage();
+  const { mode, toggleMode } = useHajiUmrahFilter();
+  const fontLoaded = useFontLoader();
+  const { loadDuas } = useDuaLoader();
+  const { width } = useWindowDimensions();
+  
+  const filteredButtons = useFilteredButtons(mode);
+  const isSmallScreen = width < 445;
 
-  const loadDuas = async (category: string) => {
-    // @ts-ignore
-    let result = duas.filter((d: DuaType) => {
-      if (d.categoryKey) {
-        return d.categoryKey.includes(category.toLowerCase())
-      } else {
-        console.log(d, ": has no category")
-      }
-    });
-    const subCategories = categoriesData.categories.find((cat) => cat.key === category.toLowerCase())?.subcategories
-    
-    if (subCategories) {
-      const subCategoriesKey = (subCategories.map(cat => cat.key))
-      const subCategoriesResult = (duas.filter((d: DuaType) => {
-        if (d.categoryKey) {
-          return subCategoriesKey.some((sub) => d.categoryKey.includes(sub))
-        }
-      }))
-      result = [...result, ...subCategoriesResult]
-    }
+  const getCategoryName = useCallback((key: string): string => {
+    const cat = categoriesData.categories.find(c => c.key === key);
+    if (!cat) return key;
+    return language === 'my' ? cat.nameMy : cat.nameEn;
+  }, [language]);
+
+  const handleCategoryPress = useCallback((categoryKey: string) => {
+    const result = loadDuas(categoryKey);
 
     if (result.length === 1) {
       navigation.navigate('duaDetail', {
-        selectedDua: { curr: result[0].id, duas: result}
+        selectedDua: { curr: result[0].id, duas: result },
       });
     } else {
       navigation.navigate('duaList', {
-        category,
-        duas: result
+        category: categoryKey,
+        duas: result,
       });
     }
-  };
+  }, [loadDuas, navigation]);
 
-  const {width} = useWindowDimensions();
-  const smScreens = width < 445;
-  
-  const getCategoryName = (key: string) => {
-    const cat = categoriesData.categories.find(c => c.key === key)
-    if (!cat) return key
 
-    return language === 'my' ? cat.nameMy : cat.nameEn
+  if (!fontLoaded) {
+    return <ThemedText>Loading fonts...</ThemedText>;
   }
-
-  // Filter buttons based on mode
-  const getFilteredButtons = () => {
-    if (mode === 'hajj') {
-      return buttons; // Show all buttons for hajj
-    } else {
-      // For umrah, filter out hajj-only sections
-      const hajjOnlySections = ['arafah', 'mina', 'muzdalifah', 'stoning'];
-      return buttons.filter(btn => !hajjOnlySections.includes(btn.key));
-    }
-  };
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{light: '#D0D0D0', dark: '#353636'}}
+      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImageIpad={
         <Image
           source={require('@/assets/images/hajj-hero-image-tablet.png')}
@@ -114,77 +69,78 @@ export default function HomeScreen(): React.JSX.Element {
         />
       }
     >
-      {fontLoaded && (
-        <>
-          <TouchableOpacity
-            style={styles.switchToggleContainer}
-            onPress={() => setMode(mode === 'hajj' ? 'umrah' : 'hajj')}
-            activeOpacity={0.8}
+      <TouchableOpacity
+        style={styles.switchToggleContainer}
+        onPress={toggleMode}
+        activeOpacity={0.8}
+        accessible={true}
+        accessibilityRole="switch"
+        accessibilityState={{ checked: mode === 'haji' }}
+        accessibilityLabel={`Switch between Hajj and Umrah mode, currently on ${mode}`}
+      >
+        <View
+          style={[
+            styles.switchToggleSlider,
+            mode === 'umrah' && styles.switchToggleSliderUmrah,
+          ]}
+        />
+        <View style={styles.switchToggleLabelContainer}>
+          <ThemedText
+            type="defaultBold"
+            style={[
+              styles.switchToggleLabel,
+              mode === 'haji' && styles.switchToggleLabelActive,
+            ]}
           >
-            <View
-              style={[
-                styles.switchToggleSlider,
-                mode === 'umrah' && styles.switchToggleSliderUmrah,
-              ]}
-            />
-            <View style={styles.switchToggleLabelContainer}>
-              <ThemedText
-                type={"defaultBold"}
-                style={[
-                  styles.switchToggleLabel,
-                  mode === 'hajj' && styles.switchToggleLabelActive,
-                ]}
-              >
-                {language === 'my' ? 'Haji' : 'Hajj'}
-              </ThemedText>
-              <ThemedText
-                type={"defaultBold"}
-                style={[
-                  styles.switchToggleLabel,
-                  mode === 'umrah' && styles.switchToggleLabelActive,
-                ]}
-              >
-                {language === 'my' ? 'Umrah' : 'Umrah'}
-              </ThemedText>
-            </View>
-          </TouchableOpacity>
+            {language === 'my' ? 'Haji' : 'Haji'}
+          </ThemedText>
+          <ThemedText
+            type="defaultBold"
+            style={[
+              styles.switchToggleLabel,
+              mode === 'umrah' && styles.switchToggleLabelActive,
+            ]}
+          >
+            {language === 'my' ? 'Umrah' : 'Umrah'}
+          </ThemedText>
+        </View>
+      </TouchableOpacity>
 
-          <View style={styles.grid}>
-            {getFilteredButtons().map((btn, index) =>
-              <TouchableOpacity
-                key={index}
-                onPress={() => {
-                  loadDuas(btn.key)
-                }}
-                style={styles.button}
+      <View style={styles.grid}>
+        {filteredButtons.map((btn) => (
+          <TouchableOpacity
+            key={btn.key}
+            onPress={() => handleCategoryPress(btn.key)}
+            style={styles.button}
+            accessible={true}
+            accessibilityRole="button"
+            accessibilityLabel={getCategoryName(btn.key)}
+          >
+            {btn.bgImg ? (
+              <ImageBackground
+                source={btn.bgImg}
+                style={styles.bgButtonContainer}
+                imageStyle={{ borderRadius: 15 }}
+                resizeMode="cover"
               >
-                {btn.bgImg ? (
-                  <ImageBackground
-                    source={btn.bgImg}
-                    style={styles.bgButtonContainer}
-                    imageStyle={{borderRadius: 15}}
-                    resizeMode={"cover"}
-                  >
-                    <ThemedText
-                      style={[
-                        styles.buttonText,
-                        styles.bgButtonText,
-                        smScreens && {width: '74.2%'}
-                      ]}
-                    >
-                      {getCategoryName(btn.key)}
-                    </ThemedText>
-                  </ImageBackground>
-                ) : (
-                  <ThemedText style={styles.buttonText}>
-                    {getCategoryName(btn.key)}
-                  </ThemedText>
-                )}
-              </TouchableOpacity>
+                <ThemedText
+                  style={[
+                    styles.buttonText,
+                    styles.bgButtonText,
+                    isSmallScreen && { width: '74.2%' },
+                  ]}
+                >
+                  {getCategoryName(btn.key)}
+                </ThemedText>
+              </ImageBackground>
+            ) : (
+              <ThemedText style={styles.buttonText}>
+                {getCategoryName(btn.key)}
+              </ThemedText>
             )}
-          </View>
-        </>
-      )}
+          </TouchableOpacity>
+        ))}
+      </View>
     </ParallaxScrollView>
   );
 }

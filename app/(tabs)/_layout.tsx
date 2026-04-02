@@ -6,6 +6,7 @@ import {Colors} from '@/constants/theme';
 import {useColorScheme} from '@/hooks/use-color-scheme';
 import {LanguageProvider} from "@/contexts/LanguageContext";
 import {FontSettingsProvider} from "@/contexts/FontSettingsContext";
+import {HajiUmrahFilterProvider} from "@/contexts/HajiUmrahFilterContext";
 import {Ionicons} from "@expo/vector-icons";
 
 export default function TabLayout() {
@@ -14,55 +15,57 @@ export default function TabLayout() {
   return (
     <FontSettingsProvider>
       <LanguageProvider>
-        <Tabs
-          screenOptions={{
-            tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-            headerShown: false,
-            tabBarButton: HapticTab,
-          }}
-          initialRouteName={"home"}>
-          <Tabs.Screen
-            name="index"
-            options={{
-              href: null
+        <HajiUmrahFilterProvider>
+          <Tabs
+            screenOptions={{
+              tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+              headerShown: false,
+              tabBarButton: HapticTab,
             }}
-          />
-          <Tabs.Screen
-            name="search"
-            options={{
-              title: 'Search',
-              tabBarIcon: ({color}) => <Ionicons size={28} name={"search"} color={color}/>,
-            }}
-          />
-          <Tabs.Screen
-            name="favourites"
-            options={{
-              title: 'Favourites',
-              tabBarIcon: ({color}) => <Ionicons size={28} name={"star"} color={color}/>,
-            }}
-          />
-          <Tabs.Screen
-            name="home"
-            options={{
-              title: 'Home',
-              tabBarIcon: ({color}) => <Ionicons size={28} name={"home"} color={color}/>,
-            }}
-          />
-          <Tabs.Screen
-            name="settings"
-            options={{
-              title: 'Settings',
-              tabBarIcon: ({color}) => <Ionicons size={28} name={"settings"} color={color}/>,
-            }}
-          />
-          <Tabs.Screen
-            name="about"
-            options={{
-              title: 'about',
-              tabBarIcon: ({color}) => <Ionicons size={28} name={"information"} color={color}/>,
-            }}
-          />
-        </Tabs>
+            initialRouteName={"home"}>
+            <Tabs.Screen
+              name="index"
+              options={{
+                href: null
+              }}
+            />
+            <Tabs.Screen
+              name="search"
+              options={{
+                title: 'Search',
+                tabBarIcon: ({color}) => <Ionicons size={28} name={"search"} color={color}/>,
+              }}
+            />
+            <Tabs.Screen
+              name="favourites"
+              options={{
+                title: 'Favourites',
+                tabBarIcon: ({color}) => <Ionicons size={28} name={"star"} color={color}/>,
+              }}
+            />
+            <Tabs.Screen
+              name="home"
+              options={{
+                title: 'Home',
+                tabBarIcon: ({color}) => <Ionicons size={28} name={"home"} color={color}/>,
+              }}
+            />
+            <Tabs.Screen
+              name="settings"
+              options={{
+                title: 'Settings',
+                tabBarIcon: ({color}) => <Ionicons size={28} name={"settings"} color={color}/>,
+              }}
+            />
+            <Tabs.Screen
+              name="about"
+              options={{
+                title: 'about',
+                tabBarIcon: ({color}) => <Ionicons size={28} name={"information"} color={color}/>,
+              }}
+            />
+          </Tabs>
+        </HajiUmrahFilterProvider>
       </LanguageProvider>
     </FontSettingsProvider>
   );

@@ -14,7 +14,7 @@ export type DuaType = {
   titleMy: string;
   doa: DuaEngMalayArabicType[];
   categoryKey: string[];
-  order: Record<string, number>;
+  order?: Record<string, number | undefined>;
   audio?: string | null;
 }
 

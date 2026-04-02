@@ -1,3 +1,7 @@
+## 1.2.2 - Apr 2, 2026
+- fix filtering duas accounting for haji or umrah context
+- Text update in about.json
+
 ## 1.2.1 - Apr 2, 2026
 - sorting is fixed in the app
 - search page bug fix
