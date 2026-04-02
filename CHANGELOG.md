@@ -1,3 +1,7 @@
+## 1.2.1 - Apr 2, 2026
+- sorting is fixed in the app
+- search page bug fix
+
 ## 1.2.0 - Mar 31, 2026
 - Fix width issue in Hajj / Umrah toggle
 
