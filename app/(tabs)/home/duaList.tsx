@@ -121,7 +121,18 @@ export default function DuaListScreen() {
                 accessibilityRole="button"
                 accessibilityLabel={displayName}
               >
-                <ThemedText style={styles.listText}>{displayName}</ThemedText>
+                <ThemedView style={styles.listItemContent}>
+                  <ThemedText style={styles.iconContainer}>
+                    <Ionicons
+                      size={20}
+                      name={isDua ? 'book' : 'folder'}
+                      color={isDua ? Colors.light.icon : Colors.dark.tabIconDefault}
+                    />
+                  </ThemedText>
+                  <ThemedText style={[
+                    styles.listText
+                  ]}>{displayName}</ThemedText>
+                </ThemedView>
               </TouchableOpacity>
             );
           })}
@@ -161,6 +172,15 @@ const styles = StyleSheet.create({
   listItemTablet: {
     width: '49%',
   },
-  listText: {fontSize: 18, fontFamily: 'Mulish-Bold', color: Colors.base.tint, textTransform: 'capitalize'},
+  listItemContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    backgroundColor: "transparent",
+  },
+  iconContainer: {
+    marginRight: 8,
+  },
+  listText: {fontSize: 18, fontFamily: 'Mulish-Bold', textTransform: 'capitalize', flex: 1, color: "white"},
   back: {fontSize: 18, marginBottom: 10},
 });
