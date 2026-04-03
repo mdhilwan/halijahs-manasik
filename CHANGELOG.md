@@ -1,3 +1,6 @@
+## 1.2.3 - Apr 3, 2026
+- Added icons in the dua list to differentiate categories and dua 
+
 ## 1.2.2 - Apr 2, 2026
 - fix filtering duas accounting for haji or umrah context
 - Text update in about.json
