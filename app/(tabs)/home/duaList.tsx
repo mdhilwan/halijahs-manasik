@@ -1,6 +1,6 @@
 import React, { useMemo, useCallback, memo } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { TouchableOpacity, ScrollView, StyleSheet, useWindowDimensions } from 'react-native';
+import {TouchableOpacity, ScrollView, useWindowDimensions} from 'react-native';
 import { CategoryType, DuaOrCategoryType, DuaType, HomeStackParamList } from '@/config/types';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageEnums } from '@/constants/language-enums';
@@ -14,6 +14,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Colors } from '@/constants/theme';
 import { useFontLoader } from '@/hooks/useFontLoader';
 import { useSortedDuasAndCategories } from '@/hooks/useSortedDuasAndCategories';
+import { duaListStyles as styles } from './styles/homeScreenStyles';
 
 type DuaListScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList, 'duaList'>;
 
@@ -183,11 +184,10 @@ export default function DuaListScreen() {
         <ThemedText style={styles.title}>
           {language === LanguageEnums.EN ? subcategoryObj?.nameEn : subcategoryObj?.nameMy} Du&apos;a List
         </ThemedText>
-
         <ScrollView contentContainerStyle={styles.listContainer}>
-          {sortedItems.map((item: DuaOrCategoryType) => (
+          {sortedItems.map((item: DuaOrCategoryType, index: number) => (
             <DuaListItem
-              key={(item as any).key}
+              key={index}
               item={item}
               language={language}
               isTablet={isTablet}
@@ -200,54 +200,3 @@ export default function DuaListScreen() {
     </ThemedView>
   );
 }
-
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  listContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-  },
-  container: {
-    flex: 1,
-    padding: 20,
-    paddingBottom: 30,
-  },
-  title: {
-    fontSize: 26,
-    fontFamily: 'Mulish-Bold',
-    textTransform: 'capitalize',
-    textAlign: 'center',
-    marginVertical: 20
-  },
-  listItem: {
-    backgroundColor: Colors.light.tint,
-    padding: 20,
-    marginVertical: 8,
-    borderRadius: 10,
-    width: '100%'
-  },
-  listItemTablet: {
-    width: '49%',
-  },
-  listItemContent: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-    backgroundColor: "transparent",
-  },
-  iconContainer: {
-    marginRight: 8,
-  },
-  listText: {
-    fontSize: 18,
-    fontFamily: 'Mulish-Bold',
-    textTransform: 'capitalize',
-    flex: 1,
-    color: Colors.base.tint
-  },
-});

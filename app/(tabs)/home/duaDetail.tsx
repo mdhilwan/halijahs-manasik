@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { TouchableOpacity, StyleSheet, View, ScrollView } from 'react-native';
+import { TouchableOpacity, View, ScrollView } from 'react-native';
 import {DuaEngMalayArabicType, DuaType, SelectedDuaType, HomeStackParamList, CategoryType} from '@/config/types';
 import { DuaPlayer } from '@/components/controls/dua-player';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -14,6 +14,7 @@ import { useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import duasJson from '@/assets/data/duas.json';
 import { useFavourite } from '@/hooks/useFavourite';
+import { duaDetailStyles as styles } from './styles/homeScreenStyles';
 
 /**
  * Renders Arabic text section if available
@@ -188,92 +189,3 @@ export default function DuaDetailScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  fontSettings: {
-    fontSize: 20,
-  },
-  drawerContainer: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    backgroundColor: 'rgba(0,0,0,0.4)',
-  },
-  container: {
-    flex: 1,
-    padding: 20,
-    marginBottom: 0,
-    paddingBottom: 0,
-    height: '100%'
-  },
-  title: {
-    fontSize: 26,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    fontFamily: 'Mulish-Bold',
-    paddingVertical: 20,
-    flexShrink: 1
-  },
-  textWrapper: {
-    width: "100%",
-    marginRight: 5,
-    marginBottom: 5,
-    flexShrink: 1,
-    paddingBottom: 10
-  },
-  translation: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    fontFamily: 'Mulish-Bold',
-    textAlign: 'center',
-  },
-  back: {
-    fontSize: 18,
-    marginBottom: 10
-  },
-  drawerTitle: {
-    fontSize: 22,
-    fontWeight: '600',
-    textAlign: 'center',
-    marginBottom: 15,
-    color: '#222',
-  },
-  drawer: {
-    backgroundColor: '#fff',
-    padding: 20,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-  },
-  settingRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginVertical: 10,
-  },
-  controls: {
-    flexDirection: 'row',
-    gap: 10,
-  },
-  toggleRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginVertical: 10,
-  },
-  closeButton: {
-    textAlign: 'center',
-    marginTop: 20,
-    color: '#007AFF',
-    fontSize: 18,
-  },
-  headerActions: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  starButton: {
-    marginRight: 15,
-  },
-});
