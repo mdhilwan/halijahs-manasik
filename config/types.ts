@@ -27,7 +27,7 @@ export type CategoryType = {
     nameEn: string;
     nameMy: string;
   }[];
-  order: number;
+  order?: number;
   global?: boolean;
 }
 
@@ -53,6 +53,10 @@ export type HomeStackParamList = {
   duaList: {
     category: string;
     duas: DuaType[];
+    parent?: {
+      category: string;
+      duas: DuaType[];
+    }
   };
   duaDetail: {
     selectedDua: SelectedDuaType;

@@ -2,11 +2,14 @@ import { useCallback } from 'react';
 import duasJson from '@/assets/data/duas.json';
 import categoriesData from '@/assets/data/categories.json';
 import { DuaType } from '@/config/types';
+import {useHajiUmrahFilter} from "@/contexts/HajiUmrahFilterContext";
 
 /**
  * Custom hook for handling dua filtering and loading logic
  */
 export const useDuaLoader = () => {
+  const { mode } = useHajiUmrahFilter();
+
   const loadDuas = useCallback((category: string): DuaType[] => {
     // Filter duas by category
     let result = duasJson.filter((d: DuaType) => {
@@ -26,8 +29,8 @@ export const useDuaLoader = () => {
       result = [...result, ...subCategoriesResult];
     }
 
-    return result as DuaType[];
-  }, []);
+    return result.filter(item => item.categoryKey.includes(mode)) as DuaType[];
+  }, [mode]);
 
   return { loadDuas };
 };

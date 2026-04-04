@@ -3,9 +3,9 @@ import {CategoryType, DuaOrCategoryType, DuaType} from '@/config/types';
 import { useHajiUmrahFilter } from "@/contexts/HajiUmrahFilterContext";
 import duasJson from "@/assets/data/duas.json";
 
-export const useSortedDuasAndCategories = (items: DuaOrCategoryType[], categoryKey?: string) => {
+export const useSortedDuasAndCategories = (items: DuaOrCategoryType[], categoryKey: string) => {
   const { mode } = useHajiUmrahFilter();
-  
+
   return useMemo(() => {
     const validCategoriesInMode = new Set<string>();
     duasJson.forEach((dua: DuaType) => {

@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableOpacity, StyleSheet, View, ScrollView } from 'react-native';
-import { DuaEngMalayArabicType, DuaType, SelectedDuaType, HomeStackParamList } from '@/config/types';
+import {DuaEngMalayArabicType, DuaType, SelectedDuaType, HomeStackParamList, CategoryType} from '@/config/types';
 import { DuaPlayer } from '@/components/controls/dua-player';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useFontSize } from '@/contexts/FontSettingsContext';
@@ -94,9 +94,17 @@ export default function DuaDetailScreen() {
   const { language } = useLanguage();
   const { setShowSettings } = useFontSize();
 
-  const duaObj = selectedDua?.duas?.find((dua: DuaType) => dua.id === selectedDua?.curr);
+  let duaObj = selectedDua?.duas?.find((dua: DuaType) => dua.id === selectedDua?.curr);
+  if (duaObj && duaObj.doa === undefined) {
+    const catObj = duaObj as unknown as CategoryType;
+    const nextCategoryDoas = duasJson.filter((dua) => dua.categoryKey.includes(catObj.key))
+    duaObj = nextCategoryDoas[0]
+    setSelectedDua({
+      curr: duaObj.id,
+      duas: nextCategoryDoas
+    })
+  }
   const { isFavourited, toggleFavourite } = useFavourite(duaObj?.id);
-
 
   const titleKey = language === 'my' ? 'titleMy' : 'titleEn';
   const translationKey = language === 'my' ? 'translationMy' : 'translationEn';
@@ -150,7 +158,7 @@ export default function DuaDetailScreen() {
           </View>
         </View>
 
-        {duaObj && (
+        {(duaObj && duaObj.doa) && (
           <>
             <ThemedText style={styles.title}>{duaObj[titleKey]}</ThemedText>
             <ThemedView style={{ flex: 1 }}>

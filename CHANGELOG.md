@@ -1,3 +1,7 @@
+## 1.2.4 - Apr 4, 2026
+- Fixed buggy navigation and filtering when hajj / umrah filter is applied. 
+- Fixed sorting bug when hajj / umrah filter is applied.
+
 ## 1.2.3 - Apr 3, 2026
 - Added icons in the dua list to differentiate categories and dua 
 
