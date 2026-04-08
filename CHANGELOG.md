@@ -1,3 +1,6 @@
+## 1.2.6 - Apr 8, 2026
+- Updated text, duas and categories.
+
 ## 1.2.5 - Apr 4, 2026
 - Group styling for maintanence. Rename Haji to Hajj
 
