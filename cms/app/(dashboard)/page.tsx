@@ -168,7 +168,7 @@ export default function DashboardPage() {
 
               {/* Total Categories */}
               <Link
-                href="/categories"
+                href="/app/categories"
                 className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5"
               >
                 <div className="flex items-start justify-between">
@@ -266,7 +266,7 @@ export default function DashboardPage() {
                 </Link>
 
                 <Link
-                  href="/categories"
+                  href="/app/categories"
                   className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/50 hover:bg-primary/5"
                 >
                   <div className="rounded-lg bg-accent/10 p-2.5">
