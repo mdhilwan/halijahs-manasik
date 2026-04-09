@@ -17,7 +17,7 @@ interface MenuItem {
 }
 
 export function Sidebar({ userEmail }: SidebarProps) {
-  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(true)
   const [isLoggingOut, setIsLoggingOut] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
@@ -47,14 +47,19 @@ export function Sidebar({ userEmail }: SidebarProps) {
       icon: AppIcon,
     },
     {
+      name: 'Passport',
+      href: '/passport',
+      icon: PassportIcon,
+    },
+    {
       name: 'Router',
       href: '/router',
       icon: RouterIcon,
     },
     {
-      name: 'Passport',
-      href: '/passport',
-      icon: PassportIcon,
+      name: 'Umrah Builder',
+      href: '/umrah-builder',
+      icon: RouterIcon,
     },
   ]
 
@@ -67,7 +72,9 @@ export function Sidebar({ userEmail }: SidebarProps) {
       {/* Header */}
       <div className="flex h-16 items-center justify-between border-b border-border px-4">
         {!isCollapsed && (
-          <span className="text-lg font-semibold text-foreground">Manasik</span>
+          <span className="text-lg font-semibold text-foreground">
+            halijah<code>.manasik.tech</code>
+          </span>
         )}
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
