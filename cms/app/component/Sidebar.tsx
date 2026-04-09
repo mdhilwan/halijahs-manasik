@@ -9,6 +9,13 @@ interface SidebarProps {
   userEmail?: string | null
 }
 
+interface MenuItem {
+  name: string
+  href: string
+  icon: React.ComponentType<{ className?: string }>
+  exact?: boolean
+}
+
 export function Sidebar({ userEmail }: SidebarProps) {
   const [isCollapsed, setIsCollapsed] = useState(false)
   const [isLoggingOut, setIsLoggingOut] = useState(false)
@@ -27,11 +34,22 @@ export function Sidebar({ userEmail }: SidebarProps) {
     }
   }
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
+    {
+      name: 'Dashboard',
+      href: '/',
+      icon: DashboardIcon,
+      exact: true,
+    },
     {
       name: 'App',
-      href: '/',
+      href: '/app',
       icon: AppIcon,
+    },
+    {
+      name: 'Categories',
+      href: '/categories',
+      icon: CategoriesIcon,
     },
     {
       name: 'Router',
@@ -69,7 +87,9 @@ export function Sidebar({ userEmail }: SidebarProps) {
       <nav className="flex-1 overflow-y-auto p-3">
         <ul className="flex flex-col gap-1">
           {menuItems.map((item) => {
-            const isActive = pathname === item.href
+            const isActive = item.exact 
+              ? pathname === item.href 
+              : pathname === item.href || pathname.startsWith(item.href + '/')
             return (
               <li key={item.name}>
                 <Link
@@ -131,6 +151,25 @@ function CollapseIcon({ isCollapsed }: { isCollapsed: boolean }) {
   )
 }
 
+function DashboardIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="3" y="3" width="7" height="7" rx="1" />
+      <rect x="14" y="3" width="7" height="7" rx="1" />
+      <rect x="14" y="14" width="7" height="7" rx="1" />
+      <rect x="3" y="14" width="7" height="7" rx="1" />
+    </svg>
+  )
+}
+
 function AppIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -142,9 +181,23 @@ function AppIcon({ className }: { className?: string }) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-      <line x1="3" y1="9" x2="21" y2="9" />
-      <line x1="9" y1="21" x2="9" y2="9" />
+      <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+  )
+}
+
+function CategoriesIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
     </svg>
   )
 }
