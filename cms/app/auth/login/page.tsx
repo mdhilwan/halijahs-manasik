@@ -1,6 +1,6 @@
 'use client'
 
-import { createClient } from '@/lib/supabase/client'
+import { createClient } from '../../../lib/supabase/client'
 import { useState } from 'react'
 
 export default function LoginPage() {
@@ -37,7 +37,7 @@ export default function LoginPage() {
             <div className="mb-8 text-center">
               <h1 className="text-2xl font-semibold text-foreground">Welcome Back</h1>
               <p className="mt-2 text-sm text-muted-foreground">
-                Sign in to Manasik Admin
+                Sign in to Manasik.tech Admin
               </p>
             </div>
 
