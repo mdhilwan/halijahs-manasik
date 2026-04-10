@@ -1,5 +1,5 @@
 ## 1.2.6 - Apr 10, 2026
-- Bug with search page when font size is changes or too large
+- Bug with dark mode
 
 ## 1.2.6 - Apr 8, 2026
 - Updated text, duas and categories.
