@@ -230,15 +230,35 @@ export default function DashboardPage() {
                 <div className="mt-4 space-y-2">
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-muted-foreground">duas.json</span>
-                    <span className="font-medium text-foreground">
-                      {formatFileSize(stats.duasFileSize)}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium text-foreground">
+                        {formatFileSize(stats.duasFileSize)}
+                      </span>
+                      <a
+                        href="/api/download?file=duas"
+                        download="duas.json"
+                        className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                        title="Download duas.json"
+                      >
+                        <DownloadIcon className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
                   </div>
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-muted-foreground">categories.json</span>
-                    <span className="font-medium text-foreground">
-                      {formatFileSize(stats.categoriesFileSize)}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium text-foreground">
+                        {formatFileSize(stats.categoriesFileSize)}
+                      </span>
+                      <a
+                        href="/api/download?file=categories"
+                        download="categories.json"
+                        className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                        title="Download categories.json"
+                      >
+                        <DownloadIcon className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
