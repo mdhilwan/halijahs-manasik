@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { Scheherazade_New } from 'next/font/google';
-import DoaPreview from "../../../component/DoaPreview";
-import {DuaType} from "../../../../../config/types";
+import DoaPreview from "../../../../component/DoaPreview";
+import {DuaType} from "../../../../../../config/types";
 
 interface Subcategory {
   key: string;
@@ -226,7 +226,7 @@ export default function EditPage() {
         <div className="mx-auto max-w-7xl flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
-              href="/"
+              href="/app"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <ArrowLeftIcon className="h-4 w-4" />

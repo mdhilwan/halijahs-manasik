@@ -279,7 +279,7 @@ export default function CategoriesPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Link
-                    href={`/categories/${encodeURIComponent(category.key)}`}
+                    href={`/app/categories/${encodeURIComponent(category.key)}`}
                     className="flex items-center gap-1.5 rounded-lg bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/20 transition-colors"
                   >
                     <ReorderIcon className="h-3 w-3" />
