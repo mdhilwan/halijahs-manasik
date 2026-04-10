@@ -197,23 +197,13 @@ export default function CategoriesPage() {
   const isEditing = modalMode === "edit-category" || modalMode === "edit-subcategory";
 
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card px-6 py-4 sticky top-0 z-20 shadow-sm">
         <div className="mx-auto max-w-5xl flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link
-              href="/"
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <ArrowLeftIcon className="h-4 w-4" />
-              <span className="text-sm font-medium">Back</span>
-            </Link>
-            <div className="h-6 w-px bg-border" />
-            <div>
-              <h1 className="text-2xl font-semibold text-foreground">Categories</h1>
-              <p className="text-sm text-muted-foreground">Manage categories and subcategories</p>
-            </div>
+          <div>
+            <h1 className="text-2xl font-semibold text-foreground">Categories</h1>
+            <p className="text-sm text-muted-foreground">Manage categories and subcategories</p>
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -289,7 +279,7 @@ export default function CategoriesPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Link
-                    href={`/categories/${encodeURIComponent(category.key)}`}
+                    href={`/app/categories/${encodeURIComponent(category.key)}`}
                     className="flex items-center gap-1.5 rounded-lg bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/20 transition-colors"
                   >
                     <ReorderIcon className="h-3 w-3" />
@@ -377,7 +367,7 @@ export default function CategoriesPage() {
             <div className="text-center py-12 text-muted-foreground">
               <FolderIcon className="h-12 w-12 mx-auto mb-4 opacity-50" />
               <p className="text-lg font-medium">No categories yet</p>
-              <p className="text-sm mt-1">Click "Add Category" to create your first category</p>
+              <p className="text-sm mt-1">Click &quot;Add Category&quot; to create your first category</p>
             </div>
           )}
         </div>
@@ -472,19 +462,11 @@ export default function CategoriesPage() {
           </div>
         </div>
       )}
-    </main>
+    </div>
   );
 }
 
 // Icons
-function ArrowLeftIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-    </svg>
-  );
-}
-
 function PlusIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -497,6 +479,14 @@ function DownloadIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+    </svg>
+  );
+}
+
+function ChevronIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
     </svg>
   );
 }
@@ -517,10 +507,10 @@ function TrashIcon({ className }: { className?: string }) {
   );
 }
 
-function ChevronIcon({ className }: { className?: string }) {
+function ReorderIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
     </svg>
   );
 }
@@ -529,14 +519,6 @@ function FolderIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-    </svg>
-  );
-}
-
-function ReorderIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
     </svg>
   );
 }

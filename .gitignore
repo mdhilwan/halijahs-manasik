@@ -47,3 +47,4 @@ app-example
 /cms/_static/
 /cms/.next/
 /manasik-by-halijah-*.json
+/cms/.env

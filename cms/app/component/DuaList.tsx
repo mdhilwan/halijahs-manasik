@@ -74,7 +74,7 @@ export function DuaList() {
                   </div>
                 </div>
                 <Link
-                  href={`/edit/${dua.id}`}
+                  href={`/app/edit/${dua.id}`}
                   onClick={(e) => e.stopPropagation()}
                   className="shrink-0 rounded-lg bg-secondary px-3 py-1.5 text-xs font-medium text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                 >

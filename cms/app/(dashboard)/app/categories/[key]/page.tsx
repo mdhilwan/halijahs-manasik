@@ -194,7 +194,7 @@ export default function CategoryReorderPage({
         <div className="mx-auto max-w-3xl flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
-              href="/categories"
+              href="/app/categories"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <ArrowLeftIcon className="h-4 w-4" />
