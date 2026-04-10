@@ -8,7 +8,6 @@ import {
 import duas from "@/assets/data/duas.json";
 import {DuaEngMalayArabicType, DuaType} from "@/config/types";
 import {useLanguage} from "@/contexts/LanguageContext";
-import {useFontSize} from "@/contexts/FontSettingsContext";
 import {ThemedText} from "@/components/themed-text";
 import {ThemedView} from "@/components/themed-view";
 import {useRouter} from "expo-router";
@@ -17,7 +16,6 @@ export default function Search() {
   const router = useRouter();
   const [query, setQuery] = useState("");
   const {language} = useLanguage();
-  const {translationFontSize} = useFontSize()
 
   const filterDuas = (q: string) => {
     const qLower = q.toLowerCase();
@@ -63,11 +61,10 @@ export default function Search() {
           keyExtractor={(item) => String(item?.id)}
           renderItem={({item}) => (
             <TouchableOpacity style={styles.item} onPress={() => handleSelectDua(item)}>
-              <ThemedText type={"defaultBold"} style={[
-                styles.title,
-                {fontSize: translationFontSize}
-              ]}>{language === "en" ? item.titleEn : item.titleMy}</ThemedText>
-              <ThemedText style={[styles.snippet, {fontSize: translationFontSize}]} numberOfLines={2}>
+              <ThemedText type={"defaultBold"} style={styles.title}>
+                {language === "en" ? item.titleEn : item.titleMy}
+              </ThemedText>
+              <ThemedText style={styles.snippet} numberOfLines={2}>
                 {language === "en" ? item.doa[0].translationEn : item.doa[0].translationMy}
               </ThemedText>
             </TouchableOpacity>
@@ -104,12 +101,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: "bold",
-    fontSize: 18,
+    fontSize: 24,
     marginBottom: 4,
   },
   snippet: {
     color: "#444",
-    fontSize: 16,
+    fontSize: 24,
   },
   empty: {
     textAlign: "center",

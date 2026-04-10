@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {TouchableOpacity, StyleSheet, View, ScrollView, Alert} from 'react-native';
+import {TouchableOpacity, StyleSheet, ScrollView, Alert} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useFonts} from 'expo-font';
 import {ThemedText} from '@/components/themed-text';
@@ -13,6 +13,7 @@ import duas from '@/assets/data/duas.json';
 import categoriesData from '@/assets/data/categories.json';
 import {Image} from "expo-image";
 import ParallaxScrollView from "@/components/parallax-scroll-view";
+import {useColorScheme} from "@/hooks/use-color-scheme";
 
 const FAVOURITES_STORAGE_KEY = 'favourited_duas';
 
@@ -22,6 +23,7 @@ export default function FavouritesScreen(): React.JSX.Element {
   const [fontLoaded] = useFonts({
     'Mulish-Bold': require('@/assets/font/Mulish-Bold.ttf'),
   });
+  const theme = useColorScheme()
   const [favouritedDuas, setFavouritedDuas] = useState<DuaType[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -139,14 +141,14 @@ export default function FavouritesScreen(): React.JSX.Element {
       </ThemedView>
       <ThemedView>
         {favouritedDuas.length === 0 ? (
-          <View style={styles.emptyState}>
+          <ThemedView style={styles.emptyState}>
             <Ionicons name="star-outline" size={64} color="#ccc"/>
             <ThemedText type={"default"} style={styles.emptyStateText}>
               {language === 'my'
                 ? 'Tiada doa kegemaran lagi. Tekan ikon bintang pada doa untuk menambahkannya ke kegemaran.'
                 : 'No favourite prayers yet. Tap the star icon on prayers to add them to favourites.'}
             </ThemedText>
-          </View>
+          </ThemedView>
         ) : (
           <ScrollView style={styles.scrollView}>
             {favouritedDuas.map((dua) => {
@@ -156,11 +158,15 @@ export default function FavouritesScreen(): React.JSX.Element {
               return (
                 <TouchableOpacity
                   key={dua.id}
-                  style={styles.duaItem}
+                  style={[
+                    styles.duaItem,
+                    {backgroundColor: theme === 'dark' ? '#1c1c1c' : '#fff'},
+                    {borderColor: theme === 'dark' ? '#333' : '#e0e0e0'},
+                  ]}
                   onPress={() => navigateToDuaDetail(dua)}
                 >
-                  <View style={styles.duaContent}>
-                    <View style={styles.duaTextContainer}>
+                  <ThemedView style={styles.duaContent}>
+                    <ThemedView style={styles.duaTextContainer}>
                       <ThemedText type={"defaultBold"} style={styles.duaTitle} numberOfLines={2}>
                         {dua[titleKey]}
                       </ThemedText>
@@ -169,14 +175,14 @@ export default function FavouritesScreen(): React.JSX.Element {
                           {categoryName}
                         </ThemedText>
                       )}
-                    </View>
+                    </ThemedView>
                     <TouchableOpacity
                       style={styles.starButton}
                       onPress={() => confirmRemoveFavourite(dua)}
                     >
                       <Ionicons name="star" size={24} color="#ffd65c"/>
                     </TouchableOpacity>
-                  </View>
+                  </ThemedView>
                 </TouchableOpacity>
               );
             })}
