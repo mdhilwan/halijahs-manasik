@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Link from "next/link";
 
 interface Stats {
@@ -40,6 +40,7 @@ export default function DashboardPage() {
         setLoading(false);
       }
     }
+
     fetchStats();
   }, []);
 
@@ -94,7 +95,7 @@ export default function DashboardPage() {
                     </p>
                   </div>
                   <div className="rounded-lg bg-primary/10 p-3">
-                    <BookIcon className="h-6 w-6 text-primary" />
+                    <BookIcon className="h-6 w-6 text-primary"/>
                   </div>
                 </div>
                 <p className="mt-4 text-xs text-muted-foreground group-hover:text-primary transition-colors">
@@ -117,7 +118,7 @@ export default function DashboardPage() {
                     </p>
                   </div>
                   <div className="rounded-lg bg-accent/10 p-3">
-                    <AudioIcon className="h-6 w-6 text-accent" />
+                    <AudioIcon className="h-6 w-6 text-accent"/>
                   </div>
                 </div>
                 <div className="mt-4">
@@ -128,7 +129,7 @@ export default function DashboardPage() {
                   <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-primary to-accent transition-all duration-500"
-                      style={{ width: `${audioPercentage}%` }}
+                      style={{width: `${audioPercentage}%`}}
                     />
                   </div>
                 </div>
@@ -136,8 +137,8 @@ export default function DashboardPage() {
 
               {/* Duas Without Audio - Warning Card */}
               <div className={`rounded-xl border p-6 ${
-                stats.duasWithoutAudio > 0 
-                  ? "border-amber-500/30 bg-amber-500/5" 
+                stats.duasWithoutAudio > 0
+                  ? "border-amber-500/30 bg-amber-500/5"
                   : "border-border bg-card"
               }`}>
                 <div className="flex items-start justify-between">
@@ -156,7 +157,7 @@ export default function DashboardPage() {
                   }`}>
                     <AudioOffIcon className={`h-6 w-6 ${
                       stats.duasWithoutAudio > 0 ? "text-amber-600" : "text-muted-foreground"
-                    }`} />
+                    }`}/>
                   </div>
                 </div>
                 {stats.duasWithoutAudio > 0 && (
@@ -181,7 +182,7 @@ export default function DashboardPage() {
                     </p>
                   </div>
                   <div className="rounded-lg bg-secondary p-3">
-                    <FolderIcon className="h-6 w-6 text-secondary-foreground" />
+                    <FolderIcon className="h-6 w-6 text-secondary-foreground"/>
                   </div>
                 </div>
                 <p className="mt-4 text-xs text-muted-foreground group-hover:text-primary transition-colors">
@@ -204,7 +205,7 @@ export default function DashboardPage() {
                     </p>
                   </div>
                   <div className="rounded-lg bg-muted p-3">
-                    <SubfolderIcon className="h-6 w-6 text-muted-foreground" />
+                    <SubfolderIcon className="h-6 w-6 text-muted-foreground"/>
                   </div>
                 </div>
                 <p className="mt-4 text-xs text-muted-foreground">
@@ -224,7 +225,7 @@ export default function DashboardPage() {
                     </p>
                   </div>
                   <div className="rounded-lg bg-muted p-3">
-                    <FileIcon className="h-6 w-6 text-muted-foreground" />
+                    <FileIcon className="h-6 w-6 text-muted-foreground"/>
                   </div>
                 </div>
                 <div className="mt-4 space-y-2">
@@ -275,7 +276,7 @@ export default function DashboardPage() {
                   className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/50 hover:bg-primary/5"
                 >
                   <div className="rounded-lg bg-primary/10 p-2.5">
-                    <PlusIcon className="h-5 w-5 text-primary" />
+                    <PlusIcon className="h-5 w-5 text-primary"/>
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Add New Dua</p>
@@ -290,7 +291,7 @@ export default function DashboardPage() {
                   className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/50 hover:bg-primary/5"
                 >
                   <div className="rounded-lg bg-accent/10 p-2.5">
-                    <FolderPlusIcon className="h-5 w-5 text-accent" />
+                    <FolderPlusIcon className="h-5 w-5 text-accent"/>
                   </div>
                   <div>
                     <p className="font-medium text-foreground">
@@ -307,7 +308,7 @@ export default function DashboardPage() {
                   className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/50 hover:bg-primary/5"
                 >
                   <div className="rounded-lg bg-secondary p-2.5">
-                    <RouterIcon className="h-5 w-5 text-secondary-foreground" />
+                    <RouterIcon className="h-5 w-5 text-secondary-foreground"/>
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Router</p>
@@ -320,7 +321,7 @@ export default function DashboardPage() {
                   className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/50 hover:bg-primary/5"
                 >
                   <div className="rounded-lg bg-muted p-2.5">
-                    <PassportIcon className="h-5 w-5 text-muted-foreground" />
+                    <PassportIcon className="h-5 w-5 text-muted-foreground"/>
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Passport</p>
@@ -336,89 +337,105 @@ export default function DashboardPage() {
   );
 }
 
+function DownloadIcon({className}: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+    </svg>
+  );
+}
+
 // Icons
-function BookIcon({ className }: { className?: string }) {
+function BookIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
     </svg>
   );
 }
 
-function AudioIcon({ className }: { className?: string }) {
+function AudioIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
     </svg>
   );
 }
 
-function AudioOffIcon({ className }: { className?: string }) {
+function AudioOffIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
     </svg>
   );
 }
 
-function FolderIcon({ className }: { className?: string }) {
+function FolderIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
     </svg>
   );
 }
 
-function SubfolderIcon({ className }: { className?: string }) {
+function SubfolderIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14h8" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14h8"/>
     </svg>
   );
 }
 
-function FileIcon({ className }: { className?: string }) {
+function FileIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
     </svg>
   );
 }
 
-function PlusIcon({ className }: { className?: string }) {
+function PlusIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4"/>
     </svg>
   );
 }
 
-function FolderPlusIcon({ className }: { className?: string }) {
+function FolderPlusIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
     </svg>
   );
 }
 
-function RouterIcon({ className }: { className?: string }) {
+function RouterIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-      <path d="M6 22V14a2 2 0 012-2h8a2 2 0 012 2v8" />
-      <path d="M6 14V2h4v4h4V2h4v12" />
+      <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+      <path d="M6 22V14a2 2 0 012-2h8a2 2 0 012 2v8"/>
+      <path d="M6 14V2h4v4h4V2h4v12"/>
     </svg>
   );
 }
 
-function PassportIcon({ className }: { className?: string }) {
+function PassportIcon({className}: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path d="M6 2h12a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
-      <circle cx="12" cy="10" r="3" />
-      <path d="M8 17h8" />
+      <path d="M6 2h12a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/>
+      <circle cx="12" cy="10" r="3"/>
+      <path d="M8 17h8"/>
     </svg>
   );
 }
