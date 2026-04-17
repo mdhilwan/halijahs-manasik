@@ -11,6 +11,7 @@ export async function GET(request: NextRequest) {
     origin,
     next,
     fullUrl: request.url,
+    env: process.env.NODE_ENV
   })
 
   if (code) {
@@ -25,12 +26,16 @@ export async function GET(request: NextRequest) {
       }
 
       let redirectTo = `${origin}${next}`
-      if (redirectTo.indexOf('https://localhost:8080') > -1) {
-        console.log('[CALLBACK] Replacing localhost in redirect URL for development environment')
-        redirectTo.replace('https://localhost:8080', process.env.NEXT_PUBLIC_LOCALHOST_REPLACE ?? 'localhost')
+
+      // Workaround: If in production and origin is localhost:8080, replace with production URL
+      if (process.env.NODE_ENV === 'production' && redirectTo.includes('https://localhost:8080')) {
+        const productionUrl = process.env.NEXT_PUBLIC_BASE_URL
+        console.log('[CALLBACK] Replacing localhost:8080 with production URL:', productionUrl)
+        redirectTo = redirectTo.replace('https://localhost:8080', productionUrl)
       }
-      console.log('[CALLBACK] Success! Redirecting to:', `${origin}${next}`)
-      return NextResponse.redirect(`${redirectTo}`)
+
+      console.log('[CALLBACK] Success! Redirecting to:', redirectTo)
+      return NextResponse.redirect(redirectTo)
     } catch (err) {
       console.error('[CALLBACK] Exception caught:', err)
       return NextResponse.redirect(`${origin}/auth/error`)
