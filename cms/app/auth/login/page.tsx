@@ -12,7 +12,6 @@ export default function LoginPage() {
     setError(null)
 
     const redirectUrl = process.env.NEXT_PUBLIC_SUPABASE_REDIRECT_URL ?? `${window.location.origin}/auth/callback`
-    console.log({redirectUrl})
 
     try {
       const supabase = createClient()
