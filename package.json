@@ -8,7 +8,10 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "cms": "npx concurrently -c auto \"npm:cms:dev\" \"npm:web:build\"",
+    "cms:dev": "cd ./cms && npm run dev",
+    "web:build": "expo export -c --platform web && npx serve dist -l 8081"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
