@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Scheherazade_New } from 'next/font/google';
 import DoaPreview from "../../../../component/DoaPreview";
 import {DuaType} from "../../../../../../config/types";
+import {PreviewFrame} from "@/app/component/PreviewFrame";
 
 interface Subcategory {
   key: string;
@@ -44,15 +45,41 @@ export default function EditPage() {
   const [newPrayerCategories, setNewPrayerCategories] = useState<string[]>([]);
   const [splitExpandedCategories, setSplitExpandedCategories] = useState<string[]>([]);
   const [isSplitting, setIsSplitting] = useState(false);
+  
+  // Preview state
+  const [allDuas, setAllDuas] = useState<DuaType[]>([]);
+  const [previewData, setPreviewData] = useState<any>(null);
 
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then((data) => {
+      setAllDuas(data);
       const foundDua = data.find((d: any) => String(d.id) === id) as DuaType;
       setDua(foundDua);
       setSelectedCategories(foundDua?.categoryKey ?? []);
+      // Initialize preview data with current dua
+      if (foundDua) {
+        setPreviewData({
+          duas: data,
+          categories: [],
+          timestamp: Date.now(),
+          selectedDuaId: foundDua.id,
+        });
+      }
     });
     fetch("/api/categories").then(r => r.json()).then(setCategories);
   }, [id]);
+
+  // Update preview data when dua changes
+  useEffect(() => {
+    if (dua && allDuas.length > 0) {
+      setPreviewData({
+        duas: allDuas,
+        categories: [],
+        timestamp: Date.now(),
+        selectedDuaId: dua.id,
+      });
+    }
+  }, [dua?.titleEn, dua?.titleMy, dua?.doa, dua?.categoryKey, dua?.id, allDuas]);
 
   const canSave = selectedCategories.length > 0;
 
@@ -287,9 +314,9 @@ export default function EditPage() {
       </header>
 
       <div className="mx-auto max-w-7xl px-6 py-6">
-        <div className="flex gap-8">
+        <div className="lg:grid lg:grid-cols-2 gap-6">
           {/* Form Section */}
-          <div className="flex-1 space-y-6 max-w-2xl">
+          <div className="flex-col space-y-6 max-w-2xl">
             {/* Basic Info Card */}
             <div className="rounded-xl border border-border bg-card p-6">
               <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
@@ -584,14 +611,8 @@ export default function EditPage() {
           </div>
 
           {/* Preview Section */}
-          <div className="hidden lg:block">
-            <div className="sticky top-24">
-              <div className="mb-4 text-center">
-                <h3 className="text-sm font-medium text-foreground">App Preview</h3>
-                <p className="text-xs text-muted-foreground">See how it looks in the app</p>
-              </div>
-              <DoaPreview {...dua} />
-            </div>
+          <div className="fixed right-6 top-24 bottom-6 w-[calc(50%-9rem)] flex-col gap-4 pointer-events-auto hidden lg:flex">
+            <PreviewFrame data={previewData} duaId={dua?.id} />
           </div>
         </div>
       </div>

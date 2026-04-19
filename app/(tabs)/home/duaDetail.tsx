@@ -91,6 +91,8 @@ export default function DuaDetailScreen() {
     initialSelectedDua.duas = duasJson;
   }
 
+  console.log("DuaDetailScreen ::: ", {initialSelectedDua})
+
   const [selectedDua, setSelectedDua] = useState<SelectedDuaType>(initialSelectedDua);
   const { language } = useLanguage();
   const { setShowSettings } = useFontSize();

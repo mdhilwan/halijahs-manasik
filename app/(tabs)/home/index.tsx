@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, {useCallback, useEffect} from 'react';
 import { TouchableOpacity, View, ImageBackground, useWindowDimensions } from 'react-native';
 import categoriesData from '@/assets/data/categories.json';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
@@ -6,7 +6,7 @@ import { Image } from 'expo-image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useHajiUmrahFilter } from '@/contexts/HajiUmrahFilterContext';
 import { ThemedText } from '@/components/themed-text';
-import { useNavigation } from 'expo-router';
+import { useNavigation, useRouter } from 'expo-router';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList } from '@/config/types';
 import { useFontLoader } from '@/hooks/useFontLoader';
@@ -21,9 +21,10 @@ export default function HomeScreen(): React.JSX.Element {
   const { language } = useLanguage();
   const { mode, toggleMode } = useHajiUmrahFilter();
   const fontLoaded = useFontLoader();
-  const { loadDuas } = useDuaLoader();
+  const { loadDuas, selectedDuaId } = useDuaLoader();
   const { width } = useWindowDimensions();
-  
+  const router = useRouter();
+
   const filteredButtons = useFilteredButtons(mode);
   const isSmallScreen = width < 445;
 
@@ -47,6 +48,21 @@ export default function HomeScreen(): React.JSX.Element {
       });
     }
   }, [loadDuas, navigation]);
+
+
+  console.log('HomeScreen render - selectedDuaId from CMS preview:', selectedDuaId);
+  useEffect(() => {
+    /* This app is being loaded by the CMS preview and telling it to load a specific dua */
+    if (selectedDuaId) {
+      console.log('Navigating to selected dua from CMS preview:', selectedDuaId);
+      router.push({
+        pathname: '/home/duaDetail',
+        params: {
+          selectedDua: JSON.stringify({curr: selectedDuaId})
+        }
+      });
+    }
+  }, [selectedDuaId])
 
 
   if (!fontLoaded) {
