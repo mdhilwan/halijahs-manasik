@@ -18,9 +18,11 @@ export function AppContent() {
             <DuaList />
           </div>
 
-          {/* Right Side: Fixed Preview */}
-          <div className="fixed right-6 top-24 bottom-6 w-[calc(50%-9rem)] flex flex-col gap-4 pointer-events-auto">
-            <PreviewFrame data={previewData} />
+          {/* Right Side: Preview */}
+          <div className="flex flex-col gap-4 items-center pointer-events-auto">
+            <div className="fixed">
+              <PreviewFrame data={previewData} />
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
 import { ChevronIcon, NoAudioIcon, SearchIcon } from "./icons";
 import { useDuaManagement } from "../context/DuaManagementContext";
+import { useState } from "react";
 
 export function DuaFilters() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const {
     searchQuery,
     setSearchQuery,
@@ -24,7 +26,7 @@ export function DuaFilters() {
     <div className="mb-6 space-y-4">
       {/* Search and Language Toggle */}
       <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-        <div className="relative w-full sm:w-96">
+        <div className="relative w-full">
           <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <input
             type="text"
@@ -35,7 +37,7 @@ export function DuaFilters() {
           />
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="md:flex items-center gap-4 hidden">
           {/* No Audio Filter */}
           <button
             onClick={() => setFilterNoAudio(!filterNoAudio)}
@@ -75,6 +77,72 @@ export function DuaFilters() {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Mobile Dropdown Menu (visible on mobile only) */}
+        <div className="md:hidden relative">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
+          >
+            <span>Filters</span>
+            <ChevronIcon
+              className={`h-4 w-4 transition-transform ${isMobileMenuOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          {/* Dropdown Menu */}
+          {isMobileMenuOpen && (
+            <div className="absolute right-auto sm:right-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg z-50">
+              <div className="p-3 space-y-3">
+                {/* No Audio Filter */}
+                <button
+                  onClick={() => {
+                    setFilterNoAudio(!filterNoAudio);
+                  }}
+                  className={`w-full flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors text-left ${
+                    filterNoAudio
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  }`}
+                >
+                  <NoAudioIcon className="h-4 w-4" />
+                  No Audio
+                </button>
+
+                {/* Language Selection */}
+                <div className="space-y-1.5">
+                  <span className="text-xs font-medium text-muted-foreground px-1">Display Language</span>
+                  <div className="flex gap-1">
+                    <button
+                      onClick={() => {
+                        setLanguage("en");
+                      }}
+                      className={`flex-1 px-3 py-2 text-xs font-medium rounded-lg transition-colors ${
+                        language === "en"
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                      }`}
+                    >
+                      English
+                    </button>
+                    <button
+                      onClick={() => {
+                        setLanguage("my");
+                      }}
+                      className={`flex-1 px-3 py-2 text-xs font-medium rounded-lg transition-colors ${
+                        language === "my"
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                      }`}
+                    >
+                      Malay
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 

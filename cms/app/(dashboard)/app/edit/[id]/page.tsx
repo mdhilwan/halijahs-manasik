@@ -72,8 +72,12 @@ export default function EditPage() {
   // Update preview data when dua changes
   useEffect(() => {
     if (dua && allDuas.length > 0) {
+      // Replace the edited dua in allDuas with the current dua state
+      // This ensures the preview shows live edits, not stale data from API
+      const updatedDuas = allDuas.map(d => d.id === dua.id ? dua : d);
+      
       setPreviewData({
-        duas: allDuas,
+        duas: updatedDuas,
         categories: [],
         timestamp: Date.now(),
         selectedDuaId: dua.id,
@@ -99,7 +103,7 @@ export default function EditPage() {
       body: JSON.stringify(dua)
     });
     setIsSaving(false);
-    router.push("/");
+    router.refresh();
   }
 
   async function remove() {

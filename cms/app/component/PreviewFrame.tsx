@@ -40,20 +40,6 @@ export const PreviewFrame: React.FC<PreviewFrameProps> = ({ data, duaId }) => {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 p-4 rounded-lg">
-      {/* Header */}
-      <div className="mb-6 text-center">
-        <h3 className="text-sm font-semibold text-gray-900">Manasik App Preview</h3>
-        <p className="text-xs text-gray-500 mt-1">Live preview of your app</p>
-        <a
-          href="http://localhost:8081"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs text-blue-600 hover:text-blue-800 underline mt-2 inline-block"
-        >
-          Open in new tab
-        </a>
-      </div>
-
       {/* iPhone Frame with Scaled Iframe */}
       <IphoneFrame>
         {/* Scaled iframe wrapper */}

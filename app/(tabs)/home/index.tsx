@@ -50,11 +50,9 @@ export default function HomeScreen(): React.JSX.Element {
   }, [loadDuas, navigation]);
 
 
-  console.log('HomeScreen render - selectedDuaId from CMS preview:', selectedDuaId);
   useEffect(() => {
     /* This app is being loaded by the CMS preview and telling it to load a specific dua */
     if (selectedDuaId) {
-      console.log('Navigating to selected dua from CMS preview:', selectedDuaId);
       router.push({
         pathname: '/home/duaDetail',
         params: {

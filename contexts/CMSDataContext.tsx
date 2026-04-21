@@ -24,7 +24,6 @@ export const CMSDataProvider: React.FC<{ children: React.ReactNode }> = ({ child
     const handleMessage = (event: MessageEvent) => {
       // In production, verify origin: event.origin === 'http://localhost:3000'
       if (event.data?.type === 'MANASIK_DATA_UPDATE') {
-        console.log('handleMessage!', event.data.type, event.data.payload)
         const { duas: newDuas, categories: newCategories, selectedDuaId: newSelectedDuaId } = event.data.payload;
         if (newDuas && newCategories) {
           setDuas(newDuas);
@@ -35,8 +34,11 @@ export const CMSDataProvider: React.FC<{ children: React.ReactNode }> = ({ child
       }
     };
 
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
+    if (window && window.addEventListener) {
+      window?.addEventListener('message', handleMessage);
+      return () => window?.removeEventListener('message', handleMessage);
+    }
+    return () => {};
   }, []);
 
   const updatePreviewData = (newDuas: DuaType[], newCategories: any, newSelectedDuaId?: number) => {

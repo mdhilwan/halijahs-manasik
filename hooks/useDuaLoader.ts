@@ -65,8 +65,6 @@ export const useDuaLoader = () => {
     return currentDuas.find((d: DuaType) => d.id === duaId);
   }, [currentDuas]);
 
-  console.log("useDuaLoader ::: ", {loadDuas, loadDuaById, selectedDuaId})
-
-  return { loadDuas, loadDuaById, selectedDuaId };
+  return { loadDuas, loadDuaById, selectedDuaId, currentDuas, cmsData: !!cmsData };
 };
 

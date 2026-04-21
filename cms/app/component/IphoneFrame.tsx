@@ -7,7 +7,7 @@ interface IphoneFrameProps {
 
 const IphoneFrame: React.FC<IphoneFrameProps> = ({ children, className = "" }) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className} w-[306px]`}>
       {/* Outer frame with metallic edge effect */}
       <div className="relative bg-gradient-to-b from-zinc-700 via-zinc-800 to-zinc-900 rounded-[55px] p-[3px] shadow-2xl">
         {/* Inner phone body */}
