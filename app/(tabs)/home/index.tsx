@@ -29,7 +29,7 @@ export default function HomeScreen(): React.JSX.Element {
   const isSmallScreen = width < 445;
 
   const getCategoryName = useCallback((key: string): string => {
-    const cat = categoriesData.categories.find(c => c.key === key);
+    const cat = categoriesData.categories?.find(c => c.key === key);
     if (!cat) return key;
     return language === 'my' ? cat.nameMy : cat.nameEn;
   }, [language]);

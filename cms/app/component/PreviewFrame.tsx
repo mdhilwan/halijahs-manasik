@@ -43,7 +43,7 @@ export const PreviewFrame: React.FC<PreviewFrameProps> = ({ data, duaId }) => {
   const ORIGINAL_HEIGHT = 842;
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 p-4 rounded-lg">
+    <div className="w-full h-full flex flex-col items-center justify-center p-4">
       {/* iPhone Frame with Scaled Iframe */}
       <IphoneFrame>
         {/* Scaled iframe wrapper */}
