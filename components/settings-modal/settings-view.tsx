@@ -5,7 +5,7 @@ import {
   MAX_TRANSLATION_FONT_SIZE,
   MIN_ARABIC_FONT_SIZE, MIN_TRANSLATION_FONT_SIZE,
   useFontSize
-} from "@/app/contexts/FontSettingsContext";
+} from "@/contexts/FontSettingsContext";
 import {ThemedView} from "@/components/themed-view";
 import {ThemedText} from "@/components/themed-text";
 

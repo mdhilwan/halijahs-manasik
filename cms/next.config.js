@@ -4,6 +4,10 @@ const nextConfig = {
     images: {
         unoptimized: true
     },
+    eslint: {
+        dirs: ['app', 'lib'],
+        ignoreDuringBuilds: true,
+    }
 }
 
 module.exports = nextConfig

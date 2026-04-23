@@ -1,6 +1,6 @@
 {
   "name": "manasik-admin",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hello-pangea/dnd": "^18.0.1",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.49.4",
     "@tailwindcss/postcss": "^4.1.18",
     "eslint-config-next": "^15.4.8",
     "next": "^15.4.8",

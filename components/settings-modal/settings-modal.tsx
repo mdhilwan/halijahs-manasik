@@ -1,11 +1,15 @@
 import {Modal, StyleSheet, View, TouchableWithoutFeedback} from "react-native";
 import React from "react";
-import {useFontSize} from "@/app/contexts/FontSettingsContext";
+import {useFontSize} from "@/contexts/FontSettingsContext";
 import {SettingsView} from "@/components/settings-modal/settings-view";
 import {ThemedText} from "@/components/themed-text";
+import {LanguagePicker} from "@/components/settings-modal/language-picker";
+import {useColorScheme} from "@/hooks/use-color-scheme";
+import {ThemedView} from "@/components/themed-view";
 
 const SettingsModal = () => {
   const { showSettings, setShowSettings } = useFontSize()
+  const color = useColorScheme();
 
   return <Modal
     animationType="slide"
@@ -13,14 +17,20 @@ const SettingsModal = () => {
     visible={showSettings}
   >
     <TouchableWithoutFeedback onPress={() => setShowSettings(false)}>
-      <View style={styles.drawerContainer}>
+      <ThemedView style={styles.drawerContainer}>
         <TouchableWithoutFeedback>
-          <View style={styles.drawer}>
-            <ThemedText style={styles.drawerTitle}>Text Settings</ThemedText>
+          <ThemedView style={[
+            styles.drawer,
+          ]}>
+            <ThemedText style={[
+              styles.drawerTitle,
+              {color: color === 'dark' ? '#fff' : '#000'}
+            ]}>Text Settings</ThemedText>
+            <LanguagePicker/>
             <SettingsView/>
-          </View>
+          </ThemedView>
         </TouchableWithoutFeedback>
-      </View>
+      </ThemedView>
     </TouchableWithoutFeedback>
   </Modal>
 }
@@ -31,10 +41,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     marginBottom: 15,
-    color: '#222',
   },
   drawer: {
-    backgroundColor: '#fff',
     padding: 20,
     paddingBottom: 100,
     borderTopLeftRadius: 20,

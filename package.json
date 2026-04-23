@@ -1,14 +1,21 @@
 {
   "name": "halijahs-manasik",
   "main": "expo-router/entry",
-  "version": "1.0.5",
+  "version": "1.2.8",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "cms": "npx concurrently -c auto \"npm:cms:dev\" \"npm:web:serve\"",
+    "cms:dev": "cd ./cms && npm run dev",
+    "cms:prod:build": "cd ./cms && npm i && npm run build",
+    "cms:prod:run": "cd ./cms && npm run start",
+    "web:build": "expo export -c --platform web",
+    "web:serve": "npx serve dist -l 8080",
+    "web:serve:prod": "npx serve dist -l $PORT"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",

@@ -1,0 +1,257 @@
+{
+  "categories": [
+    {
+      "key": "arafah",
+      "nameEn": "Arafah",
+      "nameMy": "Arafah",
+      "subcategories": [
+        {
+          "key": "istigfaar_al_jaami",
+          "nameEn": "Istigfaar al Jaami'",
+          "nameMy": "Istighfar al Jaami'",
+          "order": 2
+        },
+        {
+          "key": "dzikrs",
+          "nameEn": "Dzikrs",
+          "nameMy": "Zikir-Zikir",
+          "order": 3
+        },
+        {
+          "key": "supplications",
+          "nameEn": "Supplications",
+          "nameMy": "Doa-Doa",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "key": "haji",
+      "nameEn": "Hajj",
+      "nameMy": "Haji",
+      "global": true,
+      "subcategories": []
+    },
+    {
+      "key": "ihram",
+      "nameEn": "Ihram",
+      "nameMy": "Ihram",
+      "subcategories": [
+        {
+          "key": "umrah_ihram_intentions",
+          "nameEn": "Umrah Ihram Intentions",
+          "nameMy": "Niat-Niat Ihram Umrah",
+          "order": 1
+        },
+        {
+          "key": "haj_ihram_intentions",
+          "nameEn": "Haj Ihram Intentions",
+          "nameMy": "Niat-Niat Ihram Haji",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "key": "madinah",
+      "nameEn": "Madinah",
+      "nameMy": "Madinah",
+      "subcategories": []
+    },
+    {
+      "key": "masjidil haram",
+      "nameEn": "Masjidil Haram",
+      "nameMy": "Masjidil Haram",
+      "subcategories": []
+    },
+    {
+      "key": "mina",
+      "nameEn": "Mina",
+      "nameMy": "Mina",
+      "subcategories": [
+        {
+          "key": "tasyrik",
+          "nameEn": "Dzikrs On The Days Of Tasyrik",
+          "nameMy": "Zikir-Zikir Pada Hari Tasyrik"
+        }
+      ]
+    },
+    {
+      "key": "muzdalifah",
+      "nameEn": "Muzdalifah",
+      "nameMy": "Muzdalifah",
+      "subcategories": []
+    },
+    {
+      "key": "niat",
+      "nameEn": "Intention",
+      "nameMy": "Niat",
+      "subcategories": []
+    },
+    {
+      "key": "sa'i",
+      "nameEn": "Sa'i",
+      "nameMy": "Sa'i",
+      "subcategories": [
+        {
+          "key": "sai_intentions",
+          "nameEn": "Sa'i Intentions",
+          "nameMy": "Niat-Niat Sa'i",
+          "order": 0
+        },
+        {
+          "key": "sai_round_1",
+          "nameEn": "Round 1",
+          "nameMy": "Pusingan 1",
+          "order": 2
+        },
+        {
+          "key": "sai_round_2",
+          "nameEn": "Round 2",
+          "nameMy": "Pusingan 2",
+          "order": 3
+        },
+        {
+          "key": "sai_round_3",
+          "nameEn": "Round 3",
+          "nameMy": "Pusingan 3",
+          "order": 4
+        },
+        {
+          "key": "sai_round_4",
+          "nameEn": "Round 4",
+          "nameMy": "Pusingan 4",
+          "order": 5
+        },
+        {
+          "key": "sai_round_5",
+          "nameEn": "Round 5",
+          "nameMy": "Pusingan 5",
+          "order": 6
+        },
+        {
+          "key": "sai_round_6",
+          "nameEn": "Round 6",
+          "nameMy": "Pusingan 6",
+          "order": 7
+        },
+        {
+          "key": "sai_round_7",
+          "nameEn": "Round 7",
+          "nameMy": "Pusingan 7",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "key": "stoning",
+      "nameEn": "Jamrah",
+      "nameMy": "Jamrah",
+      "subcategories": []
+    },
+    {
+      "key": "tahalul",
+      "nameEn": "Tahalul",
+      "nameMy": "Tahallul",
+      "subcategories": []
+    },
+    {
+      "key": "talbiyah",
+      "nameEn": "Talbiyah",
+      "nameMy": "Talbiyah",
+      "subcategories": []
+    },
+    {
+      "key": "tawaf",
+      "nameEn": "Tawaf",
+      "nameMy": "Tawaf",
+      "subcategories": [
+        {
+          "key": "tawaf_intentions",
+          "nameEn": "Tawaf Intentions",
+          "nameMy": "Niat-Niat Tawaf",
+          "order": 0
+        },
+        {
+          "key": "tawaf_round_1",
+          "nameEn": "Round 1",
+          "nameMy": "Pusingan 1",
+          "order": 2
+        },
+        {
+          "key": "tawaf_round_2",
+          "nameEn": "Round 2",
+          "nameMy": "Pusingan 2",
+          "order": 3
+        },
+        {
+          "key": "tawaf_round_3",
+          "nameEn": "Round 3",
+          "nameMy": "Pusingan 3",
+          "order": 4
+        },
+        {
+          "key": "tawaf_round_4",
+          "nameEn": "Round 4",
+          "nameMy": "Pusingan 4",
+          "order": 5
+        },
+        {
+          "key": "tawaf_round_5",
+          "nameEn": "Round 5",
+          "nameMy": "Pusingan 5",
+          "order": 6
+        },
+        {
+          "key": "tawaf_round_6",
+          "nameEn": "Round 6",
+          "nameMy": "Pusingan 6",
+          "order": 7
+        },
+        {
+          "key": "tawaf_round_7",
+          "nameEn": "Round 7",
+          "nameMy": "Pusingan 7",
+          "order": 8
+        },
+        {
+          "key": "sunnah_tawaf_prayer",
+          "nameEn": "Sunnah Tawaf Prayer",
+          "nameMy": "Solat Sunat Tawaf",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "key": "tawaf wadak",
+      "nameEn": "Tawaf Wada'",
+      "nameMy": "Tawaf Wada'",
+      "subcategories": []
+    },
+    {
+      "key": "travel",
+      "nameEn": "Travel",
+      "nameMy": "Musafir",
+      "subcategories": [
+        {
+          "key": "solat_jama_and_qasar_intentions",
+          "nameEn": "Solat Jama’ and Qasar Intentions",
+          "nameMy": "Niat-Niat Solat Jamak dan Qasar",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "key": "umrah",
+      "nameEn": "Umrah",
+      "nameMy": "Umrah",
+      "global": true,
+      "subcategories": []
+    },
+    {
+      "key": "zam-zam",
+      "nameEn": "Zam-zam",
+      "nameMy": "Zam-zam",
+      "subcategories": []
+    }
+  ]
+}
