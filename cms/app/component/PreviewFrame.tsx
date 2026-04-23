@@ -24,16 +24,18 @@ export const PreviewFrame: React.FC<PreviewFrameProps> = ({ data, duaId }) => {
 
     // Send data to iframe via postMessage
     console.log("Sending MANASIK_DATA_UPDATE to")
-    iframeRef.current.contentWindow.postMessage(
-      {
-        type: "MANASIK_DATA_UPDATE",
-        payload: {
-          ...data,
-          selectedDuaId: duaId, // Include the dua id to focus on
+    setTimeout(() => {
+      iframeRef.current.contentWindow.postMessage(
+        {
+          type: "MANASIK_DATA_UPDATE",
+          payload: {
+            ...data,
+            selectedDuaId: duaId, // Include the dua id to focus on
+          },
         },
-      },
-      "*" // In production, use specific origin like "http://localhost:8081"
-    );
+        "*" // In production, use specific origin like "http://localhost:8081"
+      );
+    }, 1000)
   }, [data, duaId, isIframeReady]);
 
   const SCALE = 0.65;

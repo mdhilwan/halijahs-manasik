@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { Scheherazade_New } from 'next/font/google';
-import DoaPreview from "../../../../component/DoaPreview";
 import {DuaType} from "../../../../../../config/types";
 import {PreviewFrame} from "@/app/component/PreviewFrame";
 
