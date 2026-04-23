@@ -54,7 +54,7 @@ export const PreviewFrame: React.FC<PreviewFrameProps> = ({ data, duaId }) => {
         >
           <iframe
             ref={iframeRef}
-            src="http://localhost:8081"
+            src={process.env.NEXT_PUBLIC_PREVIEW_APP_URL || "http://localhost:8081"}
             title="Manasik App Preview"
             className="w-full h-full border-0"
             sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
