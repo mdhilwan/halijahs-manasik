@@ -14,6 +14,7 @@ export const PreviewFrame: React.FC<PreviewFrameProps> = ({ data, duaId }) => {
 
   // Handle iframe load event
   const handleIframeLoad = () => {
+    console.log('Preview Frame ready!')
     setIsIframeReady(true);
   };
 
@@ -22,6 +23,7 @@ export const PreviewFrame: React.FC<PreviewFrameProps> = ({ data, duaId }) => {
     if (!data || !isIframeReady || !iframeRef.current?.contentWindow) return;
 
     // Send data to iframe via postMessage
+    console.log("Sending MANASIK_DATA_UPDATE to")
     iframeRef.current.contentWindow.postMessage(
       {
         type: "MANASIK_DATA_UPDATE",
@@ -54,7 +56,7 @@ export const PreviewFrame: React.FC<PreviewFrameProps> = ({ data, duaId }) => {
         >
           <iframe
             ref={iframeRef}
-            src={process.env.NEXT_PUBLIC_PREVIEW_APP_URL || "http://localhost:8081"}
+            src={process.env.NEXT_PUBLIC_PREVIEW_APP_URL || "http://localhost:8080"}
             title="Manasik App Preview"
             className="w-full h-full border-0"
             sandbox="allow-same-origin allow-scripts allow-popups allow-forms"

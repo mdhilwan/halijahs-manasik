@@ -25,6 +25,7 @@ export const CMSDataProvider: React.FC<{ children: React.ReactNode }> = ({ child
       // In production, verify origin: event.origin === 'http://localhost:3000'
       if (event.data?.type === 'MANASIK_DATA_UPDATE') {
         const { duas: newDuas, categories: newCategories, selectedDuaId: newSelectedDuaId } = event.data.payload;
+        console.log('Received MANASIK_DATA_UPDATE:', { newDuas, newCategories, newSelectedDuaId });
         if (newDuas && newCategories) {
           setDuas(newDuas);
           setCategories(newCategories);
