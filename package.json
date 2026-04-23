@@ -11,6 +11,9 @@
     "lint": "expo lint",
     "cms": "npx concurrently -c auto \"npm:cms:dev\" \"npm:web:serve\"",
     "cms:dev": "cd ./cms && npm run dev",
+    "cms:prod:build": "npm run web:build && cd ./cms && npm run build",
+    "cms:prod:serve": "npx concurrently -c auto \"npm:cms:prod:run\" \"npm:web:serve\"",
+    "cms:prod:run": "cd ./cms && npm run start",
     "web:build": "expo export -c --platform web",
     "web:serve": "npx serve dist -l 8081",
     "web:rebuild": "npm run web:build && npm run web:serve"
