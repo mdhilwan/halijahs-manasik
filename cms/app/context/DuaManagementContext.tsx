@@ -1,6 +1,7 @@
 import React, { createContext, useContext } from "react";
 import { DuaType } from "../../../config/types";
 import { Category } from "../types";
+import { PreviewData } from "../lib/serializeForPostMessage";
 
 export interface DuaManagementContextType {
   // Data
@@ -54,6 +55,11 @@ export interface DuaManagementContextType {
   toggleBatchExpanded: (categoryKey: string) => void;
   applyBatchUpdate: () => Promise<void>;
   isBatchLoading: boolean;
+
+  // Preview sync
+  hasUnsyncedChanges: boolean;
+  previewData: PreviewData | null;
+  syncPreview: (selectedDuaId?: number) => void;
 }
 
 export const DuaManagementContext = createContext<DuaManagementContextType | undefined>(undefined);

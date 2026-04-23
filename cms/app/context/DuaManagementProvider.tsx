@@ -1,7 +1,8 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, useRef } from "react";
 import { DuaType } from "../../../config/types";
 import { Category } from "../types";
 import { DuaManagementContext } from "./DuaManagementContext";
+import { serializeForPostMessage, PreviewData } from "../lib/serializeForPostMessage";
 
 export function DuaManagementProvider({ children }: { children: React.ReactNode }) {
   const [duas, setDuas] = useState<DuaType[]>([]);
@@ -25,10 +26,34 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [newDuaTitle, setNewDuaTitle] = useState({ en: "", my: "" });
 
+  // Preview sync state
+  const [hasUnsyncedChanges, setHasUnsyncedChanges] = useState(false);
+  const [previewData, setPreviewData] = useState<PreviewData | null>(null);
+  const previousDataRef = useRef<{ duas: DuaType[]; categories: Category[] }>({
+    duas: [],
+    categories: [],
+  });
+
   useEffect(() => {
     fetch("/api/duas").then(r => r.json()).then(setDuas);
     fetch("/api/categories").then(r => r.json()).then(setCategories);
   }, []);
+
+  // Track changes for preview sync
+  useEffect(() => {
+    const duasChanged = JSON.stringify(duas) !== JSON.stringify(previousDataRef.current.duas);
+    const categoriesChanged =
+      JSON.stringify(categories) !== JSON.stringify(previousDataRef.current.categories);
+
+    if (duasChanged || categoriesChanged) {
+      setHasUnsyncedChanges(true);
+    }
+
+    previousDataRef.current = {
+      duas: JSON.parse(JSON.stringify(duas)),
+      categories: JSON.parse(JSON.stringify(categories)),
+    };
+  }, [duas, categories]);
 
   const filteredDuas = useMemo(() => {
     return duas.filter(dua => {
@@ -185,6 +210,12 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
 
   const allVisibleSelected = filteredDuas.length > 0 && filteredDuas.every(d => selectedDuaIds.includes(d.id));
 
+  function syncPreview(selectedDuaId?: number) {
+    const serializedData = serializeForPostMessage(duas, categories, selectedDuaId);
+    setPreviewData(serializedData);
+    setHasUnsyncedChanges(false);
+  }
+
   const value = {
     // Data
     duas,
@@ -237,6 +268,11 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
     toggleBatchExpanded,
     applyBatchUpdate,
     isBatchLoading,
+
+    // Preview sync
+    hasUnsyncedChanges,
+    previewData,
+    syncPreview,
   };
 
   return (

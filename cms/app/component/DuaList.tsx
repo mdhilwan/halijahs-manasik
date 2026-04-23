@@ -36,42 +36,73 @@ export function DuaList() {
       </div>
 
       {/* Duas List */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-20">
+      <div className="flex flex-col gap-2 pb-20">
         {filteredDuas.map(dua => {
           const isSelected = selectedDuaIds.includes(dua.id);
           return (
             <div
               key={dua.id}
               onClick={() => toggleDuaSelection(dua.id)}
-              className={`group rounded-xl border p-4 transition-all cursor-pointer ${
+              className={`group rounded-lg border p-3 transition-all cursor-pointer flex items-center justify-between gap-3 ${
                 isSelected
                   ? "border-primary bg-primary/5 shadow-md ring-2 ring-primary/20"
                   : "border-border bg-card hover:shadow-md hover:border-primary/30"
               }`}
             >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-start gap-3 flex-1 min-w-0">
-                  {/* Selection indicator */}
-                  <div className={`shrink-0 mt-0.5 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                    isSelected
-                      ? "bg-primary border-primary"
-                      : "border-muted-foreground/30"
-                  }`}>
-                    {isSelected && (
-                      <CheckIcon className="h-3 w-3 text-primary-foreground" />
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-medium text-foreground truncate">
-                      {language === "en" ? dua.titleEn : dua.titleMy}
-                    </h3>
-                    {language === "en" && dua.titleMy && (
-                      <p className="text-xs text-muted-foreground truncate mt-0.5">{dua.titleMy}</p>
-                    )}
-                    {language === "my" && dua.titleEn && (
-                      <p className="text-xs text-muted-foreground truncate mt-0.5">{dua.titleEn}</p>
-                    )}
-                  </div>
+              <div className="flex items-center gap-3 flex-1 min-w-0">
+                {/* Selection indicator */}
+                <div className={`shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                  isSelected
+                    ? "bg-primary border-primary"
+                    : "border-muted-foreground/30"
+                }`}>
+                  {isSelected && (
+                    <CheckIcon className="h-3 w-3 text-primary-foreground" />
+                  )}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-medium text-foreground truncate">
+                    {language === "en" ? dua.titleEn : dua.titleMy}
+                  </h3>
+                  {language === "en" && dua.titleMy && (
+                    <p className="text-xs text-muted-foreground truncate mt-0.5">{dua.titleMy}</p>
+                  )}
+                  {language === "my" && dua.titleEn && (
+                    <p className="text-xs text-muted-foreground truncate mt-0.5">{dua.titleEn}</p>
+                  )}
+
+                  {dua.categoryKey && dua.categoryKey.length > 0 && (
+                    <div className="mt-1.5 flex flex-wrap gap-1">
+                      {dua.categoryKey.slice(0, 2).map(cat => (
+                        <span
+                          key={cat}
+                          className="rounded-full bg-muted px-2 py-0.5 text-[9px] font-medium text-muted-foreground capitalize"
+                        >
+                          {cat}
+                        </span>
+                      ))}
+                      {dua.categoryKey.length > 2 && (
+                        <span className="rounded-full bg-muted px-2 py-0.5 text-[9px] font-medium text-muted-foreground">
+                          +{dua.categoryKey.length - 2}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Right side info and actions */}
+              <div className="flex items-center gap-2 shrink-0">
+                <div className="text-xs text-muted-foreground flex items-center gap-1">
+                  {dua.audio ? (
+                    <span className="flex items-center gap-1 text-emerald-600">
+                      <AudioIcon className="h-3 w-3" />
+                    </span>
+                  ) : (
+                    <span className="flex items-center gap-1 text-destructive/70">
+                      <NoAudioIcon className="h-3 w-3" />
+                    </span>
+                  )}
                 </div>
                 <Link
                   href={`/app/edit/${dua.id}`}
@@ -80,45 +111,6 @@ export function DuaList() {
                 >
                   Edit
                 </Link>
-              </div>
-
-              {dua.categoryKey && dua.categoryKey.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-1.5 ml-8">
-                  {dua.categoryKey.slice(0, 3).map(cat => (
-                    <span
-                      key={cat}
-                      className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground capitalize"
-                    >
-                      {cat}
-                    </span>
-                  ))}
-                  {dua.categoryKey.length > 3 && (
-                    <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
-                      +{dua.categoryKey.length - 3}
-                    </span>
-                  )}
-                </div>
-              )}
-
-              <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground ml-8">
-                <span>{dua.doa?.length || 0} entries</span>
-                {dua.audio ? (
-                  <>
-                    <span className="text-border">|</span>
-                    <span className="flex items-center gap-1">
-                      <AudioIcon className="h-3 w-3" />
-                      Has audio
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    <span className="text-border">|</span>
-                    <span className="flex items-center gap-1 text-destructive/70">
-                      <NoAudioIcon className="h-3 w-3" />
-                      No audio
-                    </span>
-                  </>
-                )}
               </div>
             </div>
           );

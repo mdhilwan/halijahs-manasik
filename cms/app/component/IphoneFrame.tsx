@@ -7,7 +7,7 @@ interface IphoneFrameProps {
 
 const IphoneFrame: React.FC<IphoneFrameProps> = ({ children, className = "" }) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className} w-[306px]`}>
       {/* Outer frame with metallic edge effect */}
       <div className="relative bg-gradient-to-b from-zinc-700 via-zinc-800 to-zinc-900 rounded-[55px] p-[3px] shadow-2xl">
         {/* Inner phone body */}
@@ -23,17 +23,6 @@ const IphoneFrame: React.FC<IphoneFrameProps> = ({ children, className = "" }) =
           
           {/* Screen container */}
           <div className="relative bg-white rounded-[42px] w-[280px] h-[600px] overflow-hidden">
-            
-            {/* Dynamic Island */}
-            <div className="absolute top-3 left-1/2 transform -translate-x-1/2 z-20">
-              <div className="flex items-center justify-center bg-black rounded-full w-[100px] h-[32px]">
-                {/* Camera */}
-                <div className="w-[10px] h-[10px] rounded-full bg-zinc-800 mr-2 relative">
-                  <div className="absolute inset-[2px] rounded-full bg-gradient-to-br from-zinc-600 to-zinc-900" />
-                  <div className="absolute top-[3px] left-[3px] w-[2px] h-[2px] rounded-full bg-blue-400/50" />
-                </div>
-              </div>
-            </div>
             
             {/* Status bar */}
             <div className="absolute top-0 left-0 right-0 h-12 z-10 flex items-center justify-between px-6 pt-1">
@@ -61,13 +50,8 @@ const IphoneFrame: React.FC<IphoneFrameProps> = ({ children, className = "" }) =
             </div>
             
             {/* Screen content */}
-            <div className="h-full pt-12 pb-6 overflow-y-auto">
+            <div className="h-full pt-12 pb-6 overflow-hidden">
               {children}
-            </div>
-            
-            {/* Home indicator */}
-            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
-              <div className="w-[120px] h-[5px] bg-zinc-900 rounded-full" />
             </div>
           </div>
         </div>

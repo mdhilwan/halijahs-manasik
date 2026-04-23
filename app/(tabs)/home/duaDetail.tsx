@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableOpacity, View, ScrollView } from 'react-native';
 import {DuaEngMalayArabicType, DuaType, SelectedDuaType, HomeStackParamList, CategoryType} from '@/config/types';
@@ -12,9 +12,9 @@ import { ThemedView } from '@/components/themed-view';
 import { useNavigation } from 'expo-router';
 import { useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import duasJson from '@/assets/data/duas.json';
 import { useFavourite } from '@/hooks/useFavourite';
 import { duaDetailStyles as styles } from './styles/homeScreenStyles';
+import { useDuaLoader } from "@/hooks/useDuaLoader";
 
 /**
  * Renders Arabic text section if available
@@ -78,6 +78,7 @@ type DuaDetailScreenNavigationProp = NativeStackNavigationProp<HomeStackParamLis
 
 export default function DuaDetailScreen() {
   const navigation = useNavigation<DuaDetailScreenNavigationProp>();
+  const { currentDuas, cmsData } = useDuaLoader();
   const route = useRoute();
   const params = route.params as { selectedDua: SelectedDuaType | string };
 
@@ -87,18 +88,25 @@ export default function DuaDetailScreen() {
       ? JSON.parse(params.selectedDua) 
       : params.selectedDua;
 
-  if (initialSelectedDua && !initialSelectedDua.duas) {
-    initialSelectedDua.duas = duasJson;
-  }
-
   const [selectedDua, setSelectedDua] = useState<SelectedDuaType>(initialSelectedDua);
+
+  // Synchronize selectedDua state when currentDuas is updated
+  useEffect(() => {
+    if (initialSelectedDua && (!initialSelectedDua.duas || cmsData) && currentDuas) {
+      setSelectedDua(prev => ({
+        ...prev,
+        duas: currentDuas
+      }));
+    }
+  }, [currentDuas, cmsData]);
+
   const { language } = useLanguage();
   const { setShowSettings } = useFontSize();
 
   let duaObj = selectedDua?.duas?.find((dua: DuaType) => dua.id === selectedDua?.curr);
   if (duaObj && duaObj.doa === undefined) {
     const catObj = duaObj as unknown as CategoryType;
-    const nextCategoryDoas = duasJson.filter((dua) => dua.categoryKey.includes(catObj.key))
+    const nextCategoryDoas = currentDuas.filter((dua: { categoryKey: string | string[]; }) => dua.categoryKey.includes(catObj.key))
     duaObj = nextCategoryDoas[0]
     setSelectedDua({
       curr: duaObj.id,
@@ -117,7 +125,6 @@ export default function DuaDetailScreen() {
   const handleShowSettings = useCallback(() => {
     setShowSettings(true);
   }, [setShowSettings]);
-
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView style={{ flex: 1 }}>

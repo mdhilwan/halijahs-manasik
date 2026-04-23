@@ -29,7 +29,11 @@ const DuaPlayerContent: React.FC<PlayStopButtonType> = ({
   }
 
   const {duas, curr} = selectedDua;
-  const currIndex = curr !== undefined ? duas.findIndex((d) => d.id === curr) : -1;
+
+  if (!duas || curr === undefined) {
+    return <></>;
+  }
+  const currIndex = duas.findIndex((d) => d.id === curr);
 
   const hasNext = () => currIndex !== -1 && duas[currIndex + 1] !== undefined;
   const hasPrev = () => currIndex > 0 && duas[currIndex - 1] !== undefined;
