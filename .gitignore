@@ -30,6 +30,10 @@ yarn-error.*
 .DS_Store
 *.pem
 
+# White-label generated assets (selected per-build)
+assets/images/current/
+assets/images/button-bg/current/
+
 # local env files
 .env*.local
 

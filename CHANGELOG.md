@@ -1,3 +1,7 @@
+## 1.3.0 - Apr 26, 2026
+- New Feature:
+  - White-labeling to support multiple co-branded versions of the app
+  
 ## 1.2.8 - Apr 10, 2026
 - Bug with dark mode
 
