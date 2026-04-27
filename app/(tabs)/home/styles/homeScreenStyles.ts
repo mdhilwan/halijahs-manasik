@@ -7,6 +7,8 @@ import { Colors } from '@/constants/theme';
 export const commonStyles = StyleSheet.create({
   header: {
     flexDirection: 'row',
+    paddingLeft: 20,
+    paddingRight: 20,
     justifyContent: 'space-between',
     alignItems: 'center',
   },
@@ -172,7 +174,7 @@ export const duaDetailStyles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    padding: 20,
+    padding: 0,
     marginBottom: 0,
     paddingBottom: 0,
     height: '100%'
@@ -251,7 +253,7 @@ export const duaListStyles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    paddingBottom: 30,
+    paddingBottom: 0,
   },
   listItem: {
     backgroundColor: Colors.light.tint,

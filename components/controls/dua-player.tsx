@@ -53,7 +53,7 @@ const DuaPlayerContent: React.FC<PlayStopButtonType> = ({
   const getPrev = () => (hasPrev() ? duas[currIndex - 1] : undefined);
 
   return (
-    <View style={{alignItems: 'center'}}>
+    <ThemedView style={{alignItems: 'center', boxShadow: '0px -10px 25px rgba(0, 0, 0, 0.15)', width: '100%', paddingTop: 10, paddingLeft: 20, paddingRight: 20, marginBottom: -20}}>
       <ThemedView style={{
         flexDirection: 'row',
         alignItems: 'center',
@@ -68,7 +68,7 @@ const DuaPlayerContent: React.FC<PlayStopButtonType> = ({
       </ThemedView>
       {dua?.audio &&
           <SeekBar position={position} duration={duration} onSeek={handleSeek} disabled={loading || !sound}/>}
-    </View>
+    </ThemedView>
   );
 };
 
