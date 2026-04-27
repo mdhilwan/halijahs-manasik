@@ -169,7 +169,7 @@ export default function DuaDetailScreen() {
         {(duaObj && duaObj.doa) && (
           <>
             <ThemedText style={styles.title}>{duaObj[titleKey]}</ThemedText>
-            <ThemedView style={{ flex: 1 }}>
+            <ThemedView style={{ flex: 1, paddingLeft: 15, paddingRight: 15 }}>
               <ScrollView>
                 {duaObj.doa.map((dua: DuaEngMalayArabicType) => (
                   <ThemedView key={dua.id}>

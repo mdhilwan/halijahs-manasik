@@ -1,3 +1,7 @@
+## 1.4.1 - Apr 26, 2026
+- Bug Fix:
+  - Minor UI fix with audio player
+  
 ## 1.4.0 - Apr 26, 2026
 - New Feature:
   - Ability to repeat a selected dua
