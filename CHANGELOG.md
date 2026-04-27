@@ -1,3 +1,8 @@
+## 1.4.2 - Apr 26, 2026
+- Bug Fix:
+    - Text change in about page
+    - CMS UI update
+
 ## 1.4.1 - Apr 26, 2026
 - Bug Fix:
   - Minor UI fix with audio player

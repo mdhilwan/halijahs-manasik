@@ -40,7 +40,7 @@ export const PreviewFrame: React.FC<PreviewFrameProps> = ({ data, duaId }) => {
 
   const SCALE = 0.65;
   const ORIGINAL_WIDTH = 446;
-  const ORIGINAL_HEIGHT = 842;
+  const ORIGINAL_HEIGHT = 923;
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center p-4">
