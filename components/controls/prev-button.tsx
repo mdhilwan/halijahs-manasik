@@ -24,8 +24,7 @@ export const PrevButton: React.FC<PrevButtonProps> = ({ onPress, disabled }) => 
 
 const styles = StyleSheet.create({
   audioButton: {
-    padding: 10,
-    borderRadius: 10,
+    padding: 0,
     marginTop: 10,
   },
 });

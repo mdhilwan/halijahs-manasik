@@ -13,6 +13,8 @@ export const FavouriteButton: React.FC<FavouriteButtonProps> = ({ onPress, isFav
       <Ionicons
         name={isFavourited ? 'star' : 'star-outline'}
         size={28}
+        accessibilityRole="button"
+        accessibilityLabel={isFavourited ? 'Remove from favourites' : 'Add to favourites'}
         color={isFavourited ? '#ffd65c' : '#666'}
       />
     </TouchableOpacity>
@@ -22,7 +24,7 @@ export const FavouriteButton: React.FC<FavouriteButtonProps> = ({ onPress, isFav
 const styles = StyleSheet.create({
   audioButton: {
     position: 'absolute',
-    left: 170,
+    left: 135,
     padding: 10,
     borderRadius: 10,
     marginTop: 10,
