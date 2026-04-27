@@ -50,7 +50,7 @@ const IphoneFrame: React.FC<IphoneFrameProps> = ({ children, className = "" }) =
             </div>
             
             {/* Screen content */}
-            <div className="h-full pt-12 pb-6 overflow-hidden">
+            <div className="h-full pt-0 pb-0 overflow-hidden">
               {children}
             </div>
           </div>

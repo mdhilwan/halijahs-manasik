@@ -135,6 +135,8 @@ export default function About() {
             </Link>
         </Collapsible>}
 
+        <ThemedText>© 2026 Halijah Travels Pte Ltd. All content, audio, and design are owned by Halijah Travels Pte Ltd and are for personal use only. Organisational or commercial use requires prior permission.</ThemedText>
+
     </ParallaxScrollView>
   );
 }

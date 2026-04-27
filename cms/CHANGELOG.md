@@ -1,3 +1,6 @@
+## 2.0.1
+- Minor bug fix and improvements
+
 ## 2.0.0
 - New Feature:
   - New UI design
