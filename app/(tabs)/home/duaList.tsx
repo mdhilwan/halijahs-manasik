@@ -174,7 +174,12 @@ export default function DuaListScreen() {
     <ThemedView style={styles.container}>
       <SafeAreaView style={{ flex: 1 }}>
         <ThemedText style={styles.header}>
-          <TouchableOpacity onPress={handleBack} accessible={true} accessibilityRole="button" accessibilityLabel="Go back">
+          <TouchableOpacity
+            onPress={handleBack}
+            accessible={true}
+            accessibilityRole="button"
+            accessibilityLabel="Go back"
+          >
             <ThemedText>
               <Ionicons size={36} name="chevron-back" />
             </ThemedText>

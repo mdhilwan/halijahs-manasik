@@ -1,3 +1,7 @@
+## 1.4.3 - Apr 26, 2026
+- Bug Fix:
+  - Misalignment of duaList top UI  
+
 ## 1.4.2 - Apr 26, 2026
 - Bug Fix:
     - Text change in about page

@@ -2,7 +2,7 @@
   "expo": {
     "name": "Manasik",
     "slug": "halijahs-manasik-app",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "orientation": "portrait",
     "icon": "./assets/images/current/icon.png",
     "scheme": "halijahmanasik",

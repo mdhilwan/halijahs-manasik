@@ -247,13 +247,17 @@ export const duaListStyles = StyleSheet.create({
   ...commonStyles,
   listContainer: {
     flexDirection: 'row',
+    paddingLeft: 20,
+    paddingRight: 20,
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
   container: {
     flex: 1,
-    padding: 20,
+    padding: 0,
+    marginBottom: 0,
     paddingBottom: 0,
+    height: '100%'
   },
   listItem: {
     backgroundColor: Colors.light.tint,
