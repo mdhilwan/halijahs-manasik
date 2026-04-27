@@ -45,16 +45,15 @@ export default function About() {
 
   return (
     fontLoaded && <ParallaxScrollView
-        headerBackgroundColor={{light: '#D0D0D0', dark: '#353636'}}
         headerImageIpad={
           <Image
-            source={require('@/assets/images/about-hero-image-tablet.png')}
+            source={require('@/assets/images/current/about-hero-image-tablet.png')}
             style={styles.heroImage}
           />
         }
         headerImage={
           <Image
-            source={require('@/assets/images/about-hero-image.png')}
+            source={require('@/assets/images/current/about-hero-image.png')}
             style={styles.heroImage}
           />
         }>

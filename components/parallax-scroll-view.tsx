@@ -10,6 +10,7 @@ import Animated, {
 import { ThemedView } from '@/components/themed-view';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useThemeColor } from '@/hooks/use-theme-color';
+import { Colors } from '@/constants/theme';
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
 const HEADER_HEIGHT = 250;
@@ -18,14 +19,17 @@ const isTablet = SCREEN_WIDTH >= 768; // iPad threshold
 type Props = PropsWithChildren<{
   headerImage: ReactElement;
   headerImageIpad?: ReactElement;
-  headerBackgroundColor: { dark: string; light: string };
+  headerBackgroundColor?: { dark: string; light: string };
 }>;
 
 export default function ParallaxScrollView({
   children,
   headerImage,
   headerImageIpad,
-  headerBackgroundColor,
+  headerBackgroundColor = {
+    light: Colors.light.headerBackgroundColor,
+    dark: Colors.dark.headerBackgroundColor,
+  },
 }: Props) {
   const backgroundColor = useThemeColor({}, 'background');
   const colorScheme = useColorScheme() ?? 'light';

@@ -16,6 +16,20 @@
     "production": {
       "autoIncrement": true,
       "channel": "production"
+    },
+    "production-halijah": {
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "COMPANY_ID": "halijah"
+      }
+    },
+    "production-manasiktech": {
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "COMPANY_ID": "manasiktech"
+      }
     }
   },
   "submit": {

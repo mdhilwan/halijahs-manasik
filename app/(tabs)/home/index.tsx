@@ -69,16 +69,15 @@ export default function HomeScreen(): React.JSX.Element {
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImageIpad={
         <Image
-          source={require('@/assets/images/hajj-hero-image-tablet.png')}
+          source={require('@/assets/images/current/hajj-hero-image-tablet.png')}
           style={styles.heroImage}
         />
       }
       headerImage={
         <Image
-          source={require('@/assets/images/hajj-hero-image.png')}
+          source={require('@/assets/images/current/hajj-hero-image.png')}
           style={styles.heroImage}
         />
       }
