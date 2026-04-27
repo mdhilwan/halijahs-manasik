@@ -1,3 +1,7 @@
+## 1.4.0 - Apr 26, 2026
+- New Feature:
+  - Ability to repeat a selected dua
+
 ## 1.3.0 - Apr 26, 2026
 - New Feature:
   - White-labeling to support multiple co-branded versions of the app

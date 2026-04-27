@@ -2,11 +2,13 @@ import React, { createContext, useContext, useState, useRef, useEffect, useCallb
 import { Audio } from 'expo-av';
 import { useFocusEffect } from '@react-navigation/native';
 import { AudioMap } from '@/components/controls/audio-files';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface AudioState {
   sound: Audio.Sound | null;
   loading: boolean;
   isPlaying: boolean;
+  isLooping: boolean;
   duration: number;
   position: number;
   isSeeking: boolean;
@@ -16,6 +18,7 @@ interface AudioActions {
   loadAudio: (audioKey: string) => Promise<void>;
   handlePlayPause: () => Promise<void>;
   handleSeek: (value: number) => Promise<void>;
+  toggleLooping: () => Promise<void>;
 }
 
 interface AudioContextType extends AudioState, AudioActions {}
@@ -34,34 +37,73 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [sound, setSound] = useState<Audio.Sound | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isLooping, setIsLooping] = useState<boolean>(false);
   const [duration, setDuration] = useState<number>(0);
   const [position, setPosition] = useState<number>(0);
   const [isSeeking, setIsSeeking] = useState<boolean>(false);
   const positionRef = useRef<number>(0);
+  const soundRef = useRef<Audio.Sound | null>(null);
+  const isLoopingRef = useRef<boolean>(false);
+
+  const LOOPING_STORAGE_KEY = 'dua_player_is_looping';
+
+  useEffect(() => {
+    soundRef.current = sound;
+  }, [sound]);
+
+  useEffect(() => {
+    isLoopingRef.current = isLooping;
+  }, [isLooping]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const loadLooping = async () => {
+      try {
+        const saved = await AsyncStorage.getItem(LOOPING_STORAGE_KEY);
+        if (cancelled) return;
+        if (saved !== null) {
+          setIsLooping(saved === 'true');
+        }
+      } catch (err) {
+        console.warn('Error loading looping setting:', err);
+      }
+    };
+    loadLooping();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!sound) return;
+    sound.setIsLoopingAsync(isLooping).catch(() => {
+      // sound may have been unloaded
+    });
+  }, [sound, isLooping]);
 
   useEffect(() => {
     return () => {
-      if (sound) {
-        sound.stopAsync();
-        sound.unloadAsync();
+      const s = soundRef.current;
+      if (s) {
+        s.stopAsync().catch(() => {});
+        s.unloadAsync().catch(() => {});
       }
     };
   }, []);
 
   useFocusEffect(
     useCallback(() => {
-      return async () => {
-        if (sound) {
-          try {
-            await sound.stopAsync();
-          } catch (e) {
-            // sound not loaded or already unloaded
-          }
-          setIsPlaying(false);
-          setPosition(0);
+      return () => {
+        // Stop audio when navigating away from the screen that owns this provider.
+        // (Does NOT stop on lock-screen/background.)
+        const s = soundRef.current;
+        if (s) {
+          s.stopAsync().catch(() => {});
         }
+        setIsPlaying(false);
+        setPosition(0);
       };
-    }, [sound])
+    }, [])
   );
 
   const onPlaybackStatusUpdate = (status: any) => {
@@ -76,9 +118,17 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
     if (status.isLoaded) {
       setIsPlaying(status.isPlaying);
-      if (status.didJustFinish) {
+      if (status.didJustFinish && !status.isLooping) {
         setIsPlaying(false);
         setPosition(0);
+        positionRef.current = 0;
+
+        // Expo-AV keeps the native position at the end when finished.
+        // Resetting it ensures the next play starts from the beginning.
+        const s = soundRef.current;
+        if (s) {
+          s.setPositionAsync(0).catch(() => {});
+        }
       }
     }
   };
@@ -87,13 +137,18 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     if (!audioKey) return;
     setLoading(true);
     try {
+      setIsPlaying(false);
+      setPosition(0);
+      positionRef.current = 0;
+      setDuration(0);
+
       if (sound) {
         await sound.unloadAsync();
         setSound(null);
       }
       const { sound: newSound, status } = await Audio.Sound.createAsync(
         AudioMap[audioKey],
-        { shouldPlay: false },
+        { shouldPlay: false, isLooping: isLoopingRef.current },
         onPlaybackStatusUpdate
       );
       setSound(newSound);
@@ -108,6 +163,27 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
+  const toggleLooping = async () => {
+    const next = !isLoopingRef.current;
+    isLoopingRef.current = next;
+    setIsLooping(next);
+
+    try {
+      await AsyncStorage.setItem(LOOPING_STORAGE_KEY, String(next));
+    } catch (err) {
+      console.warn('Error saving looping setting:', err);
+    }
+
+    const s = soundRef.current;
+    if (s) {
+      try {
+        await s.setIsLoopingAsync(next);
+      } catch {
+        // sound might not be loaded yet
+      }
+    }
+  };
+
   const handlePlayPause = async () => {
     if (loading) return;
     if (sound) {
@@ -118,11 +194,24 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             await sound.pauseAsync();
             setIsPlaying(false);
           } else {
-            await sound.playAsync();
+            // If playback has completed, playAsync() may immediately finish again.
+            // Detect "ended" and explicitly replay from the beginning.
+            const END_TOLERANCE_MS = 500;
+            const durationMs = status.durationMillis ?? 0;
+            const positionMs = status.positionMillis ?? 0;
+            const ended =
+              status.didJustFinish ||
+              (durationMs > 0 && positionMs >= Math.max(0, durationMs - END_TOLERANCE_MS));
+
+            if (ended && !status.isLooping) {
+              await sound.replayAsync();
+            } else {
+              await sound.playAsync();
+            }
             setIsPlaying(true);
           }
         }
-      } catch (e) {
+      } catch {
         console.warn('Sound not loaded');
       }
     } else {
@@ -136,7 +225,7 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     if (sound) {
       try {
         await sound.setPositionAsync(value * 1000);
-      } catch (e) {
+      } catch {
         console.warn('Sound not loaded for seeking');
       }
     }
@@ -147,12 +236,14 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     sound,
     loading,
     isPlaying,
+    isLooping,
     duration,
     position,
     isSeeking,
     loadAudio,
     handlePlayPause,
     handleSeek,
+    toggleLooping,
   };
 
   return <AudioContext.Provider value={value}>{children}</AudioContext.Provider>;

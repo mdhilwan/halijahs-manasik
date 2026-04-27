@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
 import {PlayStopButtonType} from '@/config/types';
 import {ThemedView} from '@/components/themed-view';
@@ -8,6 +8,7 @@ import {PlayPauseButton} from './play-button';
 import {NextButton} from './next-button';
 import {FavouriteButton} from './favourite-button';
 import {SeekBar} from './seek-bar';
+import {RepeatButton} from './repeat-button';
 
 const DuaPlayerContent: React.FC<PlayStopButtonType> = ({
                                                           dua,
@@ -16,7 +17,18 @@ const DuaPlayerContent: React.FC<PlayStopButtonType> = ({
                                                           isFavourited,
                                                           toggleFavourite,
                                                         }) => {
-  const {isPlaying, loading, duration, position, handlePlayPause, handleSeek, loadAudio, sound} = useAudio();
+  const {
+    isPlaying,
+    isLooping,
+    toggleLooping,
+    loading,
+    duration,
+    position,
+    handlePlayPause,
+    handleSeek,
+    loadAudio,
+    sound
+  } = useAudio();
 
   useEffect(() => {
     if (dua?.audio) {
@@ -46,7 +58,9 @@ const DuaPlayerContent: React.FC<PlayStopButtonType> = ({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
+        position: 'relative',
       }}>
+        <RepeatButton onPress={toggleLooping} isLooping={isLooping} disabled={!dua?.audio}/>
         <PrevButton onPress={() => setSelectedDua({curr: getPrev()?.id, duas})} disabled={!hasPrev()}/>
         <PlayPauseButton onPress={handlePlayPause} isPlaying={isPlaying} loading={loading} disabled={!dua?.audio}/>
         <NextButton onPress={() => setSelectedDua({curr: getNext()?.id, duas})} disabled={!hasNext()}/>
