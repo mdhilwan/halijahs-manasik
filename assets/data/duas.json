@@ -113,7 +113,7 @@
       "haji",
       "umrah_ihram_intentions"
     ],
-    "audio": "",
+    "audio": "niat_umrah_bersyarat.mp3",
     "order": {
       "ihram": 5
     }
@@ -176,7 +176,7 @@
       "haji",
       "haj_ihram_intentions"
     ],
-    "audio": "",
+    "audio": "niat_haji_bersyarat.mp3",
     "order": {
       "ihram": 8
     }
@@ -1460,7 +1460,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "upon_entering_masjid_nabawi.mp3",
+    "audio": "entering_nabawi_mosque.mp3",
     "order": {
       "madinah": 1
     }
@@ -1482,7 +1482,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "doa_khas_di_raudah.mp3",
+    "audio": "raudhah.mp3",
     "order": {
       "madinah": 7
     }
@@ -1504,7 +1504,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "salam_to_rasulullah.mp3",
+    "audio": "salam_to_rasul.mp3",
     "order": {
       "madinah": 2
     }
@@ -1526,7 +1526,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "salam_to_abu_bakar.mp3",
+    "audio": "salam_to_abu_bakr.mp3",
     "order": {
       "madinah": 4
     }
@@ -1570,7 +1570,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "doa_di_makam_nabi.mp3",
+    "audio": "doa_prophets_tomb.mp3",
     "order": {
       "madinah": 6
     }
@@ -1592,7 +1592,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "sampaikan_salam.mp3",
+    "audio": "membawa_salam_kpd_rasul.mp3",
     "order": {
       "madinah": 3
     }
@@ -1614,7 +1614,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "di_baqi.mp3",
+    "audio": "salam_at_baqi.mp3",
     "order": {
       "madinah": 8
     }
@@ -1636,7 +1636,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "doa_kpd_Rasulullah_saw_ketika_ziarahi_masjid_masjid_d_madinah.mp3",
+    "audio": "doa_at_historic_mosque_in_madinah.mp3",
     "order": {
       "madinah": 9
     }
@@ -1658,7 +1658,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "salam_dan_doa_d_perkuburan_syuhada_uhud.mp3",
+    "audio": "visting_uhud.mp3",
     "order": {
       "madinah": 10
     }
@@ -1680,7 +1680,7 @@
       "umrah",
       "haji"
     ],
-    "audio": "ziarah_wadak.mp3",
+    "audio": "farewell_ziarah.mp3",
     "order": {
       "madinah": 11
     }
@@ -1816,7 +1816,8 @@
     "categoryKey": [
       "muzdalifah",
       "haji"
-    ]
+    ],
+    "audio": "entering_muzdalifah.mp3"
   },
   {
     "id": 342924199039,
@@ -1863,7 +1864,8 @@
     "categoryKey": [
       "stoning",
       "haji"
-    ]
+    ],
+    "audio": "after_stoning.mp3"
   },
   {
     "id": 914679754110,
@@ -1883,7 +1885,8 @@
     ],
     "order": {
       "mina": 0
-    }
+    },
+    "audio": "doa_masuk_mina.mp3"
   },
   {
     "id": 661900813599,
@@ -1903,7 +1906,8 @@
     ],
     "order": {
       "mina": 2
-    }
+    },
+    "audio": "baqiyatussolihat.mp3"
   },
   {
     "id": 644419748210,
@@ -1964,7 +1968,7 @@
         "translationMy": "Sahaja aku solat fardu isyak dua rakaat qasar kerana Allah Taala."
       }
     ],
-    "titleMy": "Niat-Niat Solat Jamak Dan Qasar Takhir",
+    "titleMy": "Niat-Niat Solat Jamak Dan Qasar Takdim",
     "categoryKey": [
       "umrah",
       "haji",
@@ -2131,7 +2135,8 @@
     ],
     "order": {
       "arafah": 5
-    }
+    },
+    "audio": "basmalah_n_selawat.mp3"
   },
   {
     "id": 909408196833,
@@ -2148,7 +2153,8 @@
     "categoryKey": [
       "haji",
       "dzikrs"
-    ]
+    ],
+    "audio": "istighfar_loop.mp3"
   },
   {
     "id": 254185497471,
@@ -2165,7 +2171,8 @@
     "categoryKey": [
       "haji",
       "supplications"
-    ]
+    ],
+    "audio": "supplication_1.mp3"
   },
   {
     "id": 990950476385,
@@ -2175,7 +2182,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "tasbih_n_istighfar.mp3",
     "doa": [
       {
         "id": 128107231547,
@@ -2196,7 +2203,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "hauqalah.mp3",
     "doa": [
       {
         "id": 653093483917,
@@ -2217,7 +2224,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "tahlil.mp3",
     "doa": [
       {
         "id": 732571378944,
@@ -2238,7 +2245,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "basmalah.mp3",
     "doa": [
       {
         "id": 424834007568,
@@ -2259,7 +2266,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "tahmid.mp3",
     "doa": [
       {
         "id": 753575510926,
@@ -2280,7 +2287,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "selawat.mp3",
     "doa": [
       {
         "id": 877359664391,
@@ -2301,7 +2308,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "syahadah_n_selawat.mp3",
     "doa": [
       {
         "id": 205315000552,
@@ -2322,7 +2329,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "tasbih.mp3",
     "doa": [
       {
         "id": 61646447076,
@@ -2343,7 +2350,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "istighfar.mp3",
     "doa": [
       {
         "id": 780443470305,
@@ -2364,7 +2371,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "supplication_for_goodness.mp3",
     "doa": [
       {
         "id": 580134386197,
@@ -2385,7 +2392,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "surah_al_ikhlas.mp3",
     "doa": [
       {
         "id": 696321994575,
@@ -2406,7 +2413,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "hasbunallah.mp3",
     "doa": [
       {
         "id": 953835774403,
@@ -2427,7 +2434,7 @@
       "haji",
       "tasyrik"
     ],
-    "audio": null,
+    "audio": "closing_selawat_14.mp3",
     "doa": [
       {
         "id": 189318527637,
@@ -2448,7 +2455,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_1.mp3",
     "doa": [
       {
         "id": 984293605685,
@@ -2469,7 +2476,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_2.mp3",
     "doa": [
       {
         "id": 647219517438,
@@ -2490,7 +2497,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_3.mp3",
     "doa": [
       {
         "id": 807672250736,
@@ -2511,7 +2518,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_4.mp3",
     "doa": [
       {
         "id": 375138645750,
@@ -2532,7 +2539,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_5.mp3",
     "doa": [
       {
         "id": 71460811658,
@@ -2553,7 +2560,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_6.mp3",
     "doa": [
       {
         "id": 124341658126,
@@ -2574,7 +2581,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_7.mp3",
     "doa": [
       {
         "id": 941561935742,
@@ -2595,7 +2602,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_8.mp3",
     "doa": [
       {
         "id": 787504095249,
@@ -2616,7 +2623,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_9.mp3",
     "doa": [
       {
         "id": 919232824703,
@@ -2637,7 +2644,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_10.mp3",
     "doa": [
       {
         "id": 886768908139,
@@ -2658,7 +2665,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_11.mp3",
     "doa": [
       {
         "id": 651321969426,
@@ -2679,7 +2686,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_12.mp3",
     "doa": [
       {
         "id": 941208566215,
@@ -2700,7 +2707,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_13.mp3",
     "doa": [
       {
         "id": 68134277353,
@@ -2721,7 +2728,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_14.mp3",
     "doa": [
       {
         "id": 469830411836,
@@ -2742,7 +2749,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_15.mp3",
     "doa": [
       {
         "id": 219741620806,
@@ -2763,7 +2770,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_16.mp3",
     "doa": [
       {
         "id": 908764917700,
@@ -2784,7 +2791,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "istighfar_17.mp3",
     "doa": [
       {
         "id": 244377843301,
@@ -2805,7 +2812,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "calling_upon_allah.mp3",
     "doa": [
       {
         "id": 747221518954,
@@ -2826,7 +2833,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "selawat_1.mp3",
     "doa": [
       {
         "id": 151271421229,
@@ -2847,7 +2854,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "selawat_2.mp3",
     "doa": [
       {
         "id": 922732527267,
@@ -2868,7 +2875,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "attaubah.mp3",
     "doa": [
       {
         "id": 861826549345,
@@ -2889,7 +2896,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "alqalam.mp3",
     "doa": [
       {
         "id": 879803755151,
@@ -2910,7 +2917,7 @@
       "haji",
       "istigfaar_al_jaami"
     ],
-    "audio": null,
+    "audio": "closing_selawat.mp3",
     "doa": [
       {
         "id": 137728943883,
@@ -2958,7 +2965,7 @@
       "haji",
       "dzikrs"
     ],
-    "audio": null,
+    "audio": "dzikr_talbiyah.mp3",
     "doa": [
       {
         "id": 494601038153,
@@ -2979,7 +2986,7 @@
       "haji",
       "dzikrs"
     ],
-    "audio": null,
+    "audio": "takbir_loop.mp3",
     "doa": [
       {
         "id": 708218070357,
@@ -2997,7 +3004,7 @@
       "haji",
       "dzikrs"
     ],
-    "audio": null,
+    "audio": "tahlil_loop.mp3",
     "doa": [
       {
         "id": 68734983704,
@@ -3015,7 +3022,7 @@
       "haji",
       "dzikrs"
     ],
-    "audio": null,
+    "audio": "hauqalah_loop.mp3",
     "doa": [
       {
         "id": 926244478104,
@@ -3033,7 +3040,7 @@
       "haji",
       "dzikrs"
     ],
-    "audio": null,
+    "audio": "taawwudh_loop.mp3",
     "doa": [
       {
         "id": 537327418408,
@@ -3054,7 +3061,7 @@
       "haji",
       "dzikrs"
     ],
-    "audio": null,
+    "audio": "al_fatehah_loop.mp3",
     "doa": [
       {
         "id": 167798503879,
@@ -3072,7 +3079,7 @@
       "haji",
       "dzikrs"
     ],
-    "audio": null,
+    "audio": "al_ikhlas_loop.mp3",
     "doa": [
       {
         "id": 375842596645,
@@ -3090,7 +3097,7 @@
       "haji",
       "dzikrs"
     ],
-    "audio": null,
+    "audio": "selawat_loop.mp3",
     "doa": [
       {
         "id": 235410983908,
@@ -3108,7 +3115,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_2.mp3",
     "doa": [
       {
         "id": 962344934252,
@@ -3126,7 +3133,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_3.mp3",
     "doa": [
       {
         "id": 73177006858,
@@ -3144,7 +3151,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_4.mp3",
     "doa": [
       {
         "id": 730485603168,
@@ -3162,7 +3169,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_5.mp3",
     "doa": [
       {
         "id": 848155670149,
@@ -3180,7 +3187,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_6.mp3",
     "doa": [
       {
         "id": 155578169016,
@@ -3198,7 +3205,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_7.mp3",
     "doa": [
       {
         "id": 228941174415,
@@ -3216,7 +3223,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_8.mp3",
     "doa": [
       {
         "id": 448649696807,
@@ -3234,7 +3241,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_9.mp3",
     "doa": [
       {
         "id": 239650780846,
@@ -3252,7 +3259,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_10.mp3",
     "doa": [
       {
         "id": 726986403389,
@@ -3270,7 +3277,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_11.mp3",
     "doa": [
       {
         "id": 635562437570,
@@ -3288,7 +3295,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_12.mp3",
     "doa": [
       {
         "id": 907149069283,
@@ -3306,7 +3313,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_13.mp3",
     "doa": [
       {
         "id": 81351920202,
@@ -3324,7 +3331,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_14.mp3",
     "doa": [
       {
         "id": 381147338768,
@@ -3342,7 +3349,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_15.mp3",
     "doa": [
       {
         "id": 982451863006,
@@ -3360,7 +3367,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_16.mp3",
     "doa": [
       {
         "id": 490974891764,
@@ -3378,7 +3385,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_17.mp3",
     "doa": [
       {
         "id": 781331813990,
@@ -3396,7 +3403,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_18.mp3",
     "doa": [
       {
         "id": 90981082524,
@@ -3414,7 +3421,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_19.mp3",
     "doa": [
       {
         "id": 868462682288,
@@ -3432,7 +3439,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_20.mp3",
     "doa": [
       {
         "id": 786130070757,
@@ -3450,7 +3457,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_21.mp3",
     "doa": [
       {
         "id": 957032547530,
@@ -3468,7 +3475,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_22.mp3",
     "doa": [
       {
         "id": 544907655220,
@@ -3486,7 +3493,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_23.mp3",
     "doa": [
       {
         "id": 208059465157,
@@ -3504,7 +3511,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_24.mp3",
     "doa": [
       {
         "id": 256228208375,
@@ -3522,7 +3529,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_25.mp3",
     "doa": [
       {
         "id": 775236928222,
@@ -3540,7 +3547,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_26.mp3",
     "doa": [
       {
         "id": 894092009896,
@@ -3558,7 +3565,7 @@
       "haji",
       "supplications"
     ],
-    "audio": null,
+    "audio": "supplication_27.mp3",
     "doa": [
       {
         "id": 940261223416,
@@ -3578,6 +3585,12 @@
         "arabic": "اَللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.\n\n اَللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ مَا سَأَلَكَ بِهِ عِبَادُكَ الصَّالِحُونَ. وَأَعُوذُ بِكَ مِنْ شَرِّ مَا اسْتَعَاذَكَ مِنْهُ عِبَادُكَ الصَّالِحُونَ. اَللَّهُمَّ بِأَسْمَائِكَ الْحُسْنَى، وَصِفَاتِكَ الْعُلْيَا، طَهِّرْ قُلُوبَنَا مِنْ كُلِّ وَصْفٍ يُبَاعِدُنَا عَنْ مُشَاهَدَتِكَ وَمَحَبَّتِكَ، وَأَمِتْنَا عَلَى السُّنَّةِ وَالْجَمَاعَةِ وَالشَّوْقِ إِلَى لِقَائِكَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ. اَللَّهُمَّ نَوِّرْ بِالْعِلْمِ قَلْبِي وَاسْتَعْمِلْ بِطَاعَتِكَ بَدَنِي وَخَلِّصْ مِنَ الْفِتَنِ سِرِّي وَاشْغَلْ بِالْإِعْتِبَارِ فِكْرِي وَقِنِي شَرَّ وَسَاوِسِ الشَّيْطَانِ، وَأَجِرْنِي مِنْهُ يَا رَحْمَنُ حَتَّى لَا يَكُوْنَ لَهُ عَلَيَّ سُلْطَانٌ، رَبَّنَا إِنَّنَا آمَنَّا فَاغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ النَّارِ.",
         "translationEn": "O Allah, You are my Sustainer. There is no god besides You. You created me and I am Your servant and I abide by Your covenant and Your promise as far as I am able. I seek protection with You from the evil that I have committed and I acknowledge Your blessings upon me and admit to my sins and so forgive me for there is none who can forgive sins besides You. \n\nO Allah, I ask You from the good that Your pious servants asked You for and I seek protection from the evil that Your pious servants sought protection with You from. O Allah, by the grace of Your Beautiful Names and Your lofty attributes, purify our hearts from all traits that would distance us from the observance of Your presence and Your love, and take our lives as those who observe the sunnah and are with the main body of Muslims, in a state of longing to meet You, O Possessor of Glory and Honour. O Allah, enlighten my heart with knowledge and subject my body to Your obedience and absolve my spirit from trials and preoccupy my thoughts with reflection and protect me from the evil whispers of Satan and shield me from him, O Most Gracious, until he (Satan) has no power over me. O Allah, we have believed and so forgive our sins and protect us from the fire. ",
         "translationMy": "Ya Allah, Engkaulah Tuhanku, tiada Tuhan melainkan Engkau, Engkau telah menjadikan aku, aku hambaMu dan aku patuh kepada janjiMu sedaya upayaku, aku berlindung denganMu dari kejahatan diriku sendiri. Aku berserah kepadaMu akan dosa-dosaku. Maka ampunilah aku kerana tiada siapa yang dapat mengampuni dosaku melainkan Engkau. \n\nYa Allah, aku bermohon segala kebaikan yang diminta oleh hamba-hamba yang soleh, dan aku berlindung denganMu dari segala apa yang diminta perlindunganMu daripadanya oleh hamba-hambaMu yang soleh. Ya Allah, dengan kemuliaan namaMu yang banyak dan sifat-sifatMu yang tinggi, bersihkanlah hati kami, matikanlah kami atas dasar ahli sunnah wal jemaah serta rindukan pertemuan denganMu. Ya Allah, terangkanlah hatiku dengan cahaya ilmu, arahkan badanku supaya digunakan untuk taat kepadaMu. Bersihkanlah batinku, selamatkanlah aku dari was-was syaitan, jangan sampai ia dapat menguasai aku. Ya Tuhan kami, kami telah beriman kepadaMu, maka ampunilah kami dan selamatkanlah kami dari api neraka."
+      },
+      {
+        "id": 1777302107014,
+        "arabic": "",
+        "translationEn": "*Audio Pending*",
+        "translationMy": "*Audio Pending*"
       }
     ],
     "categoryKey": [
@@ -3597,6 +3610,12 @@
         "arabic": "اَللَّهُمَّ يَا رَبَّ الْبَيْتِ الْعَتِيقِ. أَعْتِقْ رِقَابَنَا وَرِقَابَ آبَائِنَا وَأُمَّهَاتِنَا وَإِخْوَانِنَا وَأَوْلَادِنَا مِنَ النَّارِ، يَا ذَا الْجُودِ وَالْكَرَمِ وَالْفَضْلِ وَالْمَنِّ وَالْعَطَاءِ وَالْإِحْسَانِ. اَللَّهُمَّ أَحْسِنْ عَاقِبَتَنَا فِي الْأُمُورِ كُلِّهَا وَأَجِرْنَا مِنْ خِزْيِ الدُّنْيَا وَعَذَابِ الْآخِرَةِ.\n\nاَللَّهُمَّ إِنِّي عَبْدُكَ وَابْنُ عَبْدِكَ وَاقِفٌ تَحْتَ بَابِكَ، مُلْتَزِمٌ بِأَعْتَابِكَ، مُتَذَلِّلٌ بَيْنَ يَدَيْكَ، أَرْجُو رَحْمَتَكَ وَأَخْشَى عَذَابَكَ، يَا قَدِيمَ الْإِحْسَانِ. اَللَّهُمَّ إِنِّي أَسْأَلُكَ أَنْ تَرْفَعَ ذِكْرِي، وَتَضَعَ وِزْرِي، وَتُصْلِحَ أَمْرِي، وَتُطَهِّرَ قَلْبِي، وَتُنَوِّرَ لِي فِي قَبْرِي، وَتَغْفِرَ لِي ذَنْبِي، وَأَسْأَلُكَ الدَّرَجَاتِ الْعُلَى مِنَ الْجَنَّةِ، آمِينَ.",
         "translationEn": "O Allah, Lord of the Ancient House (Ka'bah), free us, our fathers, our mothers, our brethren and our children from the fire, O Possessor of generosity, benevolence, bounties, favours and gifts and goodnesses. O Allah, make good the outcome of all our affairs and protect us from disgrace in this world and chastisement in the hereafter. \n\nO Allah, I am Your servant and the son of Your servant, standing below your door, grasping its threshold, in a state of humility before You. I seek Your mercy and I fear Your punishment. O Whose goodness is eternal. O Allah, I ask You that You raise my stature and remove my sins and make good my affairs and purify my heart and give me light in my grave and forgive my sins and I ask You for high degrees in paradise. O Allah, accept my prayer. Amin.",
         "translationMy": "Ya Allah Tuhan yang empunya rumah yang unggul ini, merdekakanlah kami, ibu bapa kami, saudara-mara kami dan anak-anak kami daripada neraka. Ya Allah yang mempunyai kemurahan kurniaan dan pemberian ihsan, perbaikilah kesudahan urusan kami dan selamatkanlah kami daripada kehinaan dunia dan azab di akhirat. \n\nYa Allah sesungguhnya aku ini hambaMu dan anak dari hambaMu, berdiri di bawah pintuMu, merendahkan diri di hadapanMu dengan mengharapkan rahmatmu dan takutkan azabMu. Ya Allah, Engkau muliakan namaku, ringankan bebanku, perbaiki urusanku, sucikan hatiku, terangi kuburku dan ampunilah dosaku. Dan aku bermohon mendapat tempat yang tinggi di dalam syurgamu. Amin."
+      },
+      {
+        "id": 1777302267089,
+        "arabic": "",
+        "translationEn": "*Audio Pending*",
+        "translationMy": "*Audio Pending*"
       }
     ],
     "categoryKey": [
