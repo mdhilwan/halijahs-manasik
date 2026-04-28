@@ -52,7 +52,7 @@ const DuaPlayerContent: React.FC<PlayStopButtonType> = ({
   const getPrev = () => (hasPrev() ? duas[currIndex - 1] : undefined);
 
   return (
-    <ThemedView style={{alignItems: 'center', boxShadow: '0px -10px 25px rgba(0, 0, 0, 0.15)', width: '100%', padding: 20, paddingTop: 10, marginBottom: -35}}>
+    <ThemedView style={{alignItems: 'center', width: '100%', padding: 20, paddingTop: 10, marginBottom: -35}}>
       <ThemedView style={{
         flexDirection: 'row',
         alignItems: 'center',
