@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import {View} from 'react-native';
+import React, {useEffect} from 'react';
 import {PlayStopButtonType} from '@/config/types';
 import {ThemedView} from '@/components/themed-view';
 import {AudioProvider, useAudio} from '@/contexts/AudioContext';
@@ -53,7 +52,7 @@ const DuaPlayerContent: React.FC<PlayStopButtonType> = ({
   const getPrev = () => (hasPrev() ? duas[currIndex - 1] : undefined);
 
   return (
-    <ThemedView style={{alignItems: 'center', boxShadow: '0px -10px 25px rgba(0, 0, 0, 0.15)', width: '100%', paddingTop: 10, paddingLeft: 20, paddingRight: 20, marginBottom: -20}}>
+    <ThemedView style={{alignItems: 'center', boxShadow: '0px -10px 25px rgba(0, 0, 0, 0.15)', width: '100%', padding: 20, paddingTop: 10, marginBottom: -35}}>
       <ThemedView style={{
         flexDirection: 'row',
         alignItems: 'center',
