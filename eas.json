@@ -18,15 +18,17 @@
       "channel": "production"
     },
     "development-halijah": {
-      "autoIncrement": true,
-      "channel": "production",
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
       "env": {
         "COMPANY_ID": "halijah"
       }
     },
     "development-manasiktech": {
-      "autoIncrement": true,
-      "channel": "production",
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
       "env": {
         "COMPANY_ID": "manasiktech"
       }
