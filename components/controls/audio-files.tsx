@@ -94,6 +94,7 @@ export const AudioMap: Record<string, any> = {
   "niat_tawaf_wada.mp3": require("@/assets/audio/niat_tawaf_wada.mp3"),
   "niat_umrah_badal.mp3": require("@/assets/audio/niat_umrah_badal.mp3"),
   "niat_umrah_bersyarat.mp3": require("@/assets/audio/niat_umrah_bersyarat.mp3"),
+  "proceeding_arafah.mp3": require("@/assets/audio/proceeding_arafah.mp3"),
   "raudhah.mp3": require("@/assets/audio/raudhah.mp3"),
   "salam_at_baqi.mp3": require("@/assets/audio/salam_at_baqi.mp3"),
   "salam_to_abu_bakr.mp3": require("@/assets/audio/salam_to_abu_bakr.mp3"),
