@@ -1,4 +1,4 @@
-# agent.md — AI agent instructions for `halijahs-manasik`
+# AGENTS.md — AI agent instructions for `halijahs-manasik`
 
 This repository contains:
 
@@ -54,6 +54,8 @@ npm install
 npm run start
 ```
 
+> Note: `npm install`/`npm run start`/`npm run lint` already run `npm run brand:select` via `package.json` `pre*` scripts.
+
 #### White-label build (select brand assets)
 
 Brand assets are selected at build time by setting `COMPANY_ID`.
@@ -66,6 +68,8 @@ Valid `companyId`s (currently):
 export COMPANY_ID=manasiktech
 npm run start
 ```
+
+If you change `COMPANY_ID`, re-run `npm run brand:select` (or restart any script that triggers it) to regenerate the `assets/images/**/current` folders.
 
 The selection logic lives in `./scripts/select-brand.mjs` and generates:
 - `./assets/images/current/*`
@@ -80,6 +84,8 @@ npm run web:serve
 
 ### CMS dev
 
+> First time only: install CMS dependencies (`cms/` has its own `package.json`): `cd cms && npm install`
+
 ```bash
 npm run cms:dev
 ```
@@ -89,6 +95,8 @@ npm run cms:dev
 This runs:
 - CMS on `http://localhost:3000`
 - Web preview served from `dist/` on `http://localhost:8080`
+
+> Note: `npm run cms` serves `dist/` but does not build it; run `npm run web:build` first (and rerun it when the web preview needs refreshing).
 
 ```bash
 npm run cms
@@ -136,6 +144,7 @@ npm run cms
 ### CMS (secondary)
 
 - Next.js App Router: `./cms/app/**`
+- CMS-specific agent notes: `./cms/AGENTS.md`
 - API routes writing JSON:
   - `./cms/app/api/duas/route.ts`
   - `./cms/app/api/categories/route.ts`
@@ -251,6 +260,7 @@ Brand touchpoints include:
 > Note: the repo now supports multiple `companyId`s (see Quick Start). The app always reads images from the generated `current/` folders.
 
 - Theme tokens: `./constants/theme.ts`
+- Dynamic Expo config / app identity overrides (per-company): `./app.config.ts`
 - Home button backgrounds: `./constants/home-screen.ts`
   - source assets live under `./assets/images/button-bg/<companyId>/*`
   - app loads from generated `./assets/images/button-bg/current/*`
@@ -327,6 +337,8 @@ Common tasks:
   - `eas update --channel development --message "..."`
 - **Build binaries** (example in `EAS.md`):
   - `npx eas-cli@latest build --platform all`
+- Company-specific EAS build profiles are defined in `eas.json` (see `EAS.md` for commands):
+  - `production-halijah`, `production-manasiktech`
 
 When bumping versions:
 - Keep `package.json` and `app.json` version aligned.
