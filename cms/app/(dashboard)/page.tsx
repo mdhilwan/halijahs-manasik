@@ -13,6 +13,12 @@ interface Stats {
   duasFileSize: number;
   categoriesFileSize: number;
   audioFilesSize: number;
+
+  // Timestamps (ISO strings)
+  duasLastUpdatedAt: string | null;
+  categoriesLastUpdatedAt: string | null;
+  duasLastDownloadedAt: string | null;
+  categoriesLastDownloadedAt: string | null;
 }
 
 function formatFileSize(bytes: number): string {
@@ -23,11 +29,30 @@ function formatFileSize(bytes: number): string {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
 }
 
+function formatDateTime(iso: string | null): string {
+  if (!iso) return "—";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "—";
+  return d.toLocaleString();
+}
+
 export default function DashboardPage() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { downloadDuas, downloadCategories } = useDuaManagement();
+
+  function handleDownloadDuas() {
+    const now = new Date().toISOString();
+    setStats(prev => (prev ? { ...prev, duasLastDownloadedAt: now } : prev));
+    downloadDuas();
+  }
+
+  function handleDownloadCategories() {
+    const now = new Date().toISOString();
+    setStats(prev => (prev ? { ...prev, categoriesLastDownloadedAt: now } : prev));
+    downloadCategories();
+  }
 
   useEffect(() => {
     async function fetchStats() {
@@ -173,6 +198,106 @@ export default function DashboardPage() {
                 )}
               </div>
 
+              {/* duas.json */}
+              <div className="rounded-xl border border-border bg-card p-6">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground">duas.json</p>
+                    <p className="mt-2 text-4xl font-bold text-foreground tracking-tight">
+                      {formatFileSize(stats.duasFileSize)}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={handleDownloadDuas}
+                      className="rounded-lg border border-border bg-card p-2 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                      title="Download duas.json"
+                    >
+                      <DownloadIcon className="h-4 w-4" />
+                    </button>
+                    <div className="rounded-lg bg-muted p-3">
+                      <FileIcon className="h-6 w-6 text-muted-foreground" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  <div className="rounded-lg border border-border bg-muted/30 p-3">
+                    <p className="text-[11px] text-muted-foreground">Last updated</p>
+                    <p className="mt-1 text-xs font-medium text-foreground">
+                      {formatDateTime(stats.duasLastUpdatedAt)}
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-border bg-muted/30 p-3">
+                    <p className="text-[11px] text-muted-foreground">Last downloaded</p>
+                    <p className="mt-1 text-xs font-medium text-foreground">
+                      {formatDateTime(stats.duasLastDownloadedAt)}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* categories.json */}
+              <div className="rounded-xl border border-border bg-card p-6">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground">categories.json</p>
+                    <p className="mt-2 text-4xl font-bold text-foreground tracking-tight">
+                      {formatFileSize(stats.categoriesFileSize)}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={handleDownloadCategories}
+                      className="rounded-lg border border-border bg-card p-2 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                      title="Download categories.json"
+                    >
+                      <DownloadIcon className="h-4 w-4" />
+                    </button>
+                    <div className="rounded-lg bg-muted p-3">
+                      <FileIcon className="h-6 w-6 text-muted-foreground" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  <div className="rounded-lg border border-border bg-muted/30 p-3">
+                    <p className="text-[11px] text-muted-foreground">Last updated</p>
+                    <p className="mt-1 text-xs font-medium text-foreground">
+                      {formatDateTime(stats.categoriesLastUpdatedAt)}
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-border bg-muted/30 p-3">
+                    <p className="text-[11px] text-muted-foreground">Last downloaded</p>
+                    <p className="mt-1 text-xs font-medium text-foreground">
+                      {formatDateTime(stats.categoriesLastDownloadedAt)}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Audio Library Size */}
+              <div className="rounded-xl border border-border bg-card p-6">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      Audio Library
+                    </p>
+                    <p className="mt-2 text-4xl font-bold text-foreground tracking-tight">
+                      {formatFileSize(stats.audioFilesSize)}
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-accent/10 p-3">
+                    <MusicIcon className="h-6 w-6 text-accent" />
+                  </div>
+                </div>
+                <p className="mt-4 text-xs text-muted-foreground">
+                  Total size of all .mp3 files in <code className="bg-muted px-1 rounded">assets/audio</code>
+                </p>
+              </div>
+
+
+
               {/* Total Categories */}
               <Link
                 href="/app/categories"
@@ -216,75 +341,6 @@ export default function DashboardPage() {
                 </div>
                 <p className="mt-4 text-xs text-muted-foreground">
                   Avg {(stats.totalSubcategories / stats.totalCategories || 0).toFixed(1)} per category
-                </p>
-              </div>
-
-              {/* File Sizes */}
-              <div className="rounded-xl border border-border bg-card p-6">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">
-                      Data Files
-                    </p>
-                    <p className="mt-2 text-4xl font-bold text-foreground tracking-tight">
-                      {formatFileSize(stats.duasFileSize + stats.categoriesFileSize)}
-                    </p>
-                  </div>
-                  <div className="rounded-lg bg-muted p-3">
-                    <FileIcon className="h-6 w-6 text-muted-foreground"/>
-                  </div>
-                </div>
-                <div className="mt-4 space-y-2">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-muted-foreground">duas.json</span>
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium text-foreground">
-                        {formatFileSize(stats.duasFileSize)}
-                      </span>
-                      <button
-                        onClick={() => downloadDuas()}
-                        className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
-                        title="Download duas.json"
-                      >
-                        <DownloadIcon className="h-3.5 w-3.5" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-muted-foreground">categories.json</span>
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium text-foreground">
-                        {formatFileSize(stats.categoriesFileSize)}
-                      </span>
-                      <button
-                        onClick={() => downloadCategories()}
-                        className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
-                        title="Download categories.json"
-                      >
-                        <DownloadIcon className="h-3.5 w-3.5" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Audio Library Size */}
-              <div className="rounded-xl border border-border bg-card p-6">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">
-                      Audio Library
-                    </p>
-                    <p className="mt-2 text-4xl font-bold text-foreground tracking-tight">
-                      {formatFileSize(stats.audioFilesSize)}
-                    </p>
-                  </div>
-                  <div className="rounded-lg bg-accent/10 p-3">
-                    <MusicIcon className="h-6 w-6 text-accent" />
-                  </div>
-                </div>
-                <p className="mt-4 text-xs text-muted-foreground">
-                  Total size of all .mp3 files in <code className="bg-muted px-1 rounded">assets/audio</code>
                 </p>
               </div>
             </div>

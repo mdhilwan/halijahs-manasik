@@ -41,7 +41,6 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
     } catch {
       // ignore storage/JSON errors
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -130,7 +129,7 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
 
   const hasActiveFilters = !!(selectedCategories.length > 0 || filterNoAudio || searchQuery);
 
-  function toggleCategory(categoryKey: string, isSubcategory: boolean = false, parentKey?: string) {
+  function toggleCategory(categoryKey: string, isSubcategory: boolean = false, _parentKey?: string) {
     setSelectedCategories(prev => {
       if (prev.includes(categoryKey)) {
         // Deselecting
@@ -197,10 +196,21 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
   }
 
   function downloadDuas() {
+    // Fire-and-forget tracking (server stores last-downloaded timestamp)
+    fetch("/api/downloads/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ file: "duas" }),
+    }).catch(() => {});
     downloadJson("duas.json", duas);
   }
 
   function downloadCategories(categoriesOverride?: Category[]) {
+    fetch("/api/downloads/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ file: "categories" }),
+    }).catch(() => {});
     const categoriesToDownload = categoriesOverride ?? categories;
     downloadJson("categories.json", { categories: categoriesToDownload });
   }
