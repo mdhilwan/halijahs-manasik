@@ -1,5 +1,6 @@
-import { createClient } from '@/lib/supabase/server'
+import { createClient } from "../../lib/supabase/server";
 import { Sidebar } from '../component/Sidebar'
+import { DuaManagementProvider } from "../context/DuaManagementProvider";
 
 export default async function DashboardLayout({
   children,
@@ -10,11 +11,13 @@ export default async function DashboardLayout({
   const { data: { user } } = await supabase.auth.getUser()
 
   return (
-    <div className="flex h-screen overflow-hidden bg-background">
-      <Sidebar userEmail={user?.email} />
-      <main className="flex-1 overflow-y-auto">
-        {children}
-      </main>
-    </div>
+    <DuaManagementProvider>
+      <div className="flex h-screen overflow-hidden bg-background">
+        <Sidebar userEmail={user?.email} />
+        <main className="flex-1 overflow-y-auto">
+          {children}
+        </main>
+      </div>
+    </DuaManagementProvider>
   )
 }

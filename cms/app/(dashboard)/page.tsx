@@ -2,6 +2,7 @@
 
 import {useEffect, useState} from "react";
 import Link from "next/link";
+import { useDuaManagement } from "../context/DuaManagementContext";
 
 interface Stats {
   totalDuas: number;
@@ -11,6 +12,7 @@ interface Stats {
   totalSubcategories: number;
   duasFileSize: number;
   categoriesFileSize: number;
+  audioFilesSize: number;
 }
 
 function formatFileSize(bytes: number): string {
@@ -25,12 +27,16 @@ export default function DashboardPage() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { downloadDuas, downloadCategories } = useDuaManagement();
 
   useEffect(() => {
     async function fetchStats() {
       try {
         const res = await fetch("/api/stats");
-        if (!res.ok) throw new Error("Failed to fetch stats");
+        if (!res.ok) {
+          setError("Unable to load statistics");
+          return;
+        }
         const data = await res.json();
         setStats(data);
       } catch (err) {
@@ -235,14 +241,13 @@ export default function DashboardPage() {
                       <span className="font-medium text-foreground">
                         {formatFileSize(stats.duasFileSize)}
                       </span>
-                      <a
-                        href="/api/download?file=duas"
-                        download="duas.json"
+                      <button
+                        onClick={() => downloadDuas()}
                         className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
                         title="Download duas.json"
                       >
                         <DownloadIcon className="h-3.5 w-3.5" />
-                      </a>
+                      </button>
                     </div>
                   </div>
                   <div className="flex items-center justify-between text-xs">
@@ -251,17 +256,36 @@ export default function DashboardPage() {
                       <span className="font-medium text-foreground">
                         {formatFileSize(stats.categoriesFileSize)}
                       </span>
-                      <a
-                        href="/api/download?file=categories"
-                        download="categories.json"
+                      <button
+                        onClick={() => downloadCategories()}
                         className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
                         title="Download categories.json"
                       >
                         <DownloadIcon className="h-3.5 w-3.5" />
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Audio Library Size */}
+              <div className="rounded-xl border border-border bg-card p-6">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      Audio Library
+                    </p>
+                    <p className="mt-2 text-4xl font-bold text-foreground tracking-tight">
+                      {formatFileSize(stats.audioFilesSize)}
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-accent/10 p-3">
+                    <MusicIcon className="h-6 w-6 text-accent" />
+                  </div>
+                </div>
+                <p className="mt-4 text-xs text-muted-foreground">
+                  Total size of all .mp3 files in <code className="bg-muted px-1 rounded">assets/audio</code>
+                </p>
               </div>
             </div>
 
@@ -439,3 +463,23 @@ function PassportIcon({className}: { className?: string }) {
     </svg>
   );
 }
+
+function MusicIcon({className}: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M9 19V6l12-2v13"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M9 19a2 2 0 11-4 0 2 2 0 014 0zm12-2a2 2 0 11-4 0 2 2 0 014 0z"
+      />
+    </svg>
+  );
+}
+

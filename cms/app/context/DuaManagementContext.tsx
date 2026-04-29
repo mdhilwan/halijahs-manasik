@@ -1,3 +1,5 @@
+"use client";
+
 import React, { createContext, useContext } from "react";
 import { DuaType } from "../../../config/types";
 import { Category } from "../types";
@@ -30,6 +32,7 @@ export interface DuaManagementContextType {
   // Dua management
   createDua: () => Promise<void>;
   downloadDuas: () => void;
+  downloadCategories: (overrideCategories?: Category[]) => void;
 
   // Add modal
   isAddModalOpen: boolean;
