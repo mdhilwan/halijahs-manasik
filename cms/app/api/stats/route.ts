@@ -20,22 +20,71 @@ export async function GET() {
     // Get file sizes
     const duasPath = path.join(process.cwd(), "..", "assets", "data", "duas.json");
     const categoriesPath = path.join(process.cwd(), "..", "assets", "data", "categories.json");
+    const audioDirPath = path.join(process.cwd(), "..", "assets", "audio");
+
+    // Local tracking (ignored by git) for download timestamps
+    const trackingFilePath = path.join(process.cwd(), "_static", "download-tracking.json");
     
     let duasFileSize = 0;
     let categoriesFileSize = 0;
+    let audioFilesSize = 0;
+
+    let duasLastUpdatedAt: string | null = null;
+    let categoriesLastUpdatedAt: string | null = null;
+
+    let duasLastDownloadedAt: string | null = null;
+    let categoriesLastDownloadedAt: string | null = null;
     
     try {
       const duasStats = fs.statSync(duasPath);
       duasFileSize = duasStats.size;
-    } catch (e) {
+      duasLastUpdatedAt = duasStats.mtime?.toISOString?.() ?? new Date(duasStats.mtimeMs).toISOString();
+    } catch {
       // File might not exist
     }
     
     try {
       const categoriesStats = fs.statSync(categoriesPath);
       categoriesFileSize = categoriesStats.size;
-    } catch (e) {
+      categoriesLastUpdatedAt =
+        categoriesStats.mtime?.toISOString?.() ?? new Date(categoriesStats.mtimeMs).toISOString();
+    } catch {
       // File might not exist
+    }
+
+    // Read last-downloaded timestamps (if present)
+    try {
+      const raw = fs.readFileSync(trackingFilePath, "utf8");
+      const parsed = JSON.parse(raw) as Partial<{
+        duasLastDownloadedAt: string;
+        categoriesLastDownloadedAt: string;
+      }>;
+      if (typeof parsed.duasLastDownloadedAt === "string") {
+        duasLastDownloadedAt = parsed.duasLastDownloadedAt;
+      }
+      if (typeof parsed.categoriesLastDownloadedAt === "string") {
+        categoriesLastDownloadedAt = parsed.categoriesLastDownloadedAt;
+      }
+    } catch {
+      // tracking file might not exist yet
+    }
+
+    // Sum all mp3 sizes in assets/audio (flat folder)
+    try {
+      const entries = fs.readdirSync(audioDirPath, { withFileTypes: true });
+      for (const entry of entries) {
+        if (!entry.isFile()) continue;
+        if (!entry.name.toLowerCase().endsWith(".mp3")) continue;
+
+        try {
+          const p = path.join(audioDirPath, entry.name);
+          audioFilesSize += fs.statSync(p).size;
+        } catch {
+          // ignore unreadable file
+        }
+      }
+    } catch {
+      // Folder might not exist
     }
     
     return NextResponse.json({
@@ -46,6 +95,13 @@ export async function GET() {
       totalSubcategories,
       duasFileSize,
       categoriesFileSize,
+      audioFilesSize,
+
+      // Timestamps
+      duasLastUpdatedAt,
+      categoriesLastUpdatedAt,
+      duasLastDownloadedAt,
+      categoriesLastDownloadedAt,
     });
   } catch (error) {
     console.error("Error fetching stats:", error);

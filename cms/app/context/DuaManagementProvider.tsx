@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState, useMemo, useRef } from "react";
 import { DuaType } from "../../../config/types";
 import { Category } from "../types";
@@ -13,6 +15,58 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
   const [filterNoAudio, setFilterNoAudio] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
   const [isFilterExpanded, setIsFilterExpanded] = useState(false);
+
+  // Persist filters so they survive navigation (and even reloads)
+  const FILTER_STORAGE_KEY = "manasik-cms:dua-filters:v1";
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(FILTER_STORAGE_KEY);
+      if (!raw) return;
+      const parsed = JSON.parse(raw) as Partial<{
+        searchQuery: string;
+        selectedCategories: string[];
+        language: "en" | "my";
+        filterNoAudio: boolean;
+        expandedCategories: string[];
+        isFilterExpanded: boolean;
+      }>;
+
+      if (typeof parsed.searchQuery === "string") setSearchQuery(parsed.searchQuery);
+      if (Array.isArray(parsed.selectedCategories)) setSelectedCategories(parsed.selectedCategories);
+      if (parsed.language === "en" || parsed.language === "my") setLanguage(parsed.language);
+      if (typeof parsed.filterNoAudio === "boolean") setFilterNoAudio(parsed.filterNoAudio);
+      if (Array.isArray(parsed.expandedCategories)) setExpandedCategories(parsed.expandedCategories);
+      if (typeof parsed.isFilterExpanded === "boolean") setIsFilterExpanded(parsed.isFilterExpanded);
+    } catch {
+      // ignore storage/JSON errors
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(
+        FILTER_STORAGE_KEY,
+        JSON.stringify({
+          searchQuery,
+          selectedCategories,
+          language,
+          filterNoAudio,
+          expandedCategories,
+          isFilterExpanded,
+        })
+      );
+    } catch {
+      // ignore storage quota / private mode issues
+    }
+  }, [
+    searchQuery,
+    selectedCategories,
+    language,
+    filterNoAudio,
+    expandedCategories,
+    isFilterExpanded,
+  ]);
 
   // Bulk edit state
   const [selectedDuaIds, setSelectedDuaIds] = useState<number[]>([]);
@@ -75,7 +129,7 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
 
   const hasActiveFilters = !!(selectedCategories.length > 0 || filterNoAudio || searchQuery);
 
-  function toggleCategory(categoryKey: string, isSubcategory: boolean = false, parentKey?: string) {
+  function toggleCategory(categoryKey: string, isSubcategory: boolean = false, _parentKey?: string) {
     setSelectedCategories(prev => {
       if (prev.includes(categoryKey)) {
         // Deselecting
@@ -126,16 +180,39 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
     fetch("/api/duas").then(r => r.json()).then(setDuas);
   }
 
-  function downloadDuas() {
-    const blob = new Blob([JSON.stringify(duas, null, 2)], {
-      type: "application/json"
+  function downloadJson(filename: string, data: unknown) {
+    // Client-only guard (helps prevent accidental server execution)
+    if (typeof window === "undefined") return;
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], {
+      type: "application/json",
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "duas.json";
+    a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
+  }
+
+  function downloadDuas() {
+    // Fire-and-forget tracking (server stores last-downloaded timestamp)
+    fetch("/api/downloads/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ file: "duas" }),
+    }).catch(() => {});
+    downloadJson("duas.json", duas);
+  }
+
+  function downloadCategories(categoriesOverride?: Category[]) {
+    fetch("/api/downloads/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ file: "categories" }),
+    }).catch(() => {});
+    const categoriesToDownload = categoriesOverride ?? categories;
+    downloadJson("categories.json", { categories: categoriesToDownload });
   }
 
   function toggleDuaSelection(duaId: number) {
@@ -243,6 +320,7 @@ export function DuaManagementProvider({ children }: { children: React.ReactNode 
     // Dua management
     createDua,
     downloadDuas,
+    downloadCategories,
 
     // Add modal
     isAddModalOpen,

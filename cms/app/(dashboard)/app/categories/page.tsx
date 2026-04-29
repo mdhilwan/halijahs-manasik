@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useDuaManagement } from "../../../context/DuaManagementContext";
 
 interface Subcategory {
   key: string;
@@ -20,6 +21,7 @@ type ModalMode = "add-category" | "edit-category" | "add-subcategory" | "edit-su
 
 export default function CategoriesPage() {
   const [categories, setCategories] = useState<Category[]>([]);
+  const { downloadCategories } = useDuaManagement();
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [modalMode, setModalMode] = useState<ModalMode>(null);
   const [editingCategory, setEditingCategory] = useState<Category | null>(null);
@@ -180,18 +182,6 @@ export default function CategoriesPage() {
     fetchCategories();
   }
 
-  function downloadCategories() {
-    const blob = new Blob([JSON.stringify({ categories }, null, 2)], {
-      type: "application/json"
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "categories.json";
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-
   const isCategory = modalMode === "add-category" || modalMode === "edit-category";
   const isSubcategory = modalMode === "add-subcategory" || modalMode === "edit-subcategory";
   const isEditing = modalMode === "edit-category" || modalMode === "edit-subcategory";
@@ -207,7 +197,7 @@ export default function CategoriesPage() {
           </div>
           <div className="flex items-center gap-3">
             <button
-              onClick={downloadCategories}
+              onClick={() => downloadCategories(categories)}
               className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
             >
               <DownloadIcon className="h-4 w-4" />
