@@ -113,7 +113,7 @@
       "haji",
       "umrah_ihram_intentions"
     ],
-    "audio": "",
+    "audio": "niat_umrah_bersyarat.mp3",
     "order": {
       "ihram": 5
     }
@@ -176,7 +176,7 @@
       "haji",
       "haj_ihram_intentions"
     ],
-    "audio": "",
+    "audio": "niat_haji_bersyarat.mp3",
     "order": {
       "ihram": 8
     }
@@ -2059,7 +2059,8 @@
     ],
     "order": {
       "arafah": 0
-    }
+    },
+    "audio": "proceeding_arafah.mp3"
   },
   {
     "id": 228562780558,
