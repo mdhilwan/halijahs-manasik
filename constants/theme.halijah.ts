@@ -14,7 +14,7 @@ export const Colors = {
     tabIconSelected: tintColorLight,
 
     // Brand token(s)
-    headerBackgroundColor: '#BF9960',
+    headerBackgroundColor: '#D0D0D0',
   },
   dark: {
     text: '#ECEDEE',
@@ -25,7 +25,7 @@ export const Colors = {
     tabIconSelected: tintColorDark,
 
     // Brand token(s)
-    headerBackgroundColor: '#BF9960',
+    headerBackgroundColor: '#D0D0D0',
   },
   StatusBarStyle: 'dark'
 } as const;

@@ -90,15 +90,20 @@ export default function DuaDetailScreen() {
 
   const [selectedDua, setSelectedDua] = useState<SelectedDuaType>(initialSelectedDua);
 
-  // Synchronize selectedDua state when currentDuas is updated
+  /**
+   * Synchronize selectedDua state when currentDuas is updated
+   * use currentDuas as a fallback
+   * source of truth should still be initialSelectedDua from params,
+   * but in case it's missing duas or currentDuas is updated from CMS, we want to update selectedDua
+   */
   useEffect(() => {
     if (initialSelectedDua && (!initialSelectedDua.duas || cmsData) && currentDuas) {
       setSelectedDua(prev => ({
         ...prev,
-        duas: currentDuas
+        duas: initialSelectedDua.duas || currentDuas
       }));
     }
-  }, [currentDuas, cmsData]);
+  }, [currentDuas, cmsData, initialSelectedDua]);
 
   const { language } = useLanguage();
   const { setShowSettings } = useFontSize();

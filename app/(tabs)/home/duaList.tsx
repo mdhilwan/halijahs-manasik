@@ -126,20 +126,33 @@ export default function DuaListScreen() {
     if (parent?.duas) {
       return parent.duas;
     }
-    
-    // Build duas list from sorted items
-    const duasList: DuaType[] = [];
+
+    const seen = new Set<number | string>(); // depends on your DuaType.id type
+    const out: DuaType[] = [];
+
+    const pushUnique = (dua: DuaType) => {
+      if (seen.has(dua.id)) return;
+      seen.add(dua.id);
+      out.push(dua);
+    };
+
     for (const item of sortedItems) {
       if ('doa' in item) {
-        // It's a Dua
-        duasList.push(item as DuaType);
+        // item is a Dua -> keep it
+        pushUnique(item as DuaType);
       } else {
-        // It's a Category - filter initial duas by this category
-        const categoryDuas = initialDuas.filter(dua => dua.categoryKey.includes(item.key));
-        duasList.push(...categoryDuas);
+        // item is a Category/Subcategory -> expand to all duas that belong to it
+        const key = (item as CategoryType).key;
+
+        // Since you're confident CMS ensures correct keys, includes() is OK.
+        // If you ever want “immediate child only”, adjust this predicate.
+        const matching = initialDuas.filter(dua => dua.categoryKey.includes(key));
+
+        for (const dua of matching) pushUnique(dua);
       }
     }
-    return duasList;
+
+    return out;
   }, [parent?.duas, sortedItems, initialDuas]);
 
   const handleSelectDua = useCallback((dua: DuaType) => {
