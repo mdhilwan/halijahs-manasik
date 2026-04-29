@@ -103,7 +103,7 @@
     "doa": [
       {
         "id": 778726377811,
-        "arabic": "نَوَيْتُ الْعُمْرَةَ وَ أَحْرَمْتُ بـهَا لِلَّهِ تَعَالَى، فَإِنْ حَـبَسَنِي حَابِسٌ، فَلِيْ أَنْ أُحِلَّ حَيْثُ حَبَسْتَنِي",
+        "arabic": "نَوَيْتُ الْعُمْرَةَ وَ أَحْرَمْتُ بِهَا لِلَّهِ تَعَالَى، فَإِنْ حَـبَسَنِي حَابِسٌ، فَلِيْ أَنْ أُحِلَّ حَيْثُ حَبَسْتَنِي",
         "translationEn": "I intend to perform ‘Umrah and have performed ihram for it for the sake of Allah, the Exalted. If something prevents me (from completing it), then I may exit my ihram at the place where You (Allah) prevent me.",
         "translationMy": "Aku berniat untuk menunaikan ‘Umrah dan telah berihram untuknya kerana Allah Ta‘ala. Jika sesuatu menghalangku (daripada menyempurnakannya), maka aku boleh bertahallul di tempat Engkau (Allah) menahanku."
       }
@@ -113,7 +113,7 @@
       "haji",
       "umrah_ihram_intentions"
     ],
-    "audio": "niat_umrah_bersyarat.mp3",
+    "audio": "",
     "order": {
       "ihram": 5
     }
@@ -169,14 +169,14 @@
         "id": 644271347678,
         "arabic": "نَوَيْتُ الْحَجَّ وَ أَحْرَمْتُ بِهِ لِلَّهِ تَعَالَى، فَإِنْ حَـبَسَنِي حَابِسٌ، فَلِيْ أَنْ أُحِلَّ حَيْثُ حَبَسْتَنِي",
         "translationEn": "I intend to perform Hajj and have performed ihram for it for the sake of Allah, the Exalted. If something prevents me (from completing it), then I may exit my ihram at the place where You (Allah) prevent me.",
-        "translationMy": "Aku berniat untuk menunaikan Hajj dan telah berihram untuknya kerana Allah Ta‘ala. Jika sesuatu menghalangku (daripada menyempurnakannya), maka aku boleh bertahallul di tempat Engkau (Allah) menahanku.”"
+        "translationMy": "Aku berniat untuk menunaikan Hajj dan telah berihram untuknya kerana Allah Ta‘ala. Jika sesuatu menghalangku (daripada menyempurnakannya), maka aku boleh bertahallul di tempat Engkau (Allah) menahanku."
       }
     ],
     "categoryKey": [
       "haji",
       "haj_ihram_intentions"
     ],
-    "audio": "niat_haji_bersyarat.mp3",
+    "audio": "",
     "order": {
       "ihram": 8
     }
@@ -1560,7 +1560,7 @@
     "doa": [
       {
         "id": 876441652632,
-        "arabic": "اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ، اَللّٰهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ\nوَعَلَى آلِهِ وَصَحْبِهِ، اَلسَّلَامُ عَلَيْكَ يَا سَيِّدِي يَا رَسُولَ اللَّهِ\nإِنَّ اللَّهَ أَنْزَلَ إِلَيْكَ كِتَابًا صَادِقًا قَالَ فِيْهِ\nوَلَوْ أَنَّهُمْ إِذْ ظَلَمُوا أَنْفُسَهُمْ جَآءُوكَ فَاسْتَغْفَرُوا اللَّهَ\nوَاسْتَغْفَرَلَهُمُ الرَّسُوْلُ لَوَجَدُوا اللَّهَ تَوَّابًا رَحِيمًا\nوَقَدْ جِئْتُكَ مُسْتَغْفِرًا مِنْ ذَنْبِي مُسْتَشْفِعًا بِكَ إِلَى رَبِّي\nفَاشْفَعْ لِيْ يَا شَفِيْعَ الْأُمَّةِ وَأَجِرْنِي مِنَ النَّارِ يَا نَبِيَّ الرَّحْمَةِ\nاَلصَّلَاةُ وَالسَّلَامُ عَلَيْكَ وَعَلَى سَائِرِ الْأَنْبِيَاءِ وَالْمُرْسَلِيْنَ\nوَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "arabic": "اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ، اَللّٰهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ\nوَعَلَى آلِهِ وَصَحْبِهِ، اَلسَّلَامُ عَلَيْكَ يَا سَيِّدِي يَا رَسُولَ اللَّهِ\nإِنَّ اللَّهَ أَنْزَلَ إِلَيْكَ كِتَابًا صَادِقًا قَالَ فِيْهِ وَلَوْ أَنَّهُمْ إِذْ ظَلَمُوا أَنْفُسَهُمْ جَآءُوكَ فَاسْتَغْفَرُوا اللَّهَ\nوَاسْتَغْفَرَلَهُمُ الرَّسُوْلُ لَوَجَدُوا اللَّهَ تَوَّابًا رَحِيمًا وَقَدْ جِئْتُكَ مُسْتَغْفِرًا مِنْ ذَنْبِي مُسْتَشْفِعًا بِكَ إِلَى رَبِّي فَاشْفَعْ لِيْ يَا شَفِيْعَ الْأُمَّةِ وَأَجِرْنِي مِنَ النَّارِ يَا نَبِيَّ الرَّحْمَةِ اَلصَّلَاةُ وَالسَّلَامُ عَلَيْكَ وَعَلَى سَائِرِ الْأَنْبِيَاءِ وَالْمُرْسَلِيْنَ وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
         "translationEn": "All praise be to Allah, Lord of all the worlds. O Allah, send blessings and peace upon our master Muhammad, and upon his family and his companions. Peace be upon you, my master, O Messenger of Allah. Indeed, Allah has revealed to you a true Book, in which He has says: \"If only they came to you ˹O Prophet˺ after wronging themselves, seeking Allah’s forgiveness and the Messenger prayed for their forgiveness, they would have certainly found Allah ever Accepting of Repentance, Most Merciful.\". Indeed, I have come to you seeking forgiveness for my sins, seeking intercession through you with Allah, so intercede for me, O intercessor of the ummah, and grant me protection from the fire, O Prophet of mercy. Peace and blessings be upon you and upon all the Prophets and Messengers. And all praise is for Allah, Lord of all the worlds.\n",
         "translationMy": "Segala puji bagi Allah Tuhan semesta alam. Selawat dan salam ke atas junjungan Nabi Muhammad s.a.w. Salam sejahtera ke atasmu, wahai Penghulu, wahai Rasulullah s.a.w. Sesungguhnya Allah telah menurunkan kepadamu sebuah kitab yang benar, yang Dia telah berfirman di dalamnya: ''..dan jika mereka sesudah menzalimi diri mereka datang kepadamu, lalu mereka memohon ampun kepada Allah dan Rasul, juga mintakan ampun bagi mereka, nescaya mereka dapati Allah itu penerima taubat, penyayang...\". Sesungguhnya aku datang memohon ampun dari dosaku, memohon syafaat kepada Allah, dengan berkatmu, berilah syafaat itu untukku wahai Nabi yang memberi syafaat kepada umatnya, dan jauhkanlah aku dari neraka, wahai Nabi yang mempunyai belas kasihan. Selawat dan salam atasmu dan ke atas semua para Nabi dan Rasul. Dan segala puji bagi Allah Tuhan seru sekelian alam."
       }
@@ -1582,9 +1582,9 @@
     "doa": [
       {
         "id": 333815307707,
-        "arabic": "اَلسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ، يَا سَيِّدِي يَا رَسُوْلَ اللهِ\nجِئتُكَ نائِبًا وَزَائِرًا عَنْ ......... مُسَلِّمًا عَنْهُ سَائِلًا مِنْكَ الشَّفَاعَةَ لَهُ\nفِي غُفْرَانِ ذُنُوْبِهِ، فَاشْفَعْ لَهُ عِنْدَ اللَّهِ يَا رَسُوْلَ اللهِ",
+        "arabic": "اَلسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ، يَا سَيِّدِي يَا رَسُوْلَ اللهِ جِئتُكَ نائِبًا وَزَائِرًا عَنْ ......... مُسَلِّمًا عَنْهُ سَائِلًا مِنْكَ الشَّفَاعَةَ لَهُ فِي غُفْرَانِ ذُنُوْبِهِ، فَاشْفَعْ لَهُ عِنْدَ اللَّهِ يَا رَسُوْلَ اللهِ",
         "translationEn": "Peace be upon you, O Prophet, and the mercy of Allah and His blessings, O my master, O Messenger of Allah, I have come to greet you on behalf of __________ bin(ti) __________ ,conveying his/her salutations and seeking from you intercession for him/her in the forgiveness of his/her sins. So intercede for him/her before Allah, O Messenger of Allah.",
-        "translationMy": "Salam sejahtera atasMu wahai Nabi, serta rahmat Allah dan berkatNya, Ya junjunganku, wahai Rasulullah, saya datang memberi salam kepada tuan daripada __________ bin __________ dia memohon syafaat daripadamu untuk mendapatkan pengampunan bagi dosanya, Berilah syafaat di sisi Allah kepadanya wahai Rasulullah."
+        "translationMy": "Salam sejahtera atasMu wahai Nabi, serta rahmat Allah dan berkatNya, Ya junjunganku, wahai Rasulullah, saya datang memberi salam kepada tuan daripada __________ bin(ti) __________ dia memohon syafaat daripadamu untuk mendapatkan pengampunan bagi dosanya, Berilah syafaat di sisi Allah kepadanya wahai Rasulullah."
       }
     ],
     "categoryKey": [
@@ -1627,8 +1627,8 @@
       {
         "id": 668117828735,
         "arabic": "اَللّٰهُمَّ رَبَّنَا تَقَبَّلْ مِنَّا وَعَافِنَا وَاعْفُ عَنَّا، اَللّٰهُمَّ تَوَفَّنَا مُسْلِمِينَ\nوَأَحْيِنَا مُسْلِمِيْنَ، وَاَلْحِقْنَا بِالصَّالِحِيْنَ، اَللّٰهُمَّ إِنِّي أَوْدَعْتُ هَذَا الْمَحَلَّ الشَّرِيفَ\nمِنْ يَوْمِنَا هَذَا إِلَى يَوْمِ الْقِيَامَةِ خَالِصًا مُخْلِصًا\nأَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ\nوَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ\n(اَلْفَاتِحَة)",
-        "translationEn": "O Allah, our Lord, accept from us, grant us wellbeing and pardon us. O Allah, cause us to die as Muslims and let us live as Muslims, and join us with the righteous. O Allah, my Lord, I entrust this sacred place to You from this day until the Day of Judgment, with sincerity and pure devotion. I bear witness that there is no god but Allah, and indeed Muhammad is His servant and Messenger. (AI-Fatihah)",
-        "translationMy": "Ya Allah. Ya Tuhan kami. Perkenankanlah doa kami, afiatkanlah kami, maafkanlah kesalahan kami, matikanlah kami di dalam Islam, hidupkanlah kami di dalam Islam, himpunkanlah kami dengan orang-orang yang soleh. Ya Allah. Ya Tuhan aku abadikan tempat yang suci ini daripada hari ini sehingga hari kiamat, dengan ikhlas dan jujur. Aku bersaksi tiada tuhan melainkan Allah dan sesungguhnya Nabi Muhammad hambaNya dan PesuruhNya. (AI-Fatihah)"
+        "translationEn": "O Allah, our Lord, accept from us, grant us wellbeing and pardon us. O Allah, cause us to die as Muslims and let us live as Muslims, and join us with the righteous. O Allah, my Lord, I entrust this sacred place to You from this day until the Day of Judgment, with sincerity and pure devotion. I bear witness that there is no god but Allah, and indeed Muhammad is His servant and Messenger.\n(AI-Fatihah)",
+        "translationMy": "Ya Allah. Ya Tuhan kami. Perkenankanlah doa kami, afiatkanlah kami, maafkanlah kesalahan kami, matikanlah kami di dalam Islam, hidupkanlah kami di dalam Islam, himpunkanlah kami dengan orang-orang yang soleh. Ya Allah. Ya Tuhan aku abadikan tempat yang suci ini daripada hari ini sehingga hari kiamat, dengan ikhlas dan jujur. Aku bersaksi tiada tuhan melainkan Allah dan sesungguhnya Nabi Muhammad hambaNya dan PesuruhNya. \n(AI-Fatihah)"
       }
     ],
     "categoryKey": [
@@ -1670,7 +1670,7 @@
     "doa": [
       {
         "id": 37605954591,
-        "arabic": "اَللّٰهُمَّ لَا تَجْعَلْهُ آخِرَ الْعَهْدِ مِنْ هَذَا الْمَكَانِ الشَّرِيفِ\nوَارْزُقْنِيْ إِلَيْهِ الْعَوْدَةَ فِي خَيْرٍ وَعَافِيَةٍ وَصِحَّةٍ وَسَلَامَةٍ\nإِنْ عِشْتُ إِنْ شَاءَ اللهُ جِئْتُ، وَإِنْ مُتُّ أَوْدَعْتُ عِنْدَكَ شَهَادَتِيْ\nوَأَمَانَتِيْ وَعَهْدِيْ وَمِيْثَاقِيْ مِنْ يَوْمِنَا هَذَا إِلَى يَوْمِ الْقِيَامَةِ\nوَهِيَ شَهَادَةُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nوَشَهَادَةُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ\nسُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَ\nوَسَلَامٌ عَلَى الْمُرْسَلِينَ، وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "arabic": "اَللّٰهُمَّ لَا تَجْعَلْهُ آخِرَ الْعَهْدِ مِنْ هَذَا الْمَكَانِ الشَّرِيفِ وَارْزُقْنِيْ إِلَيْهِ الْعَوْدَةَ فِي خَيْرٍ وَعَافِيَةٍ وَصِحَّةٍ وَسَلَامَةٍ إِنْ عِشْتُ إِنْ شَاءَ اللهُ جِئْتُ، وَإِنْ مُتُّ أَوْدَعْتُ عِنْدَكَ شَهَادَتِيْ وَأَمَانَتِيْ وَعَهْدِيْ وَمِيْثَاقِيْ مِنْ يَوْمِنَا هَذَا إِلَى يَوْمِ الْقِيَامَةِ وَهِيَ شَهَادَةُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nوَشَهَادَةُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَ وَسَلَامٌ عَلَى الْمُرْسَلِينَ، وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
         "translationEn": "O Allah, do not make this the last of my visits to this noble place. Grant me the opportunity to return to this place in goodness, wellbeing, health and safety. If my life is prolonged, God willing, I shall return. If I die before returning, then I entrust with You my testimony, my trust, my pledge, and my covenant from this day until the Day of Resurrection. And it is the testimony that there is no God but Allah, the One, without partner, and the testimony that Muhammad is His servant and His Messenger. Glory be to the Lord who possesses Majesty and Power, above what they attribute. Peace be upon all the Messengers, and all praise is due to Allah, Lord of all the worlds.\n",
         "translationMy": "Ya Allah, janganlah jadikan ziarah hambaMu di tempat yang mulia ini sebagai ziarah yang penghabisan, kurniakanlah kepada hambaMu peluang untuk menziarahi kembali ke tempat ini dalam keadaan baik, sihat dan selamat. Jika panjang umur hamba, insya Allah, hamba akan datang lagi, jika sampai ajal hamba, maka hamba telah mengabadikan kepadaMu syahadat dan perjanjian hamba dari hari ini sehingga hari kiamat. laitu hamba bersaksi tiada Tuhan melainkan Allah, Tuhan Yang Esa yang tidak ada sekutu bagiNya dan hamba naik saksi bahawa Nabi Muhammad hambaNya dan pesuruhNya. Maha suci Tuhan yang mempunyai Keagungan dan Kekuasaan, dari apa yang mereka sifatkan. Dan salam sejahtera ke atas sekelian Rasul, serta segala puji-pujian tertentu bagi Allah, Tuhan yang memelihara dan mentadbir seluruh alam."
       }
@@ -2047,9 +2047,9 @@
     "doa": [
       {
         "id": 528057317458,
-        "arabic": "اَللَّهُمَّ إِلَيْكَ تَوَجَّهْتُ وَ وَجْهَكَ الْكَرِيمَ أَرَدْتُ فَاجْعَلْ ذَنْبِي مَغْفُورًا وَ حَجِّي مَبْرُورًا، اِرْحَمْنِي وَ لَا تُخَيِّبْنِي إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَ النِّعْمَةَ لَكَ وَ الْمُلْكَ، لَا شَرِيكَ لَكَ. اللَّهُمَّ صَلِّ عَلَى نَبِيِّنَا مُحَمَّدٍ وَ عَلَى آلِهِ وَ صَحْبِهِ وَ أُمَّتِهِ وَ سَلَّمْ",
-        "translationEn": "O Allah, to You I betake myself, seeking Your noble countenance. Forgive my sins, make my hajj a righteous one (acceptable to You), have mercy upon me and do not disappoint me. “Ever at Your Service, O Allah, ever at Your service. Ever at Your service, You have no partner, ever at Your service. Indeed all praise, blessings, and dominion are Yours. You have no partner” You indeed have power over all things. O Allah send Your salutations and blessings upon our Prophet Muhammad, his companions and community.",
-        "translationMy": "Ya Allah, kepadaMu aku berpaling, dan pada wajahMu yang mulia aku kembali. Maka jadikan dosaku dosa yang diampunkan, dan hajiku haji yang mabrur. Rahmatilah aku dan jangan Engkau hampakan aku, sesungguhnya Engkau berkuasa di atas setiap sesuatu.\nAku menyahut panggilanMu ya Allah, aku menyahut panggilanMu. Aku menyahut panggilanMu, tiada sekutu bagiMu, aku menyahut panggilanMu. Sesungguhnya segala pujian, nikmat dan kerajaan adalah milikMu, tiada sekutu bagiMu.\n\nYa Allah, limpahkanlah selawat dan kesejahteraan ke atas Nabi kami Muhammad, serta ke atas keluarga, para sahabat dan umat baginda."
+        "arabic": "اَللَّهُمَّ إِلَيْكَ تَوَجَّهْتُ وَ وَجْهَكَ الْكَرِيمَ أَرَدْتُ فَاجْعَلْ ذَنْبِي مَغْفُورًا وَ حَجِّي مَبْرُورًا، اِرْحَمْنِي وَ لَا تُخَيِّبْنِي إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَ النِّعْمَةَ لَكَ وَ الْمُلْكَ، لَا شَرِيكَ لَكَ.\n\nاللَّهُمَّ صَلِّ عَلَى نَبِيِّنَا مُحَمَّدٍ وَ عَلَى آلِهِ وَ صَحْبِهِ وَ أُمَّتِهِ وَ سَلَّمْ",
+        "translationEn": "O Allah, to You I betake myself, seeking Your noble countenance. Forgive my sins, make my hajj a righteous one (acceptable to You), have mercy upon me and do not disappoint me. “Ever at Your Service, O Allah, ever at Your service. Ever at Your service, You have no partner, ever at Your service. Indeed all praise, blessings, and dominion are Yours. You have no partner” You indeed have power over all things. \n\nO Allah send Your salutations and blessings upon our Prophet Muhammad, his companions and community.",
+        "translationMy": "Ya Allah, kepadaMu aku berpaling, dan pada wajahMu yang mulia aku kembali. Maka jadikan dosaku dosa yang diampunkan, dan hajiku haji yang mabrur. Rahmatilah aku dan jangan Engkau hampakan aku, sesungguhnya Engkau berkuasa di atas setiap sesuatu. Aku menyahut panggilanMu ya Allah, aku menyahut panggilanMu. Aku menyahut panggilanMu, tiada sekutu bagiMu, aku menyahut panggilanMu. Sesungguhnya segala pujian, nikmat dan kerajaan adalah milikMu, tiada sekutu bagiMu.\n\nYa Allah, limpahkanlah selawat dan kesejahteraan ke atas Nabi kami Muhammad, serta ke atas keluarga, para sahabat dan umat baginda."
       }
     ],
     "titleMy": "Dalam Perjalanan Ke Arafah",
@@ -2059,8 +2059,7 @@
     ],
     "order": {
       "arafah": 0
-    },
-    "audio": "proceeding_arafah.mp3"
+    }
   },
   {
     "id": 228562780558,
@@ -2156,6 +2155,24 @@
       "dzikrs"
     ],
     "audio": "istighfar_loop.mp3"
+  },
+  {
+    "id": 254185497471,
+    "titleEn": "Supplication #1",
+    "doa": [
+      {
+        "id": 864328338953,
+        "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ بِوَجْهِكَ الْكَرِيمِ وَ جُودِكَ الْقَدِيمِ وَ بِاسْمِكَ الْأَعْظَمِ وَ بِجَاهِ نَبِيِّكَ سَيِّدِنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ وَ إِخْوَانِهِ مِنَ النَّبِيِّينَ وَ الْمُرْسَلِينَ وَ عَلَى آلِهِ وَ صَحْبِهِ وَ التَّابِعِينَ لَهُمْ مِنَ الْعُلَمَاءِ الْعَامِلِينَ وَ الْأَوْلِيَاءِ وَ الصَّالِحِينَ وَ بِحُرْمَةِ هَذَا الْيَوْمِ أَنْ تُصَلِّيَ وَ تُسَلِّمَ عَلَى سَيِّدِنَا مُحَمَّدٍ وَ أَنْ تَغْفِرَ لَنَا وَ لِوَالِدِينَا وَ أَوْلَادِنَا وَ إِخْوَانِنَا وَ أَقْرِبَائِنَا وَ مَشَايِخِنَا وَ أَصْحَابِنَا وَ أَصْدِقَائِنَا وَ لِمَنْ أَوْصَانَا بِالدُّعَاءِ وَ لِمَنْ أَحْسَنَ إِلَيْنَا وَ لِمَنْ لَهُ حَقٌّ عَلَيْنَا وَ لِمَنْ ظَلَمْنَاهُ أَوْ أَسَأْنَا إِلَيْهِ وَ لِجَمِيعِ الْمُسْلِمِينَ وَ الْمُسْلِمَاتِ، الْأَحْيَاءِ مِنْهُمْ وَ الْأَمْوَاتِ وَ أَنْ تَرْزُقَنَا وَ إِيَّاهُمْ خَيْرَاتِ الدُّنْيَا وَ الْآخِرَةِ، وَ أَنْ تَحْفَظَنَا وَ إِيَّاهُمْ مِنْ جَمِيعِ بَلَاءِ الدُّنْيَا وَ أَهْوَالِ يَوْمِ الْقِيَامَةِ، وَ أَنْ تَرْزُقَنَا الْعُلُومَ النَّافِعَةَ وَ الْأَعْمَالَ الصَّالِحَةَ وَ أَنْ تَعْصِمَنَا مِنْ جَمِيعِ الْمَعَاصِي الظَّاهِرَةِ وَ الْبَاطِنَةِ وَ أَنْ تُسَهِّلَ لَنَا رِزْقاً حَلَالاً وَاسِعاً وَ أَنْ تَحْفَظَنَا مِنْ شَرِّ الْأَشْرَارِ مِنَ الْإِنْسِ وَ الْجِنِّ وَ الدَّوَابِّ وَ غَيْرِهَا وَ أَنْ تَخْتِمَ لَنَا وَ لَهُمْ بِحُسْنِ الْخَاتِمَةِ. آمِينْ، وَ صَلَّى اللهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَ آلِهِ وَ صَحْبِهِ وَ سَلَّمَ",
+        "translationEn": "O Allah, I ask You by the glory of your essence and your eternal generosity and your greatest Name and the honor of your prophet and our leader Muhammad, may Allah’s salutations and blessings be upon him and his brothers from among the prophets and messengers and his family and his companions and their followers from among the practicing scholars and saints and the pious ones, and by the honour of this Day, that You send blessings and salutations on our leader Muhammad, and that You forgive us, our parents, our children, our brothers, our relatives, our teachers, our companions, our friends, and those who requested that we pray for them, and those who have done good to us, and those who have a right over us, and those whom we have wronged or hurt them and for all the believers, male and female, the living and the deceased, and that You grant us and them from the good of this world and the hereafter, and that you protect us and them from all worldly trials and all the horrors of the Day of Resurrection, and that You bestow upon us useful knowledge and righteous deeds, and protect us from all outward and inward sins, and that You make the obtainment of wholesome and plentiful sustenance easy for us, and that You protect us from the evil of wicked ones among humans, genies, animals and others, and that You make the end of our lives and theirs a good end. O Allah, accept our prayers. May Allah’s shower His mercy and salutations upon our master Muhammad and his family and companions.",
+        "translationMy": "Ya Allah, sesungguhnya aku pohon akan dikau dengan kemuliaan zatMu dan kemurahanMu yang kekal abadi dan namaMu yang paling agung dan kehormataan nabiMu dan penghulu kami Muhammad (s.a.w.) dan saudara-saudaranya dari para nabi-nabi dan rasul-rasul serta keluarga dan keluarganya dan sekalian pengikut-pengikut mereka daripada golongan para ulama-ulama yang mengamalkan ilmu mereka dan para wali-wali dan orang yang salih dan kehormatan hari ini, agar Engkau curahkan selawat dan salam atas junjungan kami Muhammad, dan memaafkan kami dan ibu bapa kami, anak-anak kami, dan saudara kami, dan saudara mara kami, dan guru-guru kami dan sahabat-sahabat kami, kawan-kawan kami, dan mereka yang berpesan kami berdoa untuk mereka, dan untuk mereka yang telah buat baik kepada kami, dan untuk mereka yang berhak atas kami, dan untuk mereka yang telah kami menzalimi atau menyakiti mereka dan untuk semua orang beriman, lelaki dan perempuan, yang hidup antara mereka dan yang sudah mati, dan bahawa Engkau mengkurniakan kami dan mereka daripada kebaikan dunia dan akhirat, dan supaya Engkau memelihara kami dan mereka dari segala macam ujian dunia dan segala yang mengerikan pada hari kiamat, dan kurniakanlah kami ilmu yang bermanfaat dan amal soleh, dan lindungilah kami dari segala dosa yang zahir dan batin, dan agar Engkau memudahkan untuk kami rezeki yang halal lagi luas, dan agar Engkau melindungi kami dari kejahatan orang-orang yang fasik, dari manusia, jin, binatang dan selainnya, dan jadikanlah penghujung kehidupan kami dan mereka pengakhiran yang baik. Terimalah doa kami ya Allah dan semoga rahmat dan kesejahteraan Allah tercurah keatas junjungan kami Muhammad dan keluarga dan para sahabatnya."
+      }
+    ],
+    "titleMy": "Doa #1",
+    "categoryKey": [
+      "haji",
+      "supplications"
+    ],
+    "audio": "supplication_1.mp3"
   },
   {
     "id": 990950476385,
@@ -2863,8 +2880,8 @@
       {
         "id": 861826549345,
         "arabic": "لَقَدْ جَاءَكُمْ رَسُولٌ مِّنْ أَنفُسِكُمْ عَزِيزٌ عَلَيْهِ مَا عَنِتُّمْ حَرِيصٌ عَلَيْكُم بِالْمُؤْمِنِينَ رَءُوفٌ رَّحِيمٌ (١٢٨)\n\nفَإِن تَوَلَّوْا فَقُلْ حَسْبِيَ اللهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ \nتَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ (١٢٩)\n\n (7 مرات)",
-        "translationEn": "There has come to you a Messenger from among yourselves, grievous to whom is your burden, concerned (is he) for you; for the believers (he is) full of compassion, merciful. If they turn away then say: Allah is sufficient for me; there is no god but He. On Him do I rely; He is the Lord of the Awesome Throne (7x).\nSurah At-Taubah: 128-129",
-        "translationMy": "Sesungguhnya telah datang kepada kamu seorang Rasul dari golongan kamu sendiri (iaitu Nabi Muhammad s.a.w), yang menjadi sangat berat kepadanya sebarang kesusahan yang ditanggung oleh kamu, yang sangat inginkan kebaikan bagi kamu, dan menumpahkan perasaan belas serta kasih sayangnya kepada orang-orang yang beriman. Kemudian jika mereka berpaling ingkar, maka katakanlah (wahai Muhammad): \"Cukuplah bagiku Allah (yang menolong dan memeliharaku), tiada Tuhan (yang berhak disembah) melainkan Dia; kepadaNya aku berserah diri, dan Dia lah yang mempunyai Arasy yang besar. (7x)\nSurah At-Taubah: 128-129"
+        "translationEn": "There has come to you a Messenger from among yourselves, grievous to whom is your burden, concerned (is he) for you; for the believers (he is) full of compassion, merciful. \n\nIf they turn away then say: Allah is sufficient for me; there is no god but He. On Him do I rely; He is the Lord of the Awesome Throne (7x).\nSurah At-Taubah: 128-129",
+        "translationMy": "Sesungguhnya telah datang kepada kamu seorang Rasul dari golongan kamu sendiri (iaitu Nabi Muhammad s.a.w), yang menjadi sangat berat kepadanya sebarang kesusahan yang ditanggung oleh kamu, yang sangat inginkan kebaikan bagi kamu, dan menumpahkan perasaan belas serta kasih sayangnya kepada orang-orang yang beriman. \n\nKemudian jika mereka berpaling ingkar, maka katakanlah (wahai Muhammad): \"Cukuplah bagiku Allah (yang menolong dan memeliharaku), tiada Tuhan (yang berhak disembah) melainkan Dia; kepadaNya aku berserah diri, dan Dia lah yang mempunyai Arasy yang besar. (7x)\nSurah At-Taubah: 128-129"
       }
     ],
     "order": {
@@ -2884,8 +2901,8 @@
       {
         "id": 879803755151,
         "arabic": "وَإِن يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ (٥١) \n\nوَمَا هُوَ إِلَّا ذِكْرٌ لِّلْعَالَمِينَ (٥٢)",
-        "translationEn": "The unbelievers would almost trip you up with their eyes when they hear the recitation of the Qur’an and say: \"He (Muhammad) is surely a madman.\" It is nothing but a Reminder to all creation. \nSurah Al-Qalam: 51-52",
-        "translationMy": "Dan sesungguhnya orang-orang yang kafir itu, hampir-hampir menggelincir dan menjatuhkanmu dengan pandangan mereka (yang tajam dan penuh dengan permusuhan dan kebencian), semasa mereka mendengar Al-Quran sambil berkata: \"Sebenarnya (Muhammad) itu, sungguh-sungguh orang gila\". Padahal Al-Quran itu tidak lain hanyalah peringatan bagi umat manusia seluruhnya. \nSurah Al-Qalam: 51-52"
+        "translationEn": "The unbelievers would almost trip you up with their eyes when they hear the recitation of the Qur’an and say: \"He (Muhammad) is surely a madman.\" \n\nIt is nothing but a Reminder to all creation. \nSurah Al-Qalam: 51-52",
+        "translationMy": "Dan sesungguhnya orang-orang yang kafir itu, hampir-hampir menggelincir dan menjatuhkanmu dengan pandangan mereka (yang tajam dan penuh dengan permusuhan dan kebencian), semasa mereka mendengar Al-Quran sambil berkata: \"Sebenarnya (Muhammad) itu, sungguh-sungguh orang gila\". \n\nPadahal Al-Quran itu tidak lain hanyalah peringatan bagi umat manusia seluruhnya. \nSurah Al-Qalam: 51-52"
       }
     ],
     "order": {
@@ -3089,24 +3106,6 @@
         "translationMy": "Ya Allah, curahkan selawat dan salam dan berkat ke atas Nabi yang tidak tahu membaca dan menulis dan ke atas keluarga dan sahabat baginda sekalian (10x)."
       }
     ]
-  },
-  {
-    "id": 254185497471,
-    "titleEn": "Supplication #1",
-    "doa": [
-      {
-        "id": 864328338953,
-        "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ بِوَجْهِكَ الْكَرِيمِ وَ جُودِكَ الْقَدِيمِ وَ بِاسْمِكَ الْأَعْظَمِ وَ بِجَاهِ نَبِيِّكَ سَيِّدِنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ وَ إِخْوَانِهِ مِنَ النَّبِيِّينَ وَ الْمُرْسَلِينَ وَ عَلَى آلِهِ وَ صَحْبِهِ وَ التَّابِعِينَ لَهُمْ مِنَ الْعُلَمَاءِ الْعَامِلِينَ وَ الْأَوْلِيَاءِ وَ الصَّالِحِينَ وَ بِحُرْمَةِ هَذَا الْيَوْمِ أَنْ تُصَلِّيَ وَ تُسَلِّمَ عَلَى سَيِّدِنَا مُحَمَّدٍ وَ أَنْ تَغْفِرَ لَنَا وَ لِوَالِدِينَا وَ أَوْلَادِنَا وَ إِخْوَانِنَا وَ أَقْرِبَائِنَا وَ مَشَايِخِنَا وَ أَصْحَابِنَا وَ أَصْدِقَائِنَا وَ لِمَنْ أَوْصَانَا بِالدُّعَاءِ وَ لِمَنْ أَحْسَنَ إِلَيْنَا وَ لِمَنْ لَهُ حَقٌّ عَلَيْنَا وَ لِمَنْ ظَلَمْنَاهُ أَوْ أَسَأْنَا إِلَيْهِ وَ لِجَمِيعِ الْمُسْلِمِينَ وَ الْمُسْلِمَاتِ، الْأَحْيَاءِ مِنْهُمْ وَ الْأَمْوَاتِ وَ أَنْ تَرْزُقَنَا وَ إِيَّاهُمْ خَيْرَاتِ الدُّنْيَا وَ الْآخِرَةِ، وَ أَنْ تَحْفَظَنَا وَ إِيَّاهُمْ مِنْ جَمِيعِ بَلَاءِ الدُّنْيَا وَ أَهْوَالِ يَوْمِ الْقِيَامَةِ، وَ أَنْ تَرْزُقَنَا الْعُلُومَ النَّافِعَةَ وَ الْأَعْمَالَ الصَّالِحَةَ وَ أَنْ تَعْصِمَنَا مِنْ جَمِيعِ الْمَعَاصِي الظَّاهِرَةِ وَ الْبَاطِنَةِ وَ أَنْ تُسَهِّلَ لَنَا رِزْقاً حَلَالاً وَاسِعاً وَ أَنْ تَحْفَظَنَا مِنْ شَرِّ الْأَشْرَارِ مِنَ الْإِنْسِ وَ الْجِنِّ وَ الدَّوَابِّ وَ غَيْرِهَا وَ أَنْ تَخْتِمَ لَنَا وَ لَهُمْ بِحُسْنِ الْخَاتِمَةِ. آمِينْ، وَ صَلَّى اللهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَ آلِهِ وَ صَحْبِهِ وَ سَلَّمَ",
-        "translationEn": "O Allah, I ask You by the glory of your essence and your eternal generosity and your greatest Name and the honor of your prophet and our leader Muhammad, may Allah’s salutations and blessings be upon him and his brothers from among the prophets and messengers and his family and his companions and their followers from among the practicing scholars and saints and the pious ones, and by the honour of this Day, that You send blessings and salutations on our leader Muhammad, and that You forgive us, our parents, our children, our brothers, our relatives, our teachers, our companions, our friends, and those who requested that we pray for them, and those who have done good to us, and those who have a right over us, and those whom we have wronged or hurt them and for all the believers, male and female, the living and the deceased, and that You grant us and them from the good of this world and the hereafter, and that you protect us and them from all worldly trials and all the horrors of the Day of Resurrection, and that You bestow upon us useful knowledge and righteous deeds, and protect us from all outward and inward sins, and that You make the obtainment of wholesome and plentiful sustenance easy for us, and that You protect us from the evil of wicked ones among humans, genies, animals and others, and that You make the end of our lives and theirs a good end. O Allah, accept our prayers. May Allah’s shower His mercy and salutations upon our master Muhammad and his family and companions.",
-        "translationMy": "Ya Allah, sesungguhnya aku pohon akan dikau dengan kemuliaan zatMu dan kemurahanMu yang kekal abadi dan namaMu yang paling agung dan kehormataan nabiMu dan penghulu kami Muhammad (s.a.w.) dan saudara-saudaranya dari para nabi-nabi dan rasul-rasul serta keluarga dan keluarganya dan sekalian pengikut-pengikut mereka daripada golongan para ulama-ulama yang mengamalkan ilmu mereka dan para wali-wali dan orang yang salih dan kehormatan hari ini, agar Engkau curahkan selawat dan salam atas junjungan kami Muhammad, dan memaafkan kami dan ibu bapa kami, anak-anak kami, dan saudara kami, dan saudara mara kami, dan guru-guru kami dan sahabat-sahabat kami, kawan-kawan kami, dan mereka yang berpesan kami berdoa untuk mereka, dan untuk mereka yang telah buat baik kepada kami, dan untuk mereka yang berhak atas kami, dan untuk mereka yang telah kami menzalimi atau menyakiti mereka dan untuk semua orang beriman, lelaki dan perempuan, yang hidup antara mereka dan yang sudah mati, dan bahawa Engkau mengkurniakan kami dan mereka daripada kebaikan dunia dan akhirat, dan supaya Engkau memelihara kami dan mereka dari segala macam ujian dunia dan segala yang mengerikan pada hari kiamat, dan kurniakanlah kami ilmu yang bermanfaat dan amal soleh, dan lindungilah kami dari segala dosa yang zahir dan batin, dan agar Engkau memudahkan untuk kami rezeki yang halal lagi luas, dan agar Engkau melindungi kami dari kejahatan orang-orang yang fasik, dari manusia, jin, binatang dan selainnya, dan jadikanlah penghujung kehidupan kami dan mereka pengakhiran yang baik. Terimalah doa kami ya Allah dan semoga rahmat dan kesejahteraan Allah tercurah keatas junjungan kami Muhammad dan keluarga dan para sahabatnya."
-      }
-    ],
-    "titleMy": "Doa #1",
-    "categoryKey": [
-      "haji",
-      "supplications"
-    ],
-    "audio": "supplication_1.mp3"
   },
   {
     "id": 990950476430,
