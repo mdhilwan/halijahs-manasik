@@ -21,6 +21,15 @@ interface Stats {
   categoriesLastDownloadedAt: string | null;
 }
 
+interface AppVersions {
+  devVersion: string | null;
+  prodVersion: string | null;
+  appStoreUrl?: string | null;
+  bundleId?: string | null;
+  country?: string;
+  fetchedAt?: string;
+}
+
 function formatFileSize(bytes: number): string {
   if (bytes === 0) return "0 B";
   const k = 1024;
@@ -41,6 +50,10 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { downloadDuas, downloadCategories } = useDuaManagement();
+
+  const [appVersions, setAppVersions] = useState<AppVersions | null>(null);
+  const [appVersionsLoading, setAppVersionsLoading] = useState(true);
+  const [appVersionsError, setAppVersionsError] = useState<string | null>(null);
 
   function handleDownloadDuas() {
     const now = new Date().toISOString();
@@ -72,7 +85,25 @@ export default function DashboardPage() {
       }
     }
 
+    async function fetchAppVersions() {
+      try {
+        const res = await fetch("/api/app-versions");
+        if (!res.ok) {
+          setAppVersionsError("Unable to load app versions");
+          return;
+        }
+        const data = (await res.json()) as AppVersions;
+        setAppVersions(data);
+      } catch (err) {
+        setAppVersionsError("Unable to load app versions");
+        console.error(err);
+      } finally {
+        setAppVersionsLoading(false);
+      }
+    }
+
     fetchStats();
+    fetchAppVersions();
   }, []);
 
   const audioPercentage = stats
@@ -95,13 +126,16 @@ export default function DashboardPage() {
 
       <div className="mx-auto max-w-6xl px-6 py-8">
         {loading ? (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[...Array(6)].map((_, i) => (
-              <div
-                key={i}
-                className="h-36 animate-pulse rounded-xl border border-border bg-card"
-              />
-            ))}
+          <div className="space-y-6">
+            <div className="h-28 animate-pulse rounded-xl border border-border bg-card" />
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {[...Array(6)].map((_, i) => (
+                <div
+                  key={i}
+                  className="h-36 animate-pulse rounded-xl border border-border bg-card"
+                />
+              ))}
+            </div>
           </div>
         ) : error ? (
           <div className="rounded-xl border border-destructive/30 bg-destructive/5 p-6 text-center">
@@ -111,6 +145,67 @@ export default function DashboardPage() {
           <>
             {/* Main Stats Grid */}
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {/* App Versions (top card) */}
+              <div className="rounded-xl border border-primary/25 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/40 p-6">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground">Manasik App Versions</p>
+                    <p className="mt-1 text-xl font-semibold text-foreground tracking-tight">
+                      Dev vs Prod
+                    </p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {appVersions?.bundleId ? (
+                        <>
+                          {" "}
+                          (<code className="rounded bg-muted px-1">{appVersions.bundleId}</code>
+                          {appVersions.country ? `, ${appVersions.country.toUpperCase()}` : ""})
+                        </>
+                      ) : null}
+                    </p>
+                  </div>
+
+                  <div className="rounded-lg bg-primary/10 p-3">
+                    <VersionsIcon className="h-6 w-6 text-primary" />
+                  </div>
+                </div>
+
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-lg border border-border/70 bg-background/40 p-4">
+                    <p className="text-[11px] text-muted-foreground">Dev</p>
+                    <p className="mt-1 text-lg font-semibold text-foreground">
+                      {appVersionsLoading ? "Loading…" : appVersions?.devVersion ?? "—"}
+                    </p>
+                  </div>
+
+                  <div className="rounded-lg border border-border/70 bg-background/40 p-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <p className="text-[11px] text-muted-foreground">Prod</p>
+                        <p className="mt-1 text-lg font-semibold text-foreground">
+                          {appVersionsLoading ? "Loading…" : appVersions?.prodVersion ?? "—"}
+                        </p>
+                      </div>
+
+                      {appVersions?.appStoreUrl ? (
+                        <a
+                          href={appVersions.appStoreUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="rounded-md border border-border bg-card px-3 py-2 text-xs text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                          title="Open App Store"
+                        >
+                          App Store
+                        </a>
+                      ) : null}
+                    </div>
+                  </div>
+                </div>
+
+                {appVersionsError ? (
+                  <p className="mt-3 text-xs text-muted-foreground">{appVersionsError}</p>
+                ) : null}
+              </div>
+
               {/* Total Duas */}
               <Link
                 href="/app"
@@ -534,6 +629,25 @@ function MusicIcon({className}: { className?: string }) {
         strokeLinejoin="round"
         strokeWidth={2}
         d="M9 19a2 2 0 11-4 0 2 2 0 014 0zm12-2a2 2 0 11-4 0 2 2 0 014 0z"
+      />
+    </svg>
+  );
+}
+
+function VersionsIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M7 7h10M7 12h10M7 17h6"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5z"
       />
     </svg>
   );

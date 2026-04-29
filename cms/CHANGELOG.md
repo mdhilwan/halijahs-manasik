@@ -1,3 +1,7 @@
+## 2.1.1
+- New CMS Feature:
+  - Expose app version in home
+  
 ## 2.1.0
 - New CMS Feature:
   - update CMS with new stats of last updated and last downloaded
