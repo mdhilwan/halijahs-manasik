@@ -1,3 +1,8 @@
+## 1.5.0 - Apr 29, 2026
+- New Feature:
+  - Fuzzy search for duas and categories
+  - New UI for search page
+  
 ## 1.4.4 - Apr 29, 2026
 - Bug Fix:
   - Cross navigation between sub categories bug fix

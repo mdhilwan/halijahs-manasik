@@ -10,7 +10,7 @@ try {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   const CMSModule = require('@/contexts/CMSDataContext');
   useCMSData = CMSModule.useCMSData;
-} catch (e) {
+} catch {
   // CMSDataContext not available (e.g., on native platforms)
 }
 
@@ -26,7 +26,7 @@ export const useDuaLoader = () => {
     try {
       // eslint-disable-next-line react-hooks/rules-of-hooks
       cmsData = useCMSData();
-    } catch (e) {
+    } catch {
       // Not in CMSDataProvider context
     }
   }
@@ -65,6 +65,6 @@ export const useDuaLoader = () => {
     return currentDuas.find((d: DuaType) => d.id === duaId);
   }, [currentDuas]);
 
-  return { loadDuas, loadDuaById, selectedDuaId, currentDuas, cmsData: !!cmsData };
+  return { loadDuas, loadDuaById, selectedDuaId, currentDuas, currentCategories, cmsData: !!cmsData };
 };
 
