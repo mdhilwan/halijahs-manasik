@@ -1,3 +1,8 @@
+## 1.4.4 - Apr 29, 2026
+- Bug Fix:
+  - Cross navigation between sub categories bug fix
+  - Missing duas added
+
 ## 1.4.3 - Apr 26, 2026
 - Bug Fix:
   - Misalignment of duaList top UI  

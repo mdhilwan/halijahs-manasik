@@ -1,3 +1,8 @@
+## 2.1.0
+- New CMS Feature:
+  - update CMS with new stats of last updated and last downloaded
+  - And download from home page now works
+
 ## 2.0.1
 - Minor bug fix and improvements
 
