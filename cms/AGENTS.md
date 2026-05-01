@@ -64,10 +64,45 @@ All are under `cms/app/`.
 - `/(dashboard)/app/categories/[key]/page.tsx`
   - Reorder categories/subcategories.
 
+- `/(dashboard)/app/about/page.tsx`
+  - **Placeholder** page for editing the app About landing page content.
+  - Intended to manage:
+    - About the app
+    - Contributors
+    - Social media links
+    - Review links (App Store / Google Play)
+    - Contact email
+    - T&C footer
+
+- `/(dashboard)/app/audio-library/page.tsx`
+  - **Placeholder** page for an admin audio library.
+  - Intended to list and play files from `assets/audio/*`.
+
 Other placeholder/secondary routes:
 - `/(dashboard)/router/page.tsx`
 - `/(dashboard)/passport/page.tsx`
 - `/(dashboard)/umrah-builder/page.tsx`
+
+## Navigation UX (Sidebar drilldown)
+
+The sidebar supports an **App section drilldown**:
+
+- When the current path is under `/app/*`, the sidebar automatically shows an **App submenu** instead of the primary items.
+- App submenu items:
+  - `Duas` → `/app`
+  - `Categories` → `/app/categories`
+  - `About` → `/app/about`
+  - `Audio Library` → `/app/audio-library`
+- A **Back** button is shown at the top of the App submenu.
+  - Back switches the sidebar back to the *primary* menu while **staying on the current `/app/*` route**.
+  - While on `/app/*` with primary menu visible, clicking `App` again switches back to the App submenu (without navigating).
+
+### Sidebar animation
+
+The primary menu and App submenu are rendered as two panels that **slide horizontally**:
+
+- Navigating into `/app/*` slides the App submenu in **right → left**.
+- Clicking Back slides back **left → right**.
 
 ## Context: DuaManagement
 Files:
@@ -92,6 +127,17 @@ Storage key:
 The context provider exposes:
 - `downloadDuas()` – downloads `duas.json`
 - `downloadCategories(override?: Category[])` – downloads `categories.json` with shape `{ categories: Category[] }`
+
+### Per-page actions menus
+
+“Download JSON” is intentionally **per-page** (to avoid ambiguity):
+
+- Duas page (`/app`) header actions:
+  - `Add Dua`
+  - `Download duas.json`
+- Categories page (`/app/categories`) header actions:
+  - `Add Category`
+  - `Download categories.json`
 
 Internally both use a Blob + `URL.createObjectURL` + anchor click.
 
