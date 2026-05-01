@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useDuaManagement } from "../../../context/DuaManagementContext";
 
@@ -27,6 +27,8 @@ export default function CategoriesPage() {
   const [editingCategory, setEditingCategory] = useState<Category | null>(null);
   const [editingSubcategory, setEditingSubcategory] = useState<Subcategory | null>(null);
   const [parentCategoryKey, setParentCategoryKey] = useState<string | null>(null);
+  const [isActionsOpen, setIsActionsOpen] = useState(false);
+  const actionsRef = useRef<HTMLDivElement>(null);
   
   // Form state
   const [formKey, setFormKey] = useState("");
@@ -36,6 +38,17 @@ export default function CategoriesPage() {
 
   useEffect(() => {
     fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (actionsRef.current && !actionsRef.current.contains(event.target as Node)) {
+        setIsActionsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   async function fetchCategories() {
@@ -195,21 +208,42 @@ export default function CategoriesPage() {
             <h1 className="text-2xl font-semibold text-foreground">Categories</h1>
             <p className="text-sm text-muted-foreground">Manage categories and subcategories</p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="relative" ref={actionsRef}>
             <button
-              onClick={() => downloadCategories(categories)}
+              type="button"
+              onClick={() => setIsActionsOpen(v => !v)}
               className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
+              aria-label="Actions menu"
+              aria-expanded={isActionsOpen}
             >
-              <DownloadIcon className="h-4 w-4" />
-              Download JSON
+              Actions
+              <ChevronIcon className={`h-4 w-4 transition-transform ${isActionsOpen ? 'rotate-180' : ''}`} />
             </button>
-            <button
-              onClick={openAddCategory}
-              className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              <PlusIcon className="h-4 w-4" />
-              Add Category
-            </button>
+
+            {isActionsOpen && (
+              <div className="absolute right-0 mt-2 w-64 rounded-lg border border-border bg-card shadow-lg z-50 overflow-hidden">
+                <button
+                  onClick={() => {
+                    downloadCategories(categories);
+                    setIsActionsOpen(false);
+                  }}
+                  className="w-full flex items-center gap-2 px-4 py-3 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
+                >
+                  <DownloadIcon className="h-4 w-4" />
+                  Download categories.json
+                </button>
+                <button
+                  onClick={() => {
+                    openAddCategory();
+                    setIsActionsOpen(false);
+                  }}
+                  className="w-full flex items-center gap-2 px-4 py-3 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
+                >
+                  <PlusIcon className="h-4 w-4" />
+                  Add Category
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </header>

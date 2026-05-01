@@ -88,3 +88,42 @@ export function MinusIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+export function ArrowLeftIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7 7-7" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18" />
+    </svg>
+  );
+}
+
+export function ListIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 6h13M8 12h13M8 18h13" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6h.01M3 12h.01M3 18h.01" />
+    </svg>
+  );
+}
+
+export function InfoIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8h.01" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+    </svg>
+  );
+}
+
+export function LibraryIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 6h13M8 10h13M8 14h13M8 18h13" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6h1v12H3z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 4h1v16H5z" />
+    </svg>
+  );
+}
+
