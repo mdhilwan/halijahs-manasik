@@ -27,7 +27,7 @@ interface MenuItem {
 }
 
 export function Sidebar({ userEmail }: SidebarProps) {
-  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [isCollapsed, setIsCollapsed] = useState(false)
   const [isLoggingOut, setIsLoggingOut] = useState(false)
   // When true, forces showing the primary menu even if we are currently within /app/*.
   const [forcePrimaryMenu, setForcePrimaryMenu] = useState(false)
