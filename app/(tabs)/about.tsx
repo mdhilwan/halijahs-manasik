@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import {ThemedText} from '@/components/themed-text';
 import {ThemedView} from '@/components/themed-view';
@@ -8,17 +8,17 @@ import {ExternalPathString, Link} from "expo-router";
 import {Image} from "expo-image";
 import {Collapsible} from "@/components/ui/collapsible";
 import {Ionicons} from "@expo/vector-icons";
-import AboutContent from "@/app/contents/about.json"
+import AboutContent from "@/assets/data/about.json"
 
 const Contributor = ({name, description}: { name: ReactNode, description: ReactNode }) => {
-  return <View style={{marginVertical: 10}}>
+  return <ThemedView style={{marginVertical: 10}}>
     {name && <ThemedText type={"serif"} style={{
       fontSize: 18,
     }}>{name}</ThemedText>}
     <ThemedText style={{
       color: "#727272",
     }}>{description}</ThemedText>
-  </View>
+  </ThemedView>
 }
 
 const SocialLink = memo(
@@ -85,7 +85,7 @@ export default function About() {
           {AboutContent.footer.socialsIntro}
         </ThemedText>
 
-        <View style={{flexDirection: 'row', flexWrap: 'wrap', gap: 15}}>
+        <ThemedView style={{flexDirection: 'row', flexWrap: 'wrap', gap: 15}}>
           {AboutContent.footer.socialLinks.map(({href, icon}, index) =>
             <SocialLink
               key={index}
@@ -93,37 +93,40 @@ export default function About() {
               icon={<Ionicons name={icon as any} size={25} />}
             />
           )}
-        </View>
+        </ThemedView>
 
         <Collapsible title="Enjoying the App?">
           <ThemedText style={{marginBottom: 12}}>
-            If this app has helped you during your Umrah or Hajj journey, please consider leaving a review.
-            Your feedback helps more jemaah discover and benefit from the app.
+            {AboutContent.review?.introLines?.join('\n')}
           </ThemedText>
 
-          <View style={{flexDirection: 'row', flexWrap: 'wrap', gap: 15}}>
-            <Link
-              href={"https://apps.apple.com/us/app/manasik-by-halijah/id6758285616?action=write-review" as ExternalPathString}
-              style={{alignSelf: 'flex-start'}}
-            >
-              <ThemedView style={styles.ctaBtn}>
-                <ThemedText type={'defaultBold'} style={{color: '#FFFFFF'}}>
-                  Review on App Store
-                </ThemedText>
-              </ThemedView>
-            </Link>
+          <ThemedView style={{flexDirection: 'row', flexWrap: 'wrap', gap: 15}}>
+            {AboutContent.review?.links?.appStore?.href && (
+              <Link
+                href={AboutContent.review.links.appStore.href as ExternalPathString}
+                style={{alignSelf: 'flex-start'}}
+              >
+                <ThemedView style={styles.ctaBtn}>
+                  <ThemedText type={'defaultBold'} style={{color: '#FFFFFF'}}>
+                    {AboutContent.review.links.appStore.label}
+                  </ThemedText>
+                </ThemedView>
+              </Link>
+            )}
 
-            <Link
-              href={"https://play.google.com/store/apps/details?id=com.halijah.manasik&hl=en_US" as ExternalPathString}
-              style={{alignSelf: 'flex-start'}}
-            >
-              <ThemedView style={styles.ctaBtn}>
-                <ThemedText type={'defaultBold'} style={{color: '#FFFFFF'}}>
-                  Review on Google Play
-                </ThemedText>
-              </ThemedView>
-            </Link>
-          </View>
+            {AboutContent.review?.links?.googlePlay?.href && (
+              <Link
+                href={AboutContent.review.links.googlePlay.href as ExternalPathString}
+                style={{alignSelf: 'flex-start'}}
+              >
+                <ThemedView style={styles.ctaBtn}>
+                  <ThemedText type={'defaultBold'} style={{color: '#FFFFFF'}}>
+                    {AboutContent.review.links.googlePlay.label}
+                  </ThemedText>
+                </ThemedView>
+              </Link>
+            )}
+          </ThemedView>
         </Collapsible>
 
         {AboutContent.getInTouch && <Collapsible title="Get In Touch" open={true}>
@@ -135,7 +138,7 @@ export default function About() {
             </Link>
         </Collapsible>}
 
-        <ThemedText>© 2026 Halijah Travels Pte Ltd. All content, audio, and design are owned by Halijah Travels Pte Ltd and are for personal use only. Organisational or commercial use requires prior permission.</ThemedText>
+        <ThemedText>{AboutContent.copyrightFooter}</ThemedText>
 
     </ParallaxScrollView>
   );

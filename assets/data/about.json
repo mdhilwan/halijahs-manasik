@@ -56,5 +56,22 @@
     "intro": "Have a question or feedback? We'd love to hear from you.",
     "emailAddress": "mailto:app@halijah.com.sg",
     "emailText": "Email us at app@halijah.com.sg"
-  }
+  },
+  "review": {
+    "introLines": [
+      "If this app has helped you during your Umrah or Hajj journey, please consider leaving a review.",
+      "Your feedback helps more jemaah discover and benefit from the app."
+    ],
+    "links": {
+      "appStore": {
+        "href": "https://apps.apple.com/us/app/manasik-by-halijah/id6758285616?action=write-review",
+        "label": "Review on App Store"
+      },
+      "googlePlay": {
+        "href": "https://play.google.com/store/apps/details?id=com.halijah.manasik&hl=en_US",
+        "label": "Review on Google Play"
+      }
+    }
+  },
+  "copyrightFooter": "© 2026 Halijah Travels Pte Ltd. All content, audio, and design are owned by Halijah Travels Pte Ltd and are for personal use only. Organisational or commercial use requires prior permission."
 }
