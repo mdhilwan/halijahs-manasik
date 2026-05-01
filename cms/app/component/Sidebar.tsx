@@ -1,9 +1,9 @@
 'use client'
 
-import { createClient } from '@/lib/supabase/client'
+import { createClient } from '../../lib/supabase/client'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   UmrahBuilderIcon,
   RouterIcon,
@@ -13,6 +13,7 @@ import {
   AppIcon,
   CollapseIcon
 } from "../../../assets/icons";
+import { ArrowLeftIcon, AudioIcon, InfoIcon, ListIcon, TagIcon } from "./icons";
 
 interface SidebarProps {
   userEmail?: string | null
@@ -28,8 +29,22 @@ interface MenuItem {
 export function Sidebar({ userEmail }: SidebarProps) {
   const [isCollapsed, setIsCollapsed] = useState(true)
   const [isLoggingOut, setIsLoggingOut] = useState(false)
+  // When true, forces showing the primary menu even if we are currently within /app/*.
+  const [forcePrimaryMenu, setForcePrimaryMenu] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
+
+  const isInAppSection = useMemo(
+    () => pathname === '/app' || pathname.startsWith('/app/'),
+    [pathname]
+  )
+
+  useEffect(() => {
+    // If we navigate away from /app/*, reset to the normal behavior.
+    if (!isInAppSection) {
+      setForcePrimaryMenu(false)
+    }
+  }, [isInAppSection])
 
   const handleLogout = async () => {
     setIsLoggingOut(true)
@@ -72,6 +87,32 @@ export function Sidebar({ userEmail }: SidebarProps) {
     },
   ]
 
+  const appSubmenuItems: MenuItem[] = [
+    {
+      name: 'Duas',
+      href: '/app',
+      icon: ListIcon,
+      exact: true,
+    },
+    {
+      name: 'Categories',
+      href: '/app/categories',
+      icon: TagIcon,
+    },
+    {
+      name: 'About',
+      href: '/app/about',
+      icon: InfoIcon,
+    },
+    {
+      name: 'Audio Library',
+      href: '/app/audio-library',
+      icon: AudioIcon,
+    },
+  ]
+
+  const showAppSubmenu = isInAppSection && !forcePrimaryMenu
+
   return (
     <aside
       className={`flex h-screen flex-col border-r border-border bg-card transition-all duration-300 ${
@@ -95,30 +136,99 @@ export function Sidebar({ userEmail }: SidebarProps) {
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 overflow-y-auto p-3">
-        <ul className="flex flex-col gap-1">
-          {menuItems.map((item) => {
-            const isActive = item.exact 
-              ? pathname === item.href 
-              : pathname === item.href || pathname.startsWith(item.href + '/')
-            return (
-              <li key={item.name}>
-                <Link
-                  href={item.href}
-                  className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
-                    isActive
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
-                  } ${isCollapsed ? 'justify-center' : ''}`}
-                  title={isCollapsed ? item.name : undefined}
+      <nav className="flex-1 overflow-hidden m-3">
+        <div className="relative h-full">
+          {/* Primary menu panel (root) */}
+          <div
+            className={`absolute inset-0 transition-transform duration-300 ease-in-out ${
+              showAppSubmenu ? '-translate-x-full' : 'translate-x-0'
+            } ${showAppSubmenu ? 'pointer-events-none' : ''}`}
+            aria-hidden={showAppSubmenu}
+          >
+            <ul className="flex flex-col gap-1 overflow-y-auto h-full">
+              {menuItems.map((item) => {
+                const isActive = item.exact
+                  ? pathname === item.href
+                  : pathname === item.href || pathname.startsWith(item.href + '/')
+
+                return (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      onClick={(e) => {
+                        // If we are already in /app/* and the user explicitly chose to show
+                        // the primary menu, clicking “App” should switch to the App submenu
+                        // without changing routes.
+                        if (item.href === '/app' && isInAppSection) {
+                          e.preventDefault()
+                          setForcePrimaryMenu(false)
+                        }
+                      }}
+                      className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                        isActive
+                          ? 'bg-primary text-primary-foreground'
+                          : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
+                      } ${isCollapsed ? 'justify-center' : ''}`}
+                      title={isCollapsed ? item.name : undefined}
+                    >
+                      <item.icon className="h-5 w-5 flex-shrink-0" />
+                      {!isCollapsed && <span>{item.name}</span>}
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+
+          {/* App submenu panel (slides in) */}
+          <div
+            className={`absolute inset-0 transition-transform duration-300 ease-in-out ${
+              showAppSubmenu ? 'translate-x-0' : 'translate-x-full'
+            } ${showAppSubmenu ? '' : 'pointer-events-none'}`}
+            aria-hidden={!showAppSubmenu}
+          >
+            <ul className="flex flex-col gap-1 overflow-y-auto h-full">
+              <li>
+                <button
+                  type="button"
+                  onClick={() => setForcePrimaryMenu(true)}
+                  className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors text-muted-foreground hover:bg-secondary hover:text-foreground ${
+                    isCollapsed ? 'justify-center' : ''
+                  }`}
+                  title={isCollapsed ? 'Back' : undefined}
+                  aria-label="Back to main menu"
                 >
-                  <item.icon className="h-5 w-5 flex-shrink-0" />
-                  {!isCollapsed && <span>{item.name}</span>}
-                </Link>
+                  <ArrowLeftIcon className="h-5 w-5 flex-shrink-0" />
+                  {!isCollapsed && <span>Back</span>}
+                </button>
               </li>
-            )
-          })}
-        </ul>
+
+              <li className="my-2 border-t border-border" />
+
+              {appSubmenuItems.map((item) => {
+                const isActive = item.exact
+                  ? pathname === item.href
+                  : pathname === item.href || pathname.startsWith(item.href + '/')
+                return (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                        isActive
+                          ? 'bg-primary text-primary-foreground'
+                          : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
+                      } ${isCollapsed ? 'justify-center' : ''}`}
+                      title={isCollapsed ? item.name : undefined}
+                    >
+                      <item.icon className="h-5 w-5 flex-shrink-0" />
+                      {!isCollapsed && <span>{item.name}</span>}
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </div>
       </nav>
 
       <div className="border-t border-border p-3">
