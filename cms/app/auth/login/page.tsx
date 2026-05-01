@@ -1,11 +1,22 @@
 'use client'
 
-import { createClient } from '../../../lib/supabase/client'
-import { useState } from 'react'
+import {createClient} from '../../../lib/supabase/client'
+import {useMemo, useState} from 'react'
+import {getTenantFromHostname, getTenantAssets} from "@/app/lib/getTenantFromHostname";
+
+const DUMMY_PROFILE_IMAGE_SRC =
+  "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='128'%20height='128'%20viewBox='0%200%20128%20128'%3E%3Crect%20width='128'%20height='128'%20fill='%23E5E7EB'/%3E%3Ccircle%20cx='64'%20cy='52'%20r='22'%20fill='%239CA3AF'/%3E%3Cpath%20d='M24%20118c9-19%2026-30%2040-30s31%2011%2040%2030'%20fill='%239CA3AF'/%3E%3C/svg%3E"
 
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  const tenant = useMemo(() => {
+    if (typeof window === 'undefined') return null
+    return getTenantFromHostname(window.location.hostname)
+  }, [])
+
+  const assets = useMemo(() => getTenantAssets(tenant), [tenant])
 
   const handleGoogleSignIn = async () => {
     setIsLoading(true)
@@ -15,7 +26,7 @@ export default function LoginPage() {
 
     try {
       const supabase = createClient()
-      const { error } = await supabase.auth.signInWithOAuth({
+      const {error} = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
           redirectTo: redirectUrl,
@@ -35,9 +46,17 @@ export default function LoginPage() {
         <div className="flex flex-col gap-6">
           <div className="rounded-xl border border-border bg-card p-8 shadow-sm">
             <div className="mb-8 text-center">
+              {assets &&
+                <div className="mx-auto mb-4 h-16 w-16 overflow-hidden rounded-full border border-border bg-muted">
+                  <img
+                    src={assets.profileImageSrc}
+                    alt="User profile"
+                    className="h-full w-full object-cover"
+                  />
+                </div>}
               <h1 className="text-2xl font-semibold text-foreground">Welcome Back</h1>
               <p className="mt-2 text-sm text-muted-foreground">
-                Sign in to Manasik.tech Admin
+                Sign in to Manasik.tech Admin {tenant}
               </p>
             </div>
 
@@ -47,7 +66,7 @@ export default function LoginPage() {
                 disabled={isLoading}
                 className="flex w-full items-center justify-center gap-3 rounded-lg border border-border bg-card px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary disabled:cursor-not-allowed disabled:opacity-50"
               >
-                <GoogleIcon />
+                <GoogleIcon/>
                 {isLoading ? 'Signing in...' : 'Continue with Google'}
               </button>
 

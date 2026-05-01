@@ -53,3 +53,4 @@ app-example
 /manasik-by-halijah-*.json
 /cms/.env*
 /assets/audio/original/*
+/cms/public/images/

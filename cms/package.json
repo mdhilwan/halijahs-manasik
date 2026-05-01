@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predev": "node scripts/sync-tenant-icons.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
