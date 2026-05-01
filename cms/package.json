@@ -6,6 +6,7 @@
   "scripts": {
     "predev": "node scripts/sync-tenant-icons.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/sync-tenant-icons.mjs",
     "build": "next build",
     "start": "next start -p $PORT",
     "lint": "next lint"
