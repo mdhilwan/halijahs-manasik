@@ -1,3 +1,7 @@
+## 1.5.1 - May 9, 2026
+- New/Edit Dua:
+  - Dua for Entering Muzdalifah, Multazam and Hijr Ismail
+
 ## 1.5.0 - Apr 29, 2026
 - New Feature:
   - Fuzzy search for duas and categories
